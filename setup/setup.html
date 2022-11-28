@@ -112,10 +112,101 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  Online notes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signals_and_systems/index.html">
+   Signals and Systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lti_systems/index.html">
+   Linear Time-Invariant Systems
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../laplace_transform/index.html">
+   Laplace Transforms and their Applications
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../laplace_transform/1/laplace.html">
+     The Laplace Transformation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../laplace_transform/2/inverse_laplace.html">
+     The Inverse Laplace Transform
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../laplace_transform/3/circuit_analysis.html">
+     Using Laplace Transforms for Circuit Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../laplace_transform/4/transfer_functions.html">
+     Transfer Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../laplace_transform/5/convolution.html">
+     The Impulse Response and Convolution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../fourier_series/index.html">
+   Fourier Series
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fourier_series/1/trig_fseries.html">
+     Trigonometric Fourier Series
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fourier_series/2/exp_fs1.html">
+     Exponential Fourier Series
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fourier_series/3/exp_fs2.html">
+     Line Spectra and their Applications
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Appendices
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../laplace_transform/1/lt_props.html">
+   Properties of the Laplace Transform
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../laplace_transform/1/lt_table.html">
+   Common Laplace Transform Pairs
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="polling_setup.html">
    Set Up In-Class Polling
@@ -125,8 +216,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="index.html">
    Setting up your own version of this book
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -556,14 +647,14 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="setup">
 <h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h1>
-<p>I have used Jupyter notebooks for <strong>EG-247 Signals and Systems</strong> for a number of reasons:</p>
+<p>I have used Jupyter notebooks for <strong>EG-150 Signals and Systems</strong> for a number of reasons:</p>
 <ol class="simple">
 <li><p>I can easily produce maths-rich textbook quality notes using the Markdown system provided for documentation blocks.</p></li>
 <li><p>I can generate a slide-show from my notes but also print them as PDF files for your convenience.</p></li>
 <li><p>I can interweave live coding examples with my notes and execute and change these examples in a live classroom.</p></li>
 <li><p>… more interestingly, you can take the notebooks and experiment with the computing examples yourself!</p></li>
 </ol>
-<p>However, to fully access all the examples that have been provided as Jupyter notebooks for EG-247 you will need to install both MATLAB (I used MATLAB 2019a) and Python 3 (I used Anaconda 3) and this is something of a technical challenge.</p>
+<p>However, to fully access all the examples that have been provided as Jupyter notebooks for EG-150 you will need to install both MATLAB (I used MATLAB 2022b) and Python 3 (I used Anaconda 3) and this is something of a technical challenge.</p>
 <p>The installation of Anaconda 3 (which includes Jupyter Notebook) and MATLAB is <a class="reference external" href="https://docs.anaconda.com/anaconda/install/">described elsewhere</a> but must be done before you can open and execute this notebook.</p>
 <p>Assuming that you <em>have</em> installed Anaconda 3, you can <a class="reference external" href="https://github.com/cpjobling/EG-247-Resources/blob/master/setup/setup.ipynb">download</a> and open this notebook using the command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">notebook</span> <span class="n">setup</span><span class="o">.</span><span class="n">ibynb</span>
@@ -831,11 +922,6 @@ title="Print to PDF"
 </div>
 <p>If you wish to further test the Matlab interface, download this file from the <code class="docutils literal notranslate"><span class="pre">Calysto/matlab_kernel</span></code> repository <a class="reference external" href="https://github.com/Calysto/matlab_kernel/blob/master/matlab_kernel.ipynb">matlab_kernel.ipynb</a>, open it in Jupyter and run the whole notebook.</p>
 <p>If <em>you</em> have any problems, send me a message through the Teams page for the EG-247 Course.</p>
-<p>By default, the imatlab kernel uses MATLAB figure windows. To get images inline, use</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">imatlab_export_fig</span><span class="p">(</span><span class="s1">&#39;print-svg&#39;</span><span class="p">)</span> 
-</pre></div>
-</div>
-<p>at the beginning of any notebooks that use the MATLAB kernel.</p>
 </section>
 <section id="for-more-information-on-jupyter">
 <h2>For More Information on Jupyter<a class="headerlink" href="#for-more-information-on-jupyter" title="Permalink to this headline">#</a></h2>
