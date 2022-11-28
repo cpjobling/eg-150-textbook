@@ -12,14 +12,14 @@ Run the **Anaconda Prompt** as an Administrator.
 
 Open a terminal window.
 
-## Go to eg-247-textbook folder
+## Go to eg-150-textbook folder
 
-Create and launch EG-247 Textbook environment:
+Create and launch EG-150 Textbook environment:
 
 ```shell
 conda update conda
-conda create -n eg-247-textbook python=3.9 anaconda
-conda activate eg-247-textbook # source activate eg-247 on mac or unix
+conda create -n eg-150-textbook python=3.9 anaconda
+conda activate eg-150-textbook # source activate eg-150-textbook on mac or unix
 ```
 
 Test packages:
@@ -80,7 +80,7 @@ To recreate the EG-247 Textbook environment on another machine with Anaconda ins
 conda env create --file environment.yml
 ```
 
-## Exit EG-247 Environment
+## Exit EG-150 Environment
 
 ```shell
 conda deactivate # source deactivate on mac or linux
