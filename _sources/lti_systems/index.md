@@ -14,7 +14,7 @@ kernelspec:
 
 # Linear Time-Invariant Systems
 
-Based on Chapter 2 of `cite`{hsu} 
+Based on Chapter 2 of {cite}`schaum` 
 
 
 ## Introduction

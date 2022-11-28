@@ -14,7 +14,7 @@ kernelspec:
 
 # Signals and Systems
 
-Based on Chapter 1 of `cite`{hsu} 
+Based on Chapter 1 of {cite}`schaum` 
 
 ## Introduction
 
@@ -29,3 +29,7 @@ Based on Chapter 1 of `cite`{hsu}
 ## Homework Problems
 
 ## Lab Exercises
+
+```{code-cell}
+
+```
