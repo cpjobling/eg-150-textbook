@@ -1,32 +1,178 @@
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+#######################################################################################
 # Book settings
-# Learn more at https://jupyterbook.org/customize/config.html
+title: EG-150 Signals and Systems
+author: Dr Chris P. Jobling
+email: c.p.jobling@swansea.ac.uk
+copyright: "Swansea University (2023)"
+description: >-
+  Notes and example programmes to accompany the module EG-150 Signals and Systems.
 
-title: My sample book
-author: The Jupyter Book Community
-logo: logo.png
-
-# Force re-execution of notebooks on each build.
-# See https://jupyterbook.org/content/execute.html
+# Execution settings
 execute:
-  execute_notebooks: force
+    execute_notebooks: cache
+    cache: ""
+    exclude_patterns: ["_matlab","_slides","_videos","_video_transcripts","portfolio","worksheet*",_build, "*.ipynb",Thumbs.db, .DS_Store, .github, "*.ipynb_checkpoints"]
 
-# Define the name of the latex output file for PDF builds
-latex:
-  latex_documents:
-    targetname: book.tex
+repository:
+    url: https://github.com/cpjobling/eg-150-textbook
+    path_to_book: ""
+    branch: master
 
-# Add a bibtex file so that we can create citations
+html:
+    baseurl: https://cpjobling.github.io/eg-150-textbook/ 
+    use_edit_page_button: true
+    use_repository_button: true
+    use_issues_button: true
+    favicon: ""
+    extra_footer: |
+      This page was created by 
+      <a href="https://www.swansea.ac.uk/staff/c.p.jobling/" />
+        Dr Chris P. Jobling
+      </a> 
+      for 
+      <a href="https://www.swansea.ac.uk">
+        Swansea University
+      </a>.
+    google_analystics_id: ""
+    home_page_in_navbar: true
+    extra_navbar: |
+      Powered by 
+       <a href="https://jupyterbook.org">
+        Jupyter Book
+      </a>
+    comments:
+      hypothesis: true
+      utterences: false
+
+colab_default: false
+
+
+#######################################################################################
+# Jupyter Book settings
+
+# Main page settings
+
+# Sidebar settings
+show_sidebar: true                # Show the sidebar. Only set to false if your only wish to host a single page.
+collapse_inactive_chapters: true  # Whether to collapse the inactive chapters in the sidebar
+collapse_inactive_sections: true  # Whether to collapse the sub-sections within a non-active section in the sidebar
+# textbook_logo: images/logo/logo.png               # A logo to be displayed at the top of your textbook sidebar. Should be square
+textbook_logo_link: https://cpjobling.github.io/eg-150-textbook/          # A link for the logo.
+sidebar_footer_text: Powered by <a href="https://github.com/choldgraf/jupyter-book">Jupyter
+  Book</a>
+
+# Search settings
+search_max_words_in_content: 100   # In the search function, use at most this many words (too many words will make search slow)
+
+# Controlling page information
+page_titles: infer                      # Either `None`, `infer`, or `toc`
+page_authors: None                     # Either `None` or `infer`
+filename_title_split_character: _     # If inferring titles based on filename, splt on this character.
+
+# Math settings
+number_equations: false                 # Whether to automatically number all block equations with MathJax
+
+#######################################################################################
+# Interact link settings
+
+# General interact settings
+use_jupyterlab: false                     # If 'true', interact links will use JupyterLab as the interface
+
+# Jupyterhub link settings
+use_jupyterhub_button: false              # If 'true', display a button that will direct users to a JupyterHub (that you provide)
+jupyterhub_url: ''                     # The URL for your JupyterHub. If no URL, use ""
+jupyterhub_interact_text: Interact             # The text that interact buttons will contain.
+
+# Binder link settings
+use_binder_button: false                 # If 'true', add a binder button for interactive links
+binderhub_url: ''                                          # The URL for your BinderHub. If no URL, use ""
+binder_repo_base: https://github.com/                     # The site on which the textbook repository is hosted
+binder_repo_org: cpjobling                    # The username or organization that owns this repository
+binder_repo_name: eg-150-textbook                  # The name of the repository on the web
+binder_repo_branch: main                     # The branch on which your textbook is hosted.
+binderhub_interact_text: ''                    # The text that interact buttons will contain.
+
+# Thebelab settings
+use_thebelab_button: false               # If 'true', display a button to allow in-page running code cells with Thebelab
+thebelab_button_text: ''                       # The text to display inside the Thebelab initialization button
+codemirror_theme: abcdef                     # Theme for codemirror cells, for options see https://codemirror.net/doc/manual.html#config
+
+# nbinteract settings
+use_show_widgets_button: true                # If 'true', display a button to allow in-page running code cells with nbinteract
+
+# Download settings
+use_download_button: false               # If 'true', display a button to download a zip file for the notebook
+download_button_text: Download                # The text that download buttons will contain
+download_page_header: Made with Jupyter Book                # A header that will be displayed at the top of and PDF-printed page
+
+#######################################################################################
+# Jupyter book extensions and additional features
+
+
+
+# Bibliography and citation settings. See https://github.com/inukshuk/jekyll-scholar#configuration for options
+
 bibtex_bibfiles:
   - references.bib
 
-# Information about where the book exists on the web
-repository:
-  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
-  path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
 
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
-html:
-  use_issues_button: true
-  use_repository_button: true
+#######################################################################################
+# Jupyter book settings you probably don't need to change
+
+google_analytics:
+  mytrackingcode: ''
+
+#######################################################################################
+# Jupyter book settings you probably don't need to change
+
+content_folder_name: content           # The folder where your raw content (notebooks/markdown files) are located
+images_url: /assets/images                   # Path to static image files
+css_url: /assets/css                      # Path to static CSS files
+js_url: /assets/js                       # Path to JS files
+custom_static_url: /assets/custom            # Path to user's custom CSS/JS files
+
+
+#######################################################################################
+# Jekyll build settings (only modify if you know what you're doing)
+
+# Site settings
+defaults:
+- scope:
+    path: ''
+  values:
+    layout: default
+    toc: true
+    toc_label: '  On this page'
+    toc_icon: list-ul
+
+favicon_path: images/logo/favicon.ico
+
+# Markdown Processing
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
+collections:
+  build:
+    output: true
+    permalink: /:path.html
+
+
+sphinx:
+  config:
+    bibtex_reference_style: author_year
+    html_extra_path: ['_assets']
+    exclude_patterns: ['**/README.md','portfolio','README.md','LICENSE.md']
+    linkcheck_ignore: [r'https://sp.ebrary.com/Shibboleth.sso', r'https://ebookcentral.proquest.com/', r'https://iss-openathensla-runtime.swan.ac.uk']
+  parse:
+      myst_extended_syntax: true

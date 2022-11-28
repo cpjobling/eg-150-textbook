@@ -1,9 +1,61 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
-root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+root: introduction/index
+title: Introduction
+parts:
+- caption: Online notes
+  chapters:
+  - file: signals/index
+  - file: systens/index
+  - file: laplace_transform/index
+    title: Laplace Transforms and their Applications
+    sections:
+    - file: laplace_transform/1/laplace
+      title: The Laplace Transformation
+    - file: laplace_transform/2/inverse_laplace
+      title: The Inverse Laplace Transform
+    - file: laplace_transform/3/circuit_analysis
+      title: Using Laplace Transforms for Circuit Analysis
+    - file: laplace_transform/4/transfer_functions
+      title: Transfer Functions
+    - file: laplace_transform/5/convolution
+      title: The Impulse Response and Convolution
+  - file: fourier_series/index
+    title: Fourier Series
+    sections:
+    - file: fourier_series/1/trig_fseries
+      title: Trigonometric Fourier Series
+    - file: fourier_series/2/exp_fs1
+      title: Exponential Fourier Series
+    - file: fourier_series/3/exp_fs2
+      title: Line Spectra and their Applications
+  - file: zbib
+    title: Bibliography
+- caption: Lab Exercises
+  chapters:
+  - file: labs/index
+    title: Laboratory Exercises
+- caption: Appendices
+  chapters:
+  - file: laplace_transform/1/lt_props
+    title: Properties of the Laplace Transform
+  - file: laplace_transform/1/lt_table
+    title: Common Laplace Transform Pairs
+  - file: setup/polling_setup
+    title: Set Up In-Class Polling
+  - file: todo
+    title: List of Planned Enhancements
+  - file: setup/index
+    title: Setting up your own version of this book
+    sections:
+    - file: setup/jupyter
+      title: About Jupyter notebooks
+    - file: setup/python
+      title: Installing Python
+    - file: setup/setup
+      title: Setting up your Own Jupyter-MATLAB Computing Environment
+    - file: setup/matlab_kernel
+      title: Testing the Jupyter Matlab Kernel
+    - file: setup/advanced-setup
+      title: Quick Start - For Experienced Users
+    - file: setup/jupyter-book
+      title: Setting up jupyter-book
