@@ -14,14 +14,14 @@ jupyter:
 
 # Setup
 
-I have used Jupyter notebooks for **EG-247 Signals and Systems** for a number of reasons:
+I have used Jupyter notebooks for **EG-150 Signals and Systems** for a number of reasons:
 
 1. I can easily produce maths-rich textbook quality notes using the Markdown system provided for documentation blocks.
 1. I can generate a slide-show from my notes but also print them as PDF files for your convenience.
 1. I can interweave live coding examples with my notes and execute and change these examples in a live classroom.
 1. ... more interestingly, you can take the notebooks and experiment with the computing examples yourself!
 
-However, to fully access all the examples that have been provided as Jupyter notebooks for EG-247 you will need to install both MATLAB (I used MATLAB 2019a) and Python 3 (I used Anaconda 3) and this is something of a technical challenge.
+However, to fully access all the examples that have been provided as Jupyter notebooks for EG-150 you will need to install both MATLAB (I used MATLAB 2022b) and Python 3 (I used Anaconda 3) and this is something of a technical challenge.
 
 The installation of Anaconda 3 (which includes Jupyter Notebook) and MATLAB is [described elsewhere](https://docs.anaconda.com/anaconda/install/) but must be done before you can open and execute this notebook. 
 
@@ -331,15 +331,6 @@ magic(10)
 If you wish to further test the Matlab interface, download this file from the `Calysto/matlab_kernel` repository [matlab_kernel.ipynb](https://github.com/Calysto/matlab_kernel/blob/master/matlab_kernel.ipynb), open it in Jupyter and run the whole notebook.
 
 If *you* have any problems, send me a message through the Teams page for the EG-247 Course.
-
-By default, the imatlab kernel uses MATLAB figure windows. To get images inline, use
-
-```
-imatlab_export_fig('print-svg') 
-```
-
-at the beginning of any notebooks that use the MATLAB kernel.
-
 
 ## For More Information on Jupyter
 
