@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/signals_and_systems/index.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Linear Time-Invariant Systems" href="../lti_systems/index.html" />
+    <link rel="next" title="Signals and Classification of Signals" href="signals/index.html" />
     <link rel="prev" title="EG-150 Signals and Systems" href="../introduction/index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -116,10 +116,27 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Signals and Systems
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signals/index.html">
+     Signals and Classification of Signals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="elementary_signals/index.html">
+     Elementary Signals
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lti_systems/index.html">
@@ -130,8 +147,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../laplace_transform/index.html">
    Laplace Transforms and their Applications
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -167,8 +184,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../fourier_series/index.html">
    Fourier Series
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -233,8 +250,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../setup/index.html">
    Setting up your own version of this book
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -334,7 +351,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/signals_and_systems/index.md"
+        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/signals_and_systems/index.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -521,33 +538,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#signals-and-classifications-of-systems">
-   Signals and Classifications of Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#elementary-signals">
-   Elementary Signals
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#systems-and-classifications-of-systems">
-   Systems and Classifications of Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#worked-problems">
-   Worked Problems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#homework-problems">
-   Homework Problems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lab-exercises">
-   Lab Exercises
+  <a class="reference internal nav-link" href="#contents-of-this-chapter">
+   Contents of this Chapter
   </a>
  </li>
 </ul>
@@ -575,33 +567,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#signals-and-classifications-of-systems">
-   Signals and Classifications of Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#elementary-signals">
-   Elementary Signals
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#systems-and-classifications-of-systems">
-   Systems and Classifications of Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#worked-problems">
-   Worked Problems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#homework-problems">
-   Homework Problems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lab-exercises">
-   Lab Exercises
+  <a class="reference internal nav-link" href="#contents-of-this-chapter">
+   Contents of this Chapter
   </a>
  </li>
 </ul>
@@ -616,28 +583,24 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="signals-and-systems">
 <h1>Signals and Systems<a class="headerlink" href="#signals-and-systems" title="Permalink to this headline">#</a></h1>
-<p>Based on Chapter 1 of <span id="id1">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, HNew York, NY, 2011. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2011</a>]</span></p>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>The concept and theory of signals and systems are needed in almost all electronic and electrical engineering fields and in many other engineering and scientific disciplines as well. In this unit we introduce the mathematical description and representation of signals and systems and their classifications. We also define several important elementary signals that are essential to your studies.</p>
+<p>This chapter is based on Chapter 1 of <span id="id1">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, HNew York, NY, 2011. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2011</a>]</span>.</p>
 </section>
-<section id="signals-and-classifications-of-systems">
-<h2>Signals and Classifications of Systems<a class="headerlink" href="#signals-and-classifications-of-systems" title="Permalink to this headline">#</a></h2>
+<section id="contents-of-this-chapter">
+<h2>Contents of this Chapter<a class="headerlink" href="#contents-of-this-chapter" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Signals</span> <span class="pre">and</span> <span class="pre">Classifications</span> <span class="pre">of</span> <span class="pre">Signals</span></code>{classification/index.md}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Elementary</span> <span class="pre">Signals</span></code>{elementary_signals/index.md}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Systems</span> <span class="pre">and</span> <span class="pre">Classifications</span> <span class="pre">of</span> <span class="pre">Systems</span></code>{systems/index.md}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Worked</span> <span class="pre">Examples</span></code>{examples/index.md}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Homework</span> <span class="pre">Problems</span></code>{homework/index.md}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MATLAB</span> <span class="pre">Lab</span> <span class="pre">1</span> <span class="pre">-</span> <span class="pre">Symbolic</span> <span class="pre">Math</span> <span class="pre">Toolbox</span> <span class="pre">OnRamp</span></code>{lab/index.md}</p></li>
+</ul>
 </section>
-<section id="elementary-signals">
-<h2>Elementary Signals<a class="headerlink" href="#elementary-signals" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="systems-and-classifications-of-systems">
-<h2>Systems and Classifications of Systems<a class="headerlink" href="#systems-and-classifications-of-systems" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="worked-problems">
-<h2>Worked Problems<a class="headerlink" href="#worked-problems" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="homework-problems">
-<h2>Homework Problems<a class="headerlink" href="#homework-problems" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="lab-exercises">
-<h2>Lab Exercises<a class="headerlink" href="#lab-exercises" title="Permalink to this headline">#</a></h2>
-</section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -674,10 +637,10 @@ title="Print to PDF"
             <p class="prev-next-title">EG-150 Signals and Systems</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../lti_systems/index.html" title="next page">
+    <a class='right-next' id="next-link" href="signals/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Linear Time-Invariant Systems</p>
+        <p class="prev-next-title">Signals and Classification of Signals</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

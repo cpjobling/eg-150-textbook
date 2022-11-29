@@ -12,24 +12,24 @@ kernelspec:
   name: matlab
 ---
 
++++ {"slideshow": {"slide_type": "slide"}}
+
 # Signals and Systems
 
-Based on Chapter 1 of {cite}`schaum` 
 
 ## Introduction
 
-## Signals and Classifications of Systems
+The concept and theory of signals and systems are needed in almost all electronic and electrical engineering fields and in many other engineering and scientific disciplines as well. In this unit we introduce the mathematical description and representation of signals and systems and their classifications. We also define several important elementary signals that are essential to your studies.
 
-## Elementary Signals
+This chapter is based on Chapter 1 of {cite}`schaum`.
 
-## Systems and Classifications of Systems
++++ {"slideshow": {"slide_type": "slide"}}
 
-## Worked Problems
+## Contents of this Chapter
 
-## Homework Problems
-
-## Lab Exercises
-
-```{code-cell}
-
-```
+* `Signals and Classifications of Signals`{classification/index.md}
+* `Elementary Signals`{elementary_signals/index.md}
+* `Systems and Classifications of Systems`{systems/index.md}
+* `Worked Examples`{examples/index.md}
+* `Homework Problems`{homework/index.md}
+* `MATLAB Lab 1 - Symbolic Math Toolbox OnRamp`{lab/index.md}
