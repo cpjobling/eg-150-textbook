@@ -325,7 +325,7 @@ d). $x(-t)$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.1 in {cite}`Schaum`
+For the answer, refer to the lecture recording or see solved problem 1.1 in {cite}`schaum`
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -352,7 +352,7 @@ c). 1 s.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.3 in {cite}`Schaum`.
+For the answer, refer to the lecture recording or see solved problem 1.3 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -367,7 +367,7 @@ Signals for Example 3.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.5 in {cite}`Schaum`.
+For the answer, refer to the lecture recording or see solved problem 1.5 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -375,7 +375,7 @@ For the answer, refer to the lecture recording or see solved problem 1.5 in {cit
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.6 in {cite}`Schaum`.
+For the answer, refer to the lecture recording or see solved problem 1.6 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -383,7 +383,7 @@ For the answer, refer to the lecture recording or see solved problem 1.6 in {cit
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.7 in {cite}`Schaum`.
+For the answer, refer to the lecture recording or see solved problem 1.7 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -403,7 +403,7 @@ $$\int_{-a}^{a} x(t)\, dt = 0.$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.8 in {cite}`Schaum`.
+For the answer, refer to the lecture recording or see solved problem 1.8 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
