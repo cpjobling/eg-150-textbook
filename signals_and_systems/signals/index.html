@@ -138,6 +138,11 @@ const thebe_selector_output = ".output, .cell_output"
      Elementary Signals
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../systems/index.html">
+     Systems and Classification of Systems
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -353,7 +358,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/signals_and_systems/signals/index.ipynb"
+        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/signals_and_systems/signals/index.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -638,6 +643,34 @@ title="Print to PDF"
 </ul>
 <section id="continuous-time-and-discrete-time-signals">
 <h2>Continuous-Time and Discrete-Time Signals<a class="headerlink" href="#continuous-time-and-discrete-time-signals" title="Permalink to this headline">#</a></h2>
+<p>A signal <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>continuous-time</em> (CT) signal if <span class="math notranslate nohighlight">\(t\)</span> is a continuous variable. For an example of a continuous-time signal, please see <a class="reference internal" href="#ct-signal"><span class="std std-ref">Graphical representation of a continuous-time signal</span></a>.</p>
+<p>If <span class="math notranslate nohighlight">\(t\)</span> is a discrete variable—that is, <span class="math notranslate nohighlight">\(x(t)\)</span> is defined at discrete times—then <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>discrete-time</em> (DT) signal. For an example of a discrete-time signal, please see <span class="xref std std-ref">tt-signal</span>.</p>
+<p>Since a discrete-time signal is defined at discrete times, a discrete-time is often defined as a <em>sequence</em> of numbers, donated by <span class="math notranslate nohighlight">\(x[n]\)</span>, where <span class="math notranslate nohighlight">\(n\)</span> is an integer (mathematically: <span class="math notranslate nohighlight">\(n \in \mathbb{Z}\)</span>).</p>
+<figure class="align-default" id="ct-signal">
+<img alt="Graphical representation of a continuous-time signal." src="../../_images/ct-signal.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Graphical representation of a continuous-time signal</span><a class="headerlink" href="#ct-signal" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="dt-signal">
+<img alt="Graphical representation of a discrete-time signal." src="../../_images/dt-signal.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Graphical representation of a discrete-time signal</span><a class="headerlink" href="#dt-signal" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Because discrete-time signals are defined as sequences, it is easy to define and plot a sequence in MATLAB. For example, to redraw Fig. <a class="reference internal" href="#dt-signal"><span class="std std-ref">Graphical representation of a discrete-time signal</span></a>, execute the following code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="p">:</span><span class="mi">6</span><span class="p">;</span><span class="w"></span>
+<span class="n">xn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
+<span class="nb">stem</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">xn</span><span class="p">),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Graphical representation of a discrete-time signal&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;n&#39;</span><span class="p">),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;x[n]&#39;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/index_11_0.png" src="../../_images/index_11_0.png" />
+</div>
+</div>
 </section>
 <section id="analogue-and-digital-signals">
 <h2>Analogue and Digital Signals<a class="headerlink" href="#analogue-and-digital-signals" title="Permalink to this headline">#</a></h2>
