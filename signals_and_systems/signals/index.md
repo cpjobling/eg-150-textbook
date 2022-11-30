@@ -87,9 +87,9 @@ A discrete-time signal $x[n]$ may represent a phenomenon for which the independe
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-E.g. [FTSE 100](https://www.londonstockexchange.com/indices/ftse-100) (Fig. {numref}`ftse`
+E.g. [FTSE 100](https://www.londonstockexchange.com/indices/ftse-100) (Fig. {numref}`ftse-100`)
 
-:::{ftse-100} ftse
+:::{figure-md} ftse-100
 <img src="pictures/Chart_FTSE_100.png" alt="An example of discrete data from the FTSE 100.">
 
 An example of discrete data&mdash;the FTSE 100. Year from Dec. 2021 to Novemver 2022. (c) London Stock Exchange.
@@ -387,7 +387,7 @@ For the answer, refer to the lecture recording or see solved problem 1.7 in {cit
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-5). Show that 
+6). Show that 
 
 a). If $x(t)$ is even 
 
