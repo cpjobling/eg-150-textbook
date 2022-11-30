@@ -405,7 +405,7 @@ $$\int_{-a}^{a} x(t)\, dt = 0.$$
 
 For the answer, refer to the lecture recording or see solved problem 1.8 in {cite}`Schaum`.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Summary
 
@@ -413,18 +413,18 @@ In this lecture we have started our look at signals and the classification of si
 
 In particular we have looked at
 
-* {ct_n_dt}`Continuous-time and discrete-time signals`
-* {a_n_d}`Analogue and Digital Signals`
-* {r_n_c}`Real and Complex Signals`
-* {det_n_rand}`Determistic and Random Signals`
-* {even_n_odd}`Even and Odd Signals`
+* {ref}`ct_n_dt`
+* {ref}`a_n_d`
+* {ref}`r_n_c`
+* {ref}`det_n_rand`
+* {ref}`even_n_odd`
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Next Time
 
-* {p_n_np}`Periodic and Nonperiodic Signals`
-* {e_n_p}`Energy and Power Signals`
+* {ref}`p_n_np`
+* {ref}`e_n_p`
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -433,7 +433,3 @@ In particular we have looked at
 
 {e_n_p}=
 ## Energy and Power Signals
-
-```{code-cell}
-
-```
