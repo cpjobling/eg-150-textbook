@@ -39,11 +39,11 @@ A *signal* is a function representing a phyiscial quality of variable, and typic
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-A signal $x(t)$ is a *continuous-time* (CT) signal if $t$ is a continuous variable. For an example of a continuous-time signal, please see {ref}`ct-signal`.
+A signal $x(t)$ is a *continuous-time* (CT) signal if $t$ is a continuous variable. For an example of a continuous-time signal, please see Fig. {numref}`ct-signal`.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-If $t$ is a discrete variable&mdash;that is, $x(t)$ is defined at discrete times&mdash;then $x(t)$ is a *discrete-time* (DT) signal. For an example of a discrete-time signal, please see {ref}`dt-signal`.
+If $t$ is a discrete variable&mdash;that is, $x(t)$ is defined at discrete times&mdash;then $x(t)$ is a *discrete-time* (DT) signal. For an example of a discrete-time signal, please see Fig. {numref}`dt-signal`.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -87,9 +87,9 @@ A discrete-time signal $x[n]$ may represent a phenomenon for which the independe
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-E.g. [FTSE 100](https://www.londonstockexchange.com/indices/ftse-100) 
+E.g. [FTSE 100](https://www.londonstockexchange.com/indices/ftse-100) (Fig. {numref}`ftse`
 
-:::{figure-md} ftse
+:::{ftse-100} ftse
 <img src="pictures/Chart_FTSE_100.png" alt="An example of discrete data from the FTSE 100.">
 
 An example of discrete data&mdash;the FTSE 100. Year from Dec. 2021 to Novemver 2022. (c) London Stock Exchange.
@@ -237,7 +237,7 @@ A signal $x(t)$ is referred to as an *even* signal if
 
 $$x(t) = x(-t)$$
 
-See Fig. {ref}`even-signal` for an example of an even signal.
+See Fig. {numref}`even-signal` for an example of an even signal.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -255,7 +255,7 @@ A signal $x(t)$ is referred to as an *odd* signal if
 
 $$x(-t) = -x(t)$$
 
-See Fig. {ref}`odd-signal` for an example of an odd signal.
+See Fig. {numref}`odd-signal` for an example of an odd signal.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -297,7 +297,7 @@ Note the product of two even signals or two odd signals is an even signal and th
 
 ## Examples
 
-1). A continuous-time signal $x(t)$ is shown in Fig. {ref}`example1`. 
+1). A continuous-time signal $x(t)$ is shown in Fig. {numref}`example1`. 
 
 :::{figure-md} example1
 <img src="pictures/example1.png" alt="The signal for example 1" width="60%">
@@ -356,7 +356,7 @@ For the answer, refer to the lecture recording or see solved problem 1.3 in {cit
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-3). Sketch and label the even and odd components of the signals shown in Fig. {ref}`example3`.
+3). Sketch and label the even and odd components of the signals shown in Fig. {numref}`example3`.
 
 
 :::{figure-md} example3
