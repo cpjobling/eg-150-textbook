@@ -4,8 +4,22 @@ title: Introduction
 parts:
 - caption: Online notes
   chapters:
-  - file: signals/index
-  - file: systens/index
+  - file: signals_and_systems/index
+    sections:
+      - file: signals_and_systems/signals/index
+        title: Signals and Classification of Signals
+      - file: signals_and_systems/elementary_signals/index
+        title: Elementary Signals
+      - file: signals_and_systems/systems/index
+        title: Systems and Classification of Systems
+      - file: signals_and_systems/examples/index
+        title: Worked Examples
+      - file: signals_and_systems/homework/index
+        title: Homework Problems
+      - file: signals_and_systems/lab/index
+        title: MATLAB Lab 1 - Symbolic Math Toolbox OnRamp 
+  - file: lti_systems/index
+    title: Linear Time-Invariant Systems
   - file: laplace_transform/index
     title: Laplace Transforms and their Applications
     sections:
@@ -30,6 +44,10 @@ parts:
       title: Line Spectra and their Applications
   - file: zbib
     title: Bibliography
+- caption: FAQs
+  chapters:
+  - file: FAQS/faq
+    title: Answers to Frequently Asked Questions
 - caption: Lab Exercises
   chapters:
   - file: labs/index

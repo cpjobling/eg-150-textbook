@@ -27,12 +27,13 @@ clean:
 	find  . -name zbib.ipynb -exec rm {} \;
 	# find ./FAQS -name '*.ipynb' -exec rm {} \;
 	find ./setup -name '*.ipynb' -exec rm {} \;
-	# find ./elementary_signals -name '*.ipynb' -exec rm {} \;
+	find ./introduction -name '*.ipynb' -exec rm {} \;
+	find ./signals_and_systems -name '*.ipynb' -exec rm {} \;
+	find ./lti_systems -name '*.ipynb' -exec rm {} \;
 	find ./labs -name '*.ipynb' -exec rm {} \;
 	find ./fourier_series -name '*.ipynb' -exec rm {} \;
 	# find ./homework -name '*.ipynb' -exec rm {} \;
 	# find ./worksheets -name '*.ipynb' -exec rm {} \;
-	find ./introduction -name '*.ipynb' -exec rm {} \;
 	find ./laplace_transform -name '*.ipynb' -exec rm {} \;
 	jupyter-book clean .
 
@@ -52,9 +53,9 @@ site:
 #	rsync -a --delete labs/ portfolio
 
 assets: FORCE
-	rsync -av --delete --exclude='*.ipynb' --exclude='*.md' --exclude='.*' --delete-excluded \
-	signals \
-	systems \
+	rsync -av --delete --exclude='*.ipynb' --exclude='*.pptx' --exclude='.*' --delete-excluded \
+	signals_and_systems \
+	lti_systems \
 	fourier_series \
 	introduction \
 	laplace_transform \
