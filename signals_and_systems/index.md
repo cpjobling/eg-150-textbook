@@ -27,9 +27,13 @@ This chapter is based on Chapter 1 of {cite}`schaum`.
 
 ## Contents of this Chapter
 
-* {classification/index.md}`Signals and Classifications of Signals`
-* {elementary_signals/index.md}`Elementary Signals`
-* {systems/index.md}`Systems and Classifications of Systems`
-* {examples/index.md}`Worked Examples`
-* {homework/index.md}`Homework Problems`
-* {lab/index.md}`MATLAB Lab 1 - Symbolic Math Toolbox OnRamp`
+* {Signals and Classifications of Signals}'classification/index.md'
+* {Elementary Signals}'systems/index.md'
+* {Systems and Classifications of Systems}'systems/index.md'
+* {Worked Examples}'examples/index.md'
+* {Homework Problems}'lab/index.md'
+* {MATLAB Lab 1 - Symbolic Math Toolbox OnRamp}'lab/index.md'
+
+```{code-cell}
+
+```
