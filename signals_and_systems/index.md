@@ -33,7 +33,3 @@ This chapter is based on Chapter 1 of {cite}`schaum`.
 * {Worked Examples}'examples/index.md'
 * {Homework Problems}'lab/index.md'
 * {MATLAB Lab 1 - Symbolic Math Toolbox OnRamp}'lab/index.md'
-
-```{code-cell}
-
-```

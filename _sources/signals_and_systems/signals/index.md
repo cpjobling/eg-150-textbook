@@ -42,7 +42,7 @@ A signal $x(t)$ is a *continuous-time* (CT) signal if $t$ is a continuous variab
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-If $t$ is a discrete variable&mdash;that is, $x(t)$ is defined at discrete times&mdash;then $x(t)$ is a *discrete-time* (DT) signal. For an example of a discrete-time signal, please see {ref}`tt-signal`.
+If $t$ is a discrete variable&mdash;that is, $x(t)$ is defined at discrete times&mdash;then $x(t)$ is a *discrete-time* (DT) signal. For an example of a discrete-time signal, please see {ref}`dt-signal`.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -80,7 +80,81 @@ stem(n,xn),title('Graphical representation of a discrete-time signal'),xlabel('n
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+### More on discrete-time signals
+
+A discrete-time signal $x[n]$ may represent a phenomenon for which the independent variable is inherently discrete: e.g. daily stock market average prices.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+E.g. [FTSE 100](https://www.londonstockexchange.com/indices/ftse-100) 
+
+:::{figure-md} ftse
+<img src="pictures/Chart_FTSE_100.png" alt="An example of discrete data from the FTSE 100.">
+
+An example of discrete data&mdash;the FTSE 100. Year from Dec. 2021 to Novemver 2022. (c) London Stock Exchange.
+:::
+
+
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Sampled data
+
+In electronic engineering, we mostly use discrete-time signals to represent the *sampling* of continuous-time signals.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+For example, a discrete-time signal $x[n]$ may be obtained by *sampling* a continuous-time signal $x(t)$ such as
+
+$$x(t_0), x(t_1), x(t_2),\ldots,x(t_n),\ldots$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+or in a shorter form as
+
+$$x[0], x[1], x[2],\ldots,x[n],\ldots$$
+
+$$x_0,x_1, x_2,\ldots,x_n,\ldots$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+where
+
+$$x[n]_n = x[n] = x(t_n)$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+The $x_n$'s are called *samples* and the time interval between them is called the *sampling interval*.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Uniform sampling
+
+When the sampling intervals are equal (uniform sampling), then
+
+$$x_n = x[n] = x(nT_s)$$
+
+where the constant $T_s$ is the sampling interval.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+There is much more about discrete-time signals in Chapter 1 of {cite}`schaum` but we will leave it here for now. 
+
+We will return to the study of discrete-time signals and discrete-time systems in **EG-247 Signals and Systems** next year.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
 ## Analogue and Digital Signals
+
+If a continuous-time signal $x(t)$ can take on any value in the continuous interval $(a,b)$, where $a$ may be $-\infty$ and $b$ may be $+\infty$, then the continuous-time signal $x(t)$ is called an *analogue* signal.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+If a discrete-time signal $x[n]$ can take on only a finite number of distinct values, then we call this signal a *digital signal*
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+In modern electronics, most physical phenomena which we wish to deal are represented by analogue signals. But more often than not, we will process such data by sampling the signals and converting them into digital signals.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 

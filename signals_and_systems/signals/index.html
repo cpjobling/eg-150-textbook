@@ -543,6 +543,23 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#continuous-time-and-discrete-time-signals">
    Continuous-Time and Discrete-Time Signals
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-on-discrete-time-signals">
+     More on discrete-time signals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sampled-data">
+     Sampled data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uniform-sampling">
+     Uniform sampling
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#analogue-and-digital-signals">
@@ -592,6 +609,23 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#continuous-time-and-discrete-time-signals">
    Continuous-Time and Discrete-Time Signals
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-on-discrete-time-signals">
+     More on discrete-time signals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sampled-data">
+     Sampled data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uniform-sampling">
+     Uniform sampling
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#analogue-and-digital-signals">
@@ -644,7 +678,7 @@ title="Print to PDF"
 <section id="continuous-time-and-discrete-time-signals">
 <h2>Continuous-Time and Discrete-Time Signals<a class="headerlink" href="#continuous-time-and-discrete-time-signals" title="Permalink to this headline">#</a></h2>
 <p>A signal <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>continuous-time</em> (CT) signal if <span class="math notranslate nohighlight">\(t\)</span> is a continuous variable. For an example of a continuous-time signal, please see <a class="reference internal" href="#ct-signal"><span class="std std-ref">Graphical representation of a continuous-time signal</span></a>.</p>
-<p>If <span class="math notranslate nohighlight">\(t\)</span> is a discrete variable—that is, <span class="math notranslate nohighlight">\(x(t)\)</span> is defined at discrete times—then <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>discrete-time</em> (DT) signal. For an example of a discrete-time signal, please see <span class="xref std std-ref">tt-signal</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(t\)</span> is a discrete variable—that is, <span class="math notranslate nohighlight">\(x(t)\)</span> is defined at discrete times—then <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>discrete-time</em> (DT) signal. For an example of a discrete-time signal, please see <a class="reference internal" href="#dt-signal"><span class="std std-ref">Graphical representation of a discrete-time signal</span></a>.</p>
 <p>Since a discrete-time signal is defined at discrete times, a discrete-time is often defined as a <em>sequence</em> of numbers, donated by <span class="math notranslate nohighlight">\(x[n]\)</span>, where <span class="math notranslate nohighlight">\(n\)</span> is an integer (mathematically: <span class="math notranslate nohighlight">\(n \in \mathbb{Z}\)</span>).</p>
 <figure class="align-default" id="ct-signal">
 <img alt="Graphical representation of a continuous-time signal." src="../../_images/ct-signal.png" />
@@ -671,9 +705,48 @@ title="Print to PDF"
 <img alt="../../_images/index_11_0.png" src="../../_images/index_11_0.png" />
 </div>
 </div>
+<section id="more-on-discrete-time-signals">
+<h3>More on discrete-time signals<a class="headerlink" href="#more-on-discrete-time-signals" title="Permalink to this headline">#</a></h3>
+<p>A discrete-time signal <span class="math notranslate nohighlight">\(x[n]\)</span> may represent a phenomenon for which the independent variable is inherently discrete: e.g. daily stock market average prices.</p>
+<p>E.g. <a class="reference external" href="https://www.londonstockexchange.com/indices/ftse-100">FTSE 100</a></p>
+<figure class="align-default" id="ftse">
+<img alt="An example of discrete data from the FTSE 100." src="../../_images/Chart_FTSE_100.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">An example of discrete data—the FTSE 100. Year from Dec. 2021 to Novemver 2022. (c) London Stock Exchange.</span><a class="headerlink" href="#ftse" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="sampled-data">
+<h3>Sampled data<a class="headerlink" href="#sampled-data" title="Permalink to this headline">#</a></h3>
+<p>In electronic engineering, we mostly use discrete-time signals to represent the <em>sampling</em> of continuous-time signals.</p>
+<p>For example, a discrete-time signal <span class="math notranslate nohighlight">\(x[n]\)</span> may be obtained by <em>sampling</em> a continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span> such as</p>
+<div class="math notranslate nohighlight">
+\[x(t_0), x(t_1), x(t_2),\ldots,x(t_n),\ldots\]</div>
+<p>or in a shorter form as</p>
+<div class="math notranslate nohighlight">
+\[x[0], x[1], x[2],\ldots,x[n],\ldots\]</div>
+<div class="math notranslate nohighlight">
+\[x_0,x_1, x_2,\ldots,x_n,\ldots\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[x[n]_n = x[n] = x(t_n)\]</div>
+<p>The <span class="math notranslate nohighlight">\(x_n\)</span>’s are called <em>samples</em> and the time interval between them is called the <em>sampling interval</em>.</p>
+</section>
+<section id="uniform-sampling">
+<h3>Uniform sampling<a class="headerlink" href="#uniform-sampling" title="Permalink to this headline">#</a></h3>
+<p>When the sampling intervals are equal (uniform sampling), then</p>
+<div class="math notranslate nohighlight">
+\[x_n = x[n] = x(nT_s)\]</div>
+<p>where the constant <span class="math notranslate nohighlight">\(T_s\)</span> is the sampling interval.</p>
+<p>There is much more about discrete-time signals in Chapter 1 of <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, HNew York, NY, 2011. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2011</a>]</span> but we will leave it here for now.</p>
+<p>We will return to the study of discrete-time signals and discrete-time systems in <strong>EG-247 Signals and Systems</strong> next year.</p>
+</section>
 </section>
 <section id="analogue-and-digital-signals">
 <h2>Analogue and Digital Signals<a class="headerlink" href="#analogue-and-digital-signals" title="Permalink to this headline">#</a></h2>
+<p>If a continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span> can take on any value in the continuous interval <span class="math notranslate nohighlight">\((a,b)\)</span>, where <span class="math notranslate nohighlight">\(a\)</span> may be <span class="math notranslate nohighlight">\(-\infty\)</span> and <span class="math notranslate nohighlight">\(b\)</span> may be <span class="math notranslate nohighlight">\(+\infty\)</span>, then the continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span> is called an <em>analogue</em> signal.</p>
+<p>If a discrete-time signal <span class="math notranslate nohighlight">\(x[n]\)</span> can take on only a finite number of distinct values, then we call this signal a <em>digital signal</em></p>
+<p>In modern electronics, most physical phenomena which we wish to deal are represented by analogue signals. But more often than not, we will process such data by sampling the signals and converting them into digital signals.</p>
 </section>
 <section id="real-and-complex-signals">
 <h2>Real and Complex Signals<a class="headerlink" href="#real-and-complex-signals" title="Permalink to this headline">#</a></h2>
