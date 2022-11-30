@@ -34,7 +34,7 @@ A *signal* is a function representing a phyiscial quality of variable, and typic
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-{ct_n_dt}=
+(ct_n_dt)=
 ## Continuous-Time and Discrete-Time Signals
 
 +++ {"slideshow": {"slide_type": "fragment"}}
@@ -143,7 +143,7 @@ We will return to the study of discrete-time signals and discrete-time systems i
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-{a_n_d}=
+(a_n_d)=
 ## Analogue and Digital Signals
 
 If a continuous-time signal $x(t)$ can take on any value in the continuous interval $(a,b)$, where $a$ may be $-\infty$ and $b$ may be $+\infty$, then the continuous-time signal $x(t)$ is called an *analogue* signal.
@@ -158,7 +158,7 @@ In modern electronics, most physical phenomena which we wish to deal are represe
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-{r_n_c}=
+(r_n_c)=
 ## Real and Complex Signals
 
 A signal $x(t)$ is a *real* signal if its value if a real number, and a signal $x(t)$ is a *complex* signal if its value is a complex number.
@@ -181,7 +181,7 @@ We won't see any examples of complex signals in this course.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-{det_n_rand}=
+(det_n_rand)=
 ## Deterministic and Random Signals
 
 *Deterministic signals* are those signals whose values are completely specified for any given time. Thus a deterministic signal can be modelled by a known function of time $t$.
@@ -226,7 +226,7 @@ We will not discuss random signals in this module or the next, but if you are in
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-{even_n_odd}=
+(even_n_odd)=
 ## Even and Odd Signals
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -428,8 +428,12 @@ In particular we have looked at
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-{p_n_np}=
+(p_n_np)=
 ## Periodic and Nonperiodic Signals
 
-{e_n_p}=
+(e_n_p)=
 ## Energy and Power Signals
+
+```{code-cell}
+
+```

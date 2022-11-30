@@ -763,9 +763,8 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>Thus a signal is denoted by <span class="math notranslate nohighlight">\(x(t)\)</span>.</p></li>
 </ul>
-<p>{ct_n_dt}=</p>
 <section id="continuous-time-and-discrete-time-signals">
-<h2>Continuous-Time and Discrete-Time Signals<a class="headerlink" href="#continuous-time-and-discrete-time-signals" title="Permalink to this headline">#</a></h2>
+<span id="ct-n-dt"></span><h2>Continuous-Time and Discrete-Time Signals<a class="headerlink" href="#continuous-time-and-discrete-time-signals" title="Permalink to this headline">#</a></h2>
 <p>A signal <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>continuous-time</em> (CT) signal if <span class="math notranslate nohighlight">\(t\)</span> is a continuous variable. For an example of a continuous-time signal, please see <a class="reference internal" href="#ct-signal"><span class="std std-ref">Graphical representation of a continuous-time signal</span></a>.</p>
 <p>If <span class="math notranslate nohighlight">\(t\)</span> is a discrete variable—that is, <span class="math notranslate nohighlight">\(x(t)\)</span> is defined at discrete times—then <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>discrete-time</em> (DT) signal. For an example of a discrete-time signal, please see <a class="reference internal" href="#dt-signal"><span class="std std-ref">Graphical representation of a discrete-time signal</span></a>.</p>
 <p>Since a discrete-time signal is defined at discrete times, a discrete-time is often defined as a <em>sequence</em> of numbers, donated by <span class="math notranslate nohighlight">\(x[n]\)</span>, where <span class="math notranslate nohighlight">\(n\)</span> is an integer (mathematically: <span class="math notranslate nohighlight">\(n \in \mathbb{Z}\)</span>).</p>
@@ -829,18 +828,16 @@ title="Print to PDF"
 <p>where the constant <span class="math notranslate nohighlight">\(T_s\)</span> is the sampling interval.</p>
 <p>There is much more about discrete-time signals in Chapter 1 of <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, HNew York, NY, 2011. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2011</a>]</span> but we will leave it here for now.</p>
 <p>We will return to the study of discrete-time signals and discrete-time systems in <strong>EG-247 Signals and Systems</strong> next year.</p>
-<p>{a_n_d}=</p>
 </section>
 </section>
 <section id="analogue-and-digital-signals">
-<h2>Analogue and Digital Signals<a class="headerlink" href="#analogue-and-digital-signals" title="Permalink to this headline">#</a></h2>
+<span id="a-n-d"></span><h2>Analogue and Digital Signals<a class="headerlink" href="#analogue-and-digital-signals" title="Permalink to this headline">#</a></h2>
 <p>If a continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span> can take on any value in the continuous interval <span class="math notranslate nohighlight">\((a,b)\)</span>, where <span class="math notranslate nohighlight">\(a\)</span> may be <span class="math notranslate nohighlight">\(-\infty\)</span> and <span class="math notranslate nohighlight">\(b\)</span> may be <span class="math notranslate nohighlight">\(+\infty\)</span>, then the continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span> is called an <em>analogue</em> signal.</p>
 <p>If a discrete-time signal <span class="math notranslate nohighlight">\(x[n]\)</span> can take on only a finite number of distinct values, then we call this signal a <em>digital signal</em>.</p>
 <p>In modern electronics, most physical phenomena which we wish to deal are represented by analogue signals. But more often than not these days, we will process such data by sampling the signals and converting them into digital signals.</p>
-<p>{r_n_c}=</p>
 </section>
 <section id="real-and-complex-signals">
-<h2>Real and Complex Signals<a class="headerlink" href="#real-and-complex-signals" title="Permalink to this headline">#</a></h2>
+<span id="r-n-c"></span><h2>Real and Complex Signals<a class="headerlink" href="#real-and-complex-signals" title="Permalink to this headline">#</a></h2>
 <p>A signal <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>real</em> signal if its value if a real number, and a signal <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>complex</em> signal if its value is a complex number.</p>
 <p>A general complex signal is a signal <span class="math notranslate nohighlight">\(x(t)\)</span> is a function of the form</p>
 <div class="math notranslate nohighlight">
@@ -848,10 +845,9 @@ title="Print to PDF"
 <p>where <span class="math notranslate nohighlight">\(x_1(t)\)</span> and <span class="math notranslate nohighlight">\(x_2(t)\)</span> are real signals and <span class="math notranslate nohighlight">\(j=\sqrt{-1}\)</span>.</p>
 <p>Note that <span class="math notranslate nohighlight">\(t\)</span> could represent either a comtinuous or a discrete variable.</p>
 <p>We won’t see any examples of complex signals in this course.</p>
-<p>{det_n_rand}=</p>
 </section>
 <section id="deterministic-and-random-signals">
-<h2>Deterministic and Random Signals<a class="headerlink" href="#deterministic-and-random-signals" title="Permalink to this headline">#</a></h2>
+<span id="det-n-rand"></span><h2>Deterministic and Random Signals<a class="headerlink" href="#deterministic-and-random-signals" title="Permalink to this headline">#</a></h2>
 <p><em>Deterministic signals</em> are those signals whose values are completely specified for any given time. Thus a deterministic signal can be modelled by a known function of time <span class="math notranslate nohighlight">\(t\)</span>.</p>
 <p>For example consider <span class="math notranslate nohighlight">\(x(t) = 5 \sin(10 t + \pi/4)\)</span></p>
 <div class="cell docutils container">
@@ -883,11 +879,10 @@ title="Print to PDF"
 </div>
 </div>
 <p>We will not discuss random signals in this module or the next, but if you are interested, they are covered in detail in Chapters 8 and 9 of <span id="id3">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, HNew York, NY, 2011. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2011</a>]</span>.</p>
-<p>{even_n_odd}=</p>
 </section>
 </section>
 <section id="even-and-odd-signals">
-<h2>Even and Odd Signals<a class="headerlink" href="#even-and-odd-signals" title="Permalink to this headline">#</a></h2>
+<span id="even-n-odd"></span><h2>Even and Odd Signals<a class="headerlink" href="#even-and-odd-signals" title="Permalink to this headline">#</a></h2>
 <section id="an-even-signal">
 <h3>An even signal<a class="headerlink" href="#an-even-signal" title="Permalink to this headline">#</a></h3>
 <p>A signal <span class="math notranslate nohighlight">\(x(t)\)</span> is referred to as an <em>even</em> signal if</p>
@@ -984,27 +979,25 @@ title="Print to PDF"
 <p>In this lecture we have started our look at signals and the classification of signals.</p>
 <p>In particular we have looked at</p>
 <ul class="simple">
-<li><p><span class="xref std std-ref">ct_n_dt</span></p></li>
-<li><p><span class="xref std std-ref">a_n_d</span></p></li>
-<li><p><span class="xref std std-ref">r_n_c</span></p></li>
-<li><p><span class="xref std std-ref">det_n_rand</span></p></li>
-<li><p><span class="xref std std-ref">even_n_odd</span></p></li>
+<li><p><a class="reference internal" href="#ct-n-dt"><span class="std std-ref">Continuous-Time and Discrete-Time Signals</span></a></p></li>
+<li><p><a class="reference internal" href="#a-n-d"><span class="std std-ref">Analogue and Digital Signals</span></a></p></li>
+<li><p><a class="reference internal" href="#r-n-c"><span class="std std-ref">Real and Complex Signals</span></a></p></li>
+<li><p><a class="reference internal" href="#det-n-rand"><span class="std std-ref">Deterministic and Random Signals</span></a></p></li>
+<li><p><a class="reference internal" href="#even-n-odd"><span class="std std-ref">Even and Odd Signals</span></a></p></li>
 </ul>
 </section>
 <section id="next-time">
 <h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p><span class="xref std std-ref">p_n_np</span></p></li>
-<li><p><span class="xref std std-ref">e_n_p</span></p></li>
+<li><p><a class="reference internal" href="#p-n-np"><span class="std std-ref">Periodic and Nonperiodic Signals</span></a></p></li>
+<li><p><a class="reference internal" href="#e-n-p"><span class="std std-ref">Energy and Power Signals</span></a></p></li>
 </ul>
-<p>{p_n_np}=</p>
 </section>
 <section id="periodic-and-nonperiodic-signals">
-<h2>Periodic and Nonperiodic Signals<a class="headerlink" href="#periodic-and-nonperiodic-signals" title="Permalink to this headline">#</a></h2>
-<p>{e_n_p}=</p>
+<span id="p-n-np"></span><h2>Periodic and Nonperiodic Signals<a class="headerlink" href="#periodic-and-nonperiodic-signals" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="energy-and-power-signals">
-<h2>Energy and Power Signals<a class="headerlink" href="#energy-and-power-signals" title="Permalink to this headline">#</a></h2>
+<span id="e-n-p"></span><h2>Energy and Power Signals<a class="headerlink" href="#energy-and-power-signals" title="Permalink to this headline">#</a></h2>
 </section>
 </section>
 
