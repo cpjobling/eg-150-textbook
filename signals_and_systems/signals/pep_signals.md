@@ -235,11 +235,37 @@ $$E = \int_{-\infty}^{\infty}\left|i(t)\right|^2\,dt$$
 (normalised_average_power_of_a_signal)=
 ### Normalised average power of a signal
 
+```{code-cell}
+
+```
+
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 The *normalised average power* $P$ of $x(t)$ is defined as
 
 $$P = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}\left|x(t)\right|^2\;dt\quad\mathrm{watts}$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(energy_and_power_signals)=
+### Energy and power signals
+Based on the previous definitions, the following classes of signals can be defined:
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+* $x(t)$ is said to be an *energy signal* if and only if $0 < E < \infty$, and so $P = 0$.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+* $x(t)$ is said to be an *power signal* if and only if $0 < P < \infty$, thus implying that $E = \infty$.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+* Signals that satisfy neither property are referred to as neither energy signals nor power signals.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Note that a periodic signal is a power signal if its energy content per period is finite, and then the average power of gthis signal need only be calulated over a period ({ref}`ex:1.18`).
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
