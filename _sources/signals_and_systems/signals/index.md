@@ -295,9 +295,10 @@ Note the product of two even signals or two odd signals is an even signal and th
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Examples
+(worked_examples_1)=
+## Worked Examples 1
 
-1). A continuous-time signal $x(t)$ is shown in Fig. {numref}`example1`. 
+1.1). A continuous-time signal $x(t)$ is shown in Fig. {numref}`example1`. 
 
 :::{figure-md} example1
 <img src="pictures/example1.png" alt="The signal for example 1" width="60%">
@@ -329,7 +330,7 @@ For the answer, refer to the lecture recording or see solved problem 1.1 in {cit
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-2). Given the continuous-time signal specified by
+1.2). Given the continuous-time signal specified by
 
 $$x\left(t\right)=\left\lbrace \begin{array}{ll}
 1-\left|t\right| & -1\le t\le 1\\
@@ -356,7 +357,7 @@ For the answer, refer to the lecture recording or see solved problem 1.3 in {cit
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-3). Sketch and label the even and odd components of the signals shown in Fig. {numref}`example3`.
+1.3). Sketch and label the even and odd components of the signals shown in Fig. {numref}`example3`.
 
 
 :::{figure-md} example3
@@ -371,7 +372,7 @@ For the answer, refer to the lecture recording or see solved problem 1.5 in {cit
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-4). Find the odd and even components of $x(t) = e^{jt}$.
+1.4). Find the odd and even components of $x(t) = e^{jt}$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -379,7 +380,7 @@ For the answer, refer to the lecture recording or see solved problem 1.6 in {cit
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-5). Show that the product of two even signals or of two odd signals is an even signal and that the product of an even signal and an odd signal is an odd signal.
+1.5). Show that the product of two even signals or of two odd signals is an even signal and that the product of an even signal and an odd signal is an odd signal.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -387,7 +388,7 @@ For the answer, refer to the lecture recording or see solved problem 1.7 in {cit
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-6). Show that 
+1.6). Show that 
 
 a). If $x(t)$ is even 
 
@@ -425,15 +426,3 @@ In particular we have looked at
 
 * {ref}`p_n_np`
 * {ref}`e_n_p`
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-(p_n_np)=
-## Periodic and Nonperiodic Signals
-
-(e_n_p)=
-## Energy and Power Signals
-
-```{code-cell}
-
-```
