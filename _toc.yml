@@ -8,6 +8,8 @@ parts:
     sections:
       - file: signals_and_systems/signals/index
         title: Signals and Classification of Signals
+      - file: signals_and_systems/signals/pep_signals
+        title: Periodic, Energy and Power Signals
       - file: signals_and_systems/elementary_signals/index
         title: Elementary Signals
       - file: signals_and_systems/systems/index

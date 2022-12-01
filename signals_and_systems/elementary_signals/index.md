@@ -14,6 +14,7 @@ kernelspec:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(elementary_signals)=
 # Elementary Signals
 
 The preparatory reading for this section is [Chapter 1](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=75#ppg=17) of {cite}`karris` which
@@ -69,6 +70,7 @@ We call this type of signal a step function.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(heaviside)=
 ## The Unit Step Function
 
 $${u_0}(t) = \left\{ {\begin{array}{*{20}{c}}
@@ -84,22 +86,14 @@ $${u_0}(t) = \left\{ {\begin{array}{*{20}{c}}
 
 In Matlab, we use the `heaviside` function (named after [Oliver Heaviside](https://en.wikipedia.org/wiki/Oliver_Heaviside)).
 
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-%%file plot_heaviside.m
-syms t
-ezplot(heaviside(t),[-1,1])
-heaviside(0)
-
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
-%%file plot_heaviside.m 
-syms t 
-ezplot(heaviside(t),[-1,1])
-grid
+%%file plot_heaviside.m
+syms t
+fplot(heaviside(t),[-1,1]),grid,ylim([0 1.25])
 heaviside(0)
 ```
 
@@ -109,7 +103,7 @@ plot_heaviside
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Note that, so that it can be plotted, Matlab defines the *heaviside function* slightly differently from the mathematically ideal unit step:
+Note that, so that it can be plotted, Matlab defines the *Heaviside function* slightly differently from the mathematically ideal unit step:
 
 $$\mathrm{heaviside}(t) = \left\{ {\begin{array}{*{20}{c}}
 {0\quad t < 0}\\
