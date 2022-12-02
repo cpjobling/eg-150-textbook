@@ -597,11 +597,62 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#other-measures-of-signal-size">
    Other Measures of Signal Size
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mean-value">
+     Mean value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#measures-of-spread">
+     Measures of spread
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#root-mean-square-rms">
+       Root-mean square (RMS)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#peak-value">
+       Peak value
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crest-factor-cf">
+       Crest factor (CF)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#peak-to-average-power-ratio-papr">
+       Peak-to-average power ratio (PAPR)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#examples-2">
    Examples 2
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sum-of-two-periodic-signals">
+     Sum of two periodic signals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex2-2">
+     Periodic signals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#power-and-energy-signals">
+     Power and energy signals
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
@@ -685,11 +736,62 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#other-measures-of-signal-size">
    Other Measures of Signal Size
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mean-value">
+     Mean value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#measures-of-spread">
+     Measures of spread
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#root-mean-square-rms">
+       Root-mean square (RMS)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#peak-value">
+       Peak value
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#crest-factor-cf">
+       Crest factor (CF)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#peak-to-average-power-ratio-papr">
+       Peak-to-average power ratio (PAPR)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#examples-2">
    Examples 2
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sum-of-two-periodic-signals">
+     Sum of two periodic signals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ex2-2">
+     Periodic signals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#power-and-energy-signals">
+     Power and energy signals
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
@@ -844,6 +946,10 @@ t &amp; 0\le t\le 1\\
 <p><span class="caption-number">Fig. 9 </span><span class="caption-text">A DC signal</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that the sum of two continuous time sigmals may not be periodic (Example {ref}`2.1`)</p>
+</div>
 </section>
 <section id="nonperiodic-signals">
 <span id="id4"></span><h3>Nonperiodic signals<a class="headerlink" href="#nonperiodic-signals" title="Permalink to this headline">#</a></h3>
@@ -902,55 +1008,99 @@ t &amp; 0\le t\le 1\\
 </section>
 <section id="other-measures-of-signal-size">
 <span id="id9"></span><h2>Other Measures of Signal Size<a class="headerlink" href="#other-measures-of-signal-size" title="Permalink to this headline">#</a></h2>
+<p>There are other measures of signal size that are used:</p>
+<section id="mean-value">
+<h3>Mean value<a class="headerlink" href="#mean-value" title="Permalink to this headline">#</a></h3>
+<div class="math notranslate nohighlight">
+\[M_x = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}x(t)\,dt\]</div>
+<p>For periodic signals with fundamental period <span class="math notranslate nohighlight">\(T_0\)</span></p>
+<div class="math notranslate nohighlight">
+\[M_x = \frac{1}{T_0}\int_{-T_0/2}^{T_0/2}x(t)\,dt\]</div>
+<p>The mean value is also known as the dc value.</p>
+<p><strong>Observations</strong></p>
+<ul class="simple">
+<li><p>the mean value corresponds to the arithmetic average</p></li>
+<li><p>the signal <span class="math notranslate nohighlight">\(x(t) - M_x\)</span> has zero mean</p></li>
+</ul>
+</section>
+<section id="measures-of-spread">
+<h3>Measures of spread<a class="headerlink" href="#measures-of-spread" title="Permalink to this headline">#</a></h3>
+<section id="root-mean-square-rms">
+<h4>Root-mean square (RMS)<a class="headerlink" href="#root-mean-square-rms" title="Permalink to this headline">#</a></h4>
+<div class="math notranslate nohighlight">
+\[\mathrm{RMS}_x = \sqrt{P}\]</div>
+<p>E.g. the power of <span class="math notranslate nohighlight">\(x(t) = A\sin\left(\omega t + \theta\right)\)</span> is <span class="math notranslate nohighlight">\(A^2/2\)</span> hence its RMS value is <span class="math notranslate nohighlight">\(A/\sqrt{2}\)</span>.</p>
+</section>
+<section id="peak-value">
+<h4>Peak value<a class="headerlink" href="#peak-value" title="Permalink to this headline">#</a></h4>
+<div class="math notranslate nohighlight">
+\[\left|x\right|_\mathrm{peak} = \max_t \left|x(t)\right|\]</div>
+</section>
+<section id="crest-factor-cf">
+<h4>Crest factor (CF)<a class="headerlink" href="#crest-factor-cf" title="Permalink to this headline">#</a></h4>
+<div class="math notranslate nohighlight">
+\[\mathrm{CF}_x = \frac{\left|x\right|_\mathrm{peak}}{\mathrm{RMS}_x}\ge 1\]</div>
+</section>
+<section id="peak-to-average-power-ratio-papr">
+<h4>Peak-to-average power ratio (PAPR)<a class="headerlink" href="#peak-to-average-power-ratio-papr" title="Permalink to this headline">#</a></h4>
+<div class="math notranslate nohighlight">
+\[\mathrm{PAPR}_x = \frac{\left|x\right|_\mathrm{peak}^2}{P}\]</div>
+<p><strong>Observations</strong></p>
+<ul class="simple">
+<li><p>CF a PAPR measure the dispersion of a signal about its average power.</p></li>
+<li><p>To express CF or PAPR we often use decibels (dB). To obtain measure of cquantity <span class="math notranslate nohighlight">\(y\)</span> in dB use <span class="math notranslate nohighlight">\(20\log_{10}(y)\)</span>.</p></li>
+</ul>
+</section>
+</section>
 </section>
 <section id="examples-2">
 <span id="worked-examples-2"></span><h2>Examples 2<a class="headerlink" href="#examples-2" title="Permalink to this headline">#</a></h2>
-<p>1). A continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span> is shown in Fig. <a class="reference internal" href="#example1"><span class="std std-numref">Fig. 12</span></a>.</p>
-<figure class="align-default" id="example1">
-<a class="reference internal image-reference" href="../../_images/example1.png"><img alt="The signal for example 1" src="../../_images/example1.png" style="width: 60%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">The signal for example 1</span><a class="headerlink" href="#example1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Sketch and label each of the following signals.</p>
-<p>a). <span class="math notranslate nohighlight">\(x(t-2)\)</span>;</p>
-<p>b). <span class="math notranslate nohighlight">\(x(2t)\)</span>;</p>
-<p>c). <span class="math notranslate nohighlight">\(x(2/t)\)</span>;</p>
-<p>d). <span class="math notranslate nohighlight">\(x(-t)\)</span>.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 1.1 in <span id="id10">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span></p>
-<p>2). Given the continuous-time signal specified by</p>
+<section id="sum-of-two-periodic-signals">
+<span id="ex2-1"></span><h3>Sum of two periodic signals<a class="headerlink" href="#sum-of-two-periodic-signals" title="Permalink to this headline">#</a></h3>
+<p>2.1). Let <span class="math notranslate nohighlight">\(x_1(t)\)</span> and <span class="math notranslate nohighlight">\(x_2(t)\)</span> be periodic signals with fundamental periods <span class="math notranslate nohighlight">\(T_1\)</span> and <span class="math notranslate nohighlight">\(T_2\)</span> respectively. Under hich conditions is the sum <span class="math notranslate nohighlight">\(x(t) = x_1(t) + x_2(t)\)</span> periodic, and what is the fundamental period of <span class="math notranslate nohighlight">\(x(t)\)</span> if it is periodic?</p>
+<p>For the answer, refer to the lecture recording or see solved problem 1.14 in <span id="id10">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+</section>
+<section id="ex2-2">
+<span id="id11"></span><h3>Periodic signals<a class="headerlink" href="#ex2-2" title="Permalink to this headline">#</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">MATLAB Example</p>
+<p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
+</div>
+<p>2.2). Determine whether or not each of the following signals is periodic. If a signal is periodic, determine its fundamental period.</p>
+<p>a). <span class="math notranslate nohighlight">\(x(t)=\cos\left(t + \frac{\pi}{4}\right)\)</span>;</p>
+<p>b). <span class="math notranslate nohighlight">\(x(t)=\sin\frac{2\pi}{3}t\)</span>;</p>
+<p>c). <span class="math notranslate nohighlight">\(x(t)=\cos\frac{\pi}{3}t+\sin\frac{\pi}{4}t\)</span>;</p>
+<p>d). <span class="math notranslate nohighlight">\(x(t)=\cos t + \sin\sqrt{2}t\)</span>.</p>
+<p>e). <span class="math notranslate nohighlight">\(x(t)=\sin^2t\)</span>.</p>
+<p>f). <span class="math notranslate nohighlight">\(x(t)=e^{j\left[\pi/2t-1\right]}\)</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 1.16 in <span id="id12">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p>2.3). Show that if <span class="math notranslate nohighlight">\(x(t + T) = x(t)\)</span>, then</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}x\left(t\right)=\left\lbrace \begin{array}{ll}
-1-\left|t\right| &amp; -1\le t\le 1\\
-0 &amp; \mathrm{otherwise}
-\end{array}\right.\end{split}\]</div>
-<p>determine the discrete-time sequence obtained by uniform sampling of <span class="math notranslate nohighlight">\(x(t)\)</span> with a sampling intervale of</p>
-<p>a). 0.25 s</p>
-<p>b). 0.5 s, and</p>
-<p>c). 1 s.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 1.3 in <span id="id11">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
-<p>3). Sketch and label the even and odd components of the signals shown in Fig. <a class="reference internal" href="#example3"><span class="std std-numref">Fig. 13</span></a>.</p>
-<figure class="align-default" id="example3">
-<a class="reference internal image-reference" href="../../_images/example31.png"><img alt="Signals for Example 3." src="../../_images/example31.png" style="width: 75%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Signals for Example 3.</span><a class="headerlink" href="#example3" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>For the answer, refer to the lecture recording or see solved problem 1.5 in <span id="id12">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
-<p>4). Find the odd and even components of <span class="math notranslate nohighlight">\(x(t) = e^{jt}\)</span>.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 1.6 in <span id="id13">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
-<p>5). Show that the product of two even signals or of two odd signals is an even signal and that the product of an even signal and an odd signal is an odd signal.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 1.7 in <span id="id14">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
-<p>6). Show that</p>
-<p>a). If <span class="math notranslate nohighlight">\(x(t)\)</span> is even</p>
+\[\int_\alpha^\beta x(t)\,dt=\int_{\alpha+T}^{\beta+T} x(t)\,dt\]</div>
 <div class="math notranslate nohighlight">
-\[\int_{-a}^{a} x(t)\, dt = 2 \int_0^a x(t)\, dt.\]</div>
-<p>b). If <span class="math notranslate nohighlight">\(x(t)\)</span> is odd</p>
+\[\int_0^T x(t)\,dt=\int_{a}^{a+T} x(t)\,dt\]</div>
+<p>for any real <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(\beta\)</span> and <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 1.17 in <span id="id13">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p>2.4). Show that if <span class="math notranslate nohighlight">\(x(t)\)</span> is periodic with fundamental period <span class="math notranslate nohighlight">\(T_0\)</span>, the the normalized average power <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\(x(t)\)</span> defined by</p>
 <div class="math notranslate nohighlight">
-\[x(0) = 0\]</div>
-<div class="math notranslate nohighlight">
-\[\int_{-a}^{a} x(t)\, dt = 0.\]</div>
-<p>For the answer, refer to the lecture recording or see solved problem 1.8 in <span id="id15">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+\[P = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}\left|x(t)\right|^2\;dt\]</div>
+<p>is the same as the average power <span class="math notranslate nohighlight">\(x(t)\)</span> over any interval of length <span class="math notranslate nohighlight">\(T_0\)</span>, that is,</p>
+<p>$<span class="math notranslate nohighlight">\(P = \frac{1}{T_0}\int_{0}^{T_0}\left|x(t)\right|^2\;dt\)</span>$.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 1.18 in <span id="id14">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+</section>
+<section id="power-and-energy-signals">
+<span id="ex2-5"></span><h3>Power and energy signals<a class="headerlink" href="#power-and-energy-signals" title="Permalink to this headline">#</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">MATLAB Example</p>
+<p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
+</div>
+<p>2.5). Determine whether the following signals are energy signals, power signals, or neither.</p>
+<p>a). <span class="math notranslate nohighlight">\(x(t)=e^{-at}u_0(t)\)</span>, <span class="math notranslate nohighlight">\(a &gt; 0\)</span>;</p>
+<p>b). <span class="math notranslate nohighlight">\(x(t)=A\cos\left(\omega_0 t + \theta\right)\)</span></p>
+<p>c). <span class="math notranslate nohighlight">\(x(t)=t u_0(t)\)</span></p>
+<p>Note <span class="math notranslate nohighlight">\(u_0(t)\)</span> is the unit step (or Heaviside) function formally introduced in the next lecture. For the answer, refer to the lecture recording or see solved problem 1.20 in <span id="id15">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p>2.6). Domestic mains power in the UK is delivered as a sinusoidal signal <span class="math notranslate nohighlight">\(x(t)=A\cos(\omega_0 t + \theta)\)</span> with frequency of <span class="math notranslate nohighlight">\(50Hz\)</span> and RMS value of <span class="math notranslate nohighlight">\(240\;\mathrm{V}\)</span>. Calculate the fundamental period <span class="math notranslate nohighlight">\(T_0\)</span>, fundamental angular frequency <span class="math notranslate nohighlight">\(\omega_0\)</span>, average power <span class="math notranslate nohighlight">\(P\)</span>, peak voltage <span class="math notranslate nohighlight">\(A = x_\mathrm{peak}\)</span>, crest factor (CF) and peak-to-average power ratio (PAPR) of the power signal provided to the home. Express CF and PAPR in dB.</p>
+</section>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
