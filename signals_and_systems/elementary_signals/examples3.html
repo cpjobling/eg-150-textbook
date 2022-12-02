@@ -869,8 +869,8 @@ title="Print to PDF"
   <p>Lecturer: Set up MATLAB</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span><span class="w"></span>
-<span class="nb">format</span><span class="w"> </span><span class="n">compact</span><span class="w"></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clear</span> <span class="nb">all</span>
+<span class="nb">format</span> <span class="n">compact</span>
 </pre></div>
 </div>
 </div>
@@ -929,18 +929,11 @@ title="Print to PDF"
 <p>In Matlab, we use the <code class="docutils literal notranslate"><span class="pre">heaviside</span></code> function (Named after <a class="reference external" href="https://en.wikipedia.org/wiki/Oliver_Heaviside">Oliver Heaviside</a>).</p>
 <div class="cell tag_remove-outlook docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">t</span><span class="w"></span>
-<span class="n">ezplot</span><span class="p">(</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span><span class="w"></span>
-<span class="n">heaviside</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span> <span class="n">t</span>
+<span class="n">ezplot</span><span class="p">(</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">heaviside</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-    0.5000
-</pre></div>
-</div>
-<img alt="../../_images/examples3_14_1.png" src="../../_images/examples3_14_1.png" />
 </div>
 </div>
 <p>See: <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/elementary_signals/show_heaviside.m">show_heaviside.m</a>.</p>
