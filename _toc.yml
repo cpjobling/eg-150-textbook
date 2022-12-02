@@ -12,6 +12,8 @@ parts:
         title: Periodic, Energy and Power Signals
       - file: signals_and_systems/elementary_signals/index
         title: Elementary Signals
+      - file: signals_and_systems/elementary_signals/examples3
+        title: Examples 3 - Elementary Signals
       - file: signals_and_systems/systems/index
         title: Systems and Classification of Systems
       - file: signals_and_systems/examples/index
