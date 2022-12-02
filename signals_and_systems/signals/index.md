@@ -296,7 +296,20 @@ Note the product of two even signals or two odd signals is an even signal and th
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (worked_examples_1)=
-## Worked Examples 1
+## Examples 1
+
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+(ex1.1)=
+### Signals
+
+`````{admonition} MATLAB Example
+:class: tip
+We will solve these examples by hand and then give the solution in the MATLAB lab.
+`````
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 1.1). A continuous-time signal $x(t)$ is shown in Fig. {numref}`example1`. 
 
@@ -330,6 +343,16 @@ For the answer, refer to the lecture recording or see solved problem 1.1 in {cit
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(ex1.2)=
+### Uniform sampling
+
+`````{admonition} MATLAB Example
+:class: tip
+We will solve these examples by hand and then give the solution in the MATLAB lab.
+`````
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
 1.2). Given the continuous-time signal specified by
 
 $$x\left(t\right)=\left\lbrace \begin{array}{ll}
@@ -337,7 +360,7 @@ $$x\left(t\right)=\left\lbrace \begin{array}{ll}
 0 & \mathrm{otherwise}
 \end{array}\right.$$
 
-determine the discrete-time sequence obtained by uniform sampling of $x(t)$ with a sampling intervale of
+determine the discrete-time sequence obtained by uniform sampling of $x(t)$ with a sampling interval of
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -351,11 +374,21 @@ b). 0.5 s, and
 
 c). 1 s.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 For the answer, refer to the lecture recording or see solved problem 1.3 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex1.3)=
+### Odd and even signals
+
+`````{admonition} MATLAB Example
+:class: tip
+We will solve these examples by hand and then give the solution in the MATLAB lab.
+`````
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 1.3). Sketch and label the even and odd components of the signals shown in Fig. {numref}`example3`.
 
