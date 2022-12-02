@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals/index.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Systems and Classification of Systems" href="../systems/index.html" />
+    <link rel="next" title="Examples 3 - Elementary Signals" href="examples3.html" />
     <link rel="prev" title="Periodic, Energy and Power Signals" href="../signals/pep_signals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -141,6 +141,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Elementary Signals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="examples3.html">
+     Examples 3 - Elementary Signals
     </a>
    </li>
    <li class="toctree-l2">
@@ -545,8 +550,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#colophon">
-   Colophon
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -604,8 +609,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-delta-function">
-     The delta function
+    <a class="reference internal nav-link" href="#the-unit-impulse-function">
+     The unit Impulse Function
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -652,17 +657,17 @@ title="Print to PDF"
      Takeaways
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
-     Examples
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#homework">
-     Homework
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   Examples
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#homework">
+   Homework
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
@@ -689,8 +694,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#colophon">
-   Colophon
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -748,8 +753,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-delta-function">
-     The delta function
+    <a class="reference internal nav-link" href="#the-unit-impulse-function">
+     The unit Impulse Function
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -796,17 +801,17 @@ title="Print to PDF"
      Takeaways
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
-     Examples
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#homework">
-     Homework
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   Examples
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#homework">
+   Homework
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
@@ -833,14 +838,8 @@ title="Print to PDF"
 <li><p>concludes with examples of how other useful signals can be synthesised from these elementary signals.</p></li>
 </ul>
 <p>Additional information has been adapted from <span class="xref myst">Section 1.4</span> of <span id="id3">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
-<section id="colophon">
-<h2>Colophon<a class="headerlink" href="#colophon" title="Permalink to this headline">#</a></h2>
-<p>An annotatable worksheet for this presentation is available as <span class="xref myst"><strong>Worksheet 3</strong></span>.</p>
-<ul class="simple">
-<li><p>The source code for this page is <a class="reference external" href="https://github.com/cpjobling/eg-247-textbook/blob/master/elementary_signals/index.md">elementary_signals/index.md</a>.</p></li>
-<li><p>You can view the notes for this presentation as a webpage (<a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/elementary_signals/index.html">HTML</a>).</p></li>
-<li><p>This page is downloadable as a <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/elementary_signals/elementary_signals.pdf">PDF</a> file.</p></li>
-</ul>
+<section id="introduction">
+<span id="es-intro"></span><h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>Consider the network shown in below where the switch is closed at time <span class="math notranslate nohighlight">\(t=T\)</span> and all components are ideal.</p>
 <p><img alt="Network with a switch which is closed at t = T." src="../../_images/circuit2.png" /></p>
 <p>Express the output voltage <span class="math notranslate nohighlight">\(V_{\mathrm{out}}\)</span> as a function of the unit step function, and sketch the appropriate waveform.</p>
@@ -981,12 +980,12 @@ V_{\mathrm{out}} = V_s.
 </section>
 <section id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h3>
-<p>We will work through some examples in class. See <a class="reference internal" href="worksheet3.html"><span class="doc std std-doc">Worksheet 3</span></a>.</p>
+<p>We will work through some examples in class. See <span class="xref myst">Examples 3</span>.</p>
 </section>
 </section>
 <section id="synthesis-of-signals-from-the-unit-step">
 <h2>Synthesis of Signals from the Unit Step<a class="headerlink" href="#synthesis-of-signals-from-the-unit-step" title="Permalink to this headline">#</a></h2>
-<p>Unit step functions can be used to represent other time-varying functions such as rectangular pulses, square waves and triangular pulses. See <a class="reference internal" href="worksheet3.html"><span class="doc std std-doc">Worksheet 3</span></a> for the examples that we will look at in class.</p>
+<p>Unit step functions can be used to represent other time-varying functions such as rectangular pulses, square waves and triangular pulses. See <span class="xref myst">Worksheet 3</span> for the examples that we will look at in class.</p>
 </section>
 <section id="the-ramp-function">
 <h2>The Ramp Function<a class="headerlink" href="#the-ramp-function" title="Permalink to this headline">#</a></h2>
@@ -1052,21 +1051,39 @@ V_{\mathrm{out}} = V_s.
 <p>Thus</p>
 <div class="math notranslate nohighlight">
 \[v_L(t) = i_s L\frac{d}{dt} u_0(t).\]</div>
-<p>To solve this problem we need to invent a function that represents the derivative of the unit step function. This function is called <span class="math notranslate nohighlight">\(\delta(t)\)</span> or the <em>dirac delta</em> function (named after <a class="reference external" href="https://en.wikipedia.org/wiki/Paul_Dirac">Paul Dirac</a>).</p>
-<section id="the-delta-function">
-<h3>The delta function<a class="headerlink" href="#the-delta-function" title="Permalink to this headline">#</a></h3>
-<p>The unit impulse or the delta function, denoted as <span class="math notranslate nohighlight">\(\delta(t)\)</span>, is the derivative of the unit step.</p>
-<p>This function is tricky because <span class="math notranslate nohighlight">\(u_0(t)\)</span> is discontinuous at <span class="math notranslate nohighlight">\(t=0\)</span> but it must have the properties</p>
+<section id="the-unit-impulse-function">
+<span id="unit-impulse"></span><h3>The unit Impulse Function<a class="headerlink" href="#the-unit-impulse-function" title="Permalink to this headline">#</a></h3>
+<p>The unit impulse function <span class="math notranslate nohighlight">\(\delta(t)\)</span>, is the derivative of the unit step.</p>
+<div class="math notranslate nohighlight">
+\[\delta(t) = \frac{d}{dt}u_0(t)\]</div>
+<p>which is tricky to compute because <span class="math notranslate nohighlight">\(u_0(t)\)</span> is discontinuous at <span class="math notranslate nohighlight">\(t=0\)</span> but it must have the properties</p>
 <div class="math notranslate nohighlight">
 \[\int_{-\infty}^{t}\delta(\tau)d\tau = u_0(t)\]</div>
-<p>and</p>
+<p>To solve this problem we need to invent a function that represents the derivative of the unit step function. This function is called the <em>unit impulse function</em> 𝛿(𝑡), also known as the <em>Dirac delta</em> function (named after <a class="reference external" href="https://en.wikipedia.org/wiki/Paul_Dirac">Paul Dirac</a>).</p>
+<p>Traditionally, <span class="math notranslate nohighlight">\(\delta(t)\)</span> is often defined as the limit of a suitably chosen conventional function having unity area over an infinitesimal time interval as shown in Fig. <a class="reference internal" href="#dirac-delta-function"><span class="std std-numref">Fig. 12</span></a>.</p>
+<figure class="align-default" id="dirac-delta-function">
+<a class="reference internal image-reference" href="../../_images/dirac_delta.png"><img alt="Visualisation of the Dirac delta function as the limit of a conventional function with unit area." src="../../_images/dirac_delta.png" style="width: 40%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Visualisation of the Dirac delta function as the limit of a conventional function with unit area.</span><a class="headerlink" href="#dirac-delta-function" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The Dirac delta posseses the following properties</p>
 <div class="math notranslate nohighlight">
-\[\delta(t) = 0\;\forall\;
-t\ne 0.\]</div>
+\[\begin{split}\delta\left(t\right)=\left\lbrace \begin{array}{ll}
+0 &amp; t\ne 0\\
+\infty &amp; t = 0
+\end{array}\right.\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\int_{\epsilon}^{-\epsilon}\delta(t)\,dt = 1\]</div>
+<p>The unit impulse function plays a fundamental role in systems analysis.</p>
 </section>
 <section id="sketch-of-the-delta-function">
 <h3>Sketch of the delta function<a class="headerlink" href="#sketch-of-the-delta-function" title="Permalink to this headline">#</a></h3>
+<p>Continuing the example, and replacing the derivative of the unit step <span class="math notranslate nohighlight">\(u_0(t)\)</span> with the unit impulse <span class="math notranslate nohighlight">\(\delta(t)\)</span></p>
+<div class="math notranslate nohighlight">
+\[V_\mathrm{out}(t)=V_L(t) = i_sL\delta(t)\]</div>
 <p><img alt="The delta function" src="../../_images/impulse.png" /></p>
+<p>Note when we draw the unit impulse we show the height of <span class="math notranslate nohighlight">\(\delta(t)\)</span> as one so the height of the impulse in the figure is <span class="math notranslate nohighlight">\(i_sL\)</span>.</p>
 </section>
 <section id="matlab-confirmation">
 <h3>MATLAB Confirmation<a class="headerlink" href="#matlab-confirmation" title="Permalink to this headline">#</a></h3>
@@ -1086,7 +1103,7 @@ t\ne 0.\]</div>
 </div>
 </div>
 </div>
-<p>Note that we can’t plot dirac(t) in MATLAB with <code class="docutils literal notranslate"><span class="pre">ezplot</span></code>.</p>
+<p>Note that we can’t plot dirac(t) in MATLAB with <code class="docutils literal notranslate"><span class="pre">fplot</span></code>.</p>
 </section>
 </section>
 <section id="important-properties-of-the-delta-function">
@@ -1138,14 +1155,14 @@ t\ne 0.\]</div>
 <li><p>The delta function has sampling and sifting properties that will be useful in the development of <em>time convolution</em> and <em>sampling theory</em>.</p></li>
 </ul>
 </section>
+</section>
 <section id="id4">
-<h3>Examples<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
-<p>We will do some of these in class. See <a class="reference internal" href="worksheet3.html"><span class="doc std std-doc">Worksheet 3</span></a>.</p>
+<h2>Examples<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<p>We will do some of these in class. See <a class="reference internal" href="examples3.html"><span class="doc std std-doc">Examples 3</span></a>.</p>
 </section>
 <section id="homework">
-<h3>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">#</a></h3>
+<h2>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">#</a></h2>
 <p>These are for you to do later for further practice. See <span class="xref myst">Homework 1</span>.</p>
-</section>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
@@ -1187,10 +1204,10 @@ t\ne 0.\]</div>
             <p class="prev-next-title">Periodic, Energy and Power Signals</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../systems/index.html" title="next page">
+    <a class='right-next' id="next-link" href="examples3.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Systems and Classification of Systems</p>
+        <p class="prev-next-title">Examples 3 - Elementary Signals</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

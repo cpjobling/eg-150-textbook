@@ -27,21 +27,10 @@ format compact
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-# Worksheet 3
+(worked_examples_3)=
+# Examples 3 - Elementary Signals
 
-## To accompany Chapter 2 Elementary Signals
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-## Colophon
-
-This worksheet can be downloaded as a [PDF file](https://cpjobling.github.io/eg-247-textbook/worksheets/worksheet3.pdf).
-
-A printout of this worksheet will be distributed before the first class meeting in the **Week 1: Classroom Activities** section of the Canvas site. I will also distribute a copy to your personal **Worksheets** section of the **OneNote Class Notebook** so that you can add your own notes using OneNote. 
-
-You are expected to have at least watched the video presentation of [Chapter 2](https://cpjobling.github.io/eg-247-textbook/elementary_signals/index) of the [notes](https://cpjobling.github.io/eg-247-textbook) before coming to the first class. If you haven't watch it afterwards!
-
-After class, the lecture recording and the annotated version of this worksheet will be made available to you via OneNote and through Canvas.
+To accompany {ref}`elementary_signals`.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

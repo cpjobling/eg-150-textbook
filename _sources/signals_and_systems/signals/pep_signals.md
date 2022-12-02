@@ -383,15 +383,15 @@ c). $x(t)=\cos\frac{\pi}{3}t+\sin\frac{\pi}{4}t$;
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-d). $x(t)=\cos t + \sin\sqrt{2}t$.
+d). $x(t)=\cos t + \sin\sqrt{2}t$;
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-e). $x(t)=\sin^2t$.
+e). $x(t)=\sin^2t$;
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-f). $x(t)=e^{j\left[\pi/2t-1\right]}$.
+f). $x(t)=e^{j\left[\pi/2t-1\right]}$;
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -457,7 +457,11 @@ Note $u_0(t)$ is the unit step (or Heaviside) function formally introduced in th
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-2.6). Domestic mains power in the UK is delivered as a sinusoidal signal $x(t)=A\cos(\omega_0 t + \theta)$ with frequency of $50Hz$ and RMS value of $240\;\mathrm{V}$. Calculate the fundamental period $T_0$, fundamental angular frequency $\omega_0$, average power $P$, peak voltage $A = x_\mathrm{peak}$, crest factor (CF) and peak-to-average power ratio (PAPR) of the power signal provided to the home. Express CF and PAPR in dB.
+2.6). Domestic mains power in the UK is delivered as a sinusoidal signal $x(t)=A\cos(\omega_0 t + \theta)$ with frequency of $50Hz$ and RMS value of $240\;\mathrm{V}$. 
+
+Calculate the fundamental period $T_0$, fundamental angular frequency $\omega_0$, average power $P$, peak voltage $A = x_\mathrm{peak}$, crest factor (CF) and peak-to-average power ratio (PAPR) of the power signal provided to the home. 
+
+Express CF and PAPR in dB.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

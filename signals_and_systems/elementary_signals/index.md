@@ -26,17 +26,10 @@ The preparatory reading for this section is [Chapter 1](https://ebookcentral.pro
 
 Additional information has been adapted from [Section 1.4]() of {cite}`schaum`.
 
-+++ {"slideshow": {"slide_type": "notes"}}
++++
 
-## Colophon
-
-An annotatable worksheet for this presentation is available as [**Worksheet 3**](/elementary_signals/worksheet3).
-
-* The source code for this page is [elementary_signals/index.md](https://github.com/cpjobling/eg-247-textbook/blob/master/elementary_signals/index.md).
-
-* You can view the notes for this presentation as a webpage ([HTML](https://cpjobling.github.io/eg-247-textbook/elementary_signals/index.html)). 
-
-* This page is downloadable as a [PDF](https://cpjobling.github.io/eg-247-textbook/elementary_signals/elementary_signals.pdf) file.
+(es:intro)=
+## Introduction
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -201,7 +194,7 @@ This is a *time advance* ... note for $u_0(t + T)$ the step change occurs T seco
 
 ### Examples
 
-We will work through some examples in class. See [Worksheet 3](worksheet3).
+We will work through some examples in class. See [Examples 3](worksheet3).
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -314,30 +307,65 @@ Thus
 
 $$v_L(t) = i_s L\frac{d}{dt} u_0(t).$$
 
-+++ {"slideshow": {"slide_type": "notes"}}
-
-To solve this problem we need to invent a function that represents the derivative of the unit step function. This function is called $\delta(t)$ or the *dirac delta* function (named after [Paul Dirac](https://en.wikipedia.org/wiki/Paul_Dirac)).
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### The delta function
+(unit_impulse)=
+### The unit Impulse Function
 
-The unit impulse or the delta function, denoted as $\delta(t)$, is the derivative of the unit step.
+The unit impulse function $\delta(t)$, is the derivative of the unit step.
 
-This function is tricky because $u_0(t)$ is discontinuous at $t=0$ but it must have the properties
+$$\delta(t) = \frac{d}{dt}u_0(t)$$
+
+which is tricky to compute because $u_0(t)$ is discontinuous at $t=0$ but it must have the properties
 
 $$\int_{-\infty}^{t}\delta(\tau)d\tau = u_0(t)$$
 
-and
++++ {"slideshow": {"slide_type": "subslide"}}
 
-$$\delta(t) = 0\;\forall\;
-t\ne 0.$$
+To solve this problem we need to invent a function that represents the derivative of the unit step function. This function is called the *unit impulse function* 𝛿(𝑡), also known as the *Dirac delta* function (named after [Paul Dirac](https://en.wikipedia.org/wiki/Paul_Dirac)). 
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Traditionally, $\delta(t)$ is often defined as the limit of a suitably chosen conventional function having unity area over an infinitesimal time interval as shown in Fig. {numref}`dirac_delta_function`.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+:::{figure-md} dirac_delta_function
+<img src="pictures/dirac_delta.png" alt="Visualisation of the Dirac delta function as the limit of a conventional function with unit area." width="40%">
+
+Visualisation of the Dirac delta function as the limit of a conventional function with unit area.
+:::
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+The Dirac delta posseses the following properties
+
+$$\delta\left(t\right)=\left\lbrace \begin{array}{ll}
+0 & t\ne 0\\
+\infty & t = 0
+\end{array}\right.$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+$$\int_{\epsilon}^{-\epsilon}\delta(t)\,dt = 1$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+The unit impulse function plays a fundamental role in systems analysis. 
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Sketch of the delta function
 
+Continuing the example, and replacing the derivative of the unit step $u_0(t)$ with the unit impulse $\delta(t)$
+
+$$V_\mathrm{out}(t)=V_L(t) = i_sL\delta(t)$$ 
+
 ![The delta function](pictures/impulse.png)
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Note when we draw the unit impulse we show the height of $\delta(t)$ as one so the height of the impulse in the figure is $i_sL$.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -354,7 +382,7 @@ vL(t) = is * L * diff(u0(t))
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Note that we can't plot dirac(t) in MATLAB with `ezplot`.
+Note that we can't plot dirac(t) in MATLAB with `fplot`.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -432,11 +460,11 @@ In this chapter we have looked at some elementary signals and the theoretical ci
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-### Examples
+## Examples
 
-We will do some of these in class. See [Worksheet 3](worksheet3).
+We will do some of these in class. See [Examples 3](examples3).
 
-### Homework
+## Homework
 
 These are for you to do later for further practice. See [Homework 1](../homework/hw1).
 
