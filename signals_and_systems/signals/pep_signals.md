@@ -30,7 +30,7 @@ This section is based on Section 1.2 of {cite}`schaum`.
 (periodic_signals)=
 ### Periodic signals
 
-A continuous-time signal $x(t)$ is said to be *periodic* with *period* $T$ is there is a apositive nonzero value of $T$ for which
+A continuous-time signal $x(t)$ is said to be *periodic* with *period* $T$ is there is a a positive nonzero value of $T$ for which
 
 $$x(t + T) = x(t)\;\mathrm{all}\;t$$
 
@@ -200,7 +200,6 @@ Consider $v(t)$ to be the voltage across a resistor $R$ prtoducing a current $i(
 A simple resistor circuit.
 :::
 
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 The instantaneous power $p(t)$ per ohm is defined as
@@ -235,10 +234,6 @@ $$E = \int_{-\infty}^{\infty}\left|i(t)\right|^2\,dt$$
 (normalised_average_power_of_a_signal)=
 ### Normalised average power of a signal
 
-```{code-cell}
-
-```
-
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 The *normalised average power* $P$ of $x(t)$ is defined as
@@ -265,12 +260,17 @@ Based on the previous definitions, the following classes of signals can be defin
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Note that a periodic signal is a power signal if its energy content per period is finite, and then the average power of gthis signal need only be calulated over a period ({ref}`ex:1.18`).
+Note that a periodic signal is a power signal if its energy content per period is finite, and then the average power of this signal need only be calulated over a period ({ref}`ex:1.18`).
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(other_measures_of_signal_size)=
+## Other Measures of Signal Size
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (worked_examples_2)=
-## Worked Examples 2
+## Examples 2
 
 1). A continuous-time signal $x(t)$ is shown in Fig. {numref}`example1`. 
 
@@ -394,6 +394,7 @@ In particular we have looked at
 
 * {ref}`p_n_np`
 * {ref}`e_n_p`
+* {ref}`other_measures_of_signal_size`
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

@@ -296,7 +296,7 @@ Note the product of two even signals or two odd signals is an even signal and th
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (worked_examples_1)=
-## Worked Examples 1
+## Examples 1
 
 1.1). A continuous-time signal $x(t)$ is shown in Fig. {numref}`example1`. 
 
