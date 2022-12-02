@@ -376,10 +376,6 @@ $$x(0) = 0$$
 
 $$\int_{-a}^{a} x(t)\, dt = 0.$$
 
-```{code-cell}
-
-```
-
 +++ {"slideshow": {"slide_type": "notes"}}
 
 For the answer, refer to the lecture recording or see solved problem 1.8 in {cite}`schaum`.
