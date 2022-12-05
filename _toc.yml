@@ -33,8 +33,12 @@ parts:
       title: The Inverse Laplace Transform
     - file: laplace_transform/3/circuit_analysis
       title: Using Laplace Transforms for Circuit Analysis
+    - file: laplace_transform/6/diff_eqns 
+      title: Using Laplace Transforms to Solve Ordinary Differential Equations
     - file: laplace_transform/4/transfer_functions
       title: Transfer Functions
+    - file: laplace_transform/7/block_diagrams 
+      title: Block Diagrams and System Simulation
     - file: laplace_transform/5/convolution
       title: The Impulse Response and Convolution
   - file: fourier_series/index
