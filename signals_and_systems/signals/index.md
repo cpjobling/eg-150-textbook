@@ -32,6 +32,16 @@ A *signal* is a function representing a physical quality of variable, and typica
 
 * Thus a signal is denoted by $x(t)$.
 
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Subjects to be covered
+
+* {ref}`ct_n_dt`
+* {ref}`a_n_d`
+* {ref}`r_n_c`
+* {ref}`det_n_rand`
+* {ref}`even_n_odd`
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ct_n_dt)=
@@ -39,11 +49,11 @@ A *signal* is a function representing a physical quality of variable, and typica
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-A signal $x(t)$ is a *continuous-time* (CT) signal if $t$ is a continuous variable. For an example of a continuous-time signal, please see Fig. {numref}`ct-signal`.
+A signal $x(t)$ is a *continuous-time* (CT) signal if $t$ is a continuous variable. For an example of a continuous-time signal, please see {numref}`ct-signal`.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-If $t$ is a discrete variable&mdash;that is, $x(t)$ is defined at discrete times&mdash;then $x(t)$ is a *discrete-time* (DT) signal. For an example of a discrete-time signal, please see Fig. {numref}`dt-signal`.
+If $t$ is a discrete variable&mdash;that is, $x(t)$ is defined at discrete times&mdash;then $x(t)$ is a *discrete-time* (DT) signal. For an example of a discrete-time signal, please see {numref}`dt-signal`.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -67,7 +77,7 @@ Graphical representation of a discrete-time signal
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Because discrete-time signals are defined as sequences, it is easy to define and plot a sequence in MATLAB. For example, to redraw Fig. {ref}`dt-signal`, execute the following code.
+Because discrete-time signals are defined as sequences, it is easy to define and plot a sequence in MATLAB. For example, to redraw {ref}`dt-signal`, execute the following code.
 
 ```{code-cell}
 ---
@@ -87,7 +97,7 @@ A discrete-time signal $x[n]$ may represent a phenomenon for which the independe
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-E.g. [FTSE 100](https://www.londonstockexchange.com/indices/ftse-100) (Fig. {numref}`ftse-100`)
+E.g. [FTSE 100](https://www.londonstockexchange.com/indices/ftse-100) ({numref}`ftse-100`)
 
 :::{figure-md} ftse-100
 <img src="pictures/Chart_FTSE_100.png" alt="An example of discrete data from the FTSE 100.">
@@ -237,7 +247,7 @@ A signal $x(t)$ is referred to as an *even* signal if
 
 $$x(t) = x(-t)$$
 
-See Fig. {numref}`even-signal` for an example of an even signal.
+See {numref}`even-signal` for an example of an even signal.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -255,7 +265,7 @@ A signal $x(t)$ is referred to as an *odd* signal if
 
 $$x(-t) = -x(t)$$
 
-See Fig. {numref}`odd-signal` for an example of an odd signal.
+See {numref}`odd-signal` for an example of an odd signal.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -298,10 +308,8 @@ Note the product of two even signals or two odd signals is an even signal and th
 (worked_examples_1)=
 ## Examples 1
 
-
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-(ex1.1)=
 ### Signals
 
 `````{admonition} MATLAB Example
@@ -311,12 +319,13 @@ We will solve these examples by hand and then give the solution in the MATLAB la
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-1.1). A continuous-time signal $x(t)$ is shown in Fig. {numref}`example1`. 
+(ex1.1)=
+1.1). A continuous-time signal $x(t)$ is shown in {numref}`example1`. 
 
 :::{figure-md} example1
 <img src="pictures/example1.png" alt="The signal for example 1" width="60%">
 
-The signal for example 1
+The signal for Example 1.1
 :::
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -352,6 +361,8 @@ We will solve these examples by hand and then give the solution in the MATLAB la
 `````
 
 +++ {"slideshow": {"slide_type": "fragment"}}
+
+(ex1.2)=
 
 1.2). Given the continuous-time signal specified by
 
@@ -390,13 +401,13 @@ We will solve these examples by hand and then give the solution in the MATLAB la
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-1.3). Sketch and label the even and odd components of the signals shown in Fig. {numref}`example3`.
+1.3). Sketch and label the even and odd components of the signals shown in {numref}`example3`.
 
 
 :::{figure-md} example3
 <img src="pictures/example3.png" alt="Signals for Example 3." width="75%">
 
-Signals for Example 3.
+Signals for Example 1.3.
 :::
 
 +++ {"slideshow": {"slide_type": "notes"}}
@@ -404,6 +415,8 @@ Signals for Example 3.
 For the answer, refer to the lecture recording or see solved problem 1.5 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex1.4)=
 
 1.4). Find the odd and even components of $x(t) = e^{jt}$.
 
@@ -413,6 +426,8 @@ For the answer, refer to the lecture recording or see solved problem 1.6 in {cit
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(ex1.5)=
+
 1.5). Show that the product of two even signals or of two odd signals is an even signal and that the product of an even signal and an odd signal is an odd signal.
 
 +++ {"slideshow": {"slide_type": "notes"}}
@@ -420,6 +435,8 @@ For the answer, refer to the lecture recording or see solved problem 1.6 in {cit
 For the answer, refer to the lecture recording or see solved problem 1.7 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex1.6)=
 
 1.6). Show that 
 
@@ -459,3 +476,7 @@ In particular we have looked at
 
 * {ref}`p_n_np`
 * {ref}`e_n_p`
+
+```{code-cell}
+
+```
