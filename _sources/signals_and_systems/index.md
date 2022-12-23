@@ -34,3 +34,7 @@ This chapter is based on Chapter 1 of {cite}`schaum`.
 * [Systems and Classifications of Systems](systems/index.md)
 * [Homework Problems](homework/index.md)
 * [MATLAB Lab 1 - Symbolic Math Toolbox OnRamp](lab/index.md)
+
+```{code-cell}
+
+```

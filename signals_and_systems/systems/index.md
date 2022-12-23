@@ -76,3 +76,28 @@ This section is based on Section 1.5 of {cite}`schaum`.
 
 (feedback_systems)=
 ## Feedback Systems
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Summary
+
+In this lecture we have started our look at systems and the classification of systems.
+
+In particular we have looked at
+
+* {ref}`system_representation`
+* {ref}`deterministic_and_stochastic_systems`
+* {ref}`continuous_time_and_discrete_time_systems`
+* {ref}`aystems_with_memory_and_without_memory`
+* {ref}`causal_and_non-causal_systems`
+* {ref}`linear_systems_and_nonlinear_systems`
+* {ref}`linear_time_invariant_systems`
+* {ref}`stable_systems`
+* {ref}`feedback_systems`
+
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Next time
+
+* {ref}`elementary_signals`

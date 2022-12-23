@@ -479,4 +479,12 @@ In particular we have looked at
 
 ## Next Time
 
-* {ref}`elementary_signals`
+* {ref}`system_representation`
+* {ref}`deterministic_and_stochastic_systems`
+* {ref}`continuous_time_and_discrete_time_systems`
+* {ref}`aystems_with_memory_and_without_memory`
+* {ref}`causal_and_non-causal_systems`
+* {ref}`linear_systems_and_nonlinear_systems`
+* {ref}`linear_time_invariant_systems`
+* {ref}`stable_systems`
+* {ref}`feedback_systems`
