@@ -479,6 +479,7 @@ In particular we have looked at
 
 ## Next Time
 
+* {ref}`elementary_signals`
 * {ref}`system_representation`
 * {ref}`deterministic_and_stochastic_systems`
 * {ref}`continuous_time_and_discrete_time_systems`

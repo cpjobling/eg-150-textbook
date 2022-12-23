@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/signals_and_systems/systems/index.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -725,12 +727,35 @@ title="Print to PDF"
 </section>
 <section id="system-representation">
 <span id="id2"></span><h2>System Representation<a class="headerlink" href="#system-representation" title="Permalink to this headline">#</a></h2>
+<p>A <em>system</em> is a mathematical model of a physical process that relates the <em>input</em> (or <em>excitation</em>) signal to the <em>output</em> (or <em>response</em>) signal.</p>
+<p>Let <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> be the input and output signals, respectively, of a system. Then the system is viewed as a <em>transformation</em> (or <em>mapping</em>) of <span class="math notranslate nohighlight">\(x\)</span> into <span class="math notranslate nohighlight">\(y\)</span>. The transformation is represented by the mathematical notation</p>
+<div class="math notranslate nohighlight">
+\[y = \mathbf{T}x\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{T}\)</span> is the <em>operator</em> representing some well defined rule by which <span class="math notranslate nohighlight">\(x\)</span> is transformed into <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>The relationship is depicted graphically as shown in <a class="reference internal" href="#fig-system"><span class="std std-numref">Fig. 13</span></a>(a).</p>
+<p>Multiple input and/or output ssystems are possible as shown in <a class="reference internal" href="#fig-system"><span class="std std-numref">Fig. 13</span></a>(b). In this module we will restrict our attention to the single-input, single-output case.</p>
+<figure class="align-default" id="fig-system">
+<a class="reference internal image-reference" href="../../_images/system.png"><img alt="System with single or multiple inputs and outputs" src="../../_images/system.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">System with single or multiple inputs and outputs</span><a class="headerlink" href="#fig-system" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="deterministic-and-stochastic-systems">
 <span id="id3"></span><h2>Deterministic and Stochastic Systems<a class="headerlink" href="#deterministic-and-stochastic-systems" title="Permalink to this headline">#</a></h2>
+<p>If the input and output signals <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are deterministic signals, then the system is called a deterministic system.</p>
+<p>If the input and output signals <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are random signals, then the system is called a <em>stochastic</em> system.</p>
 </section>
 <section id="continuous-time-and-discrete-time-systems">
 <span id="id4"></span><h2>Continuous-Time and Discrete-Time Systems<a class="headerlink" href="#continuous-time-and-discrete-time-systems" title="Permalink to this headline">#</a></h2>
+<p>If the input and output signals  𝑥  and  𝑦  are continuous-time signals, then the system is called a <em>continuous-time system</em> (<a class="reference internal" href="#fig-ct-n-dt-system"><span class="std std-numref">Fig. 14</span></a>(a)).</p>
+<p>If the input and output signals  𝑥  and  𝑦  are discrete-time signals or sequences, then the system is called a <em>discrete-time system</em> (<a class="reference internal" href="#fig-ct-n-dt-system"><span class="std std-numref">Fig. 14</span></a>(b)).</p>
+<figure class="align-default" id="fig-ct-n-dt-system">
+<a class="reference internal image-reference" href="../../_images/ct_n_dt_system.png"><img alt="Continuous-time and discrete-time systems" src="../../_images/ct_n_dt_system.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">(a) Continuous-time system; (b) discrete time system.</span><a class="headerlink" href="#fig-ct-n-dt-system" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="systems-with-memory-and-without-memory">
 <span id="aystems-with-memory-and-without-memory"></span><h2>Systems with Memory and without Memory<a class="headerlink" href="#systems-with-memory-and-without-memory" title="Permalink to this headline">#</a></h2>

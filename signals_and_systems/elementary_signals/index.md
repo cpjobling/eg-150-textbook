@@ -322,7 +322,7 @@ $$\int_{-\infty}^{t}\delta(\tau)d\tau = u_0(t)$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-To solve this problem we need to invent a function that represents the derivative of the unit step function. This function is called the *unit impulse function* 𝛿(𝑡), also known as the *Dirac delta* function (named after [Paul Dirac](https://en.wikipedia.org/wiki/Paul_Dirac)). 
+To solve this problem we need to invent a function that represents the derivative of the unit step function. This function is called the *unit impulse function* 𝛿(𝑡), also known as the *Dirac delta* function (named after [Paul Dirac](https://en.wikipedia.org/wiki/Paul_Dirac)).
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -351,7 +351,7 @@ $$\int_{\epsilon}^{-\epsilon}\delta(t)\,dt = 1$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-The unit impulse function plays a fundamental role in systems analysis. 
+The unit impulse function plays a fundamental role in systems analysis.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -471,3 +471,18 @@ These are for you to do later for further practice. See [Homework 1](../homework
 ## References
 
 See [Bibliography](/zbib)
+
++++
+
+## Next Time
+
+[Systems and Classification of Systems](../systems/index)
+* {ref}`system_representation`
+* {ref}`deterministic_and_stochastic_systems`
+* {ref}`continuous_time_and_discrete_time_systems`
+* {ref}`aystems_with_memory_and_without_memory`
+* {ref}`causal_and_non-causal_systems`
+* {ref}`linear_systems_and_nonlinear_systems`
+* {ref}`linear_time_invariant_systems`
+* {ref}`stable_systems`
+* {ref}`feedback_systems`
