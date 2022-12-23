@@ -560,6 +560,11 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subjects-to-be-covered">
+   Subjects to be covered
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#continuous-time-and-discrete-time-signals">
    Continuous-Time and Discrete-Time Signals
   </a>
@@ -676,6 +681,11 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subjects-to-be-covered">
+   Subjects to be covered
+  </a>
+ </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#continuous-time-and-discrete-time-signals">
    Continuous-Time and Discrete-Time Signals
@@ -797,10 +807,20 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>Thus a signal is denoted by <span class="math notranslate nohighlight">\(x(t)\)</span>.</p></li>
 </ul>
+<section id="subjects-to-be-covered">
+<h2>Subjects to be covered<a class="headerlink" href="#subjects-to-be-covered" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#ct-n-dt"><span class="std std-ref">Continuous-Time and Discrete-Time Signals</span></a></p></li>
+<li><p><a class="reference internal" href="#a-n-d"><span class="std std-ref">Analogue and Digital Signals</span></a></p></li>
+<li><p><a class="reference internal" href="#r-n-c"><span class="std std-ref">Real and Complex Signals</span></a></p></li>
+<li><p><a class="reference internal" href="#det-n-rand"><span class="std std-ref">Deterministic and Random Signals</span></a></p></li>
+<li><p><a class="reference internal" href="#even-n-odd"><span class="std std-ref">Even and Odd Signals</span></a></p></li>
+</ul>
+</section>
 <section id="continuous-time-and-discrete-time-signals">
 <span id="ct-n-dt"></span><h2>Continuous-Time and Discrete-Time Signals<a class="headerlink" href="#continuous-time-and-discrete-time-signals" title="Permalink to this headline">#</a></h2>
-<p>A signal <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>continuous-time</em> (CT) signal if <span class="math notranslate nohighlight">\(t\)</span> is a continuous variable. For an example of a continuous-time signal, please see Fig. <a class="reference internal" href="#ct-signal"><span class="std std-numref">Fig. 1</span></a>.</p>
-<p>If <span class="math notranslate nohighlight">\(t\)</span> is a discrete variable—that is, <span class="math notranslate nohighlight">\(x(t)\)</span> is defined at discrete times—then <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>discrete-time</em> (DT) signal. For an example of a discrete-time signal, please see Fig. <a class="reference internal" href="#dt-signal"><span class="std std-numref">Fig. 2</span></a>.</p>
+<p>A signal <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>continuous-time</em> (CT) signal if <span class="math notranslate nohighlight">\(t\)</span> is a continuous variable. For an example of a continuous-time signal, please see <a class="reference internal" href="#ct-signal"><span class="std std-numref">Fig. 1</span></a>.</p>
+<p>If <span class="math notranslate nohighlight">\(t\)</span> is a discrete variable—that is, <span class="math notranslate nohighlight">\(x(t)\)</span> is defined at discrete times—then <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>discrete-time</em> (DT) signal. For an example of a discrete-time signal, please see <a class="reference internal" href="#dt-signal"><span class="std std-numref">Fig. 2</span></a>.</p>
 <p>Since a discrete-time signal is defined at discrete times, a discrete-time is often defined as a <em>sequence</em> of numbers, donated by <span class="math notranslate nohighlight">\(x[n]\)</span>, where <span class="math notranslate nohighlight">\(n\)</span> is an integer (mathematically: <span class="math notranslate nohighlight">\(n \in \mathbb{Z}\)</span>).</p>
 <figure class="align-default" id="ct-signal">
 <a class="reference internal image-reference" href="../../_images/ct-signal.png"><img alt="Graphical representation of a continuous-time signal." src="../../_images/ct-signal.png" style="width: 60%;" /></a>
@@ -814,7 +834,7 @@ title="Print to PDF"
 <p><span class="caption-number">Fig. 2 </span><span class="caption-text">Graphical representation of a discrete-time signal</span><a class="headerlink" href="#dt-signal" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Because discrete-time signals are defined as sequences, it is easy to define and plot a sequence in MATLAB. For example, to redraw Fig. <a class="reference internal" href="#dt-signal"><span class="std std-ref">Graphical representation of a discrete-time signal</span></a>, execute the following code.</p>
+<p>Because discrete-time signals are defined as sequences, it is easy to define and plot a sequence in MATLAB. For example, to redraw <a class="reference internal" href="#dt-signal"><span class="std std-ref">Graphical representation of a discrete-time signal</span></a>, execute the following code.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="p">:</span><span class="mi">6</span><span class="p">;</span><span class="w"></span>
@@ -824,13 +844,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/index_11_0.png" src="../../_images/index_11_0.png" />
+<img alt="../../_images/index_12_01.png" src="../../_images/index_12_01.png" />
 </div>
 </div>
 <section id="more-on-discrete-time-signals">
 <h3>More on discrete-time signals<a class="headerlink" href="#more-on-discrete-time-signals" title="Permalink to this headline">#</a></h3>
 <p>A discrete-time signal <span class="math notranslate nohighlight">\(x[n]\)</span> may represent a phenomenon for which the independent variable is inherently discrete: e.g. daily stock market average prices.</p>
-<p>E.g. <a class="reference external" href="https://www.londonstockexchange.com/indices/ftse-100">FTSE 100</a> (Fig. <a class="reference internal" href="#ftse-100"><span class="std std-numref">Fig. 3</span></a>)</p>
+<p>E.g. <a class="reference external" href="https://www.londonstockexchange.com/indices/ftse-100">FTSE 100</a> (<a class="reference internal" href="#ftse-100"><span class="std std-numref">Fig. 3</span></a>)</p>
 <figure class="align-default" id="ftse-100">
 <img alt="An example of discrete data from the FTSE 100." src="../../_images/Chart_FTSE_100.png" />
 <figcaption>
@@ -893,7 +913,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/index_30_0.png" src="../../_images/index_30_0.png" />
+<img alt="../../_images/index_31_0.png" src="../../_images/index_31_0.png" />
 </div>
 </div>
 <section id="random-signals">
@@ -909,7 +929,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/index_33_0.png" src="../../_images/index_33_0.png" />
+<img alt="../../_images/index_34_0.png" src="../../_images/index_34_0.png" />
 </div>
 </div>
 <p>We will not discuss random signals in this module or the next, but if you are interested, they are covered in detail in Chapters 8 and 9 of <span id="id3">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
@@ -922,7 +942,7 @@ title="Print to PDF"
 <p>A signal <span class="math notranslate nohighlight">\(x(t)\)</span> is referred to as an <em>even</em> signal if</p>
 <div class="math notranslate nohighlight">
 \[x(t) = x(-t)\]</div>
-<p>See Fig. <a class="reference internal" href="#even-signal"><span class="std std-numref">Fig. 4</span></a> for an example of an even signal.</p>
+<p>See <a class="reference internal" href="#even-signal"><span class="std std-numref">Fig. 4</span></a> for an example of an even signal.</p>
 <figure class="align-default" id="even-signal">
 <a class="reference internal image-reference" href="../../_images/even-signal.png"><img alt="An example of an even signal" src="../../_images/even-signal.png" style="width: 60%;" /></a>
 <figcaption>
@@ -935,7 +955,7 @@ title="Print to PDF"
 <p>A signal <span class="math notranslate nohighlight">\(x(t)\)</span> is referred to as an <em>odd</em> signal if</p>
 <div class="math notranslate nohighlight">
 \[x(-t) = -x(t)\]</div>
-<p>See Fig. <a class="reference internal" href="#odd-signal"><span class="std std-numref">Fig. 5</span></a> for an example of an odd signal.</p>
+<p>See <a class="reference internal" href="#odd-signal"><span class="std std-numref">Fig. 5</span></a> for an example of an odd signal.</p>
 <figure class="align-default" id="odd-signal">
 <a class="reference internal image-reference" href="../../_images/odd-signal.png"><img alt="An example of an even signal" src="../../_images/odd-signal.png" style="width: 60%;" /></a>
 <figcaption>
@@ -962,16 +982,16 @@ title="Print to PDF"
 <section id="examples-1">
 <span id="worked-examples-1"></span><h2>Examples 1<a class="headerlink" href="#examples-1" title="Permalink to this headline">#</a></h2>
 <section id="signals">
-<span id="ex1-1"></span><h3>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">#</a></h3>
+<h3>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve these examples by hand and then give the solution in the MATLAB lab.</p>
 </div>
-<p>1.1). A continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span> is shown in Fig. <a class="reference internal" href="#example1"><span class="std std-numref">Fig. 6</span></a>.</p>
+<p id="ex1-1">1.1). A continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span> is shown in <a class="reference internal" href="#example1"><span class="std std-numref">Fig. 6</span></a>.</p>
 <figure class="align-default" id="example1">
 <a class="reference internal image-reference" href="../../_images/example1.png"><img alt="The signal for example 1" src="../../_images/example1.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">The signal for example 1</span><a class="headerlink" href="#example1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">The signal for Example 1.1</span><a class="headerlink" href="#example1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Sketch and label each of the following signals.</p>
@@ -987,7 +1007,7 @@ title="Print to PDF"
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve these examples by hand and then give the solution in the MATLAB lab.</p>
 </div>
-<p>1.2). Given the continuous-time signal specified by</p>
+<p id="id6">1.2). Given the continuous-time signal specified by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}x\left(t\right)=\left\lbrace \begin{array}{ll}
 1-\left|t\right| &amp; -1\le t\le 1\\
@@ -997,7 +1017,7 @@ title="Print to PDF"
 <p>a). 0.25 s</p>
 <p>b). 0.5 s, and</p>
 <p>c). 1 s.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 1.3 in <span id="id6">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 1.3 in <span id="id7">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="odd-and-even-signals">
 <span id="ex1-3"></span><h3>Odd and even signals<a class="headerlink" href="#odd-and-even-signals" title="Permalink to this headline">#</a></h3>
@@ -1005,19 +1025,19 @@ title="Print to PDF"
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve these examples by hand and then give the solution in the MATLAB lab.</p>
 </div>
-<p>1.3). Sketch and label the even and odd components of the signals shown in Fig. <a class="reference internal" href="#example3"><span class="std std-numref">Fig. 7</span></a>.</p>
+<p>1.3). Sketch and label the even and odd components of the signals shown in <a class="reference internal" href="#example3"><span class="std std-numref">Fig. 7</span></a>.</p>
 <figure class="align-default" id="example3">
 <a class="reference internal image-reference" href="../../_images/example31.png"><img alt="Signals for Example 3." src="../../_images/example31.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Signals for Example 3.</span><a class="headerlink" href="#example3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Signals for Example 1.3.</span><a class="headerlink" href="#example3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>For the answer, refer to the lecture recording or see solved problem 1.5 in <span id="id7">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
-<p>1.4). Find the odd and even components of <span class="math notranslate nohighlight">\(x(t) = e^{jt}\)</span>.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 1.6 in <span id="id8">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
-<p>1.5). Show that the product of two even signals or of two odd signals is an even signal and that the product of an even signal and an odd signal is an odd signal.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 1.7 in <span id="id9">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
-<p>1.6). Show that</p>
+<p>For the answer, refer to the lecture recording or see solved problem 1.5 in <span id="id8">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p id="ex1-4">1.4). Find the odd and even components of <span class="math notranslate nohighlight">\(x(t) = e^{jt}\)</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 1.6 in <span id="id9">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p id="ex1-5">1.5). Show that the product of two even signals or of two odd signals is an even signal and that the product of an even signal and an odd signal is an odd signal.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 1.7 in <span id="id10">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p id="ex1-6">1.6). Show that</p>
 <p>a). If <span class="math notranslate nohighlight">\(x(t)\)</span> is even</p>
 <div class="math notranslate nohighlight">
 \[\int_{-a}^{a} x(t)\, dt = 2 \int_0^a x(t)\, dt.\]</div>
@@ -1026,7 +1046,7 @@ title="Print to PDF"
 \[x(0) = 0\]</div>
 <div class="math notranslate nohighlight">
 \[\int_{-a}^{a} x(t)\, dt = 0.\]</div>
-<p>For the answer, refer to the lecture recording or see solved problem 1.8 in <span id="id10">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 1.8 in <span id="id11">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 </section>
 <section id="summary">

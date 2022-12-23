@@ -34,7 +34,7 @@ A continuous-time signal $x(t)$ is said to be *periodic* with *period* $T$ is th
 
 $$x(t + T) = x(t)\;\mathrm{all}\;t$$
 
-An example of such a signal is given in Fig. {numref}`periodic-signal`.
+An example of such a signal is given in {numref}`periodic-signal`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -46,7 +46,7 @@ An example of a periodic signal.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-We can use the periodicity to synthesize a periodic signal such as that shown in Fig. {numref}`periodic-signal`.
+We can use the periodicity to synthesize a periodic signal such as that shown in {numref}`periodic-signal`.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -160,7 +160,7 @@ Note that the definition of the *fundamental period*  does not hold for a consta
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-For a constant signal $x(t) = c$ the fundamental period is undefined since $x(t)$ is periodic for any choice of $T$ (and so there is no smallest postive value). See Fig. {numref}`dc_signal`.
+For a constant signal $x(t) = c$ the fundamental period is undefined since $x(t)$ is periodic for any choice of $T$ (and so there is no smallest postive value). See {numref}`dc_signal`.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -183,7 +183,7 @@ A DC signal
 (nonperiodic_signals)=
 ### Nonperiodic signals
 
-Any continuous-time signal which is not periodic is called a *nonperiodic* (or *aperiodic*) sigmal. For example see Fig. {numref}`aperiodic_signal`
+Any continuous-time signal which is not periodic is called a *nonperiodic* (or *aperiodic*) sigmal. For example see {numref}`aperiodic_signal`
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -198,7 +198,7 @@ A nonperiodic signal
 (e_n_p)=
 ## Energy and Power Signals
 
-Consider $v(t)$ to be the voltage across a resistor $R$ prtoducing a current $i(t)$. (Fig. {numref}`resistor_circuit`)
+Consider $v(t)$ to be the voltage across a resistor $R$ prtoducing a current $i(t)$. ({numref}`resistor_circuit`)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -437,7 +437,7 @@ We will solve this example by hand and then give the solution in the MATLAB lab.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-2.5). Determine whether the following signals are energy signals, power signals, or neither. 
+2.5). Determine whether the following signals are energy signals, power signals, or neither.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
