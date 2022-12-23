@@ -186,6 +186,68 @@ Note that all memoryless systems are causal but not all *vice versa*.
 (linear_systems_and_nonlinear_systems)=
 ## Linear Systems and Nonlinear Systems
 
+If an operator $\mathbf{T}$ satisfies the following two conditions, then $\mathbf{T}$ is called a *linear operator* and the system represented by the linear operator $\mathbf{T}$ is called a *linear system*:
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### 1. Additivity
+
+Given that $\mathbf{T}x_1 = y_1$ and  $\mathbf{T}x_2 = y_2$, 
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+then
+
+$$\mathbf{T}\left\{x_1 + x_2\right\} = y_1 + y_2$$
+
+for any signals $x_1$ and $x_2$.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### 2. Homogeneity (or *Scaling*)
+
+$$\mathbf{T}\left\{\alpha x\right\} = \alpha y$$
+
+for any signals $x$ and any scalar $\alpha$.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Nonliear systems
+
+Any system that does not satisfy the additivity and homogeneity conditions is classified as a *nonlinear system*.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Superposition property
+
+The additivity and homogeneity conditions can combined in a single condition (known as the *superposition property* as
+
+$$\mathbf{T}\left\{\alpha_1 x_1 + \alpha_2 x_2 \right\} = \alpha_1 y_1 + \alpha_2 y_2$$
+
+where $\alpha_1$ and $\alpha_2$ are arbitrary scalars.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Example linear systems
+
+Examples of linear systems are the resistor and capacitor discussed earlier.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Example nonlinear systems
+
+Examples of nonlinear systems are
+
+$$y = x^2$$
+
+$$y = \cos x$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Zero input property
+
+Note that a consequence of the homegenity (or scaling) property of linear systems is that a *zero input yields a zero output*. This follows readilty by setting $\alpha = 0$ in the equation $\mathbf{T}\left\{\alpha x\right\} = \alpha y$. This is another important property of linear systems.
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (linear_time_invariant_systems)=

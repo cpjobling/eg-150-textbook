@@ -774,6 +774,68 @@ Note that all memoryless systems are causal but not all *vice versa*.
 (linear_systems_and_nonlinear_systems)=
 ## Linear Systems and Nonlinear Systems
 
+If an operator $\mathbf{T}$ satisfies the following two conditions, then $\mathbf{T}$ is called a *linear operator* and the system represented by the linear operator $\mathbf{T}$ is called a *linear system*:
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}
+
+### 1. Additivity
+
+Given that $\mathbf{T}x_1 = y_1$ and  $\mathbf{T}x_2 = y_2$, 
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}
+
+then
+
+$$\mathbf{T}\left\{x_1 + x_2\right\} = y_1 + y_2$$
+
+for any signals $x_1$ and $x_2$.
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}
+
+### 2. Homogeneity (or *Scaling*)
+
+$$\mathbf{T}\left\{\alpha x\right\} = \alpha y$$
+
+for any signals $x$ and any scalar $\alpha$.
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}
+
+### Nonliear systems
+
+Any system that does not satisfy the additivity and homogeneity conditions is classified as a *nonlinear system*.
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}
+
+### Superposition property
+
+The additivity and homogeneity conditions can combined in a single condition (known as the *superposition property* as
+
+$$\mathbf{T}\left\{\alpha_1 x_1 + \alpha_2 x_2 \right\} = \alpha_1 y_1 + \alpha_2 y_2$$
+
+where $\alpha_1$ and $\alpha_2$ are arbitrary scalars.
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}
+
+### Example linear systems
+
+Examples of linear systems are the resistor and capacitor discussed earlier.
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}
+
+### Example nonlinear systems
+
+Examples of nonlinear systems are
+
+$$y = x^2$$
+
+$$y = \cos x$$
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}
+
+### Zero input property
+
+Note that a consequence of the homegenity (or scaling) property of linear systems is that a *zero input yields a zero output*. This follows readilty by setting $\alpha = 0$ in the equation $\mathbf{T}\left\{\alpha x\right\} = \alpha y$. This is another important property of linear systems.
+
 +++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;slide&quot;}}
 
 (linear_time_invariant_systems)=
