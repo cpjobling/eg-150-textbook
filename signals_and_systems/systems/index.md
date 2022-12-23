@@ -335,6 +335,8 @@ A special class of systems of great importance consists of systems having *feedb
 
 In a *feedback system*, the output signal is fed back and added to the input as shown in {numref}`fig:feedback`.
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 :::{figure-md} fig:feedback
 <img src="pictures/feedback.png" alt="A feedback system with negative feedback" width="60%">
 
