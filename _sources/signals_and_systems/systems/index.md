@@ -28,6 +28,7 @@ This section is based on Section 1.5 of {cite}`schaum`.
 * {ref}`aystems_with_memory_and_without_memory`
 * {ref}`causal_and_non-causal_systems`
 * {ref}`linear_systems_and_nonlinear_systems`
+* {ref}`time_invariant_and_time_varying_systems`
 * {ref}`linear_time_invariant_systems`
 * {ref}`stable_systems`
 * {ref}`feedback_systems`
@@ -250,18 +251,99 @@ Note that a consequence of the homegenity (or scaling) property of linear system
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(time_invariant_and_time_varying_systems)=
+## Time-Invariant and Time-Varying Systems
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+A system is called *time-invariant* if a time-shift (delay or advance) in the input signal causes the same time-shift in the output signal.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Thus for a continuous-time system, the system is time-invariant if
+
+$$\mathbf{T}\left\{x(t - \tau)\right\}=y(t - \tau)$$
+
+for any real value of $\tau$.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Time-varying system
+
+A system that does not satisfy the equation $\mathbf{T}\left\{x(t - \tau)\right\}=y(t - \tau)$ is called a *time-varying system*.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Testing for time-invariance
+
+To check for time invariance, we can compare the time-shifted output with the output produced by the time-shifted input (See examples 3.2 and 3.3).
+
++++ {"slideshow": {"slide_type": "slide"}}
+
 (linear_time_invariant_systems)=
 ## Linear Time-Invariant Systems
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+If a system is linear and also time-invariant it is called a *linear time-invariant* (LTI) system.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+All ths systems analysied in in the rest of the module and in **EG-247 Digital Signal Processing** and **EG-243 Control Systems** next year will be LTI systems.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (stable_systems)=
 ## Stable Systems
 
+A system is *bounded-input/bounded-output* (BIBO) *stable* is for any bounded input signal $x$ defined by
+
+$$|x|\le k_1$$
+
+the corresponding output $y$ is also bounded defined by
+
+$$|y|\le k_2$$
+
+where $k_1$ and $k_2$ are finite real constants.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Unstable systems
+
+An *unstable* system is one in which not all bounded inputs lead to a bounded output.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+For example, consider the system where output 
+
+$$y(t) = t x(t)$$
+
+and input $x(t)$ is the unit step $u_0(t)$ 
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+In this case $x(t) = 1$ but the output $y(t)$ increases without bound as $t$ increases.
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (feedback_systems)=
 ## Feedback Systems
+
+A special class of systems of great importance consists of systems having *feedback*.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+In a *feedback system*, the output signal is fed back and added to the input as shown in {numref}`fig:feedback`.
+
+:::{figure-md} fig:feedback
+<img src="pictures/feedback.png" alt="A feedback system with negative feedback" width="60%">
+
+A feedback system with negative feedback: $e(t) = x(t) - y(t)$.
+:::
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+You will see some examples of systems with feedback when you study op-amp circuits in **EG-152 Practical Electronics**, the simple closed-loop systems to be studied in **EG-142 Instrumentation and Control**.  Feedback is also the basis of control theory to be studied next year in **EG-243 Control Systems**.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -277,6 +359,7 @@ In particular we have looked at
 * {ref}`aystems_with_memory_and_without_memory`
 * {ref}`causal_and_non-causal_systems`
 * {ref}`linear_systems_and_nonlinear_systems`
+* {ref}`time_invariant_and_time_varying_systems`
 * {ref}`linear_time_invariant_systems`
 * {ref}`stable_systems`
 * {ref}`feedback_systems`
@@ -285,4 +368,4 @@ In particular we have looked at
 
 ## Next time
 
-* {ref}`elementary_signals`
+* {ref}`lti_systems`
