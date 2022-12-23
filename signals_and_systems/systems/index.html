@@ -583,41 +583,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#systems-with-memory-and-without-memory">
    Systems with Memory and without Memory
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#causal-and-non-causal-systems">
-   Causal and Non-Causal Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linear-systems-and-nonlinear-systems">
-   Linear Systems and Nonlinear Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linear-time-invariant-systems">
-   Linear Time-Invariant Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#stable-systems">
-   Stable Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#feedback-systems">
-   Feedback Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   Next time
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-memoryless-system">
+     A memoryless system
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-system-with-memory">
+     A system with memory
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -662,41 +639,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#systems-with-memory-and-without-memory">
    Systems with Memory and without Memory
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#causal-and-non-causal-systems">
-   Causal and Non-Causal Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linear-systems-and-nonlinear-systems">
-   Linear Systems and Nonlinear Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linear-time-invariant-systems">
-   Linear Time-Invariant Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#stable-systems">
-   Stable Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#feedback-systems">
-   Feedback Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   Next time
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-memoryless-system">
+     A memoryless system
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-system-with-memory">
+     A system with memory
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -718,11 +672,11 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="#deterministic-and-stochastic-systems"><span class="std std-ref">Deterministic and Stochastic Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#continuous-time-and-discrete-time-systems"><span class="std std-ref">Continuous-Time and Discrete-Time Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#aystems-with-memory-and-without-memory"><span class="std std-ref">Systems with Memory and without Memory</span></a></p></li>
-<li><p><a class="reference internal" href="#causal-and-non-causal-systems"><span class="std std-ref">Causal and Non-Causal Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#linear-systems-and-nonlinear-systems"><span class="std std-ref">Linear Systems and Nonlinear Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#linear-time-invariant-systems"><span class="std std-ref">Linear Time-Invariant Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#stable-systems"><span class="std std-ref">Stable Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#feedback-systems"><span class="std std-ref">Feedback Systems</span></a></p></li>
+<li><p><span class="xref std std-ref">causal_and_non-causal_systems</span></p></li>
+<li><p><span class="xref std std-ref">linear_systems_and_nonlinear_systems</span></p></li>
+<li><p><span class="xref std std-ref">linear_time_invariant_systems</span></p></li>
+<li><p><span class="xref std std-ref">stable_systems</span></p></li>
+<li><p><span class="xref std std-ref">feedback_systems</span></p></li>
 </ul>
 </section>
 <section id="system-representation">
@@ -756,46 +710,111 @@ title="Print to PDF"
 <p><span class="caption-number">Fig. 14 </span><span class="caption-text">(a) Continuous-time system; (b) discrete time system.</span><a class="headerlink" href="#fig-ct-n-dt-system" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<p>Note that in a continuous-time system the input <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(y(t)\)</span> are often expressed as a differential equation (see Example 4.1) and in a discrete-time system <span class="math notranslate nohighlight">\(x[n]\)</span> and <span class="math notranslate nohighlight">\(y[n]\)</span> are often expressed by a difference equation.</p>
 </section>
 <section id="systems-with-memory-and-without-memory">
 <span id="aystems-with-memory-and-without-memory"></span><h2>Systems with Memory and without Memory<a class="headerlink" href="#systems-with-memory-and-without-memory" title="Permalink to this headline">#</a></h2>
+<p>A system is said to be <em>memoryless</em> if the output at any time only depends on the input at the same time.</p>
+<p>Otherwise the system is said to have <em>memory</em>.</p>
+<section id="a-memoryless-system">
+<h3>A memoryless system<a class="headerlink" href="#a-memoryless-system" title="Permalink to this headline">#</a></h3>
+<p>An example of a memoryless system is a resistor <span class="math notranslate nohighlight">\(R\)</span> with and the input <span class="math notranslate nohighlight">\(x(t)\)</span> taken as the current and the voltage taken as the output <span class="math notranslate nohighlight">\(y(t)\)</span>.</p>
+<figure class="align-default" id="fig-resistor">
+<a class="reference internal image-reference" href="../../_images/resistor.png"><img alt="A resistor is an example of a memoryless system" src="../../_images/resistor.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">A memoryless system: a resistor</span><a class="headerlink" href="#fig-resistor" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The input-output relationship (Ohm’s law) of a resistor is</p>
+<div class="math notranslate nohighlight">
+\[y(t) = Rx(t)\]</div>
 </section>
-<section id="causal-and-non-causal-systems">
-<span id="id5"></span><h2>Causal and Non-Causal Systems<a class="headerlink" href="#causal-and-non-causal-systems" title="Permalink to this headline">#</a></h2>
+<section id="a-system-with-memory">
+<h3>A system with memory<a class="headerlink" href="#a-system-with-memory" title="Permalink to this headline">#</a></h3>
+<p>An example of a system with memory is a capacitor <span class="math notranslate nohighlight">\(C\)</span> with and the current as the input <span class="math notranslate nohighlight">\(x(t)\)</span> taken as the current and the voltage as the output <span class="math notranslate nohighlight">\(y(t)\)</span>.</p>
+<p>::{figure-md}  fig:capacitor
+<a class="reference internal" href="../../_images/capacitor.png"><img alt="A capacitor is an example of a system with memory" src="../../_images/capacitor.png" style="width: 50%;" /></a></p>
+<p>A system with memory: a capicitor</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Then:
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}
+
+Then
+
+$$y(t) = \frac{1}{C}\int_{-\infty}^{t}x(\tau)\,d\tau$$
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;slide&quot;}}
+
+(causal_and_non-causal_systems)=
+## Causal and Non-Causal Systems
+
+A system is called *causal* if its output at the present time depends only on the present and/or past values of the input. 
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}
+
+Thus, in a causal system, it is not possible to obtain an output before and input is applied to the system. 
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}
+
+A system is called *noncausal* (or *anticipative*) if its output at the present time depends on future values of the input. 
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}
+
+An example of a noncausal system is
+
+$$y(t) = x(t + 1)$$
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;notes&quot;}}
+
+Note that all memoryless systems are causal but not all *vice versa*.
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;slide&quot;}}
+
+(linear_systems_and_nonlinear_systems)=
+## Linear Systems and Nonlinear Systems
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;slide&quot;}}
+
+(linear_time_invariant_systems)=
+## Linear Time-Invariant Systems
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;slide&quot;}}
+
+(stable_systems)=
+## Stable Systems
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;slide&quot;}}
+
+(feedback_systems)=
+## Feedback Systems
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;notes&quot;}}
+
+## Summary
+
+In this lecture we have started our look at systems and the classification of systems.
+
+In particular we have looked at
+
+* {ref}`system_representation`
+* {ref}`deterministic_and_stochastic_systems`
+* {ref}`continuous_time_and_discrete_time_systems`
+* {ref}`aystems_with_memory_and_without_memory`
+* {ref}`causal_and_non-causal_systems`
+* {ref}`linear_systems_and_nonlinear_systems`
+* {ref}`linear_time_invariant_systems`
+* {ref}`stable_systems`
+* {ref}`feedback_systems`
+
++++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;notes&quot;}}
+
+## Next time
+
+* {ref}`elementary_signals`
+</pre></div>
+</div>
 </section>
-<section id="linear-systems-and-nonlinear-systems">
-<span id="id6"></span><h2>Linear Systems and Nonlinear Systems<a class="headerlink" href="#linear-systems-and-nonlinear-systems" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="linear-time-invariant-systems">
-<span id="id7"></span><h2>Linear Time-Invariant Systems<a class="headerlink" href="#linear-time-invariant-systems" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="stable-systems">
-<span id="id8"></span><h2>Stable Systems<a class="headerlink" href="#stable-systems" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="feedback-systems">
-<span id="id9"></span><h2>Feedback Systems<a class="headerlink" href="#feedback-systems" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
-<p>In this lecture we have started our look at systems and the classification of systems.</p>
-<p>In particular we have looked at</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#system-representation"><span class="std std-ref">System Representation</span></a></p></li>
-<li><p><a class="reference internal" href="#deterministic-and-stochastic-systems"><span class="std std-ref">Deterministic and Stochastic Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#continuous-time-and-discrete-time-systems"><span class="std std-ref">Continuous-Time and Discrete-Time Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#aystems-with-memory-and-without-memory"><span class="std std-ref">Systems with Memory and without Memory</span></a></p></li>
-<li><p><a class="reference internal" href="#causal-and-non-causal-systems"><span class="std std-ref">Causal and Non-Causal Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#linear-systems-and-nonlinear-systems"><span class="std std-ref">Linear Systems and Nonlinear Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#linear-time-invariant-systems"><span class="std std-ref">Linear Time-Invariant Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#stable-systems"><span class="std std-ref">Stable Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#feedback-systems"><span class="std std-ref">Feedback Systems</span></a></p></li>
-</ul>
-</section>
-<section id="next-time">
-<h2>Next time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="../elementary_signals/index.html#elementary-signals"><span class="std std-ref">Elementary Signals</span></a></p></li>
-</ul>
 </section>
 </section>
 

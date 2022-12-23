@@ -97,15 +97,89 @@ If the input and output signals  𝑥  and  𝑦  are discrete-time signals or s
 (a) Continuous-time system; (b) discrete time system.
 :::
 
++++ {"slideshow": {"slide_type": "notes"}}
+
+ Note that in a continuous-time system the input $x(t)$ and $y(t)$ are often expressed as a differential equation (see Example 4.1) and in a discrete-time system $x[n]$ and $y[n]$ are often expressed by a difference equation.
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (aystems_with_memory_and_without_memory)=
 ## Systems with Memory and without Memory
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
+A system is said to be *memoryless* if the output at any time only depends on the input at the same time.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Otherwise the system is said to have *memory*.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### A memoryless system
+
+An example of a memoryless system is a resistor $R$ with and the input $x(t)$ taken as the current and the voltage taken as the output $y(t)$.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+:::{figure-md}  fig:resistor
+<img src="pictures/resistor.png" alt="A resistor is an example of a memoryless system" width="50%">
+
+A memoryless system: a resistor
+:::
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+The input-output relationship (Ohm's law) of a resistor is
+
+$$y(t) = Rx(t)$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### A system with memory
+
+An example of a system with memory is a capacitor $C$ with and the current as the input $x(t)$ taken as the current and the voltage as the output $y(t)$.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+::{figure-md}  fig:capacitor
+<img src="pictures/capacitor.png" alt="A capacitor is an example of a system with memory" width="50%">
+
+A system with memory: a capicitor
+:::
+
+Then:
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Then
+
+$$y(t) = \frac{1}{C}\int_{-\infty}^{t}x(\tau)\,d\tau$$
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (causal_and_non-causal_systems)=
 ## Causal and Non-Causal Systems
+
+A system is called *causal* if its output at the present time depends only on the present and/or past values of the input. 
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Thus, in a causal system, it is not possible to obtain an output before and input is applied to the system. 
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+A system is called *noncausal* (or *anticipative*) if its output at the present time depends on future values of the input. 
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+An example of a noncausal system is
+
+$$y(t) = x(t + 1)$$
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Note that all memoryless systems are causal but not all *vice versa*.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
