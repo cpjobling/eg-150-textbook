@@ -107,7 +107,7 @@ Note that in a continuous-time system the input $x(t)$ and $y(t)$ are often expr
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-aystems_with_memory_and_without_memory)=
+(systems_with_memory_and_without_memory)=
 ## Systems with Memory and without Memory
 
 +++ {"slideshow": {"slide_type": "fragment"}}
