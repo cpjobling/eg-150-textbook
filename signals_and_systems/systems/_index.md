@@ -35,11 +35,10 @@ This section is based on Section 1.5 of {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(system_representation)=
 ## System Representation
 
-A *system* is a mathematical model of a physical process that relates
-
- the *input* (or *excitation*) signal to the *output* (or *response*) signal.
+A *system* is a mathematical model of a physical process that relates the *input* (or *excitation*) signal to the *output* (or *response*) signal.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -81,7 +80,6 @@ If the input and output signals $x$ and $y$ are random signals, then the system 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (continuous_time_and_discrete_time_systems)=
-
 ## Continuous-Time and Discrete-Time Systems
 
 +++ {"slideshow": {"slide_type": "fragment"}}
@@ -102,11 +100,11 @@ If the input and output signals  𝑥  and  𝑦  are discrete-time signals or s
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Note that in a continuous-time system the input $x(t)$ and $y(t)$ are often expressed as a differential equation (see Example 4.1) and in a discrete-time system $x[n]$ and $y[n]$ are often expressed by a difference equation.
+ Note that in a continuous-time system the input $x(t)$ and $y(t)$ are often expressed as a differential equation (see Example 4.1) and in a discrete-time system $x[n]$ and $y[n]$ are often expressed by a difference equation.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-aystems_with_memory_and_without_memory)=
+(aystems_with_memory_and_without_memory)=
 ## Systems with Memory and without Memory
 
 +++ {"slideshow": {"slide_type": "fragment"}}
@@ -145,15 +143,17 @@ An example of a system with memory is a capacitor $C$ with and the current as th
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-:::{figure-md}  fig:capacitor
+::{figure-md}  fig:capacitor
 <img src="pictures/capacitor.png" alt="A capacitor is an example of a system with memory" width="50%">
 
 A system with memory: a capacitor
 :::
 
+Then:
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Then:
+Then
 
 $$y(t) = \frac{1}{C}\int_{-\infty}^{t}x(\tau)\,d\tau$$
 
@@ -166,7 +166,7 @@ A system is called *causal* if its output at the present time depends only on th
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Thus, in a causal system, it is not possible to obtain an output before an input is applied to the system.
+Thus, in a causal system, it is not possible to obtain an output before and input is applied to the system.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -191,13 +191,9 @@ If an operator $\mathbf{T}$ satisfies the following two conditions, then $\mathb
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Properties of Linear Systems
+### 1. Additivity
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-#### 1. Additivity
-
-Given that $\mathbf{T}\left\{x_1\right\} = y_1$ and  $\mathbf{T}\left\{x_2\right\} = y_2$,
+Given that $\mathbf{T}x_1 = y_1$ and  $\mathbf{T}x_2 = y_2$,
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -209,7 +205,7 @@ for any signals $x_1$ and $x_2$.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### 2. Homogeneity (or *Scaling*)
+### 2. Homogeneity (or *Scaling*)
 
 $$\mathbf{T}\left\{\alpha x\right\} = \alpha y$$
 
@@ -217,7 +213,7 @@ for any signals $x$ and any scalar $\alpha$.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### Nonlinear systems
+### Nonliear systems
 
 Any system that does not satisfy the additivity and homogeneity conditions is classified as a *nonlinear system*.
 
@@ -225,7 +221,7 @@ Any system that does not satisfy the additivity and homogeneity conditions is cl
 
 ### Superposition property
 
-The additivity and homogeneity conditions can combined in a single condition (known as the *superposition property*) as
+The additivity and homogeneity conditions can combined in a single condition (known as the *superposition property* as
 
 $$\mathbf{T}\left\{\alpha_1 x_1 + \alpha_2 x_2 \right\} = \alpha_1 y_1 + \alpha_2 y_2$$
 
@@ -280,7 +276,7 @@ A system that does not satisfy the equation $\mathbf{T}\left\{x(t - \tau)\right\
 
 ### Testing for time-invariance
 
-To check for time invariance, we can compare the time-shifted output with the output produced by the time-shifted input (See examples 4.2 and 4.3).
+To check for time invariance, we can compare the time-shifted output with the output produced by the time-shifted input (See examples 3.2 and 3.3).
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -388,6 +384,7 @@ For the answer, refer to the lecture recording or see solved problem 1.32 in {ci
 A capacitor citcuit.
 :::
 
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 For the answer, refer to the lecture recording or see solved problem 1.33 in {cite}schaum.
@@ -402,13 +399,14 @@ For the answer, refer to the lecture recording or see solved problem 1.33 in {ci
 A system
 :::
 
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 For the answer, refer to the lecture recording or see solved problem 1.34 in {cite}schaum.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-4.4 A system has the input-output relationship given by
+4.4 A system has the input-output relationshio given by
 
 $$y = \mathbf{T}\left\{x\right\} = x^2$$
 
