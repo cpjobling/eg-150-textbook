@@ -410,6 +410,7 @@ The study of descrete-time (sampled) systems is based on this property.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(sifting_property)=
 ### Sifting Property
 
 The *sifting property* of the delta function states that

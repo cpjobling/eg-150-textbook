@@ -576,7 +576,49 @@ title="Print to PDF"
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-impulse-response">
-     A. Impulse response
+     A. Impulse Response
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-response-to-an-arbitrary-input">
+     B. Response to an Arbitrary Input
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-convolution-integral">
+     C. Convolution Integral
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-properties-of-the-convolution-integral">
+     D. Properties of the Convolution Integral
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#commutative">
+       1. Commutative:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#associative">
+       2. Associative:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#distributive">
+       3. Distributive:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-convolution-integral-operation">
+     E. Convolution Integral Operation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#f-step-response">
+     F. Step Response
     </a>
    </li>
   </ul>
@@ -584,6 +626,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#properties-of-continuous-time-lti-systems">
    Properties of Continuous-Time LTI Systems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eigenfunctions-of-continuous-time-lti-systems">
+   Eigenfunctions of Continuous-Time LTI Systems
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -652,7 +699,49 @@ title="Print to PDF"
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-impulse-response">
-     A. Impulse response
+     A. Impulse Response
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-response-to-an-arbitrary-input">
+     B. Response to an Arbitrary Input
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-convolution-integral">
+     C. Convolution Integral
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-properties-of-the-convolution-integral">
+     D. Properties of the Convolution Integral
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#commutative">
+       1. Commutative:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#associative">
+       2. Associative:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#distributive">
+       3. Distributive:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-convolution-integral-operation">
+     E. Convolution Integral Operation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#f-step-response">
+     F. Step Response
     </a>
    </li>
   </ul>
@@ -660,6 +749,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#properties-of-continuous-time-lti-systems">
    Properties of Continuous-Time LTI Systems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eigenfunctions-of-continuous-time-lti-systems">
+   Eigenfunctions of Continuous-Time LTI Systems
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -715,23 +809,85 @@ title="Print to PDF"
 <ul class="simple">
 <li><p><a class="reference internal" href="#response-of-a-continuous-time-lti-system-and-the-convolution-integral"><span class="std std-ref">Response of a Continuous-Time LTI System and the Convolution Integral</span></a></p></li>
 <li><p><a class="reference internal" href="#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
 <li><p><span class="xref std std-ref">Systems Described by Differential Equations</span></p></li>
 </ul>
 </section>
 <section id="response-of-a-continuous-time-lti-system-and-the-convolution-integral">
 <span id="id2"></span><h2>Response of a Continuous-Time LTI System and the Convolution Integral<a class="headerlink" href="#response-of-a-continuous-time-lti-system-and-the-convolution-integral" title="Permalink to this headline">#</a></h2>
 <section id="a-impulse-response">
-<h3>A. Impulse response<a class="headerlink" href="#a-impulse-response" title="Permalink to this headline">#</a></h3>
+<span id="impulse-reponse"></span><h3>A. Impulse Response<a class="headerlink" href="#a-impulse-response" title="Permalink to this headline">#</a></h3>
 <p>The <em>impulse response</em> <span class="math notranslate nohighlight">\(h(t)\)</span> of a continuous-time LTI system (represented by <span class="math notranslate nohighlight">\(\mathbf{T}\)</span>) is defined as the response of the system when the input is <span class="math notranslate nohighlight">\(\delta(t)\)</span>, that is,</p>
-<div class="math notranslate nohighlight" id="equation-eq-impulse-response">
-<span class="eqno">(1)<a class="headerlink" href="#equation-eq-impulse-response" title="Permalink to this equation">#</a></span>\[h(t) = \mathbf{T}\left\{\delta(t)\right\}\]</div>
+<div class="math notranslate nohighlight">
+\[h(t) = \mathbf{T}\left\{\delta(t)\right\}\]</div>
+</section>
+<section id="b-response-to-an-arbitrary-input">
+<span id="abitrary-signal-response"></span><h3>B. Response to an Arbitrary Input<a class="headerlink" href="#b-response-to-an-arbitrary-input" title="Permalink to this headline">#</a></h3>
+<p>From the <span class="xref std std-ref">sifting_property)</span></p>
+<div class="math notranslate nohighlight">
+\[\int_{-\infty}^{\infty}f(t)\delta(t-\alpha)dt=f(\alpha)\]</div>
+<p>an arbitrary continuous-time input can be expressed in terms of the Dirac delta function as</p>
+<div class="math notranslate nohighlight">
+\[x(\tau) = \int_{-\infty}^{\infty}x(\tau)\delta(t-\tau)d\tau = x(t)\]</div>
+<p>Since the system is linear, the response <span class="math notranslate nohighlight">\(y(t)\)</span> of the system with arbitrary input <span class="math notranslate nohighlight">\(x(t)\)</span> can be expressed as</p>
+<div class="math notranslate nohighlight">
+\[y(t) = \mathbf{T}\left\{x(t)\right\} = \mathbf{T}\left\{\int_{-\infty}^{\infty}x(\tau)\delta(t-\tau)\,d\tau\right\}\]</div>
+<div class="math notranslate nohighlight">
+\[ = \int_{-\infty}^{\infty}x(t)\mathbf{T}\left\{\delta(t - \tau)\right\}\]</div>
+<p>Since the system is time-invariant, we have</p>
+<div class="math notranslate nohighlight">
+\[h(t-\tau)=\mathbf{T}\left\{\delta(t-\tau)\right\}\,d\tau\]</div>
+<p>Substituting <span class="math notranslate nohighlight">\(h(t-\tau)\)</span> into the equation for <span class="math notranslate nohighlight">\(y(t)\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau\]</div>
+<p>This equation indicates that a continuous-time LTI system is completely characterised by its impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>.</p>
+</section>
+<section id="c-convolution-integral">
+<span id="convolution-integral"></span><h3>C. Convolution Integral<a class="headerlink" href="#c-convolution-integral" title="Permalink to this headline">#</a></h3>
+<p>The equation</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$ defines the *convolution* of two continuous-time signals $x(t)$ and $h(t)$ denoted by\\$$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau\end{aligned}\end{align} \]</div>
+<p>The equation</p>
+<div class="math notranslate nohighlight">
+\[y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau\]</div>
+<p>is commonly called the <em>convolution integral</em>.</p>
+<p>Thus we have the fundamental result that:</p>
+<p><em>the output of any continuous-time LTI system is the convolution of the input <span class="math notranslate nohighlight">\(x(t)\)</span> with the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system</em>.</p>
+<p><a class="reference internal" href="#fig-ct-lti-system"><span class="std std-numref">Fig. 21</span></a> illustrates the definition of the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> and the convolution integral.</p>
+<figure class="align-default" id="fig-ct-lti-system">
+<a class="reference internal image-reference" href="../_images/ct_lti_system.png"><img alt="Continuous-time LTI system" src="../_images/ct_lti_system.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Continuous-time LTI system</span><a class="headerlink" href="#fig-ct-lti-system" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="d-properties-of-the-convolution-integral">
+<span id="props-of-con-integral"></span><h3>D. Properties of the Convolution Integral<a class="headerlink" href="#d-properties-of-the-convolution-integral" title="Permalink to this headline">#</a></h3>
+<section id="commutative">
+<h4>1. Commutative:<a class="headerlink" href="#commutative" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="associative">
+<h4>2. Associative:<a class="headerlink" href="#associative" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="distributive">
+<h4>3. Distributive:<a class="headerlink" href="#distributive" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+<section id="e-convolution-integral-operation">
+<h3>E. Convolution Integral Operation<a class="headerlink" href="#e-convolution-integral-operation" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="f-step-response">
+<h3>F. Step Response<a class="headerlink" href="#f-step-response" title="Permalink to this headline">#</a></h3>
 </section>
 </section>
 <section id="properties-of-continuous-time-lti-systems">
 <span id="id3"></span><h2>Properties of Continuous-Time LTI Systems<a class="headerlink" href="#properties-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h2>
 </section>
+<section id="eigenfunctions-of-continuous-time-lti-systems">
+<span id="id4"></span><h2>Eigenfunctions of Continuous-Time LTI Systems<a class="headerlink" href="#eigenfunctions-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h2>
+</section>
 <section id="systems-described-by-differential-equations">
-<span id="id4"></span><h2>Systems Described by Differential Equations<a class="headerlink" href="#systems-described-by-differential-equations" title="Permalink to this headline">#</a></h2>
+<span id="id5"></span><h2>Systems Described by Differential Equations<a class="headerlink" href="#systems-described-by-differential-equations" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="worked-solutions">
 <h2>Worked Solutions<a class="headerlink" href="#worked-solutions" title="Permalink to this headline">#</a></h2>
@@ -749,6 +905,7 @@ title="Print to PDF"
 <ul class="simple">
 <li><p><a class="reference internal" href="#response-of-a-continuous-time-lti-system-and-the-convolution-integral"><span class="std std-ref">Response of a Continuous-Time LTI System and the Convolution Integral</span></a></p></li>
 <li><p><a class="reference internal" href="#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
 <li><p><span class="xref std std-ref">Systems Described by Differential Equations</span></p></li>
 </ul>
 </section>

@@ -34,6 +34,7 @@ We will discuss specifying the input-output relationsships for discrete-time sys
 
 * {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
+* {ref}`eigenfunctions_of_continuous_time_LTI_systems`
 * {ref}`Systems Described by Differential Equations`
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -41,19 +42,130 @@ We will discuss specifying the input-output relationsships for discrete-time sys
 (Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral)=
 ## Response of a Continuous-Time LTI System and the Convolution Integral
 
-### A. Impulse response
++++ {"slideshow": {"slide_type": "fragment"}}
+
+(impulse_reponse)=
+### A. Impulse Response
 
 The *impulse response* $h(t)$ of a continuous-time LTI system (represented by $\mathbf{T}$) is defined as the response of the system when the input is $\delta(t)$, that is,
 
-```{math}
-:label: eq:impulse-response
-h(t) = \mathbf{T}\left\{\delta(t)\right\}
-```
+$$h(t) = \mathbf{T}\left\{\delta(t)\right\}$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(abitrary_signal_response)=
+### B. Response to an Arbitrary Input
+
+From the {ref}`sifting_property)` 
+
+$$\int_{-\infty}^{\infty}f(t)\delta(t-\alpha)dt=f(\alpha)$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+an arbitrary continuous-time input can be expressed in terms of the Dirac delta function as
+
+$$x(\tau) = \int_{-\infty}^{\infty}x(\tau)\delta(t-\tau)d\tau = x(t)$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Since the system is linear, the response $y(t)$ of the system with arbitrary input $x(t)$ can be expressed as
+
+$$y(t) = \mathbf{T}\left\{x(t)\right\} = \mathbf{T}\left\{\int_{-\infty}^{\infty}x(\tau)\delta(t-\tau)\,d\tau\right\}$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+$$ = \int_{-\infty}^{\infty}x(t)\mathbf{T}\left\{\delta(t - \tau)\right\}$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Since the system is time-invariant, we have
+
+$$h(t-\tau)=\mathbf{T}\left\{\delta(t-\tau)\right\}\,d\tau$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Substituting $h(t-\tau)$ into the equation for $y(t)$ gives
+
+$$y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+This equation indicates that a continuous-time LTI system is completely characterised by its impulse response $h(t)$.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(convolution_integral)=
+### C. Convolution Integral
+
+The equation
+
+$$y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$ defines the *convolution* of two continuous-time signals $x(t)$ and $h(t)$ denoted by
+
+$$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+The equation 
+
+$$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$
+
+is commonly called the *convolution integral*. 
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Thus we have the fundamental result that:
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+*the output of any continuous-time LTI system is the convolution of the input $x(t)$ with the impulse response $h(t)$ of the system*. 
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+{numref}`fig:ct_lti_system` illustrates the definition of the impulse response $h(t)$ and the convolution integral.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+:::{figure-md} fig:ct_lti_system
+<img src="pictures/ct_lti_system.png" alt="Continuous-time LTI system" width="60%">
+
+Continuous-time LTI system
+:::
+
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(props_of_con_integral)=
+### D. Properties of the Convolution Integral
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### 1. Commutative:
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### 2. Associative:
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### 3. Distributive:
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### E. Convolution Integral Operation
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### F. Step Response
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (Properties_of_Continuous_Time_LTI_Systems)=
 ## Properties of Continuous-Time LTI Systems
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(eigenfunctions_of_continuous_time_LTI_systems)=
+## Eigenfunctions of Continuous-Time LTI Systems
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -82,6 +194,7 @@ In particular we have looked at
 
 * {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
+* {ref}`eigenfunctions_of_continuous_time_LTI_systems`
 * {ref}`Systems Described by Differential Equations`
 
 +++ {"slideshow": {"slide_type": "slide"}}
