@@ -26,19 +26,19 @@ Two most important attributes of systems are linearity and time invariance. In t
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-We will discuss specifying the input-output relationsships for discrete-time systems will be covered in **EG-247 Digital Signal Porcessing** next year.
+We will discuss specifying the input-output relationsships for discrete-time systems will be covered in **EG-247 Digital Signal Processing** next year.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## Subjects to be covered
 
-* {ref}`Response of a Continuous-Time LTI System and the Convolution Integral`
-* {ref}`Properties of Continuous-Time LTI Systems`
+* {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
+* {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`Systems Described by Differential Equations`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(Response of a Continuous-Time LTI System and the Convolution Integral)=
+(Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral)=
 ## Response of a Continuous-Time LTI System and the Convolution Integral
 
 ### A. Impulse response
@@ -52,12 +52,12 @@ h(t) = \mathbf{T}\left\{\delta(t)\right\}
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(Properties of Continuous-Time LTI Systems)=
+(Properties_of_Continuous_Time_LTI_Systems)=
 ## Properties of Continuous-Time LTI Systems
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(Systems Described by Differential Equations)=
+(Systems_Described_by_Differential_Equations)=
 ## Systems Described by Differential Equations
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -80,8 +80,8 @@ In this lecture we have started our look at LTI systems.
 
 In particular we have looked at
 
-* {ref}`Response of a Continuous-Time LTI System and the Convolution Integral`
-* {ref}`Properties of Continuous-Time LTI Systems`
+* {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
+* {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`Systems Described by Differential Equations`
 
 +++ {"slideshow": {"slide_type": "slide"}}

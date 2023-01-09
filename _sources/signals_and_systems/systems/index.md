@@ -25,7 +25,7 @@ This section is based on Section 1.5 of {cite}`schaum`.
 * {ref}`system_representation`
 * {ref}`deterministic_and_stochastic_systems`
 * {ref}`continuous_time_and_discrete_time_systems`
-* {ref}`aystems_with_memory_and_without_memory`
+* {ref}`systems_with_memory_and_without_memory`
 * {ref}`causal_and_non-causal_systems`
 * {ref}`linear_systems_and_nonlinear_systems`
 * {ref}`time_invariant_and_time_varying_systems`
@@ -467,7 +467,7 @@ In particular we have looked at
 * {ref}`system_representation`
 * {ref}`deterministic_and_stochastic_systems`
 * {ref}`continuous_time_and_discrete_time_systems`
-* {ref}`aystems_with_memory_and_without_memory`
+* {ref}`systems_with_memory_and_without_memory`
 * {ref}`causal_and_non-causal_systems`
 * {ref}`linear_systems_and_nonlinear_systems`
 * {ref}`time_invariant_and_time_varying_systems`
