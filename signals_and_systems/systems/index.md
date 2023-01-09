@@ -372,6 +372,7 @@ For the answer, refer to the lecture recording or see solved problem 1.32 in {ci
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(ex4.2)=
 4.2 Consider the capacitor shown in {numref}`fig:cap_circuit`. Let the input $x(t) = i(t)$ and the output $y(t) = v_c(t)$.
 
 (a) Find the input-output relationship.
@@ -384,12 +385,13 @@ For the answer, refer to the lecture recording or see solved problem 1.32 in {ci
 A capacitor citcuit.
 :::
 
-
 +++ {"slideshow": {"slide_type": "notes"}}
 
 For the answer, refer to the lecture recording or see solved problem 1.33 in {cite}schaum.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex4.3)=
 
 4.3 Consider the system shown in {numref}`fig:4_3`. Determine whether it is (a) memoryless, (b) causal, (c) linear, (d) time invariant, or (e) stable.
 
@@ -399,12 +401,13 @@ For the answer, refer to the lecture recording or see solved problem 1.33 in {ci
 A system
 :::
 
-
 +++ {"slideshow": {"slide_type": "notes"}}
 
 For the answer, refer to the lecture recording or see solved problem 1.34 in {cite}schaum.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex4.4)=
 
 4.4 A system has the input-output relationshio given by
 
@@ -418,6 +421,8 @@ For the answer, refer to the lecture recording or see solved problem 1.35 in {ci
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(ex4.5)=
+
 4.5 Consider the system whose input-output relationship is given by the linear equation 
 
 $$y = ax + b$$
@@ -429,6 +434,8 @@ where $x$ and $y$ are the inout and output respectively and $s$ and $b$ are cons
 For the answer, refer to the lecture recording or see solved problem 1.40 in {cite}schaum.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex4.6)=
 
 4.6 
 
@@ -443,6 +450,8 @@ For the answer, refer to the lecture recording or see solved problem 1.40 in {ci
 For the answer, refer to the lecture recording or see solved problem 1.43 in {cite}schaum.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex4.7)=
 
 4.7 Let $\mathbf{T}$ represent a continuous-time LTI system. Then show that
 
