@@ -351,7 +351,7 @@ $$\mathrm{PAPR}_x = \frac{\left|x\right|_\mathrm{peak}^2}{P}$$
 (ex2.1)=
 ### Sum of two periodic signals
 
-2.1). Let $x_1(t)$ and $x_2(t)$ be periodic signals with fundamental periods $T_1$ and $T_2$ respectively. Under hich conditions is the sum $x(t) = x_1(t) + x_2(t)$ periodic, and what is the fundamental period of $x(t)$ if it is periodic?
+2.1). Let $x_1(t)$ and $x_2(t)$ be periodic signals with fundamental periods $T_1$ and $T_2$ respectively. Under which conditions is the sum $x(t) = x_1(t) + x_2(t)$ periodic, and what is the fundamental period of $x(t)$ if it is periodic?
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
