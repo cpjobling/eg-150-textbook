@@ -35,7 +35,7 @@ We will discuss specifying the input-output relationsships for discrete-time sys
 * {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
-* {ref}`Systems Described by Differential Equations`
+* {ref}`Systems_Described_by_Differential_Equations`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -203,7 +203,7 @@ In particular we have looked at
 * {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
-* {ref}`Systems Described by Differential Equations`
+* {ref}`Systems_Described_by_Differential_Equations`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
