@@ -146,7 +146,7 @@ An example of a system with memory is a capacitor $C$ with and the current as th
 ::{figure-md}  fig:capacitor
 <img src="pictures/capacitor.png" alt="A capacitor is an example of a system with memory" width="50%">
 
-A system with memory: a capicitor
+A system with memory: a capacitor
 :::
 
 Then:
