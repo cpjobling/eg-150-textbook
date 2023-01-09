@@ -597,6 +597,11 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples-4">
+   Examples 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
    Summary
   </a>
@@ -661,6 +666,11 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples-4">
+   Examples 4
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
@@ -770,15 +780,15 @@ $$y(t) = \frac{1}{C}\int_{-\infty}^{t}x(\tau)\,d\tau$$
 (causal_and_non-causal_systems)=
 ## Causal and Non-Causal Systems
 
-A system is called *causal* if its output at the present time depends only on the present and/or past values of the input. 
+A system is called *causal* if its output at the present time depends only on the present and/or past values of the input.
 
 +++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}
 
-Thus, in a causal system, it is not possible to obtain an output before and input is applied to the system. 
+Thus, in a causal system, it is not possible to obtain an output before and input is applied to the system.
 
 +++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}
 
-A system is called *noncausal* (or *anticipative*) if its output at the present time depends on future values of the input. 
+A system is called *noncausal* (or *anticipative*) if its output at the present time depends on future values of the input.
 
 +++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}
 
@@ -801,7 +811,7 @@ If an operator $\mathbf{T}$ satisfies the following two conditions, then $\mathb
 
 ### 1. Additivity
 
-Given that $\mathbf{T}x_1 = y_1$ and  $\mathbf{T}x_2 = y_2$, 
+Given that $\mathbf{T}x_1 = y_1$ and  $\mathbf{T}x_2 = y_2$,
 
 +++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}
 
@@ -926,7 +936,7 @@ For example, consider the system where output
 
 $$y(t) = t x(t)$$
 
-and input $x(t)$ is the unit step $u_0(t)$ 
+and input $x(t)$ is the unit step $u_0(t)$
 
 +++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}
 
@@ -953,6 +963,57 @@ A feedback system with negative feedback: $e(t) = x(t) - y(t)$.
 </div>
 <p>You will see some examples of systems with feedback when you study op-amp circuits in <strong>EG-152 Practical Electronics</strong>, the simple closed-loop systems to be studied in <strong>EG-142 Instrumentation and Control</strong>.  Feedback is also the basis of control theory to be studied next year in <strong>EG-243 Control Systems</strong>.</p>
 </section>
+</section>
+<section id="examples-4">
+<span id="worked-examples-4"></span><h2>Examples 4<a class="headerlink" href="#examples-4" title="Permalink to this headline">#</a></h2>
+<p id="ex4-1">4.1 Consider the RC circuit shown in <a class="reference internal" href="#fig-rc-circuit"><span class="std std-numref">Fig. 16</span></a>. Find the relationship between the input <span class="math notranslate nohighlight">\(x(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t)\)</span></p>
+<p>(a) If <span class="math notranslate nohighlight">\(x(t) = v_s(t)\)</span> and <span class="math notranslate nohighlight">\(y(t) = v_c(t)\)</span>.</p>
+<p>(b) If <span class="math notranslate nohighlight">\(x(t) = v_s(t)\)</span> and <span class="math notranslate nohighlight">\(y(t) = i(t)\)</span>.</p>
+<figure class="align-default" id="fig-rc-circuit">
+<a class="reference internal image-reference" href="../../_images/RC_circuit.png"><img alt="RC circuit" src="../../_images/RC_circuit.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">RC circuit</span><a class="headerlink" href="#fig-rc-circuit" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For the answer, refer to the lecture recording or see solved problem 1.32 in {cite}schaum.</p>
+<p>4.2 Consider the capacitor shown in <a class="reference internal" href="#fig-cap-circuit"><span class="std std-numref">Fig. 17</span></a>. Let the input <span class="math notranslate nohighlight">\(x(t) = i(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t) = v_c(t)\)</span>.</p>
+<p>(a) Find the input-output relationship.</p>
+<p>(b) Determine whether the system is (i) memoryless, (ii) causal, (iii) linear, (iv) time invariant, or (v) stable.</p>
+<figure class="align-default" id="fig-cap-circuit">
+<a class="reference internal image-reference" href="../../_images/cap_circuit.png"><img alt="A capacitor citcuit." src="../../_images/cap_circuit.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">A capacitor citcuit.</span><a class="headerlink" href="#fig-cap-circuit" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For the answer, refer to the lecture recording or see solved problem 1.33 in {cite}schaum.</p>
+<p>4.3 Consider the system shown in <a class="reference internal" href="#fig-4-3"><span class="std std-numref">Fig. 18</span></a>. Determine whether it is (a) memoryless, (b) causal, (c) linear, (d) time invariant, or (e) stable.</p>
+<figure class="align-default" id="fig-4-3">
+<a class="reference internal image-reference" href="../../_images/fig4_3.png"><img alt="A system" src="../../_images/fig4_3.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">A system</span><a class="headerlink" href="#fig-4-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For the answer, refer to the lecture recording or see solved problem 1.34 in {cite}schaum.</p>
+<p>4.4 A system has the input-output relationshio given by</p>
+<div class="math notranslate nohighlight">
+\[y = \mathbf{T}\left\{x\right\} = x^2\]</div>
+<p>Show that this system is nonlinear.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 1.35 in {cite}schaum.</p>
+<p>4.5 Consider the system whose input-output relationship is given by the linear equation</p>
+<div class="math notranslate nohighlight">
+\[y = ax + b\]</div>
+<p>where <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are the inout and output respectively and <span class="math notranslate nohighlight">\(s\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are constant. Is this system linear?</p>
+<p>For the answer, refer to the lecture recording or see solved problem 1.40 in {cite}schaum.</p>
+<p>4.6</p>
+<p>(a) Show that the causality for a continuous-time linear system is equivalent to the following statement: For any time <span class="math notranslate nohighlight">\(t_0\)</span> and any input <span class="math notranslate nohighlight">\(x(t)\)</span> with <span class="math notranslate nohighlight">\(x(t) = 0\)</span> for <span class="math notranslate nohighlight">\(t \le t_0\)</span>, the output <span class="math notranslate nohighlight">\(y(t)\)</span> is zero for <span class="math notranslate nohighlight">\(t \le t_0\)</span>.</p>
+<p>(b) Find a nonlinear system that is causal but does not satisfy this condition.</p>
+<p>(c) Find a nonlinear system that satisfies this condition but is not causal.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 1.43 in {cite}schaum.</p>
+<p>4.7 Let <span class="math notranslate nohighlight">\(\mathbf{T}\)</span> represent a continuous-time LTI system. Then show that</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{T}\left\{e^{st}\right\}= \lambda e^{st}\]</div>
+<p>where <span class="math notranslate nohighlight">\(s\)</span> is a complex variable and <span class="math notranslate nohighlight">\(\lambda\)</span> is a complex constant.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 1.44 in {cite}schaum.</p>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>

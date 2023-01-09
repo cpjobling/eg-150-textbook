@@ -162,15 +162,15 @@ $$y(t) = \frac{1}{C}\int_{-\infty}^{t}x(\tau)\,d\tau$$
 (causal_and_non-causal_systems)=
 ## Causal and Non-Causal Systems
 
-A system is called *causal* if its output at the present time depends only on the present and/or past values of the input. 
+A system is called *causal* if its output at the present time depends only on the present and/or past values of the input.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Thus, in a causal system, it is not possible to obtain an output before and input is applied to the system. 
+Thus, in a causal system, it is not possible to obtain an output before and input is applied to the system.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-A system is called *noncausal* (or *anticipative*) if its output at the present time depends on future values of the input. 
+A system is called *noncausal* (or *anticipative*) if its output at the present time depends on future values of the input.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -193,7 +193,7 @@ If an operator $\mathbf{T}$ satisfies the following two conditions, then $\mathb
 
 ### 1. Additivity
 
-Given that $\mathbf{T}x_1 = y_1$ and  $\mathbf{T}x_2 = y_2$, 
+Given that $\mathbf{T}x_1 = y_1$ and  $\mathbf{T}x_2 = y_2$,
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -318,7 +318,7 @@ For example, consider the system where output
 
 $$y(t) = t x(t)$$
 
-and input $x(t)$ is the unit step $u_0(t)$ 
+and input $x(t)$ is the unit step $u_0(t)$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -346,6 +346,113 @@ A feedback system with negative feedback: $e(t) = x(t) - y(t)$.
 +++ {"slideshow": {"slide_type": "notes"}}
 
 You will see some examples of systems with feedback when you study op-amp circuits in **EG-152 Practical Electronics**, the simple closed-loop systems to be studied in **EG-142 Instrumentation and Control**.  Feedback is also the basis of control theory to be studied next year in **EG-243 Control Systems**.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(worked_examples_4)=
+## Examples 4
+
+(ex4.1)=
+
+4.1 Consider the RC circuit shown in {numref}`fig:rc_circuit`. Find the relationship between the input $x(t)$ and the output $y(t)$
+
+(a) If $x(t) = v_s(t)$ and $y(t) = v_c(t)$.
+
+(b) If $x(t) = v_s(t)$ and $y(t) = i(t)$.
+
+:::{figure-md} fig:rc_circuit
+<img src="pictures/RC_circuit.png" alt="RC circuit" width="60%">
+
+RC circuit
+:::
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 1.32 in {cite}schaum.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+4.2 Consider the capacitor shown in {numref}`fig:cap_circuit`. Let the input $x(t) = i(t)$ and the output $y(t) = v_c(t)$.
+
+(a) Find the input-output relationship.
+
+(b) Determine whether the system is (i) memoryless, (ii) causal, (iii) linear, (iv) time invariant, or (v) stable.
+
+:::{figure-md} fig:cap_circuit
+<img src="pictures/cap_circuit.png" alt="A capacitor citcuit." width="60%">
+
+A capacitor citcuit.
+:::
+
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 1.33 in {cite}schaum.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+4.3 Consider the system shown in {numref}`fig:4_3`. Determine whether it is (a) memoryless, (b) causal, (c) linear, (d) time invariant, or (e) stable.
+
+:::{figure-md} fig:4_3
+<img src="pictures/fig4_3.png" alt="A system" width="60%">
+
+A system
+:::
+
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 1.34 in {cite}schaum.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+4.4 A system has the input-output relationshio given by
+
+$$y = \mathbf{T}\left\{x\right\} = x^2$$
+
+Show that this system is nonlinear.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 1.35 in {cite}schaum.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+4.5 Consider the system whose input-output relationship is given by the linear equation 
+
+$$y = ax + b$$
+
+where $x$ and $y$ are the inout and output respectively and $s$ and $b$ are constant. Is this system linear?
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 1.40 in {cite}schaum.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+4.6 
+
+(a) Show that the causality for a continuous-time linear system is equivalent to the following statement: For any time $t_0$ and any input $x(t)$ with $x(t) = 0$ for $t \le t_0$, the output $y(t)$ is zero for $t \le t_0$.
+
+(b) Find a nonlinear system that is causal but does not satisfy this condition.
+
+(c) Find a nonlinear system that satisfies this condition but is not causal.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 1.43 in {cite}schaum.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+4.7 Let $\mathbf{T}$ represent a continuous-time LTI system. Then show that
+
+$$\mathbf{T}\left\{e^{st}\right\}= \lambda e^{st}$$
+
+where $s$ is a complex variable and $\lambda$ is a complex constant.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 1.44 in {cite}schaum.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
