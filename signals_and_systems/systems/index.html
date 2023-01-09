@@ -378,7 +378,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/signals_and_systems/systems/index.ipynb"
+        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/signals_and_systems/systems/index.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -892,7 +892,7 @@ title="Print to PDF"
 <section id="subjects-to-be-covered">
 <h2>Subjects to be covered<a class="headerlink" href="#subjects-to-be-covered" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p><span class="xref std std-ref">system_representation</span></p></li>
+<li><p><a class="reference internal" href="#system-representation"><span class="std std-ref">System Representation</span></a></p></li>
 <li><p><a class="reference internal" href="#deterministic-and-stochastic-systems"><span class="std std-ref">Deterministic and Stochastic Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#continuous-time-and-discrete-time-systems"><span class="std std-ref">Continuous-Time and Discrete-Time Systems</span></a></p></li>
 <li><p><span class="xref std std-ref">systems_with_memory_and_without_memory</span></p></li>
@@ -905,7 +905,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="system-representation">
-<span id="system-representartion"></span><h2>System Representation<a class="headerlink" href="#system-representation" title="Permalink to this headline">#</a></h2>
+<span id="id2"></span><h2>System Representation<a class="headerlink" href="#system-representation" title="Permalink to this headline">#</a></h2>
 <p>A <em>system</em> is a mathematical model of a physical process that relates</p>
 <p>the <em>input</em> (or <em>excitation</em>) signal to the <em>output</em> (or <em>response</em>) signal.</p>
 <p>Let <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> be the input and output signals, respectively, of a system. Then the system is viewed as a <em>transformation</em> (or <em>mapping</em>) of <span class="math notranslate nohighlight">\(x\)</span> into <span class="math notranslate nohighlight">\(y\)</span>. The transformation is represented by the mathematical notation</p>
@@ -922,12 +922,12 @@ title="Print to PDF"
 </figure>
 </section>
 <section id="deterministic-and-stochastic-systems">
-<span id="id2"></span><h2>Deterministic and Stochastic Systems<a class="headerlink" href="#deterministic-and-stochastic-systems" title="Permalink to this headline">#</a></h2>
+<span id="id3"></span><h2>Deterministic and Stochastic Systems<a class="headerlink" href="#deterministic-and-stochastic-systems" title="Permalink to this headline">#</a></h2>
 <p>If the input and output signals <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are deterministic signals, then the system is called a deterministic system.</p>
 <p>If the input and output signals <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are random signals, then the system is called a <em>stochastic</em> system.</p>
 </section>
 <section id="continuous-time-and-discrete-time-systems">
-<span id="id3"></span><h2>Continuous-Time and Discrete-Time Systems<a class="headerlink" href="#continuous-time-and-discrete-time-systems" title="Permalink to this headline">#</a></h2>
+<span id="id4"></span><h2>Continuous-Time and Discrete-Time Systems<a class="headerlink" href="#continuous-time-and-discrete-time-systems" title="Permalink to this headline">#</a></h2>
 <p>If the input and output signals  𝑥  and  𝑦  are continuous-time signals, then the system is called a <em>continuous-time system</em> (<a class="reference internal" href="#fig-ct-n-dt-system"><span class="std std-numref">Fig. 14</span></a>(a)).</p>
 <p>If the input and output signals  𝑥  and  𝑦  are discrete-time signals or sequences, then the system is called a <em>discrete-time system</em> (<a class="reference internal" href="#fig-ct-n-dt-system"><span class="std std-numref">Fig. 14</span></a>(b)).</p>
 <figure class="align-default" id="fig-ct-n-dt-system">
@@ -971,7 +971,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="causal-and-non-causal-systems">
-<span id="id4"></span><h2>Causal and Non-Causal Systems<a class="headerlink" href="#causal-and-non-causal-systems" title="Permalink to this headline">#</a></h2>
+<span id="id5"></span><h2>Causal and Non-Causal Systems<a class="headerlink" href="#causal-and-non-causal-systems" title="Permalink to this headline">#</a></h2>
 <p>A system is called <em>causal</em> if its output at the present time depends only on the present and/or past values of the input.</p>
 <p>Thus, in a causal system, it is not possible to obtain an output before an input is applied to the system.</p>
 <p>A system is called <em>noncausal</em> (or <em>anticipative</em>) if its output at the present time depends on future values of the input.</p>
@@ -981,7 +981,7 @@ title="Print to PDF"
 <p>Note that all memoryless systems are causal but not all <em>vice versa</em>.</p>
 </section>
 <section id="linear-systems-and-nonlinear-systems">
-<span id="id5"></span><h2>Linear Systems and Nonlinear Systems<a class="headerlink" href="#linear-systems-and-nonlinear-systems" title="Permalink to this headline">#</a></h2>
+<span id="id6"></span><h2>Linear Systems and Nonlinear Systems<a class="headerlink" href="#linear-systems-and-nonlinear-systems" title="Permalink to this headline">#</a></h2>
 <p>If an operator <span class="math notranslate nohighlight">\(\mathbf{T}\)</span> satisfies the following two conditions, then <span class="math notranslate nohighlight">\(\mathbf{T}\)</span> is called a <em>linear operator</em> and the system represented by the linear operator <span class="math notranslate nohighlight">\(\mathbf{T}\)</span> is called a <em>linear system</em>:</p>
 <section id="properties-of-linear-systems">
 <h3>Properties of Linear Systems<a class="headerlink" href="#properties-of-linear-systems" title="Permalink to this headline">#</a></h3>
@@ -1029,7 +1029,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="time-invariant-and-time-varying-systems">
-<span id="id6"></span><h2>Time-Invariant and Time-Varying Systems<a class="headerlink" href="#time-invariant-and-time-varying-systems" title="Permalink to this headline">#</a></h2>
+<span id="id7"></span><h2>Time-Invariant and Time-Varying Systems<a class="headerlink" href="#time-invariant-and-time-varying-systems" title="Permalink to this headline">#</a></h2>
 <p>A system is called <em>time-invariant</em> if a time-shift (delay or advance) in the input signal causes the same time-shift in the output signal.</p>
 <p>Thus for a continuous-time system, the system is time-invariant if</p>
 <div class="math notranslate nohighlight">
@@ -1045,12 +1045,12 @@ title="Print to PDF"
 </section>
 </section>
 <section id="linear-time-invariant-systems">
-<span id="id7"></span><h2>Linear Time-Invariant Systems<a class="headerlink" href="#linear-time-invariant-systems" title="Permalink to this headline">#</a></h2>
+<span id="id8"></span><h2>Linear Time-Invariant Systems<a class="headerlink" href="#linear-time-invariant-systems" title="Permalink to this headline">#</a></h2>
 <p>If a system is linear and also time-invariant it is called a <em>linear time-invariant</em> (LTI) system.</p>
 <p>All ths systems analysied in in the rest of the module and in <strong>EG-247 Digital Signal Processing</strong> and <strong>EG-243 Control Systems</strong> next year will be LTI systems.</p>
 </section>
 <section id="stable-systems">
-<span id="id8"></span><h2>Stable Systems<a class="headerlink" href="#stable-systems" title="Permalink to this headline">#</a></h2>
+<span id="id9"></span><h2>Stable Systems<a class="headerlink" href="#stable-systems" title="Permalink to this headline">#</a></h2>
 <p>A system is <em>bounded-input/bounded-output</em> (BIBO) <em>stable</em> is for any bounded input signal <span class="math notranslate nohighlight">\(x\)</span> defined by</p>
 <div class="math notranslate nohighlight">
 \[|x|\le k_1\]</div>
@@ -1069,7 +1069,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="feedback-systems">
-<span id="id9"></span><h2>Feedback Systems<a class="headerlink" href="#feedback-systems" title="Permalink to this headline">#</a></h2>
+<span id="id10"></span><h2>Feedback Systems<a class="headerlink" href="#feedback-systems" title="Permalink to this headline">#</a></h2>
 <p>A special class of systems of great importance consists of systems having <em>feedback</em>.</p>
 <p>In a <em>feedback system</em>, the output signal is fed back and added to the input as shown in <a class="reference internal" href="#fig-feedback"><span class="std std-numref">Fig. 17</span></a>.</p>
 <figure class="align-default" id="fig-feedback">
@@ -1136,7 +1136,7 @@ title="Print to PDF"
 <p>In this lecture we have started our look at systems and the classification of systems.</p>
 <p>In particular we have looked at</p>
 <ul class="simple">
-<li><p><span class="xref std std-ref">system_representation</span></p></li>
+<li><p><a class="reference internal" href="#system-representation"><span class="std std-ref">System Representation</span></a></p></li>
 <li><p><a class="reference internal" href="#deterministic-and-stochastic-systems"><span class="std std-ref">Deterministic and Stochastic Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#continuous-time-and-discrete-time-systems"><span class="std std-ref">Continuous-Time and Discrete-Time Systems</span></a></p></li>
 <li><p><span class="xref std std-ref">systems_with_memory_and_without_memory</span></p></li>
