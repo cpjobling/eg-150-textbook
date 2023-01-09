@@ -35,6 +35,7 @@ This section is based on Section 1.5 of {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(system_representation)=
 ## System Representation
 
 A *system* is a mathematical model of a physical process that relates
