@@ -50,13 +50,6 @@ The *impulse response* $h(t)$ of a continuous-time LTI system (represented by $\
 h(t) = \mathbf{T}\left\{\delta(t)\right\}
 ```
 
-\begin{equation}
-h(t) = \mathbf{T}\left\{\delta(t)\right\}
-\label{eq:vector_ray} 
-\end{equation}
-
-This is a reference to Eq $\eqref{eq:vector_ray}$
-
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (Properties of Continuous-Time LTI Systems)=
