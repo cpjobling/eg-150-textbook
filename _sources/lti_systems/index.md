@@ -41,6 +41,15 @@ We will discuss specifying the input-output relationsships for discrete-time sys
 (Response of a Continuous-Time LTI System and the Convolution Integral)=
 ## Response of a Continuous-Time LTI System and the Convolution Integral
 
+### A. Impulse response
+
+The *impulse response* $h(t)$ of a continuous-time LTI system (represented by $\mathbf{T}$) is defined as the response of the system when the input is $\delta(t)$, that is,
+
+```{math}
+:label: eq:impulse-response
+h(t) = \mathbf{T}\left\{\delta(t)\right\}
+```
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (Properties of Continuous-Time LTI Systems)=
