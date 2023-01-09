@@ -137,17 +137,25 @@ Continuous-time LTI system
 (props_of_con_integral)=
 ### D. Properties of the Convolution Integral
 
-+++ {"slideshow": {"slide_type": "subslide"}}
+The convolution integral has the following properties.
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 #### 1. Commutative:
 
-+++ {"slideshow": {"slide_type": "subslide"}}
+$$x(t) * h(t) = h(t) * x(t)$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 #### 2. Associative:
 
-+++ {"slideshow": {"slide_type": "subslide"}}
+$$\left\{x(t) * h_1(t)\right\} * h_2(t) = x(t) * \left\{h_1(t) * h_2(t)\right\}$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 #### 3. Distributive:
+
+$$x(t)*\left\{h_1(t) + h_2(t)\right\} = x(t)*h_1(t) + x(t)*h_2(t)$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
