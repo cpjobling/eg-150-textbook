@@ -56,7 +56,7 @@ $$h(t) = \mathbf{T}\left\{\delta(t)\right\}$$
 (abitrary_signal_response)=
 ### B. Response to an Arbitrary Input
 
-From the {ref}`sifting_property)` 
+From the {ref}`sifting_property` 
 
 $$\int_{-\infty}^{\infty}f(t)\delta(t-\alpha)dt=f(\alpha)$$
 
@@ -99,7 +99,9 @@ This equation indicates that a continuous-time LTI system is completely characte
 
 The equation
 
-$$y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$ defines the *convolution* of two continuous-time signals $x(t)$ and $h(t)$ denoted by
+$$y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$ 
+
+defines the *convolution* of two continuous-time signals $x(t)$ and $h(t)$ denoted by
 
 $$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$
 
