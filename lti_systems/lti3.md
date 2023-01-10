@@ -17,22 +17,14 @@ kernelspec:
 (Systems_Described_by_Differential_Equations)=
 # Systems Described by Differential Equations
 
+This section is based on Section 2.5 of {cite}`schaum` 
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## Subjects to be covered
 
 * {ref}`Systems_Described_by_Differential_Equations`
 * {ref}`examples_7`
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-(Properties_of_Continuous_Time_LTI_Systems)=
-## Properties of Continuous-Time LTI Systems
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-(eigenfunctions_of_continuous_time_LTI_systems)=
-## Eigenfunctions of Continuous-Time LTI Systems
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

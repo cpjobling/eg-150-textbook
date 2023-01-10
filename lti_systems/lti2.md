@@ -17,7 +17,7 @@ kernelspec:
 (lti_systems)=
 # Properties and Eigenfunctions of Continuous-Time LTI Systems
 
-Based on Chapter 2 of {cite}`schaum` 
+This section is based on Sections 2.3 and 2.4 of {cite}`schaum` 
 
 
 ## Introduction

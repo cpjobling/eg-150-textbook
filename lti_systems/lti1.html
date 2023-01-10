@@ -582,6 +582,11 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subjects-to-be-covered">
+   Subjects to be Covered
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-impulse-response">
    A. Impulse Response
   </a>
@@ -697,6 +702,11 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subjects-to-be-covered">
+   Subjects to be Covered
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-impulse-response">
    A. Impulse Response
   </a>
@@ -804,6 +814,19 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="response-of-a-continuous-time-lti-system-and-the-convolution-integral">
 <span id="id1"></span><h1>Response of a Continuous-Time LTI System and the Convolution Integral<a class="headerlink" href="#response-of-a-continuous-time-lti-system-and-the-convolution-integral" title="Permalink to this headline">#</a></h1>
+<p>This section is based on Section 2.1 of <span id="id2">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<section id="subjects-to-be-covered">
+<h2>Subjects to be Covered<a class="headerlink" href="#subjects-to-be-covered" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#impulse-reponse"><span class="std std-ref">A. Impulse Response</span></a></p></li>
+<li><p><a class="reference internal" href="#abitrary-signal-response"><span class="std std-ref">B. Response to an Arbitrary Input</span></a></p></li>
+<li><p><a class="reference internal" href="#convolution-integral"><span class="std std-ref">C. Convolution Integral</span></a></p></li>
+<li><p><a class="reference internal" href="#props-of-con-integral"><span class="std std-ref">D. Properties of the Convolution Integral</span></a></p></li>
+<li><p><a class="reference internal" href="#convolution-operation"><span class="std std-ref">E. Convolution Integral Operation</span></a></p></li>
+<li><p><span class="xref std std-ref">step_response</span></p></li>
+<li><p><a class="reference internal" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution"><span class="std std-ref">Examples 5: Responses of a Continuous-Time LTI System and Convolution</span></a></p></li>
+</ul>
+</section>
 <section id="a-impulse-response">
 <span id="impulse-reponse"></span><h2>A. Impulse Response<a class="headerlink" href="#a-impulse-response" title="Permalink to this headline">#</a></h2>
 <p>The <em>impulse response</em> <span class="math notranslate nohighlight">\(h(t)\)</span> of a continuous-time LTI system (represented by <span class="math notranslate nohighlight">\(\mathbf{T}\)</span>) is defined as the response of the system when the input is <span class="math notranslate nohighlight">\(\delta(t)\)</span>, that is,</p>
@@ -873,7 +896,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="e-convolution-integral-operation">
-<h2>E. Convolution Integral Operation<a class="headerlink" href="#e-convolution-integral-operation" title="Permalink to this headline">#</a></h2>
+<span id="convolution-operation"></span><h2>E. Convolution Integral Operation<a class="headerlink" href="#e-convolution-integral-operation" title="Permalink to this headline">#</a></h2>
 <p>Applying the communitative propery of convolution to the convolution integral, we obtain</p>
 <div class="math notranslate nohighlight">
 \[y(t) = h(t) * x(t) = \int_{-\infty}^{\infty}h(\tau)x(t-\tau)\,d\tau\]</div>
@@ -893,7 +916,8 @@ slideshow:
   slide_type: fragment
 ---
 convolutiondemo % ignore warnings
-```\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\### Summary of Steps\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\1. The inpulse response $h(\tau)$ is time reversed (that is, reflected about the origin) to obtain $h(-\tau)$ and then shifted by $\tau$ to form $h(t-\tau) = h\left[-(\tau - t)\right]$, which is a function of $\tau$ with parameter $t$.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\2. The signal $x(\tau)$ and $h(t-\tau)$ are multiplied together for all values of $\tau$ with $t$ fixed at some value.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\3. The product $x(\tau)h(t-\tau)$ is integrated over all $\tau$ to produce a single output value $y(t)$.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\4. Steps 1 ro 3 are repeated as $t$ varies over $-\infty$ to $\infty$ to produce the entire output $y(t)$.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;notes&quot;}}\\Examples of the above convolution integral operation are given in Examples 4.1 to 4.3.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\## F. Step Response\\The *step response* $s(t)$ of a continuous-time LTI system (represented $\mathbf{T}$) is defined by the response of the system when the input is $u_0(t)$; that is,\\$$s(t) = \mathbf{T}\left\{u_0(t)\right\}\end{aligned}\end{align} \]</div>
+```\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\### Summary of Steps\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\1. The inpulse response $h(\tau)$ is time reversed (that is, reflected about the origin) to obtain $h(-\tau)$ and then shifted by $\tau$ to form $h(t-\tau) = h\left[-(\tau - t)\right]$, which is a function of $\tau$ with parameter $t$.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\2. The signal $x(\tau)$ and $h(t-\tau)$ are multiplied together for all values of $\tau$ with $t$ fixed at some value.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\3. The product $x(\tau)h(t-\tau)$ is integrated over all $\tau$ to produce a single output value $y(t)$.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\4. Steps 1 ro 3 are repeated as $t$ varies over $-\infty$ to $\infty$ to produce the entire output $y(t)$.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;notes&quot;}}\\Examples of the above convolution integral operation are given in Examples 4.1 to 4.3.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\(step_response)=
+## F. Step Response\\The *step response* $s(t)$ of a continuous-time LTI system (represented $\mathbf{T}$) is defined by the response of the system when the input is $u_0(t)$; that is,\\$$s(t) = \mathbf{T}\left\{u_0(t)\right\}\end{aligned}\end{align} \]</div>
 <p>In many applications, the step response <span class="math notranslate nohighlight">\(s(t)\)</span> is also a useful characterisation of the system. The step response can be easily determined using the convolution integral; that is,</p>
 <div class="math notranslate nohighlight">
 \[s(t) = h(t)*u_0(t) = \int_{-\infty}^{\infty} h(\tau)u_0(t-\tau)\,d\tau = \int_{-\infty}^{t} h(\tau)\,d\tau\]</div>
@@ -907,7 +931,7 @@ convolutiondemo % ignore warnings
 </section>
 </section>
 <section id="examples-5-responses-of-a-continuous-time-lti-system-and-convolution">
-<span id="id2"></span><h2>Examples 5: Responses of a Continuous-Time LTI System and Convolution<a class="headerlink" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution" title="Permalink to this headline">#</a></h2>
+<span id="id3"></span><h2>Examples 5: Responses of a Continuous-Time LTI System and Convolution<a class="headerlink" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution" title="Permalink to this headline">#</a></h2>
 <section id="example-5-1">
 <span id="ex5-1"></span><h3>Example 5.1<a class="headerlink" href="#example-5-1" title="Permalink to this headline">#</a></h3>
 <p>Verify the following properties of the convolution integral; that is,</p>
@@ -938,8 +962,7 @@ convolutiondemo % ignore warnings
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
-<p>In this lecture we have started our look at LTI systems.</p>
-<p>In particular we have looked at</p>
+<p>In this lecture we have looked at</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#response-of-a-continuous-time-lti-system-and-the-convolution-integral"><span class="std std-ref">Response of a Continuous-Time LTI System and the Convolution Integral</span></a></p></li>
 </ul>
@@ -947,8 +970,8 @@ convolutiondemo % ignore warnings
 <section id="next-time">
 <h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="lti3.html#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
-<li><p><a class="reference internal" href="lti3.html#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="lti2.html#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="lti2.html#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
 </ul>
 </section>
 </section>

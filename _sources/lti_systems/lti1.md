@@ -17,6 +17,20 @@ kernelspec:
 (Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral)=
 # Response of a Continuous-Time LTI System and the Convolution Integral
 
+This section is based on Section 2.1 of {cite}`schaum`.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+## Subjects to be Covered
+
+* {ref}`impulse_reponse`
+* {ref}`abitrary_signal_response`
+* {ref}`convolution_integral`
+* {ref}`props_of_con_integral`
+* {ref}`convolution_operation`
+* {ref}`step_response`
+* {ref}`examples_5_Responses_of_a_Continuous_Time_LTI_System_and_Convolution`
+
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 (impulse_reponse)=
@@ -135,6 +149,7 @@ $$x(t)*\left\{h_1(t) + h_2(t)\right\} = x(t)*h_1(t) + x(t)*h_2(t)$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(convolution_operation)=
 ## E. Convolution Integral Operation
 
 Applying the communitative propery of convolution to the convolution integral, we obtain
@@ -199,6 +214,7 @@ Examples of the above convolution integral operation are given in Examples 4.1 t
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(step_response)=
 ## F. Step Response
 
 The *step response* $s(t)$ of a continuous-time LTI system (represented $\mathbf{T}$) is defined by the response of the system when the input is $u_0(t)$; that is,
@@ -231,7 +247,7 @@ Thus the impulse response $h(t)$ can be determined by differentiating the step r
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(examples_5_Responses_of_a_Continuous-Time_LTI_System_and_Convolution)=
+(examples_5_Responses_of_a_Continuous_Time_LTI_System_and_Convolution)=
 ## Examples 5: Responses of a Continuous-Time LTI System and Convolution
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -298,9 +314,7 @@ For the answer, refer to the lecture recording or see solved problem 2.6 in {cit
 
 ## Summary
 
-In this lecture we have started our look at LTI systems.
-
-In particular we have looked at
+In this lecture we have looked at
 
 * {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
 
