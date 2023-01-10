@@ -629,6 +629,23 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graphical-evaluation-of-the-convolution-integral">
+     Graphical Evaluation of the Convolution Integral
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary-of-steps">
+     Summary of Steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#f-step-response">
+   F. Step Response
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#impulse-response-from-step-response">
      Impulse response from step response
     </a>
@@ -790,6 +807,23 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graphical-evaluation-of-the-convolution-integral">
+     Graphical Evaluation of the Convolution Integral
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary-of-steps">
+     Summary of Steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#f-step-response">
+   F. Step Response
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#impulse-response-from-step-response">
      Impulse response from step response
     </a>
@@ -905,7 +939,7 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="#convolution-integral"><span class="std std-ref">C. Convolution Integral</span></a></p></li>
 <li><p><a class="reference internal" href="#props-of-con-integral"><span class="std std-ref">D. Properties of the Convolution Integral</span></a></p></li>
 <li><p><a class="reference internal" href="#convolution-operation"><span class="std std-ref">E. Convolution Integral Operation</span></a></p></li>
-<li><p><span class="xref std std-ref">step_response</span></p></li>
+<li><p><a class="reference internal" href="#step-response"><span class="std std-ref">F. Step Response</span></a></p></li>
 <li><p><a class="reference internal" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution"><span class="std std-ref">Examples 5: Responses of a Continuous-Time LTI System and Convolution</span></a></p></li>
 </ul>
 </section>
@@ -984,22 +1018,123 @@ title="Print to PDF"
 \[y(t) = h(t) * x(t) = \int_{-\infty}^{\infty}h(\tau)x(t-\tau)\,d\tau\]</div>
 <p>which may at times be easier to evaluate than</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\### Graphical Evaluation of the Convolution Integral\\The convolution integral is most conveniently evaluated by a graphical evaluation. We give three examples (5.4&amp;mdash;5.6) which we will demonstrate in class using a [graphical visualization tool](https://uk.mathworks.com/matlabcentral/fileexchange/25199-graphical-demonstration-of-convolution) developed by Teja Muppirala of the Mathworks.\\The tool: [convolutiondemo.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/convolution_demo/convolutiondemo.m) (see [license.txt](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/convolution_demo/license.txt)).\\We will then work through the examples again in the examples class.\\```{code-cell}
----
-slideshow:
-  slide_type: fragment
----
-clear all
-cd matlab/convolutiondemo
-pwd
-```\\```{code-cell}
----
-slideshow:
-  slide_type: fragment
----
-convolutiondemo % ignore warnings
-```\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\### Summary of Steps\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\1. The inpulse response $h(\tau)$ is time reversed (that is, reflected about the origin) to obtain $h(-\tau)$ and then shifted by $\tau$ to form $h(t-\tau) = h\left[-(\tau - t)\right]$, which is a function of $\tau$ with parameter $t$.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\2. The signal $x(\tau)$ and $h(t-\tau)$ are multiplied together for all values of $\tau$ with $t$ fixed at some value.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\3. The product $x(\tau)h(t-\tau)$ is integrated over all $\tau$ to produce a single output value $y(t)$.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\4. Steps 1 ro 3 are repeated as $t$ varies over $-\infty$ to $\infty$ to produce the entire output $y(t)$.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;notes&quot;}}\\Examples of the above convolution integral operation are given in Examples 4.1 to 4.3.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\(step_response)=
-## F. Step Response\\The *step response* $s(t)$ of a continuous-time LTI system (represented $\mathbf{T}$) is defined by the response of the system when the input is $u_0(t)$; that is,\\$$s(t) = \mathbf{T}\left\{u_0(t)\right\}\end{aligned}\end{align} \]</div>
+\[y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau\]</div>
+<section id="graphical-evaluation-of-the-convolution-integral">
+<h3>Graphical Evaluation of the Convolution Integral<a class="headerlink" href="#graphical-evaluation-of-the-convolution-integral" title="Permalink to this headline">#</a></h3>
+<p>The convolution integral is most conveniently evaluated by a graphical evaluation. We give three examples (5.4—5.6) which we will demonstrate in class using a <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/25199-graphical-demonstration-of-convolution">graphical visualization tool</a> developed by Teja Muppirala of the Mathworks.</p>
+<p>The tool: <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/convolution_demo/convolutiondemo.m">convolutiondemo.m</a> (see <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/convolution_demo/license.txt">license.txt</a>).</p>
+<p>We will then work through the examples again in the examples class.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span><span class="w"></span>
+<span class="nb">cd</span><span class="w"> </span><span class="n">matlab</span><span class="o">/</span><span class="n">convolutiondemo</span><span class="w"></span>
+<span class="nb">pwd</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
+    &#39;/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/lti_systems/matlab/convolutiondemo&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">convolutiondemo</span><span class="w"> </span><span class="s">%</span><span class="w"> </span><span class="s">ignore</span><span class="w"> </span><span class="s">warnings</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 398)
+In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo (line 44)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 449)
+In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo (line 44)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 500)
+In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo (line 44)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 551)
+In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo (line 44)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 621)
+In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo (line 44)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 672)
+In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo (line 44)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 723)
+In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo (line 44)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 774)
+In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo (line 44)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="summary-of-steps">
+<h3>Summary of Steps<a class="headerlink" href="#summary-of-steps" title="Permalink to this headline">#</a></h3>
+<ol class="simple">
+<li><p>The inpulse response <span class="math notranslate nohighlight">\(h(\tau)\)</span> is time reversed (that is, reflected about the origin) to obtain <span class="math notranslate nohighlight">\(h(-\tau)\)</span> and then shifted by <span class="math notranslate nohighlight">\(\tau\)</span> to form <span class="math notranslate nohighlight">\(h(t-\tau) = h\left[-(\tau - t)\right]\)</span>, which is a function of <span class="math notranslate nohighlight">\(\tau\)</span> with parameter <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+</ol>
+<ol class="simple">
+<li><p>The signal <span class="math notranslate nohighlight">\(x(\tau)\)</span> and <span class="math notranslate nohighlight">\(h(t-\tau)\)</span> are multiplied together for all values of <span class="math notranslate nohighlight">\(\tau\)</span> with <span class="math notranslate nohighlight">\(t\)</span> fixed at some value.</p></li>
+</ol>
+<ol class="simple">
+<li><p>The product <span class="math notranslate nohighlight">\(x(\tau)h(t-\tau)\)</span> is integrated over all <span class="math notranslate nohighlight">\(\tau\)</span> to produce a single output value <span class="math notranslate nohighlight">\(y(t)\)</span>.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Steps 1 ro 3 are repeated as <span class="math notranslate nohighlight">\(t\)</span> varies over <span class="math notranslate nohighlight">\(-\infty\)</span> to <span class="math notranslate nohighlight">\(\infty\)</span> to produce the entire output <span class="math notranslate nohighlight">\(y(t)\)</span>.</p></li>
+</ol>
+<p>Examples of the above convolution integral operation are given in Examples 4.1 to 4.3.</p>
+</section>
+</section>
+<section id="f-step-response">
+<span id="step-response"></span><h2>F. Step Response<a class="headerlink" href="#f-step-response" title="Permalink to this headline">#</a></h2>
+<p>The <em>step response</em> <span class="math notranslate nohighlight">\(s(t)\)</span> of a continuous-time LTI system (represented <span class="math notranslate nohighlight">\(\mathbf{T}\)</span>) is defined by the response of the system when the input is <span class="math notranslate nohighlight">\(u_0(t)\)</span>; that is,</p>
+<div class="math notranslate nohighlight">
+\[s(t) = \mathbf{T}\left\{u_0(t)\right\}\]</div>
 <p>In many applications, the step response <span class="math notranslate nohighlight">\(s(t)\)</span> is also a useful characterisation of the system. The step response can be easily determined using the convolution integral; that is,</p>
 <div class="math notranslate nohighlight">
 \[s(t) = h(t)*u_0(t) = \int_{-\infty}^{\infty} h(\tau)u_0(t-\tau)\,d\tau = \int_{-\infty}^{t} h(\tau)\,d\tau\]</div>
@@ -1079,7 +1214,7 @@ convolutiondemo % ignore warnings
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_39_0.png" src="../_images/lti1_39_0.png" />
+<img alt="../_images/lti1_49_0.png" src="../_images/lti1_49_0.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the MATLAB function <code class="docutils literal notranslate"><span class="pre">int</span></code> to compute the convolution integral symbolically.</p>
@@ -1113,7 +1248,7 @@ convolutiondemo % ignore warnings
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
 </pre></div>
 </div>
-<img alt="../_images/lti1_43_2.png" src="../_images/lti1_43_2.png" />
+<img alt="../_images/lti1_53_2.png" src="../_images/lti1_53_2.png" />
 </div>
 </div>
 </section>
@@ -1138,7 +1273,7 @@ convolutiondemo % ignore warnings
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_47_0.png" src="../_images/lti1_47_0.png" />
+<img alt="../_images/lti1_57_0.png" src="../_images/lti1_57_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1171,7 +1306,7 @@ convolutiondemo % ignore warnings
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
 </pre></div>
 </div>
-<img alt="../_images/lti1_50_2.png" src="../_images/lti1_50_2.png" />
+<img alt="../_images/lti1_60_2.png" src="../_images/lti1_60_2.png" />
 </div>
 </div>
 </section>
@@ -1206,7 +1341,8 @@ y(t) = int(x(tau)*h(t - tau),tau,-Inf,Inf)
 ---
 slideshow:
   slide_type: fragment
----\\fplot(y(t)),title('y(t) = x(t) * y(t)')
+---
+fplot(y(t)),title('y(t) = x(t) * y(t)')
 ```\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\(ex5_6)=
 ### Example 5.6\\Evaluate $y(t) = x(t) * h(t)$, where $x(t)$ and $h(t)$ are shown in {numref}`fig:ex:5.6`, by an alalytical technique, and (b) by a graphical method.\\:::{figure-md} fig:ex:5.6
 &lt;img src=&quot;pictures/ex5_6.png&quot; alt=&quot;Signal and system for example 5.6&quot; width=&quot;60%&quot;&gt;\\Signal and system for example 5.6
@@ -1226,7 +1362,7 @@ slideshow:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_53_0.png" src="../_images/lti1_53_0.png" />
+<img alt="../_images/lti1_63_0.png" src="../_images/lti1_63_0.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span></p>
@@ -1253,7 +1389,7 @@ slideshow:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_57_0.png" src="../_images/lti1_57_0.png" />
+<img alt="../_images/lti1_67_0.png" src="../_images/lti1_67_0.png" />
 </div>
 </div>
 <p>We can obtain the signal <span class="math notranslate nohighlight">\(y(t)\)</span> analytically by use of the convolution integral as will be shown in the examples class.</p>
@@ -1276,7 +1412,7 @@ slideshow:
 <li><p><a class="reference internal" href="#convolution-integral"><span class="std std-ref">C. Convolution Integral</span></a></p></li>
 <li><p><a class="reference internal" href="#props-of-con-integral"><span class="std std-ref">D. Properties of the Convolution Integral</span></a></p></li>
 <li><p><a class="reference internal" href="#convolution-operation"><span class="std std-ref">E. Convolution Integral Operation</span></a></p></li>
-<li><p><span class="xref std std-ref">step_response</span></p></li>
+<li><p><a class="reference internal" href="#step-response"><span class="std std-ref">F. Step Response</span></a></p></li>
 </ul>
 </section>
 <section id="next-time">

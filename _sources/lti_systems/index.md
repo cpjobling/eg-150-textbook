@@ -22,7 +22,7 @@ This chapter is based on on Chapter 2 of {cite}`schaum`
 
 ## Introduction
 
-Two most important attributes of systems are linearity and time invariance. In this chapter we develop the fundamental input-output relationship for systems having these attributes. It will be shown that the input output-relationship for LTI systems is described in terms of a convolution operation. The importance of the convolution operation in LTI systems stems from the fact that the knowledge of the system response and LTI system to the unit impulse response allows us to find its output to any input signals. Specifying the input-output relationships for LTI systems by differential equations will also be discussed. on Chapter 2 of {cite}`schaum` 
+Two most important attributes of systems are linearity and time invariance. In this chapter we develop the fundamental input-output relationship for systems having these attributes. It will be shown that the input output-relationship for LTI systems is described in terms of a convolution operation. The importance of the convolution operation in LTI systems stems from the fact that the knowledge of the system response and LTI system to the unit impulse response allows us to find its output to any input signals. Specifying the input-output relationships for LTI systems by differential equations will also be discussed. on Chapter 2 of {cite}`schaum`
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -33,7 +33,7 @@ We will discuss specifying the input-output relationsships for discrete-time sys
 ## Contents of this chapter
 
 * {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
-* {ref}`examples_5_Responses_of_a_Continuous-Time_LTI_System_and_Convolution)`
+* {ref}`examples_5_Responses_of_a_Continuous-Time_LTI_System_and_Convolution`
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
 * {ref}`Systems_Described_by_Differential_Equations`

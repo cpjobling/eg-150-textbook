@@ -160,7 +160,7 @@ $$y(t) = h(t) * x(t) = \int_{-\infty}^{\infty}h(\tau)x(t-\tau)\,d\tau$$
 
 which may at times be easier to evaluate than
 
-$$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$.
+$$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -492,7 +492,6 @@ Plot the result for $\alpha = 1$
 slideshow:
   slide_type: fragment
 ---
-
 fplot(y(t)),title('y(t) = x(t) * y(t)')
 ```
 
@@ -560,7 +559,7 @@ slideshow:
 fplot(y(t),[-1,6]),grid,ylim([0,2.1]),ylabel('h(t)'),xlabel('t')
 ```
 
-We can obtain the signal $y(t)$ analytically by use of the convolution integral as will be shown in the examples class. 
+We can obtain the signal $y(t)$ analytically by use of the convolution integral as will be shown in the examples class.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
