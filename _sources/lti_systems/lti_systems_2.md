@@ -15,7 +15,7 @@ kernelspec:
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (lti_systems)=
-# Properties and Eigenfunctions of Continuous-Time LTI System
+# Properties and Eigenfunctions of Continuous-Time LTI Systems
 
 Based on Chapter 2 of {cite}`schaum` 
 
@@ -34,7 +34,7 @@ We will discuss specifying the input-output relationsships for discrete-time sys
 
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
-* {ref}`examples_6)
+* {ref}`examples_6`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -53,7 +53,7 @@ We will discuss specifying the input-output relationsships for discrete-time sys
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-###### (ex6_1)=
+(ex6_1)=
 ### Example 6.1 
 
 Verify the following properties of the convolution integral; that is,
