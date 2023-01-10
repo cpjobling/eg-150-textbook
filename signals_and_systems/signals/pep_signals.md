@@ -349,9 +349,9 @@ $$\mathrm{PAPR}_x = \frac{\left|x\right|_\mathrm{peak}^2}{P}$$
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 (ex2.1)=
-### Sum of two periodic signals
+### Example 2.1: Sum of two periodic signals
 
-2.1). Let $x_1(t)$ and $x_2(t)$ be periodic signals with fundamental periods $T_1$ and $T_2$ respectively. Under which conditions is the sum $x(t) = x_1(t) + x_2(t)$ periodic, and what is the fundamental period of $x(t)$ if it is periodic?
+Let $x_1(t)$ and $x_2(t)$ be periodic signals with fundamental periods $T_1$ and $T_2$ respectively. Under which conditions is the sum $x(t) = x_1(t) + x_2(t)$ periodic, and what is the fundamental period of $x(t)$ if it is periodic?
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -360,7 +360,7 @@ For the answer, refer to the lecture recording or see solved problem 1.14 in {ci
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex2.2)=
-### Periodic signals
+### Example 2.2: Periodic signals
 
 `````{admonition} MATLAB Example
 :class: tip
@@ -369,7 +369,7 @@ We will solve this example by hand and then give the solution in the MATLAB lab.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-2.2). Determine whether or not each of the following signals is periodic. If a signal is periodic, determine its fundamental period.
+Determine whether or not each of the following signals is periodic. If a signal is periodic, determine its fundamental period.
 
 a). $x(t)=\cos\left(t + \frac{\pi}{4}\right)$;
 
@@ -399,7 +399,9 @@ For the answer, refer to the lecture recording or see solved problem 1.16 in {ci
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-2.3). Show that if $x(t + T) = x(t)$, then
+### Example 2.3
+
+Show that if $x(t + T) = x(t)$, then
 
 $$\int_\alpha^\beta x(t)\,dt=\int_{\alpha+T}^{\beta+T} x(t)\,dt$$
 
@@ -413,7 +415,9 @@ For the answer, refer to the lecture recording or see solved problem 1.17 in {ci
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-2.4). Show that if $x(t)$ is periodic with fundamental period $T_0$, the the normalized average power $P$ of $x(t)$ defined by
+### Example 2.4
+
+Show that if $x(t)$ is periodic with fundamental period $T_0$, the the normalized average power $P$ of $x(t)$ defined by
 
 $$P = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}\left|x(t)\right|^2\;dt$$
 
@@ -428,7 +432,7 @@ For the answer, refer to the lecture recording or see solved problem 1.18 in {ci
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex2.5)=
-### Power and energy signals
+### Example 2.5: Power and energy signals
 
 `````{admonition} MATLAB Example
 :class: tip
@@ -437,7 +441,7 @@ We will solve this example by hand and then give the solution in the MATLAB lab.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-2.5). Determine whether the following signals are energy signals, power signals, or neither.
+Determine whether the following signals are energy signals, power signals, or neither.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -457,7 +461,9 @@ Note $u_0(t)$ is the unit step (or Heaviside) function formally introduced in th
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-2.6). Domestic mains power in the UK is delivered as a sinusoidal signal $x(t)=A\cos(\omega_0 t + \theta)$ with frequency of $50Hz$ and RMS value of $240\;\mathrm{V}$. 
+### Example 2.6
+
+Domestic mains power in the UK is delivered as a sinusoidal signal $x(t)=A\cos(\omega_0 t + \theta)$ with frequency of $50\mathrm{Hz}$ and RMS value of $240\mathrm{V}$. 
 
 Calculate the fundamental period $T_0$, fundamental angular frequency $\omega_0$, average power $P$, peak voltage $A = x_\mathrm{peak}$, crest factor (CF) and peak-to-average power ratio (PAPR) of the power signal provided to the home. 
 

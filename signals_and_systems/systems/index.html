@@ -155,17 +155,29 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../lti_systems/index.html">
    Linear Time-Invariant Systems
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lti_systems/lti_systems_2.html">
+     Properties and Eigenfunctions of Continuous-Time LTI System
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../laplace_transform/index.html">
    Laplace Transforms and their Applications
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -211,8 +223,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../fourier_series/index.html">
    Fourier Series
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -277,8 +289,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../setup/index.html">
    Setting up your own version of this book
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -697,6 +709,43 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#examples-4">
    Examples 4
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-1-rc-circuit">
+     Example 4.1: RC Circuit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-2-capacitor-circuit">
+     Example 4.2: Capacitor circuit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-3-signal-modulator">
+     Example 4.3: Signal modulator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-4">
+     Example 4.4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-5">
+     Example 4.5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-6">
+     Example 4.6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-7">
+     Example 4.7
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
@@ -865,6 +914,43 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#examples-4">
    Examples 4
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-1-rc-circuit">
+     Example 4.1: RC Circuit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-2-capacitor-circuit">
+     Example 4.2: Capacitor circuit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-3-signal-modulator">
+     Example 4.3: Signal modulator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-4">
+     Example 4.4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-5">
+     Example 4.5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-6">
+     Example 4.6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-7">
+     Example 4.7
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
@@ -902,6 +988,7 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="#linear-time-invariant-systems"><span class="std std-ref">Linear Time-Invariant Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#stable-systems"><span class="std std-ref">Stable Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#feedback-systems"><span class="std std-ref">Feedback Systems</span></a></p></li>
+<li><p><a class="reference internal" href="#worked-examples-4"><span class="std std-ref">Examples 4</span></a></p></li>
 </ul>
 </section>
 <section id="system-representation">
@@ -1081,7 +1168,9 @@ title="Print to PDF"
 </section>
 <section id="examples-4">
 <span id="worked-examples-4"></span><h2>Examples 4<a class="headerlink" href="#examples-4" title="Permalink to this headline">#</a></h2>
-<p id="ex4-1">4.1 Consider the RC circuit shown in <a class="reference internal" href="#fig-rc-circuit"><span class="std std-numref">Fig. 18</span></a>. Find the relationship between the input <span class="math notranslate nohighlight">\(x(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t)\)</span></p>
+<section id="example-4-1-rc-circuit">
+<span id="ex4-1"></span><h3>Example 4.1: RC Circuit<a class="headerlink" href="#example-4-1-rc-circuit" title="Permalink to this headline">#</a></h3>
+<p>Consider the RC circuit shown in <a class="reference internal" href="#fig-rc-circuit"><span class="std std-numref">Fig. 18</span></a>. Find the relationship between the input <span class="math notranslate nohighlight">\(x(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t)\)</span></p>
 <p>(a) If <span class="math notranslate nohighlight">\(x(t) = v_s(t)\)</span> and <span class="math notranslate nohighlight">\(y(t) = v_c(t)\)</span>.</p>
 <p>(b) If <span class="math notranslate nohighlight">\(x(t) = v_s(t)\)</span> and <span class="math notranslate nohighlight">\(y(t) = i(t)\)</span>.</p>
 <figure class="align-default" id="fig-rc-circuit">
@@ -1091,7 +1180,10 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <p>For the answer, refer to the lecture recording or see solved problem 1.32 in {cite}schaum.</p>
-<p>4.2 Consider the capacitor shown in <a class="reference internal" href="#fig-cap-circuit"><span class="std std-numref">Fig. 19</span></a>. Let the input <span class="math notranslate nohighlight">\(x(t) = i(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t) = v_c(t)\)</span>.</p>
+</section>
+<section id="example-4-2-capacitor-circuit">
+<span id="ex4-2"></span><h3>Example 4.2: Capacitor circuit<a class="headerlink" href="#example-4-2-capacitor-circuit" title="Permalink to this headline">#</a></h3>
+<p>Consider the capacitor shown in <a class="reference internal" href="#fig-cap-circuit"><span class="std std-numref">Fig. 19</span></a>. Let the input <span class="math notranslate nohighlight">\(x(t) = i(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t) = v_c(t)\)</span>.</p>
 <p>(a) Find the input-output relationship.</p>
 <p>(b) Determine whether the system is (i) memoryless, (ii) causal, (iii) linear, (iv) time invariant, or (v) stable.</p>
 <figure class="align-default" id="fig-cap-circuit">
@@ -1101,34 +1193,49 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <p>For the answer, refer to the lecture recording or see solved problem 1.33 in {cite}schaum.</p>
-<p>4.3 Consider the system shown in <a class="reference internal" href="#fig-4-3"><span class="std std-numref">Fig. 20</span></a>. Determine whether it is (a) memoryless, (b) causal, (c) linear, (d) time invariant, or (e) stable.</p>
+</section>
+<section id="example-4-3-signal-modulator">
+<span id="ex4-3"></span><h3>Example 4.3: Signal modulator<a class="headerlink" href="#example-4-3-signal-modulator" title="Permalink to this headline">#</a></h3>
+<p>Consider the system shown in <a class="reference internal" href="#fig-4-3"><span class="std std-numref">Fig. 20</span></a>. Determine whether it is (a) memoryless, (b) causal, (c) linear, (d) time invariant, or (e) stable.</p>
 <figure class="align-default" id="fig-4-3">
 <a class="reference internal image-reference" href="../../_images/fig4_3.png"><img alt="A system" src="../../_images/fig4_3.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">A system</span><a class="headerlink" href="#fig-4-3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">A signal modulator</span><a class="headerlink" href="#fig-4-3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For the answer, refer to the lecture recording or see solved problem 1.34 in {cite}schaum.</p>
-<p>4.4 A system has the input-output relationship given by</p>
+</section>
+<section id="example-4-4">
+<span id="ex4-4"></span><h3>Example 4.4<a class="headerlink" href="#example-4-4" title="Permalink to this headline">#</a></h3>
+<p>A system has the input-output relationship given by</p>
 <div class="math notranslate nohighlight">
 \[y = \mathbf{T}\left\{x\right\} = x^2\]</div>
 <p>Show that this system is nonlinear.</p>
 <p>For the answer, refer to the lecture recording or see solved problem 1.35 in {cite}schaum.</p>
-<p>4.5 Consider the system whose input-output relationship is given by the linear equation</p>
+</section>
+<section id="example-4-5">
+<span id="ex4-5"></span><h3>Example 4.5<a class="headerlink" href="#example-4-5" title="Permalink to this headline">#</a></h3>
+<p>Consider the system whose input-output relationship is given by the linear equation</p>
 <div class="math notranslate nohighlight">
 \[y = ax + b\]</div>
 <p>where <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are the inout and output respectively and <span class="math notranslate nohighlight">\(s\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are constant. Is this system linear?</p>
 <p>For the answer, refer to the lecture recording or see solved problem 1.40 in {cite}schaum.</p>
-<p>4.6</p>
+</section>
+<section id="example-4-6">
+<span id="ex4-6"></span><h3>Example 4.6<a class="headerlink" href="#example-4-6" title="Permalink to this headline">#</a></h3>
 <p>(a) Show that the causality for a continuous-time linear system is equivalent to the following statement: For any time <span class="math notranslate nohighlight">\(t_0\)</span> and any input <span class="math notranslate nohighlight">\(x(t)\)</span> with <span class="math notranslate nohighlight">\(x(t) = 0\)</span> for <span class="math notranslate nohighlight">\(t \le t_0\)</span>, the output <span class="math notranslate nohighlight">\(y(t)\)</span> is zero for <span class="math notranslate nohighlight">\(t \le t_0\)</span>.</p>
 <p>(b) Find a nonlinear system that is causal but does not satisfy this condition.</p>
 <p>(c) Find a nonlinear system that satisfies this condition but is not causal.</p>
 <p>For the answer, refer to the lecture recording or see solved problem 1.43 in {cite}schaum.</p>
-<p>4.7 Let <span class="math notranslate nohighlight">\(\mathbf{T}\)</span> represent a continuous-time LTI system. Then show that</p>
+</section>
+<section id="example-4-7">
+<span id="ex4-7"></span><h3>Example 4.7<a class="headerlink" href="#example-4-7" title="Permalink to this headline">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(\mathbf{T}\)</span> represent a continuous-time LTI system. Then show that</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{T}\left\{e^{st}\right\}= \lambda e^{st}\]</div>
 <p>where <span class="math notranslate nohighlight">\(s\)</span> is a complex variable and <span class="math notranslate nohighlight">\(\lambda\)</span> is a complex constant.</p>
 <p>For the answer, refer to the lecture recording or see solved problem 1.44 in {cite}schaum.</p>
+</section>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
@@ -1150,7 +1257,7 @@ title="Print to PDF"
 <section id="next-time">
 <h2>Next time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../lti_systems/index.html#lti-systems"><span class="std std-ref">Linear Time-Invariant Systems</span></a></p></li>
+<li><p><a class="reference internal" href="../../lti_systems/lti_systems_2.html#lti-systems"><span class="std std-ref">Properties and Eigenfunctions of Continuous-Time LTI System</span></a></p></li>
 </ul>
 </section>
 </section>

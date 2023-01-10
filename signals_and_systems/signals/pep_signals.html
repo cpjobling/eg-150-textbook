@@ -155,17 +155,29 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../lti_systems/index.html">
    Linear Time-Invariant Systems
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lti_systems/lti_systems_2.html">
+     Properties and Eigenfunctions of Continuous-Time LTI System
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../laplace_transform/index.html">
    Laplace Transforms and their Applications
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -211,8 +223,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../fourier_series/index.html">
    Fourier Series
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -277,8 +289,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../setup/index.html">
    Setting up your own version of this book
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -653,18 +665,33 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sum-of-two-periodic-signals">
-     Sum of two periodic signals
+    <a class="reference internal nav-link" href="#example-2-1-sum-of-two-periodic-signals">
+     Example 2.1: Sum of two periodic signals
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ex2-2">
-     Periodic signals
+    <a class="reference internal nav-link" href="#example-2-2-periodic-signals">
+     Example 2.2: Periodic signals
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#power-and-energy-signals">
-     Power and energy signals
+    <a class="reference internal nav-link" href="#example-2-3">
+     Example 2.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2-4">
+     Example 2.4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2-5-power-and-energy-signals">
+     Example 2.5: Power and energy signals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2-6">
+     Example 2.6
     </a>
    </li>
   </ul>
@@ -792,18 +819,33 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sum-of-two-periodic-signals">
-     Sum of two periodic signals
+    <a class="reference internal nav-link" href="#example-2-1-sum-of-two-periodic-signals">
+     Example 2.1: Sum of two periodic signals
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ex2-2">
-     Periodic signals
+    <a class="reference internal nav-link" href="#example-2-2-periodic-signals">
+     Example 2.2: Periodic signals
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#power-and-energy-signals">
-     Power and energy signals
+    <a class="reference internal nav-link" href="#example-2-3">
+     Example 2.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2-4">
+     Example 2.4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2-5-power-and-energy-signals">
+     Example 2.5: Power and energy signals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2-6">
+     Example 2.6
     </a>
    </li>
   </ul>
@@ -1070,51 +1112,60 @@ t &amp; 0\le t\le 1\\
 </section>
 <section id="examples-2">
 <span id="worked-examples-2"></span><h2>Examples 2<a class="headerlink" href="#examples-2" title="Permalink to this headline">#</a></h2>
-<section id="sum-of-two-periodic-signals">
-<span id="ex2-1"></span><h3>Sum of two periodic signals<a class="headerlink" href="#sum-of-two-periodic-signals" title="Permalink to this headline">#</a></h3>
-<p>2.1). Let <span class="math notranslate nohighlight">\(x_1(t)\)</span> and <span class="math notranslate nohighlight">\(x_2(t)\)</span> be periodic signals with fundamental periods <span class="math notranslate nohighlight">\(T_1\)</span> and <span class="math notranslate nohighlight">\(T_2\)</span> respectively. Under which conditions is the sum <span class="math notranslate nohighlight">\(x(t) = x_1(t) + x_2(t)\)</span> periodic, and what is the fundamental period of <span class="math notranslate nohighlight">\(x(t)\)</span> if it is periodic?</p>
+<section id="example-2-1-sum-of-two-periodic-signals">
+<span id="ex2-1"></span><h3>Example 2.1: Sum of two periodic signals<a class="headerlink" href="#example-2-1-sum-of-two-periodic-signals" title="Permalink to this headline">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(x_1(t)\)</span> and <span class="math notranslate nohighlight">\(x_2(t)\)</span> be periodic signals with fundamental periods <span class="math notranslate nohighlight">\(T_1\)</span> and <span class="math notranslate nohighlight">\(T_2\)</span> respectively. Under which conditions is the sum <span class="math notranslate nohighlight">\(x(t) = x_1(t) + x_2(t)\)</span> periodic, and what is the fundamental period of <span class="math notranslate nohighlight">\(x(t)\)</span> if it is periodic?</p>
 <p>For the answer, refer to the lecture recording or see solved problem 1.14 in <span id="id10">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="ex2-2">
-<span id="id11"></span><h3>Periodic signals<a class="headerlink" href="#ex2-2" title="Permalink to this headline">#</a></h3>
+<section id="example-2-2-periodic-signals">
+<span id="ex2-2"></span><h3>Example 2.2: Periodic signals<a class="headerlink" href="#example-2-2-periodic-signals" title="Permalink to this headline">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
 </div>
-<p>2.2). Determine whether or not each of the following signals is periodic. If a signal is periodic, determine its fundamental period.</p>
+<p>Determine whether or not each of the following signals is periodic. If a signal is periodic, determine its fundamental period.</p>
 <p>a). <span class="math notranslate nohighlight">\(x(t)=\cos\left(t + \frac{\pi}{4}\right)\)</span>;</p>
 <p>b). <span class="math notranslate nohighlight">\(x(t)=\sin\frac{2\pi}{3}t\)</span>;</p>
 <p>c). <span class="math notranslate nohighlight">\(x(t)=\cos\frac{\pi}{3}t+\sin\frac{\pi}{4}t\)</span>;</p>
 <p>d). <span class="math notranslate nohighlight">\(x(t)=\cos t + \sin\sqrt{2}t\)</span>;</p>
 <p>e). <span class="math notranslate nohighlight">\(x(t)=\sin^2t\)</span>;</p>
 <p>f). <span class="math notranslate nohighlight">\(x(t)=e^{j\left[\pi/2t-1\right]}\)</span>;</p>
-<p>For the answer, refer to the lecture recording or see solved problem 1.16 in <span id="id12">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
-<p>2.3). Show that if <span class="math notranslate nohighlight">\(x(t + T) = x(t)\)</span>, then</p>
+<p>For the answer, refer to the lecture recording or see solved problem 1.16 in <span id="id11">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+</section>
+<section id="example-2-3">
+<h3>Example 2.3<a class="headerlink" href="#example-2-3" title="Permalink to this headline">#</a></h3>
+<p>Show that if <span class="math notranslate nohighlight">\(x(t + T) = x(t)\)</span>, then</p>
 <div class="math notranslate nohighlight">
 \[\int_\alpha^\beta x(t)\,dt=\int_{\alpha+T}^{\beta+T} x(t)\,dt\]</div>
 <div class="math notranslate nohighlight">
 \[\int_0^T x(t)\,dt=\int_{a}^{a+T} x(t)\,dt\]</div>
 <p>for any real <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(\beta\)</span> and <span class="math notranslate nohighlight">\(a\)</span>.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 1.17 in <span id="id13">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
-<p>2.4). Show that if <span class="math notranslate nohighlight">\(x(t)\)</span> is periodic with fundamental period <span class="math notranslate nohighlight">\(T_0\)</span>, the the normalized average power <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\(x(t)\)</span> defined by</p>
+<p>For the answer, refer to the lecture recording or see solved problem 1.17 in <span id="id12">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+</section>
+<section id="example-2-4">
+<h3>Example 2.4<a class="headerlink" href="#example-2-4" title="Permalink to this headline">#</a></h3>
+<p>Show that if <span class="math notranslate nohighlight">\(x(t)\)</span> is periodic with fundamental period <span class="math notranslate nohighlight">\(T_0\)</span>, the the normalized average power <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\(x(t)\)</span> defined by</p>
 <div class="math notranslate nohighlight">
 \[P = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}\left|x(t)\right|^2\;dt\]</div>
 <p>is the same as the average power <span class="math notranslate nohighlight">\(x(t)\)</span> over any interval of length <span class="math notranslate nohighlight">\(T_0\)</span>, that is,</p>
 <p>$<span class="math notranslate nohighlight">\(P = \frac{1}{T_0}\int_{0}^{T_0}\left|x(t)\right|^2\;dt\)</span>$.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 1.18 in <span id="id14">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 1.18 in <span id="id13">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="power-and-energy-signals">
-<span id="ex2-5"></span><h3>Power and energy signals<a class="headerlink" href="#power-and-energy-signals" title="Permalink to this headline">#</a></h3>
+<section id="example-2-5-power-and-energy-signals">
+<span id="ex2-5"></span><h3>Example 2.5: Power and energy signals<a class="headerlink" href="#example-2-5-power-and-energy-signals" title="Permalink to this headline">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
 </div>
-<p>2.5). Determine whether the following signals are energy signals, power signals, or neither.</p>
+<p>Determine whether the following signals are energy signals, power signals, or neither.</p>
 <p>a). <span class="math notranslate nohighlight">\(x(t)=e^{-at}u_0(t)\)</span>, <span class="math notranslate nohighlight">\(a &gt; 0\)</span>;</p>
 <p>b). <span class="math notranslate nohighlight">\(x(t)=A\cos\left(\omega_0 t + \theta\right)\)</span></p>
 <p>c). <span class="math notranslate nohighlight">\(x(t)=t u_0(t)\)</span></p>
-<p>Note <span class="math notranslate nohighlight">\(u_0(t)\)</span> is the unit step (or Heaviside) function formally introduced in the next lecture. For the answer, refer to the lecture recording or see solved problem 1.20 in <span id="id15">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
-<p>2.6). Domestic mains power in the UK is delivered as a sinusoidal signal <span class="math notranslate nohighlight">\(x(t)=A\cos(\omega_0 t + \theta)\)</span> with frequency of <span class="math notranslate nohighlight">\(50Hz\)</span> and RMS value of <span class="math notranslate nohighlight">\(240\;\mathrm{V}\)</span>.</p>
+<p>Note <span class="math notranslate nohighlight">\(u_0(t)\)</span> is the unit step (or Heaviside) function formally introduced in the next lecture. For the answer, refer to the lecture recording or see solved problem 1.20 in <span id="id14">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+</section>
+<section id="example-2-6">
+<h3>Example 2.6<a class="headerlink" href="#example-2-6" title="Permalink to this headline">#</a></h3>
+<p>Domestic mains power in the UK is delivered as a sinusoidal signal <span class="math notranslate nohighlight">\(x(t)=A\cos(\omega_0 t + \theta)\)</span> with frequency of <span class="math notranslate nohighlight">\(50\mathrm{Hz}\)</span> and RMS value of <span class="math notranslate nohighlight">\(240\mathrm{V}\)</span>.</p>
 <p>Calculate the fundamental period <span class="math notranslate nohighlight">\(T_0\)</span>, fundamental angular frequency <span class="math notranslate nohighlight">\(\omega_0\)</span>, average power <span class="math notranslate nohighlight">\(P\)</span>, peak voltage <span class="math notranslate nohighlight">\(A = x_\mathrm{peak}\)</span>, crest factor (CF) and peak-to-average power ratio (PAPR) of the power signal provided to the home.</p>
 <p>Express CF and PAPR in dB.</p>
 </section>

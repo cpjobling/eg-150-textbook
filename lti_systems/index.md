@@ -33,6 +33,7 @@ We will discuss specifying the input-output relationsships for discrete-time sys
 ## Subjects to be covered
 
 * {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
+* {ref}`examples_5_Responses_of_a_Continuous-Time_LTI_System_and_Convolution)`
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
 * {ref}`Systems_Described_by_Differential_Equations`
@@ -163,9 +164,179 @@ $$x(t)*\left\{h_1(t) + h_2(t)\right\} = x(t)*h_1(t) + x(t)*h_2(t)$$
 
 ### E. Convolution Integral Operation
 
+Applying the communitative propery of convolution to the convolution integral, we obtain
+
+$$y(t) = h(t) * x(t) = \int_{-\infty}^{\infty}h(\tau)x(t-\tau)\,d\tau$$
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+which may at times be easier to evaluate than
+
+$$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### Graphical Evaluation of the Convolution Integral
+
+The convolution integral is most conveniently evaluated by a graphical evaluation. We give three examples (5.4&mdash;5.6) which we will demonstrate in class using a [graphical visualization tool](https://uk.mathworks.com/matlabcentral/fileexchange/25199-graphical-demonstration-of-convolution) developed by Teja Muppirala of the Mathworks.
+
+We will then work through the examples again in the examples class.
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+clear all
+cd matlab/convolutiondemo
+pwd
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+convolutiondemo % ignore warnings
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### Summary of Steps
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+1. The inpulse response $h(\tau)$ is time reversed (that is, reflected about the origin) to obtain $h(-\tau)$ and then shifted by $\tau$ to form $h(t-\tau) = h\left[-(\tau - t)\right]$, which is a function of $\tau$ with parameter $t$.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+2. The signal $x(\tau)$ and $h(t-\tau)$ are multiplied together for all values of $\tau$ with $t$ fixed at some value.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+3. The product $x(\tau)h(t-\tau)$ is integrated over all $\tau$ to produce a single output value $y(t)$.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+4. Steps 1 ro 3 are repeated as $t$ varies over $-\infty$ to $\infty$ to produce the entire output $y(t)$.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Examples of the above convolution integral operation are given in Examples 4.1 to 4.3.
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### F. Step Response
+
+The *step response* $s(t)$ of a continuous-time LTI system (represented $\mathbf{T}$) is defined by the response of the system when the input is $u_0(t)$; that is,
+
+$$s(t) = \mathbf{T}\left\{u_0(t)\right\}$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+In many applications, the step response $s(t)$ is also a useful characterisation of the system. The step response can be easily determined using the convolution integral; that is,
+
+$$s(t) = h(t)*u_0(t) = \int_{-\infty}^{\infty} h(\tau)u_0(t-\tau)\,d\tau = \int_{-\infty}^{t} h(\tau)\,d\tau$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Thus the step response $s(t)$ can be obtained by integrating the impulse response $h(t)$.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### Impulse response from step response
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Differentiating the step response with respect to $t$, we get
+
+$$h(t) = s'(t) = \frac{ds(t)}{dt}$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Thus the impulse response $h(t)$ can be determined by differentiating the step response $s(t)$.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(examples_5_Responses_of_a_Continuous-Time_LTI_System_and_Convolution)=
+## Examples 5: Responses of a Continuous-Time LTI System and Convolution
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex5_1)=
+### Example 5.1 
+
+Verify the following properties of the convolution integral; that is,
+
+(a) $x(t)*h(t) = h(t)*x(t)$
+
+(b) $\left\{x(t) * h_1(t)\right\} * h_2(t) = x(t)*\left\{h_1(t) * h_2(t)\right\}$
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 2.1 in in {cite}schaum.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex5_2)=
+### Example 5.2
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 2.2 in in {cite}schaum.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex5_3)=
+### Example 5.3
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 2.3 in in {cite}schaum.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex5_4)=
+### Example 5.4
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 2.4 in in {cite}schaum.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex5_5)=
+### Example 5.5
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 2.5 in {cite}schaum.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex5_6)=
+### Example 5.6
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 2.6 in {cite}schaum.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+## Summary
+
+In this lecture we have started our look at LTI systems.
+
+In particular we have looked at
+
+* {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+## Next Time
+
+* {ref}`Properties_of_Continuous_Time_LTI_Systems`
+* {ref}`eigenfunctions_of_continuous_time_LTI_systems`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -203,12 +374,7 @@ In this lecture we have started our look at LTI systems.
 In particular we have looked at
 
 * {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
+* {ref}`examples_5_Responses_of_a_Continuous-Time_LTI_System_and_Convolution)`
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
 * {ref}`Systems_Described_by_Differential_Equations`
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Next Time
-
-{ref}`Laplace Transforms and their Applications`

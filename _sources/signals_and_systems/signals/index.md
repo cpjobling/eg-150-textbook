@@ -308,19 +308,17 @@ Note the product of two even signals or two odd signals is an even signal and th
 (worked_examples_1)=
 ## Examples 1
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
-### Signals
+(ex1.1)=
+### Example 1.1: Signals
 
 `````{admonition} MATLAB Example
 :class: tip
 We will solve these examples by hand and then give the solution in the MATLAB lab.
 `````
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-(ex1.1)=
-1.1). A continuous-time signal $x(t)$ is shown in {numref}`example1`. 
+A continuous-time signal $x(t)$ is shown in {numref}`example1`. 
 
 :::{figure-md} example1
 <img src="pictures/example1.png" alt="The signal for example 1" width="60%">
@@ -353,7 +351,7 @@ For the answer, refer to the lecture recording or see solved problem 1.1 in {cit
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex1.2)=
-### Uniform sampling
+### Example 1.2: Uniform sampling
 
 `````{admonition} MATLAB Example
 :class: tip
@@ -392,7 +390,7 @@ For the answer, refer to the lecture recording or see solved problem 1.3 in {cit
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex1.3)=
-### Odd and even signals
+### Example 1.3: Odd and even signals
 
 `````{admonition} MATLAB Example
 :class: tip
@@ -401,7 +399,7 @@ We will solve these examples by hand and then give the solution in the MATLAB la
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-1.3). Sketch and label the even and odd components of the signals shown in {numref}`example3`.
+Sketch and label the even and odd components of the signals shown in {numref}`example3`.
 
 
 :::{figure-md} example3
@@ -418,7 +416,9 @@ For the answer, refer to the lecture recording or see solved problem 1.5 in {cit
 
 (ex1.4)=
 
-1.4). Find the odd and even components of $x(t) = e^{jt}$.
+### Example 1.4
+
+Find the odd and even components of $x(t) = e^{jt}$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -428,7 +428,9 @@ For the answer, refer to the lecture recording or see solved problem 1.6 in {cit
 
 (ex1.5)=
 
-1.5). Show that the product of two even signals or of two odd signals is an even signal and that the product of an even signal and an odd signal is an odd signal.
+### Example 1.5
+
+Show that the product of two even signals or of two odd signals is an even signal and that the product of an even signal and an odd signal is an odd signal.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -438,7 +440,9 @@ For the answer, refer to the lecture recording or see solved problem 1.7 in {cit
 
 (ex1.6)=
 
-1.6). Show that 
+### Example 1.6
+
+Show that 
 
 a). If $x(t)$ is even 
 

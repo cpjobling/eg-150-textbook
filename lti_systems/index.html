@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/lti_systems/index.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Laplace Transforms and their Applications" href="../laplace_transform/index.html" />
+    <link rel="next" title="Properties and Eigenfunctions of Continuous-Time LTI System" href="lti_systems_2.html" />
     <link rel="prev" title="Systems and Classification of Systems" href="../signals_and_systems/systems/index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -155,17 +155,29 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Linear Time-Invariant Systems
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lti_systems_2.html">
+     Properties and Eigenfunctions of Continuous-Time LTI System
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../laplace_transform/index.html">
    Laplace Transforms and their Applications
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -211,8 +223,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../fourier_series/index.html">
    Fourier Series
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -277,8 +289,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../setup/index.html">
    Setting up your own version of this book
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -615,13 +627,62 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#e-convolution-integral-operation">
      E. Convolution Integral Operation
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#impulse-response-from-step-response">
+       Impulse response from step response
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution">
+   Examples 5: Responses of a Continuous-Time LTI System and Convolution
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5-1">
+     Example 5.1
+    </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#f-step-response">
-     F. Step Response
+    <a class="reference internal nav-link" href="#example-5-2">
+     Example 5.2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5-3">
+     Example 5.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5-4">
+     Example 5.4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5-5">
+     Example 5.5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5-6">
+     Example 5.6
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#next-time">
+   Next Time
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#properties-of-continuous-time-lti-systems">
@@ -654,13 +715,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
+  <a class="reference internal nav-link" href="#id7">
    Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   Next Time
   </a>
  </li>
 </ul>
@@ -738,13 +794,62 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#e-convolution-integral-operation">
      E. Convolution Integral Operation
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#impulse-response-from-step-response">
+       Impulse response from step response
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution">
+   Examples 5: Responses of a Continuous-Time LTI System and Convolution
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5-1">
+     Example 5.1
+    </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#f-step-response">
-     F. Step Response
+    <a class="reference internal nav-link" href="#example-5-2">
+     Example 5.2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5-3">
+     Example 5.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5-4">
+     Example 5.4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5-5">
+     Example 5.5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5-6">
+     Example 5.6
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#next-time">
+   Next Time
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#properties-of-continuous-time-lti-systems">
@@ -777,13 +882,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
+  <a class="reference internal nav-link" href="#id7">
    Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   Next Time
   </a>
  </li>
 </ul>
@@ -808,9 +908,10 @@ title="Print to PDF"
 <h2>Subjects to be covered<a class="headerlink" href="#subjects-to-be-covered" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#response-of-a-continuous-time-lti-system-and-the-convolution-integral"><span class="std std-ref">Response of a Continuous-Time LTI System and the Convolution Integral</span></a></p></li>
-<li><p><a class="reference internal" href="#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#systems-described-by-differential-equations"><span class="std std-ref">Systems Described by Differential Equations</span></a></p></li>
+<li><p><span class="xref std std-ref">examples_5_Responses_of_a_Continuous-Time_LTI_System_and_Convolution)</span></p></li>
+<li><p><a class="reference internal" href="lti_systems_2.html#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="lti_systems_2.html#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="lti_systems_2.html#systems-described-by-differential-equations"><span class="std std-ref">Systems Described by Differential Equations</span></a></p></li>
 </ul>
 </section>
 <section id="response-of-a-continuous-time-lti-system-and-the-convolution-integral">
@@ -885,19 +986,92 @@ title="Print to PDF"
 </section>
 <section id="e-convolution-integral-operation">
 <h3>E. Convolution Integral Operation<a class="headerlink" href="#e-convolution-integral-operation" title="Permalink to this headline">#</a></h3>
+<p>Applying the communitative propery of convolution to the convolution integral, we obtain</p>
+<div class="math notranslate nohighlight">
+\[y(t) = h(t) * x(t) = \int_{-\infty}^{\infty}h(\tau)x(t-\tau)\,d\tau\]</div>
+<p>which may at times be easier to evaluate than</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\#### Graphical Evaluation of the Convolution Integral\\The convolution integral is most conveniently evaluated by a graphical evaluation. We give three examples (5.4&amp;mdash;5.6) which we will demonstrate in class using a [graphical visualization tool](https://uk.mathworks.com/matlabcentral/fileexchange/25199-graphical-demonstration-of-convolution) developed by Teja Muppirala of the Mathworks.\\We will then work through the examples again in the examples class.\\```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+clear all
+cd matlab/convolutiondemo
+pwd
+```\\```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+convolutiondemo % ignore warnings
+```\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\#### Summary of Steps\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\1. The inpulse response $h(\tau)$ is time reversed (that is, reflected about the origin) to obtain $h(-\tau)$ and then shifted by $\tau$ to form $h(t-\tau) = h\left[-(\tau - t)\right]$, which is a function of $\tau$ with parameter $t$.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\2. The signal $x(\tau)$ and $h(t-\tau)$ are multiplied together for all values of $\tau$ with $t$ fixed at some value.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\3. The product $x(\tau)h(t-\tau)$ is integrated over all $\tau$ to produce a single output value $y(t)$.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\4. Steps 1 ro 3 are repeated as $t$ varies over $-\infty$ to $\infty$ to produce the entire output $y(t)$.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;notes&quot;}}\\Examples of the above convolution integral operation are given in Examples 4.1 to 4.3.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\### F. Step Response\\The *step response* $s(t)$ of a continuous-time LTI system (represented $\mathbf{T}$) is defined by the response of the system when the input is $u_0(t)$; that is,\\$$s(t) = \mathbf{T}\left\{u_0(t)\right\}\end{aligned}\end{align} \]</div>
+<p>In many applications, the step response <span class="math notranslate nohighlight">\(s(t)\)</span> is also a useful characterisation of the system. The step response can be easily determined using the convolution integral; that is,</p>
+<div class="math notranslate nohighlight">
+\[s(t) = h(t)*u_0(t) = \int_{-\infty}^{\infty} h(\tau)u_0(t-\tau)\,d\tau = \int_{-\infty}^{t} h(\tau)\,d\tau\]</div>
+<p>Thus the step response <span class="math notranslate nohighlight">\(s(t)\)</span> can be obtained by integrating the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>.</p>
+<section id="impulse-response-from-step-response">
+<h4>Impulse response from step response<a class="headerlink" href="#impulse-response-from-step-response" title="Permalink to this headline">#</a></h4>
+<p>Differentiating the step response with respect to <span class="math notranslate nohighlight">\(t\)</span>, we get</p>
+<div class="math notranslate nohighlight">
+\[h(t) = s'(t) = \frac{ds(t)}{dt}\]</div>
+<p>Thus the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> can be determined by differentiating the step response <span class="math notranslate nohighlight">\(s(t)\)</span>.</p>
 </section>
-<section id="f-step-response">
-<h3>F. Step Response<a class="headerlink" href="#f-step-response" title="Permalink to this headline">#</a></h3>
 </section>
+</section>
+<section id="examples-5-responses-of-a-continuous-time-lti-system-and-convolution">
+<span id="id3"></span><h2>Examples 5: Responses of a Continuous-Time LTI System and Convolution<a class="headerlink" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution" title="Permalink to this headline">#</a></h2>
+<section id="example-5-1">
+<span id="ex5-1"></span><h3>Example 5.1<a class="headerlink" href="#example-5-1" title="Permalink to this headline">#</a></h3>
+<p>Verify the following properties of the convolution integral; that is,</p>
+<p>(a) <span class="math notranslate nohighlight">\(x(t)*h(t) = h(t)*x(t)\)</span></p>
+<p>(b) <span class="math notranslate nohighlight">\(\left\{x(t) * h_1(t)\right\} * h_2(t) = x(t)*\left\{h_1(t) * h_2(t)\right\}\)</span></p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.1 in in {cite}schaum.</p>
+</section>
+<section id="example-5-2">
+<span id="ex5-2"></span><h3>Example 5.2<a class="headerlink" href="#example-5-2" title="Permalink to this headline">#</a></h3>
+<p>For the answer, refer to the lecture recording or see solved problem 2.2 in in {cite}schaum.</p>
+</section>
+<section id="example-5-3">
+<span id="ex5-3"></span><h3>Example 5.3<a class="headerlink" href="#example-5-3" title="Permalink to this headline">#</a></h3>
+<p>For the answer, refer to the lecture recording or see solved problem 2.3 in in {cite}schaum.</p>
+</section>
+<section id="example-5-4">
+<span id="ex5-4"></span><h3>Example 5.4<a class="headerlink" href="#example-5-4" title="Permalink to this headline">#</a></h3>
+<p>For the answer, refer to the lecture recording or see solved problem 2.4 in in {cite}schaum.</p>
+</section>
+<section id="example-5-5">
+<span id="ex5-5"></span><h3>Example 5.5<a class="headerlink" href="#example-5-5" title="Permalink to this headline">#</a></h3>
+<p>For the answer, refer to the lecture recording or see solved problem 2.5 in {cite}schaum.</p>
+</section>
+<section id="example-5-6">
+<span id="ex5-6"></span><h3>Example 5.6<a class="headerlink" href="#example-5-6" title="Permalink to this headline">#</a></h3>
+<p>For the answer, refer to the lecture recording or see solved problem 2.6 in {cite}schaum.</p>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<p>In this lecture we have started our look at LTI systems.</p>
+<p>In particular we have looked at</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#response-of-a-continuous-time-lti-system-and-the-convolution-integral"><span class="std std-ref">Response of a Continuous-Time LTI System and the Convolution Integral</span></a></p></li>
+</ul>
+</section>
+<section id="next-time">
+<h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="lti_systems_2.html#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="lti_systems_2.html#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
+</ul>
 </section>
 <section id="properties-of-continuous-time-lti-systems">
-<span id="id3"></span><h2>Properties of Continuous-Time LTI Systems<a class="headerlink" href="#properties-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h2>
+<span id="id4"></span><h2>Properties of Continuous-Time LTI Systems<a class="headerlink" href="#properties-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="eigenfunctions-of-continuous-time-lti-systems">
-<span id="id4"></span><h2>Eigenfunctions of Continuous-Time LTI Systems<a class="headerlink" href="#eigenfunctions-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h2>
+<span id="id5"></span><h2>Eigenfunctions of Continuous-Time LTI Systems<a class="headerlink" href="#eigenfunctions-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="systems-described-by-differential-equations">
-<span id="id5"></span><h2>Systems Described by Differential Equations<a class="headerlink" href="#systems-described-by-differential-equations" title="Permalink to this headline">#</a></h2>
+<span id="id6"></span><h2>Systems Described by Differential Equations<a class="headerlink" href="#systems-described-by-differential-equations" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="worked-solutions">
 <h2>Worked Solutions<a class="headerlink" href="#worked-solutions" title="Permalink to this headline">#</a></h2>
@@ -908,21 +1082,20 @@ title="Print to PDF"
 <section id="lab-exercises">
 <h2>Lab Exercises<a class="headerlink" href="#lab-exercises" title="Permalink to this headline">#</a></h2>
 </section>
-<section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<section id="id7">
+<h2>Summary<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h2>
 <p>In this lecture we have started our look at LTI systems.</p>
 <p>In particular we have looked at</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#response-of-a-continuous-time-lti-system-and-the-convolution-integral"><span class="std std-ref">Response of a Continuous-Time LTI System and the Convolution Integral</span></a></p></li>
-<li><p><a class="reference internal" href="#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#systems-described-by-differential-equations"><span class="std std-ref">Systems Described by Differential Equations</span></a></p></li>
+<li><p><span class="xref std std-ref">examples_5_Responses_of_a_Continuous-Time_LTI_System_and_Convolution)</span></p></li>
+<li><p><a class="reference internal" href="lti_systems_2.html#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="lti_systems_2.html#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="lti_systems_2.html#systems-described-by-differential-equations"><span class="std std-ref">Systems Described by Differential Equations</span></a></p></li>
 </ul>
 </section>
-<section id="next-time">
-<h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
-<p><span class="xref std std-ref">Laplace Transforms and their Applications</span></p>
-</section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -959,10 +1132,10 @@ title="Print to PDF"
             <p class="prev-next-title">Systems and Classification of Systems</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../laplace_transform/index.html" title="next page">
+    <a class='right-next' id="next-link" href="lti_systems_2.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Laplace Transforms and their Applications</p>
+        <p class="prev-next-title">Properties and Eigenfunctions of Continuous-Time LTI System</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

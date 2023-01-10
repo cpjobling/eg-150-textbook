@@ -155,17 +155,29 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../lti_systems/index.html">
    Linear Time-Invariant Systems
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lti_systems/lti_systems_2.html">
+     Properties and Eigenfunctions of Continuous-Time LTI System
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../laplace_transform/index.html">
    Laplace Transforms and their Applications
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -211,8 +223,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../fourier_series/index.html">
    Fourier Series
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -277,8 +289,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../setup/index.html">
    Setting up your own version of this book
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -561,12 +573,12 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#elementary-signals">
-   Elementary Signals
+   3.1 Elementary Signals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-unit-step-function">
-   The Unit Step Function
+  <a class="reference internal nav-link" href="#example-3-2">
+   Example 3.2
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -574,87 +586,75 @@ title="Print to PDF"
      In Matlab
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-3-3-circuit-revisited">
+   Example 3.3: Circuit Revisited
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-3-4-simple-signal-operations">
+   Example 3.4: Simple Signal Operations
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#circuit-revisited">
-     Circuit Revisited
+    <a class="reference internal nav-link" href="#a-amplitude-scaling">
+     a) Amplitude Scaling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-time-reversal">
+     b) Time Reversal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-time-delay-and-advance">
+     c) Time Delay and Advance
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#simple-signal-operations">
-   Simple Signal Operations
+  <a class="reference internal nav-link" href="#example-3-5">
+   Example 3.5
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#amplitude-scaling">
-     Amplitude Scaling
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-reversal">
-     Time Reversal
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-delay-and-advance">
-     Time Delay and Advance
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#examples">
-     Examples
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-1">
-       Example 1
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-2">
-       Example 2
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#synthesis-of-signals-from-unit-step">
-   Synthesis of Signals from Unit Step
+   3.6: Synthesis of Signals from Unit Step
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synthesize-rectangular-pulse">
-     Synthesize Rectangular Pulse
+    <a class="reference internal nav-link" href="#a-synthesize-rectangular-pulse">
+     a) Synthesize Rectangular Pulse
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synthesize-square-wave">
-     Synthesize Square Wave
+    <a class="reference internal nav-link" href="#b-synthesize-square-wave">
+     b) Synthesize Square Wave
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synthesize-symmetric-rectangular-pulse">
-     Synthesize Symmetric Rectangular Pulse
+    <a class="reference internal nav-link" href="#c-synthesize-symmetric-rectangular-pulse">
+     c) Synthesize Symmetric Rectangular Pulse
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synthesize-symmetric-triangular-pulse">
-     Synthesize Symmetric Triangular Pulse
+    <a class="reference internal nav-link" href="#d-synthesize-symmetric-triangular-pulse">
+     d) Synthesize Symmetric Triangular Pulse
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-ramp-function">
-   The Ramp Function
+  <a class="reference internal nav-link" href="#example-3-7-the-ramp-function">
+   Example 3.7: The Ramp Function
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-dirac-delta-function">
-   The Dirac Delta Function
+  <a class="reference internal nav-link" href="#example-3-8-the-dirac-delta-function">
+   Example 3.8: The Dirac Delta Function
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -670,28 +670,14 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#important-properties-of-the-delta-function">
-   Important properties of the delta function
+  <a class="reference internal nav-link" href="#example-3-9-important-properties-of-the-delta-function">
+   Example 3.9: Important properties of the delta function
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Examples
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-3">
-       Example 3
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-4">
-       Example 4
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-3-10">
+   Example 3.10
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lab-work">
@@ -724,12 +710,12 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#elementary-signals">
-   Elementary Signals
+   3.1 Elementary Signals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-unit-step-function">
-   The Unit Step Function
+  <a class="reference internal nav-link" href="#example-3-2">
+   Example 3.2
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -737,87 +723,75 @@ title="Print to PDF"
      In Matlab
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-3-3-circuit-revisited">
+   Example 3.3: Circuit Revisited
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-3-4-simple-signal-operations">
+   Example 3.4: Simple Signal Operations
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#circuit-revisited">
-     Circuit Revisited
+    <a class="reference internal nav-link" href="#a-amplitude-scaling">
+     a) Amplitude Scaling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-time-reversal">
+     b) Time Reversal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-time-delay-and-advance">
+     c) Time Delay and Advance
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#simple-signal-operations">
-   Simple Signal Operations
+  <a class="reference internal nav-link" href="#example-3-5">
+   Example 3.5
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#amplitude-scaling">
-     Amplitude Scaling
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-reversal">
-     Time Reversal
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-delay-and-advance">
-     Time Delay and Advance
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#examples">
-     Examples
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-1">
-       Example 1
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-2">
-       Example 2
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#synthesis-of-signals-from-unit-step">
-   Synthesis of Signals from Unit Step
+   3.6: Synthesis of Signals from Unit Step
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synthesize-rectangular-pulse">
-     Synthesize Rectangular Pulse
+    <a class="reference internal nav-link" href="#a-synthesize-rectangular-pulse">
+     a) Synthesize Rectangular Pulse
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synthesize-square-wave">
-     Synthesize Square Wave
+    <a class="reference internal nav-link" href="#b-synthesize-square-wave">
+     b) Synthesize Square Wave
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synthesize-symmetric-rectangular-pulse">
-     Synthesize Symmetric Rectangular Pulse
+    <a class="reference internal nav-link" href="#c-synthesize-symmetric-rectangular-pulse">
+     c) Synthesize Symmetric Rectangular Pulse
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synthesize-symmetric-triangular-pulse">
-     Synthesize Symmetric Triangular Pulse
+    <a class="reference internal nav-link" href="#d-synthesize-symmetric-triangular-pulse">
+     d) Synthesize Symmetric Triangular Pulse
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-ramp-function">
-   The Ramp Function
+  <a class="reference internal nav-link" href="#example-3-7-the-ramp-function">
+   Example 3.7: The Ramp Function
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-dirac-delta-function">
-   The Dirac Delta Function
+  <a class="reference internal nav-link" href="#example-3-8-the-dirac-delta-function">
+   Example 3.8: The Dirac Delta Function
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -833,28 +807,14 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#important-properties-of-the-delta-function">
-   Important properties of the delta function
+  <a class="reference internal nav-link" href="#example-3-9-important-properties-of-the-delta-function">
+   Example 3.9: Important properties of the delta function
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Examples
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-3">
-       Example 3
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-4">
-       Example 4
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-3-10">
+   Example 3.10
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lab-work">
@@ -889,11 +849,11 @@ title="Print to PDF"
 <span id="worked-examples-3"></span><h1>Examples 3 - Elementary Signals<a class="headerlink" href="#examples-3-elementary-signals" title="Permalink to this headline">#</a></h1>
 <p>To accompany <a class="reference internal" href="index.html#elementary-signals"><span class="std std-ref">Elementary Signals</span></a>.</p>
 <section id="elementary-signals">
-<h2>Elementary Signals<a class="headerlink" href="#elementary-signals" title="Permalink to this headline">#</a></h2>
+<span id="ex3-1"></span><h2>3.1 Elementary Signals<a class="headerlink" href="#elementary-signals" title="Permalink to this headline">#</a></h2>
 <p>Consider the network shown in below where the switch is closed at time <span class="math notranslate nohighlight">\(t=T\)</span> and all components are ideal.</p>
 <p><img alt="Network with a switch which is closed at t = T." src="../../_images/circuit2.png" /></p>
 <p>Express the output voltage <span class="math notranslate nohighlight">\(V_{\mathrm{out}}\)</span> as a function of the unit step function, and sketch the appropriate waveform.</p>
-<p>Q1: What happens <strong>before</strong> <span class="math notranslate nohighlight">\(t=T\)</span>?</p>
+<p>a) What happens <strong>before</strong> <span class="math notranslate nohighlight">\(t=T\)</span>?</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(v_{\mathrm{out}} = \mathrm{undefined}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(v_{\mathrm{out}} = 0\)</span></p></li>
@@ -902,7 +862,7 @@ title="Print to PDF"
 <li><p><span class="math notranslate nohighlight">\(v_{\mathrm{out}} = \infty\)</span></p></li>
 </ol>
 <p><strong>-&gt; Open Poll: 1.2.1</strong></p>
-<p>Q2: What happens <strong>after</strong> <span class="math notranslate nohighlight">\(t=T\)</span>?</p>
+<p>b) What happens <strong>after</strong> <span class="math notranslate nohighlight">\(t=T\)</span>?</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(v_{\mathrm{out}} = \mathrm{undefined}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(v_{\mathrm{out}} = 0\)</span></p></li>
@@ -911,7 +871,7 @@ title="Print to PDF"
 <li><p><span class="math notranslate nohighlight">\(v_{\mathrm{out}} = \infty\)</span></p></li>
 </ol>
 <p><strong>-&gt; Open Poll: 1.2.2</strong></p>
-<p>Q3: What happens <strong>at</strong> <span class="math notranslate nohighlight">\(t=T\)</span>?</p>
+<p>c) What happens <strong>at</strong> <span class="math notranslate nohighlight">\(t=T\)</span>?</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(v_{\mathrm{out}} = \mathrm{undefined}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(v_{\mathrm{out}} = 0\)</span></p></li>
@@ -920,15 +880,16 @@ title="Print to PDF"
 <li><p><span class="math notranslate nohighlight">\(v_{\mathrm{out}} = \infty\)</span></p></li>
 </ol>
 <p><strong>-&gt; Open Poll: 1.2.3</strong></p>
-<p>Q4: What does the response of <span class="math notranslate nohighlight">\(V_{\mathrm{out}}\)</span> look like?</p>
+<p>d) What does the response of <span class="math notranslate nohighlight">\(V_{\mathrm{out}}\)</span> look like?</p>
 <p>Circle the picture you think is correct on your handout.</p>
 <table>
     <tr><td>A</td><td><img src="https://cpjobling.github.io/eg-247-textbook/elementary_signals/pictures/impulse.png" alt="Signal A"></td><td>B</td><td><img src="https://cpjobling.github.io/eg-247-textbook/elementary_signals/pictures/step1.png" alt="Signal B"></td></tr>
     <tr><td>C</td><td><img src="https://cpjobling.github.io/eg-247-textbook/elementary_signals/pictures/curve.png" alt="Signal C"></td><td>D</td><td><img src="https://cpjobling.github.io/eg-247-textbook/elementary_signals/pictures/ramp.png" alt="Signal D"></td></tr>
 </table><p><strong>-&gt; Open Poll: 1.2.4</strong></p>
 </section>
-<section id="the-unit-step-function">
-<h2>The Unit Step Function<a class="headerlink" href="#the-unit-step-function" title="Permalink to this headline">#</a></h2>
+<section id="example-3-2">
+<span id="ex3-2"></span><h2>Example 3.2<a class="headerlink" href="#example-3-2" title="Permalink to this headline">#</a></h2>
+<p>The Unit Step Function</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}{u_0}(t) = \left\{ {\begin{array}{*{20}{c}}
 {0\quad t &lt; 0}\\
@@ -955,8 +916,9 @@ title="Print to PDF"
 {1\quad t &gt; 0}
 \end{array}} \right.\end{split}\]</div>
 </section>
-<section id="circuit-revisited">
-<h3>Circuit Revisited<a class="headerlink" href="#circuit-revisited" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="example-3-3-circuit-revisited">
+<span id="ex3-3"></span><h2>Example 3.3: Circuit Revisited<a class="headerlink" href="#example-3-3-circuit-revisited" title="Permalink to this headline">#</a></h2>
 <p>Consider the network shown below, where the switch is closed at time <span class="math notranslate nohighlight">\(t=T\)</span>.</p>
 <img src="pictures/circuit2.png">
 <p>Express the output voltage <span class="math notranslate nohighlight">\(v_{\mathrm{out}}\)</span> as a function of the unit step function, and sketch the appropriate waveform.</p>
@@ -977,11 +939,10 @@ title="Print to PDF"
 
 
 </pre></section>
-</section>
-<section id="simple-signal-operations">
-<h2>Simple Signal Operations<a class="headerlink" href="#simple-signal-operations" title="Permalink to this headline">#</a></h2>
-<section id="amplitude-scaling">
-<h3>Amplitude Scaling<a class="headerlink" href="#amplitude-scaling" title="Permalink to this headline">#</a></h3>
+<section id="example-3-4-simple-signal-operations">
+<h2>Example 3.4: Simple Signal Operations<a class="headerlink" href="#example-3-4-simple-signal-operations" title="Permalink to this headline">#</a></h2>
+<section id="a-amplitude-scaling">
+<h3>a) Amplitude Scaling<a class="headerlink" href="#a-amplitude-scaling" title="Permalink to this headline">#</a></h3>
 <p>Sketch <span class="math notranslate nohighlight">\(Au_0(t)\)</span> and <span class="math notranslate nohighlight">\(-Au_0(t)\)</span></p>
 <pre style="border: 2px solid blue">
 
@@ -1000,8 +961,8 @@ title="Print to PDF"
 
 
 </pre></section>
-<section id="time-reversal">
-<h3>Time Reversal<a class="headerlink" href="#time-reversal" title="Permalink to this headline">#</a></h3>
+<section id="b-time-reversal">
+<h3>b) Time Reversal<a class="headerlink" href="#b-time-reversal" title="Permalink to this headline">#</a></h3>
 <p>Sketch <span class="math notranslate nohighlight">\(u_0(-t)\)</span></p>
 <pre style="border: 2px solid blue">
 
@@ -1020,8 +981,8 @@ title="Print to PDF"
 
 
 </pre></section>
-<section id="time-delay-and-advance">
-<h3>Time Delay and Advance<a class="headerlink" href="#time-delay-and-advance" title="Permalink to this headline">#</a></h3>
+<section id="c-time-delay-and-advance">
+<h3>c) Time Delay and Advance<a class="headerlink" href="#c-time-delay-and-advance" title="Permalink to this headline">#</a></h3>
 <p>Sketch <span class="math notranslate nohighlight">\(u_0(t-T)\)</span> and <span class="math notranslate nohighlight">\(u_0(t+T)\)</span></p>
 <pre style="border: 2px solid blue">
 
@@ -1040,16 +1001,12 @@ title="Print to PDF"
 
 
 </pre></section>
-<section id="examples">
-<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h3>
-<section id="example-1">
-<h4>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">#</a></h4>
-<p>Which of these signals represents <span class="math notranslate nohighlight">\(-Au_0(t+T)\)</span>?</p>
-<img src="pictures/stepf1.png" width="50%"><p><strong>-&gt; Open Poll: 1.2.5</strong></p>
 </section>
-<section id="example-2">
-<h4>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">#</a></h4>
-<p>What is represented by</p>
+<section id="example-3-5">
+<span id="ex3-5"></span><h2>Example 3.5<a class="headerlink" href="#example-3-5" title="Permalink to this headline">#</a></h2>
+<p>a) Which of these signals represents <span class="math notranslate nohighlight">\(-Au_0(t+T)\)</span>?</p>
+<img src="pictures/stepf1.png" width="50%"><p><strong>-&gt; Open Poll: 1.2.5</strong></p>
+<p>b) What is represented by</p>
 <img src="pictures/stepf2.png" width="50%"><ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(-Au_0(t + T)\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(-Au_0(-t + T)\)</span></p></li>
@@ -1058,13 +1015,11 @@ title="Print to PDF"
 </ol>
 <p><strong>-&gt; Open Poll: 1.2.6</strong></p>
 </section>
-</section>
-</section>
 <section id="synthesis-of-signals-from-unit-step">
-<h2>Synthesis of Signals from Unit Step<a class="headerlink" href="#synthesis-of-signals-from-unit-step" title="Permalink to this headline">#</a></h2>
+<span id="ex3-6"></span><h2>3.6: Synthesis of Signals from Unit Step<a class="headerlink" href="#synthesis-of-signals-from-unit-step" title="Permalink to this headline">#</a></h2>
 <p>Unit step functions can be used to represent other time-varying functions such as rectangular pulses, square waves and triangular pulses.</p>
-<section id="synthesize-rectangular-pulse">
-<h3>Synthesize Rectangular Pulse<a class="headerlink" href="#synthesize-rectangular-pulse" title="Permalink to this headline">#</a></h3>
+<section id="a-synthesize-rectangular-pulse">
+<h3>a) Synthesize Rectangular Pulse<a class="headerlink" href="#a-synthesize-rectangular-pulse" title="Permalink to this headline">#</a></h3>
 <img src="pictures/rect.png"><pre style="border: 2px solid blue">
 
 
@@ -1072,8 +1027,8 @@ title="Print to PDF"
 
 
 </pre></section>
-<section id="synthesize-square-wave">
-<h3>Synthesize Square Wave<a class="headerlink" href="#synthesize-square-wave" title="Permalink to this headline">#</a></h3>
+<section id="b-synthesize-square-wave">
+<h3>b) Synthesize Square Wave<a class="headerlink" href="#b-synthesize-square-wave" title="Permalink to this headline">#</a></h3>
 <img src="pictures/square_wave.png"><pre style="border: 2px solid blue">
 
 
@@ -1089,8 +1044,8 @@ title="Print to PDF"
 
 
 </pre></section>
-<section id="synthesize-symmetric-rectangular-pulse">
-<h3>Synthesize Symmetric Rectangular Pulse<a class="headerlink" href="#synthesize-symmetric-rectangular-pulse" title="Permalink to this headline">#</a></h3>
+<section id="c-synthesize-symmetric-rectangular-pulse">
+<h3>c) Synthesize Symmetric Rectangular Pulse<a class="headerlink" href="#c-synthesize-symmetric-rectangular-pulse" title="Permalink to this headline">#</a></h3>
 <img src="pictures/symm_rect.png"><pre style="border: 2px solid blue">
 
 
@@ -1106,8 +1061,8 @@ title="Print to PDF"
 
 
 </pre></section>
-<section id="synthesize-symmetric-triangular-pulse">
-<h3>Synthesize Symmetric Triangular Pulse<a class="headerlink" href="#synthesize-symmetric-triangular-pulse" title="Permalink to this headline">#</a></h3>
+<section id="d-synthesize-symmetric-triangular-pulse">
+<h3>d) Synthesize Symmetric Triangular Pulse<a class="headerlink" href="#d-synthesize-symmetric-triangular-pulse" title="Permalink to this headline">#</a></h3>
 <img src="pictures/symm_tri.png"><pre style="border: 2px solid blue">
 
 
@@ -1124,8 +1079,8 @@ title="Print to PDF"
 
 </pre></section>
 </section>
-<section id="the-ramp-function">
-<h2>The Ramp Function<a class="headerlink" href="#the-ramp-function" title="Permalink to this headline">#</a></h2>
+<section id="example-3-7-the-ramp-function">
+<h2>Example 3.7: The Ramp Function<a class="headerlink" href="#example-3-7-the-ramp-function" title="Permalink to this headline">#</a></h2>
 <img src="pictures/rc.png">
 <p>In the circuit shown above <span class="math notranslate nohighlight">\(i_s\)</span> is a constant current source and the switch is closed at time <span class="math notranslate nohighlight">\(t=0\)</span>.</p>
 <p>Show that the voltage across the capacitor can be represented as</p>
@@ -1177,8 +1132,8 @@ title="Print to PDF"
 \[u_{n-1} = \frac{1}{n}\frac{d}{dt}u_n(t)\]</div>
 <p>Details are given in equations 1.26—1.29 in the textbook.</p>
 </section>
-<section id="the-dirac-delta-function">
-<h2>The Dirac Delta Function<a class="headerlink" href="#the-dirac-delta-function" title="Permalink to this headline">#</a></h2>
+<section id="example-3-8-the-dirac-delta-function">
+<h2>Example 3.8: The Dirac Delta Function<a class="headerlink" href="#example-3-8-the-dirac-delta-function" title="Permalink to this headline">#</a></h2>
 <img src="pictures/lr.png">
 <p>In the circuit shown above, the switch is closed at time <span class="math notranslate nohighlight">\(t=0\)</span> and <span class="math notranslate nohighlight">\(i_L(t)=0\)</span> for <span class="math notranslate nohighlight">\(t&lt;0\)</span>. Express the inductor current <span class="math notranslate nohighlight">\(i_L(t)\)</span> in terms of the unit step function and hence derive an expression for <span class="math notranslate nohighlight">\(v_L(t)\)</span>.</p>
 <pre style="border: 2px solid blue">
@@ -1211,16 +1166,11 @@ title="Print to PDF"
 <p><img alt="The delta function" src="../../_images/impulse.png" /></p>
 </section>
 </section>
-<section id="important-properties-of-the-delta-function">
-<h2>Important properties of the delta function<a class="headerlink" href="#important-properties-of-the-delta-function" title="Permalink to this headline">#</a></h2>
+<section id="example-3-9-important-properties-of-the-delta-function">
+<h2>Example 3.9: Important properties of the delta function<a class="headerlink" href="#example-3-9-important-properties-of-the-delta-function" title="Permalink to this headline">#</a></h2>
 <p>See the accompanying <a class="reference internal" href="index.html"><span class="doc std std-doc">notes</span></a>.</p>
-<section id="id1">
-<h3>Examples<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
-<section id="example-3">
-<h4>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline">#</a></h4>
 <p>Evaluate the following expressions</p>
-<div class="math notranslate nohighlight">
-\[3t^4\delta(t-1) \]</div>
+<p>a) <span class="math notranslate nohighlight">\(3t^4\delta(t-1)\)</span></p>
 <pre style="border: 2px solid blue">
 
 
@@ -1235,7 +1185,8 @@ title="Print to PDF"
 
 
 
-</pre><div class="math notranslate nohighlight">
+</pre><p>b)</p>
+<div class="math notranslate nohighlight">
 \[\int_{-\infty}^{\infty}t\delta(t-2)dt\]</div>
 <pre style="border: 2px solid blue">
 
@@ -1268,9 +1219,9 @@ title="Print to PDF"
 
 
 </pre></section>
-<section id="example-4">
-<h4>Example 4<a class="headerlink" href="#example-4" title="Permalink to this headline">#</a></h4>
-<img src="pictures/example2.png"><p>(1) Express the voltage waveform <span class="math notranslate nohighlight">\(v(t)\)</span> shown above as a sum of unit step functions for the time interval <span class="math notranslate nohighlight">\(-1 &lt; t &lt; 7\)</span> s</p>
+<section id="example-3-10">
+<h2>Example 3.10<a class="headerlink" href="#example-3-10" title="Permalink to this headline">#</a></h2>
+<img src="pictures/example2.png"><p>a) Express the voltage waveform <span class="math notranslate nohighlight">\(v(t)\)</span> shown above as a sum of unit step functions for the time interval <span class="math notranslate nohighlight">\(-1 &lt; t &lt; 7\)</span> s</p>
 <pre style="border: 2px solid blue">
 
 
@@ -1285,7 +1236,7 @@ title="Print to PDF"
 
 
 
-</pre><p>Using the result of part (1), compute the derivative of <span class="math notranslate nohighlight">\(v(t)\)</span> and sketch its waveform.</p>
+</pre><p>b) Using the result of 3.10(a), compute the derivative of <span class="math notranslate nohighlight">\(v(t)\)</span> and sketch its waveform.</p>
 <pre style="border: 2px solid blue">
 
 
@@ -1301,8 +1252,6 @@ title="Print to PDF"
 
 
 </pre></section>
-</section>
-</section>
 <section id="lab-work">
 <h2>Lab Work<a class="headerlink" href="#lab-work" title="Permalink to this headline">#</a></h2>
 <p>In the first lab, next Tuesday, we will solve further elemetary signals problems using MATLAB and Simulink
@@ -1312,14 +1261,14 @@ following the procedure given between pages 1-17 and 1-22 of the Karris. We will
 <section id="answers-to-in-class-questions">
 <h2>Answers to in-class questions<a class="headerlink" href="#answers-to-in-class-questions" title="Permalink to this headline">#</a></h2>
 <p>Mathematically</p>
-<p>Q1. <span class="math notranslate nohighlight">\(v_{\mathrm{out}} = 0\)</span> when <span class="math notranslate nohighlight">\(-\infty &lt; t &lt; 0\)</span> (answer 2)</p>
-<p>Q2. <span class="math notranslate nohighlight">\(v_{\mathrm{out}} = V_s\)</span> when <span class="math notranslate nohighlight">\(0 &lt; t &lt; \infty\)</span> (answer 3)</p>
-<p>Q3. <span class="math notranslate nohighlight">\(v_{\mathrm{out}} = \mathrm{undefined}\)</span> when <span class="math notranslate nohighlight">\(t=0\)</span> (answer 1)</p>
+<p>3.1(a). <span class="math notranslate nohighlight">\(v_{\mathrm{out}} = 0\)</span> when <span class="math notranslate nohighlight">\(-\infty &lt; t &lt; 0\)</span> (answer 2)</p>
+<p>3.1(b). <span class="math notranslate nohighlight">\(v_{\mathrm{out}} = V_s\)</span> when <span class="math notranslate nohighlight">\(0 &lt; t &lt; \infty\)</span> (answer 3)</p>
+<p>3.1(c). <span class="math notranslate nohighlight">\(v_{\mathrm{out}} = \mathrm{undefined}\)</span> when <span class="math notranslate nohighlight">\(t=0\)</span> (answer 1)</p>
 <p><span class="math notranslate nohighlight">\(V_{\mathrm{out}}\)</span> jumps from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(V_s\)</span> instantanously when the switch is closed. We call this a discontinuous signal!</p>
-<p>Q4: The correct image is:</p>
+<p>3.1(d): The correct image is:</p>
 <img src="pictures/step2.png">
-<p>Example 1: Answer 3.</p>
-<p>Example 2: Answer 2.</p>
+<p>Example 3.5(a): Answer 3.</p>
+<p>Example 3.5(b): Answer 2.</p>
 </section>
 </section>
 
