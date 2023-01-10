@@ -168,6 +168,8 @@ $$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$.
 
 The convolution integral is most conveniently evaluated by a graphical evaluation. We give three examples (5.4&mdash;5.6) which we will demonstrate in class using a [graphical visualization tool](https://uk.mathworks.com/matlabcentral/fileexchange/25199-graphical-demonstration-of-convolution) developed by Teja Muppirala of the Mathworks.
 
+The tool: [convolutiondemo.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/convolution_demo/convolutiondemo.m) (see [license.txt](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/convolution_demo/license.txt)).
+
 We will then work through the examples again in the examples class.
 
 ```{code-cell}
