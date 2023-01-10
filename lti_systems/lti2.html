@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Pingo Mobile Polling Setup &#8212; EG-150 Signals and Systems</title>
+    <title>Properties and Eigenfunctions of Continuous-Time LTI Systems &#8212; EG-150 Signals and Systems</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,11 +51,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/setup/polling_setup.html" />
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/lti_systems/lti2.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Setting up your Own Jupyter-MATLAB Computing Environment" href="index.html" />
-    <link rel="prev" title="Common Laplace Transform Pairs" href="../laplace_transform/1/lt_table.html" />
+    <link rel="next" title="Systems Described by Differential Equations" href="lti3.html" />
+    <link rel="prev" title="Response of a Continuous-Time LTI System and the Convolution Integral" href="lti1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -115,7 +117,7 @@ const thebe_selector_output = ".output, .cell_output"
   Online notes
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../signals_and_systems/index.html">
    Signals and Systems
@@ -153,28 +155,28 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../lti_systems/index.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    Linear Time-Invariant Systems
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../lti_systems/lti1.html">
+    <a class="reference internal" href="lti1.html">
      Response of a Continuous-Time LTI System and the Convolution Integral
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../lti_systems/lti2.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Properties and Eigenfunctions of Continuous-Time LTI Systems
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../lti_systems/lti3.html">
+    <a class="reference internal" href="lti3.html">
      Systems Described by Differential Equations
     </a>
    </li>
@@ -277,7 +279,7 @@ const thebe_selector_output = ".output, .cell_output"
   Appendices
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../laplace_transform/1/lt_props.html">
    Properties of the Laplace Transform
@@ -288,13 +290,13 @@ const thebe_selector_output = ".output, .cell_output"
    Common Laplace Transform Pairs
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../setup/polling_setup.html">
    Set Up In-Class Polling
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="index.html">
+  <a class="reference internal" href="../setup/index.html">
    Setting up your own version of this book
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
@@ -304,32 +306,32 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="jupyter.html">
+    <a class="reference internal" href="../setup/jupyter.html">
      About Jupyter notebooks
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="python.html">
+    <a class="reference internal" href="../setup/python.html">
      Installing Python
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="setup.html">
+    <a class="reference internal" href="../setup/setup.html">
      Setting up your Own Jupyter-MATLAB Computing Environment
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="matlab_kernel.html">
+    <a class="reference internal" href="../setup/matlab_kernel.html">
      Testing the Jupyter Matlab Kernel
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="advanced-setup.html">
+    <a class="reference internal" href="../setup/advanced-setup.html">
      Quick Start - For Experienced Users
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="jupyter-book.html">
+    <a class="reference internal" href="../setup/jupyter-book.html">
      Setting up jupyter-book
     </a>
    </li>
@@ -390,6 +392,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/lti_systems/lti2.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -429,7 +460,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Fsetup/polling_setup.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Flti_systems/lti2.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -446,7 +477,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/setup/polling_setup.md"
+        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/lti_systems/lti2.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -474,7 +505,24 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/setup/polling_setup.md"
+        <a href="../_sources/lti_systems/lti2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/lti_systems/lti2.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -534,26 +582,101 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setup">
-   Setup
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subjects-to-be-covered">
+   Subjects to be covered
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#properties-of-continuous-time-lti-systems">
+   Properties of Continuous-Time LTI Systems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eigenfunctions-of-continuous-time-lti-systems">
+   Eigenfunctions of Continuous-Time LTI Systems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples-6">
+   Examples 6
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-session-id-for-this-course">
-     The Session ID for this Course
+    <a class="reference internal nav-link" href="#example-6-1">
+     Example 6.1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#icebreaker-questions">
-     Icebreaker Questions
+    <a class="reference internal nav-link" href="#example-6-2">
+     Example 6.2
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#end-of-setup">
-     End of setup
+    <a class="reference internal nav-link" href="#example-6-3">
+     Example 6.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-6-4">
+     Example 6.4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-6-5">
+     Example 6.5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-6-6">
+     Example 6.6
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#next-time">
+   Next Time
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#systems-described-by-differential-equations">
+   Systems Described by Differential Equations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#worked-solutions">
+   Worked Solutions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#homework-problems">
+   Homework Problems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-exercises">
+   Lab Exercises
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   Summary
+  </a>
  </li>
 </ul>
 
@@ -564,7 +687,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Pingo Mobile Polling Setup</h1>
+                <h1>Properties and Eigenfunctions of Continuous-Time LTI Systems</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -575,26 +698,101 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#setup">
-   Setup
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subjects-to-be-covered">
+   Subjects to be covered
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#properties-of-continuous-time-lti-systems">
+   Properties of Continuous-Time LTI Systems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eigenfunctions-of-continuous-time-lti-systems">
+   Eigenfunctions of Continuous-Time LTI Systems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples-6">
+   Examples 6
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-session-id-for-this-course">
-     The Session ID for this Course
+    <a class="reference internal nav-link" href="#example-6-1">
+     Example 6.1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#icebreaker-questions">
-     Icebreaker Questions
+    <a class="reference internal nav-link" href="#example-6-2">
+     Example 6.2
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#end-of-setup">
-     End of setup
+    <a class="reference internal nav-link" href="#example-6-3">
+     Example 6.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-6-4">
+     Example 6.4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-6-5">
+     Example 6.5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-6-6">
+     Example 6.6
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#next-time">
+   Next Time
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#systems-described-by-differential-equations">
+   Systems Described by Differential Equations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#worked-solutions">
+   Worked Solutions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#homework-problems">
+   Homework Problems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-exercises">
+   Lab Exercises
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   Summary
+  </a>
  </li>
 </ul>
 
@@ -606,44 +804,102 @@ title="Print to PDF"
                 
               <div>
                 
-  <!-- #region slideshow={"slide_type": "slide"} -->
-<section class="tex2jax_ignore mathjax_ignore" id="pingo-mobile-polling-setup">
-<h1>Pingo Mobile Polling Setup<a class="headerlink" href="#pingo-mobile-polling-setup" title="Permalink to this headline">#</a></h1>
-<p>We will be using Pingo mobile response system polling in this session.</p>
-<!-- #endregion -->
-<!-- #region slideshow={"slide_type": "subslide"} -->
-<section id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h2>
-<p>Browse to: <a class="reference external" href="https://pingo.coactum.de">pingo.coactum.de</a>.</p>
-<img src="https://chart.googleapis.com/chart?cht=qr&chs=300x300&choe=UTF-8&chld=H&chl=https://pingo.coactum.de" alt="QR Code" />
-<!-- #endregion -->
-<!-- #region slideshow={"slide_type": "subslide"} -->
-<p>When prompted: enter the <strong>session ID</strong></p>
-<section id="the-session-id-for-this-course">
-<h3>The Session ID for this Course<a class="headerlink" href="#the-session-id-for-this-course" title="Permalink to this headline">#</a></h3>
-<pre>
-
-
-
-</pre>
-<div style="font-size: 32pt; font-face: bold;">194851</div>
-<pre>
-</pre>
-<!-- #endregion -->
-<!-- #region slideshow={"slide_type": "subslide"} -->
+  <section class="tex2jax_ignore mathjax_ignore" id="properties-and-eigenfunctions-of-continuous-time-lti-systems">
+<span id="lti-systems"></span><h1>Properties and Eigenfunctions of Continuous-Time LTI Systems<a class="headerlink" href="#properties-and-eigenfunctions-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h1>
+<p>Based on Chapter 2 of <span id="id1">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span></p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>Two most important attributes of systems are linearity and time invariance. In this chapter we develop the fundamental input-output relationship for systems having these attributes. It will be shown that the input output-relationship for LTI systems is described in terms of a convolution operation. The importance of the convolution operation in LTI systems stems from the fact that the knowledge of the system response and LTI system to the unit impulse response allows us to find its output to any input signals. Specifying the input-output relationships for LTI systems by differential equations will also be discussed.</p>
+<p>We will discuss specifying the input-output relationsships for discrete-time systems will be covered in <strong>EG-247 Digital Signal Processing</strong> next year.</p>
 </section>
-<section id="icebreaker-questions">
-<h3>Icebreaker Questions<a class="headerlink" href="#icebreaker-questions" title="Permalink to this headline">#</a></h3>
-<!-- #endregion -->
-<!-- #region slideshow={"slide_type": "fragment"} -->
-<p><strong>-&gt; Launch Poll</strong></p>
-<!-- #endregion -->
-<!-- #region slideshow={"slide_type": "subslide"} -->
+<section id="subjects-to-be-covered">
+<h2>Subjects to be covered<a class="headerlink" href="#subjects-to-be-covered" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="lti3.html#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="lti3.html#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="#examples-6"><span class="std std-ref">Examples 6</span></a></p></li>
+</ul>
 </section>
-<section id="end-of-setup">
-<h3>End of setup<a class="headerlink" href="#end-of-setup" title="Permalink to this headline">#</a></h3>
-<!-- #endregion -->
+<section id="properties-of-continuous-time-lti-systems">
+<span id="id2"></span><h2>Properties of Continuous-Time LTI Systems<a class="headerlink" href="#properties-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h2>
 </section>
+<section id="eigenfunctions-of-continuous-time-lti-systems">
+<span id="id3"></span><h2>Eigenfunctions of Continuous-Time LTI Systems<a class="headerlink" href="#eigenfunctions-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="examples-6">
+<span id="id4"></span><h2>Examples 6<a class="headerlink" href="#examples-6" title="Permalink to this headline">#</a></h2>
+<section id="example-6-1">
+<span id="ex6-1"></span><h3>Example 6.1<a class="headerlink" href="#example-6-1" title="Permalink to this headline">#</a></h3>
+<p>Verify the following properties of the convolution integral; that is,</p>
+<p>(a) <span class="math notranslate nohighlight">\(x(t)*h(t) = h(t)*x(t)\)</span></p>
+<p>(b) <span class="math notranslate nohighlight">\(\left\{x(t) * h_1(t)\right\} * h_2(t) = x(t)*\left\{h_1(t) * h_2(t)\right\}\)</span></p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.1 in in {cite}schaum.</p>
+</section>
+<section id="example-6-2">
+<span id="ex6-2"></span><h3>Example 6.2<a class="headerlink" href="#example-6-2" title="Permalink to this headline">#</a></h3>
+<p>For the answer, refer to the lecture recording or see solved problem 2.2 in in {cite}schaum.</p>
+</section>
+<section id="example-6-3">
+<span id="ex6-3"></span><h3>Example 6.3<a class="headerlink" href="#example-6-3" title="Permalink to this headline">#</a></h3>
+<p>For the answer, refer to the lecture recording or see solved problem 2.3 in in {cite}schaum.</p>
+</section>
+<section id="example-6-4">
+<span id="ex6-4"></span><h3>Example 6.4<a class="headerlink" href="#example-6-4" title="Permalink to this headline">#</a></h3>
+<p>For the answer, refer to the lecture recording or see solved problem 2.4 in in {cite}schaum.</p>
+</section>
+<section id="example-6-5">
+<span id="ex6-5"></span><h3>Example 6.5<a class="headerlink" href="#example-6-5" title="Permalink to this headline">#</a></h3>
+<p>For the answer, refer to the lecture recording or see solved problem 2.5 in {cite}schaum.</p>
+</section>
+<section id="example-6-6">
+<span id="ex6-6"></span><h3>Example 6.6<a class="headerlink" href="#example-6-6" title="Permalink to this headline">#</a></h3>
+<p>For the answer, refer to the lecture recording or see solved problem 2.6 in {cite}schaum.</p>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<p>In this lecture we have started our look at LTI systems.</p>
+<p>In particular we have looked at</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="lti1.html#response-of-a-continuous-time-lti-system-and-the-convolution-integral"><span class="std std-ref">Response of a Continuous-Time LTI System and the Convolution Integral</span></a></p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>Summary<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="lti3.html#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="lti3.html#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
+</ul>
+</section>
+<section id="next-time">
+<h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="lti3.html#systems-described-by-differential-equations"><span class="std std-ref">Systems Described by Differential Equations</span></a></p></li>
+</ul>
+</section>
+<section id="systems-described-by-differential-equations">
+<span id="id6"></span><h2>Systems Described by Differential Equations<a class="headerlink" href="#systems-described-by-differential-equations" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="worked-solutions">
+<h2>Worked Solutions<a class="headerlink" href="#worked-solutions" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="homework-problems">
+<h2>Homework Problems<a class="headerlink" href="#homework-problems" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="lab-exercises">
+<h2>Lab Exercises<a class="headerlink" href="#lab-exercises" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="id7">
+<h2>Summary<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h2>
+<p>In this lecture we have started our look at LTI systems.</p>
+<p>In particular we have looked at</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="lti1.html#response-of-a-continuous-time-lti-system-and-the-convolution-integral"><span class="std std-ref">Response of a Continuous-Time LTI System and the Convolution Integral</span></a></p></li>
+<li><p><span class="xref std std-ref">examples_5_Responses_of_a_Continuous-Time_LTI_System_and_Convolution)</span></p></li>
+<li><p><a class="reference internal" href="lti3.html#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="lti3.html#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="lti3.html#systems-described-by-differential-equations"><span class="std std-ref">Systems Described by Differential Equations</span></a></p></li>
+</ul>
 </section>
 </section>
 
@@ -656,16 +912,16 @@ title="Print to PDF"
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "matlab"
         },
         kernelOptions: {
-            kernelName: "python3",
-            path: "./setup"
+            kernelName: "matlab",
+            path: "./lti_systems"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'matlab'</script>
 
               </div>
               
@@ -674,17 +930,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../laplace_transform/1/lt_table.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="lti1.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Common Laplace Transform Pairs</p>
+            <p class="prev-next-title">Response of a Continuous-Time LTI System and the Convolution Integral</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="index.html" title="next page">
+    <a class='right-next' id="next-link" href="lti3.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Setting up your Own Jupyter-MATLAB Computing Environment</p>
+        <p class="prev-next-title">Systems Described by Differential Equations</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

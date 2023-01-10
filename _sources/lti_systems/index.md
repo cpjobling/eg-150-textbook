@@ -17,12 +17,12 @@ kernelspec:
 (lti_systems)=
 # Linear Time-Invariant Systems
 
-Based on Chapter 2 of {cite}`schaum` 
+This chapter is based on on Chapter 2 of {cite}`schaum` 
 
 
 ## Introduction
 
-Two most important attributes of systems are linearity and time invariance. In this chapter we develop the fundamental input-output relationship for systems having these attributes. It will be shown that the input output-relationship for LTI systems is described in terms of a convolution operation. The importance of the convolution operation in LTI systems stems from the fact that the knowledge of the system response and LTI system to the unit impulse response allows us to find its output to any input signals. Specifying the input-output relationships for LTI systems by differential equations will also be discussed.
+Two most important attributes of systems are linearity and time invariance. In this chapter we develop the fundamental input-output relationship for systems having these attributes. It will be shown that the input output-relationship for LTI systems is described in terms of a convolution operation. The importance of the convolution operation in LTI systems stems from the fact that the knowledge of the system response and LTI system to the unit impulse response allows us to find its output to any input signals. Specifying the input-output relationships for LTI systems by differential equations will also be discussed. on Chapter 2 of {cite}`schaum` 
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -30,7 +30,7 @@ We will discuss specifying the input-output relationsships for discrete-time sys
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Subjects to be covered
+## Contents of this chapter
 
 * {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
 * {ref}`examples_5_Responses_of_a_Continuous-Time_LTI_System_and_Convolution)`
@@ -112,7 +112,7 @@ The equation
 
 $$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$
 
-is commonly called the *convolution integral*. 
+is commonly called the *convolution integral*.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -120,7 +120,7 @@ Thus we have the fundamental result that:
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-*the output of any continuous-time LTI system is the convolution of the input $x(t)$ with the impulse response $h(t)$ of the system*. 
+*the output of any continuous-time LTI system is the convolution of the input $x(t)$ with the impulse response $h(t)$ of the system*.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -133,7 +133,6 @@ Thus we have the fundamental result that:
 
 Continuous-time LTI system
 :::
-
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
