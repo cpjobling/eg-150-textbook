@@ -24,6 +24,13 @@ parts:
         title: MATLAB Lab 1 - Symbolic Math Toolbox OnRamp 
   - file: lti_systems/index
     title: Linear Time-Invariant Systems
+    sections:
+      - file: lti_systems/lti1
+        title: Response of a Continuous-Time LTI System and the Convolution Integral
+      - file: lti_systems/lti2
+        title: Properties and Eigenfunctions of Continuous-Time LTI Systems
+      - file: lti_systems/lti3
+        title: Systems Described by Differential Equations
   - file: laplace_transform/index
     title: Laplace Transforms and their Applications
     sections:

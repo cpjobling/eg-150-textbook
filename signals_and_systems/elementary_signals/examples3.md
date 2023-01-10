@@ -34,7 +34,8 @@ To accompany {ref}`elementary_signals`.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Elementary Signals
+(ex3_1)=
+## 3.1 Elementary Signals
 
 Consider the network shown in below where the switch is closed at time $t=T$ and all components are ideal. 
 
@@ -44,7 +45,7 @@ Express the output voltage $V_{\mathrm{out}}$ as a function of the unit step fun
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Q1: What happens **before** $t=T$?
+a) What happens **before** $t=T$?
 
 1. $v_{\mathrm{out}} = \mathrm{undefined}$
 2. $v_{\mathrm{out}} = 0$
@@ -58,7 +59,7 @@ Q1: What happens **before** $t=T$?
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Q2: What happens **after** $t=T$?
+b) What happens **after** $t=T$?
 
 1. $v_{\mathrm{out}} = \mathrm{undefined}$
 2. $v_{\mathrm{out}} = 0$
@@ -72,7 +73,7 @@ Q2: What happens **after** $t=T$?
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Q3: What happens **at** $t=T$?
+c) What happens **at** $t=T$?
 
 1. $v_{\mathrm{out}} = \mathrm{undefined}$
 2. $v_{\mathrm{out}} = 0$
@@ -86,7 +87,7 @@ Q3: What happens **at** $t=T$?
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Q4: What does the response of $V_{\mathrm{out}}$ look like? 
+d) What does the response of $V_{\mathrm{out}}$ look like? 
 
 Circle the picture you think is correct on your handout.
 
@@ -101,7 +102,10 @@ Circle the picture you think is correct on your handout.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## The Unit Step Function
+(ex3_2)=
+## Example 3.2
+
+The Unit Step Function
 
 $${u_0}(t) = \left\{ {\begin{array}{*{20}{c}}
 {0\quad t < 0}\\
@@ -141,7 +145,8 @@ $$\mathrm{heaviside}(t) = \left\{ {\begin{array}{*{20}{c}}
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Circuit Revisited
+(ex3_3)=
+## Example 3.3: Circuit Revisited
 
 Consider the network shown below, where the switch is closed at time $t=T$. 
 
@@ -171,11 +176,11 @@ Express the output voltage $v_{\mathrm{out}}$ as a function of the unit step fun
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Simple Signal Operations
+## Example 3.4: Simple Signal Operations
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Amplitude Scaling
+### a) Amplitude Scaling
 
 Sketch $Au_0(t)$ and $-Au_0(t)$
 
@@ -201,7 +206,7 @@ Sketch $Au_0(t)$ and $-Au_0(t)$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Time Reversal
+### b) Time Reversal
 
 Sketch $u_0(-t)$
 
@@ -227,7 +232,7 @@ Sketch $u_0(-t)$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Time Delay and Advance
+### c) Time Delay and Advance
 
 Sketch $u_0(t-T)$ and $u_0(t+T)$
 
@@ -251,15 +256,12 @@ Sketch $u_0(t-T)$ and $u_0(t+T)$
 
 </pre>
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### Examples
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### Example 1
+(ex3_5)=
+## Example 3.5
 
-Which of these signals represents $-Au_0(t+T)$?
+a) Which of these signals represents $-Au_0(t+T)$?
 
 <img src="pictures/stepf1.png" width="50%">
 
@@ -269,9 +271,7 @@ Which of these signals represents $-Au_0(t+T)$?
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### Example 2
-
-What is represented by
+b) What is represented by
 
 <img src="pictures/stepf2.png" width="50%">
 
@@ -288,13 +288,14 @@ What is represented by
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Synthesis of Signals from Unit Step
+(ex3_6)=
+## 3.6: Synthesis of Signals from Unit Step
 
 Unit step functions can be used to represent other time-varying functions such as rectangular pulses, square waves and triangular pulses.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Synthesize Rectangular Pulse
+### a) Synthesize Rectangular Pulse
 
 <img src="pictures/rect.png">
 
@@ -310,7 +311,7 @@ Unit step functions can be used to represent other time-varying functions such a
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Synthesize Square Wave
+### b) Synthesize Square Wave
 
 <img src="pictures/square_wave.png">
 
@@ -334,7 +335,7 @@ Unit step functions can be used to represent other time-varying functions such a
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Synthesize Symmetric Rectangular Pulse
+### c) Synthesize Symmetric Rectangular Pulse
 
 <img src="pictures/symm_rect.png">
 
@@ -358,7 +359,7 @@ Unit step functions can be used to represent other time-varying functions such a
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Synthesize Symmetric Triangular Pulse
+### d) Synthesize Symmetric Triangular Pulse
 
 <img src="pictures/symm_tri.png">
 
@@ -382,7 +383,7 @@ Unit step functions can be used to represent other time-varying functions such a
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## The Ramp Function
+## Example 3.7: The Ramp Function
 
 <img src="pictures/rc.png">
 
@@ -457,7 +458,7 @@ Details are given in equations 1.26&mdash;1.29 in the textbook.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## The Dirac Delta Function
+## Example 3.8: The Dirac Delta Function
 
 <img src="pictures/lr.png">
 
@@ -509,23 +510,17 @@ $\delta(t) = 0$ for all $t\ne 0$.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Important properties of the delta function
+## Example 3.9: Important properties of the delta function
 
 See the accompanying [notes](index).
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### Examples
-
 +++ {"slideshow": {"slide_type": "subslide"}}
-
-#### Example 3
 
 Evaluate the following expressions
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-$$3t^4\delta(t-1) $$
+a) $3t^4\delta(t-1)$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -546,6 +541,8 @@ $$3t^4\delta(t-1) $$
 </pre>
 
 +++ {"slideshow": {"slide_type": "fragment"}}
+
+b) 
 
 $$\int_{-\infty}^{\infty}t\delta(t-2)dt$$
 
@@ -591,13 +588,13 @@ $$t^2\delta'(t-3)$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### Example 4
+## Example 3.10
 
 <img src="pictures/example2.png">
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(1) Express the voltage waveform $v(t)$ shown above as a sum of unit step functions for the time interval $-1 < t < 7$ s
+a) Express the voltage waveform $v(t)$ shown above as a sum of unit step functions for the time interval $-1 < t < 7$ s
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -619,7 +616,7 @@ $$t^2\delta'(t-3)$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Using the result of part (1), compute the derivative of $v(t)$ and sketch its waveform.
+b) Using the result of 3.10(a), compute the derivative of $v(t)$ and sketch its waveform.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -653,18 +650,18 @@ following the procedure given between pages 1-17 and 1-22 of the Karris. We will
 
 Mathematically
 
-Q1. $v_{\mathrm{out}} = 0$ when $-\infty < t < 0$ (answer 2)
+3.1(a). $v_{\mathrm{out}} = 0$ when $-\infty < t < 0$ (answer 2)
 
-Q2. $v_{\mathrm{out}} = V_s$ when $0 < t < \infty$ (answer 3)
+3.1(b). $v_{\mathrm{out}} = V_s$ when $0 < t < \infty$ (answer 3)
 
-Q3. $v_{\mathrm{out}} = \mathrm{undefined}$ when $t=0$ (answer 1)
+3.1(c). $v_{\mathrm{out}} = \mathrm{undefined}$ when $t=0$ (answer 1)
 
 $V_{\mathrm{out}}$ jumps from $0$ to $V_s$ instantanously when the switch is closed. We call this a discontinuous signal!
 
-Q4: The correct image is:
+3.1(d): The correct image is:
 
 <img src="pictures/step2.png">
 
-Example 1: Answer 3.
+Example 3.5(a): Answer 3.
 
-Example 2: Answer 2.
+Example 3.5(b): Answer 2.

@@ -14,39 +14,27 @@ kernelspec:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(lti_systems)=
-# Linear Time-Invariant Systems
-
-This chapter is based on on Chapter 2 of {cite}`schaum` 
-
-
-## Introduction
-
-Two most important attributes of systems are linearity and time invariance. In this chapter we develop the fundamental input-output relationship for systems having these attributes. It will be shown that the input output-relationship for LTI systems is described in terms of a convolution operation. The importance of the convolution operation in LTI systems stems from the fact that the knowledge of the system response and LTI system to the unit impulse response allows us to find its output to any input signals. Specifying the input-output relationships for LTI systems by differential equations will also be discussed. on Chapter 2 of {cite}`schaum` 
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-We will discuss specifying the input-output relationsships for discrete-time systems will be covered in **EG-247 Digital Signal Processing** next year.
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Contents of this chapter
-
-* {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
-* {ref}`examples_5_Responses_of_a_Continuous-Time_LTI_System_and_Convolution)`
-* {ref}`Properties_of_Continuous_Time_LTI_Systems`
-* {ref}`eigenfunctions_of_continuous_time_LTI_systems`
-* {ref}`Systems_Described_by_Differential_Equations`
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
 (Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral)=
-## Response of a Continuous-Time LTI System and the Convolution Integral
+# Response of a Continuous-Time LTI System and the Convolution Integral
+
+This section is based on Section 2.1 of {cite}`schaum`.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+## Subjects to be Covered
+
+* {ref}`impulse_reponse`
+* {ref}`abitrary_signal_response`
+* {ref}`convolution_integral`
+* {ref}`props_of_con_integral`
+* {ref}`convolution_operation`
+* {ref}`step_response`
+* {ref}`examples_5_Responses_of_a_Continuous_Time_LTI_System_and_Convolution`
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 (impulse_reponse)=
-### A. Impulse Response
+## A. Impulse Response
 
 The *impulse response* $h(t)$ of a continuous-time LTI system (represented by $\mathbf{T}$) is defined as the response of the system when the input is $\delta(t)$, that is,
 
@@ -55,7 +43,7 @@ $$h(t) = \mathbf{T}\left\{\delta(t)\right\}$$
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (abitrary_signal_response)=
-### B. Response to an Arbitrary Input
+## B. Response to an Arbitrary Input
 
 From the {ref}`sifting_property` 
 
@@ -96,7 +84,7 @@ This equation indicates that a continuous-time LTI system is completely characte
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (convolution_integral)=
-### C. Convolution Integral
+## C. Convolution Integral
 
 The equation
 
@@ -137,31 +125,32 @@ Continuous-time LTI system
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (props_of_con_integral)=
-### D. Properties of the Convolution Integral
+## D. Properties of the Convolution Integral
 
 The convolution integral has the following properties.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-#### 1. Commutative:
+### 1. Commutative:
 
 $$x(t) * h(t) = h(t) * x(t)$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-#### 2. Associative:
+### 2. Associative:
 
 $$\left\{x(t) * h_1(t)\right\} * h_2(t) = x(t) * \left\{h_1(t) * h_2(t)\right\}$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-#### 3. Distributive:
+### 3. Distributive:
 
 $$x(t)*\left\{h_1(t) + h_2(t)\right\} = x(t)*h_1(t) + x(t)*h_2(t)$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### E. Convolution Integral Operation
+(convolution_operation)=
+## E. Convolution Integral Operation
 
 Applying the communitative propery of convolution to the convolution integral, we obtain
 
@@ -175,9 +164,11 @@ $$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### Graphical Evaluation of the Convolution Integral
+### Graphical Evaluation of the Convolution Integral
 
 The convolution integral is most conveniently evaluated by a graphical evaluation. We give three examples (5.4&mdash;5.6) which we will demonstrate in class using a [graphical visualization tool](https://uk.mathworks.com/matlabcentral/fileexchange/25199-graphical-demonstration-of-convolution) developed by Teja Muppirala of the Mathworks.
+
+The tool: [convolutiondemo.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/convolution_demo/convolutiondemo.m) (see [license.txt](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/convolution_demo/license.txt)).
 
 We will then work through the examples again in the examples class.
 
@@ -201,7 +192,7 @@ convolutiondemo % ignore warnings
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### Summary of Steps
+### Summary of Steps
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -225,7 +216,8 @@ Examples of the above convolution integral operation are given in Examples 4.1 t
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### F. Step Response
+(step_response)=
+## F. Step Response
 
 The *step response* $s(t)$ of a continuous-time LTI system (represented $\mathbf{T}$) is defined by the response of the system when the input is $u_0(t)$; that is,
 
@@ -257,7 +249,7 @@ Thus the impulse response $h(t)$ can be determined by differentiating the step r
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(examples_5_Responses_of_a_Continuous-Time_LTI_System_and_Convolution)=
+(examples_5_Responses_of_a_Continuous_Time_LTI_System_and_Convolution)=
 ## Examples 5: Responses of a Continuous-Time LTI System and Convolution
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -324,9 +316,7 @@ For the answer, refer to the lecture recording or see solved problem 2.6 in {cit
 
 ## Summary
 
-In this lecture we have started our look at LTI systems.
-
-In particular we have looked at
+In this lecture we have looked at
 
 * {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
 
@@ -336,44 +326,3 @@ In particular we have looked at
 
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-(Properties_of_Continuous_Time_LTI_Systems)=
-## Properties of Continuous-Time LTI Systems
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-(eigenfunctions_of_continuous_time_LTI_systems)=
-## Eigenfunctions of Continuous-Time LTI Systems
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-(Systems_Described_by_Differential_Equations)=
-## Systems Described by Differential Equations
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Worked Solutions
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Homework Problems
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Lab Exercises
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Summary
-
-In this lecture we have started our look at LTI systems.
-
-In particular we have looked at
-
-* {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
-* {ref}`examples_5_Responses_of_a_Continuous-Time_LTI_System_and_Convolution)`
-* {ref}`Properties_of_Continuous_Time_LTI_Systems`
-* {ref}`eigenfunctions_of_continuous_time_LTI_systems`
-* {ref}`Systems_Described_by_Differential_Equations`

@@ -25,16 +25,18 @@ This section is based on Section 1.5 of {cite}`schaum`.
 * {ref}`system_representation`
 * {ref}`deterministic_and_stochastic_systems`
 * {ref}`continuous_time_and_discrete_time_systems`
-* {ref}`aystems_with_memory_and_without_memory`
+* {ref}`systems_with_memory_and_without_memory`
 * {ref}`causal_and_non-causal_systems`
 * {ref}`linear_systems_and_nonlinear_systems`
 * {ref}`time_invariant_and_time_varying_systems`
 * {ref}`linear_time_invariant_systems`
 * {ref}`stable_systems`
 * {ref}`feedback_systems`
+* {ref}`worked_examples_4`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(system_representation)=
 ## System Representation
 
 A *system* is a mathematical model of a physical process that relates
@@ -106,7 +108,7 @@ Note that in a continuous-time system the input $x(t)$ and $y(t)$ are often expr
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-aystems_with_memory_and_without_memory)=
+(systems_with_memory_and_without_memory)=
 ## Systems with Memory and without Memory
 
 +++ {"slideshow": {"slide_type": "fragment"}}
@@ -358,7 +360,9 @@ You will see some examples of systems with feedback when you study op-amp circui
 
 (ex4.1)=
 
-4.1 Consider the RC circuit shown in {numref}`fig:rc_circuit`. Find the relationship between the input $x(t)$ and the output $y(t)$
+### Example 4.1: RC Circuit 
+
+Consider the RC circuit shown in {numref}`fig:rc_circuit`. Find the relationship between the input $x(t)$ and the output $y(t)$
 
 (a) If $x(t) = v_s(t)$ and $y(t) = v_c(t)$.
 
@@ -376,7 +380,10 @@ For the answer, refer to the lecture recording or see solved problem 1.32 in {ci
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-4.2 Consider the capacitor shown in {numref}`fig:cap_circuit`. Let the input $x(t) = i(t)$ and the output $y(t) = v_c(t)$.
+(ex4_2)=
+### Example 4.2: Capacitor circuit
+
+Consider the capacitor shown in {numref}`fig:cap_circuit`. Let the input $x(t) = i(t)$ and the output $y(t) = v_c(t)$.
 
 (a) Find the input-output relationship.
 
@@ -394,12 +401,15 @@ For the answer, refer to the lecture recording or see solved problem 1.33 in {ci
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-4.3 Consider the system shown in {numref}`fig:4_3`. Determine whether it is (a) memoryless, (b) causal, (c) linear, (d) time invariant, or (e) stable.
+(ex4_3)=
+### Example 4.3: Signal modulator
+
+Consider the system shown in {numref}`fig:4_3`. Determine whether it is (a) memoryless, (b) causal, (c) linear, (d) time invariant, or (e) stable.
 
 :::{figure-md} fig:4_3
 <img src="pictures/fig4_3.png" alt="A system" width="60%">
 
-A system
+A signal modulator
 :::
 
 +++ {"slideshow": {"slide_type": "notes"}}
@@ -408,7 +418,10 @@ For the answer, refer to the lecture recording or see solved problem 1.34 in {ci
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-4.4 A system has the input-output relationship given by
+(ex4_4)=
+### Example 4.4 
+
+A system has the input-output relationship given by
 
 $$y = \mathbf{T}\left\{x\right\} = x^2$$
 
@@ -420,7 +433,10 @@ For the answer, refer to the lecture recording or see solved problem 1.35 in {ci
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-4.5 Consider the system whose input-output relationship is given by the linear equation 
+(ex4_5)=
+### Example 4.5
+
+Consider the system whose input-output relationship is given by the linear equation 
 
 $$y = ax + b$$
 
@@ -432,7 +448,8 @@ For the answer, refer to the lecture recording or see solved problem 1.40 in {ci
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-4.6 
+(ex4_6)=
+### Example 4.6 
 
 (a) Show that the causality for a continuous-time linear system is equivalent to the following statement: For any time $t_0$ and any input $x(t)$ with $x(t) = 0$ for $t \le t_0$, the output $y(t)$ is zero for $t \le t_0$.
 
@@ -446,7 +463,10 @@ For the answer, refer to the lecture recording or see solved problem 1.43 in {ci
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-4.7 Let $\mathbf{T}$ represent a continuous-time LTI system. Then show that
+(ex4_7)=
+### Example 4.7
+
+Let $\mathbf{T}$ represent a continuous-time LTI system. Then show that
 
 $$\mathbf{T}\left\{e^{st}\right\}= \lambda e^{st}$$
 
@@ -467,7 +487,7 @@ In particular we have looked at
 * {ref}`system_representation`
 * {ref}`deterministic_and_stochastic_systems`
 * {ref}`continuous_time_and_discrete_time_systems`
-* {ref}`aystems_with_memory_and_without_memory`
+* {ref}`systems_with_memory_and_without_memory`
 * {ref}`causal_and_non-causal_systems`
 * {ref}`linear_systems_and_nonlinear_systems`
 * {ref}`time_invariant_and_time_varying_systems`
