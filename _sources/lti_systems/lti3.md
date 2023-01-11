@@ -31,7 +31,7 @@ We conclude our introduction to continuous-time LTI system by considering
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (Continuous_Time_LTI_Systems_Described_by_Differential_Equations)=
-## Continuous-Time LTI Systems Described by Differential Equations
+## Continuous-time LTI systems described by differential equations
 
 * {ref}`ccde_a_linear_constant_coefficient_differential_equations`
 * {ref}`ccde_b_linearity`
