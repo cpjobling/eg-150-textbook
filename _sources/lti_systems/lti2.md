@@ -26,6 +26,7 @@ This section is based on Sections 2.3 and 2.4 of {cite}`schaum`
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
 * {ref}`examples_6`
+* {ref}`examples_7`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -192,7 +193,7 @@ The above results inderline the definition of the Laplace transform and Fourier 
 (ex6_1)=
 ### Example 6.1 
 
-The signals in {refnumber}`fig:ex6.1`(a) and (b) are the input $x(t)$ and the output $y(t)$, respectively, of a certain continuous-time LTI system. 
+The signals in {numref}`fig:ex6.1`(a) and (b) are the input $x(t)$ and the output $y(t)$, respectively, of a certain continuous-time LTI system. 
 
 :::{figure-md} fig:ex6.1
 <img src="pictures/ex6_1.png" alt="Input and output signals for a continuous-time LTI system" width="60%">
@@ -208,12 +209,25 @@ Sketch the output to the following inputs:
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.1 in in {cite}schaum.
+For the answer, refer to the lecture recording or see solved problem 2.9 in in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex6_2)=
 ### Example 6.2 
+
+Consider a continuous-time LTI system whose step response is given by
+
+$$y(t) = e^{-t}u_0(t)$$
+
+Determine and sketch the output of the system to the input $x(t)$ shown in {numref}`fig:ex6.2`.
+
+:::{figure-md} fig:ex6.2
+<img src="pictures/ex6_2.png" alt="Signal for Exercise 6.2" width="40%">
+
+Signal for Exercise 6.2
+:::
+
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -224,36 +238,68 @@ For the answer, refer to the lecture recording or see solved problem 2.2 in in {
 (ex6_3)=
 ### Example 6.3
 
+Consider a continuous-time LTI system system described by
+
+$$y(t) = \mathbf{T}\left\{x(t)\right\} = \frac{1}{T}\int_{t-\frac{T}{2}}^{t+\frac{T}{2}}x(\tau)\,d\tau$$
+
+(a) Find and sketch the impulse response $h(t)$ of the system.
+
+(b) Is this system causal?
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.3 in in {cite}schaum.
+For the answer, refer to the lecture recording or see solved problem 2.11 in in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex6_4)=
 ### Example 6.4
 
+Let $y(t)$ be the output of a continuous-time LTI system with input $x(t)$. Find the output of the system if ths input is $x'(t)$, where $x'(t)$ is the first derivative of $x(t)$.
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.4 in in {cite}schaum.
+For the answer, refer to the lecture recording or see solved problem 2.12 in in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex6_5)=
 ### Example 6.5
 
+Verify the BIBO stability condition ({ref}`c_Stability`) for continuous-time LTI systems.
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.5 in {cite}schaum.
+For the answer, refer to the lecture recording or see solved problem 2.13 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex6_6)=
 ### Example 6.6
 
+The system shown in {numref}`fig:ex6.6`(a) is formed by connecting two systems in *cascade*. The impulse responses of the two systems are $h_1(t)$ and $h_2(t)$, respectively, and
+
+$$h_1(t) = e^{=2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)$$
+
+(a) Find the impulse response $h(t)$ of the overall system shown in {numref}`fig:ex6.2`(b).
+
+(b) Determine if the overall system is BIBO stable.
+
+:::{figure-md} fig:ex6.6
+<img src="pictures/ex6_6.png" alt="A cascade connection of two continuous-time LTI systems" width="50%">
+
+A cascade connection of two continuous-time LTI systems
+:::
+
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.6 in {cite}schaum.
+For the answer, refer to the lecture recording or see solved problem 2.14 in {cite}`schaum`.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(examples_7)=
+## Examples 7: Eigenfunctions of Continuous-Time LTI systems
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

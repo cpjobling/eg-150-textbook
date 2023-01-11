@@ -670,12 +670,17 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples-7-eigenfunctions-of-continuous-time-lti-systems">
+   Examples 7: Eigenfunctions of Continuous-Time LTI systems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
    Summary
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id9">
+  <a class="reference internal nav-link" href="#id12">
    Summary
   </a>
  </li>
@@ -705,7 +710,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id11">
+  <a class="reference internal nav-link" href="#id14">
    Summary
   </a>
  </li>
@@ -817,12 +822,17 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples-7-eigenfunctions-of-continuous-time-lti-systems">
+   Examples 7: Eigenfunctions of Continuous-Time LTI systems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
    Summary
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id9">
+  <a class="reference internal nav-link" href="#id12">
    Summary
   </a>
  </li>
@@ -852,7 +862,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id11">
+  <a class="reference internal nav-link" href="#id14">
    Summary
   </a>
  </li>
@@ -875,6 +885,7 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#examples-6"><span class="std std-ref">Examples 6: Properties of Continuous-Time LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="lti3.html#examples-7"><span class="std std-ref">Examples 7</span></a></p></li>
 </ul>
 </section>
 <section id="properties-of-continuous-time-lti-systems">
@@ -970,7 +981,7 @@ title="Print to PDF"
 <span id="examples-6"></span><h2>Examples 6: Properties of Continuous-Time LTI Systems<a class="headerlink" href="#examples-6-properties-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h2>
 <section id="example-6-1">
 <span id="ex6-1"></span><h3>Example 6.1<a class="headerlink" href="#example-6-1" title="Permalink to this headline">#</a></h3>
-<p>The signals in <a href="#id7"><span class="problematic" id="id8">:refnumber:`fig:ex6.1`</span></a>(a) and (b) are the input <span class="math notranslate nohighlight">\(x(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t)\)</span>, respectively, of a certain continuous-time LTI system.</p>
+<p>The signals in <a class="reference internal" href="#fig-ex6-1"><span class="std std-numref">Fig. 23</span></a>(a) and (b) are the input <span class="math notranslate nohighlight">\(x(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t)\)</span>, respectively, of a certain continuous-time LTI system.</p>
 <figure class="align-default" id="fig-ex6-1">
 <a class="reference internal image-reference" href="../_images/ex6_1.png"><img alt="Input and output signals for a continuous-time LTI system" src="../_images/ex6_1.png" style="width: 60%;" /></a>
 <figcaption>
@@ -980,28 +991,59 @@ title="Print to PDF"
 <p>Sketch the output to the following inputs:</p>
 <p>(a)<span class="math notranslate nohighlight">\(x(t-2)\)</span>;</p>
 <p>(b) <span class="math notranslate nohighlight">\(\frac{1}{2}x(t)\)</span>.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 2.1 in in {cite}schaum.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.9 in in <span id="id7">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-6-2">
 <span id="ex6-2"></span><h3>Example 6.2<a class="headerlink" href="#example-6-2" title="Permalink to this headline">#</a></h3>
+<p>Consider a continuous-time LTI system whose step response is given by</p>
+<div class="math notranslate nohighlight">
+\[y(t) = e^{-t}u_0(t)\]</div>
+<p>Determine and sketch the output of the system to the input <span class="math notranslate nohighlight">\(x(t)\)</span> shown in <a class="reference internal" href="#fig-ex6-2"><span class="std std-numref">Fig. 24</span></a>.</p>
+<figure class="align-default" id="fig-ex6-2">
+<a class="reference internal image-reference" href="../_images/ex6_2.png"><img alt="Signal for Exercise 6.2" src="../_images/ex6_2.png" style="width: 40%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Signal for Exercise 6.2</span><a class="headerlink" href="#fig-ex6-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>For the answer, refer to the lecture recording or see solved problem 2.2 in in {cite}schaum.</p>
 </section>
 <section id="example-6-3">
 <span id="ex6-3"></span><h3>Example 6.3<a class="headerlink" href="#example-6-3" title="Permalink to this headline">#</a></h3>
-<p>For the answer, refer to the lecture recording or see solved problem 2.3 in in {cite}schaum.</p>
+<p>Consider a continuous-time LTI system system described by</p>
+<div class="math notranslate nohighlight">
+\[y(t) = \mathbf{T}\left\{x(t)\right\} = \frac{1}{T}\int_{t-\frac{T}{2}}^{t+\frac{T}{2}}x(\tau)\,d\tau\]</div>
+<p>(a) Find and sketch the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system.</p>
+<p>(b) Is this system causal?</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.11 in in <span id="id8">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-6-4">
 <span id="ex6-4"></span><h3>Example 6.4<a class="headerlink" href="#example-6-4" title="Permalink to this headline">#</a></h3>
-<p>For the answer, refer to the lecture recording or see solved problem 2.4 in in {cite}schaum.</p>
+<p>Let <span class="math notranslate nohighlight">\(y(t)\)</span> be the output of a continuous-time LTI system with input <span class="math notranslate nohighlight">\(x(t)\)</span>. Find the output of the system if ths input is <span class="math notranslate nohighlight">\(x'(t)\)</span>, where <span class="math notranslate nohighlight">\(x'(t)\)</span> is the first derivative of <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.12 in in <span id="id9">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-6-5">
 <span id="ex6-5"></span><h3>Example 6.5<a class="headerlink" href="#example-6-5" title="Permalink to this headline">#</a></h3>
-<p>For the answer, refer to the lecture recording or see solved problem 2.5 in {cite}schaum.</p>
+<p>Verify the BIBO stability condition (<a class="reference internal" href="#c-stability"><span class="std std-ref">C. Stability</span></a>) for continuous-time LTI systems.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.13 in <span id="id10">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-6-6">
 <span id="ex6-6"></span><h3>Example 6.6<a class="headerlink" href="#example-6-6" title="Permalink to this headline">#</a></h3>
-<p>For the answer, refer to the lecture recording or see solved problem 2.6 in {cite}schaum.</p>
+<p>The system shown in <a class="reference internal" href="#fig-ex6-6"><span class="std std-numref">Fig. 25</span></a>(a) is formed by connecting two systems in <em>cascade</em>. The impulse responses of the two systems are <span class="math notranslate nohighlight">\(h_1(t)\)</span> and <span class="math notranslate nohighlight">\(h_2(t)\)</span>, respectively, and</p>
+<div class="math notranslate nohighlight">
+\[h_1(t) = e^{=2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)\]</div>
+<p>(a) Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the overall system shown in <a class="reference internal" href="#fig-ex6-2"><span class="std std-numref">Fig. 24</span></a>(b).</p>
+<p>(b) Determine if the overall system is BIBO stable.</p>
+<figure class="align-default" id="fig-ex6-6">
+<a class="reference internal image-reference" href="../_images/ex6_6.png"><img alt="A cascade connection of two continuous-time LTI systems" src="../_images/ex6_6.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">A cascade connection of two continuous-time LTI systems</span><a class="headerlink" href="#fig-ex6-6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For the answer, refer to the lecture recording or see solved problem 2.14 in <span id="id11">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
+</section>
+<section id="examples-7-eigenfunctions-of-continuous-time-lti-systems">
+<span id="examples-7"></span><h2>Examples 7: Eigenfunctions of Continuous-Time LTI systems<a class="headerlink" href="#examples-7-eigenfunctions-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
@@ -1011,8 +1053,8 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="lti1.html#response-of-a-continuous-time-lti-system-and-the-convolution-integral"><span class="std std-ref">Response of a Continuous-Time LTI System and the Convolution Integral</span></a></p></li>
 </ul>
 </section>
-<section id="id9">
-<h2>Summary<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h2>
+<section id="id12">
+<h2>Summary<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
@@ -1025,7 +1067,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="systems-described-by-differential-equations">
-<span id="id10"></span><h2>Systems Described by Differential Equations<a class="headerlink" href="#systems-described-by-differential-equations" title="Permalink to this headline">#</a></h2>
+<span id="id13"></span><h2>Systems Described by Differential Equations<a class="headerlink" href="#systems-described-by-differential-equations" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="worked-solutions">
 <h2>Worked Solutions<a class="headerlink" href="#worked-solutions" title="Permalink to this headline">#</a></h2>
@@ -1036,8 +1078,8 @@ title="Print to PDF"
 <section id="lab-exercises">
 <h2>Lab Exercises<a class="headerlink" href="#lab-exercises" title="Permalink to this headline">#</a></h2>
 </section>
-<section id="id11">
-<h2>Summary<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h2>
+<section id="id14">
+<h2>Summary<a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h2>
 <p>In this lecture we have started our look at LTI systems.</p>
 <p>In particular we have looked at</p>
 <ul class="simple">
