@@ -626,8 +626,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-preview">
-     A Preview
+    <a class="reference internal nav-link" href="#looking-ahead">
+     Looking Ahead
     </a>
    </li>
   </ul>
@@ -773,8 +773,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-preview">
-     A Preview
+    <a class="reference internal nav-link" href="#looking-ahead">
+     Looking Ahead
     </a>
    </li>
   </ul>
@@ -944,7 +944,11 @@ title="Print to PDF"
 <p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is the eigenvalue of <span class="math notranslate nohighlight">\(\mathbf{T}\)</span> associated with <span class="math notranslate nohighlight">\(e^{st}\)</span>.</p>
 <p>Setting <span class="math notranslate nohighlight">\(x(t)=e^{st}\)</span> in the convolution integral, we have</p>
 <div class="math notranslate nohighlight">
-\[y(t) = \mathbf{T}\left\{e^{st}\right\} = \int_{-\infty}^{\infty}h(\tau)e^{s(t-\tau)}\,d\tau = \left[\int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau\right]e^{st}\]</div>
+\[y(t) = \mathbf{T}\left\{e^{st}\right\}\]</div>
+<div class="math notranslate nohighlight">
+\[y(t) = \int_{-\infty}^{\infty}h(\tau)e^{s(t-\tau)}\,d\tau\]</div>
+<div class="math notranslate nohighlight">
+\[y(t) = \left[\int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau\right]e^{st}\]</div>
 <div class="math notranslate nohighlight">
 \[y(t) = H(s)e^{st} = \lambda e^{st}\]</div>
 <p>where</p>
@@ -952,11 +956,14 @@ title="Print to PDF"
 \[\lambda = H(s) = \int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau\]</div>
 <p>Thus, the eigenvalue of a continuous-time LTI system associated with the eigenfunction <span class="math notranslate nohighlight">\(e^{st}\)</span> is given by <span class="math notranslate nohighlight">\(H(s)\)</span> which is a complex constant whose value is determined by the value of <span class="math notranslate nohighlight">\(s\)</span> via the equation</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}H(s) = \int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau$$.\\Note from the equation\\$$y(t) = H(s)e^{st} = \lambda e^{st}\end{aligned}\end{align} \]</div>
+\[H(s) = \int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau.\]</div>
+<p>Note from the equation</p>
+<div class="math notranslate nohighlight">
+\[y(t) = H(s)e^{st}\]</div>
 <p>that <span class="math notranslate nohighlight">\(y(0) = H(s)\)</span> (see <span class="xref std std-ref">ex:6_6</span>).</p>
-<section id="a-preview">
-<h3>A Preview<a class="headerlink" href="#a-preview" title="Permalink to this headline">#</a></h3>
-<p>The above results inderline the definition of the <span class="xref myst">Laplace Transform</span> and the Fourier Transform. The former will be discussed later in this course. The Fourier Transform is discussed in <strong>EG-247 Digital Signal Processing</strong> next year.</p>
+<section id="looking-ahead">
+<h3>Looking Ahead<a class="headerlink" href="#looking-ahead" title="Permalink to this headline">#</a></h3>
+<p>The above results inderline the definition of the Laplace transform and Fourier transform. The <span class="xref myst">Laplace Transform</span> will be discussed later in this course. The Fourier Transform will be introduced in <strong>EG-247 Digital Signal Processing</strong> next year.</p>
 </section>
 </section>
 <section id="examples-6">

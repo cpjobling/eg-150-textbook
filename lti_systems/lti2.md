@@ -139,31 +139,48 @@ $$\mathbf{T}\left\{e^{st}\right\}=\lambda e^{st}$$
 
 where $\lambda$ is the eigenvalue of $\mathbf{T}$ associated with $e^{st}$.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Setting $x(t)=e^{st}$ in the convolution integral, we have
 
-$$y(t) = \mathbf{T}\left\{e^{st}\right\} = \int_{-\infty}^{\infty}h(\tau)e^{s(t-\tau)}\,d\tau = \left[\int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau\right]e^{st}$$
+$$y(t) = \mathbf{T}\left\{e^{st}\right\}$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+$$y(t) = \int_{-\infty}^{\infty}h(\tau)e^{s(t-\tau)}\,d\tau$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+$$y(t) = \left[\int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau\right]e^{st}$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 $$y(t) = H(s)e^{st} = \lambda e^{st}$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 where 
 
 $$\lambda = H(s) = \int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau$$
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
 Thus, the eigenvalue of a continuous-time LTI system associated with the eigenfunction $e^{st}$ is given by $H(s)$ which is a complex constant whose value is determined by the value of $s$ via the equation
 
-$$H(s) = \int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau$$.
+$$H(s) = \int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau.$$
+
++++ {"slideshow": {"slide_type": "notes"}}
 
 Note from the equation
 
-$$y(t) = H(s)e^{st} = \lambda e^{st}$$
+$$y(t) = H(s)e^{st}$$
 
 that $y(0) = H(s)$ (see {ref}`ex:6_6`).
 
-### A Preview
++++ {"slideshow": {"slide_type": "subslide"}}
 
-The above results inderline the definition of the [Laplace Transform](/laplace_transform/1/index) and the Fourier Transform. The former will be discussed later in this course. The Fourier Transform is discussed in **EG-247 Digital Signal Processing** next year.
+### Looking Ahead
+The above results inderline the definition of the Laplace transform and Fourier transform. The [Laplace Transform](/laplace_transform/1/index) will be discussed later in this course. The Fourier Transform will be introduced in **EG-247 Digital Signal Processing** next year.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
