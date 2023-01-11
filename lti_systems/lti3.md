@@ -290,7 +290,7 @@ Consider the system in {ref}`ex8_3`. Find the impulse response $h(t)$ of the sys
 
 For the answer, refer to the lecture recording or see solved problem 2.23 in {cite}`schaum`.
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_7)=
 ### Example 8.7
@@ -303,11 +303,11 @@ Consider the system in {ref}`ex8_3` with $y(0)=0$.
 
 (c) Find the impulse response $h(t)$ from the step response $s(t)$.
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
 For the answer, refer to the lecture recording or see solved problem 2.24 in {cite}`schaum`.
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_8)=
 
@@ -319,7 +319,7 @@ $$\frac{dy(t)}{dt} + 2y(t) = x(t) + \frac{dx(t)}{dt}$$
 
 Find the impulse response $h(t)$ of the system.
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
 For the answer, refer to the lecture recording or see solved problem 2.25 in {cite}`schaum`.
 
@@ -327,9 +327,9 @@ For the answer, refer to the lecture recording or see solved problem 2.25 in {ci
 
 ## Summary
 
-In this lecture we have concluded our introduction to LTI systems by looking at 
+In this lecture we have concluded our introduction to LTI systems by looking at linear constant-coefficient differential equations.
 
-In particular, we have looked at linear constant-coefficient differential equations.
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Continuous-Time LTI Systems Described by Differential Equations
 
