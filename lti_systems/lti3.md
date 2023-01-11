@@ -25,19 +25,19 @@ This section is based on Section 2.5 of {cite}`schaum`
 
 We conclude our introduction to continuous-time LTI system by considering
 
-* {ref}`Systems_Described_by_Differential_Equations`
+* {ref}`Continuous_Time_LTI_Systems_Described_by_Differential_Equations`
 * {ref}`examples_8`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (Continuous_Time_LTI_Systems_Described_by_Differential_Equations)=
-## Continuous-Time LTI Systems Described by Differential Equations
+## Continuous-time LTI systems described by differential equations
 
 * {ref}`ccde_a_linear_constant_coefficient_differential_equations`
 * {ref}`ccde_b_linearity`
 * {ref}`ccde_c_causality`
-* {ref}`ccde_c_causality`
-* {ref}`ccde_c_causality`
+* {ref}`ccde_d_time_invariance`
+* {ref}`ccde_e_impulse_response`
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -64,7 +64,7 @@ LCCDEs play a central role in describing the input-output relationships of a wid
 
 #### Illustration: An RC Circuit
 
-For instance, in the RC circuit considered in {refnum}`ex4.1`, the input $x(t)=v_s(t)$ and the output $y(t)=v_c(t)$ are related by a first-order constant-coefficient differential equation
+For instance, in the RC circuit considered in {ref}`ex4.1`, the input $x(t)=v_s(t)$ and the output $y(t)=v_c(t)$ are related by a first-order constant-coefficient differential equation
 
 $$\frac{dy(t)}{dt}+\frac{1}{RC}y(t)=\frac{1}{RC}x(t)$$
 
@@ -111,7 +111,7 @@ The system defined by
 
 $$\sum_{k=0}^N a_k \frac{d^ky(t)}{dt^k}=\sum_{k=0}^M b_k \frac{d^k x(t)}{dt^k}$$
 
-will be linear only if all the auxilliary conditions are zero (see {numref}`ex8_4`).
+will be linear only if all the auxilliary conditions are zero (see {ref}`ex8_4`).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -123,7 +123,9 @@ where $y_\mathrm{zi}(t)$ called the *zero-input response*, is the response to th
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-This is illustrated in {numref}`:::{figure-md} fig:zs_and_zi_responses
+This is illustrated in {numref}`fig:zs_and_zi_responses`
+
+:::{figure-md} fig:zs_and_zi_responses
 <img src="pictures/zi_and_zs.png" alt="Zero-state and zero-input responses" width="60%">
 
 Zero-state and zero-input responses
@@ -131,7 +133,7 @@ Zero-state and zero-input responses
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Note that $y_\mathrm{zi}(t) \neq y_h(t)$ and $y_\mathrm{zs}(t) \neq y_p(t)$ and that in general $y_\mathrm{zi}(t)$ contains $y_h(t)$ and $y_\mathrm{zs}(t)$ contains both $y_h(t)$ and $y_p(t)$ (see {numref}`ex8_3`).
+Note that $y_\mathrm{zi}(t) \neq y_h(t)$ and $y_\mathrm{zs}(t) \neq y_p(t)$ and that in general $y_\mathrm{zi}(t)$ contains $y_h(t)$ and $y_\mathrm{zs}(t)$ contains both $y_h(t)$ and $y_p(t)$ (see {ref}`ex8_3`).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -146,7 +148,7 @@ to be causal, we must assume the condition of *initial rest* (or an *initially r
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-That is, if $x(y)=0$ for $t\le t_0$, then assume $y(t) = 0$ for $t\le t_0$ (See {numref}`ex4_6`).
+That is, if $x(y)=0$ for $t\le t_0$, then assume $y(t) = 0$ for $t\le t_0$ (See {ref}`ex4_6`).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -164,14 +166,14 @@ Clearly, at initial rest, $y_\mathrm{zs}(t)=0$.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(ccde_c_causality)=
+(ccde_d_time_invariance)=
 ### D. Time-invariance
 
-For a linear causal system, initial rest also implies time-invariance ({numref}`ex8_6`).
+For a linear causal system, initial rest also implies time-invariance ({ref}`ex8_6`).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(ccde_c_causality)=
+(ccde_e_impulse_response)=
 ### E. Impulse response
 
 The impulse response $h(t)$ of a linear constant-coefficient differential equation satisfies the differential equation
@@ -182,7 +184,7 @@ with the initial rest condition.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Examples of finding impulse responses are given in {numre}`ex8_6` to {numref}`ex8_8`.
+Examples of finding impulse responses are given in {ref}`ex8_6` to {ref}`ex8_8`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -211,7 +213,7 @@ A one-integrator linear system
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.18 in in {cite}`schaum`.
+For the answer, refer to the lecture recording or see solved problem 2.18 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -220,7 +222,7 @@ For the answer, refer to the lecture recording or see solved problem 2.18 in in 
 
 The continuous-time system shown in {numref}`fig:ex:8.2` consists of two integrators and two scalar multipliers. Write the differential equation that relates the output $y(t)$ to the input $x(t)$.
 
-:::{figure-md} fig:ex:8.1
+:::{figure-md} fig:ex:8.2
 <img src="pictures/ex8_2.png" alt="A two-integrator linear system" width="60%">
 
 A one-integrator linear system
@@ -249,7 +251,7 @@ $$x(t) = Ke^{bt}u_0(t)$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.20 in in {cite}`schaum`.
+For the answer, refer to the lecture recording or see solved problem 2.20 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -264,7 +266,7 @@ Consider the system in {ref}`ex8_3`.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.21 in in {cite}`schaum`.
+For the answer, refer to the lecture recording or see solved problem 2.21 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -288,7 +290,7 @@ Consider the system in {ref}`ex8_3`. Find the impulse response $h(t)$ of the sys
 
 For the answer, refer to the lecture recording or see solved problem 2.23 in {cite}`schaum`.
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_7)=
 ### Example 8.7
@@ -301,11 +303,11 @@ Consider the system in {ref}`ex8_3` with $y(0)=0$.
 
 (c) Find the impulse response $h(t)$ from the step response $s(t)$.
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
 For the answer, refer to the lecture recording or see solved problem 2.24 in {cite}`schaum`.
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_8)=
 
@@ -317,7 +319,7 @@ $$\frac{dy(t)}{dt} + 2y(t) = x(t) + \frac{dx(t)}{dt}$$
 
 Find the impulse response $h(t)$ of the system.
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
 For the answer, refer to the lecture recording or see solved problem 2.25 in {cite}`schaum`.
 
@@ -325,19 +327,17 @@ For the answer, refer to the lecture recording or see solved problem 2.25 in {ci
 
 ## Summary
 
-In this lecture we have started our look at LTI systems.
+In this lecture we have concluded our introduction to LTI systems by looking at linear constant-coefficient differential equations.
 
-In particular, we have looked at
++++ {"slideshow": {"slide_type": "subslide"}}
 
-* {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
+### Continuous-Time LTI Systems Described by Differential Equations
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Summary
-
-We have concluded our look at continuous-time LTI systems by considering
-
-* {ref}`Systems_Described_by_Differential_Equations`
+* {ref}`ccde_a_linear_constant_coefficient_differential_equations`
+* {ref}`ccde_b_linearity`
+* {ref}`ccde_c_causality`
+* {ref}`ccde_d_time_invariance`
+* {ref}`ccde_e_impulse_response`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
