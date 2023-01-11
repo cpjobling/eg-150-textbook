@@ -159,7 +159,7 @@ Note from the equation
 
 $$y(t) = H(s)e^{st} = \lambda e^{st}$$
 
-that $y(0) = H(s)$ (see {ex:6_6}).
+that $y(0) = H(s)$ (see {ref}`ex:6_6`).
 
 ### A Preview
 
