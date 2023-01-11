@@ -306,19 +306,15 @@ For the answer, refer to the lecture recording or see solved problem 2.14 in {ci
 (ex7_1)=
 ### Example 7.1
 
-The system shown in {numref}`fig:ex6.6`(a) is formed by connecting two systems in *cascade*. The impulse responses of the two systems are $h_1(t)$ and $h_2(t)$, respectively, and
+Consider a continuous-time LTI system with the input-output reltion given by
 
-$$h_1(t) = e^{=2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)$$
+$$y(t)=\int_{-\infty}^{t}e^{-(t-\tau)}x(\tau)\,d\tau$$
 
-(a) Find the impulse response $h(t)$ of the overall system shown in {numref}`fig:ex6.2`(b).
+(a) Find the impulse response $h(t)$ of this system.
 
-(b) Determine if the overall system is BIBO stable.
+(b) Show that the complex exponential $e^{st}$ is an eigenfunction of the system.
 
-:::{figure-md} fig:ex6.6
-<img src="pictures/ex6_6.png" alt="A cascade connection of two continuous-time LTI systems" width="50%">
-
-A cascade connection of two continuous-time LTI systems
-:::
+(c) Find the eigenvalue of the system corresponding to $e^{st}$ using the impulse response $h(t)$ obtained in part (a).
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -329,19 +325,13 @@ For the answer, refer to the lecture recording or see solved problem 2.15 in {ci
 (ex7_2)=
 ### Example 7.2
 
-The system shown in {numref}`fig:ex6.6`(a) is formed by connecting two systems in *cascade*. The impulse responses of the two systems are $h_1(t)$ and $h_2(t)$, respectively, and
+Consider the continuous-time LTI system described by
 
-$$h_1(t) = e^{=2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)$$
+$$y(t) = \frac{1}{T}\int_{t-\frac{T}{2}}^{t+\frac{T}{2}}x(\tau)\,d\tau$$
 
-(a) Find the impulse response $h(t)$ of the overall system shown in {numref}`fig:ex6.2`(b).
+(a) Find the eigenvalue of the system corresponding to the eigenfunction $e^{st}$.
 
-(b) Determine if the overall system is BIBO stable.
-
-:::{figure-md} fig:ex6.6
-<img src="pictures/ex6_6.png" alt="A cascade connection of two continuous-time LTI systems" width="50%">
-
-A cascade connection of two continuous-time LTI systems
-:::
+(b) Repeat part (a) by using the impulse response $h(t)$ of the system.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -352,19 +342,7 @@ For the answer, refer to the lecture recording or see solved problem 2.16 in {ci
 (ex7_3)=
 ### Example 7.3
 
-The system shown in {numref}`fig:ex6.6`(a) is formed by connecting two systems in *cascade*. The impulse responses of the two systems are $h_1(t)$ and $h_2(t)$, respectively, and
-
-$$h_1(t) = e^{=2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)$$
-
-(a) Find the impulse response $h(t)$ of the overall system shown in {numref}`fig:ex6.2`(b).
-
-(b) Determine if the overall system is BIBO stable.
-
-:::{figure-md} fig:ex6.6
-<img src="pictures/ex6_6.png" alt="A cascade connection of two continuous-time LTI systems" width="50%">
-
-A cascade connection of two continuous-time LTI systems
-:::
+Consider a stable continuous-time LTI system with impulse response $h(t)$ that is real and even. Show that $\cos \omega t$ and $\sin \omega t$ are eigenfunctions of this system with the same eigenvalue.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

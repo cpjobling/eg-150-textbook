@@ -1002,7 +1002,7 @@ title="Print to PDF"
 </section>
 <section id="example-6-6">
 <span id="ex6-6"></span><h3>Example 6.6<a class="headerlink" href="#example-6-6" title="Permalink to this headline">#</a></h3>
-<p>The system shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:ex6.6</span></code>(a) is formed by connecting two systems in <em>cascade</em>. The impulse responses of the two systems are <span class="math notranslate nohighlight">\(h_1(t)\)</span> and <span class="math notranslate nohighlight">\(h_2(t)\)</span>, respectively, and</p>
+<p>The system shown in <a class="reference internal" href="#fig-ex6-6"><span class="std std-numref">Fig. 25</span></a>(a) is formed by connecting two systems in <em>cascade</em>. The impulse responses of the two systems are <span class="math notranslate nohighlight">\(h_1(t)\)</span> and <span class="math notranslate nohighlight">\(h_2(t)\)</span>, respectively, and</p>
 <div class="math notranslate nohighlight">
 \[h_1(t) = e^{=2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)\]</div>
 <p>(a) Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the overall system shown in <a class="reference internal" href="#fig-ex6-2"><span class="std std-numref">Fig. 24</span></a>(b).</p>
@@ -1020,48 +1020,27 @@ title="Print to PDF"
 <span id="examples-7"></span><h2>Examples 7: Eigenfunctions of Continuous-Time LTI systems<a class="headerlink" href="#examples-7-eigenfunctions-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h2>
 <section id="example-7-1">
 <span id="ex7-1"></span><h3>Example 7.1<a class="headerlink" href="#example-7-1" title="Permalink to this headline">#</a></h3>
-<p>The system shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:ex6.6</span></code>(a) is formed by connecting two systems in <em>cascade</em>. The impulse responses of the two systems are <span class="math notranslate nohighlight">\(h_1(t)\)</span> and <span class="math notranslate nohighlight">\(h_2(t)\)</span>, respectively, and</p>
+<p>Consider a continuous-time LTI system with the input-output reltion given by</p>
 <div class="math notranslate nohighlight">
-\[h_1(t) = e^{=2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)\]</div>
-<p>(a) Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the overall system shown in <a class="reference internal" href="#fig-ex6-2"><span class="std std-numref">Fig. 24</span></a>(b).</p>
-<p>(b) Determine if the overall system is BIBO stable.</p>
-<figure class="align-default" id="id12">
-<a class="reference internal image-reference" href="../_images/ex6_6.png"><img alt="A cascade connection of two continuous-time LTI systems" src="../_images/ex6_6.png" style="width: 50%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">A cascade connection of two continuous-time LTI systems</span><a class="headerlink" href="#id12" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>For the answer, refer to the lecture recording or see solved problem 2.15 in <span id="id13">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+\[y(t)=\int_{-\infty}^{t}e^{-(t-\tau)}x(\tau)\,d\tau\]</div>
+<p>(a) Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of this system.</p>
+<p>(b) Show that the complex exponential <span class="math notranslate nohighlight">\(e^{st}\)</span> is an eigenfunction of the system.</p>
+<p>(c) Find the eigenvalue of the system corresponding to <span class="math notranslate nohighlight">\(e^{st}\)</span> using the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> obtained in part (a).</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.15 in <span id="id12">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-7-2">
 <span id="ex7-2"></span><h3>Example 7.2<a class="headerlink" href="#example-7-2" title="Permalink to this headline">#</a></h3>
-<p>The system shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:ex6.6</span></code>(a) is formed by connecting two systems in <em>cascade</em>. The impulse responses of the two systems are <span class="math notranslate nohighlight">\(h_1(t)\)</span> and <span class="math notranslate nohighlight">\(h_2(t)\)</span>, respectively, and</p>
+<p>Consider the continuous-time LTI system described by</p>
 <div class="math notranslate nohighlight">
-\[h_1(t) = e^{=2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)\]</div>
-<p>(a) Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the overall system shown in <a class="reference internal" href="#fig-ex6-2"><span class="std std-numref">Fig. 24</span></a>(b).</p>
-<p>(b) Determine if the overall system is BIBO stable.</p>
-<figure class="align-default" id="id14">
-<a class="reference internal image-reference" href="../_images/ex6_6.png"><img alt="A cascade connection of two continuous-time LTI systems" src="../_images/ex6_6.png" style="width: 50%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">A cascade connection of two continuous-time LTI systems</span><a class="headerlink" href="#id14" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>For the answer, refer to the lecture recording or see solved problem 2.16 in <span id="id15">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+\[y(t) = \frac{1}{T}\int_{t-\frac{T}{2}}^{t+\frac{T}{2}}x(\tau)\,d\tau\]</div>
+<p>(a) Find the eigenvalue of the system corresponding to the eigenfunction <span class="math notranslate nohighlight">\(e^{st}\)</span>.</p>
+<p>(b) Repeat part (a) by using the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.16 in <span id="id13">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-7-3">
 <span id="ex7-3"></span><h3>Example 7.3<a class="headerlink" href="#example-7-3" title="Permalink to this headline">#</a></h3>
-<p>The system shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:ex6.6</span></code>(a) is formed by connecting two systems in <em>cascade</em>. The impulse responses of the two systems are <span class="math notranslate nohighlight">\(h_1(t)\)</span> and <span class="math notranslate nohighlight">\(h_2(t)\)</span>, respectively, and</p>
-<div class="math notranslate nohighlight">
-\[h_1(t) = e^{=2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)\]</div>
-<p>(a) Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the overall system shown in <a class="reference internal" href="#fig-ex6-2"><span class="std std-numref">Fig. 24</span></a>(b).</p>
-<p>(b) Determine if the overall system is BIBO stable.</p>
-<figure class="align-default" id="id16">
-<a class="reference internal image-reference" href="../_images/ex6_6.png"><img alt="A cascade connection of two continuous-time LTI systems" src="../_images/ex6_6.png" style="width: 50%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 28 </span><span class="caption-text">A cascade connection of two continuous-time LTI systems</span><a class="headerlink" href="#id16" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>For the answer, refer to the lecture recording or see solved problem 2.17 in <span id="id17">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p>Consider a stable continuous-time LTI system with impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> that is real and even. Show that <span class="math notranslate nohighlight">\(\cos \omega t\)</span> and <span class="math notranslate nohighlight">\(\sin \omega t\)</span> are eigenfunctions of this system with the same eigenvalue.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.17 in <span id="id14">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 </section>
 <section id="summary">
