@@ -222,7 +222,7 @@ For the answer, refer to the lecture recording or see solved problem 2.18 in {ci
 
 The continuous-time system shown in {numref}`fig:ex:8.2` consists of two integrators and two scalar multipliers. Write the differential equation that relates the output $y(t)$ to the input $x(t)$.
 
-:::{figure-md} fig:ex:8.1
+:::{figure-md} fig:ex:8.2
 <img src="pictures/ex8_2.png" alt="A two-integrator linear system" width="60%">
 
 A one-integrator linear system

@@ -123,7 +123,7 @@ where $y_\mathrm{zi}(t)$ called the *zero-input response*, is the response to th
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-This is illustrated in {refnum}`fig:zs_and_zi_responses`
+This is illustrated in {numref}`fig:zs_and_zi_responses`
 
 :::{figure-md} fig:zs_and_zi_responses
 <img src="pictures/zi_and_zs.png" alt="Zero-state and zero-input responses" width="60%">
@@ -148,7 +148,7 @@ to be causal, we must assume the condition of *initial rest* (or an *initially r
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-That is, if $x(y)=0$ for $t\le t_0$, then assume $y(t) = 0$ for $t\le t_0$ (See {numref}`ex4_6`).
+That is, if $x(y)=0$ for $t\le t_0$, then assume $y(t) = 0$ for $t\le t_0$ (See {ref}`ex4_6`).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -169,7 +169,7 @@ Clearly, at initial rest, $y_\mathrm{zs}(t)=0$.
 (ccde_c_causality)=
 ### D. Time-invariance
 
-For a linear causal system, initial rest also implies time-invariance ({numref}`ex8_6`).
+For a linear causal system, initial rest also implies time-invariance ({ref}`ex8_6`).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -222,7 +222,7 @@ For the answer, refer to the lecture recording or see solved problem 2.18 in {ci
 
 The continuous-time system shown in {numref}`fig:ex:8.2` consists of two integrators and two scalar multipliers. Write the differential equation that relates the output $y(t)$ to the input $x(t)$.
 
-:::{figure-md} fig:ex:8.1
+:::{figure-md} fig:ex:8.2
 <img src="pictures/ex8_2.png" alt="A two-integrator linear system" width="60%">
 
 A one-integrator linear system
