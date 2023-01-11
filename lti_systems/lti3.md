@@ -64,7 +64,7 @@ LCCDEs play a central role in describing the input-output relationships of a wid
 
 #### Illustration: An RC Circuit
 
-For instance, in the RC circuit considered in {numref}`ex4.1`, the input $x(t)=v_s(t)$ and the output $y(t)=v_c(t)$ are related by a first-order constant-coefficient differential equation
+For instance, in the RC circuit considered in {ref}`ex4.1`, the input $x(t)=v_s(t)$ and the output $y(t)=v_c(t)$ are related by a first-order constant-coefficient differential equation
 
 $$\frac{dy(t)}{dt}+\frac{1}{RC}y(t)=\frac{1}{RC}x(t)$$
 
