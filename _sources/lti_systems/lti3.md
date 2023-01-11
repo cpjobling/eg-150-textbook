@@ -282,6 +282,8 @@ For the answer, refer to the lecture recording or see solved problem 2.22 in {ci
 (ex8_6)=
 ### Example 8.6
 
+Consider the system in {ref}`ex8_3`. Find the impulse response $h(t)$ of the system.
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 For the answer, refer to the lecture recording or see solved problem 2.23 in {cite}`schaum`.
@@ -290,6 +292,14 @@ For the answer, refer to the lecture recording or see solved problem 2.23 in {ci
 
 (ex8_7)=
 ### Example 8.7
+
+Consider the system in {ref}`ex8_3` with $y(0)=0$. 
+
+(a) Find the step response $s(t)$ of the system without using the impulse response $h(t)$.
+
+(b) Find the step response $s(t)$ of the system with the impulse response $h(t)$ obtained in {ref}`ex8_6`.
+
+(c) Find the impulse response $h(t)$ from the step response $s(t)$.
 
 +++
 
@@ -300,6 +310,12 @@ For the answer, refer to the lecture recording or see solved problem 2.24 in {ci
 (ex8_8)=
 
 ### Example 8.8
+
+Consider the system described by
+
+$$\frac{dy(t)}{dt} + 2y(t) = x(t) + \frac{dx(t)}{dt}$$
+
+Find the impulse response $h(t)$ of the system.
 
 +++
 
