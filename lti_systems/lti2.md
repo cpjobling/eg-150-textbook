@@ -305,16 +305,6 @@ For the answer, refer to the lecture recording or see solved problem 2.14 in {ci
 
 ## Summary
 
-In this lecture we have started our look at LTI systems.
-
-In particular we have looked at
-
-* {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Summary
-
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
 
@@ -322,35 +312,4 @@ In particular we have looked at
 
 ## Next Time
 
-* {ref}`Systems_Described_by_Differential_Equations`
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-(Systems_Described_by_Differential_Equations)=
-## Systems Described by Differential Equations
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Worked Solutions
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Homework Problems
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Lab Exercises
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Summary
-
-In this lecture we have started our look at LTI systems.
-
-In particular we have looked at
-
-* {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
-* {ref}`examples_5_Responses_of_a_Continuous-Time_LTI_System_and_Convolution)`
-* {ref}`Properties_of_Continuous_Time_LTI_Systems`
-* {ref}`eigenfunctions_of_continuous_time_LTI_systems`
 * {ref}`Systems_Described_by_Differential_Equations`
