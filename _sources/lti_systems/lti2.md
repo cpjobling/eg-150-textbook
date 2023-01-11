@@ -180,7 +180,7 @@ that $y(0) = H(s)$ (see {ref}`ex:6_6`).
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Looking Ahead
-The above results inderline the definition of the Laplace transform and Fourier transform. The [Laplace Transform](/laplace_transform/1/index) will be discussed later in this course. The Fourier Transform will be introduced in **EG-247 Digital Signal Processing** next year.
+The above results inderline the definition of the Laplace transform and Fourier transform. The [Laplace Transform](laplace_transform/1/laplace.md) will be discussed later in this course. The Fourier Transform will be introduced in **EG-247 Digital Signal Processing** next year.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
