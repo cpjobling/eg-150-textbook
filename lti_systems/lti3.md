@@ -25,7 +25,7 @@ This section is based on Section 2.5 of {cite}`schaum`
 
 We conclude our introduction to continuous-time LTI system by considering
 
-* {ref}`Systems_Described_by_Differential_Equations`
+* {ref}`Continuous_Time_LTI_Systems_Described_by_Differential_Equations`
 * {ref}`examples_8`
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -327,11 +327,17 @@ For the answer, refer to the lecture recording or see solved problem 2.25 in {ci
 
 ## Summary
 
-In this lecture we have started our look at LTI systems.
+In this lecture we have concluded our introduction to LTI systems by looking at 
 
-In particular, we have looked at
+In particular, we have looked at linear constant-coefficient differential equations.
 
-* {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
+### Continuous-Time LTI Systems Described by Differential Equations
+
+* {ref}`ccde_a_linear_constant_coefficient_differential_equations`
+* {ref}`ccde_b_linearity`
+* {ref}`ccde_c_causality`
+* {ref}`ccde_d_time_invariance`
+* {ref}`ccde_e_impulse_response`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
