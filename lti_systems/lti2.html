@@ -859,6 +859,20 @@ title="Print to PDF"
 </section>
 <section id="b-causality">
 <span id="id3"></span><h3>B. Causality<a class="headerlink" href="#b-causality" title="Permalink to this headline">#</a></h3>
+<p>As discussed in Section <a class="reference internal" href="../signals_and_systems/systems/index.html#causal-and-non-causal-systems"><span class="std std-ref">Causal and Non-Causal Systems</span></a>, a causal system does not respond to an input event until that event actually occurs.</p>
+<p>Therefore, for a causal LTI system, we have</p>
+<div class="math notranslate nohighlight">
+\[h(t) = 0\quad t \lt 0\]</div>
+<p>Applying the causality condition to the convolution integral, the output of a causal continuous-time LTI system is expressed as</p>
+<div class="math notranslate nohighlight">
+\[y(t) = \int_0^{\infty}h(\tau)x(t=\tau)\,d\tau\]</div>
+<p>Alternatively, applying the causality to the <a class="reference internal" href="lti1.html#convolution-integral"><span class="std std-ref">C. Convolution Integral</span></a></p>
+<div class="math notranslate nohighlight">
+\[y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau\]</div>
+<p>we have</p>
+<div class="math notranslate nohighlight">
+\[y(t) = \int_{-\infty}^{t}x(t)h(t-\tau)\,d\tau\]</div>
+<p>This equation shows that the only values of the input <span class="math notranslate nohighlight">\(x(t)\)</span> used to evaluate the output <span class="math notranslate nohighlight">\(y(t)\)</span> are those for <span class="math notranslate nohighlight">\(\tau \le   t\)</span>.</p>
 </section>
 <section id="c-stability">
 <span id="id4"></span><h3>C. Stability<a class="headerlink" href="#c-stability" title="Permalink to this headline">#</a></h3>

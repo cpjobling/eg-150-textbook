@@ -64,6 +64,34 @@ Therefore, if $h(t_0) \neq 0$ for $t_0 \neq 0$, then the continuous-time LTI sys
 (b_causality)=
 ### B. Causality
 
+As discussed in Section {ref}`causal_and_non-causal_systems`, a causal system does not respond to an input event until that event actually occurs.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Therefore, for a causal LTI system, we have
+
+$$h(t) = 0\quad t \lt 0$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Applying the causality condition to the convolution integral, the output of a causal continuous-time LTI system is expressed as
+
+$$y(t) = \int_0^{\infty}h(\tau)x(t=\tau)\,d\tau$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Alternatively, applying the causality to the {ref}`convolution_integral`
+
+$$y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$
+
+we have
+
+$$y(t) = \int_{-\infty}^{t}x(t)h(t-\tau)\,d\tau$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+This equation shows that the only values of the input $x(t)$ used to evaluate the output $y(t)$ are those for $\tau \le   t$.
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (c_Stability)=
