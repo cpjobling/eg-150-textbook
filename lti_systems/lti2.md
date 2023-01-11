@@ -23,6 +23,8 @@ This section is based on Sections 2.3 and 2.4 of {cite}`schaum`
 
 ## Subjects to be covered
 
+We continue our introduction to continuous-time LTI systems by considering:
+
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
 * {ref}`examples_6`
@@ -352,11 +354,15 @@ For the answer, refer to the lecture recording or see solved problem 2.17 in {ci
 
 ## Summary
 
+We have continued our introdiuction the continuous-time LTI systems by considering
+
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## Next Time
+
+We will conclude our look at continuous-time LTI systems by considering
 
 * {ref}`Systems_Described_by_Differential_Equations`

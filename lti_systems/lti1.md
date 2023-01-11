@@ -592,5 +592,7 @@ In this lecture we have looked at
 
 ## Next Time
 
+We continue our introduction to continuous-time LTI system by considering
+
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
