@@ -415,7 +415,7 @@ fplot(x(t)),title('x(t)'),ylim([0,1.25])
 slideshow:
   slide_type: fragment
 ---
-y(t) = int(h(tau)*x(t - tau),tau,-inf,inf)
+y(t) = int(h(tau)*x(t - tau),tau,-Inf,Inf)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -591,6 +591,8 @@ In this lecture we have looked at
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## Next Time
+
+We continue our introduction to continuous-time LTI system by considering
 
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
