@@ -619,6 +619,40 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-causality">
+     C. Causality
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-time-invariance">
+     D. Time-invariance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-impulse-response">
+     E. Impulse response
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-peek-into-the-future">
+       A peek into the future
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples-8-systems-described-by-differential-equations">
+   Examples 8: Systems described by differential equations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-8-1">
+     Example 8.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-8-2">
      Example 8.2
     </a>
@@ -661,7 +695,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id14">
+  <a class="reference internal nav-link" href="#id19">
    Summary
   </a>
  </li>
@@ -727,6 +761,40 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-causality">
+     C. Causality
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-time-invariance">
+     D. Time-invariance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-impulse-response">
+     E. Impulse response
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#a-peek-into-the-future">
+       A peek into the future
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples-8-systems-described-by-differential-equations">
+   Examples 8: Systems described by differential equations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-8-1">
+     Example 8.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-8-2">
      Example 8.2
     </a>
@@ -769,7 +837,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id14">
+  <a class="reference internal nav-link" href="#id19">
    Summary
   </a>
  </li>
@@ -796,7 +864,7 @@ title="Print to PDF"
 <p>We conclude our introduction to continuous-time LTI system by considering</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#systems-described-by-differential-equations"><span class="std std-ref">Systems Described by Differential Equations</span></a></p></li>
-<li><p><span class="xref std std-ref">examples_8</span></p></li>
+<li><p><a class="reference internal" href="#examples-8"><span class="std std-ref">Examples 8: Systems described by differential equations</span></a></p></li>
 </ul>
 </section>
 <section id="continuous-time-lti-systems-described-by-differential-equations">
@@ -854,101 +922,70 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[y(t) = y_\mathrm{zi}(t) + y_\mathrm{zs}(t)\]</div>
 <p>where <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t)\)</span> called the <em>zero-input response</em>, is the response to the aunxilliary conditions, and <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t)\)</span>, called the <em>zero-state response</em>, is the response of a linear system with zero auxiliary conditions.</p>
-<p>This is illustrated in {numref}`:::{figure-md} fig:zs_and_zi_responses
-<img src="pictures/zi_and_zs.png" alt="Zero-state and zero-input responses" width="60%"></p>
-<p>Zero-state and zero-input responses</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}
-
-Note that $y_\mathrm{zi}(t) \neq y_h(t)$ and $y_\mathrm{zs}(t) \neq y_p(t)$ and that in general $y_\mathrm{zi}(t)$ contains $y_h(t)$ and $y_\mathrm{zs}(t)$ contains both $y_h(t)$ and $y_p(t)$ (see {numref}`ex8_3`).
-
-+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}
-
-(ccde_c_causality)=
-### C. Causality
-
-In order for the linear system described by a linear constant-coefficient differential equation
-
-$$\sum_{k=0}^N a_k \frac{d^ky(t)}{dt^k}=\sum_{k=0}^M b_k \frac{d^k x(t)}{dt^k}$$
-
-to be causal, we must assume the condition of *initial rest* (or an *initially relaxed condition*).
-
-+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}
-
-That is, if $x(y)=0$ for $t\le t_0$, then assume $y(t) = 0$ for $t\le t_0$ (See {numref}`ex4_6`).
-
-+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}
-
-Thus, the response for $t &gt; t_0$ can be calculated from the linear constant-coefficient differential equation with the initial conditions
-
-$$y(t_0)=\frac{dy(t_0)}{dt}=\cdots=\frac{d^{N-1}y(t_0)}{dt^{N-1}}=0$$
-
-where
-
-$$\frac{d^ky(t_0)}{dt^k} = \left.\frac{d^ky(t)}{dt^k}\right|_{t=t_0}$$
-
-+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}
-
-Clearly, at initial rest, $y_\mathrm{zs}(t)=0$.
-
-+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}
-
-(ccde_c_causality)=
-### D. Time-invariance
-
-For a linear causal system, initial rest also implies time-invariance ({numref}`ex8_6`).
-
-+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}
-
-(ccde_c_causality)=
-### E. Impulse response
-
-The impulse response $h(t)$ of a linear constant-coefficient differential equation satisfies the differential equation
-
-$$\sum_{k=0}^N a_k \frac{d^ky(t)}{dt^k}=\sum_{k=0}^M b_k \frac{d^k \delta(t)}{dt^k}$$
-
-with the initial rest condition.
-
-+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}
-
-Examples of finding impulse responses are given in {numre}`ex8_6` to {numref}`ex8_8`.
-
-+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}
-
-#### A peek into the future
-
-Later in this course, and probably for the rest of your career, you will find the impulse response by using the Laplace transform.
-
-+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;slide&quot;}}
-
-(examples_8)=
-## Examples 8: Systems described by differential equations
-
-+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}
-
-(ex8_1)=
-### Example 8.1 
-
-The continuous-time system shown in {numref}`fig:ex:8.1` consists of one integrator and one scalar multiplier. Write the differential equation that relates the output $y(t)$ to the input $x(t)$.
-
-:::{figure-md} fig:ex:8.1
-&lt;img src=&quot;pictures/ex8_1.png&quot; alt=&quot;A one-integrator linear system&quot; width=&quot;40%&quot;&gt;
-
-A one-integrator linear system
-</pre></div>
-</div>
-<p>For the answer, refer to the lecture recording or see solved problem 2.18 in <span id="id6">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p>This is illustrated in <a class="reference internal" href="#fig-zs-and-zi-responses"><span class="std std-numref">Fig. 26</span></a></p>
+<figure class="align-default" id="fig-zs-and-zi-responses">
+<a class="reference internal image-reference" href="../_images/zi_and_zs.png"><img alt="Zero-state and zero-input responses" src="../_images/zi_and_zs.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Zero-state and zero-input responses</span><a class="headerlink" href="#fig-zs-and-zi-responses" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Note that <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t) \neq y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t) \neq y_p(t)\)</span> and that in general <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t)\)</span> contains <span class="math notranslate nohighlight">\(y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t)\)</span> contains both <span class="math notranslate nohighlight">\(y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_p(t)\)</span> (see <code class="xref std std-numref docutils literal notranslate"><span class="pre">ex8_3</span></code>).</p>
+</section>
+<section id="c-causality">
+<span id="ccde-c-causality"></span><h3>C. Causality<a class="headerlink" href="#c-causality" title="Permalink to this headline">#</a></h3>
+<p>In order for the linear system described by a linear constant-coefficient differential equation</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=0}^N a_k \frac{d^ky(t)}{dt^k}=\sum_{k=0}^M b_k \frac{d^k x(t)}{dt^k}\]</div>
+<p>to be causal, we must assume the condition of <em>initial rest</em> (or an <em>initially relaxed condition</em>).</p>
+<p>That is, if <span class="math notranslate nohighlight">\(x(y)=0\)</span> for <span class="math notranslate nohighlight">\(t\le t_0\)</span>, then assume <span class="math notranslate nohighlight">\(y(t) = 0\)</span> for <span class="math notranslate nohighlight">\(t\le t_0\)</span> (See <code class="xref std std-numref docutils literal notranslate"><span class="pre">ex4_6</span></code>).</p>
+<p>Thus, the response for <span class="math notranslate nohighlight">\(t &gt; t_0\)</span> can be calculated from the linear constant-coefficient differential equation with the initial conditions</p>
+<div class="math notranslate nohighlight">
+\[y(t_0)=\frac{dy(t_0)}{dt}=\cdots=\frac{d^{N-1}y(t_0)}{dt^{N-1}}=0\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\frac{d^ky(t_0)}{dt^k} = \left.\frac{d^ky(t)}{dt^k}\right|_{t=t_0}\]</div>
+<p>Clearly, at initial rest, <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t)=0\)</span>.</p>
+</section>
+<section id="d-time-invariance">
+<span id="id6"></span><h3>D. Time-invariance<a class="headerlink" href="#d-time-invariance" title="Permalink to this headline">#</a></h3>
+<p>For a linear causal system, initial rest also implies time-invariance (<code class="xref std std-numref docutils literal notranslate"><span class="pre">ex8_6</span></code>).</p>
+</section>
+<section id="e-impulse-response">
+<span id="id7"></span><h3>E. Impulse response<a class="headerlink" href="#e-impulse-response" title="Permalink to this headline">#</a></h3>
+<p>The impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of a linear constant-coefficient differential equation satisfies the differential equation</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=0}^N a_k \frac{d^ky(t)}{dt^k}=\sum_{k=0}^M b_k \frac{d^k \delta(t)}{dt^k}\]</div>
+<p>with the initial rest condition.</p>
+<p>Examples of finding impulse responses are given in <a href="#id8"><span class="problematic" id="id9">:numre:`ex8_6`</span></a> to <code class="xref std std-numref docutils literal notranslate"><span class="pre">ex8_8</span></code>.</p>
+<section id="a-peek-into-the-future">
+<h4>A peek into the future<a class="headerlink" href="#a-peek-into-the-future" title="Permalink to this headline">#</a></h4>
+<p>Later in this course, and probably for the rest of your career, you will find the impulse response by using the Laplace transform.</p>
+</section>
+</section>
+</section>
+<section id="examples-8-systems-described-by-differential-equations">
+<span id="examples-8"></span><h2>Examples 8: Systems described by differential equations<a class="headerlink" href="#examples-8-systems-described-by-differential-equations" title="Permalink to this headline">#</a></h2>
+<section id="example-8-1">
+<span id="ex8-1"></span><h3>Example 8.1<a class="headerlink" href="#example-8-1" title="Permalink to this headline">#</a></h3>
+<p>The continuous-time system shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:ex:8.1</span></code> consists of one integrator and one scalar multiplier. Write the differential equation that relates the output <span class="math notranslate nohighlight">\(y(t)\)</span> to the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
+<figure class="align-default" id="fig-ex-8-1">
+<a class="reference internal image-reference" href="../_images/ex8_1.png"><img alt="A one-integrator linear system" src="../_images/ex8_1.png" style="width: 40%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">A one-integrator linear system</span><a class="headerlink" href="#fig-ex-8-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For the answer, refer to the lecture recording or see solved problem 2.18 in <span id="id10">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-8-2">
 <span id="ex8-2"></span><h3>Example 8.2<a class="headerlink" href="#example-8-2" title="Permalink to this headline">#</a></h3>
 <p>The continuous-time system shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:ex:8.2</span></code> consists of two integrators and two scalar multipliers. Write the differential equation that relates the output <span class="math notranslate nohighlight">\(y(t)\)</span> to the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
-<figure class="align-default" id="fig-ex-8-1">
+<figure class="align-default" id="id11">
 <a class="reference internal image-reference" href="../_images/ex8_2.png"><img alt="A two-integrator linear system" src="../_images/ex8_2.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">A one-integrator linear system</span><a class="headerlink" href="#fig-ex-8-1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">A one-integrator linear system</span><a class="headerlink" href="#id11" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>For the answer, refer to the lecture recording or see solved problem 2.19 in in <span id="id7">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.19 in in <span id="id12">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-8-3">
 <span id="ex8-3"></span><h3>Example 8.3<a class="headerlink" href="#example-8-3" title="Permalink to this headline">#</a></h3>
@@ -960,24 +997,24 @@ A one-integrator linear system
 <div class="math notranslate nohighlight">
 \[x(t) = Ke^{bt}u_0(t)\]</div>
 <p>(b) Express <span class="math notranslate nohighlight">\(y(t)\)</span> in terms of the zero-input and zero-state responses.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 2.20 in <span id="id8">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.20 in <span id="id13">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-8-4">
 <span id="ex8-4"></span><h3>Example 8.4<a class="headerlink" href="#example-8-4" title="Permalink to this headline">#</a></h3>
 <p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.3</span></a>.</p>
 <p>(a) Show that the system is not linear if <span class="math notranslate nohighlight">\(y(0)=y_0\neq 0\)</span>.</p>
 <p>(b) Show that the system is linear if <span class="math notranslate nohighlight">\(y(0) = 0\)</span>.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 2.21 in <span id="id9">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.21 in <span id="id14">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-8-5">
 <span id="ex8-5"></span><h3>Example 8.5<a class="headerlink" href="#example-8-5" title="Permalink to this headline">#</a></h3>
 <p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.3</span></a>. Show that the initial rest condition <span class="math notranslate nohighlight">\(y(0) = 0\)</span> also implies that the system is time-invariant.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 2.22 in <span id="id10">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.22 in <span id="id15">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-8-6">
 <span id="ex8-6"></span><h3>Example 8.6<a class="headerlink" href="#example-8-6" title="Permalink to this headline">#</a></h3>
 <p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.3</span></a>. Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 2.23 in <span id="id11">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.23 in <span id="id16">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-8-7">
 <span id="ex8-7"></span><h3>Example 8.7<a class="headerlink" href="#example-8-7" title="Permalink to this headline">#</a></h3>
@@ -985,7 +1022,7 @@ A one-integrator linear system
 <p>(a) Find the step response <span class="math notranslate nohighlight">\(s(t)\)</span> of the system without using the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>.</p>
 <p>(b) Find the step response <span class="math notranslate nohighlight">\(s(t)\)</span> of the system with the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> obtained in <a class="reference internal" href="#ex8-6"><span class="std std-ref">Example 8.6</span></a>.</p>
 <p>(c) Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> from the step response <span class="math notranslate nohighlight">\(s(t)\)</span>.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 2.24 in <span id="id12">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.24 in <span id="id17">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-8-8">
 <span id="ex8-8"></span><h3>Example 8.8<a class="headerlink" href="#example-8-8" title="Permalink to this headline">#</a></h3>
@@ -993,7 +1030,7 @@ A one-integrator linear system
 <div class="math notranslate nohighlight">
 \[\frac{dy(t)}{dt} + 2y(t) = x(t) + \frac{dx(t)}{dt}\]</div>
 <p>Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 2.25 in <span id="id13">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.25 in <span id="id18">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 </section>
 <section id="summary">
@@ -1004,8 +1041,8 @@ A one-integrator linear system
 <li><p><a class="reference internal" href="lti1.html#response-of-a-continuous-time-lti-system-and-the-convolution-integral"><span class="std std-ref">Response of a Continuous-Time LTI System and the Convolution Integral</span></a></p></li>
 </ul>
 </section>
-<section id="id14">
-<h2>Summary<a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h2>
+<section id="id19">
+<h2>Summary<a class="headerlink" href="#id19" title="Permalink to this headline">#</a></h2>
 <p>We have concluded our look at continuous-time LTI systems by considering</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#systems-described-by-differential-equations"><span class="std std-ref">Systems Described by Differential Equations</span></a></p></li>
