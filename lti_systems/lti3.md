@@ -335,14 +335,6 @@ In particular, we have looked at
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Summary
-
-We have concluded our look at continuous-time LTI systems by considering
-
-* {ref}`Systems_Described_by_Differential_Equations`
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## Next Time
 
 We move on to consider 
