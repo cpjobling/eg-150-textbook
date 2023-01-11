@@ -111,7 +111,7 @@ The system defined by
 
 $$\sum_{k=0}^N a_k \frac{d^ky(t)}{dt^k}=\sum_{k=0}^M b_k \frac{d^k x(t)}{dt^k}$$
 
-will be linear only if all the auxilliary conditions are zero (see {numref}`ex8_4`).
+will be linear only if all the auxilliary conditions are zero (see {ref}`ex8_4`).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -133,7 +133,7 @@ Zero-state and zero-input responses
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Note that $y_\mathrm{zi}(t) \neq y_h(t)$ and $y_\mathrm{zs}(t) \neq y_p(t)$ and that in general $y_\mathrm{zi}(t)$ contains $y_h(t)$ and $y_\mathrm{zs}(t)$ contains both $y_h(t)$ and $y_p(t)$ (see {numref}`ex8_3`).
+Note that $y_\mathrm{zi}(t) \neq y_h(t)$ and $y_\mathrm{zs}(t) \neq y_p(t)$ and that in general $y_\mathrm{zi}(t)$ contains $y_h(t)$ and $y_\mathrm{zs}(t)$ contains both $y_h(t)$ and $y_p(t)$ (see {ref}`ex8_3`).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -184,7 +184,7 @@ with the initial rest condition.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Examples of finding impulse responses are given in {numref}`ex8_6` to {numref}`ex8_8`.
+Examples of finding impulse responses are given in {ref}`ex8_6` to {ref}`ex8_8`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
