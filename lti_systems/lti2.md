@@ -279,7 +279,7 @@ For the answer, refer to the lecture recording or see solved problem 2.13 in {ci
 
 The system shown in {numref}`fig:ex6.6`(a) is formed by connecting two systems in *cascade*. The impulse responses of the two systems are $h_1(t)$ and $h_2(t)$, respectively, and
 
-$$h_1(t) = e^{=2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)$$
+$$h_1(t) = e^{-2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)$$
 
 (a) Find the impulse response $h(t)$ of the overall system shown in {numref}`fig:ex6.2`(b).
 
