@@ -203,7 +203,7 @@ Later in this course, and probably for the rest of your career, you will find th
 The continuous-time system shown in {numref}`fig:ex:8.1` consists of one integrator and one scalar multiplier. Write the differential equation that relates the output $y(t)$ to the input $x(t)$.
 
 :::{figure-md} fig:ex:8.1
-<img src="pictures/ex8_1.png" alt="A one-integrator linear system" width="60%">
+<img src="pictures/ex8_1.png" alt="A one-integrator linear system" width="40%">
 
 A one-integrator linear system
 :::
@@ -221,7 +221,7 @@ For the answer, refer to the lecture recording or see solved problem 2.18 in in 
 The continuous-time system shown in {numref}`fig:ex:8.2` consists of two integrators and two scalar multipliers. Write the differential equation that relates the output $y(t)$ to the input $x(t)$.
 
 :::{figure-md} fig:ex:8.1
-<img src="pictures/ex8_1.png" alt="A two-integrator linear system" width="60%">
+<img src="pictures/ex8_2.png" alt="A two-integrator linear system" width="60%">
 
 A one-integrator linear system
 :::
