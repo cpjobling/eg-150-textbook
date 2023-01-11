@@ -128,7 +128,42 @@ $$\int_{-\infty}^{\infty}\left[h(\tau)\right|\,d\tau \lt \infty$$
 (eigenfunctions_of_continuous_time_LTI_systems)=
 ## Eigenfunctions of Continuous-Time LTI Systems
 
-Refers to Example {ref}`ex4_7`
+In Chapter [Systems and Classification of Systems
+](/systems_and_signals/signals_and_systems/systems/index) (Example {ref}`ex4_7`) we saw that the eigenfunctions of continuous-time LTI system represented by the complex exponentials $e^{st}$, with $s$ a complex variable. 
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+That is
+
+$$\mathbf{T}\left\{e^{st}\right\}=\lambda e^{st}$$
+
+where $\lambda$ is the eigenvalue of $\mathbf{T}$ associated with $e^{st}$.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Setting $x(t)=e^{st}$ in the convolution integral, we have
+
+$$y(t) = \mathbf{T}\left\{e^{st}\right\} = \int_{-\infty}^{\infty}h(\tau)e^{s(t-\tau)}\,d\tau = \left[\int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau\right]e^{st}$$
+
+$$y(t) = H(s)e^{st} = \lambda e^{st}$$
+
+where 
+
+$$\lambda = H(s) = \int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau$$
+
+Thus, the eigenvalue of a continuous-time LTI system associated with the eigenfunction $e^{st}$ is given by $H(s)$ which is a complex constant whose value is determined by the value of $s$ via the equation
+
+$$H(s) = \int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau$$.
+
+Note from the equation
+
+$$y(t) = H(s)e^{st} = \lambda e^{st}$$
+
+that $y(0) = H(s)$ (see {ex:6_6}).
+
+### A Preview
+
+The above results inderline the definition of the [Laplace Transform](/laplace_transform/1/index) and the Fourier Transform. The former will be discussed later in this course. The Fourier Transform is discussed in **EG-247 Digital Signal Processing** next year.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

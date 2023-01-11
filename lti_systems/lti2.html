@@ -624,6 +624,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#eigenfunctions-of-continuous-time-lti-systems">
    Eigenfunctions of Continuous-Time LTI Systems
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-preview">
+     A Preview
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#examples-6">
@@ -764,6 +771,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#eigenfunctions-of-continuous-time-lti-systems">
    Eigenfunctions of Continuous-Time LTI Systems
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-preview">
+     A Preview
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#examples-6">
@@ -922,7 +936,28 @@ title="Print to PDF"
 </section>
 <section id="eigenfunctions-of-continuous-time-lti-systems">
 <span id="id6"></span><h2>Eigenfunctions of Continuous-Time LTI Systems<a class="headerlink" href="#eigenfunctions-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h2>
-<p>Refers to Example <a class="reference internal" href="../signals_and_systems/systems/index.html#ex4-7"><span class="std std-ref">Example 4.7</span></a></p>
+<p>In Chapter <span class="xref myst">Systems and Classification of Systems
+</span> (Example <a class="reference internal" href="../signals_and_systems/systems/index.html#ex4-7"><span class="std std-ref">Example 4.7</span></a>) we saw that the eigenfunctions of continuous-time LTI system represented by the complex exponentials <span class="math notranslate nohighlight">\(e^{st}\)</span>, with <span class="math notranslate nohighlight">\(s\)</span> a complex variable.</p>
+<p>That is</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{T}\left\{e^{st}\right\}=\lambda e^{st}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is the eigenvalue of <span class="math notranslate nohighlight">\(\mathbf{T}\)</span> associated with <span class="math notranslate nohighlight">\(e^{st}\)</span>.</p>
+<p>Setting <span class="math notranslate nohighlight">\(x(t)=e^{st}\)</span> in the convolution integral, we have</p>
+<div class="math notranslate nohighlight">
+\[y(t) = \mathbf{T}\left\{e^{st}\right\} = \int_{-\infty}^{\infty}h(\tau)e^{s(t-\tau)}\,d\tau = \left[\int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau\right]e^{st}\]</div>
+<div class="math notranslate nohighlight">
+\[y(t) = H(s)e^{st} = \lambda e^{st}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\lambda = H(s) = \int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau\]</div>
+<p>Thus, the eigenvalue of a continuous-time LTI system associated with the eigenfunction <span class="math notranslate nohighlight">\(e^{st}\)</span> is given by <span class="math notranslate nohighlight">\(H(s)\)</span> which is a complex constant whose value is determined by the value of <span class="math notranslate nohighlight">\(s\)</span> via the equation</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}H(s) = \int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau$$.\\Note from the equation\\$$y(t) = H(s)e^{st} = \lambda e^{st}\end{aligned}\end{align} \]</div>
+<p>that <span class="math notranslate nohighlight">\(y(0) = H(s)\)</span> (see {ex:6_6}).</p>
+<section id="a-preview">
+<h3>A Preview<a class="headerlink" href="#a-preview" title="Permalink to this headline">#</a></h3>
+<p>The above results inderline the definition of the <span class="xref myst">Laplace Transform</span> and the Fourier Transform. The former will be discussed later in this course. The Fourier Transform is discussed in <strong>EG-247 Digital Signal Processing</strong> next year.</p>
+</section>
 </section>
 <section id="examples-6">
 <span id="id7"></span><h2>Examples 6<a class="headerlink" href="#examples-6" title="Permalink to this headline">#</a></h2>
