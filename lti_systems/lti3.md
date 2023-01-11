@@ -36,8 +36,8 @@ We conclude our introduction to continuous-time LTI system by considering
 * {ref}`ccde_a_linear_constant_coefficient_differential_equations`
 * {ref}`ccde_b_linearity`
 * {ref}`ccde_c_causality`
-* {ref}`ccde_c_causality`
-* {ref}`ccde_c_causality`
+* {ref}`ccde_d_time_invariance`
+* {ref}`ccde_e_impulse_response`
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -166,14 +166,14 @@ Clearly, at initial rest, $y_\mathrm{zs}(t)=0$.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(ccde_c_causality)=
+(ccde_c_time_invariance)=
 ### D. Time-invariance
 
 For a linear causal system, initial rest also implies time-invariance ({ref}`ex8_6`).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(ccde_c_causality)=
+(ccde_e_impulse_response)=
 ### E. Impulse response
 
 The impulse response $h(t)$ of a linear constant-coefficient differential equation satisfies the differential equation
@@ -184,7 +184,7 @@ with the initial rest condition.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Examples of finding impulse responses are given in {numre}`ex8_6` to {numref}`ex8_8`.
+Examples of finding impulse responses are given in {numref}`ex8_6` to {numref}`ex8_8`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
