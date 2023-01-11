@@ -532,9 +532,9 @@ slideshow:
 x(t) = heaviside(t)-heaviside(t-3);
 h(t) = heaviside(t)-heaviside(t-2);
 subplot(121)
-fplot(x(t),[-1,6]),grid,ylim([0,1.1]),ylabel('x(t)'),xlabel('t')
+fplot(x(t),[-3,6]),grid,ylim([0,3]),ylabel('x(t)'),xlabel('t')
 subplot(122)
-fplot(h(t),[-1,6]),grid,ylim([0,1.1]),ylabel('h(t)'),xlabel('t')
+fplot(h(t),[-3,6]),grid,ylim([0,3]),ylabel('h(t)'),xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -556,7 +556,7 @@ Plot the result
 slideshow:
   slide_type: fragment
 ---
-fplot(y(t),[-1,6]),grid,ylim([0,2.1]),ylabel('h(t)'),xlabel('t')
+fplot(y(t),[-3,6]),grid,ylim([0,2.5]),ylabel('h(t)'),xlabel('t')
 ```
 
 We can obtain the signal $y(t)$ analytically by use of the convolution integral as will be shown in the examples class.

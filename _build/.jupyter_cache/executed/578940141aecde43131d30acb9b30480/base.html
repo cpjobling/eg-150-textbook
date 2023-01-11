@@ -51,7 +51,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/_build/.jupyter_cache/executed/bf07d672a9b0afbc5b1e4f2415f9801c/base.html" />
+    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/_build/.jupyter_cache/executed/578940141aecde43131d30acb9b30480/base.html" />
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -396,7 +396,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/_build/.jupyter_cache/executed/bf07d672a9b0afbc5b1e4f2415f9801c/base.ipynb"
+        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/_build/.jupyter_cache/executed/578940141aecde43131d30acb9b30480/base.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -456,7 +456,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2F_build/.jupyter_cache/executed/bf07d672a9b0afbc5b1e4f2415f9801c/base.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2F_build/.jupyter_cache/executed/578940141aecde43131d30acb9b30480/base.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -473,7 +473,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/_build/.jupyter_cache/executed/bf07d672a9b0afbc5b1e4f2415f9801c/base.ipynb"
+        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/_build/.jupyter_cache/executed/578940141aecde43131d30acb9b30480/base.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -501,7 +501,7 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../../_sources/_build/.jupyter_cache/executed/bf07d672a9b0afbc5b1e4f2415f9801c/base.ipynb"
+        <a href="../../../../_sources/_build/.jupyter_cache/executed/578940141aecde43131d30acb9b30480/base.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -591,114 +591,225 @@ title="Print to PDF"
                 
   <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%%file plot_heaviside.m </span><span class="w"></span>
-<span class="n">syms</span><span class="w"> </span><span class="s">t</span><span class="w"> </span>
-<span class="n">ezplot</span><span class="p">(</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span><span class="w"></span>
-<span class="nb">grid</span><span class="w"></span>
-<span class="n">heaviside</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Created file &#39;/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/signals_and_systems/elementary_signals/plot_heaviside.m&#39;.
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">plot_heaviside</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span><span class="w"></span>
+<span class="nb">cd</span><span class="w"> </span><span class="n">matlab</span><span class="o">/</span><span class="n">convolutiondemo</span><span class="w"></span>
+<span class="nb">pwd</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-    0.5000
+    &#39;/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/lti_systems/matlab/convolutiondemo&#39;
 </pre></div>
 </div>
-<img alt="../../../../_images/base_1_11.png" src="../../../../_images/base_1_11.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">t</span><span class="p">;</span><span class="w"></span>
-<span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w"> </span><span class="c">% rename heaviside function for ease of use</span><span class="w"></span>
-<span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c">% so signal can be plotted</span><span class="w"></span>
-<span class="n">ezplot</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Amplitude scaling $$Au_0(t)$$&#39;</span><span class="p">,</span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">convolutiondemo</span><span class="w"> </span><span class="s">%</span><span class="w"> </span><span class="s">ignore</span><span class="w"> </span><span class="s">warnings</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/base_2_04.png" src="../../../../_images/base_2_04.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 398)
+In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo (line 44)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 449)
+In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo (line 44)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 500)
+In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo (line 44)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 551)
+In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo (line 44)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 621)
+In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo (line 44)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 672)
+In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo (line 44)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 723)
+In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo (line 44)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 774)
+In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo (line 44)
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">ezplot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Amplitude scaling and mirroring $$-Au_0(t)$$&#39;</span><span class="p">,</span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">t</span><span class="w"> </span><span class="s">tau</span><span class="w"> </span><span class="s">alpha</span><span class="w"></span>
+<span class="n">assume</span><span class="p">(</span><span class="nb">alpha</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+
+<span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w"> </span><span class="c">% unit step function</span><span class="w"></span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span><span class="w"></span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.25</span><span class="p">])</span><span class="w"></span>
+<span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="nb">alpha</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w"></span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span><span class="w"></span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">subs</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="nb">alpha</span><span class="p">,</span><span class="mi">1</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;h(t)&#39;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/base_3_01.png" src="../../../../_images/base_3_01.png" />
+<img alt="../../../../_images/base_2_01.png" src="../../../../_images/base_2_01.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">ezplot</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Time reversal $$Au_0(-t)$$&#39;</span><span class="p">,</span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="nb">Inf</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/base_4_03.png" src="../../../../_images/base_4_03.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-(2*exp(-(alpha*t)/2)*(exp(-(alpha*t)/2)/2 - exp((alpha*t)/2)/2)*(sign(t)/2 + 1/2))/alpha
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">T</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c">% again to make the signal plottable.</span><span class="w"></span>
-<span class="n">ezplot</span><span class="p">(</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">T</span><span class="p">),[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Time delay $$u_0(t - T)$$&#39;</span><span class="p">,</span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">ya</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">subs</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="nb">alpha</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">ya</span><span class="p">(</span><span class="n">t</span><span class="p">))</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/base_5_02.png" src="../../../../_images/base_5_02.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ya(t) =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
+</pre></div>
+</div>
+<img alt="../../../../_images/base_4_2.png" src="../../../../_images/base_4_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">ezplot</span><span class="p">(</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">T</span><span class="p">),[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Time advance $$u_0(t + T)$$&#39;</span><span class="p">,</span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span><span class="w"></span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">subs</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="nb">alpha</span><span class="p">,</span><span class="mi">1</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;h(t)&#39;</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.25</span><span class="p">])</span><span class="w"></span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span><span class="w"></span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.25</span><span class="p">])</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/base_6_0.png" src="../../../../_images/base_6_0.png" />
+<img alt="../../../../_images/base_5_01.png" src="../../../../_images/base_5_01.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="n">vc</span><span class="p">(</span><span class="n">t</span><span class="p">)=(</span><span class="n">is</span><span class="o">/</span><span class="n">C</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w"></span>
-<span class="n">ezplot</span><span class="p">(</span><span class="n">vc</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;A ramp function&#39;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="n">inf</span><span class="p">,</span><span class="n">inf</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/base_7_02.png" src="../../../../_images/base_7_02.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-(2*exp(-(alpha*t)/2)*(exp(-(alpha*t)/2)/2 - exp((alpha*t)/2)/2)*(sign(t)/2 + 1/2))/alpha
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">is</span><span class="w"> </span><span class="s">L</span><span class="p">;</span><span class="w"></span>
-<span class="n">vL</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">diff</span><span class="p">(</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">yb</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">subs</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="nb">alpha</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">yb</span><span class="p">(</span><span class="n">t</span><span class="p">))</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>vL(t) =
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>yb(t) =
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>L*is*dirac(t)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
 </pre></div>
 </div>
+<img alt="../../../../_images/base_7_2.png" src="../../../../_images/base_7_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span><span class="w"></span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.1</span><span class="p">]),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span><span class="w"></span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.1</span><span class="p">]),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;h(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/base_8_01.png" src="../../../../_images/base_8_01.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="nb">Inf</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>heaviside(t - 5)*(t - 5) - heaviside(t - 3)*(t - 3) - heaviside(t - 2)*(t - 2) + t*heaviside(t)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">2.1</span><span class="p">]),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;h(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/base_10_01.png" src="../../../../_images/base_10_01.png" />
 </div>
 </div>
 
@@ -715,7 +826,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "matlab",
-            path: "./_build/.jupyter_cache/executed/bf07d672a9b0afbc5b1e4f2415f9801c"
+            path: "./_build/.jupyter_cache/executed/578940141aecde43131d30acb9b30480"
         },
         predefinedOutput: true
     }

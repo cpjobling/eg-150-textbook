@@ -19,15 +19,6 @@ kernelspec:
 
 This section is based on Sections 2.3 and 2.4 of {cite}`schaum` 
 
-
-## Introduction
-
-Two most important attributes of systems are linearity and time invariance. In this chapter we develop the fundamental input-output relationship for systems having these attributes. It will be shown that the input output-relationship for LTI systems is described in terms of a convolution operation. The importance of the convolution operation in LTI systems stems from the fact that the knowledge of the system response and LTI system to the unit impulse response allows us to find its output to any input signals. Specifying the input-output relationships for LTI systems by differential equations will also be discussed.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-We will discuss specifying the input-output relationsships for discrete-time systems will be covered in **EG-247 Digital Signal Processing** next year.
-
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## Subjects to be covered
@@ -40,6 +31,43 @@ We will discuss specifying the input-output relationsships for discrete-time sys
 
 (Properties_of_Continuous_Time_LTI_Systems)=
 ## Properties of Continuous-Time LTI Systems
+
+* {ref}`a_systems_with_and_without_memory`
+* {ref}`b_causality`
+* {ref}`c_Stability`
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(a_systems_with_and_without_memory)=
+### A. Systems with or without memory
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Since the output $y(t)$ of a memoryless system depends only on the current input $x(t)$, then, if the system is also linear and time-invariant, this relationship can only be of the form
+
+$$y(t) = Kx(t)$$
+
+where $K$ is a (gain) constant. 
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Thus the corresponding impulse response $h(t)$ is simply
+
+$$h(t) = K\delta(t)$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Therefore, if $h(t_0) \neq 0$ for $t_0 \neq 0$, then the continuous-time LTI system has memory.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(b_causality)=
+### B. Causality
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(c_Stability)=
+### C. Stability
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
