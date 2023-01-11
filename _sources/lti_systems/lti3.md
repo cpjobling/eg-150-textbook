@@ -148,7 +148,7 @@ to be causal, we must assume the condition of *initial rest* (or an *initially r
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-That is, if $x(y)=0$ for $t\le t_0$, then assume $y(t) = 0$ for $t\le t_0$ (See {numref}`ex4_6`).
+That is, if $x(y)=0$ for $t\le t_0$, then assume $y(t) = 0$ for $t\le t_0$ (See {ref}`ex4_6`).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -169,7 +169,7 @@ Clearly, at initial rest, $y_\mathrm{zs}(t)=0$.
 (ccde_c_causality)=
 ### D. Time-invariance
 
-For a linear causal system, initial rest also implies time-invariance ({numref}`ex8_6`).
+For a linear causal system, initial rest also implies time-invariance ({ref}`ex8_6`).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 

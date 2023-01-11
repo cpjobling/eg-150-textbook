@@ -123,7 +123,7 @@ where $y_\mathrm{zi}(t)$ called the *zero-input response*, is the response to th
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-This is illustrated in {numref}`fig:zs_and_zi_responses`
+This is illustrated in {refnum}`fig:zs_and_zi_responses`
 
 :::{figure-md} fig:zs_and_zi_responses
 <img src="pictures/zi_and_zs.png" alt="Zero-state and zero-input responses" width="60%">
