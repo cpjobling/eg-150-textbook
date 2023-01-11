@@ -119,10 +119,16 @@ $$y(t) = \int_{0}^{t}h(t)x(t-\tau)\,d\tau =  \int_{0}^{t}x(t)h(t-\tau)\,d\tau$$
 (c_Stability)=
 ### C. Stability
 
+The BIBO (bounded-input/bounder-output) stability of an LTI system (Section {ref}`stable_systems`) is readily acertined by the impuse response. It can be shown (Example 6.x) that a continuous-time LTI system is BIBO stable if its  impulse response is absolutely integrable; that is,
+
+$$\int_{-\infty}^{\infty}\left[h(\tau)\right|\,d\tau \lt \infty$$
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (eigenfunctions_of_continuous_time_LTI_systems)=
 ## Eigenfunctions of Continuous-Time LTI Systems
+
+Refers to Example {ref}`ex4_7`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
