@@ -176,7 +176,7 @@ Note from the equation
 
 $$y(t) = H(s)e^{st}$$
 
-that $y(0) = H(s)$ (see {ref}`ex:6_6`).
+that $y(0) = H(s)$ (see {ref}`ex:4_7`).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -300,6 +300,75 @@ For the answer, refer to the lecture recording or see solved problem 2.14 in {ci
 
 (examples_7)=
 ## Examples 7: Eigenfunctions of Continuous-Time LTI systems
+
++++
+
+(ex7_1)=
+### Example 7.1
+
+The system shown in {numref}`fig:ex6.6`(a) is formed by connecting two systems in *cascade*. The impulse responses of the two systems are $h_1(t)$ and $h_2(t)$, respectively, and
+
+$$h_1(t) = e^{=2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)$$
+
+(a) Find the impulse response $h(t)$ of the overall system shown in {numref}`fig:ex6.2`(b).
+
+(b) Determine if the overall system is BIBO stable.
+
+:::{figure-md} fig:ex6.6
+<img src="pictures/ex6_6.png" alt="A cascade connection of two continuous-time LTI systems" width="50%">
+
+A cascade connection of two continuous-time LTI systems
+:::
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 2.15 in {cite}`schaum`.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex7_2)=
+### Example 7.2
+
+The system shown in {numref}`fig:ex6.6`(a) is formed by connecting two systems in *cascade*. The impulse responses of the two systems are $h_1(t)$ and $h_2(t)$, respectively, and
+
+$$h_1(t) = e^{=2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)$$
+
+(a) Find the impulse response $h(t)$ of the overall system shown in {numref}`fig:ex6.2`(b).
+
+(b) Determine if the overall system is BIBO stable.
+
+:::{figure-md} fig:ex6.6
+<img src="pictures/ex6_6.png" alt="A cascade connection of two continuous-time LTI systems" width="50%">
+
+A cascade connection of two continuous-time LTI systems
+:::
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 2.16 in {cite}`schaum`.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex7_3)=
+### Example 7.3
+
+The system shown in {numref}`fig:ex6.6`(a) is formed by connecting two systems in *cascade*. The impulse responses of the two systems are $h_1(t)$ and $h_2(t)$, respectively, and
+
+$$h_1(t) = e^{=2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)$$
+
+(a) Find the impulse response $h(t)$ of the overall system shown in {numref}`fig:ex6.2`(b).
+
+(b) Determine if the overall system is BIBO stable.
+
+:::{figure-md} fig:ex6.6
+<img src="pictures/ex6_6.png" alt="A cascade connection of two continuous-time LTI systems" width="50%">
+
+A cascade connection of two continuous-time LTI systems
+:::
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 2.17 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
