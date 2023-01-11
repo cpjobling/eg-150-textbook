@@ -204,7 +204,7 @@ Sketch the output to the following inputs:
 
 (a)$x(t-2)$;
 
-(b) $\frac{1}{2}x(t)$
+(b) $\frac{1}{2}x(t)$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
