@@ -64,6 +64,9 @@ Therefore, if $h(t_0) \neq 0$ for $t_0 \neq 0$, then the continuous-time LTI sys
 (b_causality)=
 ### B. Causality
 
+(causal_systems)=
+#### Causal continuous-time LTI systems
+
 As discussed in Section {ref}`causal_and_non-causal_systems`, a causal system does not respond to an input event until that event actually occurs.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
@@ -72,7 +75,7 @@ Therefore, for a causal LTI system, we have
 
 $$h(t) = 0\quad t \lt 0$$
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Applying the causality condition to the convolution integral, the output of a causal continuous-time LTI system is expressed as
 
@@ -80,7 +83,7 @@ $$y(t) = \int_0^{\infty}h(\tau)x(t=\tau)\,d\tau$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Alternatively, applying the causality to the {ref}`convolution_integral`
+Alternatively, applying the causality to the convolution integral (defined in Section {ref}`convolution_integral`)
 
 $$y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$
 
@@ -91,6 +94,25 @@ $$y(t) = \int_{-\infty}^{t}x(t)h(t-\tau)\,d\tau$$
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 This equation shows that the only values of the input $x(t)$ used to evaluate the output $y(t)$ are those for $\tau \le   t$.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(causal_signals)=
+#### Causal signals
+
+Based on the causality condition, any signal is called *causal* if
+
+$$x(t)=0\quad t \lt 0$$
+
+and is called *anticausal* if
+
+$$x(t)=0\quad t \gt 0$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Combining the definition of a causal signal with a causal signal, when the input $x(t)$ is causal, the output of a causal continuous-time LTI system is given by
+
+$$y(t) = \int_{0}^{t}h(t)x(t-\tau)\,d\tau =  \int_{0}^{t}x(t)h(t-\tau)\,d\tau$$
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

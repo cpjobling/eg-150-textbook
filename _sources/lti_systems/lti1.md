@@ -415,7 +415,7 @@ fplot(x(t)),title('x(t)'),ylim([0,1.25])
 slideshow:
   slide_type: fragment
 ---
-y(t) = int(h(tau)*x(t - tau),tau,-inf,inf)
+y(t) = int(h(tau)*x(t - tau),tau,-Inf,Inf)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}

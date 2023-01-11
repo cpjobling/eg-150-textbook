@@ -400,7 +400,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/lti_systems/lti2.md"
+        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/lti_systems/lti2.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -600,6 +600,18 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#b-causality">
      B. Causality
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#causal-continuous-time-lti-systems">
+       Causal continuous-time LTI systems
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#causal-signals">
+       Causal signals
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#c-stability">
@@ -656,7 +668,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id7">
+  <a class="reference internal nav-link" href="#id8">
    Summary
   </a>
  </li>
@@ -686,7 +698,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id9">
+  <a class="reference internal nav-link" href="#id10">
    Summary
   </a>
  </li>
@@ -728,6 +740,18 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#b-causality">
      B. Causality
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#causal-continuous-time-lti-systems">
+       Causal continuous-time LTI systems
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#causal-signals">
+       Causal signals
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#c-stability">
@@ -784,7 +808,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id7">
+  <a class="reference internal nav-link" href="#id8">
    Summary
   </a>
  </li>
@@ -814,7 +838,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id9">
+  <a class="reference internal nav-link" href="#id10">
    Summary
   </a>
  </li>
@@ -859,6 +883,8 @@ title="Print to PDF"
 </section>
 <section id="b-causality">
 <span id="id3"></span><h3>B. Causality<a class="headerlink" href="#b-causality" title="Permalink to this headline">#</a></h3>
+<section id="causal-continuous-time-lti-systems">
+<span id="causal-systems"></span><h4>Causal continuous-time LTI systems<a class="headerlink" href="#causal-continuous-time-lti-systems" title="Permalink to this headline">#</a></h4>
 <p>As discussed in Section <a class="reference internal" href="../signals_and_systems/systems/index.html#causal-and-non-causal-systems"><span class="std std-ref">Causal and Non-Causal Systems</span></a>, a causal system does not respond to an input event until that event actually occurs.</p>
 <p>Therefore, for a causal LTI system, we have</p>
 <div class="math notranslate nohighlight">
@@ -866,7 +892,7 @@ title="Print to PDF"
 <p>Applying the causality condition to the convolution integral, the output of a causal continuous-time LTI system is expressed as</p>
 <div class="math notranslate nohighlight">
 \[y(t) = \int_0^{\infty}h(\tau)x(t=\tau)\,d\tau\]</div>
-<p>Alternatively, applying the causality to the <a class="reference internal" href="lti1.html#convolution-integral"><span class="std std-ref">C. Convolution Integral</span></a></p>
+<p>Alternatively, applying the causality to the convolution integral (defined in Section <a class="reference internal" href="lti1.html#convolution-integral"><span class="std std-ref">C. Convolution Integral</span></a>)</p>
 <div class="math notranslate nohighlight">
 \[y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau\]</div>
 <p>we have</p>
@@ -874,15 +900,28 @@ title="Print to PDF"
 \[y(t) = \int_{-\infty}^{t}x(t)h(t-\tau)\,d\tau\]</div>
 <p>This equation shows that the only values of the input <span class="math notranslate nohighlight">\(x(t)\)</span> used to evaluate the output <span class="math notranslate nohighlight">\(y(t)\)</span> are those for <span class="math notranslate nohighlight">\(\tau \le   t\)</span>.</p>
 </section>
+<section id="causal-signals">
+<span id="id4"></span><h4>Causal signals<a class="headerlink" href="#causal-signals" title="Permalink to this headline">#</a></h4>
+<p>Based on the causality condition, any signal is called <em>causal</em> if</p>
+<div class="math notranslate nohighlight">
+\[x(t)=0\quad t \lt 0\]</div>
+<p>and is called <em>anticausal</em> if</p>
+<div class="math notranslate nohighlight">
+\[x(t)=0\quad t \gt 0\]</div>
+<p>Combining the definition of a causal signal with a causal signal, when the input <span class="math notranslate nohighlight">\(x(t)\)</span> is causal, the output of a causal continuous-time LTI system is given by</p>
+<div class="math notranslate nohighlight">
+\[y(t) = \int_{0}^{t}h(t)x(t-\tau)\,d\tau =  \int_{0}^{t}x(t)h(t-\tau)\,d\tau\]</div>
+</section>
+</section>
 <section id="c-stability">
-<span id="id4"></span><h3>C. Stability<a class="headerlink" href="#c-stability" title="Permalink to this headline">#</a></h3>
+<span id="id5"></span><h3>C. Stability<a class="headerlink" href="#c-stability" title="Permalink to this headline">#</a></h3>
 </section>
 </section>
 <section id="eigenfunctions-of-continuous-time-lti-systems">
-<span id="id5"></span><h2>Eigenfunctions of Continuous-Time LTI Systems<a class="headerlink" href="#eigenfunctions-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h2>
+<span id="id6"></span><h2>Eigenfunctions of Continuous-Time LTI Systems<a class="headerlink" href="#eigenfunctions-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="examples-6">
-<span id="id6"></span><h2>Examples 6<a class="headerlink" href="#examples-6" title="Permalink to this headline">#</a></h2>
+<span id="id7"></span><h2>Examples 6<a class="headerlink" href="#examples-6" title="Permalink to this headline">#</a></h2>
 <section id="example-6-1">
 <span id="ex6-1"></span><h3>Example 6.1<a class="headerlink" href="#example-6-1" title="Permalink to this headline">#</a></h3>
 <p>Verify the following properties of the convolution integral; that is,</p>
@@ -919,8 +958,8 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="lti1.html#response-of-a-continuous-time-lti-system-and-the-convolution-integral"><span class="std std-ref">Response of a Continuous-Time LTI System and the Convolution Integral</span></a></p></li>
 </ul>
 </section>
-<section id="id7">
-<h2>Summary<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h2>
+<section id="id8">
+<h2>Summary<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
@@ -933,7 +972,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="systems-described-by-differential-equations">
-<span id="id8"></span><h2>Systems Described by Differential Equations<a class="headerlink" href="#systems-described-by-differential-equations" title="Permalink to this headline">#</a></h2>
+<span id="id9"></span><h2>Systems Described by Differential Equations<a class="headerlink" href="#systems-described-by-differential-equations" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="worked-solutions">
 <h2>Worked Solutions<a class="headerlink" href="#worked-solutions" title="Permalink to this headline">#</a></h2>
@@ -944,8 +983,8 @@ title="Print to PDF"
 <section id="lab-exercises">
 <h2>Lab Exercises<a class="headerlink" href="#lab-exercises" title="Permalink to this headline">#</a></h2>
 </section>
-<section id="id9">
-<h2>Summary<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h2>
+<section id="id10">
+<h2>Summary<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h2>
 <p>In this lecture we have started our look at LTI systems.</p>
 <p>In particular we have looked at</p>
 <ul class="simple">
