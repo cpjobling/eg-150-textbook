@@ -400,7 +400,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/lti_systems/lti2.md"
+        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/lti_systems/lti2.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -633,8 +633,8 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-6">
-   Examples 6
+  <a class="reference internal nav-link" href="#examples-6-properties-of-continuous-time-lti-systems">
+   Examples 6: Properties of Continuous-Time LTI Systems
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -675,7 +675,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id8">
+  <a class="reference internal nav-link" href="#id9">
    Summary
   </a>
  </li>
@@ -705,7 +705,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id10">
+  <a class="reference internal nav-link" href="#id11">
    Summary
   </a>
  </li>
@@ -780,8 +780,8 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-6">
-   Examples 6
+  <a class="reference internal nav-link" href="#examples-6-properties-of-continuous-time-lti-systems">
+   Examples 6: Properties of Continuous-Time LTI Systems
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -822,7 +822,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id8">
+  <a class="reference internal nav-link" href="#id9">
    Summary
   </a>
  </li>
@@ -852,7 +852,7 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id10">
+  <a class="reference internal nav-link" href="#id11">
    Summary
   </a>
  </li>
@@ -874,7 +874,7 @@ title="Print to PDF"
 <ul class="simple">
 <li><p><a class="reference internal" href="#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#examples-6"><span class="std std-ref">Examples 6</span></a></p></li>
+<li><p><a class="reference internal" href="#examples-6"><span class="std std-ref">Examples 6: Properties of Continuous-Time LTI Systems</span></a></p></li>
 </ul>
 </section>
 <section id="properties-of-continuous-time-lti-systems">
@@ -966,13 +966,20 @@ title="Print to PDF"
 <p>The above results inderline the definition of the Laplace transform and Fourier transform. The <span class="xref std std-doc">../laplace_transform/1/laplace.md)</span> will be discussed later in this course. The Fourier Transform will be introduced in <strong>EG-247 Digital Signal Processing</strong> next year.</p>
 </section>
 </section>
-<section id="examples-6">
-<span id="id7"></span><h2>Examples 6<a class="headerlink" href="#examples-6" title="Permalink to this headline">#</a></h2>
+<section id="examples-6-properties-of-continuous-time-lti-systems">
+<span id="examples-6"></span><h2>Examples 6: Properties of Continuous-Time LTI Systems<a class="headerlink" href="#examples-6-properties-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h2>
 <section id="example-6-1">
 <span id="ex6-1"></span><h3>Example 6.1<a class="headerlink" href="#example-6-1" title="Permalink to this headline">#</a></h3>
-<p>Verify the following properties of the convolution integral; that is,</p>
-<p>(a) <span class="math notranslate nohighlight">\(x(t)*h(t) = h(t)*x(t)\)</span></p>
-<p>(b) <span class="math notranslate nohighlight">\(\left\{x(t) * h_1(t)\right\} * h_2(t) = x(t)*\left\{h_1(t) * h_2(t)\right\}\)</span></p>
+<p>The signals in <a href="#id7"><span class="problematic" id="id8">:refnumber:`fig:ex6.1`</span></a>(a) and (b) are the input <span class="math notranslate nohighlight">\(x(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t)\)</span>, respectively, of a certain continuous-time LTI system.</p>
+<figure class="align-default" id="fig-ex6-1">
+<a class="reference internal image-reference" href="lti_systems/pictures/ex6_1.png"><img alt="Input and output signals for a continuous-time LTI system" src="lti_systems/pictures/ex6_1.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Input and output signals for a continuous-time LTI system</span><a class="headerlink" href="#fig-ex6-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Sketch the output to the following inputs:</p>
+<p>(a)<span class="math notranslate nohighlight">\(x(t-2)\)</span>;</p>
+<p>(b) <span class="math notranslate nohighlight">\(\frac{1}{2}x(t)\)</span></p>
 <p>For the answer, refer to the lecture recording or see solved problem 2.1 in in {cite}schaum.</p>
 </section>
 <section id="example-6-2">
@@ -1004,8 +1011,8 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="lti1.html#response-of-a-continuous-time-lti-system-and-the-convolution-integral"><span class="std std-ref">Response of a Continuous-Time LTI System and the Convolution Integral</span></a></p></li>
 </ul>
 </section>
-<section id="id8">
-<h2>Summary<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h2>
+<section id="id9">
+<h2>Summary<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
@@ -1018,7 +1025,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="systems-described-by-differential-equations">
-<span id="id9"></span><h2>Systems Described by Differential Equations<a class="headerlink" href="#systems-described-by-differential-equations" title="Permalink to this headline">#</a></h2>
+<span id="id10"></span><h2>Systems Described by Differential Equations<a class="headerlink" href="#systems-described-by-differential-equations" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="worked-solutions">
 <h2>Worked Solutions<a class="headerlink" href="#worked-solutions" title="Permalink to this headline">#</a></h2>
@@ -1029,8 +1036,8 @@ title="Print to PDF"
 <section id="lab-exercises">
 <h2>Lab Exercises<a class="headerlink" href="#lab-exercises" title="Permalink to this headline">#</a></h2>
 </section>
-<section id="id10">
-<h2>Summary<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h2>
+<section id="id11">
+<h2>Summary<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h2>
 <p>In this lecture we have started our look at LTI systems.</p>
 <p>In particular we have looked at</p>
 <ul class="simple">

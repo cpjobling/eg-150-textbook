@@ -180,23 +180,31 @@ that $y(0) = H(s)$ (see {ref}`ex:6_6`).
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Looking Ahead
-The above results inderline the definition of the Laplace transform and Fourier transform. The {doc}`../laplace_transform/1/laplace.md)` will be discussed later in this course. The Fourier Transform will be introduced in **EG-247 Digital Signal Processing** next year.
+The above results inderline the definition of the Laplace transform and Fourier transform. The {doc}`../laplace_transform/1/laplace.md` will be discussed later in this course. The Fourier Transform will be introduced in **EG-247 Digital Signal Processing** next year.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (examples_6)=
-## Examples 6
+## Examples 6: Properties of Continuous-Time LTI Systems
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex6_1)=
 ### Example 6.1 
 
-Verify the following properties of the convolution integral; that is,
+The signals in {refnumber}`fig:ex6.1`(a) and (b) are the input $x(t)$ and the output $y(t)$, respectively, of a certain continuous-time LTI system. 
 
-(a) $x(t)*h(t) = h(t)*x(t)$
+:::{figure-md} fig:ex6.1
+<img src="pictures/ex6_1.png" alt="Input and output signals for a continuous-time LTI system" width="60%">
 
-(b) $\left\{x(t) * h_1(t)\right\} * h_2(t) = x(t)*\left\{h_1(t) * h_2(t)\right\}$
+Input and output signals for a continuous-time LTI system
+:::
+
+Sketch the output to the following inputs:
+
+(a)$x(t-2)$;
+
+(b) $\frac{1}{2}x(t)$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -205,7 +213,7 @@ For the answer, refer to the lecture recording or see solved problem 2.1 in in {
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex6_2)=
-### Example 6.2
+### Example 6.2 
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
