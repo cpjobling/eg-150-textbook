@@ -166,7 +166,7 @@ Clearly, at initial rest, $y_\mathrm{zs}(t)=0$.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(ccde_c_time_invariance)=
+(ccde_d_time_invariance)=
 ### D. Time-invariance
 
 For a linear causal system, initial rest also implies time-invariance ({ref}`ex8_6`).
