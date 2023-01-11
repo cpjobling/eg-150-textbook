@@ -211,7 +211,7 @@ A one-integrator linear system
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.18 in in {cite}`schaum`.
+For the answer, refer to the lecture recording or see solved problem 2.18 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -249,7 +249,7 @@ $$x(t) = Ke^{bt}u_0(t)$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.20 in in {cite}`schaum`.
+For the answer, refer to the lecture recording or see solved problem 2.20 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -264,7 +264,7 @@ Consider the system in {ref}`ex8_3`.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.21 in in {cite}`schaum`.
+For the answer, refer to the lecture recording or see solved problem 2.21 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
