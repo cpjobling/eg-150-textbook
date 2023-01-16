@@ -1,4 +1,3 @@
-(Laplace Transforms and their Applications)=
 # Laplace Transforms and their Applications
 
 ## About the Laplace Transformation
@@ -33,7 +32,3 @@ In this section of the course we will cover:
 
 * This page is downloadable as a [PDF](https://cpjobling.github.io/eg-247-textbook/laplace_transform/laplace_transform.pdf) file. 
 
-
-```python
-
-```
