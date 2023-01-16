@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 MATLAB_HOME=/Applications/MATLAB_R2022b.app
-EG_150=$HOME/code/src/github.com/cpjobling/eg-247-textbook
+EG_150=$HOME/code/src/github.com/cpjobling/eg-150-textbook
 
 # Set up for jupyter with rise and jupyter-book
 cd $EG_150
