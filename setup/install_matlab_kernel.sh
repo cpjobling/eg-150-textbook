@@ -13,7 +13,6 @@ conda init zsh
 conda activate eg-150-textbook
 pip install -U jupyter-book
 pip install -U jupytext
-conda install rise
 
 # Set up Python-MATLAB bridge and matlab_kernel
 cd $MATLAB_HOME/extern/engines/python
@@ -30,6 +29,9 @@ pip install -U ghp-import
 
 
 cd $EG_150
+
+# Check that we can build the site
+make site
 
 # Save environment and exit eg-150-textbook
 conda env export > environment.yml
