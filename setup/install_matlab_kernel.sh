@@ -8,7 +8,7 @@ cd $EG_150
 conda deactivate
 conda env remove -n eg-150-textbook
 conda update conda
-conda create -n eg-150-textbook python=3.9 anaconda
+conda create -n eg-150-textbook python=3.10 anaconda
 conda init zsh
 conda activate eg-150-textbook
 pip install -U jupyter-book
