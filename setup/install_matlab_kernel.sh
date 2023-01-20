@@ -8,12 +8,11 @@ cd $EG_150
 conda deactivate
 conda env remove -n eg-150-textbook
 conda update conda
-conda create -n eg-150-textbook python=3.10 anaconda
+conda create -n eg-150-textbook python=3.9 anaconda
 conda init zsh
 conda activate eg-150-textbook
 pip install -U jupyter-book
 pip install -U jupytext
-conda install rise
 
 # Set up Python-MATLAB bridge and matlab_kernel
 cd $MATLAB_HOME/extern/engines/python
@@ -30,6 +29,9 @@ pip install -U ghp-import
 
 
 cd $EG_150
+
+# Check that we can build the site
+make site
 
 # Save environment and exit eg-150-textbook
 conda env export > environment.yml
