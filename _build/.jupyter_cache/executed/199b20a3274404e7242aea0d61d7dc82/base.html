@@ -603,11 +603,11 @@ title="Print to PDF"
                 
   <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Matlab setup</span><span class="w"></span>
-<span class="nb">clear</span><span class="w"> </span><span class="nb">all</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Matlab setup</span>
+<span class="nb">clear</span><span class="w"> </span><span class="nb">all</span>
 <span class="nb">cd</span><span class="w"> </span><span class="p">.</span><span class="o">./</span><span class="n">matlab</span><span class="w"> </span>
-<span class="nb">pwd</span><span class="w"></span>
-<span class="nb">format</span><span class="w"> </span><span class="n">compact</span><span class="w"></span>
+<span class="nb">pwd</span>
+<span class="nb">format</span><span class="w"> </span><span class="n">compact</span>
 </pre></div>
 </div>
 </div>
@@ -620,7 +620,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -628,19 +628,19 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">R1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">200</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span><span class="w"> </span>
-<span class="n">R2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">40</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span><span class="w"></span>
-<span class="n">R3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">50</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="n">R2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">40</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span>
+<span class="n">R3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">50</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span>
 
-<span class="n">C1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">25</span><span class="o">*</span><span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">);</span><span class="w"></span>
-<span class="n">C2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">);</span><span class="w"></span>
+<span class="n">C1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">25</span><span class="o">*</span><span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">);</span>
+<span class="n">C2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">den</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R1</span><span class="o">*</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">R1</span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="o">*</span><span class="n">C1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">*</span><span class="n">R3</span><span class="o">*</span><span class="n">C2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R2</span><span class="p">);</span><span class="w"></span>
-<span class="nb">simplify</span><span class="p">(</span><span class="n">den</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">den</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R1</span><span class="o">*</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">R1</span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="o">*</span><span class="n">C1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">*</span><span class="n">R3</span><span class="o">*</span><span class="n">C2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R2</span><span class="p">);</span>
+<span class="nb">simplify</span><span class="p">(</span><span class="n">den</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -655,8 +655,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="w"> </span><span class="n">long</span><span class="w"></span>
-<span class="n">denG</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sym2poly</span><span class="p">(</span><span class="nb">ans</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="w"> </span><span class="n">long</span>
+<span class="n">denG</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sym2poly</span><span class="p">(</span><span class="nb">ans</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -669,34 +669,34 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">numG</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">numG</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-<span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">10000</span><span class="p">;</span><span class="w"></span>
-<span class="n">Gs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">w</span><span class="o">.^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">j</span><span class="o">.*</span><span class="n">b</span><span class="o">.*</span><span class="n">w</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">10000</span><span class="p">;</span>
+<span class="n">Gs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">w</span><span class="o">.^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">j</span><span class="o">.*</span><span class="n">b</span><span class="o">.*</span><span class="n">w</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">semilogx</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">Gs</span><span class="p">))</span><span class="w"></span>
-<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Radian frequency w (rad/s&#39;</span><span class="p">)</span><span class="w"></span>
-<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;|Vout/Vin|&#39;</span><span class="p">)</span><span class="w"></span>
-<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Magnitude Vout/Vin vs. Radian Frequency&#39;</span><span class="p">)</span><span class="w"></span>
-<span class="nb">grid</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">semilogx</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">Gs</span><span class="p">))</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Radian frequency w (rad/s&#39;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;|Vout/Vin|&#39;</span><span class="p">)</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Magnitude Vout/Vin vs. Radian Frequency&#39;</span><span class="p">)</span>
+<span class="nb">grid</span>
 </pre></div>
 </div>
 </div>
@@ -706,7 +706,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -736,7 +736,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">step</span><span class="p">(</span><span class="n">G</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">step</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -746,14 +746,14 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="w"> </span><span class="n">example_8</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="w"> </span><span class="n">example_8</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">G</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

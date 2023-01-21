@@ -649,19 +649,19 @@ title="Print to PDF"
 <section id="go-to-eg-150-textbook-folder">
 <h2>Go to eg-150-textbook folder<a class="headerlink" href="#go-to-eg-150-textbook-folder" title="Permalink to this headline">#</a></h2>
 <p>Create and launch EG-150 Textbook environment:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda update conda
-conda create -n eg-150-textbook <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9 anaconda
-conda activate eg-150-textbook <span class="c1"># source activate eg-150-textbook on mac or unix</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>conda
+conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>eg-150-textbook<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9<span class="w"> </span>anaconda
+conda<span class="w"> </span>activate<span class="w"> </span>eg-150-textbook<span class="w"> </span><span class="c1"># source activate eg-150-textbook on mac or unix</span>
 </pre></div>
 </div>
 <p>Test packages:</p>
 <p>Download <a class="reference external" href="https://fangohr.github.io/blog/code/python/soton-test-python-installation.py">soton-test-python-installation.py</a>.</p>
 <p>Run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python soton-test-python-installation.py
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>soton-test-python-installation.py
 </pre></div>
 </div>
 <p>Install [Rise](<a class="reference external" href="https://damianavila.github.io/RISE/set">https://damianavila.github.io/RISE/set</a> index.html) for active slides:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda install rise
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>rise
 </pre></div>
 </div>
 </section>
@@ -669,17 +669,17 @@ conda activate eg-150-textbook <span class="c1"># source activate eg-150-textboo
 <h2>Install MATLAB kernel<a class="headerlink" href="#install-matlab-kernel" title="Permalink to this headline">#</a></h2>
 <p>This assumes windows.</p>
 <p>First install the Python-MATLAB bridge.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="nv">MATLAB_HOME</span><span class="o">=</span><span class="s2">&quot;C:\Program Files\MATLAB\R2022b&quot;</span>
-<span class="nb">cd</span> %MATLAB_HOME%<span class="se">\e</span>xtern<span class="se">\e</span>ngines<span class="se">\p</span>ython
-python setup.py install
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="w"> </span><span class="nv">MATLAB_HOME</span><span class="o">=</span><span class="s2">&quot;C:\Program Files\MATLAB\R2022b&quot;</span>
+<span class="nb">cd</span><span class="w"> </span>%MATLAB_HOME%<span class="se">\e</span>xtern<span class="se">\e</span>ngines<span class="se">\p</span>ython
+python<span class="w"> </span>setup.py<span class="w"> </span>install
 </pre></div>
 </div>
 <p>Now<code class="docutils literal notranslate"><span class="pre">MATLAB_KERNEL</span></code></p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip install matlab_kernel
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>matlab_kernel
 </pre></div>
 </div>
 <p>Now when you launch a jupyter notebook</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>jupyter notebook content<span class="se">\i</span>ntroduction<span class="se">\i</span>ndex.ipynb
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook<span class="w"> </span>content<span class="se">\i</span>ntroduction<span class="se">\i</span>ndex.ipynb
 </pre></div>
 </div>
 <p>you should have a MATLAB kernel as well as a Python 3 kernel and the <a class="reference external" href="https://damianavila.github.io/RISE/index.html">Rise</a> slide show feature should be available.</p>
@@ -687,17 +687,17 @@ python setup.py install
 <section id="export-environment-settings">
 <h2>Export environment settings<a class="headerlink" href="#export-environment-settings" title="Permalink to this headline">#</a></h2>
 <p>Export settings:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda env <span class="nb">export</span> --file environment.yml
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span><span class="nb">export</span><span class="w"> </span>--file<span class="w"> </span>environment.yml
 </pre></div>
 </div>
 <p>To recreate the EG-247 Textbook environment on another machine with Anaconda installed, you should be able to copy the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file and execute:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda env create --file environment.yml
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>--file<span class="w"> </span>environment.yml
 </pre></div>
 </div>
 </section>
 <section id="exit-eg-150-environment">
 <h2>Exit EG-150 Environment<a class="headerlink" href="#exit-eg-150-environment" title="Permalink to this headline">#</a></h2>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda deactivate <span class="c1"># source deactivate on mac or linux</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>deactivate<span class="w"> </span><span class="c1"># source deactivate on mac or linux</span>
 </pre></div>
 </div>
 </section>

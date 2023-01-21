@@ -603,10 +603,10 @@ title="Print to PDF"
                 
   <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">t</span><span class="w"></span>
-<span class="n">T</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c">% period of periodic signal</span><span class="w"></span>
-<span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">t</span><span class="o">*</span><span class="p">(</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">T</span><span class="p">));</span><span class="w"></span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;A Single period of x(t)&#39;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">t</span>
+<span class="n">T</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c">% period of periodic signal</span>
+<span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">t</span><span class="o">*</span><span class="p">(</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">T</span><span class="p">));</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;A Single period of x(t)&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -616,11 +616,11 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">periodic_signal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="k">for</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="p">:</span><span class="mi">5</span><span class="w"></span>
-<span class="w">    </span><span class="n">periodic_signal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">periodic_signal</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="o">*</span><span class="n">T</span><span class="p">);</span><span class="w"></span>
-<span class="k">end</span><span class="w"></span>
-<span class="n">periodic_signal</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">periodic_signal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="p">:</span><span class="mi">5</span>
+<span class="w">    </span><span class="n">periodic_signal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">periodic_signal</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="o">*</span><span class="n">T</span><span class="p">);</span>
+<span class="k">end</span>
+<span class="n">periodic_signal</span>
 </pre></div>
 </div>
 </div>
@@ -635,10 +635,10 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">periodic_signal</span><span class="p">,</span><span class="s">&#39;g-&#39;</span><span class="p">,</span><span class="s">&quot;LineWidth&quot;</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="k">...</span><span class="w"></span>
-<span class="w">    </span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;T = 1&#39;</span><span class="p">)</span><span class="w"></span>
-<span class="nb">xlim</span><span class="p">([</span><span class="o">-</span><span class="mf">3.00</span><span class="w"> </span><span class="mf">3.00</span><span class="p">])</span><span class="w"></span>
-<span class="nb">ylim</span><span class="p">([</span><span class="mf">0.00</span><span class="w"> </span><span class="mf">2.00</span><span class="p">])</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">periodic_signal</span><span class="p">,</span><span class="s">&#39;g-&#39;</span><span class="p">,</span><span class="s">&quot;LineWidth&quot;</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="k">...</span>
+<span class="w">    </span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;T = 1&#39;</span><span class="p">)</span>
+<span class="nb">xlim</span><span class="p">([</span><span class="o">-</span><span class="mf">3.00</span><span class="w"> </span><span class="mf">3.00</span><span class="p">])</span>
+<span class="nb">ylim</span><span class="p">([</span><span class="mf">0.00</span><span class="w"> </span><span class="mf">2.00</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>

@@ -603,9 +603,9 @@ title="Print to PDF"
                 
   <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span><span class="w"></span>
-<span class="nb">cd</span><span class="w"> </span><span class="n">matlab</span><span class="o">/</span><span class="n">convolutiondemo</span><span class="w"></span>
-<span class="nb">pwd</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span>
+<span class="nb">cd</span><span class="w"> </span><span class="n">matlab</span><span class="o">/</span><span class="n">convolutiondemo</span>
+<span class="nb">pwd</span>
 </pre></div>
 </div>
 </div>
@@ -618,7 +618,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">convolutiondemo</span><span class="w"> </span><span class="s">%</span><span class="w"> </span><span class="s">ignore</span><span class="w"> </span><span class="s">warnings</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">convolutiondemo</span><span class="w"> </span><span class="s">%</span><span class="w"> </span><span class="s">ignore</span><span class="w"> </span><span class="s">warnings</span>
 </pre></div>
 </div>
 </div>
@@ -691,15 +691,15 @@ In convolutiondemo (line 44)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">t</span><span class="w"> </span><span class="s">tau</span><span class="w"> </span><span class="s">alpha</span><span class="w"></span>
-<span class="n">assume</span><span class="p">(</span><span class="nb">alpha</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">t</span><span class="w"> </span><span class="s">tau</span><span class="w"> </span><span class="s">alpha</span>
+<span class="n">assume</span><span class="p">(</span><span class="nb">alpha</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
 
-<span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w"> </span><span class="c">% unit step function</span><span class="w"></span>
-<span class="nb">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span><span class="w"></span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.25</span><span class="p">])</span><span class="w"></span>
-<span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="nb">alpha</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w"></span>
-<span class="nb">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span><span class="w"></span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">subs</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="nb">alpha</span><span class="p">,</span><span class="mi">1</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;h(t)&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w"> </span><span class="c">% unit step function</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.25</span><span class="p">])</span>
+<span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="nb">alpha</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">subs</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="nb">alpha</span><span class="p">,</span><span class="mi">1</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;h(t)&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -709,7 +709,7 @@ In convolutiondemo (line 44)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="nb">Inf</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="nb">Inf</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -724,8 +724,8 @@ In convolutiondemo (line 44)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">ya</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">subs</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="nb">alpha</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">ya</span><span class="p">(</span><span class="n">t</span><span class="p">))</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">ya</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">subs</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="nb">alpha</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">ya</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -741,10 +741,10 @@ In convolutiondemo (line 44)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span><span class="w"></span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">subs</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="nb">alpha</span><span class="p">,</span><span class="mi">1</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;h(t)&#39;</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.25</span><span class="p">])</span><span class="w"></span>
-<span class="nb">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span><span class="w"></span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.25</span><span class="p">])</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">subs</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="nb">alpha</span><span class="p">,</span><span class="mi">1</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;h(t)&#39;</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.25</span><span class="p">])</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.25</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -754,7 +754,7 @@ In convolutiondemo (line 44)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="nb">Inf</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="nb">Inf</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -769,8 +769,8 @@ In convolutiondemo (line 44)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">yb</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">subs</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="nb">alpha</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">yb</span><span class="p">(</span><span class="n">t</span><span class="p">))</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">yb</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">subs</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="nb">alpha</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">yb</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -786,12 +786,12 @@ In convolutiondemo (line 44)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
-<span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
-<span class="nb">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span><span class="w"></span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span><span class="w"></span>
-<span class="nb">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span><span class="w"></span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;h(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;h(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -801,7 +801,7 @@ In convolutiondemo (line 44)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="nb">Inf</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="nb">Inf</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -816,7 +816,7 @@ In convolutiondemo (line 44)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">2.5</span><span class="p">]),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;h(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">2.5</span><span class="p">]),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;h(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

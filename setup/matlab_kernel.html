@@ -550,33 +550,33 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="testing-the-jupyter-matlab-kernel">
 <h1>Testing the Jupyter Matlab Kernel<a class="headerlink" href="#testing-the-jupyter-matlab-kernel" title="Permalink to this headline">#</a></h1>
 <p>Interact with Matlab in Notebook the using the <a class="reference external" href="https://www.mathworks.com/help/matlab/matlab-engine-for-python.html">Matlab engine for Python</a>.  All commands are interpreted by Matlab.  Since this is a <a class="reference external" href="https://github.com/Calysto/metakernel">MetaKernel</a>, a standard set of magics are available.  Help on commands is available using the <code class="docutils literal notranslate"><span class="pre">%help</span></code> magic or using <code class="docutils literal notranslate"><span class="pre">?</span></code> with a command.</p>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Use inline SVG graphics</span><span class="w"></span>
-<span class="n">imatlab_export_fig</span><span class="p">(</span><span class="s">&#39;print-svg&#39;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Use inline SVG graphics</span>
+<span class="n">imatlab_export_fig</span><span class="p">(</span><span class="s">&#39;print-svg&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="o">*</span><span class="nb">pi</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
-<span class="nb">plot</span><span class="p">(</span><span class="nb">sin</span><span class="p">(</span><span class="n">t</span><span class="p">))</span><span class="w"></span>
-<span class="nb">grid</span><span class="w"> </span><span class="n">on</span><span class="w"></span>
-<span class="nb">hold</span><span class="w"> </span><span class="n">on</span><span class="w"></span>
-<span class="nb">plot</span><span class="p">(</span><span class="nb">cos</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;r&#39;</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="o">*</span><span class="nb">pi</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+<span class="nb">plot</span><span class="p">(</span><span class="nb">sin</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
+<span class="nb">hold</span><span class="w"> </span><span class="n">on</span>
+<span class="nb">plot</span><span class="p">(</span><span class="nb">cos</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;r&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%plot -s 200,150</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%plot -s 200,150</span>
 </pre></div>
 </div>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="nb">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">+</span><span class="mi">30</span><span class="p">;</span><span class="w"> </span><span class="nb">plot</span><span class="p">(</span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="n">grid</span><span class="w"> </span><span class="s">on</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="nb">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">+</span><span class="mi">30</span><span class="p">;</span><span class="w"> </span><span class="nb">plot</span><span class="p">(</span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="n">grid</span><span class="w"> </span><span class="s">on</span>
 </pre></div>
 </div>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 </pre></div>
 </div>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">disp</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">disp</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%lsmagic</span><span class="w"></span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%lsmagic</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, world!&#39;</span><span class="p">)</span>
