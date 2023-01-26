@@ -76,6 +76,9 @@ This is the first time I have taught this course, so I will have a lot to learn 
 
 We will take a few minites at the start of the first class to show you around this textbook and the canvas site and other resources we have made available to you.
 
-```python
 
-```
+## Coming next
+
+In the following sections, we introduce the mathematical description and representation of signals and systems and their classifications. We also define several important basic signals essesntial to your studies.
+
+The first of these will be {ref}`signals1`.

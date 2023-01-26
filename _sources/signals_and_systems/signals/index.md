@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.0
+    jupytext_version: 1.14.4
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -14,9 +14,12 @@ kernelspec:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(signals1)=
 # Signals and Classification of Signals
 
-This section is based on Section 1.2 of {cite}`schaum`.
+This section is based on Sections 1.1 and 1.2 of {cite}`schaum`.
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 A *signal* is a function representing a physical quality of variable, and typically it comtains information about the behaviour or nature of the phenomenon. For instance, in an *RC* circuit the signal may represent the voltage across the capacitor or the current flowing in the resistor.
 
