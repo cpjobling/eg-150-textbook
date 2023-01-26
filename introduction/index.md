@@ -7,7 +7,14 @@ Follow along at [cpjobling.github.io/eg-150-textbook](https://cpjobling.github.i
 ## Introduction
 
 
-What is signals and systems?
+According to {cite}`schaum` (Section 1.1)
+
+> The concept and theory of signals and systems are needed in almost all electrical engineering fields and in many other engineering and scientific disciplines as well..
+
+{cite}`schaum` (Section 1.1)
+
+
+## What is signals and systems?
 
 According to the [Oxford English Dictionary](http://www.oxforddictionaries.com/definition/english/signal) a signal is defined as:
 
