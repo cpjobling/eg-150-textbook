@@ -14,7 +14,7 @@ According to {cite}`schaum` (Section 1.1)
 {cite}`schaum` (Section 1.1)
 
 
-## What is signals and systems?
+## What is a signal?
 
 According to the [Oxford English Dictionary](http://www.oxforddictionaries.com/definition/english/signal) a signal is defined as:
 
@@ -26,6 +26,8 @@ In this course we are going to be most concerned with electronic signals which r
 
 > ”A detectable physical quantity or impulse (as a voltage, current, or magnetic field strength) by which messages or information can be transmitted.“
 
+
+## What is a System
 
 In the same source, a system is defined as simply:
 
@@ -46,6 +48,11 @@ Each class will be based around one or two section of the online course notes an
 We will make use of MATLAB (and other tools) for computing and Simulink for modelling.
 
 At the end of the module, you should be able to deal with the various mathematical models used in the modelling and design of systems that are used in electronic signal processing applications and be comfortable using MATLAB and Simulink to gain insight into your models.
+
+
+## EG-150 Signals and Systems
+
+We will start to explore these definitions from the {ref}`signals1`.
 
 
 ## How will I learn?
