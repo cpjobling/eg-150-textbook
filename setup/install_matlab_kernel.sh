@@ -5,6 +5,7 @@ EG_150=$HOME/code/src/github.com/cpjobling/eg-150-textbook
 
 # Set up for jupyter with rise and jupyter-book
 cd $EG_150
+conda init zsh
 conda deactivate
 conda env remove -n eg-150-textbook
 conda update conda
@@ -16,7 +17,8 @@ pip install -U jupytext
 
 # Set up Python-MATLAB bridge and matlab_kernel
 cd $MATLAB_HOME/extern/engines/python
-python setup.py install
+export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$MATLAB_HOME/bin/maci64
+python -m pip install matlabengine==9.13.7
 pip install matlab_kernel
 python -m matlab_kernel install --user
 
