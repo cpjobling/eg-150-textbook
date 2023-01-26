@@ -17,7 +17,7 @@ kernelspec:
 (signals1)=
 # Signals and Classification of Signals
 
-This section is based on Sections 1.1 and 1.2 of {cite}`schaum`.
+This section is based on Section 1.2 of {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 

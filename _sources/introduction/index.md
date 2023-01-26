@@ -4,16 +4,6 @@
 Follow along at [cpjobling.github.io/eg-150-textbook](https://cpjobling.github.io/eg-150-textbook)
 
 
-## Introduction
-
-
-According to {cite}`schaum` (Section 1.1)
-
-> The concept and theory of signals and systems are needed in almost all electrical engineering fields and in many other engineering and scientific disciplines as well..
-
-{cite}`schaum` (Section 1.1)
-
-
 ## What is a signal?
 
 According to the [Oxford English Dictionary](http://www.oxforddictionaries.com/definition/english/signal) a signal is defined as:
@@ -81,4 +71,4 @@ We will take a few minites at the start of the first class to show you around th
 
 In the following sections, we introduce the mathematical description and representation of signals and systems and their classifications. We also define several important basic signals essesntial to your studies.
 
-The first of these will be {ref}`signals1`.
+The first of these will be {ref}`sig_into`.
