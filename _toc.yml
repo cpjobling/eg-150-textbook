@@ -5,27 +5,27 @@ parts:
 - caption: Online notes
   chapters:
   - file: signals_and_systems/index
-    title: Unit 1: EG-150 Signals and Systems
+    title: Unit 1 EG-150 Signals and Systems
     sections:
       - file: signals_and_systems/signals/index
-        title: Unit 2.1: Signals and Classification of Signals
+        title: Unit 2.1 Signals and Classification of Signals
       - file: signals_and_systems/signals/pep_signals
-        title: Unit 2.2: Periodic, Energy and Power Signals
+        title: Unit 2.2 Periodic, Energy and Power Signals
       - file: signals_and_systems/elementary_signals/index
-        title: Unit 2.3: Elementary Signals
+        title: Unit 2.3 Elementary Signals
       - file: signals_and_systems/elementary_signals/examples3
         title: Examples 3 - Elementary Signals
       - file: signals_and_systems/systems/index
-        title: Unit 2.4: Systems and Classification of Systems
+        title: Unit 2.4 Systems and Classification of Systems
   - file: lti_systems/index
-    title: Unit 3.1: Linear Time-Invariant Systems
+    title: Unit 3.1 Linear Time-Invariant Systems
     sections:
       - file: lti_systems/lti1
-        title: Unit 3.2: Response of a Continuous-Time LTI System and the Convolution Integral
+        title: Unit 3.2 Response of a Continuous-Time LTI System and the Convolution Integral
       - file: lti_systems/lti2
-        title: Unit 3.3: Properties and Eigenfunctions of Continuous-Time LTI Systems
+        title: Unit 3.3 Properties and Eigenfunctions of Continuous-Time LTI Systems
       - file: lti_systems/lti3
-        title: Unit 3.4: Systems Described by Differential Equations
+        title: Unit 3.4 Systems Described by Differential Equations
   - file: laplace_transform/index
     title: Laplace Transforms and their Applications
     sections:
