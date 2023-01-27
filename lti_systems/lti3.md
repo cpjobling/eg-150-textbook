@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.0
+    jupytext_version: 1.14.4
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -15,7 +15,7 @@ kernelspec:
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (Systems_Described_by_Differential_Equations)=
-# Systems Described by Differential Equations
+# Unit 3.4: Systems Described by Differential Equations
 
 This section is based on Section 2.5 of {cite}`schaum`
 
@@ -209,7 +209,6 @@ The continuous-time system shown in {numref}`fig:ex:8.1` consists of one integra
 
 A one-integrator linear system
 :::
-
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
