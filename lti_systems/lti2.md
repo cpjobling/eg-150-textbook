@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.0
+    jupytext_version: 1.14.4
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -15,9 +15,9 @@ kernelspec:
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (lti_systems)=
-# Properties and Eigenfunctions of Continuous-Time LTI Systems
+# Unit 3.3: Properties and Eigenfunctions of Continuous-Time LTI Systems
 
-This section is based on Sections 2.3 and 2.4 of {cite}`schaum` 
+This section is based on Sections 2.3 and 2.4 of {cite}`schaum`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -50,7 +50,7 @@ Since the output $y(t)$ of a memoryless system depends only on the current input
 
 $$y(t) = Kx(t)$$
 
-where $K$ is a (gain) constant. 
+where $K$ is a (gain) constant.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -132,7 +132,7 @@ $$\int_{-\infty}^{\infty}\left[h(\tau)\right|\,d\tau \lt \infty$$
 ## Eigenfunctions of Continuous-Time LTI Systems
 
 In Chapter [Systems and Classification of Systems
-](/systems_and_signals/signals_and_systems/systems/index) (Example {ref}`ex4_7`) we saw that the eigenfunctions of continuous-time LTI system represented by the complex exponentials $e^{st}$, with $s$ a complex variable. 
+](/systems_and_signals/signals_and_systems/systems/index) (Example {ref}`ex4_7`) we saw that the eigenfunctions of continuous-time LTI system represented by the complex exponentials $e^{st}$, with $s$ a complex variable.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -230,7 +230,6 @@ Determine and sketch the output of the system to the input $x(t)$ shown in {numr
 Signal for Exercise 6.2
 :::
 
-
 +++ {"slideshow": {"slide_type": "notes"}}
 
 For the answer, refer to the lecture recording or see solved problem 2.2 in in {cite}schaum.
@@ -292,7 +291,6 @@ $$h_1(t) = e^{-2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)$$
 
 A cascade connection of two continuous-time LTI systems
 :::
-
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

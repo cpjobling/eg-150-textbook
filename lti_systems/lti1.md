@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.0
+    jupytext_version: 1.14.4
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -15,7 +15,7 @@ kernelspec:
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral)=
-# Response of a Continuous-Time LTI System and the Convolution Integral
+# Unit 3.2: Response of a Continuous-Time LTI System and the Convolution Integral
 
 This section is based on Section 2.1 of {cite}`schaum`.
 

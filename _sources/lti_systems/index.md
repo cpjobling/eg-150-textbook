@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.0
+    jupytext_version: 1.14.4
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -15,7 +15,7 @@ kernelspec:
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (lti_systems)=
-# Linear Time-Invariant Systems
+# Unit 3.1: Linear Time-Invariant Systems
 
 This chapter is based on on Chapter 2 of {cite}`schaum` 
 

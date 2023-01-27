@@ -1,4 +1,4 @@
-# EG-150 Signals and Systems
+# Unit 1: EG-150 Signals and Systems
 
 
 Follow along at [cpjobling.github.io/eg-150-textbook](https://cpjobling.github.io/eg-150-textbook)

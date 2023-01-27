@@ -15,7 +15,7 @@ kernelspec:
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (signals1)=
-# Signals and Classification of Signals
+# Unit 2.1: Signals and Classification of Signals
 
 This section is based on Section 1.2 of {cite}`schaum`.
 
