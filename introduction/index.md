@@ -1,4 +1,4 @@
-# Unit 1: EG-150 Signals and Systems
+# EG-150 Signals and Systems
 
 
 Follow along at [cpjobling.github.io/eg-150-textbook](https://cpjobling.github.io/eg-150-textbook)
@@ -27,6 +27,9 @@ In the same source, a system is defined as simply:
 ## A Short Video Introduction
 
 Darryl Morrell, educator and producer of a series of short instructional videos on [Signals and Systems](https://sites.google.com/a/asu.edu/signals-and-systems/) provides this useful [Signals and Systems Introduction](https://youtu.be/YBMGMF-DAVU) (YouTube).
+
+%%HTML
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YBMGMF-DAVU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 ## What will I learn?
