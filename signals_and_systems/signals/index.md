@@ -21,6 +21,10 @@ This section is based on Section 1.2 of {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
+Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/signals](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/signals)
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
 A *signal* is a function representing a physical quality of variable, and typically it comtains information about the behaviour or nature of the phenomenon. For instance, in an *RC* circuit the signal may represent the voltage across the capacitor or the current flowing in the resistor.
 
 +++ {"slideshow": {"slide_type": "fragment"}}

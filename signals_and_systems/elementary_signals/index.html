@@ -107,7 +107,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../../introduction/index.html">
+                <a class="reference internal" href="../../index.html">
                     EG-150 Signals and Systems
                 </a>
             </li>
@@ -119,7 +119,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../introduction/intro.html">
+  <a class="reference internal" href="../../introduction/index.html">
    Unit 1 Introduction
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -129,8 +129,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/intro.html">
+     Unit 1.1 Setting the Scene
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../introduction/thecourse.html">
+     Unit 1.2 How Will I learn?
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../introduction/concepts.html">
-     Unit 1.2 A conceptual introduction
+     Unit 1.3 Introduction to the Concepts to be Studied
     </a>
    </li>
   </ul>
@@ -174,7 +184,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../lti_systems/index.html">
-   Unit 3.1 Linear Time-Invariant Systems
+   Unit 3 Linear Time-Invariant Systems
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -184,17 +194,17 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../lti_systems/lti1.html">
-     Unit 3.2 Response of a Continuous-Time LTI System and the Convolution Integral
+     Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../lti_systems/lti2.html">
-     Unit 3.3 Properties and Eigenfunctions of Continuous-Time LTI Systems
+     Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../lti_systems/lti3.html">
-     Unit 3.4 Systems Described by Differential Equations
+     Unit 3.3 Systems Described by Differential Equations
     </a>
    </li>
   </ul>
@@ -429,7 +439,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/signals_and_systems/elementary_signals/index.md"
+        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/signals_and_systems/elementary_signals/index.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -909,6 +919,7 @@ title="Print to PDF"
 <li><p>concludes with examples of how other useful signals can be synthesised from these elementary signals.</p></li>
 </ul>
 <p>Additional information has been adapted from <span class="xref myst">Section 1.4</span> of <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
+<p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals">cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals</a></p>
 <section id="introduction">
 <span id="es-intro"></span><h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>Consider the network shown in below where the switch is closed at time <span class="math notranslate nohighlight">\(t=T\)</span> and all components are ideal.</p>
@@ -964,7 +975,7 @@ V_{\mathrm{out}} = V_s.
     0.5000
 </pre></div>
 </div>
-<img alt="../../_images/index_8_1.png" src="../../_images/index_8_1.png" />
+<img alt="../../_images/index_9_1.png" src="../../_images/index_9_1.png" />
 </div>
 </div>
 <p>Note that, so that it can be plotted, Matlab defines the <em>Heaviside function</em> slightly differently from the mathematically ideal unit step:</p>
@@ -991,7 +1002,7 @@ V_{\mathrm{out}} = V_s.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/index_12_0.png" src="../../_images/index_12_0.png" />
+<img alt="../../_images/index_13_0.png" src="../../_images/index_13_0.png" />
 </div>
 </div>
 <p>Note that the signal is scaled in the <span class="math notranslate nohighlight">\(y\)</span> direction.</p>
@@ -1002,7 +1013,7 @@ V_{\mathrm{out}} = V_s.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/index_14_0.png" src="../../_images/index_14_0.png" />
+<img alt="../../_images/index_15_0.png" src="../../_images/index_15_0.png" />
 </div>
 </div>
 <p>Note that, because of the sign, the signal is mirrored about the <span class="math notranslate nohighlight">\(x\)</span> axis as well as being scaled by 2.</p>
@@ -1017,7 +1028,7 @@ V_{\mathrm{out}} = V_s.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/index_17_0.png" src="../../_images/index_17_0.png" />
+<img alt="../../_images/index_18_0.png" src="../../_images/index_18_0.png" />
 </div>
 </div>
 <p>The sign on the function argument <span class="math notranslate nohighlight">\(-t\)</span> causes the whole signal to be reversed in time. Note that another way of looking at this is that the signal is mirrored about the <span class="math notranslate nohighlight">\(y\)</span> axis.</p>
@@ -1033,7 +1044,7 @@ V_{\mathrm{out}} = V_s.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/index_20_0.png" src="../../_images/index_20_0.png" />
+<img alt="../../_images/index_21_0.png" src="../../_images/index_21_0.png" />
 </div>
 </div>
 <p>This is a <em>time delay</em> … note for <span class="math notranslate nohighlight">\(u_0(t - T)\)</span> the step change occurs T seconds <strong>later</strong> than it does for <span class="math notranslate nohighlight">\(u_o(t)\)</span>.</p>
@@ -1044,7 +1055,7 @@ V_{\mathrm{out}} = V_s.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/index_22_0.png" src="../../_images/index_22_0.png" />
+<img alt="../../_images/index_23_0.png" src="../../_images/index_23_0.png" />
 </div>
 </div>
 <p>This is a <em>time advance</em> … note for <span class="math notranslate nohighlight">\(u_0(t + T)\)</span> the step change occurs T seconds <strong>earlier</strong> than it does for <span class="math notranslate nohighlight">\(u_o(t)\)</span>.</p>
@@ -1086,7 +1097,7 @@ V_{\mathrm{out}} = V_s.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/index_32_0.png" src="../../_images/index_32_0.png" />
+<img alt="../../_images/index_33_0.png" src="../../_images/index_33_0.png" />
 </div>
 </div>
 <p>This type of signal is called a <strong>ramp function</strong>. Note that it is the <em>integral</em> of the step function (the resistor-capacitor circuit implements a simple integrator circuit).</p>
@@ -1131,11 +1142,11 @@ V_{\mathrm{out}} = V_s.
 <div class="math notranslate nohighlight">
 \[\int_{-\infty}^{t}\delta(\tau)d\tau = u_0(t)\]</div>
 <p>To solve this problem we need to invent a function that represents the derivative of the unit step function. This function is called the <em>unit impulse function</em> 𝛿(𝑡), also known as the <em>Dirac delta</em> function (named after <a class="reference external" href="https://en.wikipedia.org/wiki/Paul_Dirac">Paul Dirac</a>).</p>
-<p>Traditionally, <span class="math notranslate nohighlight">\(\delta(t)\)</span> is often defined as the limit of a suitably chosen conventional function having unity area over an infinitesimal time interval as shown in Fig. <a class="reference internal" href="#dirac-delta-function"><span class="std std-numref">Fig. 12</span></a>.</p>
+<p>Traditionally, <span class="math notranslate nohighlight">\(\delta(t)\)</span> is often defined as the limit of a suitably chosen conventional function having unity area over an infinitesimal time interval as shown in Fig. <a class="reference internal" href="#dirac-delta-function"><span class="std std-numref">Fig. 21</span></a>.</p>
 <figure class="align-default" id="dirac-delta-function">
 <a class="reference internal image-reference" href="../../_images/dirac_delta.png"><img alt="Visualisation of the Dirac delta function as the limit of a conventional function with unit area." src="../../_images/dirac_delta.png" style="width: 40%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Visualisation of the Dirac delta function as the limit of a conventional function with unit area.</span><a class="headerlink" href="#dirac-delta-function" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Visualisation of the Dirac delta function as the limit of a conventional function with unit area.</span><a class="headerlink" href="#dirac-delta-function" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The Dirac delta posseses the following properties</p>
@@ -1246,7 +1257,7 @@ V_{\mathrm{out}} = V_s.
 <li><p><a class="reference internal" href="../systems/index.html#system-representation"><span class="std std-ref">System Representation</span></a></p></li>
 <li><p><a class="reference internal" href="../systems/index.html#deterministic-and-stochastic-systems"><span class="std std-ref">Deterministic and Stochastic Systems</span></a></p></li>
 <li><p><a class="reference internal" href="../systems/index.html#continuous-time-and-discrete-time-systems"><span class="std std-ref">Continuous-Time and Discrete-Time Systems</span></a></p></li>
-<li><p><span class="xref std std-ref">aystems_with_memory_and_without_memory</span></p></li>
+<li><p><a class="reference internal" href="../systems/index.html#systems-with-memory-and-without-memory"><span class="std std-ref">Systems with Memory and without Memory</span></a></p></li>
 <li><p><a class="reference internal" href="../systems/index.html#causal-and-non-causal-systems"><span class="std std-ref">Causal and Non-Causal Systems</span></a></p></li>
 <li><p><a class="reference internal" href="../systems/index.html#linear-systems-and-nonlinear-systems"><span class="std std-ref">Linear Systems and Nonlinear Systems</span></a></p></li>
 <li><p><a class="reference internal" href="../systems/index.html#linear-time-invariant-systems"><span class="std std-ref">Linear Time-Invariant Systems</span></a></p></li>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Unit 3.4: Systems Described by Differential Equations &#8212; EG-150 Signals and Systems</title>
+    <title>Unit 3.3: Systems Described by Differential Equations &#8212; EG-150 Signals and Systems</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Laplace Transforms and their Applications" href="../laplace_transform/index.html" />
-    <link rel="prev" title="Unit 3.3: Properties and Eigenfunctions of Continuous-Time LTI Systems" href="lti2.html" />
+    <link rel="prev" title="Unit 3.2: Properties and Eigenfunctions of Continuous-Time LTI Systems" href="lti2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -107,7 +107,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../introduction/index.html">
+                <a class="reference internal" href="../index.html">
                     EG-150 Signals and Systems
                 </a>
             </li>
@@ -119,7 +119,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../introduction/intro.html">
+  <a class="reference internal" href="../introduction/index.html">
    Unit 1 Introduction
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -129,8 +129,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/intro.html">
+     Unit 1.1 Setting the Scene
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../introduction/thecourse.html">
+     Unit 1.2 How Will I learn?
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../introduction/concepts.html">
-     Unit 1.2 A conceptual introduction
+     Unit 1.3 Introduction to the Concepts to be Studied
     </a>
    </li>
   </ul>
@@ -174,7 +184,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   Unit 3.1 Linear Time-Invariant Systems
+   Unit 3 Linear Time-Invariant Systems
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -184,17 +194,17 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="lti1.html">
-     Unit 3.2 Response of a Continuous-Time LTI System and the Convolution Integral
+     Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="lti2.html">
-     Unit 3.3 Properties and Eigenfunctions of Continuous-Time LTI Systems
+     Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Unit 3.4 Systems Described by Differential Equations
+     Unit 3.3 Systems Described by Differential Equations
     </a>
    </li>
   </ul>
@@ -429,7 +439,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/lti_systems/lti3.md"
+        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/lti_systems/lti3.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -744,7 +754,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Unit 3.4: Systems Described by Differential Equations</h1>
+                <h1>Unit 3.3: Systems Described by Differential Equations</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -889,9 +899,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="unit-3-4-systems-described-by-differential-equations">
-<span id="systems-described-by-differential-equations"></span><h1>Unit 3.4: Systems Described by Differential Equations<a class="headerlink" href="#unit-3-4-systems-described-by-differential-equations" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="unit-3-3-systems-described-by-differential-equations">
+<span id="systems-described-by-differential-equations"></span><h1>Unit 3.3: Systems Described by Differential Equations<a class="headerlink" href="#unit-3-3-systems-described-by-differential-equations" title="Permalink to this headline">#</a></h1>
 <p>This section is based on Section 2.5 of <span id="id1">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span></p>
+<p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/lti_systems/lti3">cpjobling.github.io/eg-150-textbook/lti_systems/lti3</a></p>
 <section id="subjects-to-be-covered">
 <h2>Subjects to be covered<a class="headerlink" href="#subjects-to-be-covered" title="Permalink to this headline">#</a></h2>
 <p>We conclude our introduction to continuous-time LTI system by considering</p>
@@ -955,11 +966,11 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[y(t) = y_\mathrm{zi}(t) + y_\mathrm{zs}(t)\]</div>
 <p>where <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t)\)</span> called the <em>zero-input response</em>, is the response to the aunxilliary conditions, and <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t)\)</span>, called the <em>zero-state response</em>, is the response of a linear system with zero auxiliary conditions.</p>
-<p>This is illustrated in <a class="reference internal" href="#fig-zs-and-zi-responses"><span class="std std-numref">Fig. 26</span></a></p>
+<p>This is illustrated in <a class="reference internal" href="#fig-zs-and-zi-responses"><span class="std std-numref">Fig. 34</span></a></p>
 <figure class="align-default" id="fig-zs-and-zi-responses">
 <a class="reference internal image-reference" href="../_images/zi_and_zs.png"><img alt="Zero-state and zero-input responses" src="../_images/zi_and_zs.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Zero-state and zero-input responses</span><a class="headerlink" href="#fig-zs-and-zi-responses" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Zero-state and zero-input responses</span><a class="headerlink" href="#fig-zs-and-zi-responses" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Note that <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t) \neq y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t) \neq y_p(t)\)</span> and that in general <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t)\)</span> contains <span class="math notranslate nohighlight">\(y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t)\)</span> contains both <span class="math notranslate nohighlight">\(y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_p(t)\)</span> (see <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.3</span></a>).</p>
@@ -1000,22 +1011,22 @@ title="Print to PDF"
 <span id="examples-8"></span><h2>Examples 8: Systems described by differential equations<a class="headerlink" href="#examples-8-systems-described-by-differential-equations" title="Permalink to this headline">#</a></h2>
 <section id="example-8-1">
 <span id="ex8-1"></span><h3>Example 8.1<a class="headerlink" href="#example-8-1" title="Permalink to this headline">#</a></h3>
-<p>The continuous-time system shown in <a class="reference internal" href="#fig-ex-8-1"><span class="std std-numref">Fig. 27</span></a> consists of one integrator and one scalar multiplier. Write the differential equation that relates the output <span class="math notranslate nohighlight">\(y(t)\)</span> to the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
+<p>The continuous-time system shown in <a class="reference internal" href="#fig-ex-8-1"><span class="std std-numref">Fig. 35</span></a> consists of one integrator and one scalar multiplier. Write the differential equation that relates the output <span class="math notranslate nohighlight">\(y(t)\)</span> to the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
 <figure class="align-default" id="fig-ex-8-1">
 <a class="reference internal image-reference" href="../_images/ex8_1.png"><img alt="A one-integrator linear system" src="../_images/ex8_1.png" style="width: 40%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">A one-integrator linear system</span><a class="headerlink" href="#fig-ex-8-1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">A one-integrator linear system</span><a class="headerlink" href="#fig-ex-8-1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For the answer, refer to the lecture recording or see solved problem 2.18 in <span id="id3">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-8-2">
 <span id="ex8-2"></span><h3>Example 8.2<a class="headerlink" href="#example-8-2" title="Permalink to this headline">#</a></h3>
-<p>The continuous-time system shown in <a class="reference internal" href="#fig-ex-8-2"><span class="std std-numref">Fig. 28</span></a> consists of two integrators and two scalar multipliers. Write the differential equation that relates the output <span class="math notranslate nohighlight">\(y(t)\)</span> to the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
+<p>The continuous-time system shown in <a class="reference internal" href="#fig-ex-8-2"><span class="std std-numref">Fig. 36</span></a> consists of two integrators and two scalar multipliers. Write the differential equation that relates the output <span class="math notranslate nohighlight">\(y(t)\)</span> to the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
 <figure class="align-default" id="fig-ex-8-2">
 <a class="reference internal image-reference" href="../_images/ex8_2.png"><img alt="A two-integrator linear system" src="../_images/ex8_2.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 28 </span><span class="caption-text">A one-integrator linear system</span><a class="headerlink" href="#fig-ex-8-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">A one-integrator linear system</span><a class="headerlink" href="#fig-ex-8-2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For the answer, refer to the lecture recording or see solved problem 2.19 in in <span id="id4">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731.">Hsu, 2020</a>]</span>.</p>
@@ -1120,7 +1131,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Unit 3.3: Properties and Eigenfunctions of Continuous-Time LTI Systems</p>
+            <p class="prev-next-title">Unit 3.2: Properties and Eigenfunctions of Continuous-Time LTI Systems</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../laplace_transform/index.html" title="next page">

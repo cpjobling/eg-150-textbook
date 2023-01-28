@@ -26,7 +26,11 @@ The preparatory reading for this section is [Chapter 1](https://ebookcentral.pro
 
 Additional information has been adapted from [Section 1.4]() of {cite}`schaum`.
 
-+++
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals)
+
++++ {"slideshow": {"slide_type": "slide"}}
 
 (es:intro)=
 ## Introduction
@@ -481,7 +485,7 @@ See [Bibliography](/zbib)
 * {ref}`system_representation`
 * {ref}`deterministic_and_stochastic_systems`
 * {ref}`continuous_time_and_discrete_time_systems`
-* {ref}`aystems_with_memory_and_without_memory`
+* {ref}`systems_with_memory_and_without_memory`
 * {ref}`causal_and_non-causal_systems`
 * {ref}`linear_systems_and_nonlinear_systems`
 * {ref}`linear_time_invariant_systems`

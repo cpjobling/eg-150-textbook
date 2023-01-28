@@ -20,6 +20,10 @@ We continue with our survey of [Signals and Classification of Signals](index.md)
 
 This section is based on Section 1.2 of {cite}`schaum`.
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/signals/pep_signals](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/signals/pep_signals)
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (p_n_np)=

@@ -15,9 +15,13 @@ kernelspec:
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral)=
-# Unit 3.2: Response of a Continuous-Time LTI System and the Convolution Integral
+# Unit 3.1: Response of a Continuous-Time LTI System and the Convolution Integral
 
 This section is based on Section 2.1 of {cite}`schaum`.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Follow along at [cpjobling.github.io/eg-150-textbook/lti_systems/lti1](https://cpjobling.github.io/eg-150-textbook/lti_systems/lti1)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -567,7 +571,7 @@ We can obtain the signal $y(t)$ analytically by use of the convolution integral 
 
 Since both functions are unity between the limits set by the Heaviside function, graphical solution requires multiple applications of the definate integral
 
-$$\int_{t_0}^{t_1}1*1\,d\tau = \int_{t_0}^{t_1}1\,d\tau$$
+$$\int_{t_0}^{t_1}1\times 1\,d\tau = \int_{t_0}^{t_1}1\,d\tau$$
 
 with different values for the limits $t_0$ and $t_1$. The *convolutiondemo* tool can help us discover the limits for the piecewise continuous signal $y(t)$.
 

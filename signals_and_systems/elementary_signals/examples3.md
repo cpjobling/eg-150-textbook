@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.0
+    jupytext_version: 1.14.4
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -31,6 +31,10 @@ format compact
 # Examples 3 - Elementary Signals
 
 To accompany {ref}`elementary_signals`.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals/examples3](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals/examples3)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

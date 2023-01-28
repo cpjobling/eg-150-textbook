@@ -15,9 +15,13 @@ kernelspec:
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (lti_systems)=
-# Unit 3.3: Properties and Eigenfunctions of Continuous-Time LTI Systems
+# Unit 3.2: Properties and Eigenfunctions of Continuous-Time LTI Systems
 
 This section is based on Sections 2.3 and 2.4 of {cite}`schaum`
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Follow along at [cpjobling.github.io/eg-150-textbook/lti_systems/lti2](https://cpjobling.github.io/eg-150-textbook/lti_systems/lti2)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
