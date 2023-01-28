@@ -240,7 +240,7 @@ Some example systems
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-concepts:system_design
+(concepts:system_design)=
 ## System design
 
 +++ {"slideshow": {"slide_type": "fragment"}}
