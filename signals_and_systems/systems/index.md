@@ -18,6 +18,10 @@ kernelspec:
 
 This section is based on Section 1.5 of {cite}`schaum`.
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/systems](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/systems)
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## Subjects to be covered

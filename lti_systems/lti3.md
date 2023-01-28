@@ -15,9 +15,13 @@ kernelspec:
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (Systems_Described_by_Differential_Equations)=
-# Unit 3.4: Systems Described by Differential Equations
+# Unit 3.3: Systems Described by Differential Equations
 
 This section is based on Section 2.5 of {cite}`schaum`
+
++++
+
+Follow along at [cpjobling.github.io/eg-150-textbook/lti_systems/lti3](https://cpjobling.github.io/eg-150-textbook/lti_systems/lti3)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
