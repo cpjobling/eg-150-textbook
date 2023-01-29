@@ -67,10 +67,10 @@ The definition given in the [Signals and Systems wikibook](http://en.wikibooks.o
 
 ## A Short Video Introduction
 
-Darryl Morrell, educator and producer of a series of short instructional videos on [Signals and Systems](https://sites.google.com/a/asu.edu/signals-and-systems/) ({cite}`morell`) provides this useful [Signals and Systems Introduction](https://youtu.be/YBMGMF-DAVU) (YouTube).
+Darryl Morrell, educator and producer of a series of short instructional videos on [Signals and Systems](https://sites.google.com/a/asu.edu/signals-and-systems/) ({cite}`morrell`) provides this useful [Signals and Systems Introduction](https://youtu.be/YBMGMF-DAVU) (YouTube).
 
 %%HTML
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YBMGMF-DAVU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
-Next: {ref}`thecourse`
+Next: {ref}`unit1_2`

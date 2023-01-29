@@ -23,9 +23,13 @@ This section is based on Section 1.2 of {cite}`schaum`.
 
 Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/signals](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/signals)
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+A *signal* is a function representing a physical quality of variable, and typically it contains information about the behaviour or nature of the phenomenon. 
+
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-A *signal* is a function representing a physical quality of variable, and typically it comtains information about the behaviour or nature of the phenomenon. For instance, in an *RC* circuit the signal may represent the voltage across the capacitor or the current flowing in the resistor.
+For instance, in an *RC* circuit the signal may represent the voltage across the capacitor or the current flowing in the resistor.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -43,28 +47,21 @@ A *signal* is a function representing a physical quality of variable, and typica
 
 ## Subjects to be covered
 
-* {ref}`ct_n_dt`
+* {ref}`ct_signals`
+* {ref}`dt_signals`
 * {ref}`a_n_d`
 * {ref}`r_n_c`
 * {ref}`det_n_rand`
 * {ref}`even_n_odd`
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
-(ct_n_dt)=
-## Continuous-Time and Discrete-Time Signals
+(ct_signals)=
+## Continuous-Time Signals
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 A signal $x(t)$ is a *continuous-time* (CT) signal if $t$ is a continuous variable. For an example of a continuous-time signal, please see {numref}`ct-signal`.
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-If $t$ is a discrete variable&mdash;that is, $x(t)$ is defined at discrete times&mdash;then $x(t)$ is a *discrete-time* (DT) signal. For an example of a discrete-time signal, please see {numref}`dt-signal`.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-Since a discrete-time signal is defined at discrete times, a discrete-time is often defined as a *sequence* of numbers, donated by $x[n]$, where $n$ is an integer (mathematically: $n \in \mathbb{Z}$).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -74,6 +71,15 @@ Since a discrete-time signal is defined at discrete times, a discrete-time is of
 Graphical representation of a continuous-time signal
 :::
 
++++ {"slideshow": {"slide_type": "slide"}}
+
+(dt_signals)=
+## Discrete-Time Signals
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+If $t$ is a discrete variable&mdash;that is, $x(t)$ is defined at discrete times&mdash;then $x(t)$ is a *discrete-time* (DT) signal. For an example of a discrete-time signal, please see {numref}`dt-signal`.
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 :::{figure-md} dt-signal
@@ -81,6 +87,10 @@ Graphical representation of a continuous-time signal
 
 Graphical representation of a discrete-time signal
 :::
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Since a discrete-time signal is defined at discrete times, a discrete-time is often defined as a *sequence* of numbers, donated by $x[n]$, where $n$ is an integer (mathematically: $n \in \mathbb{Z}$).
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -98,6 +108,7 @@ stem(n,xn),title('Graphical representation of a discrete-time signal'),xlabel('n
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(dt_signals)=
 ### More on discrete-time signals
 
 A discrete-time signal $x[n]$ may represent a phenomenon for which the independent variable is inherently discrete: e.g. daily stock market average prices.
@@ -476,6 +487,7 @@ In this lecture we have started our look at signals and the classification of si
 In particular we have looked at
 
 * {ref}`ct_n_dt`
+* {ref}`dt_signals`
 * {ref}`a_n_d`
 * {ref}`r_n_c`
 * {ref}`det_n_rand`

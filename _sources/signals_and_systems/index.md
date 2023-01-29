@@ -15,7 +15,7 @@ kernelspec:
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (sig_intro)=
-# Signals and Systems
+# Unit 2: Signals and Systems
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
