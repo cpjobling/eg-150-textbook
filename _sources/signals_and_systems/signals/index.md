@@ -49,6 +49,7 @@ For instance, in an *RC* circuit the signal may represent the voltage across the
 
 * {ref}`ct_signals`
 * {ref}`dt_signals`
+* {ref}`more_on_dt_signals`
 * {ref}`a_n_d`
 * {ref}`r_n_c`
 * {ref}`det_n_rand`
@@ -108,7 +109,7 @@ stem(n,xn),title('Graphical representation of a discrete-time signal'),xlabel('n
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(dt_signals)=
+(more_on_dt_signals)=
 ### More on discrete-time signals
 
 A discrete-time signal $x[n]$ may represent a phenomenon for which the independent variable is inherently discrete: e.g. daily stock market average prices.
@@ -492,8 +493,9 @@ In this lecture we have started our look at signals and the classification of si
 
 In particular we have looked at
 
-* {ref}`ct_n_dt`
+* {ref}`ct_signals`
 * {ref}`dt_signals`
+* {ref}`more_on_dt_signals`
 * {ref}`a_n_d`
 * {ref}`r_n_c`
 * {ref}`det_n_rand`
