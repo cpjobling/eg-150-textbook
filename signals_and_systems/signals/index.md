@@ -23,9 +23,13 @@ This section is based on Section 1.2 of {cite}`schaum`.
 
 Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/signals](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/signals)
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+A *signal* is a function representing a physical quality of variable, and typically it contains information about the behaviour or nature of the phenomenon. 
+
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-A *signal* is a function representing a physical quality of variable, and typically it comtains information about the behaviour or nature of the phenomenon. For instance, in an *RC* circuit the signal may represent the voltage across the capacitor or the current flowing in the resistor.
+For instance, in an *RC* circuit the signal may represent the voltage across the capacitor or the current flowing in the resistor.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -43,28 +47,22 @@ A *signal* is a function representing a physical quality of variable, and typica
 
 ## Subjects to be covered
 
-* {ref}`ct_n_dt`
+* {ref}`ct_signals`
+* {ref}`dt_signals`
+* {ref}`more_on_dt_signals`
 * {ref}`a_n_d`
 * {ref}`r_n_c`
 * {ref}`det_n_rand`
 * {ref}`even_n_odd`
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
-(ct_n_dt)=
-## Continuous-Time and Discrete-Time Signals
+(ct_signals)=
+## Continuous-Time Signals
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 A signal $x(t)$ is a *continuous-time* (CT) signal if $t$ is a continuous variable. For an example of a continuous-time signal, please see {numref}`ct-signal`.
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-If $t$ is a discrete variable&mdash;that is, $x(t)$ is defined at discrete times&mdash;then $x(t)$ is a *discrete-time* (DT) signal. For an example of a discrete-time signal, please see {numref}`dt-signal`.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-Since a discrete-time signal is defined at discrete times, a discrete-time is often defined as a *sequence* of numbers, donated by $x[n]$, where $n$ is an integer (mathematically: $n \in \mathbb{Z}$).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -74,6 +72,15 @@ Since a discrete-time signal is defined at discrete times, a discrete-time is of
 Graphical representation of a continuous-time signal
 :::
 
++++ {"slideshow": {"slide_type": "slide"}}
+
+(dt_signals)=
+## Discrete-Time Signals
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+If $t$ is a discrete variable&mdash;that is, $x(t)$ is defined at discrete times&mdash;then $x(t)$ is a *discrete-time* (DT) signal. For an example of a discrete-time signal, please see {numref}`dt-signal`.
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 :::{figure-md} dt-signal
@@ -81,6 +88,10 @@ Graphical representation of a continuous-time signal
 
 Graphical representation of a discrete-time signal
 :::
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Since a discrete-time signal is defined at discrete times, a discrete-time is often defined as a *sequence* of numbers, donated by $x[n]$, where $n$ is an integer (mathematically: $n \in \mathbb{Z}$).
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -98,6 +109,7 @@ stem(n,xn),title('Graphical representation of a discrete-time signal'),xlabel('n
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(more_on_dt_signals)=
 ### More on discrete-time signals
 
 A discrete-time signal $x[n]$ may represent a phenomenon for which the independent variable is inherently discrete: e.g. daily stock market average prices.
@@ -136,7 +148,7 @@ $$x_0,x_1, x_2,\ldots,x_n,\ldots$$
 
 where
 
-$$x[n]_n = x[n] = x(t_n)$$
+$$x_n = x[n] = x(t_n)$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -201,6 +213,12 @@ We won't see any examples of complex signals in this course.
 (det_n_rand)=
 ## Deterministic and Random Signals
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Deterministic and Random Signals
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
 *Deterministic signals* are those signals whose values are completely specified for any given time. Thus a deterministic signal can be modelled by a known function of time $t$.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
@@ -210,7 +228,7 @@ For example consider $x(t) = 5 \sin(10 t + \pi/4)$
 ```{code-cell}
 ---
 slideshow:
-  slide_type: fragment
+  slide_type: subslide
 ---
 t = linspace(0,2*pi*20,100);
 xt = 5*sin(10*t + pi/4);
@@ -230,7 +248,7 @@ Random signals are often used to simulate noise on a signal.
 ```{code-cell}
 ---
 slideshow:
-  slide_type: fragment
+  slide_type: subslide
 ---
 %% Plot a Random Signal
 plot(0.5 + 0.25 * rand(100,1)),ylim([0,1]),grid,title('Random Signal'),...
@@ -469,17 +487,25 @@ For the answer, refer to the lecture recording or see solved problem 1.8 in {cit
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
+(unit1_1_summary)=
 ## Summary
 
 In this lecture we have started our look at signals and the classification of signals. 
 
 In particular we have looked at
 
-* {ref}`ct_n_dt`
+* {ref}`ct_signals` $x(t)$
+* {ref}`dt_signals` $x[n]$
+* {ref}`more_on_dt_signals` 
+    * *Sampled data*: $x_n = x[n] = x(t_n)$
+    * *Uniform sampling*: $x_n = x[n] = x(nT_s)$ where $T_s$ is the sampling period.
 * {ref}`a_n_d`
 * {ref}`r_n_c`
 * {ref}`det_n_rand`
 * {ref}`even_n_odd`
+    * *Even signal*: $x(t) = x(-t)$
+    * *Odd signal*: $x(-t) = -x(t)$
+    * *Decomposing signals into even and odd parts*: $x(t) = x_e(t) + x_o(t)$ where $$x_e(t) = \frac{1}{2}\left\{x(t) + x(-t)\right\}$$ and $$x_o(t) = \frac{1}{2}\left\{x(t) - x(-t)\right\}.$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -487,3 +513,11 @@ In particular we have looked at
 
 * {ref}`p_n_np`
 * {ref}`e_n_p`
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
