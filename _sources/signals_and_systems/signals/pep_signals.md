@@ -34,7 +34,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/signals
 (periodic_signals)=
 ### Periodic signals
 
-A continuous-time signal $x(t)$ is said to be *periodic* with *period* $T$ is there is a a positive nonzero value of $T$ for which
+A continuous-time signal $x(t)$ is said to be *periodic* with *period* $T$ if there is a positive nonzero value of $T$ for which
 
 $$x(t + T) = x(t)\;\mathrm{all}\;t$$
 
@@ -128,8 +128,8 @@ slideshow:
   slide_type: fragment
 ---
 periodic_signal = 0;
-for n = 5:-1:-5
-    periodic_signal = periodic_signal + x(t + n*T);
+for m = 5:-1:-5
+    periodic_signal = periodic_signal + x(t + m*T);
 end
 periodic_signal
 ```
@@ -160,7 +160,7 @@ The *fundamental period* $T_0$ of $x(t)$ is the smallest value of $T$ for which 
 
 (dc_signal)=
 ### DC signals
-Note that the definition of the *fundamental period*  does not hold for a constant signal $x(t)$ (known as a dc signal).
+Note that the definition of the *fundamental period*  does not hold for a constant signal $x(t)$ (known as a DC signal).
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -343,7 +343,7 @@ $$\mathrm{PAPR}_x = \frac{\left|x\right|_\mathrm{peak}^2}{P}$$
 
 * CF a PAPR measure the dispersion of a signal about its average power.
 
-* To express CF or PAPR we often use decibels (dB). To obtain measure of cquantity $y$ in dB use $20\log_{10}(y)$.
+* To express CF or PAPR we often use decibels (dB). To obtain a measure of the quantity $y$ in dB use $20\log_{10}(y)$.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

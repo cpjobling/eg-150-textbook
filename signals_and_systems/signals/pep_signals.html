@@ -928,7 +928,7 @@ title="Print to PDF"
 <span id="p-n-np"></span><h2>Periodic and Nonperiodic Signals<a class="headerlink" href="#periodic-and-nonperiodic-signals" title="Permalink to this headline">#</a></h2>
 <section id="periodic-signals">
 <span id="id2"></span><h3>Periodic signals<a class="headerlink" href="#periodic-signals" title="Permalink to this headline">#</a></h3>
-<p>A continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span> is said to be <em>periodic</em> with <em>period</em> <span class="math notranslate nohighlight">\(T\)</span> is there is a a positive nonzero value of <span class="math notranslate nohighlight">\(T\)</span> for which</p>
+<p>A continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span> is said to be <em>periodic</em> with <em>period</em> <span class="math notranslate nohighlight">\(T\)</span> if there is a positive nonzero value of <span class="math notranslate nohighlight">\(T\)</span> for which</p>
 <div class="math notranslate nohighlight">
 \[x(t + T) = x(t)\;\mathrm{all}\;t\]</div>
 <p>An example of such a signal is given in <a class="reference internal" href="#periodic-signal"><span class="std std-numref">Fig. 17</span></a>.</p>
@@ -971,13 +971,20 @@ t &amp; 0\le t\le 1\\
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>signal1 =
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(t + 1)*(heaviside(t + 1) - heaviside(t))
 </pre></div>
 </div>
-<img alt="../../_images/pep_signals_11_2.png" src="../../_images/pep_signals_11_2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<img alt="../../_images/pep_signals_11_4.png" src="../../_images/pep_signals_11_4.png" />
 </div>
 </div>
 <p>Two periods later:</p>
@@ -991,13 +998,20 @@ t &amp; 0\le t\le 1\\
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>signal2 =
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(heaviside(t - 2) - heaviside(t - 3))*(t - 2)
 </pre></div>
 </div>
-<img alt="../../_images/pep_signals_13_2.png" src="../../_images/pep_signals_13_2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<img alt="../../_images/pep_signals_13_4.png" src="../../_images/pep_signals_13_4.png" />
 </div>
 </div>
 <p>It follows that</p>
@@ -1008,18 +1022,25 @@ t &amp; 0\le t\le 1\\
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">periodic_signal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="k">for</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">5</span>
-<span class="w">    </span><span class="n">periodic_signal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">periodic_signal</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="o">*</span><span class="n">T</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">5</span>
+<span class="w">    </span><span class="n">periodic_signal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">periodic_signal</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">m</span><span class="o">*</span><span class="n">T</span><span class="p">);</span>
 <span class="k">end</span>
 <span class="n">periodic_signal</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>periodic_signal =
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(t + 1)*(heaviside(t + 1) - heaviside(t)) + (heaviside(t - 1) - heaviside(t - 2))*(t - 1) - (heaviside(t + 1) - heaviside(t + 2))*(t + 2) + (heaviside(t - 2) - heaviside(t - 3))*(t - 2) - (heaviside(t + 2) - heaviside(t + 3))*(t + 3) + (heaviside(t - 3) - heaviside(t - 4))*(t - 3) - (heaviside(t + 3) - heaviside(t + 4))*(t + 4) + (heaviside(t - 4) - heaviside(t - 5))*(t - 4) - (heaviside(t + 4) - heaviside(t + 5))*(t + 5) + (heaviside(t - 5) - heaviside(t - 6))*(t - 5) - t*(heaviside(t - 1) - heaviside(t))
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -1045,7 +1066,7 @@ t &amp; 0\le t\le 1\\
 </section>
 <section id="dc-signals">
 <span id="dc-signal"></span><h3>DC signals<a class="headerlink" href="#dc-signals" title="Permalink to this headline">#</a></h3>
-<p>Note that the definition of the <em>fundamental period</em>  does not hold for a constant signal <span class="math notranslate nohighlight">\(x(t)\)</span> (known as a dc signal).</p>
+<p>Note that the definition of the <em>fundamental period</em>  does not hold for a constant signal <span class="math notranslate nohighlight">\(x(t)\)</span> (known as a DC signal).</p>
 <p>For a constant signal <span class="math notranslate nohighlight">\(x(t) = c\)</span> the fundamental period is undefined since <span class="math notranslate nohighlight">\(x(t)\)</span> is periodic for any choice of <span class="math notranslate nohighlight">\(T\)</span> (and so there is no smallest postive value). See <code class="xref std std-numref docutils literal notranslate"><span class="pre">dc_signal</span></code>.</p>
 <figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../../_images/dc_signal.png"><img alt="A DC signal" src="../../_images/dc_signal.png" style="width: 75%;" /></a>
@@ -1155,7 +1176,7 @@ t &amp; 0\le t\le 1\\
 <p><strong>Observations</strong></p>
 <ul class="simple">
 <li><p>CF a PAPR measure the dispersion of a signal about its average power.</p></li>
-<li><p>To express CF or PAPR we often use decibels (dB). To obtain measure of cquantity <span class="math notranslate nohighlight">\(y\)</span> in dB use <span class="math notranslate nohighlight">\(20\log_{10}(y)\)</span>.</p></li>
+<li><p>To express CF or PAPR we often use decibels (dB). To obtain a measure of the quantity <span class="math notranslate nohighlight">\(y\)</span> in dB use <span class="math notranslate nohighlight">\(20\log_{10}(y)\)</span>.</p></li>
 </ul>
 </section>
 </section>
