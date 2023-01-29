@@ -212,6 +212,12 @@ We won't see any examples of complex signals in this course.
 (det_n_rand)=
 ## Deterministic and Random Signals
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Deterministic and Random Signals
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
 *Deterministic signals* are those signals whose values are completely specified for any given time. Thus a deterministic signal can be modelled by a known function of time $t$.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
@@ -221,7 +227,7 @@ For example consider $x(t) = 5 \sin(10 t + \pi/4)$
 ```{code-cell}
 ---
 slideshow:
-  slide_type: fragment
+  slide_type: subslide
 ---
 t = linspace(0,2*pi*20,100);
 xt = 5*sin(10*t + pi/4);
@@ -241,7 +247,7 @@ Random signals are often used to simulate noise on a signal.
 ```{code-cell}
 ---
 slideshow:
-  slide_type: fragment
+  slide_type: subslide
 ---
 %% Plot a Random Signal
 plot(0.5 + 0.25 * rand(100,1)),ylim([0,1]),grid,title('Random Signal'),...
