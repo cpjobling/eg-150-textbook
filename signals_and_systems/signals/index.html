@@ -748,6 +748,11 @@ title="Print to PDF"
    Next Time
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -895,6 +900,11 @@ title="Print to PDF"
    Next Time
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -989,7 +999,7 @@ title="Print to PDF"
 \[x_0,x_1, x_2,\ldots,x_n,\ldots\]</div>
 <p>where</p>
 <div class="math notranslate nohighlight">
-\[x[n]_n = x[n] = x(t_n)\]</div>
+\[x_n = x[n] = x(t_n)\]</div>
 <p>The <span class="math notranslate nohighlight">\(x_n\)</span>’s are called <em>samples</em> and the time interval between them is called the <em>sampling interval</em>.</p>
 </section>
 <section id="uniform-sampling">
@@ -1180,17 +1190,28 @@ title="Print to PDF"
 </section>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<span id="unit1-1-summary"></span><h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
 <p>In this lecture we have started our look at signals and the classification of signals.</p>
 <p>In particular we have looked at</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#ct-signals"><span class="std std-ref">Continuous-Time Signals</span></a></p></li>
-<li><p><a class="reference internal" href="#dt-signals"><span class="std std-ref">Discrete-Time Signals</span></a></p></li>
-<li><p><a class="reference internal" href="#more-on-dt-signals"><span class="std std-ref">More on discrete-time signals</span></a></p></li>
+<li><p><a class="reference internal" href="#ct-signals"><span class="std std-ref">Continuous-Time Signals</span></a> <span class="math notranslate nohighlight">\(x(t)\)</span></p></li>
+<li><p><a class="reference internal" href="#dt-signals"><span class="std std-ref">Discrete-Time Signals</span></a> <span class="math notranslate nohighlight">\(x[n]\)</span></p></li>
+<li><p><a class="reference internal" href="#more-on-dt-signals"><span class="std std-ref">More on discrete-time signals</span></a></p>
+<ul>
+<li><p><em>Sampled data</em>: <span class="math notranslate nohighlight">\(x_n = x[n] = x(t_n)\)</span></p></li>
+<li><p><em>Uniform sampling</em>: <span class="math notranslate nohighlight">\(x_n = x[n] = x(nT_s)\)</span> where <span class="math notranslate nohighlight">\(T_s\)</span> is the sampling period.</p></li>
+</ul>
+</li>
 <li><p><a class="reference internal" href="#a-n-d"><span class="std std-ref">Analogue and Digital Signals</span></a></p></li>
 <li><p><a class="reference internal" href="#r-n-c"><span class="std std-ref">Real and Complex Signals</span></a></p></li>
 <li><p><a class="reference internal" href="#det-n-rand"><span class="std std-ref">Deterministic and Random Signals</span></a></p></li>
-<li><p><a class="reference internal" href="#even-n-odd"><span class="std std-ref">Even and Odd Signals</span></a></p></li>
+<li><p><a class="reference internal" href="#even-n-odd"><span class="std std-ref">Even and Odd Signals</span></a></p>
+<ul>
+<li><p><em>Even signal</em>: <span class="math notranslate nohighlight">\(x(t) = x(-t)\)</span></p></li>
+<li><p><em>Odd signal</em>: <span class="math notranslate nohighlight">\(x(-t) = -x(t)\)</span></p></li>
+<li><p><em>Decomposing signals into even and odd parts</em>: <span class="math notranslate nohighlight">\(x(t) = x_e(t) + x_o(t)\)</span> where $<span class="math notranslate nohighlight">\(x_e(t) = \frac{1}{2}\left\{x(t) + x(-t)\right\}\)</span><span class="math notranslate nohighlight">\( and \)</span><span class="math notranslate nohighlight">\(x_o(t) = \frac{1}{2}\left\{x(t) - x(-t)\right\}.\)</span>$</p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="next-time">
@@ -1199,6 +1220,16 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="pep_signals.html#p-n-np"><span class="std std-ref">Periodic and Nonperiodic Signals</span></a></p></li>
 <li><p><a class="reference internal" href="pep_signals.html#e-n-p"><span class="std std-ref">Energy and Power Signals</span></a></p></li>
 </ul>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<div class="docutils container" id="id12">
+<dl class="citation">
+<dt class="label" id="id22"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id4">3</a>,<a href="#id5">4</a>,<a href="#id7">5</a>,<a href="#id8">6</a>,<a href="#id9">7</a>,<a href="#id10">8</a>,<a href="#id11">9</a>)</span></dt>
+<dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731">https://www.dawsonera.com/?li=true&amp;dest=https%3A%2F%2Fwww.dawsonera.com%2Fabstract%2F9780071634731</a>.</p>
+</dd>
+</dl>
+</div>
 </section>
 </section>
 

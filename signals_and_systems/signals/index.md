@@ -148,7 +148,7 @@ $$x_0,x_1, x_2,\ldots,x_n,\ldots$$
 
 where
 
-$$x[n]_n = x[n] = x(t_n)$$
+$$x_n = x[n] = x(t_n)$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -487,19 +487,25 @@ For the answer, refer to the lecture recording or see solved problem 1.8 in {cit
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
+(unit1_1_summary)=
 ## Summary
 
 In this lecture we have started our look at signals and the classification of signals. 
 
 In particular we have looked at
 
-* {ref}`ct_signals`
-* {ref}`dt_signals`
-* {ref}`more_on_dt_signals`
+* {ref}`ct_signals` $x(t)$
+* {ref}`dt_signals` $x[n]$
+* {ref}`more_on_dt_signals` 
+    * *Sampled data*: $x_n = x[n] = x(t_n)$
+    * *Uniform sampling*: $x_n = x[n] = x(nT_s)$ where $T_s$ is the sampling period.
 * {ref}`a_n_d`
 * {ref}`r_n_c`
 * {ref}`det_n_rand`
 * {ref}`even_n_odd`
+    * *Even signal*: $x(t) = x(-t)$
+    * *Odd signal*: $x(-t) = -x(t)$
+    * *Decomposing signals into even and odd parts*: $x(t) = x_e(t) + x_o(t)$ where $$x_e(t) = \frac{1}{2}\left\{x(t) + x(-t)\right\}$$ and $$x_o(t) = \frac{1}{2}\left\{x(t) - x(-t)\right\}.$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -507,3 +513,7 @@ In particular we have looked at
 
 * {ref}`p_n_np`
 * {ref}`e_n_p`
+
+```{code-cell}
+
+```

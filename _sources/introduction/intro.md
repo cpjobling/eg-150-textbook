@@ -74,3 +74,10 @@ Darryl Morrell, educator and producer of a series of short instructional videos 
 
 
 Next: {ref}`unit1_2`
+
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
