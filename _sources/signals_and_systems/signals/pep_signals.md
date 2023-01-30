@@ -499,3 +499,11 @@ In particular we have looked at
 * {ref}`linear_time_invariant_systems`
 * {ref}`stable_systems`
 * {ref}`feedback_systems`
+
++++
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```

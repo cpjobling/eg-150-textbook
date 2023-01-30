@@ -25,7 +25,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/signals
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-A *signal* is a function representing a physical quality of variable, and typically it contains information about the behaviour or nature of the phenomenon. 
+A *signal* is a function representing a physical quality of variable, and typically it contains information about the behaviour or nature of the phenomenon.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -121,7 +121,7 @@ E.g. [FTSE 100](https://www.londonstockexchange.com/indices/ftse-100) ({numref}`
 :::{figure-md} ftse-100
 <img src="pictures/Chart_FTSE_100.png" alt="An example of discrete data from the FTSE 100.">
 
-An example of discrete data&mdash;the FTSE 100. Year from Dec. 2021 to Novemver 2022. (c) London Stock Exchange.
+An example of discrete data&mdash;the FTSE 100. Year from Dec. 2021 to November 2022. (c) London Stock Exchange.
 :::
 
 +++ {"slideshow": {"slide_type": "subslide"}}
