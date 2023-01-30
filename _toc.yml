@@ -10,7 +10,7 @@ parts:
     - file: introduction/intro
       title: Unit 1.1 Setting the Scene
     - file: introduction/thecourse
-      title: Unit 1.2 How Will I learn?
+      title: Unit 1.2 About this Course
     - file: introduction/concepts
       title: Unit 1.3 Introduction to the Concepts to be Studied
   - file: signals_and_systems/index
