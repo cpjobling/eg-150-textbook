@@ -505,7 +505,7 @@ In particular we have looked at
 * {ref}`even_n_odd`
     * *Even signal*: $x(t) = x(-t)$
     * *Odd signal*: $x(-t) = -x(t)$
-    * *Decomposing signals into even and odd parts*: $x(t) = x_e(t) + x_o(t)$ where $$x_e(t) = \frac{1}{2}\left\{x(t) + x(-t)\right\}$$ and $$x_o(t) = \frac{1}{2}\left\{x(t) - x(-t)\right\}.$$
+    * *Decomposing signals into even and odd parts*: $x(t) = x_e(t) + x_o(t)$ where $x_e(t) = \frac{1}{2}\left\{x(t) + x(-t)\right\}$ and $x_o(t) = \frac{1}{2}\left\{x(t) - x(-t)\right\}$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
