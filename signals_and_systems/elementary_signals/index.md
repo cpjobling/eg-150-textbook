@@ -26,9 +26,11 @@ The preparatory reading for this section is [Chapter 1](https://ebookcentral.pro
 
 Additional information has been adapted from [Section 1.4]() of {cite}`schaum`.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals)
+
+![QR Code](pictures/qrcode_unit2.3.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

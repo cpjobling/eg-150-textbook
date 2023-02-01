@@ -19,9 +19,11 @@ kernelspec:
 
 This section is based on Section 1.2 of {cite}`schaum`.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/signals](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/signals)
+
+![QR Code](pictures/qrcode_unit2.1.png)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -144,7 +146,7 @@ $$x[0], x[1], x[2],\ldots,x[n],\ldots$$
 
 $$x_0,x_1, x_2,\ldots,x_n,\ldots$$
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 where
 
@@ -153,6 +155,12 @@ $$x_n = x[n] = x(t_n)$$
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 The $x_n$'s are called *samples* and the time interval between them is called the *sampling interval*.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+```{admonition} ADCs and sampling
+In the EG-151 Microcontroller's course the analogue to digital converter (ADC) that you used in one of the experiments sampled the votage on the wiper of the potentiometer to a binary number in the range 0-1023.
+```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -184,6 +192,12 @@ If a discrete-time signal $x[n]$ can take on only a finite number of distinct va
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 In modern electronics, most physical phenomena which we wish to deal are represented by analogue signals. But more often than not these days, we will process such data by sampling the signals and converting them into digital signals.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+```{admonition} Digital signals
+The output of an ADC is not a continuous signal. Instead there will be $2^N-1$ integer values (where $N$ is the number of *bits* used for the ADC). If the range maximum voltage supplied to an ADC is 5V, what is the quantization level, in volts, of each step?
+```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -306,7 +320,7 @@ A signal $x(t)$ is referred to as an *even* signal if
 
 $$x(t) = x(-t)$$
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Decomposing signals into even and odd parts
 
@@ -324,7 +338,7 @@ $$x_e(t) = \frac{1}{2}\left\{x(t) + x(-t)\right\}$$
 
 $$x_o(t) = \frac{1}{2}\left\{x(t) - x(-t)\right\}$$
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Note the product of two even signals or two odd signals is an even signal and that the product of an even signal and an odd signal is an odd signal.
 
@@ -363,7 +377,7 @@ b). $x(2t)$;
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-c). $x(2/t)$;
+c). $x(t/2)$;
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -505,7 +519,7 @@ In particular we have looked at
 * {ref}`even_n_odd`
     * *Even signal*: $x(t) = x(-t)$
     * *Odd signal*: $x(-t) = -x(t)$
-    * *Decomposing signals into even and odd parts*: $x(t) = x_e(t) + x_o(t)$ where $$x_e(t) = \frac{1}{2}\left\{x(t) + x(-t)\right\}$$ and $$x_o(t) = \frac{1}{2}\left\{x(t) - x(-t)\right\}.$$
+    * *Decomposing signals into even and odd parts*: $x(t) = x_e(t) + x_o(t)$ where $x_e(t) = \frac{1}{2}\left\{x(t) + x(-t)\right\}$ and $x_o(t) = \frac{1}{2}\left\{x(t) - x(-t)\right\}$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
