@@ -377,7 +377,7 @@ b). $x(2t)$;
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-c). $x(2/t)$;
+c). $x(t/2)$;
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
