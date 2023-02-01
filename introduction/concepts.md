@@ -17,9 +17,11 @@ kernelspec:
 (concepts)=
 # Unit 1.3: Introduction to the Concepts to be Studied
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/introduction/concepts](https://cpjobling.github.io/eg-150/introduction/concepts)
+
+![QR Code](pictures/qrcode_unit1.3.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
