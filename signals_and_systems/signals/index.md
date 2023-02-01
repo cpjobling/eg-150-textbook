@@ -146,7 +146,7 @@ $$x[0], x[1], x[2],\ldots,x[n],\ldots$$
 
 $$x_0,x_1, x_2,\ldots,x_n,\ldots$$
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 where
 
@@ -320,7 +320,7 @@ A signal $x(t)$ is referred to as an *even* signal if
 
 $$x(t) = x(-t)$$
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Decomposing signals into even and odd parts
 
@@ -338,7 +338,7 @@ $$x_e(t) = \frac{1}{2}\left\{x(t) + x(-t)\right\}$$
 
 $$x_o(t) = \frac{1}{2}\left\{x(t) - x(-t)\right\}$$
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Note the product of two even signals or two odd signals is an even signal and that the product of an even signal and an odd signal is an odd signal.
 
