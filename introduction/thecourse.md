@@ -4,6 +4,8 @@
 
 Follow along at [cpjobling.github.io/eg-150-textbook/introduction/thecourse](https://cpjobling.github.io/eg-150/introduction/thecourse)
 
+![QR Code](pictures/qrcode_unit1.2.png)
+
 
 ## What will I learn?
 

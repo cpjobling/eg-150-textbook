@@ -22,6 +22,8 @@ This section is based on Section 1.5 of {cite}`schaum`.
 
 Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/systems](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/systems)
 
+![QR Code](pictures/qrcode_unit2.4.png)
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## Subjects to be covered

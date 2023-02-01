@@ -19,9 +19,11 @@ kernelspec:
 
 This section is based on Section 1.2 of {cite}`schaum`.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/signals](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/signals)
+
+![QR Code](pictures/qrcode_unit2.1.png)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -154,6 +156,12 @@ $$x_n = x[n] = x(t_n)$$
 
 The $x_n$'s are called *samples* and the time interval between them is called the *sampling interval*.
 
++++ {"slideshow": {"slide_type": "notes"}}
+
+```{admonition} ADCs and sampling
+In the EG-151 Microcontroller's course the analogue to digital converter (ADC) that you used in one of the experiments sampled the votage on the wiper of the potentiometer to a binary number in the range 0-1023.
+```
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Uniform sampling
@@ -184,6 +192,12 @@ If a discrete-time signal $x[n]$ can take on only a finite number of distinct va
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 In modern electronics, most physical phenomena which we wish to deal are represented by analogue signals. But more often than not these days, we will process such data by sampling the signals and converting them into digital signals.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+```{admonition} Digital signals
+The output of an ADC is not a continuous signal. Instead there will be $2^N-1$ integer values (where $N$ is the number of *bits* used for the ADC). If the range maximum voltage supplied to an ADC is 5V, what is the quantization level, in volts, of each step?
+```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 

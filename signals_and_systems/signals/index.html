@@ -919,6 +919,7 @@ title="Print to PDF"
 <span id="signals1"></span><h1>Unit 2.1: Signals and Classification of Signals<a class="headerlink" href="#unit-2-1-signals-and-classification-of-signals" title="Permalink to this headline">#</a></h1>
 <p>This section is based on Section 1.2 of <span id="id1">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/signals_and_systems/signals">cpjobling.github.io/eg-150-textbook/signals_and_systems/signals</a></p>
+<p><img alt="QR Code" src="../../_images/qrcode_unit2.1.png" /></p>
 <p>A <em>signal</em> is a function representing a physical quality of variable, and typically it contains information about the behaviour or nature of the phenomenon.</p>
 <p>For instance, in an <em>RC</em> circuit the signal may represent the voltage across the capacitor or the current flowing in the resistor.</p>
 <ul class="simple">
@@ -1001,6 +1002,10 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[x_n = x[n] = x(t_n)\]</div>
 <p>The <span class="math notranslate nohighlight">\(x_n\)</span>’s are called <em>samples</em> and the time interval between them is called the <em>sampling interval</em>.</p>
+<div class="admonition-adcs-and-sampling admonition">
+<p class="admonition-title">ADCs and sampling</p>
+<p>In the EG-151 Microcontroller’s course the analogue to digital converter (ADC) that you used in one of the experiments sampled the votage on the wiper of the potentiometer to a binary number in the range 0-1023.</p>
+</div>
 </section>
 <section id="uniform-sampling">
 <h3>Uniform sampling<a class="headerlink" href="#uniform-sampling" title="Permalink to this headline">#</a></h3>
@@ -1017,6 +1022,10 @@ title="Print to PDF"
 <p>If a continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span> can take on any value in the continuous interval <span class="math notranslate nohighlight">\((a,b)\)</span>, where <span class="math notranslate nohighlight">\(a\)</span> may be <span class="math notranslate nohighlight">\(-\infty\)</span> and <span class="math notranslate nohighlight">\(b\)</span> may be <span class="math notranslate nohighlight">\(+\infty\)</span>, then the continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span> is called an <em>analogue</em> signal.</p>
 <p>If a discrete-time signal <span class="math notranslate nohighlight">\(x[n]\)</span> can take on only a finite number of distinct values, then we call this signal a <em>digital signal</em>.</p>
 <p>In modern electronics, most physical phenomena which we wish to deal are represented by analogue signals. But more often than not these days, we will process such data by sampling the signals and converting them into digital signals.</p>
+<div class="admonition-digital-signals admonition">
+<p class="admonition-title">Digital signals</p>
+<p>The output of an ADC is not a continuous signal. Instead there will be <span class="math notranslate nohighlight">\(2^N-1\)</span> integer values (where <span class="math notranslate nohighlight">\(N\)</span> is the number of <em>bits</em> used for the ADC). If the range maximum voltage supplied to an ADC is 5V, what is the quantization level, in volts, of each step?</p>
+</div>
 </section>
 <section id="real-and-complex-signals">
 <span id="r-n-c"></span><h2>Real and Complex Signals<a class="headerlink" href="#real-and-complex-signals" title="Permalink to this headline">#</a></h2>
@@ -1043,7 +1052,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/index_37_0.png" src="../../_images/index_37_0.png" />
+<img alt="../../_images/index_39_0.png" src="../../_images/index_39_0.png" />
 </div>
 </div>
 </section>
@@ -1060,7 +1069,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/index_40_0.png" src="../../_images/index_40_0.png" />
+<img alt="../../_images/index_42_0.png" src="../../_images/index_42_0.png" />
 </div>
 </div>
 <p>We will not discuss random signals in this module or the next, but if you are interested, they are covered in detail in Chapters 8 and 9 of <span id="id4">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>

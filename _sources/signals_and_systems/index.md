@@ -17,9 +17,11 @@ kernelspec:
 (sig_intro)=
 # Unit 2: Signals and Systems
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems](https://cpjobling.github.io/eg-150-textbook/signals_and_systems)
+
+![QR Code](qr-code-unit2.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

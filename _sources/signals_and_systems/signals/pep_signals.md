@@ -24,6 +24,8 @@ This section is based on Section 1.2 of {cite}`schaum`.
 
 Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/signals/pep_signals](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/signals/pep_signals)
 
+![QR Code](pictures/qrcode_unit2.2.png)
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (p_n_np)=

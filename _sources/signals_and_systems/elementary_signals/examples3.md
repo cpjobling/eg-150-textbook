@@ -36,6 +36,8 @@ To accompany {ref}`elementary_signals`.
 
 Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals/examples3](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals/examples3)
 
+![QR Code](pictures/qrcode_examples3.png)
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (ex3_1)=

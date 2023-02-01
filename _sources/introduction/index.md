@@ -4,6 +4,8 @@
 
 Follow along at [cpjobling.github.io/eg-150-textbook/introduction](https://cpjobling.github.io/eg-150/introduction)
 
+![QR Code](pictures/qrcode_unit1.png)
+
 
 ## Contents of this Chapter
 

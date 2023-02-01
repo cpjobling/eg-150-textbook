@@ -2,24 +2,28 @@
 # Unit 1.1: Setting the Scene
 
 
-Follow along at [cpjobling.github.io/eg-150-textbook/introduction/intro](cpjobling.github.io/eg-150-textbook/introduction/intro)
+Follow along at [cpjobling.github.io/eg-150-textbook/introduction/intro](https://cpjobling.github.io/eg-150-textbook/introduction/intro)
+
+![QR Code](pictures/qrcode_unit1.1.png)
+
 
 
 ## Pingo
 
 We will be using a web-based audience response system called Pingo for in-class quizzes and informal surveys.
 
-
+<!-- #region -->
 ### Setup
 
 Browse to: [pingo.coactum.de](https://pingo.coactum.de).
+
 
 ![QR Code](pictures/qr-code.png)
 
 When prompted: enter the session ID
 
 The Session ID for this Course is: **804079**
-
+<!-- #endregion -->
 
 ### Icebreaker Questions
 
