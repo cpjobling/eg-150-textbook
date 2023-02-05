@@ -38,7 +38,7 @@ We will discuss specifying the input-output relationsships for discrete-time sys
 ## Contents of this chapter
 
 * {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
-* {ref}`examples_5_Responses_of_a_Continuous-Time_LTI_System_and_Convolution`
+* {ref}`examples_5_Responses_of_a_Continuous_Time_LTI_System_and_Convolution`
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
 * {ref}`Systems_Described_by_Differential_Equations`
