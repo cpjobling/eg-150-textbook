@@ -206,7 +206,7 @@ We will work through some examples in class. See [Examples 3](worksheet3).
 
 ## Synthesis of Signals from the Unit Step
 
-Unit step functions can be used to represent other time-varying functions such as rectangular pulses, square waves and triangular pulses. See [Worksheet 3](worksheet3) for the examples that we will look at in class.
+Unit step functions can be used to represent other time-varying functions such as rectangular pulses, square waves and triangular pulses. See [Examples 3](examples3) for the examples that we will look at in class.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -473,7 +473,8 @@ We will do some of these in class. See [Examples 3](examples3).
 
 ## Homework
 
-These are for you to do later for further practice. See [Homework 1](../homework/hw1).
+These are for you to do later for further practice. See [Homework 2](../homework/hw2)
+
 
 ## References
 

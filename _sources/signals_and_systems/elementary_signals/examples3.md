@@ -41,261 +41,94 @@ Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/element
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (ex3_1)=
-## 3.1 Elementary Signals
+## 3.1: Other forms of unit step
 
-Consider the network shown in below where the switch is closed at time $t=T$ and all components are ideal. 
+```{admonition} MATLAB Example
+:class: tip
+We will solve this example by hand and then give the solution in the MATLAB lab.
+```
 
-![Network with a switch which is closed at t = T.](./pictures/circuit2.png)
+Use the MATLAB functions `subplot`, `heaviside` and `fplot` to reproduce {numref}`other_unit_steps`. We've done the first row for you.
 
-Express the output voltage $V_{\mathrm{out}}$ as a function of the unit step function, and sketch the appropriate waveform.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
+:::{figure-md} other_unit_steps
+<img src="pictures/unit_steps.png" alt="" width="60%">
 
-a) What happens **before** $t=T$?
+Other forms of unit step function (Figure 1.8 {cite}`karris`)
+:::
 
-1. $v_{\mathrm{out}} = \mathrm{undefined}$
-2. $v_{\mathrm{out}} = 0$
-3. $v_{\mathrm{out}} = V_s$
-4. $v_{\mathrm{out}} = V_s/2$
-5. $v_{\mathrm{out}} = \infty$
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-**-> Open Poll: 1.2.1**
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-b) What happens **after** $t=T$?
-
-1. $v_{\mathrm{out}} = \mathrm{undefined}$
-2. $v_{\mathrm{out}} = 0$
-3. $v_{\mathrm{out}} = V_s$
-4. $v_{\mathrm{out}} = V_s/2$
-5. $v_{\mathrm{out}} = \infty$
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-**-> Open Poll: 1.2.2**
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+syms t
+u0(t) = heaviside(t); % allows us to type u0(t) in our formulae
+A = 2; T = 2; % we need numerical values to get a successful plot
+```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-c) What happens **at** $t=T$?
-
-1. $v_{\mathrm{out}} = \mathrm{undefined}$
-2. $v_{\mathrm{out}} = 0$
-3. $v_{\mathrm{out}} = V_s$
-4. $v_{\mathrm{out}} = V_s/2$
-5. $v_{\mathrm{out}} = \infty$
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-**-> Open Poll: 1.2.3**
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-d) What does the response of $V_{\mathrm{out}}$ look like? 
-
-Circle the picture you think is correct on your handout.
-
-<table>
-    <tr><td>A</td><td><img src="https://cpjobling.github.io/eg-247-textbook/elementary_signals/pictures/impulse.png" alt="Signal A"></td><td>B</td><td><img src="https://cpjobling.github.io/eg-247-textbook/elementary_signals/pictures/step1.png" alt="Signal B"></td></tr>
-    <tr><td>C</td><td><img src="https://cpjobling.github.io/eg-247-textbook/elementary_signals/pictures/curve.png" alt="Signal C"></td><td>D</td><td><img src="https://cpjobling.github.io/eg-247-textbook/elementary_signals/pictures/ramp.png" alt="Signal D"></td></tr>
-</table>
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-**-> Open Poll: 1.2.4**
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-(ex3_2)=
-## Example 3.2
-
-The Unit Step Function
-
-$${u_0}(t) = \left\{ {\begin{array}{*{20}{c}}
-{0\quad t < 0}\\
-{1\quad t > 0}
-\end{array}} \right.$$
-
-<img src="pictures/unitstep.png">
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### In Matlab
-
-In Matlab, we use the `heaviside` function (Named after [Oliver Heaviside](https://en.wikipedia.org/wiki/Oliver_Heaviside)).
+a). $-Au_0(t)$
 
 ```{code-cell}
 ---
 slideshow:
   slide_type: fragment
-tags: [remove-outlook]
 ---
-syms t
-ezplot(heaviside(t),[-1,1])
-heaviside(0)
+subplot(331)
+fplot(-A*u0(t)),title('a)')
 ```
 
-+++ {"slideshow": {"slide_type": "notes"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
-See: [show_heaviside.m](https://cpjobling.github.io/eg-247-textbook/elementary_signals/show_heaviside.m).
+b). $-A(t - T)$
 
-Note that, so it can be plotted, Matlab defines the *heaviside function* slightly differently from the mathematically ideal unit step:
-
-$$\mathrm{heaviside}(t) = \left\{ {\begin{array}{*{20}{c}}
-{0\quad t < 0}\\
-{1/2\quad t = 0}\\
-{1\quad t > 0}
-\end{array}} \right.$$
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+subplot(332)
+fplot(-A*u0(t - T)),title('b)')
+```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(ex3_3)=
-## Example 3.3: Circuit Revisited
+c). $-A(t + T)$
 
-Consider the network shown below, where the switch is closed at time $t=T$. 
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+subplot(333)
+fplot(-A*u0(t + T)),title('c)')
+```
 
-<img src="pictures/circuit2.png">
++++ {"slideshow": {"slide_type": "subslide"}}
 
-Express the output voltage $v_{\mathrm{out}}$ as a function of the unit step function, and sketch the appropriate waveform.
+d). $A(-t)$
 
-+++ {"slideshow": {"slide_type": "notes"}}
+e). $A(-t + T)$
 
-<pre style="border: 2px solid blue">
+f). $A(-t - T)$
 
+g). $-A(-t)$
 
+h). $-A(-t + T)$
 
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
+i). $-A(-t - T)$
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Example 3.4: Simple Signal Operations
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### a) Amplitude Scaling
-
-Sketch $Au_0(t)$ and $-Au_0(t)$
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### b) Time Reversal
-
-Sketch $u_0(-t)$
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### c) Time Delay and Advance
-
-Sketch $u_0(t-T)$ and $u_0(t+T)$
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-(ex3_5)=
-## Example 3.5
-
-a) Which of these signals represents $-Au_0(t+T)$?
-
-<img src="pictures/stepf1.png" width="50%">
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-**-> Open Poll: 1.2.5**
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-b) What is represented by
-
-<img src="pictures/stepf2.png" width="50%">
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-1. $-Au_0(t + T)$ 
-2. $-Au_0(-t + T)$
-3. $-Au_0(-t - T)$
-4. $-Au_0(t-T)$
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-**-> Open Poll: 1.2.6**
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-(ex3_6)=
-## 3.6: Synthesis of Signals from Unit Step
+(ex3_2)=
+## 3.2: Synthesis of Signals from Unit Step
+
+```{admonition} MATLAB Example
+:class: tip
+We will solve this example by hand and then give the solution in the MATLAB lab.
+```
 
 Unit step functions can be used to represent other time-varying functions such as rectangular pulses, square waves and triangular pulses.
 
@@ -389,7 +222,8 @@ Unit step functions can be used to represent other time-varying functions such a
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Example 3.7: The Ramp Function
+(ex3.3)=
+## Example 3.3: The Ramp Function
 
 <img src="pictures/rc.png">
 
@@ -464,7 +298,8 @@ Details are given in equations 1.26&mdash;1.29 in the textbook.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Example 3.8: The Dirac Delta Function
+(ex3_4)=
+## Example 3.4: The Dirac Delta Function
 
 <img src="pictures/lr.png">
 
@@ -516,7 +351,14 @@ $\delta(t) = 0$ for all $t\ne 0$.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Example 3.9: Important properties of the delta function
+(ex3_5)=
+## Example 3.5: Important properties of the delta function
+
+```{admonition} MATLAB Example
+:class: tip
+We will solve this example by hand and then give the solution in the MATLAB lab.
+```
+
 
 See the accompanying [notes](index).
 
@@ -594,13 +436,22 @@ $$t^2\delta'(t-3)$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-## Example 3.10
+(ex3_6)=
+## Example 3.6
 
-<img src="pictures/example2.png">
+```{admonition} MATLAB Example
+:class: tip
+We will solve this example by hand and then give the solution in the MATLAB lab.
+```
+:::{figure-md} fig:ex3_6
+<img src="pictures/example2.png" alt="" width="60%">
+
+Signal to be symthesized for Example 3.6
+:::
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-a) Express the voltage waveform $v(t)$ shown above as a sum of unit step functions for the time interval $-1 < t < 7$ s
+a) Express the voltage waveform $v(t)$ shown in {numref}`fig:ex3_6` as a sum of unit step functions for the time interval $-1 < t < 7$ s
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -622,7 +473,7 @@ a) Express the voltage waveform $v(t)$ shown above as a sum of unit step functio
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-b) Using the result of 3.10(a), compute the derivative of $v(t)$ and sketch its waveform.
+b) Using the result of 3.6(a), compute the derivative of $v(t)$ and sketch its waveform.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -646,28 +497,4 @@ b) Using the result of 3.10(a), compute the derivative of $v(t)$ and sketch its 
 
 ## Lab Work
 
-In the first lab, next Tuesday, we will solve further elemetary signals problems using MATLAB and Simulink
-following the procedure given between pages 1-17 and 1-22 of the Karris. We will also explore the
-`heaviside` and `dirac` functions.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-## Answers to in-class questions
-
-Mathematically
-
-3.1(a). $v_{\mathrm{out}} = 0$ when $-\infty < t < 0$ (answer 2)
-
-3.1(b). $v_{\mathrm{out}} = V_s$ when $0 < t < \infty$ (answer 3)
-
-3.1(c). $v_{\mathrm{out}} = \mathrm{undefined}$ when $t=0$ (answer 1)
-
-$V_{\mathrm{out}}$ jumps from $0$ to $V_s$ instantanously when the switch is closed. We call this a discontinuous signal!
-
-3.1(d): The correct image is:
-
-<img src="pictures/step2.png">
-
-Example 3.5(a): Answer 3.
-
-Example 3.5(b): Answer 2.
+In the second lab we will solve the examples indicated in these examples.
