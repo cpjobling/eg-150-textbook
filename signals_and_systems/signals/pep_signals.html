@@ -950,7 +950,7 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <p>We can use the periodicity to synthesize a periodic signal such as that shown in <a class="reference internal" href="#periodic-signal"><span class="std std-numref">Fig. 17</span></a>.</p>
-<p>Let’s first define the signal over one period. We will use MATLAB and the symbolic toolbox for this example:</p>
+<p>Let’s first define the signal over one period. We will use MATLAB and the <em>symbolic math toolbox</em> for this example:</p>
 <p>Let one period of periodic signal be defined by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}x\left(t\right)=\left\lbrace \begin{array}{ll}
@@ -963,7 +963,7 @@ t &amp; 0\le t\le 1\\
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">t</span>
 <span class="n">T</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c">% period of periodic signal</span>
 <span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">t</span><span class="o">*</span><span class="p">(</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">T</span><span class="p">));</span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;A Single period of x(t)&#39;</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;A Single period of x(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

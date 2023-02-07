@@ -56,7 +56,7 @@ We can use the periodicity to synthesize a periodic signal such as that shown in
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Let's first define the signal over one period. We will use MATLAB and the symbolic toolbox for this example:
+Let's first define the signal over one period. We will use MATLAB and the *symbolic math toolbox* for this example:
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -79,7 +79,7 @@ slideshow:
 syms t
 T = 1; % period of periodic signal
 x(t) = t*(heaviside(t)-heaviside(t-T));
-fplot(x(t)),ylim([0 2]),grid,title('A Single period of x(t)')
+fplot(x(t)),ylim([0 2]),grid,title('A Single period of x(t)'),xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}

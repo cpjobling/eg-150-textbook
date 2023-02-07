@@ -769,12 +769,14 @@ title="Print to PDF"
 <p><img alt="QR Code" src="../../_images/qrcode_examples3.png" /></p>
 <section id="plot-the-unit-step">
 <h2>Plot the Unit Step<a class="headerlink" href="#plot-the-unit-step" title="Permalink to this headline">#</a></h2>
+<p><span class="math notranslate nohighlight">\(v_1(t) = A u_0(t)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span> <span class="n">t</span>
 <span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">=</span> <span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">);</span> <span class="o">%</span> <span class="n">allows</span> <span class="n">us</span> <span class="n">to</span> <span class="nb">type</span> <span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">in</span> <span class="n">our</span> <span class="n">formulae</span>
 <span class="n">A</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="o">%</span> <span class="n">we</span> <span class="n">need</span> <span class="n">numerical</span> <span class="n">values</span> <span class="n">to</span> <span class="n">get</span> <span class="n">a</span> <span class="n">successful</span> <span class="n">plot</span>
-<span class="n">fplot</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="s1">&#39;LineWidth&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Unit step&#39;</span><span class="p">),</span><span class="n">subtitle</span><span class="p">(</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;Au_0(t)&#39;</span><span class="p">)),</span><span class="n">grid</span><span class="p">,</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">v1</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">fplot</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span><span class="s1">&#39;LineWidth&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Unit step&#39;</span><span class="p">),</span><span class="n">subtitle</span><span class="p">(</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;v_1(t) = Au_0(t)&#39;</span><span class="p">)),</span><span class="n">grid</span><span class="p">,</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -794,40 +796,44 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <p>We’ve done the first row for you.</p>
-<p>a). <span class="math notranslate nohighlight">\(-Au_0(t)\)</span></p>
+<p>a). <span class="math notranslate nohighlight">\(v_1(t) = -Au_0(t)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sgtitle</span><span class="p">(</span><span class="s1">&#39;Other forms of the unit step function&#39;</span><span class="p">);</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span> <span class="o">%</span> <span class="n">clear</span> <span class="n">figures</span>
+<span class="n">sgtitle</span><span class="p">(</span><span class="s1">&#39;Other forms of the unit step function&#39;</span><span class="p">);</span>
 <span class="n">subplot</span><span class="p">(</span><span class="mi">331</span><span class="p">)</span>
-<span class="n">fplot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="n">title</span><span class="p">([</span><span class="s1">&#39;a) &#39;</span><span class="p">,</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;-A*u_0(t)&#39;</span><span class="p">)]),</span><span class="n">grid</span><span class="p">,</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">v2</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">fplot</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span><span class="s1">&#39;LineWidth&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">title</span><span class="p">([</span><span class="s1">&#39;a) &#39;</span><span class="p">,</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;v_2(t) = -A*u_0(t)&#39;</span><span class="p">)]),</span><span class="n">grid</span><span class="p">,</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>b). <span class="math notranslate nohighlight">\(-A(t - T)\)</span></p>
+<p>b). <span class="math notranslate nohighlight">\(v_3(t) = -A(t - T)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subplot</span><span class="p">(</span><span class="mi">332</span><span class="p">)</span>
-<span class="n">fplot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">T</span><span class="p">)),</span><span class="n">title</span><span class="p">([</span><span class="s1">&#39;b) &#39;</span><span class="p">,</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;-A*u_0(t-T)&#39;</span><span class="p">)]),</span><span class="n">grid</span><span class="p">,</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">v3</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">T</span><span class="p">)</span>
+<span class="n">fplot</span><span class="p">(</span><span class="n">v3</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="s1">&#39;LineWidth&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">title</span><span class="p">([</span><span class="s1">&#39;b) &#39;</span><span class="p">,</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;v_3(t) = -A*u_0(t-T)&#39;</span><span class="p">)]),</span><span class="n">grid</span><span class="p">,</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>c). <span class="math notranslate nohighlight">\(-A(t + T)\)</span></p>
+<p>c). <span class="math notranslate nohighlight">\(v_4(t) = -A(t + T)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subplot</span><span class="p">(</span><span class="mi">333</span><span class="p">)</span>
-<span class="n">fplot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span> <span class="o">+</span> <span class="n">T</span><span class="p">)),</span><span class="n">title</span><span class="p">([</span><span class="s1">&#39;c) &#39;</span><span class="p">,</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;-A*u_0(t+T)&#39;</span><span class="p">)]),</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">v4</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span> <span class="o">+</span> <span class="n">T</span><span class="p">)</span>
+<span class="n">fplot</span><span class="p">(</span><span class="n">v4</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="s1">&#39;LineWidth&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">title</span><span class="p">([</span><span class="s1">&#39;c) &#39;</span><span class="p">,</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;v_4(t) = -A*u_0(t+T)&#39;</span><span class="p">)]),</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>d). <span class="math notranslate nohighlight">\(Au_0(-t)\)</span></p>
-<p>e). <span class="math notranslate nohighlight">\(Au_0(-t + T)\)</span></p>
-<p>f). <span class="math notranslate nohighlight">\(Au_0(-t - T)\)</span></p>
-<p>g). <span class="math notranslate nohighlight">\(-Au_0(-t)\)</span></p>
-<p>h). <span class="math notranslate nohighlight">\(-Au_0(-t + T)\)</span></p>
-<p>i). <span class="math notranslate nohighlight">\(-Au_0(-t - T)\)</span></p>
+<p>d). <span class="math notranslate nohighlight">\(v_5(t) = Au_0(-t)\)</span></p>
+<p>e). <span class="math notranslate nohighlight">\(v_6(t) = Au_0(-t + T)\)</span></p>
+<p>f). <span class="math notranslate nohighlight">\(v_7(t) = Au_0(-t - T)\)</span></p>
+<p>g). <span class="math notranslate nohighlight">\(v_8(t) = -Au_0(-t)\)</span></p>
+<p>h). <span class="math notranslate nohighlight">\(v_9(t) = -Au_0(-t + T)\)</span></p>
+<p>i). <span class="math notranslate nohighlight">\(v_{10}(t) = -Au_0(-t - T)\)</span></p>
 <p>The result should look like <a class="reference internal" href="#fig-result"><span class="std std-numref">Fig. 23</span></a>.</p>
 <figure class="align-default" id="fig-result">
 <a class="reference internal image-reference" href="../../_images/unit_steps_plot.png"><img alt="Other forms of unit step function reproduced in MATLAB" src="../../_images/unit_steps_plot.png" style="width: 60%;" /></a>
