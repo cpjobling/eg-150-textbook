@@ -1074,6 +1074,7 @@ t &amp; 0\le t\le 1\\
 <section id="fundamental-period">
 <span id="fundemental-period"></span><h3>Fundamental period<a class="headerlink" href="#fundamental-period" title="Permalink to this headline">#</a></h3>
 <p>The <em>fundamental period</em> <span class="math notranslate nohighlight">\(T_0\)</span> of <span class="math notranslate nohighlight">\(x(t)\)</span> is the smallest value of <span class="math notranslate nohighlight">\(T\)</span> for which <span class="math notranslate nohighlight">\(x(t + mT) = x(t)\)</span> holds.</p>
+<p>For the previous example this was <span class="math notranslate nohighlight">\(T_0=1\)</span>.</p>
 </section>
 <section id="dc-signals">
 <span id="dc-signal"></span><h3>DC signals<a class="headerlink" href="#dc-signals" title="Permalink to this headline">#</a></h3>
@@ -1122,13 +1123,13 @@ t &amp; 0\le t\le 1\\
 <span id="id4"></span><h3>Normalised energy content of a signal<a class="headerlink" href="#normalised-energy-content-of-a-signal" title="Permalink to this headline">#</a></h3>
 <p>For an arbitrary continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span>, the <em>normalised energy content</em> <span class="math notranslate nohighlight">\(E\)</span> of <span class="math notranslate nohighlight">\(x(t)\)</span> is defined as</p>
 <div class="math notranslate nohighlight">
-\[E = \int_{-\infty}^{\infty}\left|x(t)\right|^2\,dt\]</div>
+\[E = \int_{-\infty}^{\infty}\left|x(t)\right|^2\,dt\quad\mathrm{J}\]</div>
 </section>
 <section id="normalised-average-power-of-a-signal">
 <span id="id5"></span><h3>Normalised average power of a signal<a class="headerlink" href="#normalised-average-power-of-a-signal" title="Permalink to this headline">#</a></h3>
 <p>The <em>normalised average power</em> <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\(x(t)\)</span> is defined as</p>
 <div class="math notranslate nohighlight">
-\[P = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}\left|x(t)\right|^2\;dt\quad\mathrm{watts}\]</div>
+\[P = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}\left|x(t)\right|^2\;dt\quad\mathrm{W}\]</div>
 </section>
 <section id="id6">
 <span id="id7"></span><h3>Energy and power signals<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
@@ -1186,7 +1187,7 @@ t &amp; 0\le t\le 1\\
 \[\mathrm{PAPR}_x = \frac{\left|x\right|_\mathrm{peak}^2}{P}\]</div>
 <p><strong>Observations</strong></p>
 <ul class="simple">
-<li><p>CF a PAPR measure the dispersion of a signal about its average power.</p></li>
+<li><p>CF and PAPR measure the dispersion of a signal about its average power.</p></li>
 <li><p>To express CF or PAPR we often use decibels (dB). To obtain a measure of the quantity <span class="math notranslate nohighlight">\(y\)</span> in dB use <span class="math notranslate nohighlight">\(20\log_{10}(y)\)</span>.</p></li>
 </ul>
 </section>
@@ -1215,7 +1216,7 @@ t &amp; 0\le t\le 1\\
 <p>For the answer, refer to the lecture recording or see solved problem 1.16 in <span id="id10">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-2-3">
-<h3>Example 2.3<a class="headerlink" href="#example-2-3" title="Permalink to this headline">#</a></h3>
+<span id="ex2-3"></span><h3>Example 2.3<a class="headerlink" href="#example-2-3" title="Permalink to this headline">#</a></h3>
 <p>Show that if <span class="math notranslate nohighlight">\(x(t + T) = x(t)\)</span>, then</p>
 <div class="math notranslate nohighlight">
 \[\int_\alpha^\beta x(t)\,dt=\int_{\alpha+T}^{\beta+T} x(t)\,dt\]</div>
@@ -1225,8 +1226,8 @@ t &amp; 0\le t\le 1\\
 <p>For the answer, refer to the lecture recording or see solved problem 1.17 in <span id="id11">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-2-4">
-<h3>Example 2.4<a class="headerlink" href="#example-2-4" title="Permalink to this headline">#</a></h3>
-<p>Show that if <span class="math notranslate nohighlight">\(x(t)\)</span> is periodic with fundamental period <span class="math notranslate nohighlight">\(T_0\)</span>, the the normalized average power <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\(x(t)\)</span> defined by</p>
+<span id="ex2-4"></span><h3>Example 2.4<a class="headerlink" href="#example-2-4" title="Permalink to this headline">#</a></h3>
+<p>Show that if <span class="math notranslate nohighlight">\(x(t)\)</span> is periodic with fundamental period <span class="math notranslate nohighlight">\(T_0\)</span>, then the normalized average power <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\(x(t)\)</span> defined by</p>
 <div class="math notranslate nohighlight">
 \[P = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}\left|x(t)\right|^2\;dt\]</div>
 <p>is the same as the average power <span class="math notranslate nohighlight">\(x(t)\)</span> over any interval of length <span class="math notranslate nohighlight">\(T_0\)</span>, that is,</p>
@@ -1247,7 +1248,7 @@ t &amp; 0\le t\le 1\\
 <p>Note <span class="math notranslate nohighlight">\(u_0(t)\)</span> is the unit step (or Heaviside) function formally introduced in the next lecture. For the answer, refer to the lecture recording or see solved problem 1.20 in <span id="id13">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-2-6">
-<h3>Example 2.6<a class="headerlink" href="#example-2-6" title="Permalink to this headline">#</a></h3>
+<span id="ex2-6"></span><h3>Example 2.6<a class="headerlink" href="#example-2-6" title="Permalink to this headline">#</a></h3>
 <p>Domestic mains power in the UK is delivered as a sinusoidal signal <span class="math notranslate nohighlight">\(x(t)=A\cos(\omega_0 t + \theta)\)</span> with frequency of <span class="math notranslate nohighlight">\(50\mathrm{Hz}\)</span> and RMS value of <span class="math notranslate nohighlight">\(240\mathrm{V}\)</span>.</p>
 <p>Calculate the fundamental period <span class="math notranslate nohighlight">\(T_0\)</span>, fundamental angular frequency <span class="math notranslate nohighlight">\(\omega_0\)</span>, average power <span class="math notranslate nohighlight">\(P\)</span>, peak voltage <span class="math notranslate nohighlight">\(A = x_\mathrm{peak}\)</span>, crest factor (CF) and peak-to-average power ratio (PAPR) of the power signal provided to the home.</p>
 <p>Express CF and PAPR in dB.</p>
