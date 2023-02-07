@@ -85,7 +85,7 @@ slideshow:
 ---
 sgtitle('Other forms of the unit step function');
 subplot(331)
-fplot(-A*u0(t)),title(['a) ',texlabel('-A*u_0(t)')])
+fplot(-A*u0(t)),title(['a) ',grid,texlabel('-A*u_0(t)')]),xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -98,7 +98,7 @@ slideshow:
   slide_type: fragment
 ---
 subplot(332)
-fplot(-A*u0(t - T)),title(['b) ',texlabel('-A*u_0(t-T)')])
+fplot(-A*u0(t - T)),title(['b) ',texlabel('-A*u_0(t-T)')]),grid,xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -111,7 +111,7 @@ slideshow:
   slide_type: fragment
 ---
 subplot(333)
-fplot(-A*u0(t + T)),title(['c) ',texlabel('-A*u_0(t+T)')])
+fplot(-A*u0(t + T)),title(['c) ',texlabel('-A*u_0(t+T)')]),grid,xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -130,7 +130,7 @@ i). $-Au_0(-t - T)$
 
 +++
 
-The result should look like this
+The result should look like {numref}`fig_result`.
 
 :::{figure-md} fig_result
 <img src="pictures/unit_steps_plot.png" alt="Other forms of unit step function reproduced in MATLAB" width="60%">

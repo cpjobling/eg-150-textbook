@@ -799,7 +799,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sgtitle</span><span class="p">(</span><span class="s1">&#39;Other forms of the unit step function&#39;</span><span class="p">);</span>
 <span class="n">subplot</span><span class="p">(</span><span class="mi">331</span><span class="p">)</span>
-<span class="n">fplot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="n">title</span><span class="p">([</span><span class="s1">&#39;a) &#39;</span><span class="p">,</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;-A*u_0(t)&#39;</span><span class="p">)])</span>
+<span class="n">fplot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="n">title</span><span class="p">([</span><span class="s1">&#39;a) &#39;</span><span class="p">,</span><span class="n">grid</span><span class="p">,</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;-A*u_0(t)&#39;</span><span class="p">)]),</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -808,7 +808,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subplot</span><span class="p">(</span><span class="mi">332</span><span class="p">)</span>
-<span class="n">fplot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">T</span><span class="p">)),</span><span class="n">title</span><span class="p">([</span><span class="s1">&#39;b) &#39;</span><span class="p">,</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;-A*u_0(t-T)&#39;</span><span class="p">)])</span>
+<span class="n">fplot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">T</span><span class="p">)),</span><span class="n">title</span><span class="p">([</span><span class="s1">&#39;b) &#39;</span><span class="p">,</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;-A*u_0(t-T)&#39;</span><span class="p">)]),</span><span class="n">grid</span><span class="p">,</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -817,7 +817,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subplot</span><span class="p">(</span><span class="mi">333</span><span class="p">)</span>
-<span class="n">fplot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span> <span class="o">+</span> <span class="n">T</span><span class="p">)),</span><span class="n">title</span><span class="p">([</span><span class="s1">&#39;c) &#39;</span><span class="p">,</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;-A*u_0(t+T)&#39;</span><span class="p">)])</span>
+<span class="n">fplot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span> <span class="o">+</span> <span class="n">T</span><span class="p">)),</span><span class="n">title</span><span class="p">([</span><span class="s1">&#39;c) &#39;</span><span class="p">,</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;-A*u_0(t+T)&#39;</span><span class="p">)]),</span><span class="n">grid</span><span class="p">,</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -828,7 +828,7 @@ title="Print to PDF"
 <p>g). <span class="math notranslate nohighlight">\(-Au_0(-t)\)</span></p>
 <p>h). <span class="math notranslate nohighlight">\(-Au_0(-t + T)\)</span></p>
 <p>i). <span class="math notranslate nohighlight">\(-Au_0(-t - T)\)</span></p>
-<p>The result should look like this</p>
+<p>The result should look like <a class="reference internal" href="#fig-result"><span class="std std-numref">Fig. 23</span></a>.</p>
 <figure class="align-default" id="fig-result">
 <a class="reference internal image-reference" href="../../_images/unit_steps_plot.png"><img alt="Other forms of unit step function reproduced in MATLAB" src="../../_images/unit_steps_plot.png" style="width: 60%;" /></a>
 <figcaption>
