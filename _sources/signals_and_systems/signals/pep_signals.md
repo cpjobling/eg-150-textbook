@@ -180,8 +180,8 @@ A DC signal
 
 ```{eval-rst}
 .. note::
-
-   Note that the sum of two continuous time sigmals may not be periodic (Example {ref}`2.1`)
+ex
+   Note that the sum of two continuous time sigmals may not be periodic (Example {ref}`ex2.1`)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -429,7 +429,7 @@ $$P = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}\left|x(t)\right|^2\;dt$$
 
 is the same as the average power $x(t)$ over any interval of length $T_0$, that is,
 
-$$P = \frac{1}{T_0}\int_{0}^{T_0}\left|x(t)\right|^2\;dt$$.
+$$P = \frac{1}{T_0}\int_{0}^{T_0}\left|x(t)\right|^2\;dt$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
