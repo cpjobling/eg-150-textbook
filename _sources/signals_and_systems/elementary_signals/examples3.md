@@ -85,7 +85,7 @@ slideshow:
 ---
 sgtitle('Other forms of the unit step function');
 subplot(331)
-fplot(-A*u0(t)),title(['a) ',grid,texlabel('-A*u_0(t)')]),xlabel('t')
+fplot(-A*u0(t)),title(['a) ',texlabel('-A*u_0(t)')]),grid,xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -111,7 +111,7 @@ slideshow:
   slide_type: fragment
 ---
 subplot(333)
-fplot(-A*u0(t + T)),title(['c) ',texlabel('-A*u_0(t+T)')]),grid,xlabel('t')
+fplot(-A*u0(t + T)),title(['c) ',texlabel('-A*u_0(t+T)')]),xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
