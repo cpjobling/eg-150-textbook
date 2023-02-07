@@ -181,7 +181,7 @@ A DC signal
 ```{eval-rst}
 .. note::
 ex
-   Note that the sum of two continuous time sigmals may not be periodic (Example {ref}`ex2.1`)
+   Note that the sum of two continuous time signals may not be periodic (Example {ref}`ex2.1`)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
