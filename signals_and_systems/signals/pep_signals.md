@@ -166,11 +166,11 @@ Note that the definition of the *fundamental period*  does not hold for a consta
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-For a constant signal $x(t) = c$ the fundamental period is undefined since $x(t)$ is periodic for any choice of $T$ (and so there is no smallest postive value). See {numref}`dc_signal`.
+For a constant signal $x(t) = c$ the fundamental period is undefined since $x(t)$ is periodic for any choice of $T$ (and so there is no smallest postive value). See {numref}`fig:dc_signal`.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-:::{figure-md} dc_signal
+:::{figure-md} fig:dc_signal
 <img src="pictures/dc_signal.png" alt="A DC signal" width="75%">
 
 A DC signal
@@ -180,8 +180,8 @@ A DC signal
 
 ```{eval-rst}
 .. note::
-
-   Note that the sum of two continuous time sigmals may not be periodic (Example {ref}`2.1`)
+ex
+   Note that the sum of two continuous time signals may not be periodic (Example {ref}`ex2.1`)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -429,7 +429,7 @@ $$P = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}\left|x(t)\right|^2\;dt$$
 
 is the same as the average power $x(t)$ over any interval of length $T_0$, that is,
 
-$$P = \frac{1}{T_0}\int_{0}^{T_0}\left|x(t)\right|^2\;dt$$.
+$$P = \frac{1}{T_0}\int_{0}^{T_0}\left|x(t)\right|^2\;dt$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
