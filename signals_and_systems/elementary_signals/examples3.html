@@ -621,6 +621,11 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-the-unit-step">
+   Plot the Unit Step
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#other-forms-of-unit-step">
    3.1: Other forms of unit step
   </a>
@@ -686,6 +691,11 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-the-unit-step">
+   Plot the Unit Step
+  </a>
+ </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#other-forms-of-unit-step">
    3.1: Other forms of unit step
@@ -757,33 +767,39 @@ title="Print to PDF"
 <p>To accompany <a class="reference internal" href="index.html#elementary-signals"><span class="std std-ref">Unit 2.3: Elementary Signals</span></a>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals/examples3">cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals/examples3</a></p>
 <p><img alt="QR Code" src="../../_images/qrcode_examples3.png" /></p>
+<section id="plot-the-unit-step">
+<h2>Plot the Unit Step<a class="headerlink" href="#plot-the-unit-step" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span> <span class="n">t</span>
+<span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">=</span> <span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">);</span> <span class="o">%</span> <span class="n">allows</span> <span class="n">us</span> <span class="n">to</span> <span class="nb">type</span> <span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">in</span> <span class="n">our</span> <span class="n">formulae</span>
+<span class="n">A</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="o">%</span> <span class="n">we</span> <span class="n">need</span> <span class="n">numerical</span> <span class="n">values</span> <span class="n">to</span> <span class="n">get</span> <span class="n">a</span> <span class="n">successful</span> <span class="n">plot</span>
+<span class="n">fplot</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="s1">&#39;LineWidth&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Unit step&#39;</span><span class="p">),</span><span class="n">subtitle</span><span class="p">(</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;Au_0(t)&#39;</span><span class="p">)),</span><span class="n">grid</span><span class="p">,</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="other-forms-of-unit-step">
 <span id="ex3-1"></span><h2>3.1: Other forms of unit step<a class="headerlink" href="#other-forms-of-unit-step" title="Permalink to this headline">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
 </div>
-<p>Use the MATLAB functions <code class="docutils literal notranslate"><span class="pre">subplot</span></code>, <code class="docutils literal notranslate"><span class="pre">heaviside</span></code> and <code class="docutils literal notranslate"><span class="pre">fplot</span></code> to reproduce <a class="reference internal" href="#other-unit-steps"><span class="std std-numref">Fig. 22</span></a>. We’ve done the first row for you.</p>
+<p>Use the MATLAB functions <code class="docutils literal notranslate"><span class="pre">subplot</span></code>, <code class="docutils literal notranslate"><span class="pre">heaviside</span></code> and <code class="docutils literal notranslate"><span class="pre">fplot</span></code> to reproduce <a class="reference internal" href="#other-unit-steps"><span class="std std-numref">Fig. 22</span></a>.</p>
 <figure class="align-default" id="other-unit-steps">
 <a class="reference internal image-reference" href="../../_images/unit_steps.png"><img alt="" src="../../_images/unit_steps.png" style="width: 60%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 22 </span><span class="caption-text">Other forms of unit step function (Figure 1.8 <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>)</span><a class="headerlink" href="#other-unit-steps" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span> <span class="n">t</span>
-<span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">=</span> <span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">);</span> <span class="o">%</span> <span class="n">allows</span> <span class="n">us</span> <span class="n">to</span> <span class="nb">type</span> <span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">in</span> <span class="n">our</span> <span class="n">formulae</span>
-<span class="n">A</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">T</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="o">%</span> <span class="n">we</span> <span class="n">need</span> <span class="n">numerical</span> <span class="n">values</span> <span class="n">to</span> <span class="n">get</span> <span class="n">a</span> <span class="n">successful</span> <span class="n">plot</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>We’ve done the first row for you.</p>
 <p>a). <span class="math notranslate nohighlight">\(-Au_0(t)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subplot</span><span class="p">(</span><span class="mi">331</span><span class="p">)</span>
-<span class="n">fplot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;a)&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sgtitle</span><span class="p">(</span><span class="s1">&#39;Other forms of the unit step function&#39;</span><span class="p">);</span>
+<span class="n">subplot</span><span class="p">(</span><span class="mi">331</span><span class="p">)</span>
+<span class="n">fplot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="n">title</span><span class="p">([</span><span class="s1">&#39;a) &#39;</span><span class="p">,</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;-A*u_0(t)&#39;</span><span class="p">)])</span>
 </pre></div>
 </div>
 </div>
@@ -792,7 +808,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subplot</span><span class="p">(</span><span class="mi">332</span><span class="p">)</span>
-<span class="n">fplot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">T</span><span class="p">)),</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;b)&#39;</span><span class="p">)</span>
+<span class="n">fplot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">T</span><span class="p">)),</span><span class="n">title</span><span class="p">([</span><span class="s1">&#39;b) &#39;</span><span class="p">,</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;-A*u_0(t-T)&#39;</span><span class="p">)])</span>
 </pre></div>
 </div>
 </div>
@@ -801,17 +817,24 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subplot</span><span class="p">(</span><span class="mi">333</span><span class="p">)</span>
-<span class="n">fplot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span> <span class="o">+</span> <span class="n">T</span><span class="p">)),</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;c)&#39;</span><span class="p">)</span>
+<span class="n">fplot</span><span class="p">(</span><span class="o">-</span><span class="n">A</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span> <span class="o">+</span> <span class="n">T</span><span class="p">)),</span><span class="n">title</span><span class="p">([</span><span class="s1">&#39;c) &#39;</span><span class="p">,</span><span class="n">texlabel</span><span class="p">(</span><span class="s1">&#39;-A*u_0(t+T)&#39;</span><span class="p">)])</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>d). <span class="math notranslate nohighlight">\(A(-t)\)</span></p>
-<p>e). <span class="math notranslate nohighlight">\(A(-t + T)\)</span></p>
-<p>f). <span class="math notranslate nohighlight">\(A(-t - T)\)</span></p>
-<p>g). <span class="math notranslate nohighlight">\(-A(-t)\)</span></p>
-<p>h). <span class="math notranslate nohighlight">\(-A(-t + T)\)</span></p>
-<p>i). <span class="math notranslate nohighlight">\(-A(-t - T)\)</span></p>
+<p>d). <span class="math notranslate nohighlight">\(Au_0(-t)\)</span></p>
+<p>e). <span class="math notranslate nohighlight">\(Au_0(-t + T)\)</span></p>
+<p>f). <span class="math notranslate nohighlight">\(Au_0(-t - T)\)</span></p>
+<p>g). <span class="math notranslate nohighlight">\(-Au_0(-t)\)</span></p>
+<p>h). <span class="math notranslate nohighlight">\(-Au_0(-t + T)\)</span></p>
+<p>i). <span class="math notranslate nohighlight">\(-Au_0(-t - T)\)</span></p>
+<p>The result should look like this</p>
+<figure class="align-default" id="fig-result">
+<a class="reference internal image-reference" href="../../_images/unit_steps_plot.png"><img alt="Other forms of unit step function reproduced in MATLAB" src="../../_images/unit_steps_plot.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Other forms of unit step function (Figure 1.8 <span id="id2">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>) reproduced in MATLAB</span><a class="headerlink" href="#fig-result" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="synthesis-of-signals-from-unit-step">
 <span id="ex3-2"></span><h2>3.2: Synthesis of Signals from Unit Step<a class="headerlink" href="#synthesis-of-signals-from-unit-step" title="Permalink to this headline">#</a></h2>
@@ -951,10 +974,10 @@ title="Print to PDF"
 <figure class="align-default" id="fig-ex3-6">
 <a class="reference internal image-reference" href="../../_images/example2.png"><img alt="" src="../../_images/example2.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Signal to be symthesized for Example 3.6</span><a class="headerlink" href="#fig-ex3-6" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Signal to be symthesized for Example 3.6</span><a class="headerlink" href="#fig-ex3-6" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>a) Express the voltage waveform <span class="math notranslate nohighlight">\(v(t)\)</span> shown in <a class="reference internal" href="#fig-ex3-6"><span class="std std-numref">Fig. 23</span></a> as a sum of unit step functions for the time interval <span class="math notranslate nohighlight">\(-1 &lt; t &lt; 7\)</span> s</p>
+<p>a) Express the voltage waveform <span class="math notranslate nohighlight">\(v(t)\)</span> shown in <a class="reference internal" href="#fig-ex3-6"><span class="std std-numref">Fig. 24</span></a> as a sum of unit step functions for the time interval <span class="math notranslate nohighlight">\(-1 &lt; t &lt; 7\)</span> s</p>
 <pre style="border: 2px solid blue">
 
 

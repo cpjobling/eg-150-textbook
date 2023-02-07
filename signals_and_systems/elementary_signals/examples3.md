@@ -38,6 +38,21 @@ Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/element
 
 ![QR Code](pictures/qrcode_examples3.png)
 
++++
+
+## Plot the Unit Step
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+syms t
+u0(t) = heaviside(t); % allows us to type u0(t) in our formulae
+A = 2; T = 2; % we need numerical values to get a successful plot
+fplot(A*u0(t),'LineWidth',2),title('Unit step'),subtitle(texlabel('Au_0(t)')),grid,xlabel('t')
+```
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (ex3_1)=
@@ -48,7 +63,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/element
 We will solve this example by hand and then give the solution in the MATLAB lab.
 ```
 
-Use the MATLAB functions `subplot`, `heaviside` and `fplot` to reproduce {numref}`other_unit_steps`. We've done the first row for you.
+Use the MATLAB functions `subplot`, `heaviside` and `fplot` to reproduce {numref}`other_unit_steps`. 
 
 
 :::{figure-md} other_unit_steps
@@ -57,15 +72,7 @@ Use the MATLAB functions `subplot`, `heaviside` and `fplot` to reproduce {numref
 Other forms of unit step function (Figure 1.8 {cite}`karris`)
 :::
 
-```{code-cell}
----
-slideshow:
-  slide_type: subslide
----
-syms t
-u0(t) = heaviside(t); % allows us to type u0(t) in our formulae
-A = 2; T = 2; % we need numerical values to get a successful plot
-```
+We've done the first row for you.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -76,8 +83,9 @@ a). $-Au_0(t)$
 slideshow:
   slide_type: fragment
 ---
+sgtitle('Other forms of the unit step function');
 subplot(331)
-fplot(-A*u0(t)),title('a)')
+fplot(-A*u0(t)),title(['a) ',texlabel('-A*u_0(t)')])
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -90,7 +98,7 @@ slideshow:
   slide_type: fragment
 ---
 subplot(332)
-fplot(-A*u0(t - T)),title('b)')
+fplot(-A*u0(t - T)),title(['b) ',texlabel('-A*u_0(t-T)')])
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -103,22 +111,32 @@ slideshow:
   slide_type: fragment
 ---
 subplot(333)
-fplot(-A*u0(t + T)),title('c)')
+fplot(-A*u0(t + T)),title(['c) ',texlabel('-A*u_0(t+T)')])
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-d). $A(-t)$
+d). $Au_0(-t)$
 
-e). $A(-t + T)$
+e). $Au_0(-t + T)$
 
-f). $A(-t - T)$
+f). $Au_0(-t - T)$
 
-g). $-A(-t)$
+g). $-Au_0(-t)$
 
-h). $-A(-t + T)$
+h). $-Au_0(-t + T)$
 
-i). $-A(-t - T)$
+i). $-Au_0(-t - T)$
+
++++
+
+The result should look like this
+
+:::{figure-md} fig_result
+<img src="pictures/unit_steps_plot.png" alt="Other forms of unit step function reproduced in MATLAB" width="60%">
+
+Other forms of unit step function (Figure 1.8 {cite}`karris`) reproduced in MATLAB 
+:::
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
