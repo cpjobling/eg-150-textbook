@@ -166,11 +166,11 @@ Note that the definition of the *fundamental period*  does not hold for a consta
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-For a constant signal $x(t) = c$ the fundamental period is undefined since $x(t)$ is periodic for any choice of $T$ (and so there is no smallest postive value). See {numref}`dc_signal`.
+For a constant signal $x(t) = c$ the fundamental period is undefined since $x(t)$ is periodic for any choice of $T$ (and so there is no smallest postive value). See {numref}`fig:dc_signal`.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-:::{figure-md} dc_signal
+:::{figure-md} fig:dc_signal
 <img src="pictures/dc_signal.png" alt="A DC signal" width="75%">
 
 A DC signal
