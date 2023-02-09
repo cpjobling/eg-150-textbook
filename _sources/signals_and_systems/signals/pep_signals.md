@@ -156,7 +156,7 @@ ylim([0.00 2.00])
 (fundemental_period)=
 ### Fundamental period
 
-The *fundamental period* $T_0$ of $x(t)$ is the smallest value of $T$ for which $x(t + mT) = x(t)$ holds. 
+The *fundamental period* $T_0$ of $x(t)$ is the smallest value of $T$ for which $x(t + mT) = x(t)$ holds.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -172,7 +172,7 @@ Note that the definition of the *fundamental period*  does not hold for a consta
 
 For a constant signal $x(t) = c$ the fundamental period is undefined since $x(t)$ is periodic for any choice of $T$ (and so there is no smallest postive value). See {numref}`fig:dc_signal`.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 :::{figure-md} fig:dc_signal
 <img src="pictures/dc_signal.png" alt="A DC signal" width="75%">
@@ -287,7 +287,7 @@ Note that a periodic signal is a power signal if its energy content per period i
 
 There are other measures of signal size that are used:
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Mean value
 
@@ -401,11 +401,11 @@ e). $x(t)=\sin^2t$;
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-f). $x(t)=e^{j\left[\pi/2t-1\right]}$;
+f). $x(t)=e^{j\left[(\pi/2)t-1\right]}$;
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.16 in {cite}`schaum`.
+For the answers, refer to the lecture recording or see solved problem 1.16 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -509,7 +509,7 @@ In particular we have looked at
 * {ref}`stable_systems`
 * {ref}`feedback_systems`
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## References
 

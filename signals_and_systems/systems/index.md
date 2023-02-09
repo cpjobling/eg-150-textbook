@@ -45,9 +45,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/systems
 (system_representation)=
 ## System Representation
 
-A *system* is a mathematical model of a physical process that relates
-
- the *input* (or *excitation*) signal to the *output* (or *response*) signal.
+A *system* is a mathematical model of a physical process that relates the *input* (or *excitation*) signal to the *output* (or *response*) signal.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -80,7 +78,7 @@ System with single or multiple inputs and outputs
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-If the input and output signals $x$ and $y$ are deterministic signals, then the system is called a deterministic system.
+If the input and output signals $x$ and $y$ are deterministic signals, then the system is called a *deterministic* system.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -110,7 +108,7 @@ If the input and output signals  𝑥  and  𝑦  are discrete-time signals or s
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Note that in a continuous-time system the input $x(t)$ and $y(t)$ are often expressed as a differential equation (see Example 4.1) and in a discrete-time system $x[n]$ and $y[n]$ are often expressed by a difference equation.
+Note that in a continuous-time system the input $x(t)$ and $y(t)$ are often expressed as a *differential equation* (see {ref}`worked_examples_4`) and in a discrete-time system $x[n]$ and $y[n]$ are often expressed by a *difference equation*.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -288,7 +286,7 @@ A system that does not satisfy the equation $\mathbf{T}\left\{x(t - \tau)\right\
 
 ### Testing for time-invariance
 
-To check for time invariance, we can compare the time-shifted output with the output produced by the time-shifted input (See examples 4.2 and 4.3).
+To check for time invariance, we can compare the time-shifted output with the output produced by the time-shifted input (See {ref}`ex4_2` and {ref}`ex4_3`).
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -301,14 +299,14 @@ If a system is linear and also time-invariant it is called a *linear time-invari
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-All ths systems analysied in in the rest of the module and in **EG-247 Digital Signal Processing** and **EG-243 Control Systems** next year will be LTI systems.
+All ths systems analysed in in the rest of the module and in **EG-247 Digital Signal Processing** and **EG-243 Control Systems** next year will be LTI systems.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (stable_systems)=
 ## Stable Systems
 
-A system is *bounded-input/bounded-output* (BIBO) *stable* is for any bounded input signal $x$ defined by
+A system is *bounded-input/bounded-output* (BIBO) *stable* if for any bounded input signal $x$ defined by
 
 $$|x|\le k_1$$
 
@@ -334,7 +332,7 @@ and input $x(t)$ is the unit step $u_0(t)$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-In this case $x(t) = 1$ but the output $y(t)$ increases without bound as $t$ increases.
+In this case $x(t) = 1$ (so is bounded) but the output $y(t)$ increases without bound as $t$ increases.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -345,7 +343,7 @@ A special class of systems of great importance consists of systems having *feedb
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-In a *feedback system*, the output signal is fed back and added to the input as shown in {numref}`fig:feedback`.
+In a *feedback system*, a portion of the output signal is fed back and added to the input as shown in {numref}`fig:feedback`.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -357,12 +355,17 @@ A feedback system with negative feedback: $e(t) = x(t) - y(t)$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-You will see some examples of systems with feedback when you study op-amp circuits in **EG-152 Practical Electronics**, the simple closed-loop systems to be studied in **EG-142 Instrumentation and Control**.  Feedback is also the basis of control theory to be studied next year in **EG-243 Control Systems**.
+You will see examples of systems with feedback when you study op-amp circuits in **EG-152 Practical Electronics**, the simple closed-loop systems to be studied in **EG-142 Instrumentation and Control**.  Feedback, and its impact on system stability, is also the basis of control theory to be studied next year in **EG-243 Control Systems**.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (worked_examples_4)=
 ## Examples 4
+
+```{admonition} MATLAB Example
+:class: tip
+We will solve this example by hand and then give the solution in the MATLAB lab.
+```
 
 (ex4.1)=
 
@@ -389,6 +392,11 @@ For the answer, refer to the lecture recording or see solved problem 1.32 in {ci
 (ex4_2)=
 ### Example 4.2: Capacitor circuit
 
+ ```{admonition} MATLAB Example
+:class: tip
+We will solve this example by hand and then give the solution in the MATLAB lab.
+```
+
 Consider the capacitor shown in {numref}`fig:cap_circuit`. Let the input $x(t) = i(t)$ and the output $y(t) = v_c(t)$.
 
 (a) Find the input-output relationship.
@@ -408,6 +416,12 @@ For the answer, refer to the lecture recording or see solved problem 1.33 in {ci
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex4_3)=
+
+```{admonition} MATLAB Example
+:class: tip
+We will solve this example by hand and then give the solution in the MATLAB lab.
+```
+
 ### Example 4.3: Signal modulator
 
 Consider the system shown in {numref}`fig:4_3`. Determine whether it is (a) memoryless, (b) causal, (c) linear, (d) time invariant, or (e) stable.
@@ -470,6 +484,12 @@ For the answer, refer to the lecture recording or see solved problem 1.43 in {ci
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex4_7)=
+
+```{admonition} MATLAB Example
+:class: tip
+We will solve this example by hand and then give the solution in the MATLAB lab.
+```
+
 ### Example 4.7
 
 Let $\mathbf{T}$ represent a continuous-time LTI system. Then show that
@@ -506,3 +526,9 @@ In particular we have looked at
 ## Next time
 
 * {ref}`lti_systems`
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```

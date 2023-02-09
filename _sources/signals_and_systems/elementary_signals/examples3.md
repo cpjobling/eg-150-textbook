@@ -38,7 +38,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/element
 
 ![QR Code](pictures/qrcode_examples3.png)
 
-+++
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## Plot the Unit Step
 
@@ -47,7 +47,7 @@ $v_1(t) = A u_0(t)$
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
 syms t
 u0(t) = heaviside(t); % allows us to type u0(t) in our formulae
@@ -333,7 +333,7 @@ $$t^2\delta'(t-3)$$
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex3_4)=
-## Example 3.4
+## Example 3.4: Signal Synthesis
 
 ```{admonition} MATLAB Example
 :class: tip

@@ -29,5 +29,6 @@ EG-150 Signals and Systems introduces the mathematical description of signals in
 ## Table of Contents
 
 * {ref}`course_intro`
-* {ref}`sig_into`
+* {ref}`sig_intro`
 * {ref}`lti_systems`
+* {ref}`laplace`

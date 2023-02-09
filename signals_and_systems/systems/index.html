@@ -806,6 +806,11 @@ title="Print to PDF"
    Next time
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1011,6 +1016,11 @@ title="Print to PDF"
    Next time
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -1044,8 +1054,7 @@ title="Print to PDF"
 </section>
 <section id="system-representation">
 <span id="id2"></span><h2>System Representation<a class="headerlink" href="#system-representation" title="Permalink to this headline">#</a></h2>
-<p>A <em>system</em> is a mathematical model of a physical process that relates</p>
-<p>the <em>input</em> (or <em>excitation</em>) signal to the <em>output</em> (or <em>response</em>) signal.</p>
+<p>A <em>system</em> is a mathematical model of a physical process that relates the <em>input</em> (or <em>excitation</em>) signal to the <em>output</em> (or <em>response</em>) signal.</p>
 <p>Let <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> be the input and output signals, respectively, of a system. Then the system is viewed as a <em>transformation</em> (or <em>mapping</em>) of <span class="math notranslate nohighlight">\(x\)</span> into <span class="math notranslate nohighlight">\(y\)</span>. The transformation is represented by the mathematical notation</p>
 <div class="math notranslate nohighlight">
 \[y = \mathbf{T}x\]</div>
@@ -1061,7 +1070,7 @@ title="Print to PDF"
 </section>
 <section id="deterministic-and-stochastic-systems">
 <span id="id3"></span><h2>Deterministic and Stochastic Systems<a class="headerlink" href="#deterministic-and-stochastic-systems" title="Permalink to this headline">#</a></h2>
-<p>If the input and output signals <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are deterministic signals, then the system is called a deterministic system.</p>
+<p>If the input and output signals <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are deterministic signals, then the system is called a <em>deterministic</em> system.</p>
 <p>If the input and output signals <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are random signals, then the system is called a <em>stochastic</em> system.</p>
 </section>
 <section id="continuous-time-and-discrete-time-systems">
@@ -1074,7 +1083,7 @@ title="Print to PDF"
 <p><span class="caption-number">Fig. 26 </span><span class="caption-text">(a) Continuous-time system; (b) discrete time system.</span><a class="headerlink" href="#fig-ct-n-dt-system" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Note that in a continuous-time system the input <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(y(t)\)</span> are often expressed as a differential equation (see Example 4.1) and in a discrete-time system <span class="math notranslate nohighlight">\(x[n]\)</span> and <span class="math notranslate nohighlight">\(y[n]\)</span> are often expressed by a difference equation.</p>
+<p>Note that in a continuous-time system the input <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(y(t)\)</span> are often expressed as a <em>differential equation</em> (see <a class="reference internal" href="#worked-examples-4"><span class="std std-ref">Examples 4</span></a>) and in a discrete-time system <span class="math notranslate nohighlight">\(x[n]\)</span> and <span class="math notranslate nohighlight">\(y[n]\)</span> are often expressed by a <em>difference equation</em>.</p>
 </section>
 <section id="systems-with-memory-and-without-memory">
 <span id="id5"></span><h2>Systems with Memory and without Memory<a class="headerlink" href="#systems-with-memory-and-without-memory" title="Permalink to this headline">#</a></h2>
@@ -1178,17 +1187,17 @@ title="Print to PDF"
 </section>
 <section id="testing-for-time-invariance">
 <h3>Testing for time-invariance<a class="headerlink" href="#testing-for-time-invariance" title="Permalink to this headline">#</a></h3>
-<p>To check for time invariance, we can compare the time-shifted output with the output produced by the time-shifted input (See examples 4.2 and 4.3).</p>
+<p>To check for time invariance, we can compare the time-shifted output with the output produced by the time-shifted input (See <a class="reference internal" href="#ex4-2"><span class="std std-ref">Example 4.2: Capacitor circuit</span></a> and <span class="xref std std-ref">ex4_3</span>).</p>
 </section>
 </section>
 <section id="linear-time-invariant-systems">
 <span id="id9"></span><h2>Linear Time-Invariant Systems<a class="headerlink" href="#linear-time-invariant-systems" title="Permalink to this headline">#</a></h2>
 <p>If a system is linear and also time-invariant it is called a <em>linear time-invariant</em> (LTI) system.</p>
-<p>All ths systems analysied in in the rest of the module and in <strong>EG-247 Digital Signal Processing</strong> and <strong>EG-243 Control Systems</strong> next year will be LTI systems.</p>
+<p>All ths systems analysed in in the rest of the module and in <strong>EG-247 Digital Signal Processing</strong> and <strong>EG-243 Control Systems</strong> next year will be LTI systems.</p>
 </section>
 <section id="stable-systems">
 <span id="id10"></span><h2>Stable Systems<a class="headerlink" href="#stable-systems" title="Permalink to this headline">#</a></h2>
-<p>A system is <em>bounded-input/bounded-output</em> (BIBO) <em>stable</em> is for any bounded input signal <span class="math notranslate nohighlight">\(x\)</span> defined by</p>
+<p>A system is <em>bounded-input/bounded-output</em> (BIBO) <em>stable</em> if for any bounded input signal <span class="math notranslate nohighlight">\(x\)</span> defined by</p>
 <div class="math notranslate nohighlight">
 \[|x|\le k_1\]</div>
 <p>the corresponding output <span class="math notranslate nohighlight">\(y\)</span> is also bounded defined by</p>
@@ -1202,23 +1211,27 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[y(t) = t x(t)\]</div>
 <p>and input <span class="math notranslate nohighlight">\(x(t)\)</span> is the unit step <span class="math notranslate nohighlight">\(u_0(t)\)</span></p>
-<p>In this case <span class="math notranslate nohighlight">\(x(t) = 1\)</span> but the output <span class="math notranslate nohighlight">\(y(t)\)</span> increases without bound as <span class="math notranslate nohighlight">\(t\)</span> increases.</p>
+<p>In this case <span class="math notranslate nohighlight">\(x(t) = 1\)</span> (so is bounded) but the output <span class="math notranslate nohighlight">\(y(t)\)</span> increases without bound as <span class="math notranslate nohighlight">\(t\)</span> increases.</p>
 </section>
 </section>
 <section id="feedback-systems">
 <span id="id11"></span><h2>Feedback Systems<a class="headerlink" href="#feedback-systems" title="Permalink to this headline">#</a></h2>
 <p>A special class of systems of great importance consists of systems having <em>feedback</em>.</p>
-<p>In a <em>feedback system</em>, the output signal is fed back and added to the input as shown in <a class="reference internal" href="#fig-feedback"><span class="std std-numref">Fig. 29</span></a>.</p>
+<p>In a <em>feedback system</em>, a portion of the output signal is fed back and added to the input as shown in <a class="reference internal" href="#fig-feedback"><span class="std std-numref">Fig. 29</span></a>.</p>
 <figure class="align-default" id="fig-feedback">
 <a class="reference internal image-reference" href="../../_images/feedback.png"><img alt="A feedback system with negative feedback" src="../../_images/feedback.png" style="width: 60%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 29 </span><span class="caption-text">A feedback system with negative feedback: <span class="math notranslate nohighlight">\(e(t) = x(t) - y(t)\)</span>.</span><a class="headerlink" href="#fig-feedback" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>You will see some examples of systems with feedback when you study op-amp circuits in <strong>EG-152 Practical Electronics</strong>, the simple closed-loop systems to be studied in <strong>EG-142 Instrumentation and Control</strong>.  Feedback is also the basis of control theory to be studied next year in <strong>EG-243 Control Systems</strong>.</p>
+<p>You will see examples of systems with feedback when you study op-amp circuits in <strong>EG-152 Practical Electronics</strong>, the simple closed-loop systems to be studied in <strong>EG-142 Instrumentation and Control</strong>.  Feedback, and its impact on system stability, is also the basis of control theory to be studied next year in <strong>EG-243 Control Systems</strong>.</p>
 </section>
 <section id="examples-4">
 <span id="worked-examples-4"></span><h2>Examples 4<a class="headerlink" href="#examples-4" title="Permalink to this headline">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">MATLAB Example</p>
+<p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
+</div>
 <section id="example-4-1-rc-circuit">
 <span id="ex4-1"></span><h3>Example 4.1: RC Circuit<a class="headerlink" href="#example-4-1-rc-circuit" title="Permalink to this headline">#</a></h3>
 <p>Consider the RC circuit shown in <a class="reference internal" href="#fig-rc-circuit"><span class="std std-numref">Fig. 30</span></a>. Find the relationship between the input <span class="math notranslate nohighlight">\(x(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t)\)</span></p>
@@ -1234,6 +1247,10 @@ title="Print to PDF"
 </section>
 <section id="example-4-2-capacitor-circuit">
 <span id="ex4-2"></span><h3>Example 4.2: Capacitor circuit<a class="headerlink" href="#example-4-2-capacitor-circuit" title="Permalink to this headline">#</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">MATLAB Example</p>
+<p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
+</div>
 <p>Consider the capacitor shown in <a class="reference internal" href="#fig-cap-circuit"><span class="std std-numref">Fig. 31</span></a>. Let the input <span class="math notranslate nohighlight">\(x(t) = i(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t) = v_c(t)\)</span>.</p>
 <p>(a) Find the input-output relationship.</p>
 <p>(b) Determine whether the system is (i) memoryless, (ii) causal, (iii) linear, (iv) time invariant, or (v) stable.</p>
@@ -1244,9 +1261,13 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <p>For the answer, refer to the lecture recording or see solved problem 1.33 in {cite}schaum.</p>
+<div class="tip admonition" id="ex4-3">
+<p class="admonition-title">MATLAB Example</p>
+<p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
+</div>
 </section>
 <section id="example-4-3-signal-modulator">
-<span id="ex4-3"></span><h3>Example 4.3: Signal modulator<a class="headerlink" href="#example-4-3-signal-modulator" title="Permalink to this headline">#</a></h3>
+<h3>Example 4.3: Signal modulator<a class="headerlink" href="#example-4-3-signal-modulator" title="Permalink to this headline">#</a></h3>
 <p>Consider the system shown in <a class="reference internal" href="#fig-4-3"><span class="std std-numref">Fig. 32</span></a>. Determine whether it is (a) memoryless, (b) causal, (c) linear, (d) time invariant, or (e) stable.</p>
 <figure class="align-default" id="fig-4-3">
 <a class="reference internal image-reference" href="../../_images/fig4_3.png"><img alt="A system" src="../../_images/fig4_3.png" style="width: 60%;" /></a>
@@ -1278,9 +1299,13 @@ title="Print to PDF"
 <p>(b) Find a nonlinear system that is causal but does not satisfy this condition.</p>
 <p>(c) Find a nonlinear system that satisfies this condition but is not causal.</p>
 <p>For the answer, refer to the lecture recording or see solved problem 1.43 in {cite}schaum.</p>
+<div class="tip admonition" id="ex4-7">
+<p class="admonition-title">MATLAB Example</p>
+<p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
+</div>
 </section>
 <section id="example-4-7">
-<span id="ex4-7"></span><h3>Example 4.7<a class="headerlink" href="#example-4-7" title="Permalink to this headline">#</a></h3>
+<h3>Example 4.7<a class="headerlink" href="#example-4-7" title="Permalink to this headline">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(\mathbf{T}\)</span> represent a continuous-time LTI system. Then show that</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{T}\left\{e^{st}\right\}= \lambda e^{st}\]</div>
@@ -1310,6 +1335,16 @@ title="Print to PDF"
 <ul class="simple">
 <li><p><a class="reference internal" href="../../lti_systems/lti2.html#lti-systems"><span class="std std-ref">Unit 3.2: Properties and Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
 </ul>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<div class="docutils container" id="id12">
+<dl class="citation">
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id1">Hsu20</a></span></dt>
+<dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
+</dd>
+</dl>
+</div>
 </section>
 </section>
 
