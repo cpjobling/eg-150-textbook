@@ -1,3 +1,5 @@
+(laplace)=
+
 # Laplace Transforms and their Applications
 
 ## About the Laplace Transformation
@@ -23,12 +25,3 @@ In this section of the course we will cover:
 * Using Laplace Transforms for Circuit Analysis
 * Transfer Functions
 * Impulse Response and Convolution
-
-## Colophon
-
-* The source code for this page is [laplace_transform/index.md](https://github.com/cpjobling/eg-247-textbook/blob/master/laplace_transform/index.md).
-
-* You can view the notes for this presentation as a webpage ([HTML](https://cpjobling.github.io/eg-247-textbook/laplace_transform/index.html)). 
-
-* This page is downloadable as a [PDF](https://cpjobling.github.io/eg-247-textbook/laplace_transform/laplace_transform.pdf) file. 
-

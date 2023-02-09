@@ -56,7 +56,7 @@ We can use the periodicity to synthesize a periodic signal such as that shown in
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Let's first define the signal over one period. We will use MATLAB and the symbolic toolbox for this example:
+Let's first define the signal over one period. We will use MATLAB and the *symbolic math toolbox* for this example:
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -79,7 +79,7 @@ slideshow:
 syms t
 T = 1; % period of periodic signal
 x(t) = t*(heaviside(t)-heaviside(t-T));
-fplot(x(t)),ylim([0 2]),grid,title('A Single period of x(t)')
+fplot(x(t)),ylim([0 2]),grid,title('A Single period of x(t)'),xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -158,6 +158,10 @@ ylim([0.00 2.00])
 
 The *fundamental period* $T_0$ of $x(t)$ is the smallest value of $T$ for which $x(t + mT) = x(t)$ holds.
 
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the previous example this was $T_0=1$.
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (dc_signal)=
@@ -168,7 +172,7 @@ Note that the definition of the *fundamental period*  does not hold for a consta
 
 For a constant signal $x(t) = c$ the fundamental period is undefined since $x(t)$ is periodic for any choice of $T$ (and so there is no smallest postive value). See {numref}`fig:dc_signal`.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 :::{figure-md} fig:dc_signal
 <img src="pictures/dc_signal.png" alt="A DC signal" width="75%">
@@ -241,7 +245,7 @@ $$P = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}i(t)^2\;dt\quad\mathrm{watts
 
 For an arbitrary continuous-time signal $x(t)$, the *normalised energy content* $E$ of $x(t)$ is defined as
 
-$$E = \int_{-\infty}^{\infty}\left|x(t)\right|^2\,dt$$
+$$E = \int_{-\infty}^{\infty}\left|x(t)\right|^2\,dt\quad\mathrm{J}$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -252,7 +256,7 @@ $$E = \int_{-\infty}^{\infty}\left|x(t)\right|^2\,dt$$
 
 The *normalised average power* $P$ of $x(t)$ is defined as
 
-$$P = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}\left|x(t)\right|^2\;dt\quad\mathrm{watts}$$
+$$P = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}\left|x(t)\right|^2\;dt\quad\mathrm{W}$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -283,7 +287,7 @@ Note that a periodic signal is a power signal if its energy content per period i
 
 There are other measures of signal size that are used:
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Mean value
 
@@ -343,7 +347,7 @@ $$\mathrm{PAPR}_x = \frac{\left|x\right|_\mathrm{peak}^2}{P}$$
 
 **Observations**
 
-* CF a PAPR measure the dispersion of a signal about its average power.
+* CF and PAPR measure the dispersion of a signal about its average power.
 
 * To express CF or PAPR we often use decibels (dB). To obtain a measure of the quantity $y$ in dB use $20\log_{10}(y)$.
 
@@ -397,14 +401,15 @@ e). $x(t)=\sin^2t$;
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-f). $x(t)=e^{j\left[\pi/2t-1\right]}$;
+f). $x(t)=e^{j\left[(\pi/2)t-1\right]}$;
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.16 in {cite}`schaum`.
+For the answers, refer to the lecture recording or see solved problem 1.16 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(ex2.3)=
 ### Example 2.3
 
 Show that if $x(t + T) = x(t)$, then
@@ -421,9 +426,10 @@ For the answer, refer to the lecture recording or see solved problem 1.17 in {ci
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(ex2.4)=
 ### Example 2.4
 
-Show that if $x(t)$ is periodic with fundamental period $T_0$, the the normalized average power $P$ of $x(t)$ defined by
+Show that if $x(t)$ is periodic with fundamental period $T_0$, then the normalized average power $P$ of $x(t)$ defined by
 
 $$P = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}\left|x(t)\right|^2\;dt$$
 
@@ -467,6 +473,7 @@ Note $u_0(t)$ is the unit step (or Heaviside) function formally introduced in th
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(ex2.6)=
 ### Example 2.6
 
 Domestic mains power in the UK is delivered as a sinusoidal signal $x(t)=A\cos(\omega_0 t + \theta)$ with frequency of $50\mathrm{Hz}$ and RMS value of $240\mathrm{V}$. 
@@ -502,7 +509,7 @@ In particular we have looked at
 * {ref}`stable_systems`
 * {ref}`feedback_systems`
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## References
 

@@ -38,19 +38,22 @@ Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/element
 
 ![QR Code](pictures/qrcode_examples3.png)
 
-+++
++++ {"slideshow": {"slide_type": "slide"}}
 
 ## Plot the Unit Step
+
+$v_1(t) = A u_0(t)$
 
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
 syms t
 u0(t) = heaviside(t); % allows us to type u0(t) in our formulae
 A = 2; T = 2; % we need numerical values to get a successful plot
-fplot(A*u0(t),'LineWidth',2),title('Unit step'),subtitle(texlabel('Au_0(t)')),grid,xlabel('t')
+v1(t) = A*u0(t)
+fplot(v1,'LineWidth',2),title('Unit step'),subtitle(texlabel('v_1(t) = Au_0(t)')),grid,xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -76,21 +79,23 @@ We've done the first row for you.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-a). $-Au_0(t)$
+a). $v_1(t) = -Au_0(t)$
 
 ```{code-cell}
 ---
 slideshow:
   slide_type: fragment
 ---
+clf % clear figures
 sgtitle('Other forms of the unit step function');
 subplot(331)
-fplot(-A*u0(t)),title(['a) ',texlabel('-A*u_0(t)')]),grid,xlabel('t')
+v2(t) = -A*u0(t)
+fplot(v1,'LineWidth',2),title(['a) ',texlabel('v_2(t) = -A*u_0(t)')]),grid,xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-b). $-A(t - T)$
+b). $v_3(t) = -A(t - T)$
 
 ```{code-cell}
 ---
@@ -98,12 +103,13 @@ slideshow:
   slide_type: fragment
 ---
 subplot(332)
-fplot(-A*u0(t - T)),title(['b) ',texlabel('-A*u_0(t-T)')]),grid,xlabel('t')
+v3(t) = -A*u0(t - T)
+fplot(v3(t),'LineWidth',2),title(['b) ',texlabel('v_3(t) = -A*u_0(t-T)')]),grid,xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-c). $-A(t + T)$
+c). $v_4(t) = -A(t + T)$
 
 ```{code-cell}
 ---
@@ -111,22 +117,23 @@ slideshow:
   slide_type: fragment
 ---
 subplot(333)
-fplot(-A*u0(t + T)),title(['c) ',texlabel('-A*u_0(t+T)')]),xlabel('t')
+v4(t) = -A*u0(t + T)
+fplot(v4(t),'LineWidth',2),title(['c) ',texlabel('v_4(t) = -A*u_0(t+T)')]),xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-d). $Au_0(-t)$
+d). $v_5(t) = Au_0(-t)$
 
-e). $Au_0(-t + T)$
+e). $v_6(t) = Au_0(-t + T)$
 
-f). $Au_0(-t - T)$
+f). $v_7(t) = Au_0(-t - T)$
 
-g). $-Au_0(-t)$
+g). $v_8(t) = -Au_0(-t)$
 
-h). $-Au_0(-t + T)$
+h). $v_9(t) = -Au_0(-t + T)$
 
-i). $-Au_0(-t - T)$
+i). $v_{10}(t) = -Au_0(-t - T)$
 
 +++
 
@@ -326,7 +333,7 @@ $$t^2\delta'(t-3)$$
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex3_4)=
-## Example 3.4
+## Example 3.4: Signal Synthesis
 
 ```{admonition} MATLAB Example
 :class: tip
