@@ -23,6 +23,8 @@ This section is based on Section 2.1 of {cite}`schaum`.
 
 Follow along at [cpjobling.github.io/eg-150-textbook/lti_systems/lti1](https://cpjobling.github.io/eg-150-textbook/lti_systems/lti1)
 
+![QR Code for this lecture](pictures/qrcode_lti1.png)
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## Subjects to be Covered
@@ -170,7 +172,7 @@ $$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$
 
 ### Graphical Evaluation of the Convolution Integral
 
-The convolution integral is most conveniently evaluated by a graphical evaluation. We give three examples (5.4&mdash;5.6) which we will demonstrate in class using a [graphical visualization tool](https://uk.mathworks.com/matlabcentral/fileexchange/25199-graphical-demonstration-of-convolution) developed by Teja Muppirala of the Mathworks.
+The convolution integral is most conveniently evaluated by a graphical evaluation. We give three examples (5.4&mdash;5.6) which we will demonstrate in class using a [graphical visualization tool](https://uk.mathworks.com/matlabcentral/fileexchange/25199-graphical-demonstration-of-convolution) developed by Teja Muppirala of the Mathworks and updated by Rory Adams.
 
 The tool: [convolutiondemo.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/convolution_demo/convolutiondemo.m) (see [license.txt](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/convolution_demo/license.txt)).
 
@@ -182,7 +184,7 @@ slideshow:
   slide_type: fragment
 ---
 clear all
-cd matlab/convolutiondemo
+cd matlab/convolution_demo
 pwd
 ```
 
@@ -239,7 +241,7 @@ Thus the step response $s(t)$ can be obtained by integrating the impulse respons
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### Impulse response from step response
+### Impulse response from step response
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -446,7 +448,7 @@ $$h(t) = e^{-\alpha t}u_0(t)$$
 
 $$x(t) = e^{\alpha t}u_0(-t)$$
 
-$$\alpha > 0$$.
+$$\alpha > 0.$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -563,8 +565,6 @@ slideshow:
 fplot(y(t),[-3,6]),grid,ylim([0,2.5]),ylabel('h(t)'),xlabel('t')
 ```
 
-We can obtain the signal $y(t)$ analytically by use of the convolution integral as will be shown in the examples class.
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ##### (b) Graphical 
@@ -592,6 +592,17 @@ In this lecture we have looked at
 * {ref}`convolution_operation`
 * {ref}`step_response`
 
+### Unit 3.1: Take Aways
+
+* *Impulse response*: $h(t) = \mathbf{T}\left\{\delta(t)\right\}$
+* *Arbitrary system response*: $y(t) = \int_{-\infty}^{\infty} x(t)h(t-\tau)\,d\tau$
+* *Convolution itegral*: $y(t) = x(t)*h(t) = \int_{-\infty}^{\infty} x(t)h(t-\tau)\,d\tau = \int_{-\infty}^{\infty} x(t=\tau)h(t)\,d\tau$
+* *Properties of the convolution integral:
+  * *Communitative*: $x(t) * h(t) = h(t) * x(t)$
+  * *Associative*: $\left\{x(t) * h_1(t) \right\} * h_2(t) = x(t)*\left\{h_1(t) * h_2(t) \right\}$
+  * *Distributive*: $x(t)*\left\{h_1(t) + h_2(t)\right\} = x(t)*h_1(t) + x(t) * h_2(t)$
+* The convolution integral can be computed graphically or analytically.
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## Next Time
@@ -600,3 +611,9 @@ We continue our introduction to continuous-time LTI system by considering
 
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
