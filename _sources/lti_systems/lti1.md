@@ -448,7 +448,7 @@ $$h(t) = e^{-\alpha t}u_0(t)$$
 
 $$x(t) = e^{\alpha t}u_0(-t)$$
 
-$$\alpha > 0$$.
+$$\alpha > 0.$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -611,3 +611,9 @@ We continue our introduction to continuous-time LTI system by considering
 
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```

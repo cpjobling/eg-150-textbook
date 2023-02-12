@@ -762,8 +762,44 @@ title="Print to PDF"
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id10">
-       (b) Graphical
+       Solutions
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id11">
+         Manual solution
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id13">
+         MATLAB Solution
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5-6">
+     Example 5.6
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id14">
+       Solutions
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#a-analytical">
+         (a) Analytical
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id15">
+         (b) Graphical
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
@@ -784,6 +820,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#next-time">
    Next Time
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -947,8 +988,44 @@ title="Print to PDF"
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id10">
-       (b) Graphical
+       Solutions
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id11">
+         Manual solution
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id13">
+         MATLAB Solution
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5-6">
+     Example 5.6
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id14">
+       Solutions
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#a-analytical">
+         (a) Analytical
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id15">
+         (b) Graphical
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
@@ -969,6 +1046,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#next-time">
    Next Time
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -1325,7 +1407,9 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>yb(t) =
- 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
@@ -1334,7 +1418,7 @@ In convolutiondemo (line 44)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
-<img alt="../_images/lti1_61_4.png" src="../_images/lti1_61_4.png" />
+<img alt="../_images/lti1_61_5.png" src="../_images/lti1_61_5.png" />
 </div>
 </div>
 </section>
@@ -1348,33 +1432,86 @@ In convolutiondemo (line 44)
 <div class="math notranslate nohighlight">
 \[x(t) = e^{\alpha t}u_0(-t)\]</div>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\alpha &gt; 0$$.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\#### Solutions\\##### Manual solution\\For the manual solution, refer to the lecture recording or see solved problem 2.3 in in {cite}`schaum`.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\##### MATLAB Solution\\We can also use the Symbolic Math Toolbox to solve the problem directly:\\```{code-cell}
----
-slideshow:
-  slide_type: fragment
----
-x(t) = exp(t)*heaviside(-t);
-subplot(211)
-fplot(x(t)),,title('x(t)')
-h(t) = exp(-1*t)*heaviside(t);
-subplot(212)
-fplot(h(t)),title('h(t)')
-```\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\Compute $y(t)$ using the convolution integral\\```{code-cell}
----
-slideshow:
-  slide_type: fragment
----
-y(t) = int(x(tau)*h(t - tau),tau,-Inf,Inf)
-```\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;fragment&quot;}}\\Plot the result for $\alpha = 1$\\```{code-cell}
----
-slideshow:
-  slide_type: fragment
----
-fplot(y(t)),title('y(t) = x(t) * y(t)')
-```\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\(ex5_6)=
-### Example 5.6\\Evaluate $y(t) = x(t) * h(t)$, where $x(t)$ and $h(t)$ are shown in {numref}`fig:ex:5.6`, by an alalytical technique, and (b) by a graphical method.\\:::{figure-md} fig:ex:5.6
-&lt;img src=&quot;pictures/ex5_6.png&quot; alt=&quot;Signal and system for example 5.6&quot; width=&quot;60%&quot;&gt;\\Signal and system for example 5.6
-:::\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\#### Solutions\\##### (a) Analytical \\We first express $x(t)$ and $h(t)$ in functional form using the unit step (or *Heaviside* function)\\$$x(t) = u_0(t) - u_0(t-3)\end{aligned}\end{align} \]</div>
+\[\alpha &gt; 0.\]</div>
+<section id="id10">
+<h4>Solutions<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h4>
+<section id="id11">
+<h5>Manual solution<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h5>
+<p>For the manual solution, refer to the lecture recording or see solved problem 2.3 in in <span id="id12">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+</section>
+<section id="id13">
+<h5>MATLAB Solution<a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h5>
+<p>We can also use the Symbolic Math Toolbox to solve the problem directly:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">heaviside</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">);</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)),,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">)</span>
+<span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;h(t)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lti1_65_0.png" src="../_images/lti1_65_0.png" />
+</div>
+</div>
+<p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the convolution integral</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="nb">Inf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>piecewise(0 &lt;= t, exp(-t)/2, t &lt;= 0, exp(t)/2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Plot the result for <span class="math notranslate nohighlight">\(\alpha = 1\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;y(t) = x(t) * y(t)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lti1_69_0.png" src="../_images/lti1_69_0.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="example-5-6">
+<span id="ex5-6"></span><h3>Example 5.6<a class="headerlink" href="#example-5-6" title="Permalink to this headline">#</a></h3>
+<p>Evaluate <span class="math notranslate nohighlight">\(y(t) = x(t) * h(t)\)</span>, where <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(h(t)\)</span> are shown in <a class="reference internal" href="#fig-ex-5-6"><span class="std std-numref">Fig. 34</span></a>, by an alalytical technique, and (b) by a graphical method.</p>
+<figure class="align-default" id="fig-ex-5-6">
+<a class="reference internal image-reference" href="../_images/ex5_6.png"><img alt="Signal and system for example 5.6" src="../_images/ex5_6.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Signal and system for example 5.6</span><a class="headerlink" href="#fig-ex-5-6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="id14">
+<h4>Solutions<a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h4>
+<section id="a-analytical">
+<h5>(a) Analytical<a class="headerlink" href="#a-analytical" title="Permalink to this headline">#</a></h5>
+<p>We first express <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(h(t)\)</span> in functional form using the unit step (or <em>Heaviside</em> function)</p>
+<div class="math notranslate nohighlight">
+\[x(t) = u_0(t) - u_0(t-3)\]</div>
 <div class="math notranslate nohighlight">
 \[h(t) = u_0(t) - u_0(t-2)\]</div>
 <p>We will use the MATLAB Symbolic Math Toolbox:</p>
@@ -1390,7 +1527,7 @@ fplot(y(t)),title('y(t) = x(t) * y(t)')
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_64_0.png" src="../_images/lti1_64_0.png" />
+<img alt="../_images/lti1_73_0.png" src="../_images/lti1_73_0.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span></p>
@@ -1405,9 +1542,7 @@ fplot(y(t)),title('y(t) = x(t) * y(t)')
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>heaviside(t - 5)*(t - 5) - heaviside(t - 3)*(t - 3) - heaviside(t - 2)*(t - 2) + t*heaviside(t)
@@ -1426,16 +1561,18 @@ fplot(y(t)),title('y(t) = x(t) * y(t)')
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_68_0.png" src="../_images/lti1_68_0.png" />
+<img alt="../_images/lti1_77_0.png" src="../_images/lti1_77_0.png" />
 </div>
 </div>
-<section id="id10">
-<h4>(b) Graphical<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="id15">
+<h5>(b) Graphical<a class="headerlink" href="#id15" title="Permalink to this headline">#</a></h5>
 <p>Since both functions are unity between the limits set by the Heaviside function, graphical solution requires multiple applications of the definate integral</p>
 <div class="math notranslate nohighlight">
 \[\int_{t_0}^{t_1}1\times 1\,d\tau = \int_{t_0}^{t_1}1\,d\tau\]</div>
 <p>with different values for the limits <span class="math notranslate nohighlight">\(t_0\)</span> and <span class="math notranslate nohighlight">\(t_1\)</span>. The <em>convolutiondemo</em> tool can help us discover the limits for the piecewise continuous signal <span class="math notranslate nohighlight">\(y(t)\)</span>.</p>
-<p>For the complete solution to Example 5.2 refer to the lecture recording or see solved problem 2.6 in in <span id="id11">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the complete solution to Example 5.2 refer to the lecture recording or see solved problem 2.6 in in <span id="id16">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+</section>
 </section>
 </section>
 </section>
@@ -1474,6 +1611,16 @@ fplot(y(t)),title('y(t) = x(t) * y(t)')
 <li><p><a class="reference internal" href="lti2.html#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
 <li><p><a class="reference internal" href="lti2.html#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
 </ul>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<div class="docutils container" id="id17">
+<dl class="citation">
+<dt class="label" id="id27"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id4">3</a>,<a href="#id5">4</a>,<a href="#id6">5</a>,<a href="#id8">6</a>,<a href="#id12">7</a>,<a href="#id16">8</a>)</span></dt>
+<dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
+</dd>
+</dl>
+</div>
 </section>
 </section>
 
