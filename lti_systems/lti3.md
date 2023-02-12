@@ -349,3 +349,9 @@ In this lecture we have concluded our introduction to LTI systems by looking at 
 We move on to consider 
 
 * {doc}`../laplace_transform/index`
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```

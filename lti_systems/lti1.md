@@ -601,7 +601,7 @@ In this lecture we have looked at
   * *Communitative*: $x(t) * h(t) = h(t) * x(t)$
   * *Associative*: $\left\{x(t) * h_1(t) \right\} * h_2(t) = x(t)*\left\{h_1(t) * h_2(t) \right\}$
   * *Distributive*: $x(t)*\left\{h_1(t) + h_2(t)\right\} = x(t)*h_1(t) + x(t) * h_2(t)$
-* The convolution integral can be computed graphically of analytically.
+* The convolution integral can be computed graphically or analytically.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

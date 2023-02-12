@@ -368,3 +368,9 @@ We have continued our introdiuction the continuous-time LTI systems by consideri
 We will conclude our look at continuous-time LTI systems by considering
 
 * {ref}`Systems_Described_by_Differential_Equations`
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
