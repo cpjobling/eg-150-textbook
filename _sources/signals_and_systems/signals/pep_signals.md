@@ -490,9 +490,39 @@ In this lecture we completed our look at signals and the classification of signa
 
 In particular we have looked at
 
-* {ref}`p_n_np`
-* {ref}`e_n_p`
+* {ref}`p_n_np` 
+* {ref}`e_n_p` of a signal $x(t)$
 * {ref}`other_measures_of_signal_size`
+
+### Take aways
+
+* A signal is periodic, with period $T$ is $x(t + T) = x(t)\;\mathrm{all}\;t$
+* Signal energy for a signal $x(t)$:
+
+$$E_x = \int_{-\infty}^{\infty}\left|x(t)\right|^2\,dt\quad\mathrm{J}$$
+        
+* Signal power for a signal $x(t):
+  
+$$P_x = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}\left|x(t)\right|^2\;dt\quad\mathrm{W}$$
+                
+* $x(t)$ is said to be an *energy signal* if and only if $0 < E < \infty$, and so $P = 0$.
+* $x(t)$ is said to be an *power signal* if and only if $0 < P < \infty$, thus implying that $E = \infty$.
+* Signals that satisfy neither property are referred to as neither energy signals nor power signals.
+* Signal mean (*average* or *DC value*):
+  
+$$M_x = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}x(t)\,dt.\quad\mathrm{For\, a\, periodic\, signal}\;M_x = \frac{1}{T_0}\int_{-T_0/2}^{T_0/2}x(t)\,dt$$
+            
+* Root mean square (RMS): $\sqrt{P_x}$;
+* Peak value: $\left|x\right|_\mathrm{peak} = \max_t \left|x(t)\right|$;
+* Crest factor:
+  
+$$\mathrm{CF}_x = \frac{\left|x\right|_\mathrm{peak}}{\mathrm{RMS}_x}\ge 1$$
+        
+* Peak-to-average power ratio (PAPR):
+
+$$\mathrm{PAPR}_x = \frac{\left|x\right|_\mathrm{peak}^2}{P}$$
+        
+* Value of $y$ in decibel (dB) is $20\log_{10} y$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

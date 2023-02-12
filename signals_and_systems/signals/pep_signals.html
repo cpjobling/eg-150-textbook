@@ -749,6 +749,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#summary">
    Summary
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#take-aways">
+     Take aways
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#next-time">
@@ -908,6 +915,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#summary">
    Summary
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#take-aways">
+     Take aways
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#next-time">
@@ -1260,9 +1274,46 @@ t &amp; 0\le t\le 1\\
 <p>In particular we have looked at</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#p-n-np"><span class="std std-ref">Periodic and Nonperiodic Signals</span></a></p></li>
-<li><p><a class="reference internal" href="#e-n-p"><span class="std std-ref">Energy and Power Signals</span></a></p></li>
+<li><p><a class="reference internal" href="#e-n-p"><span class="std std-ref">Energy and Power Signals</span></a> of a signal <span class="math notranslate nohighlight">\(x(t)\)</span></p></li>
 <li><p><a class="reference internal" href="#other-measures-of-signal-size"><span class="std std-ref">Other Measures of Signal Size</span></a></p></li>
 </ul>
+<section id="take-aways">
+<h3>Take aways<a class="headerlink" href="#take-aways" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>A signal is periodic, with period <span class="math notranslate nohighlight">\(T\)</span> is <span class="math notranslate nohighlight">\(x(t + T) = x(t)\;\mathrm{all}\;t\)</span></p></li>
+<li><p>Signal energy for a signal <span class="math notranslate nohighlight">\(x(t)\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[E_x = \int_{-\infty}^{\infty}\left|x(t)\right|^2\,dt\quad\mathrm{J}\]</div>
+<ul class="simple">
+<li><p>Signal power for a signal $x(t):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[P_x = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}\left|x(t)\right|^2\;dt\quad\mathrm{W}\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x(t)\)</span> is said to be an <em>energy signal</em> if and only if <span class="math notranslate nohighlight">\(0 &lt; E &lt; \infty\)</span>, and so <span class="math notranslate nohighlight">\(P = 0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(x(t)\)</span> is said to be an <em>power signal</em> if and only if <span class="math notranslate nohighlight">\(0 &lt; P &lt; \infty\)</span>, thus implying that <span class="math notranslate nohighlight">\(E = \infty\)</span>.</p></li>
+<li><p>Signals that satisfy neither property are referred to as neither energy signals nor power signals.</p></li>
+<li><p>Signal mean (<em>average</em> or <em>DC value</em>):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[M_x = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}x(t)\,dt.\quad\mathrm{For\, a\, periodic\, signal}\;M_x = \frac{1}{T_0}\int_{-T_0/2}^{T_0/2}x(t)\,dt\]</div>
+<ul class="simple">
+<li><p>Root mean square (RMS): <span class="math notranslate nohighlight">\(\sqrt{P_x}\)</span>;</p></li>
+<li><p>Peak value: <span class="math notranslate nohighlight">\(\left|x\right|_\mathrm{peak} = \max_t \left|x(t)\right|\)</span>;</p></li>
+<li><p>Crest factor:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\mathrm{CF}_x = \frac{\left|x\right|_\mathrm{peak}}{\mathrm{RMS}_x}\ge 1\]</div>
+<ul class="simple">
+<li><p>Peak-to-average power ratio (PAPR):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\mathrm{PAPR}_x = \frac{\left|x\right|_\mathrm{peak}^2}{P}\]</div>
+<ul class="simple">
+<li><p>Value of <span class="math notranslate nohighlight">\(y\)</span> in decibel (dB) is <span class="math notranslate nohighlight">\(20\log_{10} y\)</span>.</p></li>
+</ul>
+</section>
 </section>
 <section id="next-time">
 <h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
