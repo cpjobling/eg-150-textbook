@@ -537,6 +537,7 @@ $$\mathrm{PAPR}_x = \frac{\left|x\right|_\mathrm{peak}^2}{P}$$
 * {ref}`es:ramp`
 * {ref}`es:dirac_delta`
 * {ref}`es:unit_impulse`
+* {ref}`es:delta_props`
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

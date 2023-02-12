@@ -516,7 +516,7 @@ In particular we have looked at
 * {ref}`det_n_rand`
 * {ref}`even_n_odd`
 
-### Unit 2.2: Take aways
+### Unit 2.1: Take aways
 
 * *Continuous-time signal: $x(t)$
 * *Discrete-time dignal: $x[n]$
