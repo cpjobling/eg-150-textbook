@@ -632,7 +632,7 @@ title="Print to PDF"
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#in-matlab">
-     In Matlab
+     In MATLAB
     </a>
    </li>
   </ul>
@@ -724,8 +724,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#takeaways">
-     Takeaways
+    <a class="reference internal nav-link" href="#unit-2-3-take-aways">
+     Unit 2.3: Take aways
     </a>
    </li>
   </ul>
@@ -733,11 +733,6 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id4">
    Examples
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#homework">
-   Homework
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -781,7 +776,7 @@ title="Print to PDF"
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#in-matlab">
-     In Matlab
+     In MATLAB
     </a>
    </li>
   </ul>
@@ -873,8 +868,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#takeaways">
-     Takeaways
+    <a class="reference internal nav-link" href="#unit-2-3-take-aways">
+     Unit 2.3: Take aways
     </a>
    </li>
   </ul>
@@ -882,11 +877,6 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id4">
    Examples
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#homework">
-   Homework
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -927,12 +917,12 @@ title="Print to PDF"
 <p><img alt="Network with a switch which is closed at t = T." src="../../_images/circuit2.png" /></p>
 <p>Express the output voltage <span class="math notranslate nohighlight">\(V_{\mathrm{out}}\)</span> as a function of the unit step function, and sketch the appropriate waveform.</p>
 <p><strong>Solution</strong></p>
-<p>Before the switch is closed at <span class="math notranslate nohighlight">\(t &lt; T\)</span>:
-\begin{equation}
+<p>Before the switch is closed at <span class="math notranslate nohighlight">\(t &lt; T\)</span>:</p>
+<p>\begin{equation}
 V_{\mathrm{out}} = 0.
 \end{equation}</p>
-<p>After the switch is closed for <span class="math notranslate nohighlight">\(t &gt; T\)</span>:
-\begin{equation}
+<p>After the switch is closed for <span class="math notranslate nohighlight">\(t &gt; T\)</span>:</p>
+<p>\begin{equation}
 V_{\mathrm{out}} = V_s.
 \end{equation}</p>
 <p>We imagine that the voltage jumps instantaneously from 0 to <span class="math notranslate nohighlight">\(V_s\)</span> volts at <span class="math notranslate nohighlight">\(t = T\)</span> seconds as shown below.</p>
@@ -948,7 +938,7 @@ V_{\mathrm{out}} = V_s.
 \end{array}} \right.\end{split}\]</div>
 <p><img alt="The unit step function" src="../../_images/unitstep.png" /></p>
 <section id="in-matlab">
-<h3>In Matlab<a class="headerlink" href="#in-matlab" title="Permalink to this headline">#</a></h3>
+<h3>In MATLAB<a class="headerlink" href="#in-matlab" title="Permalink to this headline">#</a></h3>
 <p>In Matlab, we use the <code class="docutils literal notranslate"><span class="pre">heaviside</span></code> function (named after <a class="reference external" href="https://en.wikipedia.org/wiki/Oliver_Heaviside">Oliver Heaviside</a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -991,7 +981,7 @@ V_{\mathrm{out}} = V_s.
 </section>
 </section>
 <section id="simple-signal-operations">
-<h2>Simple Signal Operations<a class="headerlink" href="#simple-signal-operations" title="Permalink to this headline">#</a></h2>
+<span id="es-simple-signal-ops"></span><h2>Simple Signal Operations<a class="headerlink" href="#simple-signal-operations" title="Permalink to this headline">#</a></h2>
 <section id="amplitude-scaling">
 <h3>Amplitude Scaling<a class="headerlink" href="#amplitude-scaling" title="Permalink to this headline">#</a></h3>
 <p>Sketch <span class="math notranslate nohighlight">\(Au_0(t)\)</span> and <span class="math notranslate nohighlight">\(-Au_0(t)\)</span></p>
@@ -1071,11 +1061,11 @@ V_{\mathrm{out}} = V_s.
 </section>
 </section>
 <section id="synthesis-of-signals-from-the-unit-step">
-<h2>Synthesis of Signals from the Unit Step<a class="headerlink" href="#synthesis-of-signals-from-the-unit-step" title="Permalink to this headline">#</a></h2>
+<span id="es-synthesis"></span><h2>Synthesis of Signals from the Unit Step<a class="headerlink" href="#synthesis-of-signals-from-the-unit-step" title="Permalink to this headline">#</a></h2>
 <p>Unit step functions can be used to represent other time-varying functions such as rectangular pulses, square waves and triangular pulses. See <a class="reference internal" href="examples3.html"><span class="doc std std-doc">Examples 3</span></a> for the examples that we will look at in class.</p>
 </section>
 <section id="the-ramp-function">
-<h2>The Ramp Function<a class="headerlink" href="#the-ramp-function" title="Permalink to this headline">#</a></h2>
+<span id="es-ramp"></span><h2>The Ramp Function<a class="headerlink" href="#the-ramp-function" title="Permalink to this headline">#</a></h2>
 <p><img alt="Integrator (RC) circuit" src="../../_images/rc.png" /></p>
 <p>In the circuit shown above <span class="math notranslate nohighlight">\(i_s\)</span> is a constant current source and the switch is closed at time <span class="math notranslate nohighlight">\(t=0\)</span>.</p>
 <p>When the current through the capacitor <span class="math notranslate nohighlight">\(i_c(t) = i_s\)</span> is a constant and the voltage across the capacitor is</p>
@@ -1126,7 +1116,7 @@ V_{\mathrm{out}} = V_s.
 <p>Details are given in equations 1.26—1.29 in Karris.</p>
 </section>
 <section id="the-dirac-delta-function">
-<h2>The Dirac Delta Function<a class="headerlink" href="#the-dirac-delta-function" title="Permalink to this headline">#</a></h2>
+<span id="es-dirac-delta"></span><h2>The Dirac Delta Function<a class="headerlink" href="#the-dirac-delta-function" title="Permalink to this headline">#</a></h2>
 <p><img alt="A differentiating function (RL network)" src="../../_images/lr.png" /></p>
 <p>In the circuit shown above, the switch is closed at time <span class="math notranslate nohighlight">\(t=0\)</span> and <span class="math notranslate nohighlight">\(i_L(t)=0\)</span> for <span class="math notranslate nohighlight">\(t&lt;0\)</span>. Express the inductor current <span class="math notranslate nohighlight">\(i_L(t)\)</span> in terms of the unit step function and hence derive an expression for <span class="math notranslate nohighlight">\(v_L(t)\)</span>.</p>
 <p><strong>Solution</strong></p>
@@ -1139,7 +1129,7 @@ V_{\mathrm{out}} = V_s.
 <div class="math notranslate nohighlight">
 \[v_L(t) = i_s L\frac{d}{dt} u_0(t).\]</div>
 <section id="the-unit-impulse-function">
-<span id="unit-impulse"></span><h3>The unit Impulse Function<a class="headerlink" href="#the-unit-impulse-function" title="Permalink to this headline">#</a></h3>
+<span id="es-unit-impulse"></span><h3>The unit Impulse Function<a class="headerlink" href="#the-unit-impulse-function" title="Permalink to this headline">#</a></h3>
 <p>The unit impulse function <span class="math notranslate nohighlight">\(\delta(t)\)</span>, is the derivative of the unit step.</p>
 <div class="math notranslate nohighlight">
 \[\delta(t) = \frac{d}{dt}u_0(t)\]</div>
@@ -1214,7 +1204,7 @@ V_{\mathrm{out}} = V_s.
 </section>
 </section>
 <section id="important-properties-of-the-delta-function">
-<h2>Important properties of the delta function<a class="headerlink" href="#important-properties-of-the-delta-function" title="Permalink to this headline">#</a></h2>
+<span id="es-delta-props"></span><h2>Important properties of the delta function<a class="headerlink" href="#important-properties-of-the-delta-function" title="Permalink to this headline">#</a></h2>
 <section id="sampling-property">
 <h3>Sampling Property<a class="headerlink" href="#sampling-property" title="Permalink to this headline">#</a></h3>
 <p>The <em>sampling property</em> of the delta function states that</p>
@@ -1252,8 +1242,8 @@ V_{\mathrm{out}} = V_s.
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
 <p>In this chapter we have looked at some elementary signals and the theoretical circuits that can be used to generate them.</p>
-<section id="takeaways">
-<h3>Takeaways<a class="headerlink" href="#takeaways" title="Permalink to this headline">#</a></h3>
+<section id="unit-2-3-take-aways">
+<h3>Unit 2.3: Take aways<a class="headerlink" href="#unit-2-3-take-aways" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>You should note that the unit step is the <em>heaviside function</em> <span class="math notranslate nohighlight">\(u_0(t)\)</span>.</p></li>
 <li><p>Many useful signals can be synthesized by use of the unit step as a “gating function” in combination with other signals</p></li>
@@ -1267,13 +1257,18 @@ V_{\mathrm{out}} = V_s.
 <h2>Examples<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
 <p>We will do some of these in class. See <a class="reference internal" href="examples3.html"><span class="doc std std-doc">Examples 3</span></a>.</p>
 </section>
-<section id="homework">
-<h2>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">#</a></h2>
-<p>These are for you to do later for further practice. See <span class="xref myst">Homework 2</span></p>
-</section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<p>See <a class="reference internal" href="../../zbib.html"><span class="doc std std-doc">Bibliography</span></a></p>
+<div class="docutils container" id="id5">
+<dl class="citation">
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id2">Hsu20</a></span></dt>
+<dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id1">Kar12</a></span></dt>
+<dd><p>Steven T. Karris. <em>Signals and systems with MATLAB computing and Simulink modeling</em>. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197">https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197</a>.</p>
+</dd>
+</dl>
+</div>
 </section>
 <section id="next-time">
 <h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>

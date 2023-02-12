@@ -50,11 +50,13 @@ Express the output voltage $V_{\mathrm{out}}$ as a function of the unit step fun
 **Solution**
 
 Before the switch is closed at $t < T$:
+
 \begin{equation}
     V_{\mathrm{out}} = 0.
 \end{equation}
 
 After the switch is closed for $t > T$: 
+
 \begin{equation}
     V_{\mathrm{out}} = V_s.
 \end{equation}
@@ -81,7 +83,7 @@ $${u_0}(t) = \left\{ {\begin{array}{*{20}{c}}
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### In Matlab
+### In MATLAB
 
 In Matlab, we use the `heaviside` function (named after [Oliver Heaviside](https://en.wikipedia.org/wiki/Oliver_Heaviside)).
 
@@ -113,6 +115,7 @@ $$\mathrm{heaviside}(t) = \left\{ {\begin{array}{*{20}{c}}
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(es:simple_signal_ops)=
 ## Simple Signal Operations
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -207,12 +210,14 @@ We will work through some examples in class. See [Examples 3](worksheet3).
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(es:synthesis)=
 ## Synthesis of Signals from the Unit Step
 
 Unit step functions can be used to represent other time-varying functions such as rectangular pulses, square waves and triangular pulses. See [Examples 3](examples3) for the examples that we will look at in class.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(es:ramp)=
 ## The Ramp Function
 
 ![Integrator (RC) circuit](./pictures/rc.png)
@@ -296,6 +301,7 @@ Details are given in equations 1.26&mdash;1.29 in Karris.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(es:dirac_delta)=
 ## The Dirac Delta Function
 
 ![A differentiating function (RL network)](./pictures/lr.png)
@@ -318,7 +324,7 @@ $$v_L(t) = i_s L\frac{d}{dt} u_0(t).$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(unit_impulse)=
+(es:unit_impulse)=
 ### The unit Impulse Function
 
 The unit impulse function $\delta(t)$, is the derivative of the unit step.
@@ -400,6 +406,7 @@ stem(0,L*is),title('Impulse $$v_L(t) = L*i_s*\delta(t)$$','interpreter','latex')
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(es:delta_props)=
 ## Important properties of the delta function
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -465,7 +472,7 @@ $$\int_{-\infty}^{\infty}f(t)\delta^n(t-\alpha)dt = \left. ( - 1)^n\frac{d^n}{dt
 
 In this chapter we have looked at some elementary signals and the theoretical circuits that can be used to generate them.
 
-### Takeaways
+### Unit 2.3: Take aways
 
 * You should note that the unit step is the *heaviside function* $u_0(t)$.
 * Many useful signals can be synthesized by use of the unit step as a "gating function" in combination with other signals
@@ -479,14 +486,12 @@ In this chapter we have looked at some elementary signals and the theoretical ci
 
 We will do some of these in class. See [Examples 3](examples3).
 
-## Homework
-
-These are for you to do later for further practice. See [Homework 2](../homework/hw2)
-
 
 ## References
 
-See [Bibliography](/zbib)
+```{bibliography}
+:filter: docname in docnames
+```
 
 +++
 

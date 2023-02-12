@@ -494,7 +494,7 @@ In particular we have looked at
 * {ref}`e_n_p` of a signal $x(t)$
 * {ref}`other_measures_of_signal_size`
 
-### Take aways
+### Unit 2.2: Take aways
 
 * A signal is periodic, with period $T$ is $x(t + T) = x(t)\;\mathrm{all}\;t$
 * Signal energy for a signal $x(t)$:
@@ -528,16 +528,15 @@ $$\mathrm{PAPR}_x = \frac{\left|x\right|_\mathrm{peak}^2}{P}$$
 
 ## Next Time
 
-* {ref}`elementary_signals`
-* {ref}`system_representation`
-* {ref}`deterministic_and_stochastic_systems`
-* {ref}`continuous_time_and_discrete_time_systems`
-* {ref}`systems_with_memory_and_without_memory`
-* {ref}`causal_and_non-causal_systems`
-* {ref}`linear_systems_and_nonlinear_systems`
-* {ref}`linear_time_invariant_systems`
-* {ref}`stable_systems`
-* {ref}`feedback_systems`
+{ref}`elementary_signals`
+
+* {ref}`es:intro`
+* {ref}`heaviside`
+* {ref}`es:simple_signal_ops`
+* {ref}`es:synthesis`
+* {ref}`es:ramp`
+* {ref}`es:dirac_delta`
+* {ref}`es:unit_impulse`
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
