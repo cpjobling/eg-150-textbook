@@ -742,6 +742,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#summary">
    Summary
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#take-aways">
+     Take aways
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#next-time">
@@ -894,6 +901,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#summary">
    Summary
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#take-aways">
+     Take aways
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#next-time">
@@ -1205,23 +1219,28 @@ title="Print to PDF"
 <ul class="simple">
 <li><p><a class="reference internal" href="#ct-signals"><span class="std std-ref">Continuous-Time Signals</span></a> <span class="math notranslate nohighlight">\(x(t)\)</span></p></li>
 <li><p><a class="reference internal" href="#dt-signals"><span class="std std-ref">Discrete-Time Signals</span></a> <span class="math notranslate nohighlight">\(x[n]\)</span></p></li>
-<li><p><a class="reference internal" href="#more-on-dt-signals"><span class="std std-ref">More on discrete-time signals</span></a></p>
-<ul>
-<li><p><em>Sampled data</em>: <span class="math notranslate nohighlight">\(x_n = x[n] = x(t_n)\)</span></p></li>
-<li><p><em>Uniform sampling</em>: <span class="math notranslate nohighlight">\(x_n = x[n] = x(nT_s)\)</span> where <span class="math notranslate nohighlight">\(T_s\)</span> is the sampling period.</p></li>
-</ul>
-</li>
+<li><p><a class="reference internal" href="#more-on-dt-signals"><span class="std std-ref">More on discrete-time signals</span></a></p></li>
 <li><p><a class="reference internal" href="#a-n-d"><span class="std std-ref">Analogue and Digital Signals</span></a></p></li>
 <li><p><a class="reference internal" href="#r-n-c"><span class="std std-ref">Real and Complex Signals</span></a></p></li>
 <li><p><a class="reference internal" href="#det-n-rand"><span class="std std-ref">Deterministic and Random Signals</span></a></p></li>
-<li><p><a class="reference internal" href="#even-n-odd"><span class="std std-ref">Even and Odd Signals</span></a></p>
-<ul>
+<li><p><a class="reference internal" href="#even-n-odd"><span class="std std-ref">Even and Odd Signals</span></a></p></li>
+</ul>
+<section id="take-aways">
+<h3>Take aways<a class="headerlink" href="#take-aways" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>*Continuous-time signal: <span class="math notranslate nohighlight">\(x(t)\)</span></p></li>
+<li><p>*Discrete-time dignal: <span class="math notranslate nohighlight">\(x[n]\)</span></p></li>
+<li><p><em>Sampled data</em>: <span class="math notranslate nohighlight">\(x_n = x[n] = x(t_n)\)</span></p></li>
+<li><p><em>Uniform sampling</em>: <span class="math notranslate nohighlight">\(x_n = x[n] = x(nT_s)\)</span> where <span class="math notranslate nohighlight">\(T_s\)</span> is the sampling period.</p></li>
 <li><p><em>Even signal</em>: <span class="math notranslate nohighlight">\(x(t) = x(-t)\)</span></p></li>
 <li><p><em>Odd signal</em>: <span class="math notranslate nohighlight">\(x(-t) = -x(t)\)</span></p></li>
-<li><p><em>Decomposing signals into even and odd parts</em>: <span class="math notranslate nohighlight">\(x(t) = x_e(t) + x_o(t)\)</span> where <span class="math notranslate nohighlight">\(x_e(t) = \frac{1}{2}\left\{x(t) + x(-t)\right\}\)</span> and <span class="math notranslate nohighlight">\(x_o(t) = \frac{1}{2}\left\{x(t) - x(-t)\right\}\)</span>.</p></li>
+<li><p><em>Decomposing signals into even and odd parts</em>: <span class="math notranslate nohighlight">\(x(t) = x_e(t) + x_o(t)\)</span> where</p></li>
 </ul>
-</li>
-</ul>
+<div class="math notranslate nohighlight">
+\[x_e(t) = \frac{1}{2}\left\{x(t) + x(-t)\right\}\;\mathrm{and}\]</div>
+<div class="math notranslate nohighlight">
+\[x_o(t) = \frac{1}{2}\left\{x(t) - x(-t)\right\}.\]</div>
+</section>
 </section>
 <section id="next-time">
 <h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>

@@ -511,15 +511,24 @@ In particular we have looked at
 * {ref}`ct_signals` $x(t)$
 * {ref}`dt_signals` $x[n]$
 * {ref}`more_on_dt_signals` 
-    * *Sampled data*: $x_n = x[n] = x(t_n)$
-    * *Uniform sampling*: $x_n = x[n] = x(nT_s)$ where $T_s$ is the sampling period.
 * {ref}`a_n_d`
 * {ref}`r_n_c`
 * {ref}`det_n_rand`
 * {ref}`even_n_odd`
-    * *Even signal*: $x(t) = x(-t)$
-    * *Odd signal*: $x(-t) = -x(t)$
-    * *Decomposing signals into even and odd parts*: $x(t) = x_e(t) + x_o(t)$ where $x_e(t) = \frac{1}{2}\left\{x(t) + x(-t)\right\}$ and $x_o(t) = \frac{1}{2}\left\{x(t) - x(-t)\right\}$.
+
+### Take aways
+
+* *Continuous-time signal: $x(t)$
+* *Discrete-time dignal: $x[n]$
+* *Sampled data*: $x_n = x[n] = x(t_n)$
+* *Uniform sampling*: $x_n = x[n] = x(nT_s)$ where $T_s$ is the sampling period.
+* *Even signal*: $x(t) = x(-t)$
+* *Odd signal*: $x(-t) = -x(t)$
+* *Decomposing signals into even and odd parts*: $x(t) = x_e(t) + x_o(t)$ where 
+
+$$x_e(t) = \frac{1}{2}\left\{x(t) + x(-t)\right\}\;\mathrm{and}$$
+
+$$x_o(t) = \frac{1}{2}\left\{x(t) - x(-t)\right\}.$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

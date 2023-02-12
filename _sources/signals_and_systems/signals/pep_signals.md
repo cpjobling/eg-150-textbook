@@ -501,7 +501,7 @@ In particular we have looked at
 
 $$E_x = \int_{-\infty}^{\infty}\left|x(t)\right|^2\,dt\quad\mathrm{J}$$
         
-* Signal power for a signal $x(t):
+* Signal power for a signal $x(t)$:
   
 $$P_x = \lim_{T\to \infty}\frac{1}{T}\int_{-T/2}^{T/2}\left|x(t)\right|^2\;dt\quad\mathrm{W}$$
                 
