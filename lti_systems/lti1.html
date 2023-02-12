@@ -773,6 +773,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#summary">
    Summary
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unit-3-1-take-aways">
+     Unit 3.1: Take Aways
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#next-time">
@@ -951,6 +958,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#summary">
    Summary
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unit-3-1-take-aways">
+     Unit 3.1: Take Aways
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#next-time">
@@ -971,6 +985,7 @@ title="Print to PDF"
 <span id="response-of-a-continuous-time-lti-system-and-the-convolution-integral"></span><h1>Unit 3.1: Response of a Continuous-Time LTI System and the Convolution Integral<a class="headerlink" href="#unit-3-1-response-of-a-continuous-time-lti-system-and-the-convolution-integral" title="Permalink to this headline">#</a></h1>
 <p>This section is based on Section 2.1 of <span id="id1">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/lti_systems/lti1">cpjobling.github.io/eg-150-textbook/lti_systems/lti1</a></p>
+<p><img alt="QR Code for this lecture" src="../_images/qrcode_lti1.png" /></p>
 <section id="subjects-to-be-covered">
 <h2>Subjects to be Covered<a class="headerlink" href="#subjects-to-be-covered" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
@@ -1061,20 +1076,21 @@ title="Print to PDF"
 \[y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau\]</div>
 <section id="graphical-evaluation-of-the-convolution-integral">
 <h3>Graphical Evaluation of the Convolution Integral<a class="headerlink" href="#graphical-evaluation-of-the-convolution-integral" title="Permalink to this headline">#</a></h3>
-<p>The convolution integral is most conveniently evaluated by a graphical evaluation. We give three examples (5.4—5.6) which we will demonstrate in class using a <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/25199-graphical-demonstration-of-convolution">graphical visualization tool</a> developed by Teja Muppirala of the Mathworks.</p>
+<p>The convolution integral is most conveniently evaluated by a graphical evaluation. We give three examples (5.4—5.6) which we will demonstrate in class using a <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/25199-graphical-demonstration-of-convolution">graphical visualization tool</a> developed by Teja Muppirala of the Mathworks and updated by Rory Adams.</p>
 <p>The tool: <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/convolution_demo/convolutiondemo.m">convolutiondemo.m</a> (see <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/convolution_demo/license.txt">license.txt</a>).</p>
 <p>We will then work through the examples again in the examples class.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span>
-<span class="nb">cd</span><span class="w"> </span><span class="n">matlab</span><span class="o">/</span><span class="n">convolutiondemo</span>
+<span class="nb">cd</span><span class="w"> </span><span class="n">matlab</span><span class="o">/</span><span class="n">convolution_demo</span>
 <span class="nb">pwd</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-    &#39;/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/lti_systems/matlab/convolutiondemo&#39;
+
+    &#39;/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/lti_systems/matlab/convolution_demo&#39;
 </pre></div>
 </div>
 </div>
@@ -1090,63 +1106,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 398)
-In convolutiondemo&gt;gui_mainfcn (line 1188)
-In convolutiondemo (line 44)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 449)
-In convolutiondemo&gt;gui_mainfcn (line 1188)
-In convolutiondemo (line 44)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 500)
-In convolutiondemo&gt;gui_mainfcn (line 1188)
-In convolutiondemo (line 44)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 551)
-In convolutiondemo&gt;gui_mainfcn (line 1188)
-In convolutiondemo (line 44)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 621)
-In convolutiondemo&gt;gui_mainfcn (line 1188)
-In convolutiondemo (line 44)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 672)
-In convolutiondemo&gt;gui_mainfcn (line 1188)
-In convolutiondemo (line 44)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 723)
-In convolutiondemo&gt;gui_mainfcn (line 1188)
-In convolutiondemo (line 44)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 774)
-In convolutiondemo&gt;gui_mainfcn (line 1188)
+In convolutiondemo&gt;gui_mainfcn (line 1181)
 In convolutiondemo (line 44)
 </pre></div>
 </div>
@@ -1265,10 +1225,17 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-(2*exp(-(alpha*t)/2)*(exp(-(alpha*t)/2)/2 - exp((alpha*t)/2)/2)*(sign(t)/2 + 1/2))/alpha
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -1282,13 +1249,20 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ya(t) =
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
 </pre></div>
 </div>
-<img alt="../_images/lti1_54_2.png" src="../_images/lti1_54_2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<img alt="../_images/lti1_54_4.png" src="../_images/lti1_54_4.png" />
 </div>
 </div>
 </section>
@@ -1323,10 +1297,17 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-(2*exp(-(alpha*t)/2)*(exp(-(alpha*t)/2)/2 - exp((alpha*t)/2)/2)*(sign(t)/2 + 1/2))/alpha
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -1340,13 +1321,20 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>yb(t) =
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
 </pre></div>
 </div>
-<img alt="../_images/lti1_61_2.png" src="../_images/lti1_61_2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<img alt="../_images/lti1_61_4.png" src="../_images/lti1_61_4.png" />
 </div>
 </div>
 </section>
@@ -1413,10 +1401,19 @@ fplot(y(t)),title('y(t) = x(t) * y(t)')
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>heaviside(t - 5)*(t - 5) - heaviside(t - 3)*(t - 3) - heaviside(t - 2)*(t - 2) + t*heaviside(t)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -1432,7 +1429,6 @@ fplot(y(t)),title('y(t) = x(t) * y(t)')
 <img alt="../_images/lti1_68_0.png" src="../_images/lti1_68_0.png" />
 </div>
 </div>
-<p>We can obtain the signal <span class="math notranslate nohighlight">\(y(t)\)</span> analytically by use of the convolution integral as will be shown in the examples class.</p>
 <section id="id10">
 <h4>(b) Graphical<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h4>
 <p>Since both functions are unity between the limits set by the Heaviside function, graphical solution requires multiple applications of the definate integral</p>
@@ -1454,6 +1450,22 @@ fplot(y(t)),title('y(t) = x(t) * y(t)')
 <li><p><a class="reference internal" href="#convolution-operation"><span class="std std-ref">E. Convolution Integral Operation</span></a></p></li>
 <li><p><a class="reference internal" href="#step-response"><span class="std std-ref">F. Step Response</span></a></p></li>
 </ul>
+<section id="unit-3-1-take-aways">
+<h3>Unit 3.1: Take Aways<a class="headerlink" href="#unit-3-1-take-aways" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><em>Impulse response</em>: <span class="math notranslate nohighlight">\(h(t) = \mathbf{T}\left\{\delta(t)\right\}\)</span></p></li>
+<li><p><em>Arbitrary system response</em>: <span class="math notranslate nohighlight">\(y(t) = \int_{-\infty}^{\infty} x(t)h(t-\tau)\,d\tau\)</span></p></li>
+<li><p><em>Convolution itegral</em>: <span class="math notranslate nohighlight">\(y(t) = x(t)*h(t) = \int_{-\infty}^{\infty} x(t)h(t-\tau)\,d\tau = \int_{-\infty}^{\infty} x(t=\tau)h(t)\,d\tau\)</span></p></li>
+<li><p>*Properties of the convolution integral:</p>
+<ul>
+<li><p><em>Communitative</em>: <span class="math notranslate nohighlight">\(x(t) * h(t) = h(t) * x(t)\)</span></p></li>
+<li><p><em>Associative</em>: <span class="math notranslate nohighlight">\(\left\{x(t) * h_1(t) \right\} * h_2(t) = x(t)*\left\{h_1(t) * h_2(t) \right\}\)</span></p></li>
+<li><p><em>Distributive</em>: <span class="math notranslate nohighlight">\(x(t)*\left\{h_1(t) + h_2(t)\right\} = x(t)*h_1(t) + x(t) * h_2(t)\)</span></p></li>
+</ul>
+</li>
+<li><p>The convolution integral can be computed graphically of analytically.</p></li>
+</ul>
+</section>
 </section>
 <section id="next-time">
 <h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
