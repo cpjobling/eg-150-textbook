@@ -202,7 +202,7 @@ convolutiondemo % ignore warnings
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-1. The inpulse response $h(\tau)$ is time reversed (that is, reflected about the origin) to obtain $h(-\tau)$ and then shifted by $\tau$ to form $h(t-\tau) = h\left[-(\tau - t)\right]$, which is a function of $\tau$ with parameter $t$.
+1. The inpulse response $h(\tau)$ is time reversed (that is, reflected about the origin) to obtain $h(-\tau)$ and then shifted by $t$ to form $h(t-\tau) = h\left[-(\tau - t)\right]$, which is a function of $\tau$ with parameter $t$.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -218,7 +218,7 @@ convolutiondemo % ignore warnings
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Examples of the above convolution integral operation are given in Examples 4.1 to 4.3.
+Examples of the above convolution integral operation are given in Examples 5.4 to 5.6.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
