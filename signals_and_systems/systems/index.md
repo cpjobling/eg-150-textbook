@@ -485,12 +485,13 @@ For the answer, refer to the lecture recording or see solved problem 1.43 in {ci
 
 (ex4_7)=
 
+
+### Example 4.7
+
 ```{admonition} MATLAB Example
 :class: tip
 We will solve this example by hand and then give the solution in the MATLAB lab.
 ```
-
-### Example 4.7
 
 Let $\mathbf{T}$ represent a continuous-time LTI system. Then show that
 
