@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.1
+    jupytext_version: 1.14.4
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -287,7 +287,7 @@ slideshow:
 tags: [remove-output]
 ---
 semilogx(w, abs(Gw))
-xlabel('Radian frequency w (rad/s')
+xlabel('Radian frequency w (rad/s)')
 ylabel('|Vout/Vin|')
 title('Magnitude Vout/Vin vs. Radian Frequency')
 grid
@@ -412,7 +412,9 @@ slideshow:
   slide_type: subslide
 tags: [remove-output]
 ---
-bode(G)
+%bode(G)
+nyquist(G)
+%rlocus(G)
 ```
 
 ## Matlab Solutions
