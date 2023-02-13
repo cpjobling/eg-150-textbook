@@ -462,7 +462,7 @@ Consider the system whose input-output relationship is given by the linear equat
 
 $$y = ax + b$$
 
-where $x$ and $y$ are the inout and output respectively and $s$ and $b$ are constant. Is this system linear?
+where $x$ and $y$ are the input and output respectively and $s$ and $b$ are constant. Is this system linear?
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -489,11 +489,6 @@ For the answer, refer to the lecture recording or see solved problem 1.43 in {ci
 
 
 ### Example 4.7
-
-```{admonition} MATLAB Example
-:class: tip
-We will solve this example by hand and then give the solution in the MATLAB lab.
-```
 
 Let $\mathbf{T}$ represent a continuous-time LTI system. Then show that
 
