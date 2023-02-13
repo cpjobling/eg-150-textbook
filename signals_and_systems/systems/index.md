@@ -417,12 +417,14 @@ For the answer, refer to the lecture recording or see solved problem 1.33 in {ci
 
 (ex4_3)=
 
+
+### Example 4.3: Signal modulator
+
 ```{admonition} MATLAB Example
 :class: tip
 We will solve this example by hand and then give the solution in the MATLAB lab.
 ```
 
-### Example 4.3: Signal modulator
 
 Consider the system shown in {numref}`fig:4_3`. Determine whether it is (a) memoryless, (b) causal, (c) linear, (d) time invariant, or (e) stable.
 
@@ -460,7 +462,7 @@ Consider the system whose input-output relationship is given by the linear equat
 
 $$y = ax + b$$
 
-where $x$ and $y$ are the inout and output respectively and $s$ and $b$ are constant. Is this system linear?
+where $x$ and $y$ are the input and output respectively and $s$ and $b$ are constant. Is this system linear?
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -485,10 +487,6 @@ For the answer, refer to the lecture recording or see solved problem 1.43 in {ci
 
 (ex4_7)=
 
-```{admonition} MATLAB Example
-:class: tip
-We will solve this example by hand and then give the solution in the MATLAB lab.
-```
 
 ### Example 4.7
 
