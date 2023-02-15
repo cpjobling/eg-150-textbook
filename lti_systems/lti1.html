@@ -682,6 +682,11 @@ title="Print to PDF"
      Summary of Steps
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     Example
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -908,6 +913,11 @@ title="Print to PDF"
      Summary of Steps
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     Example
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1116,13 +1126,13 @@ title="Print to PDF"
 <span id="convolution-integral"></span><h2>C. Convolution Integral<a class="headerlink" href="#c-convolution-integral" title="Permalink to this headline">#</a></h2>
 <p>The equation</p>
 <div class="math notranslate nohighlight">
-\[y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau\]</div>
-<p>defines the <em>convolution</em> of two continuous-time signals <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(h(t)\)</span> denoted by</p>
+\[y(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau\]</div>
+<p>defines the <em>convolution</em> of two continuous-time signals <span class="math notranslate nohighlight">\(x(\tau)\)</span> and <span class="math notranslate nohighlight">\(h(t)\)</span> denoted by</p>
 <div class="math notranslate nohighlight">
-\[y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau\]</div>
+\[y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau\]</div>
 <p>The equation</p>
 <div class="math notranslate nohighlight">
-\[y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau\]</div>
+\[y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau\]</div>
 <p>is commonly called the <em>convolution integral</em>.</p>
 <p>Thus we have the fundamental result that:</p>
 <p><em>the output of any continuous-time LTI system is the convolution of the input <span class="math notranslate nohighlight">\(x(t)\)</span> with the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system</em>.</p>
@@ -1212,9 +1222,13 @@ In convolutiondemo (line 44)
 <li><p>The product <span class="math notranslate nohighlight">\(x(\tau)h(t-\tau)\)</span> is integrated over all <span class="math notranslate nohighlight">\(\tau\)</span> to produce a single output value <span class="math notranslate nohighlight">\(y(t)\)</span>.</p></li>
 </ol>
 <ol class="simple">
-<li><p>Steps 1 ro 3 are repeated as <span class="math notranslate nohighlight">\(t\)</span> varies over <span class="math notranslate nohighlight">\(-\infty\)</span> to <span class="math notranslate nohighlight">\(\infty\)</span> to produce the entire output <span class="math notranslate nohighlight">\(y(t)\)</span>.</p></li>
+<li><p>Steps 1 to 3 are repeated as <span class="math notranslate nohighlight">\(t\)</span> varies over <span class="math notranslate nohighlight">\(-\infty\)</span> to <span class="math notranslate nohighlight">\(\infty\)</span> to produce the entire output <span class="math notranslate nohighlight">\(y(t)\)</span>.</p></li>
 </ol>
 <p>Examples of the above convolution integral operation are given in Examples 5.4 to 5.6.</p>
+</section>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h3>
+<p>We will do <a class="reference internal" href="#ex5-4"><span class="std std-ref">Example 5.4</span></a> in class</p>
 </section>
 </section>
 <section id="f-step-response">
@@ -1224,7 +1238,7 @@ In convolutiondemo (line 44)
 \[s(t) = \mathbf{T}\left\{u_0(t)\right\}\]</div>
 <p>In many applications, the step response <span class="math notranslate nohighlight">\(s(t)\)</span> is also a useful characterisation of the system. The step response can be easily determined using the convolution integral; that is,</p>
 <div class="math notranslate nohighlight">
-\[s(t) = h(t)*u_0(t) = \int_{-\infty}^{\infty} h(\tau)u_0(t-\tau)\,d\tau = \int_{-\infty}^{t} h(\tau)\,d\tau\]</div>
+\[s(t) = h(t)*u_0(t) = \int_{-\infty}^{\infty} h(\tau)u_0(t-\tau)\,d\tau = \int_{0}^{t} h(\tau)\,d\tau\]</div>
 <p>Thus the step response <span class="math notranslate nohighlight">\(s(t)\)</span> can be obtained by integrating the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>.</p>
 <section id="impulse-response-from-step-response">
 <h3>Impulse response from step response<a class="headerlink" href="#impulse-response-from-step-response" title="Permalink to this headline">#</a></h3>
@@ -1301,7 +1315,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_50_0.png" src="../_images/lti1_50_0.png" />
+<img alt="../_images/lti1_51_0.png" src="../_images/lti1_51_0.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the MATLAB function <code class="docutils literal notranslate"><span class="pre">int</span></code> to compute the convolution integral symbolically.</p>
@@ -1349,7 +1363,7 @@ In convolutiondemo (line 44)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
-<img alt="../_images/lti1_54_4.png" src="../_images/lti1_54_4.png" />
+<img alt="../_images/lti1_55_4.png" src="../_images/lti1_55_4.png" />
 </div>
 </div>
 </section>
@@ -1374,7 +1388,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_58_0.png" src="../_images/lti1_58_0.png" />
+<img alt="../_images/lti1_59_0.png" src="../_images/lti1_59_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1423,9 +1437,10 @@ In convolutiondemo (line 44)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
-<img alt="../_images/lti1_61_5.png" src="../_images/lti1_61_5.png" />
+<img alt="../_images/lti1_62_5.png" src="../_images/lti1_62_5.png" />
 </div>
 </div>
+<p>Go back to <a class="reference internal" href="#step-response"><span class="std std-ref">F. Step Response</span></a></p>
 </section>
 </section>
 </section>
@@ -1459,7 +1474,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_65_0.png" src="../_images/lti1_65_0.png" />
+<img alt="../_images/lti1_67_0.png" src="../_images/lti1_67_0.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the convolution integral</p>
@@ -1495,7 +1510,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_69_0.png" src="../_images/lti1_69_0.png" />
+<img alt="../_images/lti1_71_0.png" src="../_images/lti1_71_0.png" />
 </div>
 </div>
 </section>
@@ -1532,7 +1547,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_73_0.png" src="../_images/lti1_73_0.png" />
+<img alt="../_images/lti1_75_0.png" src="../_images/lti1_75_0.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span></p>
@@ -1566,7 +1581,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_77_0.png" src="../_images/lti1_77_0.png" />
+<img alt="../_images/lti1_79_0.png" src="../_images/lti1_79_0.png" />
 </div>
 </div>
 </section>
