@@ -43,7 +43,7 @@ parts:
     - file: laplace_transform/2/laplace_of_common_signals
       title: Unit 4.2 Laplace Transform of Some Common Signals
     - file: laplace_transform/3/laplace_properties
-      title: unit_4.3 Properties of Laplace Transforms
+      title: unit 4.3 Properties of Laplace Transforms
     - file: laplace_transform/4/inverse_laplace
       title: Unit 4.4 The Inverse Laplace Transform
     - file: laplace_transform/5/circuit_analysis
