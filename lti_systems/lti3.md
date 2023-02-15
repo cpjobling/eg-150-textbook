@@ -23,6 +23,8 @@ This section is based on Section 2.5 of {cite}`schaum`
 
 Follow along at [cpjobling.github.io/eg-150-textbook/lti_systems/lti3](https://cpjobling.github.io/eg-150-textbook/lti_systems/lti3)
 
+![QR Code for this lecture](pictures/qrcode_lti3.png)
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## Subjects to be covered

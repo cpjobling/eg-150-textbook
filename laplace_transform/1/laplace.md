@@ -5,43 +5,24 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.0
+    jupytext_version: 1.14.4
 kernelspec:
-  display_name: Python 3 (ipykernel)
-  language: python
-  name: python3
+  display_name: MATLAB
+  language: matlab
+  name: imatlab
 ---
 
 +++ {"nbpresent": {"id": "90f3c07d-3646-44b0-a549-7020fc10d16f"}, "slideshow": {"slide_type": "slide"}}
 
-# The Laplace Transformation
+# Unit 4.1: The Laplace Transformation
 
-The preparatory reading for this section is [Chapter 2](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=43) of  {cite}`karris` which
+The preparatory reading for this section is [Chapter 2](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=43) of  {cite}`karris` and [Chapter 3]() of {cite}`schaum`.
 
-* defines the Laplace transformation 
-* gives the most useful properties of the Laplace transform with proofs 
-* presents the Laplace transforms of the elementary signals discussed in the last session
-* presents the transforms of the more common system response types that are found in basic signals and systems.
++++
 
-+++ {"slideshow": {"slide_type": "notes"}}
+Follow along at [cpjobling.github.io/eg-150-textbook//laplace_transform/1/laplace](https://cpjobling.github.io/eg-150-textbook/laplace_transform/1/laplace)
 
-## Colophon
-
-An annotatable copy for this presentation is available as [**Worksheet 4**](https://cpjobling.github.io/eg-247-textbook/laplace_transform/1/worksheet4).
-
-* The source code for this page is [content/laplace_transform/1/index.ipynb](https://github.com/cpjobling/eg-247-textbook/blob/master/laplace_transform/1/laplace.ipynb).
-
-* You can view the notes for this presentation as a webpage ([HTML](https://cpjobling.github.io/eg-247-textbook/laplace_transform/1/laplace.html)). 
-
-* This page is downloadable as a [PDF](https://cpjobling.github.io/eg-247-textbook/laplace_transform/1/laplace.pdf) file.
-
-+++ {"nbpresent": {"id": "90f3c07d-3646-44b0-a549-7020fc10d16f"}, "slideshow": {"slide_type": "notes"}}
-
-## Do I really need to learn the theory?
-
-There is some intellectual benefit to being aware of the properties of the Laplace transformation and their proofs but being a pragmatic breed, we engineers typically prefer to make use of quick references of these properties and transforms, relying on Mathematics only when facing a problem not before encountered.
-
-In our practice, we want to encourage you to use of the properties and transform tables to solve problems so I will present only the properties and not the proofs.
+![QR Code for this lecture](images/qrcode_laplace.png)
 
 +++ {"nbpresent": {"id": "f651cafb-8c2b-4d27-aec9-3491dbcce1aa"}, "slideshow": {"slide_type": "slide"}}
 
@@ -49,250 +30,303 @@ In our practice, we want to encourage you to use of the properties and transform
 
 +++ {"nbpresent": {"id": "cdff914d-604d-4ae8-a8e6-8e5caf8bd41e"}, "slideshow": {"slide_type": "fragment"}}
 
-* Definition of the Laplace Transform
+* {ref}`laplace:definition`
+
++++
+
+* {ref}`laplace:matlab`
 
 +++ {"nbpresent": {"id": "74c922da-bfb7-4f82-808d-a89b61bd1ab6"}, "slideshow": {"slide_type": "fragment"}}
 
-* Some Selected Properties
-
-+++ {"nbpresent": {"id": "e7e4ac91-07af-41a4-98e4-6027ac34b41e"}, "slideshow": {"slide_type": "fragment"}}
-
-* Transforms of Elementary Signals
+* {ref}`laplace:roc`
 
 +++ {"nbpresent": {"id": "11a99664-2fdb-4eff-8389-043965b5a6a5"}, "slideshow": {"slide_type": "subslide"}}
 
-* Common system responses
+* {ref}`laplace:pops_roc`
 
 +++ {"nbpresent": {"id": "a2796ec3-fd12-49d3-99b8-fdc640f0af04"}, "slideshow": {"slide_type": "fragment"}}
 
-* Transform tables
+* {ref}`laplace:pandz`
 
 +++ {"nbpresent": {"id": "b90e7c7c-1096-4140-81b3-53a0b7e12f6d"}, "slideshow": {"slide_type": "fragment"}}
 
-* Examples
+* {ref}`examples9`
 
 +++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "slide"}}
 
-## Definition of the Laplace Transform
+(unit_4_1:laplace_transform)
+## The Laplace Transform
+
++++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "fragment"}}
+
+In {ref}`eigenfunctions_of_continuous_time_LTI_systems` we saw that for a continuous-time LTI system with impulse response $h(t)$, the output of the system in response to a complex input of the form $x(t)=e^{st}$ is
+
+$$y(t) = \mathbf{T}\left\{x(t)\right\} = H(s)e^{st}$$
+
++++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "fragment"}}
+
+where
+
+$$H(s) = \int_{-\infty}^{\infty}h(t)e^{-st}\,dt$$
 
 +++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "subslide"}}
 
-### Laplace transform
+(laplace:definition)=
 
-$$\mathcal{L}\{f(t)\}=F(s) = \int_{0}^{\infty}f(t)e^{-st}dt$$
+### Definition
 
-+++ {"nbpresent": {"id": "13b40116-d2dd-4b2a-acaa-0988c1ad16b0"}, "slideshow": {"slide_type": "subslide"}}
+The function $H(s)$ above is referred to as the Laplace transform of $h(t)$.
 
-### Inverse Laplace Transform
++++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "fragment"}}
 
-$$\mathcal{L}^{-1}\{F(s)\}=f(t)=\frac{1}{2\pi j}\int_{\sigma-j\omega}^{\sigma+j\omega}F(s)e^{st} ds$$
+For a general continuous-time signal $x(t)$, the Laplace transform $X(s)$ is defined as
 
-+++ {"nbpresent": {"id": "4ad52fcd-e2e8-4d41-8827-511753bd1148"}, "slideshow": {"slide_type": "notes"}}
+$$X(s) = \int_{-\infty}^{\infty}h(t)e^{-st}\,dt$$
 
-### Region of convergence
++++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "fragment"}}
+
+The variable $s$ is generally complex valued and is expressed as
+
+$$\sigma + j\omega$$
+
++++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "subslide"}}
+
+The Laplace transform defined above is often called the *bilateral* (or *two-sided*) Laplace transform in contrast the the *unilateral* (or *one-sided*) Laplace transform which is defined as
+
+$$X_I(s) = \int_{0^-}^{\infty}h(t)e^{-st}\,dt$$
+
+where $0^-=\lim_{\epsilon\to 0}(0-\epsilon)$.
+
++++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "fragment"}}
+
+Clearly the bilateral and unilateral tranforms are equivalent only if $x(t)=0$ for $t\lt 0$.
+
++++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "notes"}}
+
+In this course, because we are dealing with causal signals and systems, we will be concerned only with unilateral Laplace transform.
+
++++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "subslide"}}
+
+The laplace tranform equation is sometimes considered an operator that transforms a signal $x(t)$ into a function $X(s)$ represented symbolically as
+
+$$X(s) = \mathcal{L}\left\{x(t)\right\}$$
+
++++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "fragment"}}
+
+and the signal $x(t)$ and its Laplace transform $X(s)$ are said to form a Laplace transform pair denoted as
+
+$$x(t)\Leftrightarrow X(s)$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Laplace transform pairs are tabulated for ease of reference.
+
++++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "notes"}}
+
+```admonition note
+By convention, lower-case symbols are used for continuous-time signals and uppercase symbols for their Laplace tranforms.
+```
+
++++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "subslide"}}
+
+(laplace:matlab)=
+### MATLAB Representation
+
+The Laplace transform operator is provided in the MATLAB symbolic math toolkit by the function `laplace` and can be used as follows:
+
+```{code-cell} matlab
+---
+slideshow:
+  slide_type: fragment
+---
+syms s t x(t) % define Laplace transform variable and time as symbols
+X(s) = laplace(x(t))
+```
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(laplace:roc)=
+## Region of Convergence
+
++++ {"nbpresent": {"id": "4ad52fcd-e2e8-4d41-8827-511753bd1148"}, "slideshow": {"slide_type": "fragment"}}
 
 For a Laplace transfomation to exist, the integral must be bounded. That is
 $$\left| {\int_0^\infty  {f(t){e^{ - st}}dt} } \right| < \infty $$
 
-For most signals and systems of interest in this module it will be.
++++ {"nbpresent": {"id": "4ad52fcd-e2e8-4d41-8827-511753bd1148"}, "slideshow": {"slide_type": "fragment"}}
 
-(See discussion of exponential order on Page 2-2 of {cite}`karris`).
+The range of values for the complex variables $s$ for which the Laplace tranform converges is called the *region of convergence* (ROC). To illustrate this concept, let us consider some examples.
 
-+++ {"nbpresent": {"id": "0dcb6800-1c02-4e86-a189-f1875ee1f083"}, "slideshow": {"slide_type": "subslide"}}
++++ {"nbpresent": {"id": "4ad52fcd-e2e8-4d41-8827-511753bd1148"}, "slideshow": {"slide_type": "subslide"}}
 
-### Informal transform notation
+(laplace:ex1)=
+### Example 1
 
-The Laplace transform and its inverse come in pairs which are tabulated for ease of reference. For any given function of time $f(t)$ we only need to know the transform
+Consider the signal
 
-$$f(t)\Leftrightarrow F(s)$$ 
+$$x(t) = e^{-at}u_0(t)\quad a\, \mathrm{real}$$
 
-to be able to get to the Laplace transform and *vice versa*.
++++ {"nbpresent": {"id": "4ad52fcd-e2e8-4d41-8827-511753bd1148"}, "slideshow": {"slide_type": "fragment"}}
+
+The Laplace transform of $x(t)$
+
+$$X(s)=\int_{-\infty}^{\infty}e^{-at}u_0(t)e^{-st}\,dt = \int_{0^+}^{\infty}e^{-(s+a)t}\,dt$$
+
++++ {"nbpresent": {"id": "4ad52fcd-e2e8-4d41-8827-511753bd1148"}, "slideshow": {"slide_type": "fragment"}}
+
+$$X(s) = \left.-\frac{1}{s+a}e^{-(s+a)t}\right|_{0^+}^\infty=\frac{1}{s+a}\quad \mathrm{Re}(s)> -a$$
+
++++
+
+:::{figure-md} ROC1
+<img src="images/roc1.png" alt="ROC for Example 1" width="60%">
+
+ROC for Example 1
+:::
+
++++ {"nbpresent": {"id": "4ad52fcd-e2e8-4d41-8827-511753bd1148"}, "slideshow": {"slide_type": "notes"}}
+
+because $\lim_{t\to \infty}e^{-(s+a)t} = 0$ only if $\mathrm{Re}(s + a)\gt 0$ or $\mathrm{Re}(s)\gt -a$.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Thus, the ROC for {ref}`laplace:ex1` for {ref}`laplace:ex1` is specified as $\mathrm{Re}(s)\gt -a$ and is illustrated in the complex plane as showm in {numref}`ROC2` by the shaded area to the right of the line $\mathrm{Re}(s)=-a.
+
+In Laplace transform applications, the complex plane is commonly referred to as the s-plane. The horizontal and vertical axes are sometimes referred to as the $\sigma$-axis ($\mathrm{Re}(s)$) and the $j\omega$-axis ($\mathrm{Im}(s)$), respectively.
+
++++ {"nbpresent": {"id": "4ad52fcd-e2e8-4d41-8827-511753bd1148"}, "slideshow": {"slide_type": "subslide"}}
+
+(laplace:ex2)=
+### Example 2
+
+Consider the signal
+
+$$x(t) = -e^{-at}u_0(-t)\quad a\, \mathrm{real}$$
+
++++ {"nbpresent": {"id": "4ad52fcd-e2e8-4d41-8827-511753bd1148"}, "slideshow": {"slide_type": "fragment"}}
+
+Its Laplace transform $X(s)$ is given by {ref}`ex:9.1`
+
+
+
+$$X(s)=\frac{1}{s+a}\quad \mathrm{Re}(s)\lt -a$$
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Thus the ROC for {ref}`laplace:ex2` is specified as $\mathrm{Re}(s)\lt -a$ and is illustrated in the complex plane as showm in {numref}`ROC2` by the shaded area to the left of the line $\mathrm{Re}(s)=-a$.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+:::{figure-md} ROC2
+<img src="images/roc2.png" alt="ROC for Example 2" width="60%">
+
+ROC for Example 2
+:::
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Comparing the results of {ref}`laplace:ex1` and {ref}`laplace:ex2`, we see that that algebraic expressions for $X(s)$ for these two signals are identical apart from the ROCs.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Therefore, in order for the Laplace transform to be unique for each signal $x(t)$, *the ROC must be specified as part of the transform*.
 
 +++ {"nbpresent": {"id": "352d0877-b48f-4b8d-9082-371f06fef621"}, "slideshow": {"slide_type": "slide"}}
 
-## Some Selected Properties
+(laplace:pandz)=
+## Poles and Zeros of X(s)
 
-+++ {"nbpresent": {"id": "1c9ba9ad-1952-4838-966c-f5c382aed98d"}, "slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "fragment"}}
 
-### Linearity
+Usually, $X(s)$ will be a rational polynomial in $s$; that is
 
-$$c_1f_1(t) + c_2f_2(t) + \ldots + c_nf_n(t) \Leftrightarrow c_1F_1(s) + c_2F_2(s) + \ldots + c_nF_n(s)$$
+$$X(s)\frac{b_ms^m+b_{m-1}s^{m-1}+\cdots b_1s + b_0}{a_ns^n+a_{n-1}s^{n-1}+\cdot a_1s + a_0}=\frac{b_m}{a_m}\,\frac{\left(s-z_1\right)\cdots\left(s-z_m\right)}{\left(s-p_1\right)\cdots\left(s-p_n\right)}$$
 
-+++ {"nbpresent": {"id": "30dac3b5-90de-4b96-870a-762a98a9ec14"}, "slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "fragment"}}
 
-### Time shift
+The coefficients $b_k$ and $a_k$ are real constants, and $m$ and $n$ are positive integers.
 
-$$f(t-a)u_0(t-a)\Leftrightarrow e^{-as}F(s)$$
++++ {"slideshow": {"slide_type": "subslide"}}
 
-+++ {"nbpresent": {"id": "ba9b31a1-0629-4a44-a66d-396a7db21360"}, "slideshow": {"slide_type": "subslide"}}
+The transform $X(s)$ is called a *proper* rational function if $n>m$, and an *improper* rational function if $n\le m$.
 
-### Frequency shift
++++ {"slideshow": {"slide_type": "fragment"}}
 
-$$e^{-at}f(t)\Leftrightarrow F(s+a)$$
+The roots of the numerator polynomial, $z_k$, are called the *zeros* of $X(s)$ because $X(s) = 0$ for those values of $s$.
 
-+++ {"nbpresent": {"id": "54b6a552-29a2-4907-a318-57a92c793a7e"}, "slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "fragment"}}
 
-### Scaling
+Similarly, the zeros of the denominator polynomial, $p_k$, are called the *poles* of $X(s)$ because $X(s)$ is infinite for those values of $s$.
 
-$$f(at)\Leftrightarrow \frac{1}{a}F\left(\frac{s}{a}\right)$$
++++ {"slideshow": {"slide_type": "fragment"}}
 
-+++ {"nbpresent": {"id": "9385975e-7004-4c81-b8f7-1e59b6c578bb"}, "slideshow": {"slide_type": "subslide"}}
+Therefore, the poles of $X(s)$ lie outside the ROC since, by definition, $X(s)$ does not converge on the poles.
 
-### Differentiation in the time domain
++++ {"slideshow": {"slide_type": "fragment"}}
 
-$$f'(t) = \frac{d}{dt} f(t) \Leftrightarrow sF(s) - f(0^-)$$
+The zeros, on the other hand, may lie inside or outside the ROC.
 
-This property facilitates the solution of differential equations
++++ {"slideshow": {"slide_type": "subslide"}}
 
-+++ {"nbpresent": {"id": "94a596bc-4117-4098-8b78-5776baa85cd2"}, "slideshow": {"slide_type": "notes"}}
+Except for the scale factor $b_m/a_n$, $X(s)$ can be completely specified by its poles and zeros.
 
-The differentiation property can be extended to higher-orders as follows
-$$f''(t) = \frac{d^2}{dt^2}f(t) \Leftrightarrow s^2F(s) - sf(0^-) - f'(0^-)$$
++++ {"slideshow": {"slide_type": "fragment"}}
 
-$$f''(t) = \frac{d^3}{dt^3}f(t) \Leftrightarrow s^3F(s) - s^2f(0) - sf'(0^-) - f''(0^-)$$
+Thus a very compact representation of $X(s)$ is the s-plane is to show the locatioons of the poles and zeros in addition to the ROC.
 
-and in general
++++ {"slideshow": {"slide_type": "fragment"}}
 
-$$f^{(n)}(t) = \frac{d^n}{dt^n}f(t) \Leftrightarrow s^nF(s) - s^{n-1}f(0^-) - s^{n-2}f'(0^-) - \cdots - f^{(n-1)}(0^-)$$
+Traditionally, an "x" is used to indicate each pole and a "o" is used to indicate each zero. 
 
-+++ {"nbpresent": {"id": "bc0e0601-4390-4fa4-861b-87554a960643"}, "slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "fragment"}}
 
-### Differentiation in the complex frequency domain
+This is illustrated in {numref}`laplace:pzmap` for $X(s)$ given by
 
-$$tf(t) \Leftrightarrow -\frac{d}{ds}F(s)$$
+$$X(s) = \frac{2s+4}{s^2+4s+3} = 2 \frac{s+2}{(s+1)(s+3}\quad \mathrm{Re}(s)\gt -1$$
 
-and in general
++++
 
-$$t^nf(t) \Leftrightarrow (-1)^n\frac{d^n}{ds^n}F(s)$$
+:::{figure-md} Laplace:pzmap
+<img src="images/pzmap.png" alt="s-plane representation of X(s)=(2s^2+4)(s^2+rs+3)" width="60%">
 
-+++ {"nbpresent": {"id": "f93fd2fa-8072-4953-abbc-6e950b92352a"}, "slideshow": {"slide_type": "subslide"}}
+s-plane representation of $X(s)=(2s^2+4)(s^2+rs+3)$
+:::
 
-### Integration in the time domain
 
-$$\int_{-\infty}^tf(\tau)d\tau \Leftrightarrow \frac{F(s)}{s}+\frac{f(0^-)}{s}$$
++++ {"slideshow": {"slide_type": "notes"}}
 
-+++ {"nbpresent": {"id": "f93fd2fa-8072-4953-abbc-6e950b92352a"}, "slideshow": {"slide_type": "notes"}}
+Note that $X(s)$ has one zero at $s=-2$ and two poles at $s=-1$ and $s=-3$ with scale factor 2. The ROC is $\mathrm{Re}(s)>-1$.
 
-This property is important because it provides a way to model the solution of a differential equation using op-amp integrators in so-called [Analogue Computers](https://en.wikipedia.org/wiki/Analog_computer) and is now the basis for numerical integration systems like Simulink.
++++ {"nbpresent": {"id": "352d0877-b48f-4b8d-9082-371f06fef621"}, "slideshow": {"slide_type": "slide"}}
 
-+++ {"nbpresent": {"id": "6abec7fb-dc16-4dee-a4e6-78bc0a4ef4f8"}, "slideshow": {"slide_type": "subslide"}}
+(laplace:pops_roc)=
+## Properties of the ROC
 
-### Integration in the complex frequency domain
+[not examinable]
 
-Providing that 
+The properties of the ROC are summarised in 3.1 D of {ref}`schaum` and as they are not examinable, we leave their study to the interested student.
 
-$$\lim_{t\to 0} \frac{f(t)}{t}$$
++++
 
-exists
+(laplace:examples)=
+## Example 9.1
 
-$$\frac{f(t)}{t}\Leftrightarrow \int_s^\infty F(s)ds$$
+Find the Laplace transform of
 
-+++ {"nbpresent": {"id": "9c3efaa7-edf9-42e1-b35d-302a88719f7b"}, "slideshow": {"slide_type": "subslide"}}
+a). $x(t)=-e^{-at}u_0(-t)$
 
-### Time periodicity property
+b). $x(t)=-e^{at}u_0(-t)$
 
-If $f(t)$ is a periodic function with period $T$ such that $f(t) = f(t+nT)$ for $n=1,2,3,\ldots$ then
++++
 
-$$f(t+nT) \Leftrightarrow \frac{\int_0^T f(t)e^{-st}dt}{1-e^{-sT}}$$
+## Next Time
 
-+++ {"nbpresent": {"id": "2d3c3350-228e-4b8f-8a2f-8244033a00af"}, "slideshow": {"slide_type": "subslide"}}
+We move on to consider 
 
-### Initial value theorem
+* {doc}`../laplace_transform/2/lt_of_common_signals`
 
-$$\lim_{t\to 0}f(t) \Leftrightarrow \lim_{s\to \infty} sF(s) = f(0^-)$$
+## References
 
-+++ {"nbpresent": {"id": "9b6d70ca-bf5a-4366-8701-b5ec61b24e93"}, "slideshow": {"slide_type": "subslide"}}
-
-### Final value theorem
-
-$$\lim_{t\to \infty}f(t) \Leftrightarrow \lim_{s\to 0} sF(s) = f(\infty)$$
-
-+++ {"nbpresent": {"id": "509b27f0-eef5-446b-b7be-6be1757afd6a"}, "slideshow": {"slide_type": "subslide"}}
-
-### Convolution in the time domain
-
-$$f_1(t)*f_2(t) = \int_{0}^{t}f_1(\tau)f_2(t-\tau) d\tau \Leftrightarrow F_1(s) F_2(s)$$
-
-+++ {"nbpresent": {"id": "509b27f0-eef5-446b-b7be-6be1757afd6a"}, "slideshow": {"slide_type": "notes"}}
-
-This is another important result as it allows us to compute the response of a system by simply multiplying the Laplace transforms of the system and the signal and then inverse Laplace transforming the result. 
-
-This is usually much simpler than computing the convolution integral in the time domain &ndash; an operation we we see later!
-
-+++ {"nbpresent": {"id": "c9bee9cc-fcec-4bbf-922d-74d59842e5b7"}, "slideshow": {"slide_type": "subslide"}}
-
-### Convolution in the complex frequency domain
-
-Multiplying two signals together in the time domain is the same as performing convolution in the complex frequency domain. 
-
-$$f_1(t)f_2(t) \Leftrightarrow \frac{1}{2\pi j}F_1(s) * F_2(s) = \frac{1}{2\pi j}\lim_{T\to \infty}\int_{c-jT}^{c+jT}F_1(\sigma)F_2(s-\sigma)d\sigma$$
-
-Convolution in the complex frequency domain is nasty &ndash; multiplication in the time domain is relatively painless.
-
-+++ {"nbpresent": {"id": "e58f747d-f0a8-464d-b62f-f7bb9ce8b605"}, "slideshow": {"slide_type": "slide"}}
-
-## Transform tables
-
-Every textbook that covers Laplace transforms will provide a tables of properties and the most commonly encountered transforms. Karris is no exception and you will find a table of transforms in Tables 2.1 and 2.2. 
-
-Here are a couple that are on the net for your reference
-
-* Laplace transform [(Wikipedia)](https://en.wikipedia.org/wiki/Laplace_transform)
-* Laplace Transform [(Wolfram Alpha)](https://mathworld.wolfram.com/LaplaceTransform.html)
-
-+++ {"nbpresent": {"id": "0deac4e0-df0c-4513-a0ae-81ed56e94aec"}, "slideshow": {"slide_type": "subslide"}}
-
-### Don't panic
-
-Tables of Laplace transform properties and transforms will be included with the exam paper.
-
-+++ {"nbpresent": {"id": "2a56e188-1891-420a-a66b-be808a1a11e2"}, "slideshow": {"slide_type": "slide"}}
-
-## Transforms of Elementary Signals
-
-| &nbsp;  | $f(t)$                                         | $F(s)$                                              |
-|---------|------------------------------------------------|-----------------------------------------------------|
-| 1       | $\displaystyle \delta(t)$                      | $\displaystyle 1$                                   |
-| 2       | $\displaystyle \delta(t-a)$                    | $\displaystyle e^{-as}$                             |
-| 3       | $\displaystyle u_0(t)$                         | $\displaystyle \frac{1}{s}$                         |
-| 4       | $\displaystyle t u_0(t)$                       | $\displaystyle \frac{1}{s^2}$                       |
-| 5       | $\displaystyle t^n u_0(t)$                     | $\displaystyle \frac{n!}{s^{n+1}}$                  |
-| 6       | $\displaystyle e^{-at}u_0(t)$                  | $\displaystyle \frac{1}{s+a}$                       |
-| 7       | $\displaystyle t^n e^{-at} u_0(t)$             | $\displaystyle \frac{n!}{(s+a)^{n+1}}$              |
-| 8       | $\displaystyle \sin (\omega t) u_0(t)$         | $\displaystyle \frac{\omega}{s^2 + \omega^2}$       |
-| 9       | $\displaystyle \cos (\omega t) u_0(t)$         | $\displaystyle \frac{s}{s^2 + \omega^2}$            |
-| 10      | $\displaystyle e^{-at} \sin (\omega t) u_0(t)$ | $\displaystyle \frac{\omega}{(s + a)^2 + \omega^2}$ |
-| 11      | $\displaystyle e^{-at}\cos (\omega t) u_0(t)$  | $\displaystyle \frac{s+a}{(s+a)^2 + \omega^2}$      |
-
-
-Refer to the textbook if you want to see the proof of these transforms.
-
-+++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "slide"}}
-
-## Laplace transforms of common waveforms
-
-We will work through a few of the following on the board in class
-
-* Pulse
-* Linear segment
-* Triangular waveform
-* Rectangular periodic waveform (square wave)
-* Half rectified sine wave
-
-+++ {"nbpresent": {"id": "027ac91d-b792-4ffb-a0b4-72a4a144638b"}, "slideshow": {"slide_type": "slide"}}
-
-## Using Matlab to Find Laplace Transforms
-
-The Matlab function `laplace` can be used to find laplace transforms of time functions. The lab exercises will illustrate this.
-
-+++ {"nbpresent": {"id": "4f9f0fa3-84d5-45c3-a6fd-78f84f94388c"}, "slideshow": {"slide_type": "slide"}}
-
-## Homework
-
-Attempt at least one of the end-of-chapter exercises from each question 1-7 of [Section 2.7](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=75#ppg=71) of {cite}`karris` . Don't look at the answers until you have attempted the problems.
-
-If we have time, I will work through one or two of these in class.
-
-## Reference
-
-See [Bibliography](/zbib)
+```{bibliography}
+:filter: docname in docnames
+```
