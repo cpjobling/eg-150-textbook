@@ -41,19 +41,19 @@ parts:
     - file: laplace_transform/1/laplace
       title: Unit 4.1 The Laplace Transformation
     - file: laplace_transform/2/laplace_of_common_signals
-      title: Unit 4.2 Laplace Transform of Some Common Signals   
-    - file: laplace_transform/2/inverse_laplace
-      title: The Inverse Laplace Transform
-    - file: laplace_transform/3/circuit_analysis
+      title: Unit 4.2 Laplace Transform of Some Common Signals
+    - file: laplace_transform/3/laplace_properties
+      title: unit_4.3 Properties of Laplace Transforms
+    - file: laplace_transform/4/inverse_laplace
+      title: Unit 4.4 The Inverse Laplace Transform
+    - file: laplace_transform/5/circuit_analysis
       title: Using Laplace Transforms for Circuit Analysis
     - file: laplace_transform/6/diff_eqns 
       title: Using Laplace Transforms to Solve Ordinary Differential Equations
-    - file: laplace_transform/4/transfer_functions
+    - file: laplace_transform/7/transfer_functions
       title: Transfer Functions
-    - file: laplace_transform/7/block_diagrams 
+    - file: laplace_transform/8/block_diagrams 
       title: Block Diagrams and System Simulation
-    - file: laplace_transform/5/convolution
-      title: The Impulse Response and Convolution
   - file: fourier_series/index
     title: Fourier Series
     sections:

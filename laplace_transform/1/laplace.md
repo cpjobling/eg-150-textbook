@@ -22,7 +22,7 @@ The preparatory reading for this section is [Chapter 2](https://ebookcentral.pro
 
 Follow along at [cpjobling.github.io/eg-150-textbook//laplace_transform/1/laplace](https://cpjobling.github.io/eg-150-textbook/laplace_transform/1/laplace)
 
-![QR Code for this lecture](images/qrcode_laplace.png)
+![QR Code for this lecture](pictures/qrcode_laplace.png)
 
 +++ {"nbpresent": {"id": "f651cafb-8c2b-4d27-aec9-3491dbcce1aa"}, "slideshow": {"slide_type": "slide"}}
 
@@ -30,7 +30,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook//laplace_transform/1/laplac
 
 +++ {"nbpresent": {"id": "cdff914d-604d-4ae8-a8e6-8e5caf8bd41e"}, "slideshow": {"slide_type": "fragment"}}
 
-* {ref}`laplace:definition`
+* {ref}`laplace:laplace`
 
 +++
 
@@ -50,11 +50,11 @@ Follow along at [cpjobling.github.io/eg-150-textbook//laplace_transform/1/laplac
 
 +++ {"nbpresent": {"id": "b90e7c7c-1096-4140-81b3-53a0b7e12f6d"}, "slideshow": {"slide_type": "fragment"}}
 
-* {ref}`examples9`
+* {ref}`laplace:example`
 
 +++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "slide"}}
 
-(unit_4_1:laplace_transform)
+(laplace:laplace)=
 ## The Laplace Transform
 
 +++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "fragment"}}
@@ -179,7 +179,7 @@ $$X(s) = \left.-\frac{1}{s+a}e^{-(s+a)t}\right|_{0^+}^\infty=\frac{1}{s+a}\quad 
 +++
 
 :::{figure-md} ROC1
-<img src="images/roc1.png" alt="ROC for Example 1" width="60%">
+<img src="pictures/roc1.png" alt="ROC for Example 1" width="60%">
 
 ROC for Example 1
 :::
@@ -218,7 +218,7 @@ Thus the ROC for {ref}`laplace:ex2` is specified as $\mathrm{Re}(s)\lt -a$ and i
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 :::{figure-md} ROC2
-<img src="images/roc2.png" alt="ROC for Example 2" width="60%">
+<img src="pictures/roc2.png" alt="ROC for Example 2" width="60%">
 
 ROC for Example 2
 :::
@@ -240,7 +240,7 @@ Therefore, in order for the Laplace transform to be unique for each signal $x(t)
 
 Usually, $X(s)$ will be a rational polynomial in $s$; that is
 
-$$X(s)\frac{b_ms^m+b_{m-1}s^{m-1}+\cdots b_1s + b_0}{a_ns^n+a_{n-1}s^{n-1}+\cdot a_1s + a_0}=\frac{b_m}{a_m}\,\frac{\left(s-z_1\right)\cdots\left(s-z_m\right)}{\left(s-p_1\right)\cdots\left(s-p_n\right)}$$
+$$X(s)=\frac{b_ms^m+b_{m-1}s^{m-1}+\cdots b_1s + b_0}{a_ns^n+a_{n-1}s^{n-1}+\cdot a_1s + a_0}=\frac{b_m}{a_m}\,\frac{\left(s-z_1\right)\cdots\left(s-z_m\right)}{\left(s-p_1\right)\cdots\left(s-p_n\right)}$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -276,7 +276,7 @@ Thus a very compact representation of $X(s)$ is the s-plane is to show the locat
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Traditionally, an "x" is used to indicate each pole and a "o" is used to indicate each zero. 
+Traditionally, an "x" is used to indicate each pole and a "o" is used to indicate each zero.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -287,11 +287,10 @@ $$X(s) = \frac{2s+4}{s^2+4s+3} = 2 \frac{s+2}{(s+1)(s+3}\quad \mathrm{Re}(s)\gt 
 +++
 
 :::{figure-md} Laplace:pzmap
-<img src="images/pzmap.png" alt="s-plane representation of X(s)=(2s^2+4)(s^2+rs+3)" width="60%">
+<img src="pictures/pzmap.png" alt="s-plane representation of X(s)=(2s^2+4)(s^2+rs+3)" width="60%">
 
 s-plane representation of $X(s)=(2s^2+4)(s^2+rs+3)$
 :::
-
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -306,10 +305,15 @@ Note that $X(s)$ has one zero at $s=-2$ and two poles at $s=-1$ and $s=-3$ with 
 
 The properties of the ROC are summarised in 3.1 D of {ref}`schaum` and as they are not examinable, we leave their study to the interested student.
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
 (laplace:examples)=
-## Example 9.1
+## Examples 9
+
+
+
+(ex9.1)=
+### Example 9.1
 
 Find the Laplace transform of
 
@@ -317,13 +321,35 @@ a). $x(t)=-e^{-at}u_0(-t)$
 
 b). $x(t)=-e^{at}u_0(-t)$
 
+### Solution
+
+a) 
+
+$$X(s) = -\int_{-\infty}^{\infty}e^{-at}u_o(-t)e^{-st}\,dt=-\int_{-\infty}^{0^{-}}e^{-(s+a)t}$$
+
+$$X(s) = \left.\frac{1}{s+a}e^{-(s+a)t}\right|_{-\infty}^{0^{-}}=\frac{1}{s+a}\quad\mathrm{Re}(s)\lt-a$$
+
+Thus we obtain
+
+$$-e^{-at}u_0(-t) \Leftrightarrow\frac{1}{s+a}\quad\mathrm{Re}(s)\lt-a$$
+
+b). Similarly
+
+$$X(s) = -\int_{-\infty}^{\infty}e^{at}u_o(-t)e^{-st}\,dt=-\int_{-\infty}^{0^{-}}e^{-(s-a)t}$$
+
+$$X(s) = -\left.\frac{1}{s+a}\right|_{-\infty}^{0^{-}}e^{-(s-a)t}=\frac{1}{s-a}\quad\mathrm{Re}(s)\lt a$$
+
+Thus we obtain
+
+$$e^{at}u_0(-t) \Leftrightarrow\frac{1}{s-a}\quad\mathrm{Re}(s)\lt a$$
+
 +++
 
 ## Next Time
 
 We move on to consider 
 
-* {doc}`../laplace_transform/2/lt_of_common_signals`
+* {doc}`../2/laplace_of_common_signals.md`
 
 ## References
 

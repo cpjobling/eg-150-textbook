@@ -19,13 +19,13 @@ kernelspec:
 
 This section is based on Section 2.1 of {cite}`schaum`.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/lti_systems/lti1](https://cpjobling.github.io/eg-150-textbook/lti_systems/lti1)
 
 ![QR Code for this lecture](pictures/qrcode_lti1.png)
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Subjects to be Covered
 
@@ -37,7 +37,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook/lti_systems/lti1](https://c
 * {ref}`step_response`
 * {ref}`examples_5_Responses_of_a_Continuous_Time_LTI_System_and_Convolution`
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (impulse_reponse)=
 ## A. Impulse Response
@@ -94,17 +94,17 @@ This equation indicates that a continuous-time LTI system is completely characte
 
 The equation
 
-$$y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$ 
+$$y(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau$$ 
 
-defines the *convolution* of two continuous-time signals $x(t)$ and $h(t)$ denoted by
+defines the *convolution* of two continuous-time signals $x(\tau)$ and $h(t)$ denoted by
 
-$$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$
+$$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 The equation 
 
-$$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$
+$$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau$$
 
 is commonly called the *convolution integral*.
 
@@ -135,7 +135,7 @@ Continuous-time LTI system
 
 The convolution integral has the following properties.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### 1. Commutative:
 
@@ -214,11 +214,17 @@ convolutiondemo % ignore warnings
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-4. Steps 1 ro 3 are repeated as $t$ varies over $-\infty$ to $\infty$ to produce the entire output $y(t)$.
+4. Steps 1 to 3 are repeated as $t$ varies over $-\infty$ to $\infty$ to produce the entire output $y(t)$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
 Examples of the above convolution integral operation are given in Examples 5.4 to 5.6.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Example
+
+We will do {ref}`ex5_4` in class
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -233,7 +239,7 @@ $$s(t) = \mathbf{T}\left\{u_0(t)\right\}$$
 
 In many applications, the step response $s(t)$ is also a useful characterisation of the system. The step response can be easily determined using the convolution integral; that is,
 
-$$s(t) = h(t)*u_0(t) = \int_{-\infty}^{\infty} h(\tau)u_0(t-\tau)\,d\tau = \int_{-\infty}^{t} h(\tau)\,d\tau$$
+$$s(t) = h(t)*u_0(t) = \int_{-\infty}^{\infty} h(\tau)u_0(t-\tau)\,d\tau = \int_{0}^{t} h(\tau)\,d\tau$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -436,6 +442,10 @@ slideshow:
 yb(t) = subs(y(t),alpha,1)
 fplot(yb(t))
 ```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Go back to {ref}`step_response`
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
