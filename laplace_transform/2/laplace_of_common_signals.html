@@ -904,7 +904,7 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="unit-4-2-laplace-transform-of-some-common-signals">
 <h1>Unit 4.2: Laplace Transform of Some Common Signals<a class="headerlink" href="#unit-4-2-laplace-transform-of-some-common-signals" title="Permalink to this headline">#</a></h1>
 <p>The preparatory reading for this section is Chapter 2.2 of <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> and Chapter 3.4 of <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
-<p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/3/laplace_of_common_signals">cpjobling.github.io/eg-150-textbook//laplace_transform/2/laplace_of_common_signals</a></p>
+<p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/2/laplace_of_common_signals">cpjobling.github.io/eg-150-textbook/laplace_transform/2/laplace_of_common_signals</a></p>
 <p><img alt="QR Code for this lecture" src="../../_images/qrcode_laplace_2.png" /></p>
 <section id="agenda">
 <h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
@@ -915,16 +915,16 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="#lap2-delayed-impulse"><span class="std std-ref">B. Delayed impulse function \delta(t-a)</span></a></p></li>
 </ul>
 <ul class="simple">
-<li><p><span class="xref std std-ref">lap:unit_step</span></p></li>
+<li><p><a class="reference internal" href="#lap2-unit-step"><span class="std std-ref">C. Unit step function u_0(t)</span></a></p></li>
 </ul>
 <ul class="simple">
-<li><p><span class="xref std std-ref">lap:exp</span></p></li>
+<li><p><a class="reference internal" href="#lap2-exp"><span class="std std-ref">D. Exponential function x(t) = e^{-at}u_0(t)</span></a></p></li>
 </ul>
 <ul class="simple">
-<li><p><a class="reference internal" href="#lap-xform-table"><span class="std std-ref">F. Transforms of Common Signals</span></a></p></li>
+<li><p><span class="xref std std-ref">lap2:xform_table</span></p></li>
 </ul>
 <ul class="simple">
-<li><p><a class="reference internal" href="#lap-matlab"><span class="std std-ref">G. MATLAB Examples</span></a></p></li>
+<li><p><a class="reference internal" href="#lap2-matlab"><span class="std std-ref">G. MATLAB Examples</span></a></p></li>
 </ul>
 </section>
 <section id="a-unit-impulse-function-delta-t">
@@ -953,10 +953,10 @@ title="Print to PDF"
 </section>
 <section id="c-unit-step-function-u-0-t">
 <span id="lap2-unit-step"></span><h2>C. Unit step function <span class="math notranslate nohighlight">\(u_0(t)\)</span><a class="headerlink" href="#c-unit-step-function-u-0-t" title="Permalink to this headline">#</a></h2>
-<p>\begin{align}
-\mathcal{L}\left{u_0(t)\right}&amp;=\int_{-\infty}^{\infty}u_0(t)e^{-st},dt = \int_{0^{+}}^{\infty}e^{-st},dt\
-&amp;= \left.-\frac{1}{s}e^{-st}\right|_{0^{+}}^{\infty}=\frac{1}{s}\quad\mathrm{Re}(s)\gt 0
-\end{align}</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L}\left\{u_0(t)\right\}=\int_{-\infty}^{\infty}u_0(t)e^{-st}\,dt = \int_{0^{+}}^{\infty}e^{-st}\,dt\]</div>
+<div class="math notranslate nohighlight">
+\[X(s) = \left.-\frac{1}{s}e^{-st}\right|_{0^{+}}^{\infty}=\frac{1}{s}\quad\mathrm{Re}(s)\gt 0\]</div>
 <p>where <span class="math notranslate nohighlight">\(0^{+}=\lim_\epsilon\to 0(0+\epsilon)\)</span>.</p>
 <p>Thus the Laplace transform pair is</p>
 <div class="math notranslate nohighlight">
@@ -974,7 +974,7 @@ title="Print to PDF"
 <p>for <span class="math notranslate nohighlight">\(\mathrm{Re}(s) &gt; -a\)</span>.</p>
 </section>
 <section id="e-laplace-transform-pairs-for-other-common-signals">
-<span id="lap-others"></span><h2>E. Laplace Transform Pairs for Other Common SIgnals<a class="headerlink" href="#e-laplace-transform-pairs-for-other-common-signals" title="Permalink to this headline">#</a></h2>
+<span id="lap2-others"></span><h2>E. Laplace Transform Pairs for Other Common SIgnals<a class="headerlink" href="#e-laplace-transform-pairs-for-other-common-signals" title="Permalink to this headline">#</a></h2>
 <p>We can continue to derive the Laplace transforms of the most commonly encoutered signals, and in some cases, e.g. unit ramp <span class="math notranslate nohighlight">\(r(t)=u_1(t)=tu_0(t)\)</span>, <span class="math notranslate nohighlight">\(u_n(t)=t^nu_0(t)\)</span>, <span class="math notranslate nohighlight">\(t^ne^{-at}u_0(t)\)</span>, <span class="math notranslate nohighlight">\(\cos \omega t u_0(t)\)</span>, <span class="math notranslate nohighlight">\(\sin \omega t u_0(t)\)</span> and many others, that we use often, the mathematics can tricky.</p>
 <p>Luckily for us, most of the most useful transforms have already been calculated for us and gathered together into tables.</p>
 <p>Here are a couple that are on the net for your reference</p>
@@ -1060,7 +1060,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="g-matlab-examples">
-<span id="lap-matlab"></span><h2>G. MATLAB Examples<a class="headerlink" href="#g-matlab-examples" title="Permalink to this headline">#</a></h2>
+<span id="lap2-matlab"></span><h2>G. MATLAB Examples<a class="headerlink" href="#g-matlab-examples" title="Permalink to this headline">#</a></h2>
 <p>Let’s use the MATLAB Symbolic Math Toolbox to prove some of these transforms.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1359,7 +1359,7 @@ title="Print to PDF"
 <h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
 <p>We move on to consider</p>
 <ul class="simple">
-<li><p><span class="xref std std-doc">../laplace_transform/3/laplace_properties</span></p></li>
+<li><p><span class="xref std std-doc">../laplace_transform/3/laplace_properties.md</span></p></li>
 </ul>
 </section>
 <section id="references">

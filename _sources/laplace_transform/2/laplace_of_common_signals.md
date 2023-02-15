@@ -20,7 +20,7 @@ The preparatory reading for this section is Chapter 2.2 of {cite}`karris` and Ch
 
 +++ {"nbpresent": {"id": "90f3c07d-3646-44b0-a549-7020fc10d16f"}, "slideshow": {"slide_type": "notes"}}
 
-Follow along at [cpjobling.github.io/eg-150-textbook//laplace_transform/2/laplace_of_common_signals](https://cpjobling.github.io/eg-150-textbook/laplace_transform/3/laplace_of_common_signals)
+Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/2/laplace_of_common_signals](https://cpjobling.github.io/eg-150-textbook/laplace_transform/2/laplace_of_common_signals)
 
 ![QR Code for this lecture](pictures/qrcode_laplace_2.png)
 
@@ -38,19 +38,19 @@ Follow along at [cpjobling.github.io/eg-150-textbook//laplace_transform/2/laplac
 
 +++ {"nbpresent": {"id": "e7e4ac91-07af-41a4-98e4-6027ac34b41e"}, "slideshow": {"slide_type": "fragment"}}
 
-* {ref}`lap:unit_step`
+* {ref}`lap2:unit_step`
 
 +++ {"nbpresent": {"id": "11a99664-2fdb-4eff-8389-043965b5a6a5"}, "slideshow": {"slide_type": "subslide"}}
 
-* {ref}`lap:exp`
+* {ref}`lap2:exp`
 
 +++ {"nbpresent": {"id": "a2796ec3-fd12-49d3-99b8-fdc640f0af04"}, "slideshow": {"slide_type": "fragment"}}
 
-* {ref}`lap:xform_table`
+* {ref}`lap2:xform_table`
 
 +++
 
-* {ref}`lap:matlab`
+* {ref}`lap2:matlab`
 
 +++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "slide"}}
 
@@ -107,10 +107,8 @@ for $\mathrm{Re}(s) > 0$.
 
 +++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "fragment"}}
 
-\begin{align}
-\mathcal{L}\left\{u_0(t)\right\}&=\int_{-\infty}^{\infty}u_0(t)e^{-st}\,dt = \int_{0^{+}}^{\infty}e^{-st}\,dt\\
-&= \left.-\frac{1}{s}e^{-st}\right|_{0^{+}}^{\infty}=\frac{1}{s}\quad\mathrm{Re}(s)\gt 0
-\end{align}
+$$\mathcal{L}\left\{u_0(t)\right\}=\int_{-\infty}^{\infty}u_0(t)e^{-st}\,dt = \int_{0^{+}}^{\infty}e^{-st}\,dt$$
+$$X(s) = \left.-\frac{1}{s}e^{-st}\right|_{0^{+}}^{\infty}=\frac{1}{s}\quad\mathrm{Re}(s)\gt 0$$
 
 +++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "fragment"}}
 
@@ -145,7 +143,7 @@ for $\mathrm{Re}(s) > -a$.
 
 +++ {"nbpresent": {"id": "e58f747d-f0a8-464d-b62f-f7bb9ce8b605"}, "slideshow": {"slide_type": "slide"}}
 
-(lap:others)=
+(lap2:others)=
 ## E. Laplace Transform Pairs for Other Common SIgnals
 
 We can continue to derive the Laplace transforms of the most commonly encoutered signals, and in some cases, e.g. unit ramp $r(t)=u_1(t)=tu_0(t)$, $u_n(t)=t^nu_0(t)$, $t^ne^{-at}u_0(t)$, $\cos \omega t u_0(t)$, $\sin \omega t u_0(t)$ and many others, that we use often, the mathematics can tricky.
@@ -160,7 +158,6 @@ Here are a couple that are on the net for your reference
 Every textbook that covers Laplace transforms will provide tables of properties (see {doc}`laplace_transfer_properties`) and the most commonly encountered transforms. You will find such tables in  Tables 2.1 and 2.2 of {cite}`karris` and Table 3.1 and Table 3.3 of {cite}`schaum`. 
 
 We reproduce Table 3.1 of {cite}`schaum` below. You will find a table of Laplace transform properties in the next chapter.
-
 
 +++ {"nbpresent": {"id": "2a56e188-1891-420a-a66b-be808a1a11e2"}, "slideshow": {"slide_type": "slide"}}
 
@@ -194,7 +191,7 @@ Tables of Laplace transform properties and transforms will be included with the 
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(lap:matlab)=
+(lap2:matlab)=
 ## G. MATLAB Examples
 
 Let's use the MATLAB Symbolic Math Toolbox to prove some of these transforms.
@@ -318,7 +315,7 @@ laplace(exp(-a*t)*sin(omega*t)*u0(t))
 
 We move on to consider 
 
-* {doc}`../laplace_transform/3/laplace_properties`
+* {doc}`../laplace_transform/3/laplace_properties.md`
 
 ## References
 
