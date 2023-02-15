@@ -805,11 +805,11 @@ title="Print to PDF"
 <h1>Unit 4.1: The Laplace Transformation<a class="headerlink" href="#unit-4-1-the-laplace-transformation" title="Permalink to this headline">#</a></h1>
 <p>The preparatory reading for this section is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=43">Chapter 2</a> of  <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> and <span class="xref myst">Chapter 3</span> of <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/1/laplace">cpjobling.github.io/eg-150-textbook//laplace_transform/1/laplace</a></p>
-<p><img alt="QR Code for this lecture" src="laplace_transform/1/images/qrcode_laplace.png" /></p>
+<p><img alt="QR Code for this lecture" src="../../_images/qrcode_laplace.png" /></p>
 <section id="agenda">
 <h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="#laplace-definition"><span class="std std-ref">Definition</span></a></p></li>
+<li><p><a class="reference internal" href="#laplace-laplace"><span class="std std-ref">The Laplace Transform</span></a></p></li>
 </ul>
 <ul class="simple">
 <li><p><a class="reference internal" href="#laplace-matlab"><span class="std std-ref">MATLAB Representation</span></a></p></li>
@@ -824,12 +824,11 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="#laplace-pandz"><span class="std std-ref">Poles and Zeros of X(s)</span></a></p></li>
 </ul>
 <ul class="simple">
-<li><p><span class="xref std std-ref">examples9</span></p></li>
+<li><p><span class="xref std std-ref">laplace:example</span></p></li>
 </ul>
-<p>(unit_4_1:laplace_transform)</p>
 </section>
 <section id="the-laplace-transform">
-<h2>The Laplace Transform<a class="headerlink" href="#the-laplace-transform" title="Permalink to this headline">#</a></h2>
+<span id="laplace-laplace"></span><h2>The Laplace Transform<a class="headerlink" href="#the-laplace-transform" title="Permalink to this headline">#</a></h2>
 <p>In <a class="reference internal" href="../../lti_systems/lti2.html#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a> we saw that for a continuous-time LTI system with impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>, the output of the system in response to a complex input of the form <span class="math notranslate nohighlight">\(x(t)=e^{st}\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[y(t) = \mathbf{T}\left\{x(t)\right\} = H(s)e^{st}\]</div>
@@ -940,7 +939,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <span id="laplace-pandz"></span><h2>Poles and Zeros of X(s)<a class="headerlink" href="#poles-and-zeros-of-x-s" title="Permalink to this headline">#</a></h2>
 <p>Usually, <span class="math notranslate nohighlight">\(X(s)\)</span> will be a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span>; that is</p>
 <div class="math notranslate nohighlight">
-\[X(s)\frac{b_ms^m+b_{m-1}s^{m-1}+\cdots b_1s + b_0}{a_ns^n+a_{n-1}s^{n-1}+\cdot a_1s + a_0}=\frac{b_m}{a_m}\,\frac{\left(s-z_1\right)\cdots\left(s-z_m\right)}{\left(s-p_1\right)\cdots\left(s-p_n\right)}\]</div>
+\[X(s)=\frac{b_ms^m+b_{m-1}s^{m-1}+\cdots b_1s + b_0}{a_ns^n+a_{n-1}s^{n-1}+\cdot a_1s + a_0}=\frac{b_m}{a_m}\,\frac{\left(s-z_1\right)\cdots\left(s-z_m\right)}{\left(s-p_1\right)\cdots\left(s-p_n\right)}\]</div>
 <p>The coefficients <span class="math notranslate nohighlight">\(b_k\)</span> and <span class="math notranslate nohighlight">\(a_k\)</span> are real constants, and <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(n\)</span> are positive integers.</p>
 <p>The transform <span class="math notranslate nohighlight">\(X(s)\)</span> is called a <em>proper</em> rational function if <span class="math notranslate nohighlight">\(n&gt;m\)</span>, and an <em>improper</em> rational function if <span class="math notranslate nohighlight">\(n\le m\)</span>.</p>
 <p>The roots of the numerator polynomial, <span class="math notranslate nohighlight">\(z_k\)</span>, are called the <em>zeros</em> of <span class="math notranslate nohighlight">\(X(s)\)</span> because <span class="math notranslate nohighlight">\(X(s) = 0\)</span> for those values of <span class="math notranslate nohighlight">\(s\)</span>.</p>
@@ -998,7 +997,7 @@ X(s) &amp;= -\int_{-\infty}^{\infty}e^{at}u_o(-t)e^{-st},dt=-\int_{-\infty}^{0^{
 <h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
 <p>We move on to consider</p>
 <ul class="simple">
-<li><p><span class="xref std std-doc">../laplace_transform/2/lt_of_common_signals</span></p></li>
+<li><p><span class="xref std std-doc">../laplace_transform/2/laplace_of_common_signals</span></p></li>
 </ul>
 </section>
 <section id="references">

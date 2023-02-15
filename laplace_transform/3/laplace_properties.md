@@ -24,26 +24,6 @@ Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/3/laplace
 
 ![QR Code for this lecture](pictures/qrcode_laplace_3.png)
 
-+++ {"slideshow": {"slide_type": "notes"}}
-
-## Colophon
-
-An annotatable copy for this presentation is available as [**Worksheet 4**](https://cpjobling.github.io/eg-247-textbook/laplace_transform/1/worksheet4).
-
-* The source code for this page is [content/laplace_transform/1/index.ipynb](https://github.com/cpjobling/eg-247-textbook/blob/master/laplace_transform/1/laplace.ipynb).
-
-* You can view the notes for this presentation as a webpage ([HTML](https://cpjobling.github.io/eg-247-textbook/laplace_transform/1/laplace.html)). 
-
-* This page is downloadable as a [PDF](https://cpjobling.github.io/eg-247-textbook/laplace_transform/1/laplace.pdf) file.
-
-+++ {"nbpresent": {"id": "90f3c07d-3646-44b0-a549-7020fc10d16f"}, "slideshow": {"slide_type": "notes"}}
-
-## Do I really need to learn the theory?
-
-There is some intellectual benefit to being aware of the properties of the Laplace transformation and their proofs but being a pragmatic breed, we engineers typically prefer to make use of quick references of these properties and transforms, relying on Mathematics only when facing a problem not before encountered.
-
-In our practice, we want to encourage you to use of the properties and transform tables to solve problems so I will present only the properties and not the proofs.
-
 +++ {"nbpresent": {"id": "f651cafb-8c2b-4d27-aec9-3491dbcce1aa"}, "slideshow": {"slide_type": "slide"}}
 
 ## Agenda
@@ -71,43 +51,6 @@ In our practice, we want to encourage you to use of the properties and transform
 +++ {"nbpresent": {"id": "b90e7c7c-1096-4140-81b3-53a0b7e12f6d"}, "slideshow": {"slide_type": "fragment"}}
 
 * Examples
-
-+++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "slide"}}
-
-## Definition of the Laplace Transform
-
-+++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "subslide"}}
-
-### Laplace transform
-
-$$\mathcal{L}\{f(t)\}=F(s) = \int_{0}^{\infty}f(t)e^{-st}dt$$
-
-+++ {"nbpresent": {"id": "13b40116-d2dd-4b2a-acaa-0988c1ad16b0"}, "slideshow": {"slide_type": "subslide"}}
-
-### Inverse Laplace Transform
-
-$$\mathcal{L}^{-1}\{F(s)\}=f(t)=\frac{1}{2\pi j}\int_{\sigma-j\omega}^{\sigma+j\omega}F(s)e^{st} ds$$
-
-+++ {"nbpresent": {"id": "4ad52fcd-e2e8-4d41-8827-511753bd1148"}, "slideshow": {"slide_type": "notes"}}
-
-### Region of convergence
-
-For a Laplace transfomation to exist, the integral must be bounded. That is
-$$\left| {\int_0^\infty  {f(t){e^{ - st}}dt} } \right| < \infty $$
-
-For most signals and systems of interest in this module it will be.
-
-(See discussion of exponential order on Page 2-2 of {cite}`karris`).
-
-+++ {"nbpresent": {"id": "0dcb6800-1c02-4e86-a189-f1875ee1f083"}, "slideshow": {"slide_type": "subslide"}}
-
-### Informal transform notation
-
-The Laplace transform and its inverse come in pairs which are tabulated for ease of reference. For any given function of time $f(t)$ we only need to know the transform
-
-$$f(t)\Leftrightarrow F(s)$$ 
-
-to be able to get to the Laplace transform and *vice versa*.
 
 +++ {"nbpresent": {"id": "352d0877-b48f-4b8d-9082-371f06fef621"}, "slideshow": {"slide_type": "slide"}}
 

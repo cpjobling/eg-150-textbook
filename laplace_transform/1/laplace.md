@@ -22,7 +22,7 @@ The preparatory reading for this section is [Chapter 2](https://ebookcentral.pro
 
 Follow along at [cpjobling.github.io/eg-150-textbook//laplace_transform/1/laplace](https://cpjobling.github.io/eg-150-textbook/laplace_transform/1/laplace)
 
-![QR Code for this lecture](images/qrcode_laplace.png)
+![QR Code for this lecture](pictures/qrcode_laplace.png)
 
 +++ {"nbpresent": {"id": "f651cafb-8c2b-4d27-aec9-3491dbcce1aa"}, "slideshow": {"slide_type": "slide"}}
 
@@ -30,7 +30,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook//laplace_transform/1/laplac
 
 +++ {"nbpresent": {"id": "cdff914d-604d-4ae8-a8e6-8e5caf8bd41e"}, "slideshow": {"slide_type": "fragment"}}
 
-* {ref}`laplace:definition`
+* {ref}`laplace:laplace`
 
 +++
 
@@ -50,11 +50,11 @@ Follow along at [cpjobling.github.io/eg-150-textbook//laplace_transform/1/laplac
 
 +++ {"nbpresent": {"id": "b90e7c7c-1096-4140-81b3-53a0b7e12f6d"}, "slideshow": {"slide_type": "fragment"}}
 
-* {ref}`examples9`
+* {ref}`laplace:example`
 
 +++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "slide"}}
 
-(unit_4_1:laplace_transform)
+(laplace:laplace)=
 ## The Laplace Transform
 
 +++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "fragment"}}
@@ -240,7 +240,7 @@ Therefore, in order for the Laplace transform to be unique for each signal $x(t)
 
 Usually, $X(s)$ will be a rational polynomial in $s$; that is
 
-$$X(s)\frac{b_ms^m+b_{m-1}s^{m-1}+\cdots b_1s + b_0}{a_ns^n+a_{n-1}s^{n-1}+\cdot a_1s + a_0}=\frac{b_m}{a_m}\,\frac{\left(s-z_1\right)\cdots\left(s-z_m\right)}{\left(s-p_1\right)\cdots\left(s-p_n\right)}$$
+$$X(s)=\frac{b_ms^m+b_{m-1}s^{m-1}+\cdots b_1s + b_0}{a_ns^n+a_{n-1}s^{n-1}+\cdot a_1s + a_0}=\frac{b_m}{a_m}\,\frac{\left(s-z_1\right)\cdots\left(s-z_m\right)}{\left(s-p_1\right)\cdots\left(s-p_n\right)}$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -351,7 +351,7 @@ $$e^{at}u_0(-t) \Leftrightarrow\frac{1}{s-a}\quad\mathrm{Re}(s)\lt a$$
 
 We move on to consider 
 
-* {doc}`../laplace_transform/2/lt_of_common_signals`
+* {doc}`../laplace_transform/2/laplace_of_common_signals`
 
 ## References
 
