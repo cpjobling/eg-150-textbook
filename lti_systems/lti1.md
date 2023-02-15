@@ -224,7 +224,7 @@ Examples of the above convolution integral operation are given in Examples 5.4 t
 
 ### Example
 
-We will do {ref}`ex5_4` in class 
+We will do {ref}`ex5_4` in class
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 

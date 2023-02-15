@@ -54,7 +54,16 @@ Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/3/laplace
 
 +++ {"nbpresent": {"id": "352d0877-b48f-4b8d-9082-371f06fef621"}, "slideshow": {"slide_type": "slide"}}
 
+(selected_props)=
 ## Some Selected Properties
+
++++
+
+Basic properties of the Laplace transform are presented in the following. Verification of these properties is given in Worked Problems 3.8 to 3.16 in {cite}`schaum` and in Section 2.2 in {cite}`karris`.
+
+We will verify some of the properties in MATLAB Lab 3, but will not examine them further in this course.
+
+You will, however, be expected to use **Tables of Properties**, such as that given in {ref}`table_of_props` below, to solve problems.
 
 +++ {"nbpresent": {"id": "1c9ba9ad-1952-4838-966c-f5c382aed98d"}, "slideshow": {"slide_type": "subslide"}}
 
@@ -161,7 +170,7 @@ $$f_1(t)*f_2(t) = \int_{0}^{t}f_1(\tau)f_2(t-\tau) d\tau \Leftrightarrow F_1(s) 
 
 This is another important result as it allows us to compute the response of a system by simply multiplying the Laplace transforms of the system and the signal and then inverse Laplace transforming the result. 
 
-This is usually much simpler than computing the convolution integral in the time domain &ndash; an operation we we see later!
+This is usually much simpler than computing the convolution integral in the time domain &ndash; an operation we we met in {ref}`convolution_integral`.
 
 +++ {"nbpresent": {"id": "c9bee9cc-fcec-4bbf-922d-74d59842e5b7"}, "slideshow": {"slide_type": "subslide"}}
 
@@ -175,53 +184,245 @@ Convolution in the complex frequency domain is nasty &ndash; multiplication in t
 
 +++ {"nbpresent": {"id": "e58f747d-f0a8-464d-b62f-f7bb9ce8b605"}, "slideshow": {"slide_type": "slide"}}
 
-## Transform tables
+(table_of_props)=
+## Table of Laplace Transform Properties
 
-Every textbook that covers Laplace transforms will provide a tables of properties and the most commonly encountered transforms. Karris is no exception and you will find a table of transforms in Tables 2.1 and 2.2. 
+| No. | **Name** | **Time Domain** $f(t)$ | Complex Frequency Domain $F(s)$ |
+|----:|----------|--------|--------------|
+| 1.   | Linearity | $a_1f_1(t)+a_2f_2(t)+\cdots+a_nf_n(t)$ | $a_1F_1(s)+a_2F_2(s)+\cdots+a_nF_n(s)$ |
+| 2.  | Time shifting | $\displaystyle{f(t-a)}u_0(t-a)$ | $\displaystyle{e^{-a s}F(s)}$ 
+| 3.  | Frequency shifting | $\displaystyle{e^{-as}f(t)}$ | $\displaystyle{F(s+a)}$ |
+| 4.  | Time scaling | $f(a t)$ | $\displaystyle{\frac{1}{a}F\left(\frac{s}{a}\right)}$ |
+| 5.  | Time differentiation | $\displaystyle{\frac{d}{dt}\,f(t)}$ | $\displaystyle{F(s)-f(0^-)}$ |
+| 7.  | Frequency differentiation | $\displaystyle{tf(t)}$ | $\displaystyle{-\frac{d}{ds}F(s)}$ |
+| 8.  | Time integration | $\displaystyle{\int_{-\infty}^{t}f(\tau)d\tau}$ | $\displaystyle{\frac{F(s)}{s}+ \frac{F(0^-)}{s}}$ |
+| 9.  | Frequency integration | $\displaystyle{\frac{f(t)}{t}}$ | $\displaystyle{\int_s^\infty F(s)\,ds}$ |
+| 10.  | Time Periodicity | $\displaystyle{f(t + nT)}$ | $\displaystyle{\frac{\int_0^T f(t)e^{-st}\,dt}{1 - e^{-sT}}}$ |
+| 11. | Initial value theorem | $\displaystyle{\lim_{t\rightarrow 0} f(t)}$ | $\displaystyle{\lim_{s\rightarrow \infty}sF(s) = f(0^-)}$ |
+| 12. | Final value theorem | $\displaystyle{\lim_{t\rightarrow \infty} f(t)}$ | $\displaystyle{\lim_{s\rightarrow 0}sF(s) = f(\infty)}$ |
+| 13. | Time convolution | $\displaystyle{f_1(t)*f_2(t)}$ | $\displaystyle{F_1(js) F_2(s)}$ |
+| 14. | Frequency convolution | $\displaystyle{f_1(t)f_2(t)}$ | $\displaystyle{\frac{1}{j2\pi}F_1(s)*F_2(s)}$ |
 
-Here are a couple that are on the net for your reference
-
-* Laplace transform [(Wikipedia)](https://en.wikipedia.org/wiki/Laplace_transform)
-* Laplace Transform [(Wolfram Alpha)](https://mathworld.wolfram.com/LaplaceTransform.html)
-
-+++ {"nbpresent": {"id": "0deac4e0-df0c-4513-a0ae-81ed56e94aec"}, "slideshow": {"slide_type": "subslide"}}
-
-### Don't panic
-
-Tables of Laplace transform properties and transforms will be included with the exam paper.
-
-+++ {"nbpresent": {"id": "2a56e188-1891-420a-a66b-be808a1a11e2"}, "slideshow": {"slide_type": "slide"}}
-
-## Transforms of Elementary Signals
-
-| &nbsp;  | $f(t)$                                         | $F(s)$                                              |
-|---------|------------------------------------------------|-----------------------------------------------------|
-| 1       | $\displaystyle \delta(t)$                      | $\displaystyle 1$                                   |
-| 2       | $\displaystyle \delta(t-a)$                    | $\displaystyle e^{-as}$                             |
-| 3       | $\displaystyle u_0(t)$                         | $\displaystyle \frac{1}{s}$                         |
-| 4       | $\displaystyle t u_0(t)$                       | $\displaystyle \frac{1}{s^2}$                       |
-| 5       | $\displaystyle t^n u_0(t)$                     | $\displaystyle \frac{n!}{s^{n+1}}$                  |
-| 6       | $\displaystyle e^{-at}u_0(t)$                  | $\displaystyle \frac{1}{s+a}$                       |
-| 7       | $\displaystyle t^n e^{-at} u_0(t)$             | $\displaystyle \frac{n!}{(s+a)^{n+1}}$              |
-| 8       | $\displaystyle \sin (\omega t) u_0(t)$         | $\displaystyle \frac{\omega}{s^2 + \omega^2}$       |
-| 9       | $\displaystyle \cos (\omega t) u_0(t)$         | $\displaystyle \frac{s}{s^2 + \omega^2}$            |
-| 10      | $\displaystyle e^{-at} \sin (\omega t) u_0(t)$ | $\displaystyle \frac{\omega}{(s + a)^2 + \omega^2}$ |
-| 11      | $\displaystyle e^{-at}\cos (\omega t) u_0(t)$  | $\displaystyle \frac{s+a}{(s+a)^2 + \omega^2}$      |
-
-
-Refer to the textbook if you want to see the proof of these transforms.
+See also: [Wikibooks: Engineering_Tables/Laplace_Transform_Properties](https://en.wikibooks.org/wiki/Engineering_Tables/Laplace_Transform_Properties) and [Laplace Transform&mdash;WolframMathworld](https://mathworld.wolfram.com/LaplaceTransform.html) for more complete references.
 
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "slide"}}
 
-## Laplace transforms of common waveforms
+(examples10)=
+## Examples 10: Laplace transforms of common waveforms
 
 We will work through a few of the following on the board in class
 
-* Pulse
-* Linear segment
-* Triangular waveform
-* Rectangular periodic waveform (square wave)
-* Half rectified sine wave
+* {ref}`ex10.1`
+* {ref}`ex10.2`
+* {ref}`ex10.3`
+* {ref}`ex10.4`
+* {ref}`ex10.5`
+
++++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
+
+(ex10.1)=
+### Example 10.1: Pulse
+
+Compute the Laplace transform of the pulse shown in the figure.
+
+![pulse](pictures/pulse.png)
+
+For full solution see [Example 2.4.1](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=63) in Karris.
+
+<pre style="border: 2px solid blue">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
++++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
+
+(ex10.2)=
+### Example 10.2: Line segment
+
+Compute the Laplace transform of the line segment shown below.
+
+![line](pictures/line.png)
+
+For full solution see [Example 2.4.2](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=64) in Karris.
+
+<pre style="border: 2px solid blue">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
++++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
+
+(ex10.3)=
+### Example 10.3: Triangular Pulse
+
+Compute the Laplace transform of the triangular pulse shown below
+
+![triangle](pictures/triangle.png)
+
+For full solution see [Examples in 2.4.3](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=65) in Karris.
+
+<pre style="border: 2px solid blue">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
++++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
+
+(ex10.4)=
+### Example 10.4: Square Wave
+
+Compute the Laplace transform of the periodic function shown below.
+
+![square wave](pictures/sqare.png)
+
+For full solution see [Example 2.4.4](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=66) in Karris.
+
+<pre style="border: 2px solid blue">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
++++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
+
+(ex10.5)=
+### Example 10.5: Half-rectified Sinewave
+
+Compute the Laplace Transform of the half-rectified sine wave shown below.
+
+![half-rectified sinewave](pictures/rectsine.png)
+
+For full solution see [Example 2.4.5](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=67) in Karris.
+
+<pre style="border: 2px solid blue">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
++++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
+
+## Homework
+
+Attempt at least one of the end-of-chapter exercises from each question 1-7 of [Section 2.7](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=75#ppg=71) of {cite}`karris`. Don't look at the answers until you have attempted the problems.
+
+If we have time, I will work through one or two of these in class.
+
+## References
+
+See [Bibliography](/zbib).
+
++++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
+
+## Answers to Examples 10
+
+10.1. $$Au_0(t)-Au_0(t-a)\Leftrightarrow \frac{A\left(1-e^{-as}\right)}{s}.$$
+
+10.2. $$(t-1)u_0(t-1)\Leftrightarrow \frac{e^{-s}}{s}.$$
+
+10.3. $$f_T(t)\Leftrightarrow \frac{\left(1-e^{-s}\right)^2}{s^2}.$$
+
+10.4. $$f_R(t)\Leftrightarrow \frac{A\tanh \left(\frac{As}{2}\right)}{s}.$$
+
+10.55. $$f_{HW}(t) \Leftrightarrow \frac{1}{\left(s^2 + 1\right)\left(1-e^{\pi s}\right)}.$$
 
 +++ {"nbpresent": {"id": "027ac91d-b792-4ffb-a0b4-72a4a144638b"}, "slideshow": {"slide_type": "slide"}}
 

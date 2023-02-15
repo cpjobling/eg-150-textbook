@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.1
+    jupytext_version: 1.14.4
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -18,8 +18,6 @@ kernelspec:
 
 ## To accompany Chapter 3.1 Laplace Transform
 
-+++ {"slideshow": {"slide_type": "notes"}}
-
 ## Colophon
 
 This worksheet can be downloaded as a [PDF file](https://cpjobling.github.io/eg-247-textbook/worksheets/worksheet4.pdf). We will step through this worksheet in class. 
@@ -30,21 +28,13 @@ You are expected to have at least watched the video presentation of [Chapter 3.1
 
 After class, the lecture recording and the annotated version of this worksheet will be made available to you via OneNote and through Canvas.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
 ## First hour quiz: The Laplace and inverse Laplace transforms
 
-+++ {"slideshow": {"slide_type": "skip"}}
-
 This will be a group activity. If you did the quiz in Canvas before class you will be in a good place to get these answers.
-
-+++ {"slideshow": {"slide_type": "fragment"}}
 
 ### Question 1: The Laplace Transform
 
 Without looking it up, which of these integrals represents the Laplace and Inverse laplace transforms?
-
-+++ {"slideshow": {"slide_type": "fragment"}}
 
 <table>
 <tr><td>A.</td><td>
@@ -67,11 +57,7 @@ $$\int_{-j\omega}^{+j\omega}\,f(t)\,e^{-j\omega t}\,dt$$
 </td></tr>
 </table>
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
 Bonus: what are the other two integrals?
-
-+++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Question 2: Laplace transforms
 
@@ -125,8 +111,6 @@ $$\lim_{s\rightarrow \infty}\,sF(s)$$
 </td></tr>
 </table>
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
 ### Question 3: Properties of Laplace transforms
 
 Match each of these mathematical properties to the associated Laplace transform property.
@@ -154,8 +138,6 @@ $$f(at) \Leftrightarrow (1/a) \, F (s/a)$$
 </td></tr>
 </table>
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
 ### Question 4: Name that property
 
 What property is this? 
@@ -171,8 +153,6 @@ C. Final value theorem
 D. Differentiation in the time domain
 
 E. Integration in the time domain
-
-+++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Question 5: Elementary signals
 
@@ -244,15 +224,11 @@ $$\frac{\omega}{(s+a)^2+\omega^2}$$
 </td></tr>
 </table>
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
 ### End of first hour quiz
 
 Is there anything in this quiz that you think we should go over in more detail in class?
 
 Add to the **💬❓Questions and Discussion on the Laplace Transformation and its Applications** board in Canvas after class.
-
-+++ {"slideshow": {"slide_type": "slide"}}
 
 ## Laplace transforms of common waveforms
 
@@ -264,8 +240,6 @@ We will work through a few of the following on the board in class
 * Rectangular periodic waveform (square wave)
 * Half rectified sine wave
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
 ### Pulse
 
 Compute the Laplace transform of the pulse shown in the figure.
@@ -273,8 +247,6 @@ Compute the Laplace transform of the pulse shown in the figure.
 ![pulse](images/pulse.png)
 
 For full solution see [Example 2.4.1](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=63) in Karris.
-
-+++ {"slideshow": {"slide_type": "notes"}}
 
 <pre style="border: 2px solid blue">
 
@@ -301,8 +273,6 @@ For full solution see [Example 2.4.1](https://ebookcentral.proquest.com/lib/swan
 
 </pre>
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
 ### Line segment
 
 Compute the Laplace transform of the line segment shown below.
@@ -310,8 +280,6 @@ Compute the Laplace transform of the line segment shown below.
 ![line](images/line.png)
 
 For full solution see [Example 2.4.2](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=64) in Karris.
-
-+++ {"slideshow": {"slide_type": "notes"}}
 
 <pre style="border: 2px solid blue">
 
@@ -375,8 +343,6 @@ For full solution see [Examples in 2.4.3](https://ebookcentral.proquest.com/lib/
 
 </pre>
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
 ### Square Wave
 
 Compute the Laplace transform of the periodic function shown below.
@@ -384,8 +350,6 @@ Compute the Laplace transform of the periodic function shown below.
 ![square wave](images/sqare.png)
 
 For full solution see [Example 2.4.4](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=66) in Karris.
-
-+++ {"slideshow": {"slide_type": "notes"}}
 
 <pre style="border: 2px solid blue">
 
@@ -411,8 +375,6 @@ For full solution see [Example 2.4.4](https://ebookcentral.proquest.com/lib/swan
 
 
 </pre>
-
-+++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Half-rectified Sinewave
 
@@ -422,8 +384,6 @@ Compute the Laplace Transform of the half-rectified sine wave shown below.
 
 For full solution see [Example 2.4.5](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=67) in Karris.
 
-+++ {"slideshow": {"slide_type": "notes"}}
-
 <pre style="border: 2px solid blue">
 
 
@@ -449,21 +409,15 @@ For full solution see [Example 2.4.5](https://ebookcentral.proquest.com/lib/swan
 
 </pre>
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## Homework
 
 Attempt at least one of the end-of-chapter exercises from each question 1-7 of [Section 2.7](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=75#ppg=71) of {cite}`karris`. Don't look at the answers until you have attempted the problems.
 
 If we have time, I will work through one or two of these in class.
 
-+++ {"slideshow": {"slide_type": "notes"}}
-
 ## References
 
 See [Bibliography](/zbib).
-
-+++ {"slideshow": {"slide_type": "notes"}}
 
 ## Answers to in-class problems
 
