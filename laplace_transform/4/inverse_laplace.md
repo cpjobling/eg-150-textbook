@@ -14,7 +14,7 @@ kernelspec:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-# The Inverse Laplace Transform
+# Unit 4.4 The Inverse Laplace Transform
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -23,19 +23,11 @@ The preparatory reading for this section is [Chapter 3](https://ebookcentral.pro
 * defines the Inverse Laplace transformation 
 * gives several examples of how the Inverse Laplace Transform may be obtained
 * thouroughly decribes the Partial Fraction Expansion method of converting complex rational polymial expressions into simple first-order and quadratic terms
-* demonstrates the use of MATLAB for finding the poles and residues of a rational polymial in s and the symbolic inverse laplace transform
+* demonstrates the use of MATLAB for finding the poles and residues of a rational polymial in s and the symbolic inverse laplace transform.
 
-+++ {"slideshow": {"slide_type": "notes"}}
+There is additional coverage, including many worked problems in Chapter 3.5 of {cite}`schaum`.
 
-## Colophon
-
-An annotatable worksheet for this presentation is available as [**Worksheet 5**](https://cpjobling.github.io/eg-247-textbook/laplace_transform/2/worksheet5.html).
-
-* The source code for this page is [laplace_transform/2/inverse_laplace.ipynb](https://github.com/cpjobling/eg-247-textbook/blob/master/laplace_transform/2/inverse_laplace.ipynb).
-
-* You can view the notes for this presentation as a webpage ([HTML](https://cpjobling.github.io/eg-247-textbook/laplace_transform/2/inverse_laplace.html)). 
-
-* This page is downloadable as a [PDF](https://cpjobling.github.io/eg-247-textbook/laplace_transform/2/inverse_laplace.pdf) file.
+We will explore the use of MATLAB to solve inverse Laplace tranforms in MATLAB Lab 4.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -49,7 +41,7 @@ but this is difficult to use in practice because it requires contour integration
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-For most engineering problems we can instead refer to **Tables of Properties** and **Common Transform Pairs** to look up the *Inverse Laplace Transform*
+For most engineering problems we can instead refer to **Tables of Properties** and **Common Transform Pairs** to look up the *Inverse Laplace Transform*.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
