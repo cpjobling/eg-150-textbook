@@ -179,7 +179,7 @@ $$X(s) = \left.-\frac{1}{s+a}e^{-(s+a)t}\right|_{0^+}^\infty=\frac{1}{s+a}\quad 
 +++
 
 :::{figure-md} ROC1
-<img src="images/roc1.png" alt="ROC for Example 1" width="60%">
+<img src="pictures/roc1.png" alt="ROC for Example 1" width="60%">
 
 ROC for Example 1
 :::
@@ -218,7 +218,7 @@ Thus the ROC for {ref}`laplace:ex2` is specified as $\mathrm{Re}(s)\lt -a$ and i
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 :::{figure-md} ROC2
-<img src="images/roc2.png" alt="ROC for Example 2" width="60%">
+<img src="pictures/roc2.png" alt="ROC for Example 2" width="60%">
 
 ROC for Example 2
 :::
@@ -276,7 +276,7 @@ Thus a very compact representation of $X(s)$ is the s-plane is to show the locat
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Traditionally, an "x" is used to indicate each pole and a "o" is used to indicate each zero. 
+Traditionally, an "x" is used to indicate each pole and a "o" is used to indicate each zero.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -287,11 +287,10 @@ $$X(s) = \frac{2s+4}{s^2+4s+3} = 2 \frac{s+2}{(s+1)(s+3}\quad \mathrm{Re}(s)\gt 
 +++
 
 :::{figure-md} Laplace:pzmap
-<img src="images/pzmap.png" alt="s-plane representation of X(s)=(2s^2+4)(s^2+rs+3)" width="60%">
+<img src="pictures/pzmap.png" alt="s-plane representation of X(s)=(2s^2+4)(s^2+rs+3)" width="60%">
 
 s-plane representation of $X(s)=(2s^2+4)(s^2+rs+3)$
 :::
-
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -306,16 +305,45 @@ Note that $X(s)$ has one zero at $s=-2$ and two poles at $s=-1$ and $s=-3$ with 
 
 The properties of the ROC are summarised in 3.1 D of {ref}`schaum` and as they are not examinable, we leave their study to the interested student.
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
 (laplace:examples)=
-## Example 9.1
+## Examples 9
+
+
+
+(ex9.1)=
+### Example 9.1
 
 Find the Laplace transform of
 
 a). $x(t)=-e^{-at}u_0(-t)$
 
 b). $x(t)=-e^{at}u_0(-t)$
+
+### Solution
+
+a) 
+
+\begin{align}
+X(s) &= -\int_{-\infty}^{\infty}e^{-at}u_o(-t)e^{-st}\,dt=-\int_{-\infty}^{0^{-}}e^{-(s+a)t}\\
+&= \left.\frac{1}{s+a}e^{-(s+a)t}\right|_{-\infty}^{0^{-}}=\frac{1}{s+a}\quad\mathrm{Re}(s)\lt-a
+\end{align}
+
+Thus we obtain
+
+$$-e^{-at}u_0(-t) \Leftrightarrow\frac{1}{s+a}\quad\mathrm{Re}(s)\lt-a$$
+
+b). Similarly
+
+\begin{align}
+X(s) &= -\int_{-\infty}^{\infty}e^{at}u_o(-t)e^{-st}\,dt=-\int_{-\infty}^{0^{-}}e^{-(s-a)t}\\
+&= -\left.\frac{1}{s+a}\right|_{-\infty}^{0^{-}}e^{-(s-a)t}=\frac{1}{s-a}\quad\mathrm{Re}(s)\lt a
+\end{align}
+
+Thus we obtain
+
+$$e^{at}u_0(-t) \Leftrightarrow\frac{1}{s-a}\quad\mathrm{Re}(s)\lt a$$
 
 +++
 

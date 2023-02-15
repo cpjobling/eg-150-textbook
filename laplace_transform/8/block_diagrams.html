@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Using Laplace Transforms for Circuit Analysis &#8212; EG-150 Signals and Systems</title>
+    <title>Block Diagrams and System Simulation &#8212; EG-150 Signals and Systems</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,13 +51,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/3/circuit_analysis.html" />
+    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/8/block_diagrams.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Using Laplace Transforms to Solve Ordinary Differential Equations" href="../6/diff_eqns.html" />
-    <link rel="prev" title="The Inverse Laplace Transform" href="../2/inverse_laplace.html" />
+    <link rel="next" title="Fourier Series" href="../../fourier_series/index.html" />
+    <link rel="prev" title="Using Laplace Transforms to Solve Ordinary Differential Equations" href="../6/diff_eqns.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -230,12 +228,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../2/inverse_laplace.html">
-     The Inverse Laplace Transform
+    <a class="reference internal" href="../3/laplace_properties.html">
+     unit_4.3 Properties of Laplace Transforms
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../4/inverse_laplace.html">
+     Unit 4.4 The Inverse Laplace Transform
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5/circuit_analysis.html">
      Using Laplace Transforms for Circuit Analysis
     </a>
    </li>
@@ -244,19 +247,9 @@ const thebe_selector_output = ".output, .cell_output"
      Using Laplace Transforms to Solve Ordinary Differential Equations
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../4/transfer_functions.html">
-     Transfer Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../7/block_diagrams.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Block Diagrams and System Simulation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../5/convolution.html">
-     The Impulse Response and Convolution
     </a>
    </li>
   </ul>
@@ -444,7 +437,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/laplace_transform/3/circuit_analysis.ipynb"
+        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/laplace_transform/8/block_diagrams.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -504,7 +497,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Flaplace_transform/3/circuit_analysis.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Flaplace_transform/8/block_diagrams.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -521,7 +514,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/laplace_transform/3/circuit_analysis.md"
+        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/laplace_transform/8/block_diagrams.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -549,7 +542,7 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/laplace_transform/3/circuit_analysis.ipynb"
+        <a href="../../_sources/laplace_transform/8/block_diagrams.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -566,7 +559,7 @@ title="Download notebook file"
       </li>
       
       <li>
-        <a href="../../_sources/laplace_transform/3/circuit_analysis.md"
+        <a href="../../_sources/laplace_transform/8/block_diagrams.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -603,196 +596,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#colophon">
-   Colophon
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#agenda">
-   Agenda
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#circuit-transformation-from-time-to-complex-frequency">
-   Circuit Transformation from Time to Complex Frequency
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-domain-model-of-a-resistive-network">
-     Time Domain Model of a Resistive Network
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complex-frequency-domain-model-of-a-resistive-circuit">
-     Complex Frequency Domain Model of a Resistive Circuit
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-domain-model-of-an-inductive-network">
-     Time Domain Model of an Inductive Network
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complex-frequency-domain-model-of-an-inductive-network">
-     Complex Frequency Domain Model of an Inductive Network
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-domain-model-of-a-capacitive-network">
-     Time Domain Model of a Capacitive Network
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complex-frequency-domain-of-a-capacitive-network">
-     Complex Frequency Domain of a Capacitive Network
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#examples">
-     Examples
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complex-impedance-z-s">
-   Complex Impedance
-   <span class="math notranslate nohighlight">
-    \(Z(s)\)
-   </span>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complex-admittance-y-s">
-   Complex Admittance
-   <span class="math notranslate nohighlight">
-    \(Y(s)\)
-   </span>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reference">
-   Reference
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Using Laplace Transforms for Circuit Analysis</h1>
+                <h1>Block Diagrams and System Simulation</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#colophon">
-   Colophon
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#agenda">
-   Agenda
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#circuit-transformation-from-time-to-complex-frequency">
-   Circuit Transformation from Time to Complex Frequency
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-domain-model-of-a-resistive-network">
-     Time Domain Model of a Resistive Network
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complex-frequency-domain-model-of-a-resistive-circuit">
-     Complex Frequency Domain Model of a Resistive Circuit
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-domain-model-of-an-inductive-network">
-     Time Domain Model of an Inductive Network
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complex-frequency-domain-model-of-an-inductive-network">
-     Complex Frequency Domain Model of an Inductive Network
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-domain-model-of-a-capacitive-network">
-     Time Domain Model of a Capacitive Network
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complex-frequency-domain-of-a-capacitive-network">
-     Complex Frequency Domain of a Capacitive Network
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#examples">
-     Examples
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complex-impedance-z-s">
-   Complex Impedance
-   <span class="math notranslate nohighlight">
-    \(Z(s)\)
-   </span>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complex-admittance-y-s">
-   Complex Admittance
-   <span class="math notranslate nohighlight">
-    \(Y(s)\)
-   </span>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reference">
-   Reference
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -800,107 +620,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="using-laplace-transforms-for-circuit-analysis">
-<h1>Using Laplace Transforms for Circuit Analysis<a class="headerlink" href="#using-laplace-transforms-for-circuit-analysis" title="Permalink to this headline">#</a></h1>
-<p>The preparatory reading for this section is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=101">Chapter 4</a> <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> which presents examples of the applications of the Laplace transform for electrical solving circuit problems.</p>
-<section id="colophon">
-<h2>Colophon<a class="headerlink" href="#colophon" title="Permalink to this headline">#</a></h2>
-<p>An annotatable worksheet for this presentation is available as <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/3/worksheet6.html"><strong>Worksheet 6</strong></a>.</p>
-<ul class="simple">
-<li><p>The source code for this page is <a class="reference external" href="https://github.com/cpjobling/eg-247-textbook/blob/master/laplace_transform/3/circuit_analysis.ipynb">laplace_transform/3/circuit_analysis.ipynb</a>.</p></li>
-<li><p>You can view the notes for this presentation as a webpage (<a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/3/circuit_analysis.html">HTML</a>).</p></li>
-<li><p>This page is downloadable as a <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/3/circuit_analysis.pdf">PDF</a> file.</p></li>
-</ul>
-</section>
-<section id="agenda">
-<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
-<p>We look at applications of the Laplace Transform for</p>
-<ul class="simple">
-<li><p>Circuit transformation from Time to Complex Frequency</p></li>
-</ul>
-<ul class="simple">
-<li><p>Complex impedance</p></li>
-</ul>
-<ul class="simple">
-<li><p>Complex admittance</p></li>
-</ul>
-</section>
-<section id="circuit-transformation-from-time-to-complex-frequency">
-<h2>Circuit Transformation from Time to Complex Frequency<a class="headerlink" href="#circuit-transformation-from-time-to-complex-frequency" title="Permalink to this headline">#</a></h2>
-<section id="time-domain-model-of-a-resistive-network">
-<h3>Time Domain Model of a Resistive Network<a class="headerlink" href="#time-domain-model-of-a-resistive-network" title="Permalink to this headline">#</a></h3>
-<p><img alt="Resistive Network: Time Domain" src="../../_images/resistive_time.png" /></p>
-</section>
-<section id="complex-frequency-domain-model-of-a-resistive-circuit">
-<h3>Complex Frequency Domain Model of a Resistive Circuit<a class="headerlink" href="#complex-frequency-domain-model-of-a-resistive-circuit" title="Permalink to this headline">#</a></h3>
-<p><img alt="Resistive Network - Complex Frequency Domain" src="../../_images/resistive_freq.png" /></p>
-</section>
-<section id="time-domain-model-of-an-inductive-network">
-<h3>Time Domain Model of an Inductive Network<a class="headerlink" href="#time-domain-model-of-an-inductive-network" title="Permalink to this headline">#</a></h3>
-<p><img alt="Inductive Network - Time Domain" src="../../_images/inductive_time.png" /></p>
-</section>
-<section id="complex-frequency-domain-model-of-an-inductive-network">
-<h3>Complex Frequency Domain Model of an Inductive Network<a class="headerlink" href="#complex-frequency-domain-model-of-an-inductive-network" title="Permalink to this headline">#</a></h3>
-<p><img alt="Inductive Network - Complex Frequency Domain" src="../../_images/inductive_freq.png" /></p>
-</section>
-<section id="time-domain-model-of-a-capacitive-network">
-<h3>Time Domain Model of a Capacitive Network<a class="headerlink" href="#time-domain-model-of-a-capacitive-network" title="Permalink to this headline">#</a></h3>
-<p><img alt="Capacitive Network - Time Domain" src="../../_images/capacitive_time.png" /></p>
-</section>
-<section id="complex-frequency-domain-of-a-capacitive-network">
-<h3>Complex Frequency Domain of a Capacitive Network<a class="headerlink" href="#complex-frequency-domain-of-a-capacitive-network" title="Permalink to this headline">#</a></h3>
-<p><img alt="Capacitive Network - Complex Frequency Domain" src="../../_images/capacitive_freq.png" /></p>
-</section>
-<section id="examples">
-<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h3>
-<p>We will work through these in class. See <a class="reference internal" href="worksheet6.html"><span class="doc std std-doc">worksheet 6</span></a>.</p>
-</section>
-</section>
-<section id="complex-impedance-z-s">
-<h2>Complex Impedance <span class="math notranslate nohighlight">\(Z(s)\)</span><a class="headerlink" href="#complex-impedance-z-s" title="Permalink to this headline">#</a></h2>
-<p>Consider the <span class="math notranslate nohighlight">\(s\)</span>-domain RLC series circuit, where the initial conditions are assumed to be zero.</p>
-<p><img alt="Complex Impedance " src="../../_images/impedence.png" /></p>
-<p>For this circuit, the sum</p>
-<div class="math notranslate nohighlight">
-\[R + sL + \frac{1}{sC}\]</div>
-<p>represents that total opposition to current flow. Then,</p>
-<div class="math notranslate nohighlight">
-\[I(s) = \frac{V_s(s)}{R + sL + 1/(sC)}\]</div>
-<p>and defining the ratio <span class="math notranslate nohighlight">\(V_s(s)/I(s)\)</span> as <span class="math notranslate nohighlight">\(Z(s)\)</span>, we obtain</p>
-<div class="math notranslate nohighlight">
-\[Z(s) = \frac{V_s(s)}{I(s)} = R + sL + \frac{1}{sC}\]</div>
-<p>The <span class="math notranslate nohighlight">\(s\)</span>-domain current <span class="math notranslate nohighlight">\(I(s)\)</span> can be found from</p>
-<div class="math notranslate nohighlight">
-\[I(s) = \frac{V_s(s)}{Z(s)}\]</div>
-<p>where</p>
-<div class="math notranslate nohighlight">
-\[Z(s) = R + sL + \frac{1}{sC}.\]</div>
-<p>Since <span class="math notranslate nohighlight">\(s = \sigma + j\omega\)</span> is a complex number, <span class="math notranslate nohighlight">\(Z(s)\)</span> is also complex and is known as the <em>complex input impedance</em> of this RLC series circuit.</p>
-</section>
-<section id="complex-admittance-y-s">
-<h2>Complex Admittance <span class="math notranslate nohighlight">\(Y(s)\)</span><a class="headerlink" href="#complex-admittance-y-s" title="Permalink to this headline">#</a></h2>
-<p>Consider the <span class="math notranslate nohighlight">\(s\)</span>-domain GLC parallel circuit shown below where the initial conditions are zero.</p>
-<p><img alt="Complex admittance " src="../../_images/admittance.png" /></p>
-<p>For this circuit</p>
-<div class="math notranslate nohighlight">
-\[GV(s)+ \frac{1}{sL}V(s) + sCV(s) = I_s(s)\]</div>
-<div class="math notranslate nohighlight">
-\[\left(G+ \frac{1}{sL} + sC\right)V(s) = I_s(s)\]</div>
-<p>Defining the ratio <span class="math notranslate nohighlight">\(I_s(s)/V(s)\)</span> as <span class="math notranslate nohighlight">\(Y(s)\)</span> we obtain</p>
-<div class="math notranslate nohighlight">
-\[Y(s)=\frac{I_s(s)}{V(s)} = G+ \frac{1}{sL} + sC = \frac{1}{Z(s)}\]</div>
-<p>The <span class="math notranslate nohighlight">\(s\)</span>-domain voltage <span class="math notranslate nohighlight">\(V(s)\)</span> can be found from</p>
-<div class="math notranslate nohighlight">
-\[V(s) = \frac{I_s(s)}{Y(s)}\]</div>
-<p>where</p>
-<div class="math notranslate nohighlight">
-\[Y(s) = G + \frac{1}{sL} + sC.\]</div>
-<p><span class="math notranslate nohighlight">\(Y(s)\)</span> is complex and is known as the <em>complex input admittance</em> of this GLC parallel circuit.</p>
-</section>
-<section id="reference">
-<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">#</a></h2>
-<p>See <a class="reference internal" href="../../zbib.html"><span class="doc std std-doc">Bibliography</span></a>.</p>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="block-diagrams-and-system-simulation">
+<h1>Block Diagrams and System Simulation<a class="headerlink" href="#block-diagrams-and-system-simulation" title="Permalink to this headline">#</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -916,7 +637,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "matlab",
-            path: "./laplace_transform/3"
+            path: "./laplace_transform/8"
         },
         predefinedOutput: true
     }
@@ -930,17 +651,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../2/inverse_laplace.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../6/diff_eqns.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">The Inverse Laplace Transform</p>
+            <p class="prev-next-title">Using Laplace Transforms to Solve Ordinary Differential Equations</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../6/diff_eqns.html" title="next page">
+    <a class='right-next' id="next-link" href="../../fourier_series/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Using Laplace Transforms to Solve Ordinary Differential Equations</p>
+        <p class="prev-next-title">Fourier Series</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

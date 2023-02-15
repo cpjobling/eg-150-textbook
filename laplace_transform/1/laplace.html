@@ -230,12 +230,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../2/inverse_laplace.html">
-     The Inverse Laplace Transform
+    <a class="reference internal" href="../3/laplace_properties.html">
+     unit_4.3 Properties of Laplace Transforms
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../3/circuit_analysis.html">
+    <a class="reference internal" href="../4/inverse_laplace.html">
+     Unit 4.4 The Inverse Laplace Transform
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5/circuit_analysis.html">
      Using Laplace Transforms for Circuit Analysis
     </a>
    </li>
@@ -245,18 +250,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../4/transfer_functions.html">
-     Transfer Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../7/block_diagrams.html">
+    <a class="reference internal" href="../8/block_diagrams.html">
      Block Diagrams and System Simulation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../5/convolution.html">
-     The Impulse Response and Convolution
     </a>
    </li>
   </ul>
@@ -675,9 +670,21 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-9-1">
-   Example 9.1
+  <a class="reference internal nav-link" href="#examples-9">
+   Examples 9
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-9-1">
+     Example 9.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution">
+     Solution
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#next-time">
@@ -758,9 +765,21 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example-9-1">
-   Example 9.1
+  <a class="reference internal nav-link" href="#examples-9">
+   Examples 9
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-9-1">
+     Example 9.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution">
+     Solution
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#next-time">
@@ -786,7 +805,7 @@ title="Print to PDF"
 <h1>Unit 4.1: The Laplace Transformation<a class="headerlink" href="#unit-4-1-the-laplace-transformation" title="Permalink to this headline">#</a></h1>
 <p>The preparatory reading for this section is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=43">Chapter 2</a> of  <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> and <span class="xref myst">Chapter 3</span> of <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/1/laplace">cpjobling.github.io/eg-150-textbook//laplace_transform/1/laplace</a></p>
-<p><img alt="QR Code for this lecture" src="../../_images/qrcode_laplace.png" /></p>
+<p><img alt="QR Code for this lecture" src="laplace_transform/1/images/qrcode_laplace.png" /></p>
 <section id="agenda">
 <h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
@@ -947,11 +966,33 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <p>[not examinable]</p>
 <p>The properties of the ROC are summarised in 3.1 D of <span class="xref std std-ref">schaum</span> and as they are not examinable, we leave their study to the interested student.</p>
 </section>
+<section id="examples-9">
+<span id="laplace-examples"></span><h2>Examples 9<a class="headerlink" href="#examples-9" title="Permalink to this headline">#</a></h2>
 <section id="example-9-1">
-<span id="laplace-examples"></span><h2>Example 9.1<a class="headerlink" href="#example-9-1" title="Permalink to this headline">#</a></h2>
+<span id="ex9-1"></span><h3>Example 9.1<a class="headerlink" href="#example-9-1" title="Permalink to this headline">#</a></h3>
 <p>Find the Laplace transform of</p>
 <p>a). <span class="math notranslate nohighlight">\(x(t)=-e^{-at}u_0(-t)\)</span></p>
 <p>b). <span class="math notranslate nohighlight">\(x(t)=-e^{at}u_0(-t)\)</span></p>
+</section>
+<section id="solution">
+<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h3>
+<p>a)</p>
+<p>\begin{align}
+X(s) &amp;= -\int_{-\infty}^{\infty}e^{-at}u_o(-t)e^{-st},dt=-\int_{-\infty}^{0^{-}}e^{-(s+a)t}\
+&amp;= \left.\frac{1}{s+a}e^{-(s+a)t}\right|_{-\infty}^{0^{-}}=\frac{1}{s+a}\quad\mathrm{Re}(s)\lt-a
+\end{align}</p>
+<p>Thus we obtain</p>
+<div class="math notranslate nohighlight">
+\[-e^{-at}u_0(-t) \Leftrightarrow\frac{1}{s+a}\quad\mathrm{Re}(s)\lt-a\]</div>
+<p>b). Similarly</p>
+<p>\begin{align}
+X(s) &amp;= -\int_{-\infty}^{\infty}e^{at}u_o(-t)e^{-st},dt=-\int_{-\infty}^{0^{-}}e^{-(s-a)t}\
+&amp;= -\left.\frac{1}{s+a}\right|_{-\infty}^{0^{-}}e^{-(s-a)t}=\frac{1}{s-a}\quad\mathrm{Re}(s)\lt a
+\end{align}</p>
+<p>Thus we obtain</p>
+<div class="math notranslate nohighlight">
+\[e^{at}u_0(-t) \Leftrightarrow\frac{1}{s-a}\quad\mathrm{Re}(s)\lt a\]</div>
+</section>
 </section>
 <section id="next-time">
 <h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>

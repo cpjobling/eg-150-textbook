@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/2/laplace_of_common_signals.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="The Inverse Laplace Transform" href="inverse_laplace.html" />
+    <link rel="next" title="Unit 4.3 Properties of the Laplace Transform" href="../3/laplace_properties.html" />
     <link rel="prev" title="Unit 4.1: The Laplace Transformation" href="../1/laplace.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -230,12 +230,17 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="inverse_laplace.html">
-     The Inverse Laplace Transform
+    <a class="reference internal" href="../3/laplace_properties.html">
+     unit_4.3 Properties of Laplace Transforms
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../3/circuit_analysis.html">
+    <a class="reference internal" href="../4/inverse_laplace.html">
+     Unit 4.4 The Inverse Laplace Transform
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../5/circuit_analysis.html">
      Using Laplace Transforms for Circuit Analysis
     </a>
    </li>
@@ -245,18 +250,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../4/transfer_functions.html">
-     Transfer Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../7/block_diagrams.html">
+    <a class="reference internal" href="../8/block_diagrams.html">
      Block Diagrams and System Simulation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../5/convolution.html">
-     The Impulse Response and Convolution
     </a>
    </li>
   </ul>
@@ -626,117 +621,50 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#do-i-really-need-to-learn-the-theory">
-   Do I really need to learn the theory?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#agenda">
    Agenda
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition-of-the-laplace-transform">
-   Definition of the Laplace Transform
+  <a class="reference internal nav-link" href="#a-unit-impulse-function-delta-t">
+   A. Unit impulse function
+   <span class="math notranslate nohighlight">
+    \(\delta(t)\)
+   </span>
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#laplace-transform">
-     Laplace transform
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#inverse-laplace-transform">
-     Inverse Laplace Transform
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#region-of-convergence">
-     Region of convergence
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#informal-transform-notation">
-     Informal transform notation
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#some-selected-properties">
-   Some Selected Properties
+  <a class="reference internal nav-link" href="#b-delayed-impulse-function-delta-t-a">
+   B. Delayed impulse function
+   <span class="math notranslate nohighlight">
+    \(\delta(t-a)\)
+   </span>
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#linearity">
-     Linearity
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-shift">
-     Time shift
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#frequency-shift">
-     Frequency shift
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#scaling">
-     Scaling
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#differentiation-in-the-time-domain">
-     Differentiation in the time domain
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#differentiation-in-the-complex-frequency-domain">
-     Differentiation in the complex frequency domain
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#integration-in-the-time-domain">
-     Integration in the time domain
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#integration-in-the-complex-frequency-domain">
-     Integration in the complex frequency domain
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-periodicity-property">
-     Time periodicity property
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#initial-value-theorem">
-     Initial value theorem
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#final-value-theorem">
-     Final value theorem
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#convolution-in-the-time-domain">
-     Convolution in the time domain
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#convolution-in-the-complex-frequency-domain">
-     Convolution in the complex frequency domain
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#transform-tables">
-   Transform tables
+  <a class="reference internal nav-link" href="#c-unit-step-function-u-0-t">
+   C. Unit step function
+   <span class="math notranslate nohighlight">
+    \(u_0(t)\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#d-exponential-function-x-t-e-at-u-0-t">
+   D. Exponential function
+   <span class="math notranslate nohighlight">
+    \(x(t) = e^{-at}u_0(t)\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#e-laplace-transform-pairs-for-other-common-signals">
+   E. Laplace Transform Pairs for Other Common SIgnals
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#f-transforms-of-common-signals">
+   F. Transforms of Common Signals
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -747,28 +675,75 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#transforms-of-elementary-signals">
-   Transforms of Elementary Signals
+  <a class="reference internal nav-link" href="#g-matlab-examples">
+   G. MATLAB Examples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#impulse-delta-t">
+     Impulse
+     <span class="math notranslate nohighlight">
+      \(\delta(t)\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#delayed-impulse-delta-t-a">
+     Delayed impulse
+     <span class="math notranslate nohighlight">
+      \(\delta(t-a)\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unit-step-u-0-t">
+     Unit step
+     <span class="math notranslate nohighlight">
+      \(u_0(t)\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unit-ramp-u-1-t-tu-0-t">
+     Unit ramp
+     <span class="math notranslate nohighlight">
+      \(u_1(t)=tu_0(t)\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#powers-of-t">
+     Powers of
+     <span class="math notranslate nohighlight">
+      \(t\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exponentials">
+     Exponentials
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sinusoids">
+     Sinusoids
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#decaying-sinusoids">
+     Decaying sinusoids
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#next-time">
+   Next Time
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#laplace-transforms-of-common-waveforms">
-   Laplace transforms of common waveforms
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-matlab-to-find-laplace-transforms">
-   Using Matlab to Find Laplace Transforms
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#homework">
-   Homework
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reference">
-   Reference
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -791,117 +766,50 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#do-i-really-need-to-learn-the-theory">
-   Do I really need to learn the theory?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#agenda">
    Agenda
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition-of-the-laplace-transform">
-   Definition of the Laplace Transform
+  <a class="reference internal nav-link" href="#a-unit-impulse-function-delta-t">
+   A. Unit impulse function
+   <span class="math notranslate nohighlight">
+    \(\delta(t)\)
+   </span>
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#laplace-transform">
-     Laplace transform
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#inverse-laplace-transform">
-     Inverse Laplace Transform
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#region-of-convergence">
-     Region of convergence
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#informal-transform-notation">
-     Informal transform notation
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#some-selected-properties">
-   Some Selected Properties
+  <a class="reference internal nav-link" href="#b-delayed-impulse-function-delta-t-a">
+   B. Delayed impulse function
+   <span class="math notranslate nohighlight">
+    \(\delta(t-a)\)
+   </span>
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#linearity">
-     Linearity
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-shift">
-     Time shift
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#frequency-shift">
-     Frequency shift
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#scaling">
-     Scaling
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#differentiation-in-the-time-domain">
-     Differentiation in the time domain
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#differentiation-in-the-complex-frequency-domain">
-     Differentiation in the complex frequency domain
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#integration-in-the-time-domain">
-     Integration in the time domain
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#integration-in-the-complex-frequency-domain">
-     Integration in the complex frequency domain
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-periodicity-property">
-     Time periodicity property
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#initial-value-theorem">
-     Initial value theorem
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#final-value-theorem">
-     Final value theorem
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#convolution-in-the-time-domain">
-     Convolution in the time domain
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#convolution-in-the-complex-frequency-domain">
-     Convolution in the complex frequency domain
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#transform-tables">
-   Transform tables
+  <a class="reference internal nav-link" href="#c-unit-step-function-u-0-t">
+   C. Unit step function
+   <span class="math notranslate nohighlight">
+    \(u_0(t)\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#d-exponential-function-x-t-e-at-u-0-t">
+   D. Exponential function
+   <span class="math notranslate nohighlight">
+    \(x(t) = e^{-at}u_0(t)\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#e-laplace-transform-pairs-for-other-common-signals">
+   E. Laplace Transform Pairs for Other Common SIgnals
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#f-transforms-of-common-signals">
+   F. Transforms of Common Signals
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -912,28 +820,75 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#transforms-of-elementary-signals">
-   Transforms of Elementary Signals
+  <a class="reference internal nav-link" href="#g-matlab-examples">
+   G. MATLAB Examples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#impulse-delta-t">
+     Impulse
+     <span class="math notranslate nohighlight">
+      \(\delta(t)\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#delayed-impulse-delta-t-a">
+     Delayed impulse
+     <span class="math notranslate nohighlight">
+      \(\delta(t-a)\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unit-step-u-0-t">
+     Unit step
+     <span class="math notranslate nohighlight">
+      \(u_0(t)\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unit-ramp-u-1-t-tu-0-t">
+     Unit ramp
+     <span class="math notranslate nohighlight">
+      \(u_1(t)=tu_0(t)\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#powers-of-t">
+     Powers of
+     <span class="math notranslate nohighlight">
+      \(t\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exponentials">
+     Exponentials
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sinusoids">
+     Sinusoids
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#decaying-sinusoids">
+     Decaying sinusoids
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#next-time">
+   Next Time
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#laplace-transforms-of-common-waveforms">
-   Laplace transforms of common waveforms
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-matlab-to-find-laplace-transforms">
-   Using Matlab to Find Laplace Transforms
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#homework">
-   Homework
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reference">
-   Reference
+  <a class="reference internal nav-link" href="#references">
+   References
   </a>
  </li>
 </ul>
@@ -948,243 +903,281 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="unit-4-2-laplace-transform-of-some-common-signals">
 <h1>Unit 4.2: Laplace Transform of Some Common Signals<a class="headerlink" href="#unit-4-2-laplace-transform-of-some-common-signals" title="Permalink to this headline">#</a></h1>
-<p>The preparatory reading for this section is Chapter 2 of <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> and Chapter 3.3 of <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
-<section id="do-i-really-need-to-learn-the-theory">
-<h2>Do I really need to learn the theory?<a class="headerlink" href="#do-i-really-need-to-learn-the-theory" title="Permalink to this headline">#</a></h2>
-<p>There is some intellectual benefit to being aware of the properties of the Laplace transformation and their proofs but being a pragmatic breed, we engineers typically prefer to make use of quick references of these properties and transforms, relying on Mathematics only when facing a problem not before encountered.</p>
-<p>In our practice, we want to encourage you to use of the properties and transform tables to solve problems so I will present only the properties and not the proofs.</p>
-</section>
+<p>The preparatory reading for this section is Chapter 2.2 of <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> and Chapter 3.4 of <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/3/laplace_of_common_signals">cpjobling.github.io/eg-150-textbook//laplace_transform/2/laplace_of_common_signals</a></p>
+<p><img alt="QR Code for this lecture" src="../../_images/qrcode_laplace_2.png" /></p>
 <section id="agenda">
 <h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Definition of the Laplace Transform</p></li>
+<li><p><a class="reference internal" href="#lap2-impulse"><span class="std std-ref">A. Unit impulse function \delta(t)</span></a></p></li>
 </ul>
 <ul class="simple">
-<li><p>Some Selected Properties</p></li>
+<li><p><a class="reference internal" href="#lap2-delayed-impulse"><span class="std std-ref">B. Delayed impulse function \delta(t-a)</span></a></p></li>
 </ul>
 <ul class="simple">
-<li><p>Transforms of Elementary Signals</p></li>
+<li><p><span class="xref std std-ref">lap:unit_step</span></p></li>
 </ul>
 <ul class="simple">
-<li><p>Common system responses</p></li>
+<li><p><span class="xref std std-ref">lap:exp</span></p></li>
 </ul>
 <ul class="simple">
-<li><p>Transform tables</p></li>
+<li><p><a class="reference internal" href="#lap-xform-table"><span class="std std-ref">F. Transforms of Common Signals</span></a></p></li>
 </ul>
 <ul class="simple">
-<li><p>Examples</p></li>
+<li><p><a class="reference internal" href="#lap-matlab"><span class="std std-ref">G. MATLAB Examples</span></a></p></li>
 </ul>
 </section>
-<section id="definition-of-the-laplace-transform">
-<h2>Definition of the Laplace Transform<a class="headerlink" href="#definition-of-the-laplace-transform" title="Permalink to this headline">#</a></h2>
-<section id="laplace-transform">
-<h3>Laplace transform<a class="headerlink" href="#laplace-transform" title="Permalink to this headline">#</a></h3>
+<section id="a-unit-impulse-function-delta-t">
+<span id="lap2-impulse"></span><h2>A. Unit impulse function <span class="math notranslate nohighlight">\(\delta(t)\)</span><a class="headerlink" href="#a-unit-impulse-function-delta-t" title="Permalink to this headline">#</a></h2>
 <div class="math notranslate nohighlight">
-\[\mathcal{L}\{f(t)\}=F(s) = \int_{0}^{\infty}f(t)e^{-st}dt\]</div>
+\[\mathcal{L}\left\{\delta(t)\right\}=\int_{-\infty}^{\infty}\delta(t)e^{-st}\,dt\]</div>
+<p>Using the sifting property of the Dirac delta function</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L}\left\{\delta(t)\right\}=\int_{-\infty}^{\infty}\delta(t)e^{-st}\,dt = e^{-s(0)}=1\quad \mathrm{all}\ s\]</div>
+<p>Thus the Laplace transform pair is</p>
+<div class="math notranslate nohighlight">
+\[\delta(t) \Leftrightarrow 1\]</div>
+<p>for all <span class="math notranslate nohighlight">\(s\)</span>.</p>
 </section>
-<section id="inverse-laplace-transform">
-<h3>Inverse Laplace Transform<a class="headerlink" href="#inverse-laplace-transform" title="Permalink to this headline">#</a></h3>
+<section id="b-delayed-impulse-function-delta-t-a">
+<span id="lap2-delayed-impulse"></span><h2>B. Delayed impulse function <span class="math notranslate nohighlight">\(\delta(t-a)\)</span><a class="headerlink" href="#b-delayed-impulse-function-delta-t-a" title="Permalink to this headline">#</a></h2>
 <div class="math notranslate nohighlight">
-\[\mathcal{L}^{-1}\{F(s)\}=f(t)=\frac{1}{2\pi j}\int_{\sigma-j\omega}^{\sigma+j\omega}F(s)e^{st} ds\]</div>
+\[\mathcal{L}\left\{\delta(t-a)\right\}=\int_{-\infty}^{\infty}\delta(t-a)e^{-st}\,dt\]</div>
+<p>Using the sifting property of the Dirac delta function again</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L}\left\{\delta(t)\right\}=\int_{-\infty}^{\infty}\delta(t-a)e^{-st}\,dt = e^{-as}\quad \sigma &gt; 0\]</div>
+<p>Thus the Laplace transform pair is</p>
+<div class="math notranslate nohighlight">
+\[\delta(t-a) \Leftrightarrow e^{-as}\]</div>
+<p>for <span class="math notranslate nohighlight">\(\mathrm{Re}(s) &gt; 0\)</span>.</p>
 </section>
-<section id="region-of-convergence">
-<h3>Region of convergence<a class="headerlink" href="#region-of-convergence" title="Permalink to this headline">#</a></h3>
-<p>For a Laplace transfomation to exist, the integral must be bounded. That is
-$<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ - st}}dt} } \right| &lt; \infty \)</span>$</p>
-<p>For most signals and systems of interest in this module it will be.</p>
-<p>(See discussion of exponential order on Page 2-2 of <span id="id3">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>).</p>
+<section id="c-unit-step-function-u-0-t">
+<span id="lap2-unit-step"></span><h2>C. Unit step function <span class="math notranslate nohighlight">\(u_0(t)\)</span><a class="headerlink" href="#c-unit-step-function-u-0-t" title="Permalink to this headline">#</a></h2>
+<p>\begin{align}
+\mathcal{L}\left{u_0(t)\right}&amp;=\int_{-\infty}^{\infty}u_0(t)e^{-st},dt = \int_{0^{+}}^{\infty}e^{-st},dt\
+&amp;= \left.-\frac{1}{s}e^{-st}\right|_{0^{+}}^{\infty}=\frac{1}{s}\quad\mathrm{Re}(s)\gt 0
+\end{align}</p>
+<p>where <span class="math notranslate nohighlight">\(0^{+}=\lim_\epsilon\to 0(0+\epsilon)\)</span>.</p>
+<p>Thus the Laplace transform pair is</p>
+<div class="math notranslate nohighlight">
+\[u_0(t) \Leftrightarrow \frac{1}{s}\]</div>
+<p>for <span class="math notranslate nohighlight">\(\mathrm{Re}(s) &gt; 0\)</span>.</p>
 </section>
-<section id="informal-transform-notation">
-<h3>Informal transform notation<a class="headerlink" href="#informal-transform-notation" title="Permalink to this headline">#</a></h3>
-<p>The Laplace transform and its inverse come in pairs which are tabulated for ease of reference. For any given function of time <span class="math notranslate nohighlight">\(f(t)\)</span> we only need to know the transform</p>
+<section id="d-exponential-function-x-t-e-at-u-0-t">
+<span id="lap2-exp"></span><h2>D. Exponential function <span class="math notranslate nohighlight">\(x(t) = e^{-at}u_0(t)\)</span><a class="headerlink" href="#d-exponential-function-x-t-e-at-u-0-t" title="Permalink to this headline">#</a></h2>
+<p>We already showed in <a class="reference internal" href="../1/laplace.html#laplace-ex1"><span class="std std-ref">Example 1</span></a> that</p>
 <div class="math notranslate nohighlight">
-\[f(t)\Leftrightarrow F(s)\]</div>
-<p>to be able to get to the Laplace transform and <em>vice versa</em>.</p>
+\[\mathcal{L}\left\{e^{-at}u_0(t)\right\} = \frac{1}{s+a}.\]</div>
+<p>Thus the Laplace transform pair is</p>
+<div class="math notranslate nohighlight">
+\[e^{-at}u_0(t) \Leftrightarrow \frac{1}{s+a}\]</div>
+<p>for <span class="math notranslate nohighlight">\(\mathrm{Re}(s) &gt; -a\)</span>.</p>
 </section>
-</section>
-<section id="some-selected-properties">
-<h2>Some Selected Properties<a class="headerlink" href="#some-selected-properties" title="Permalink to this headline">#</a></h2>
-<section id="linearity">
-<h3>Linearity<a class="headerlink" href="#linearity" title="Permalink to this headline">#</a></h3>
-<div class="math notranslate nohighlight">
-\[c_1f_1(t) + c_2f_2(t) + \ldots + c_nf_n(t) \Leftrightarrow c_1F_1(s) + c_2F_2(s) + \ldots + c_nF_n(s)\]</div>
-</section>
-<section id="time-shift">
-<h3>Time shift<a class="headerlink" href="#time-shift" title="Permalink to this headline">#</a></h3>
-<div class="math notranslate nohighlight">
-\[f(t-a)u_0(t-a)\Leftrightarrow e^{-as}F(s)\]</div>
-</section>
-<section id="frequency-shift">
-<h3>Frequency shift<a class="headerlink" href="#frequency-shift" title="Permalink to this headline">#</a></h3>
-<div class="math notranslate nohighlight">
-\[e^{-at}f(t)\Leftrightarrow F(s+a)\]</div>
-</section>
-<section id="scaling">
-<h3>Scaling<a class="headerlink" href="#scaling" title="Permalink to this headline">#</a></h3>
-<div class="math notranslate nohighlight">
-\[f(at)\Leftrightarrow \frac{1}{a}F\left(\frac{s}{a}\right)\]</div>
-</section>
-<section id="differentiation-in-the-time-domain">
-<h3>Differentiation in the time domain<a class="headerlink" href="#differentiation-in-the-time-domain" title="Permalink to this headline">#</a></h3>
-<div class="math notranslate nohighlight">
-\[f'(t) = \frac{d}{dt} f(t) \Leftrightarrow sF(s) - f(0^-)\]</div>
-<p>This property facilitates the solution of differential equations</p>
-<p>The differentiation property can be extended to higher-orders as follows
-$<span class="math notranslate nohighlight">\(f''(t) = \frac{d^2}{dt^2}f(t) \Leftrightarrow s^2F(s) - sf(0^-) - f'(0^-)\)</span>$</p>
-<div class="math notranslate nohighlight">
-\[f''(t) = \frac{d^3}{dt^3}f(t) \Leftrightarrow s^3F(s) - s^2f(0) - sf'(0^-) - f''(0^-)\]</div>
-<p>and in general</p>
-<div class="math notranslate nohighlight">
-\[f^{(n)}(t) = \frac{d^n}{dt^n}f(t) \Leftrightarrow s^nF(s) - s^{n-1}f(0^-) - s^{n-2}f'(0^-) - \cdots - f^{(n-1)}(0^-)\]</div>
-</section>
-<section id="differentiation-in-the-complex-frequency-domain">
-<h3>Differentiation in the complex frequency domain<a class="headerlink" href="#differentiation-in-the-complex-frequency-domain" title="Permalink to this headline">#</a></h3>
-<div class="math notranslate nohighlight">
-\[tf(t) \Leftrightarrow -\frac{d}{ds}F(s)\]</div>
-<p>and in general</p>
-<div class="math notranslate nohighlight">
-\[t^nf(t) \Leftrightarrow (-1)^n\frac{d^n}{ds^n}F(s)\]</div>
-</section>
-<section id="integration-in-the-time-domain">
-<h3>Integration in the time domain<a class="headerlink" href="#integration-in-the-time-domain" title="Permalink to this headline">#</a></h3>
-<div class="math notranslate nohighlight">
-\[\int_{-\infty}^tf(\tau)d\tau \Leftrightarrow \frac{F(s)}{s}+\frac{f(0^-)}{s}\]</div>
-<p>This property is important because it provides a way to model the solution of a differential equation using op-amp integrators in so-called <a class="reference external" href="https://en.wikipedia.org/wiki/Analog_computer">Analogue Computers</a> and is now the basis for numerical integration systems like Simulink.</p>
-</section>
-<section id="integration-in-the-complex-frequency-domain">
-<h3>Integration in the complex frequency domain<a class="headerlink" href="#integration-in-the-complex-frequency-domain" title="Permalink to this headline">#</a></h3>
-<p>Providing that</p>
-<div class="math notranslate nohighlight">
-\[\lim_{t\to 0} \frac{f(t)}{t}\]</div>
-<p>exists</p>
-<div class="math notranslate nohighlight">
-\[\frac{f(t)}{t}\Leftrightarrow \int_s^\infty F(s)ds\]</div>
-</section>
-<section id="time-periodicity-property">
-<h3>Time periodicity property<a class="headerlink" href="#time-periodicity-property" title="Permalink to this headline">#</a></h3>
-<p>If <span class="math notranslate nohighlight">\(f(t)\)</span> is a periodic function with period <span class="math notranslate nohighlight">\(T\)</span> such that <span class="math notranslate nohighlight">\(f(t) = f(t+nT)\)</span> for <span class="math notranslate nohighlight">\(n=1,2,3,\ldots\)</span> then</p>
-<div class="math notranslate nohighlight">
-\[f(t+nT) \Leftrightarrow \frac{\int_0^T f(t)e^{-st}dt}{1-e^{-sT}}\]</div>
-</section>
-<section id="initial-value-theorem">
-<h3>Initial value theorem<a class="headerlink" href="#initial-value-theorem" title="Permalink to this headline">#</a></h3>
-<div class="math notranslate nohighlight">
-\[\lim_{t\to 0}f(t) \Leftrightarrow \lim_{s\to \infty} sF(s) = f(0^-)\]</div>
-</section>
-<section id="final-value-theorem">
-<h3>Final value theorem<a class="headerlink" href="#final-value-theorem" title="Permalink to this headline">#</a></h3>
-<div class="math notranslate nohighlight">
-\[\lim_{t\to \infty}f(t) \Leftrightarrow \lim_{s\to 0} sF(s) = f(\infty)\]</div>
-</section>
-<section id="convolution-in-the-time-domain">
-<h3>Convolution in the time domain<a class="headerlink" href="#convolution-in-the-time-domain" title="Permalink to this headline">#</a></h3>
-<div class="math notranslate nohighlight">
-\[f_1(t)*f_2(t) = \int_{0}^{t}f_1(\tau)f_2(t-\tau) d\tau \Leftrightarrow F_1(s) F_2(s)\]</div>
-<p>This is another important result as it allows us to compute the response of a system by simply multiplying the Laplace transforms of the system and the signal and then inverse Laplace transforming the result.</p>
-<p>This is usually much simpler than computing the convolution integral in the time domain – an operation we we see later!</p>
-</section>
-<section id="convolution-in-the-complex-frequency-domain">
-<h3>Convolution in the complex frequency domain<a class="headerlink" href="#convolution-in-the-complex-frequency-domain" title="Permalink to this headline">#</a></h3>
-<p>Multiplying two signals together in the time domain is the same as performing convolution in the complex frequency domain.</p>
-<div class="math notranslate nohighlight">
-\[f_1(t)f_2(t) \Leftrightarrow \frac{1}{2\pi j}F_1(s) * F_2(s) = \frac{1}{2\pi j}\lim_{T\to \infty}\int_{c-jT}^{c+jT}F_1(\sigma)F_2(s-\sigma)d\sigma\]</div>
-<p>Convolution in the complex frequency domain is nasty – multiplication in the time domain is relatively painless.</p>
-</section>
-</section>
-<section id="transform-tables">
-<h2>Transform tables<a class="headerlink" href="#transform-tables" title="Permalink to this headline">#</a></h2>
-<p>Every textbook that covers Laplace transforms will provide a tables of properties and the most commonly encountered transforms. Karris is no exception and you will find a table of transforms in Tables 2.1 and 2.2.</p>
+<section id="e-laplace-transform-pairs-for-other-common-signals">
+<span id="lap-others"></span><h2>E. Laplace Transform Pairs for Other Common SIgnals<a class="headerlink" href="#e-laplace-transform-pairs-for-other-common-signals" title="Permalink to this headline">#</a></h2>
+<p>We can continue to derive the Laplace transforms of the most commonly encoutered signals, and in some cases, e.g. unit ramp <span class="math notranslate nohighlight">\(r(t)=u_1(t)=tu_0(t)\)</span>, <span class="math notranslate nohighlight">\(u_n(t)=t^nu_0(t)\)</span>, <span class="math notranslate nohighlight">\(t^ne^{-at}u_0(t)\)</span>, <span class="math notranslate nohighlight">\(\cos \omega t u_0(t)\)</span>, <span class="math notranslate nohighlight">\(\sin \omega t u_0(t)\)</span> and many others, that we use often, the mathematics can tricky.</p>
+<p>Luckily for us, most of the most useful transforms have already been calculated for us and gathered together into tables.</p>
 <p>Here are a couple that are on the net for your reference</p>
 <ul class="simple">
 <li><p>Laplace transform <a class="reference external" href="https://en.wikipedia.org/wiki/Laplace_transform">(Wikipedia)</a></p></li>
 <li><p>Laplace Transform <a class="reference external" href="https://mathworld.wolfram.com/LaplaceTransform.html">(Wolfram Alpha)</a></p></li>
 </ul>
-<section id="don-t-panic">
-<h3>Don’t panic<a class="headerlink" href="#don-t-panic" title="Permalink to this headline">#</a></h3>
-<p>Tables of Laplace transform properties and transforms will be included with the exam paper.</p>
+<p>Every textbook that covers Laplace transforms will provide tables of properties (see <span class="xref std std-doc">laplace_transfer_properties</span>) and the most commonly encountered transforms. You will find such tables in  Tables 2.1 and 2.2 of <span id="id3">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> and Table 3.1 and Table 3.3 of <span id="id4">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>We reproduce Table 3.1 of <span id="id5">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span> below. You will find a table of Laplace transform properties in the next chapter.</p>
 </section>
-</section>
-<section id="transforms-of-elementary-signals">
-<h2>Transforms of Elementary Signals<a class="headerlink" href="#transforms-of-elementary-signals" title="Permalink to this headline">#</a></h2>
+<section id="f-transforms-of-common-signals">
+<span id="lap-xform-table"></span><h2>F. Transforms of Common Signals<a class="headerlink" href="#f-transforms-of-common-signals" title="Permalink to this headline">#</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p> </p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(f(t)\)</span></p></th>
 <th class="head"><p><span class="math notranslate nohighlight">\(F(s)\)</span></p></th>
+<th class="head"><p>ROC</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>1</p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle \delta(t)\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle 1\)</span></p></td>
+<td><p>All <span class="math notranslate nohighlight">\(s\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle \delta(t-a)\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle e^{-as}\)</span></p></td>
+<td><p>All <span class="math notranslate nohighlight">\(s\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p>3</p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle u_0(t)\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle \frac{1}{s}\)</span></p></td>
+<td><p>Re(<span class="math notranslate nohighlight">\(s\)</span>) &gt; 0</p></td>
 </tr>
 <tr class="row-odd"><td><p>4</p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle t u_0(t)\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle \frac{1}{s^2}\)</span></p></td>
+<td><p>Re(<span class="math notranslate nohighlight">\(s\)</span>) &gt; 0</p></td>
 </tr>
 <tr class="row-even"><td><p>5</p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle t^n u_0(t)\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle \frac{n!}{s^{n+1}}\)</span></p></td>
+<td><p>Re(<span class="math notranslate nohighlight">\(s\)</span>) &gt; 0</p></td>
 </tr>
 <tr class="row-odd"><td><p>6</p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle e^{-at}u_0(t)\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle \frac{1}{s+a}\)</span></p></td>
+<td><p>Re(<span class="math notranslate nohighlight">\(s\)</span>) &gt; <span class="math notranslate nohighlight">\(-\)</span>Re(<span class="math notranslate nohighlight">\(a\)</span>)</p></td>
 </tr>
 <tr class="row-even"><td><p>7</p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle t^n e^{-at} u_0(t)\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle \frac{n!}{(s+a)^{n+1}}\)</span></p></td>
+<td><p>Re(<span class="math notranslate nohighlight">\(s\)</span>) &gt; <span class="math notranslate nohighlight">\(-\)</span>Re(<span class="math notranslate nohighlight">\(a\)</span>)</p></td>
 </tr>
 <tr class="row-odd"><td><p>8</p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle \sin (\omega t) u_0(t)\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\omega}{s^2 + \omega^2}\)</span></p></td>
+<td><p>Re(<span class="math notranslate nohighlight">\(s\)</span>) &gt; 0</p></td>
 </tr>
 <tr class="row-even"><td><p>9</p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle \cos (\omega t) u_0(t)\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle \frac{s}{s^2 + \omega^2}\)</span></p></td>
+<td><p>Re(<span class="math notranslate nohighlight">\(s\)</span>) &gt; 0</p></td>
 </tr>
 <tr class="row-odd"><td><p>10</p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle e^{-at} \sin (\omega t) u_0(t)\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\omega}{(s + a)^2 + \omega^2}\)</span></p></td>
+<td><p>Re(<span class="math notranslate nohighlight">\(s\)</span>) &gt; <span class="math notranslate nohighlight">\(-\)</span>Re(<span class="math notranslate nohighlight">\(a\)</span>)</p></td>
 </tr>
 <tr class="row-even"><td><p>11</p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle e^{-at}\cos (\omega t) u_0(t)\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\displaystyle \frac{s+a}{(s+a)^2 + \omega^2}\)</span></p></td>
+<td><p>Re(<span class="math notranslate nohighlight">\(s\)</span>) &gt; <span class="math notranslate nohighlight">\(-\)</span>Re(<span class="math notranslate nohighlight">\(a\)</span>)</p></td>
 </tr>
 </tbody>
 </table>
-<p>Refer to the textbook if you want to see the proof of these transforms.</p>
+<p>Refer to the Chapter 2.3 of <span id="id6">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> if you want to study the proofs of these transforms.</p>
+<section id="don-t-panic">
+<h3>Don’t panic<a class="headerlink" href="#don-t-panic" title="Permalink to this headline">#</a></h3>
+<p>Tables of Laplace transform properties and transforms will be included with the exam paper.</p>
 </section>
-<section id="laplace-transforms-of-common-waveforms">
-<h2>Laplace transforms of common waveforms<a class="headerlink" href="#laplace-transforms-of-common-waveforms" title="Permalink to this headline">#</a></h2>
-<p>We will work through a few of the following on the board in class</p>
+</section>
+<section id="g-matlab-examples">
+<span id="lap-matlab"></span><h2>G. MATLAB Examples<a class="headerlink" href="#g-matlab-examples" title="Permalink to this headline">#</a></h2>
+<p>Let’s use the MATLAB Symbolic Math Toolbox to prove some of these transforms.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span> <span class="n">s</span> <span class="n">t</span> <span class="n">a</span> <span class="n">omega</span>
+<span class="n">assume</span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">assume</span><span class="p">(</span><span class="n">omega</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">=</span> <span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="impulse-delta-t">
+<h3>Impulse <span class="math notranslate nohighlight">\(\delta(t)\)</span><a class="headerlink" href="#impulse-delta-t" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">laplace</span><span class="p">(</span><span class="n">dirac</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="delayed-impulse-delta-t-a">
+<h3>Delayed impulse <span class="math notranslate nohighlight">\(\delta(t-a)\)</span><a class="headerlink" href="#delayed-impulse-delta-t-a" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">laplace</span><span class="p">(</span><span class="n">dirac</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">a</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="unit-step-u-0-t">
+<h3>Unit step <span class="math notranslate nohighlight">\(u_0(t)\)</span><a class="headerlink" href="#unit-step-u-0-t" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">laplace</span><span class="p">(</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="unit-ramp-u-1-t-tu-0-t">
+<h3>Unit ramp <span class="math notranslate nohighlight">\(u_1(t)=tu_0(t)\)</span><a class="headerlink" href="#unit-ramp-u-1-t-tu-0-t" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">laplace</span><span class="p">(</span><span class="n">t</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="powers-of-t">
+<h3>Powers of <span class="math notranslate nohighlight">\(t\)</span><a class="headerlink" href="#powers-of-t" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span> <span class="n">n</span> <span class="n">integer</span>
+<span class="n">assume</span><span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">laplace</span><span class="p">(</span><span class="n">t</span><span class="o">^</span><span class="n">n</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exponentials">
+<h3>Exponentials<a class="headerlink" href="#exponentials" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">laplace</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="n">laplace</span><span class="p">(</span><span class="n">t</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="n">laplace</span><span class="p">(</span><span class="n">t</span><span class="o">^</span><span class="n">n</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="sinusoids">
+<h3>Sinusoids<a class="headerlink" href="#sinusoids" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">laplace</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="n">laplace</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="decaying-sinusoids">
+<h3>Decaying sinusoids<a class="headerlink" href="#decaying-sinusoids" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">laplace</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="n">laplace</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="next-time">
+<h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
+<p>We move on to consider</p>
 <ul class="simple">
-<li><p>Pulse</p></li>
-<li><p>Linear segment</p></li>
-<li><p>Triangular waveform</p></li>
-<li><p>Rectangular periodic waveform (square wave)</p></li>
-<li><p>Half rectified sine wave</p></li>
+<li><p><span class="xref std std-doc">../laplace_transform/3/laplace_properties</span></p></li>
 </ul>
 </section>
-<section id="using-matlab-to-find-laplace-transforms">
-<h2>Using Matlab to Find Laplace Transforms<a class="headerlink" href="#using-matlab-to-find-laplace-transforms" title="Permalink to this headline">#</a></h2>
-<p>The Matlab function <code class="docutils literal notranslate"><span class="pre">laplace</span></code> can be used to find laplace transforms of time functions. The lab exercises will illustrate this.</p>
-</section>
-<section id="homework">
-<h2>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">#</a></h2>
-<p>Attempt at least one of the end-of-chapter exercises from each question 1-7 of <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=75#ppg=71">Section 2.7</a> of <span id="id4">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> . Don’t look at the answers until you have attempted the problems.</p>
-<p>If we have time, I will work through one or two of these in class.</p>
-</section>
-<section id="reference">
-<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">#</a></h2>
-<p>See <a class="reference internal" href="../../zbib.html"><span class="doc std std-doc">Bibliography</span></a></p>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<div class="docutils container" id="id7">
+<dl class="citation">
+<dt class="label" id="id17"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id4">2</a>,<a href="#id5">3</a>)</span></dt>
+<dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets">Kar12</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id6">3</a>)</span></dt>
+<dd><p>Steven T. Karris. <em>Signals and systems with MATLAB computing and Simulink modeling</em>. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197">https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197</a>.</p>
+</dd>
+</dl>
+</div>
 </section>
 </section>
 
@@ -1197,16 +1190,16 @@ $<span class="math notranslate nohighlight">\(f''(t) = \frac{d^2}{dt^2}f(t) \Lef
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "imatlab"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "imatlab",
             path: "./laplace_transform/2"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'imatlab'</script>
 
               </div>
               
@@ -1222,10 +1215,10 @@ $<span class="math notranslate nohighlight">\(f''(t) = \frac{d^2}{dt^2}f(t) \Lef
             <p class="prev-next-title">Unit 4.1: The Laplace Transformation</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="inverse_laplace.html" title="next page">
+    <a class='right-next' id="next-link" href="../3/laplace_properties.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">The Inverse Laplace Transform</p>
+        <p class="prev-next-title">Unit 4.3 Properties of the Laplace Transform</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
