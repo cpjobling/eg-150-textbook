@@ -315,7 +315,7 @@ laplace(exp(-a*t)*sin(omega*t)*u0(t))
 
 We move on to consider 
 
-* {doc}`../laplace_transform/3/laplace_properties.md`
+* {doc}`../3/laplace_properties.md`
 
 ## References
 

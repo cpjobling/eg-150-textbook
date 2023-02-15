@@ -349,7 +349,7 @@ $$e^{at}u_0(-t) \Leftrightarrow\frac{1}{s-a}\quad\mathrm{Re}(s)\lt a$$
 
 We move on to consider 
 
-* {doc}`../laplace_transform/2/laplace_of_common_signals.md`
+* {doc}`../2/laplace_of_common_signals.md`
 
 ## References
 
