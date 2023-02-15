@@ -225,7 +225,7 @@ Examples of the above convolution integral operation are given in Examples 5.4 t
 (step_response)=
 ## F. Step Response
 
-The *step response* $s(t)$ of a continuous-time LTI system (represented $\mathbf{T}$) is defined by the response of the system when the input is $u_0(t)$; that is,
+The *step response* $s(t)$ of a continuous-time LTI system (represented by $\mathbf{T}$) is defined by the response of the system when the input is $u_0(t)$; that is,
 
 $$s(t) = \mathbf{T}\left\{u_0(t)\right\}$$
 

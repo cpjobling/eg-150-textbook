@@ -1,6 +1,6 @@
 (laplace)=
 
-# Laplace Transforms and their Applications
+# Unit 4: Laplace Transforms and their Applications
 
 ## About the Laplace Transformation
 
@@ -21,7 +21,14 @@ The only downside is that time $t$ is a real value whereas the Laplace transform
 In this section of the course we will cover:
 
 * The Laplace Transformation
+* Laplace Transform of Some Common Signals
+* Properties of the Laplace Transform
 * The Inverse Laplace Transform
 * Using Laplace Transforms for Circuit Analysis
 * Transfer Functions
-* Impulse Response and Convolution
+* Block Diagram Analysis
+* System Simulation
+
+```python
+
+```
