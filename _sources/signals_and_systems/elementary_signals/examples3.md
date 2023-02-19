@@ -342,7 +342,7 @@ We will solve this example by hand and then give the solution in the MATLAB lab.
 :::{figure-md} fig:ex3_6
 <img src="pictures/example2.png" alt="" width="60%">
 
-Signal to be symthesized for Example 3.6
+Signal to be symthesized for Example 3.4
 :::
 
 +++ {"slideshow": {"slide_type": "subslide"}}
