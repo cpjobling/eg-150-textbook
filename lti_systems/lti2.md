@@ -94,11 +94,11 @@ $$y(t) = \int_0^{\infty}h(\tau)x(t-\tau)\,d\tau$$
 
 Alternatively, applying the causality to the convolution integral (defined in Section {ref}`convolution_integral`)
 
-$$y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$
+$$y(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau$$
 
 we have
 
-$$y(t) = \int_{-\infty}^{t}x(t)h(t-\tau)\,d\tau$$
+$$y(t) = \int_{-\infty}^{t}x(\tau)h(t-\tau)\,d\tau$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -121,16 +121,16 @@ $$x(t)=0\quad t \gt 0$$
 
 Combining the definition of a causal signal with a causal system, when the input $x(t)$ is causal, the output of a causal continuous-time LTI system is given by
 
-$$y(t) = \int_{0}^{t}h(t)x(t-\tau)\,d\tau =  \int_{0}^{t}x(t)h(t-\tau)\,d\tau$$
+$$y(t) = \int_{0}^{t}h(\tau)x(t-\tau)\,d\tau =  \int_{0}^{t}x(\tau)h(t-\tau)\,d\tau$$
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (c_Stability)=
 ### C. Stability
 
-The BIBO (bounded-input/bounder-output) stability of an LTI system (Section {ref}`stable_systems`) is readily acertined by the impuse response. It can be shown ({ref}`ex6_5`) that a continuous-time LTI system is BIBO stable if its  impulse response is absolutely integrable; that is,
+The BIBO (bounded-input/bounder-output) stability of an LTI system (Section {ref}`stable_systems`) is readily ascertined by the impuse response. It can be shown ({ref}`ex6_5`) that a continuous-time LTI system is BIBO stable if its  impulse response is absolutely integrable; that is,
 
-$$\int_{-\infty}^{\infty}\left[h(\tau)\right|\,d\tau \lt \infty$$
+$$\int_{-\infty}^{\infty}\left|h(\tau)\right|\,d\tau \lt \infty$$
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -189,7 +189,7 @@ that $y(0) = H(s)$ (see {ref}`ex:4_7`).
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Looking Ahead
-The above results inderline the definition of the Laplace transform and Fourier transform. The {ref}`laplace` will be discussed later in this course. The Fourier Transform will be introduced in **EG-247 Digital Signal Processing** next year.
+The above results underline the definition of the Laplace transform and Fourier transform. The {ref}`laplace` will be discussed later in this course. The Fourier Transform will be introduced in **EG-247 Digital Signal Processing** next year.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
