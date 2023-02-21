@@ -569,6 +569,12 @@ for any real value of $\tau$.
 
 * {ref}`linear_time_invariant_systems`
 
+For continuous-time LTI system represented by $\mathbf{T}$
+
+$$\mathbf{T}\left\{e^{st}\right\}= \lambda e^{st}$$
+
+where $s$ is a complex variable and $\lambda$ is a complex constant. In this formulation $e^{st}$ is called an *eigenfunction* of $\mathbf{T}$ and $\lambda$ is the *eigenvalue*. See {ref}`eigenfunctions_of_continuous_time_LTI_systems` for the further development of this idea.
+
 * {ref}`stable_systems`
 
 A system is *bounded-input/bounded-output* (BIBO) *stable* if for any bounded input signal $x$ defined by
