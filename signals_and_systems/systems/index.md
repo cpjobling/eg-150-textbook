@@ -497,9 +497,15 @@ $$\mathbf{T}\left\{e^{st}\right\}= \lambda e^{st}$$
 where $s$ is a complex variable and $\lambda$ is a complex constant.
 
 ```{note}
-Solution
+#### Solution
 
 The solution to this problem is part of a journey that leads us from continuous-time LTI systems to the Laplace transform.
+
+Since the system is time-invariant 
+
+$$\mathbf{T}\left\{e^{t-t_0}\right\} = y(t - t_0)$$
+
+for arbitrary real $t_0$.
 ```
 
 +++ {"slideshow": {"slide_type": "notes"}}
