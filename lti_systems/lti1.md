@@ -594,8 +594,6 @@ For the complete solution to Example 5.2 refer to the lecture recording or see s
 ## Summary
 
 In this lecture we have looked at
-
-* {ref}`impulse_reponse`
 * {ref}`abitrary_signal_response`
 * {ref}`convolution_integral`
 * {ref}`props_of_con_integral`

@@ -28,7 +28,3 @@ In this section of the course we will cover:
 * Transfer Functions
 * Block Diagram Analysis
 * System Simulation
-
-```python
-
-```

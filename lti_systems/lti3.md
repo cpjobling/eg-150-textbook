@@ -239,8 +239,30 @@ For the answer, refer to the lecture recording or see solved problem 2.19 in in 
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(ex8_3)=
+(ex8_8)=
+
 ### Example 8.3
+
+Consider the system described by
+
+$$\frac{dy(t)}{dt} + 2y(t) = x(t) + \frac{dx(t)}{dt}$$
+
+Find the impulse response $h(t)$ of the system.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 2.25 in {cite}`schaum`.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+```{note}
+As we will be moving on to show how differential equations can be solved by the Laplace transform, the remaining examples are optional and will not be examined.
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex8_3)=
+### Example 8.4
 
 Consider a continuous-time system whose input $x(t)$ and output $y(t)$ are related by
 
@@ -256,12 +278,12 @@ $$x(t) = Ke^{bt}u_0(t)$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.20 in {cite}`schaum`.
+For the answer, see the solved problem 2.20 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_4)=
-### Example 8.4
+### Example 8.5
 
 Consider the system in {ref}`ex8_3`.
 
@@ -271,34 +293,34 @@ Consider the system in {ref}`ex8_3`.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.21 in {cite}`schaum`.
+For the answer, see the solved problem 2.21 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_5)=
-### Example 8.5
+### Example 8.6
 
 Consider the system in {ref}`ex8_3`. Show that the initial rest condition $y(0) = 0$ also implies that the system is time-invariant.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.22 in {cite}`schaum`.
+For the answer, see the solved problem 2.22 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_6)=
-### Example 8.6
+### Example 8.7
 
 Consider the system in {ref}`ex8_3`. Find the impulse response $h(t)$ of the system.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.23 in {cite}`schaum`.
+For the answer, see the solved problem 2.23 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_7)=
-### Example 8.7
+### Example 8.8
 
 Consider the system in {ref}`ex8_3` with $y(0)=0$. 
 
@@ -310,29 +332,15 @@ Consider the system in {ref}`ex8_3` with $y(0)=0$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.24 in {cite}`schaum`.
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-(ex8_8)=
-
-### Example 8.8
-
-Consider the system described by
-
-$$\frac{dy(t)}{dt} + 2y(t) = x(t) + \frac{dx(t)}{dt}$$
-
-Find the impulse response $h(t)$ of the system.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-For the answer, refer to the lecture recording or see solved problem 2.25 in {cite}`schaum`.
+For the answer, see the solved problem 2.24 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## Summary
 
 In this lecture we have concluded our introduction to LTI systems by looking at linear constant-coefficient differential equations.
+
+### Take aways
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 

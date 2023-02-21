@@ -498,6 +498,44 @@ where $s$ is a complex variable and $\lambda$ is a complex constant.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
+```{note}
+#### Solution
+
+The solution to this problem is part of a journey that leads us from continuous-time LTI systems to the Laplace transform.
+```
+
+Let $y(t)$ be the output of the system with input $x(t)=e^{st}$. Then
+
+$$\mathbf{T}\left\{e^{st}\right\} = y(t)$$
+
+Since the system is time-invariant, we have
+
+$$\mathbf{T}\left\{e^{s\left(t + t_0\right)}\right\} = y(t + t_0)$$
+
+for arbitrary real $t_0$. Since the system is linear, we have
+
+$$\mathbf{T}\left\{e^{s\left(t+t_0\right)}\right\} = \mathbf{T}\left\{e^{st}e^{st_0}\right\} = e^{st_0}\mathbf{T}\left\{s^{st}\right\} = e^{st_0}y(t)$$
+
+Hence,
+
+$$y(t + t_0) = e^{st_0}y(t)$$
+
+Setting $t=0$, we obtain
+
+$$y(t_0) = y(0)e^{st_0}$$
+
+Since $t_0$ is arbitrary, by changing $t_0$ to $t$, we can rewrite $y(t_0) = y(0)e^{st_0}$ as
+
+$$y(t) = y(0)e^{st} = \lambda e^{st}$$
+
+or
+
+$$\mathbf{T}\left\{e^{st}\right\}=\lambda e^{st}$$
+
+where $\lambda = y(0)$.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
 For the answer, refer to the lecture recording or see solved problem 1.44 in {cite}schaum.
 
 +++ {"slideshow": {"slide_type": "notes"}}
@@ -509,14 +547,44 @@ In this lecture we have started our look at systems and the classification of sy
 In particular we have looked at
 
 * {ref}`system_representation`
+
+$$y(t) = \mathbf{T}\left\{x(t)\right\}$$
+
 * {ref}`deterministic_and_stochastic_systems`
 * {ref}`continuous_time_and_discrete_time_systems`
 * {ref}`systems_with_memory_and_without_memory`
 * {ref}`causal_and_non-causal_systems`
+
 * {ref}`linear_systems_and_nonlinear_systems`
+
+A continuous-time system is linear if superposition holds. That is
+
+$$\mathbf{T}\left\{\alpha_1 x_1 + \alpha_2 x_2 \right\} = \alpha_1 y_1 + \alpha_2 y_2$$
+
+where $\alpha_1$ and $\alpha_2$ are arbitrary scalars.
+
 * {ref}`time_invariant_and_time_varying_systems`
+
+A continuous-time system is time-invariant if
+
+$$\mathbf{T}\left\{x(t - \tau)\right\}=y(t - \tau)$$
+
+for any real value of $\tau$.
+
 * {ref}`linear_time_invariant_systems`
+
 * {ref}`stable_systems`
+
+A system is *bounded-input/bounded-output* (BIBO) *stable* if for any bounded input signal $x$ defined by
+
+$$|x|\le k_1$$
+
+the corresponding output $y$ is also bounded defined by
+
+$$|y|\le k_2$$
+
+where $k_1$ and $k_2$ are finite real constants.
+
 * {ref}`feedback_systems`
 
 +++ {"slideshow": {"slide_type": "notes"}}
