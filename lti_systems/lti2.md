@@ -19,13 +19,13 @@ kernelspec:
 
 This section is based on Sections 2.3 and 2.4 of {cite}`schaum`
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/lti_systems/lti2](https://cpjobling.github.io/eg-150-textbook/lti_systems/lti2)
 
 ![QR Code for this lecture](pictures/qrcode_lti2.png)
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Subjects to be covered
 
@@ -45,7 +45,7 @@ We continue our introduction to continuous-time LTI systems by considering:
 * {ref}`b_causality`
 * {ref}`c_Stability`
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (a_systems_with_and_without_memory)=
 ### A. Systems with or without memory
@@ -88,7 +88,7 @@ $$h(t) = 0\quad t \lt 0$$
 
 Applying the causality condition to the convolution integral, the output of a causal continuous-time LTI system is expressed as
 
-$$y(t) = \int_0^{\infty}h(\tau)x(t=\tau)\,d\tau$$
+$$y(t) = \int_0^{\infty}h(\tau)x(t-\tau)\,d\tau$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -119,7 +119,7 @@ $$x(t)=0\quad t \gt 0$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Combining the definition of a causal signal with a causal signal, when the input $x(t)$ is causal, the output of a causal continuous-time LTI system is given by
+Combining the definition of a causal signal with a causal system, when the input $x(t)$ is causal, the output of a causal continuous-time LTI system is given by
 
 $$y(t) = \int_{0}^{t}h(t)x(t-\tau)\,d\tau =  \int_{0}^{t}x(t)h(t-\tau)\,d\tau$$
 
@@ -128,7 +128,7 @@ $$y(t) = \int_{0}^{t}h(t)x(t-\tau)\,d\tau =  \int_{0}^{t}x(t)h(t-\tau)\,d\tau$$
 (c_Stability)=
 ### C. Stability
 
-The BIBO (bounded-input/bounder-output) stability of an LTI system (Section {ref}`stable_systems`) is readily acertined by the impuse response. It can be shown (Example 6.x) that a continuous-time LTI system is BIBO stable if its  impulse response is absolutely integrable; that is,
+The BIBO (bounded-input/bounder-output) stability of an LTI system (Section {ref}`stable_systems`) is readily acertined by the impuse response. It can be shown ({ref}`ex6_5`) that a continuous-time LTI system is BIBO stable if its  impulse response is absolutely integrable; that is,
 
 $$\int_{-\infty}^{\infty}\left[h(\tau)\right|\,d\tau \lt \infty$$
 
@@ -209,6 +209,8 @@ The signals in {numref}`fig:ex6.1`(a) and (b) are the input $x(t)$ and the outpu
 Input and output signals for a continuous-time LTI system
 :::
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
 Sketch the output to the following inputs:
 
 (a)$x(t-2)$;
@@ -228,7 +230,10 @@ Consider a continuous-time LTI system whose step response is given by
 
 $$y(t) = e^{-t}u_0(t)$$
 
+
 Determine and sketch the output of the system to the input $x(t)$ shown in {numref}`fig:ex6.2`.
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 :::{figure-md} fig:ex6.2
 <img src="pictures/ex6_2.png" alt="Signal for Exercise 6.2" width="40%">
@@ -305,6 +310,8 @@ $$h_1(t) = e^{-2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)$$
 
 (b) Determine if the overall system is BIBO stable.
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
 :::{figure-md} fig:ex6.6
 <img src="pictures/ex6_6.png" alt="A cascade connection of two continuous-time LTI systems" width="50%">
 
@@ -320,11 +327,14 @@ For the answer, refer to the lecture recording or see solved problem 2.14 in {ci
 (examples_7)=
 ## Examples 7: Eigenfunctions of Continuous-Time LTI systems
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex7_1)=
 ### Example 7.1
 
+```{note}
+This is a foretaste of the Laplace Transform.
+```
 
 Consider a continuous-time LTI system with the input-output reltion given by
 
@@ -346,7 +356,7 @@ For the answer, refer to the lecture recording or see solved problem 2.15 in {ci
 ### Example 7.2
 
 ```{note}
-Interesting result but not examined further.
+Interesting result which will not be examined.
 ```
 
 Consider the continuous-time LTI system described by
@@ -367,7 +377,7 @@ For the answer, see the solved problem 2.16 in {cite}`schaum`.
 ### Example 7.3
 
 ```{note}
-Interesting result that is a foretatbut not examined further. This
+Interesting result that is a foretaste of the Fourier transform which will not be examined.
 ```
 
 

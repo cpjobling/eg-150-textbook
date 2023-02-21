@@ -956,7 +956,7 @@ title="Print to PDF"
 \[h(t) = 0\quad t \lt 0\]</div>
 <p>Applying the causality condition to the convolution integral, the output of a causal continuous-time LTI system is expressed as</p>
 <div class="math notranslate nohighlight">
-\[y(t) = \int_0^{\infty}h(\tau)x(t=\tau)\,d\tau\]</div>
+\[y(t) = \int_0^{\infty}h(\tau)x(t-\tau)\,d\tau\]</div>
 <p>Alternatively, applying the causality to the convolution integral (defined in Section <a class="reference internal" href="lti1.html#convolution-integral"><span class="std std-ref">C. Convolution Integral</span></a>)</p>
 <div class="math notranslate nohighlight">
 \[y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau\]</div>
@@ -973,14 +973,14 @@ title="Print to PDF"
 <p>and is called <em>anticausal</em> if</p>
 <div class="math notranslate nohighlight">
 \[x(t)=0\quad t \gt 0\]</div>
-<p>Combining the definition of a causal signal with a causal signal, when the input <span class="math notranslate nohighlight">\(x(t)\)</span> is causal, the output of a causal continuous-time LTI system is given by</p>
+<p>Combining the definition of a causal signal with a causal system, when the input <span class="math notranslate nohighlight">\(x(t)\)</span> is causal, the output of a causal continuous-time LTI system is given by</p>
 <div class="math notranslate nohighlight">
 \[y(t) = \int_{0}^{t}h(t)x(t-\tau)\,d\tau =  \int_{0}^{t}x(t)h(t-\tau)\,d\tau\]</div>
 </section>
 </section>
 <section id="c-stability">
 <span id="id5"></span><h3>C. Stability<a class="headerlink" href="#c-stability" title="Permalink to this headline">#</a></h3>
-<p>The BIBO (bounded-input/bounder-output) stability of an LTI system (Section <a class="reference internal" href="../signals_and_systems/systems/index.html#stable-systems"><span class="std std-ref">Stable Systems</span></a>) is readily acertined by the impuse response. It can be shown (Example 6.x) that a continuous-time LTI system is BIBO stable if its  impulse response is absolutely integrable; that is,</p>
+<p>The BIBO (bounded-input/bounder-output) stability of an LTI system (Section <a class="reference internal" href="../signals_and_systems/systems/index.html#stable-systems"><span class="std std-ref">Stable Systems</span></a>) is readily acertined by the impuse response. It can be shown (<a class="reference internal" href="#ex6-5"><span class="std std-ref">Example 6.5</span></a>) that a continuous-time LTI system is BIBO stable if its  impulse response is absolutely integrable; that is,</p>
 <div class="math notranslate nohighlight">
 \[\int_{-\infty}^{\infty}\left[h(\tau)\right|\,d\tau \lt \infty\]</div>
 </section>
