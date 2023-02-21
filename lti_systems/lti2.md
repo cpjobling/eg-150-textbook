@@ -245,6 +245,10 @@ For the answer, refer to the lecture recording or see solved problem 2.2 in in {
 (ex6_3)=
 ### Example 6.3
 
+```{note}
+Interesting result but not examined further.
+```
+
 Consider a continuous-time LTI system system described by
 
 $$y(t) = \mathbf{T}\left\{x(t)\right\} = \frac{1}{T}\int_{t-\frac{T}{2}}^{t+\frac{T}{2}}x(\tau)\,d\tau$$
@@ -255,29 +259,38 @@ $$y(t) = \mathbf{T}\left\{x(t)\right\} = \frac{1}{T}\int_{t-\frac{T}{2}}^{t+\fra
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.11 in in {cite}`schaum`.
+For the answer, see the solved problem 2.11 in in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex6_4)=
 ### Example 6.4
 
+```{note}
+Interesting result but not examined further.
+```
+
+
 Let $y(t)$ be the output of a continuous-time LTI system with input $x(t)$. Find the output of the system if ths input is $x'(t)$, where $x'(t)$ is the first derivative of $x(t)$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.12 in in {cite}`schaum`.
+For the answer, refer to the solved problem 2.12 in in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex6_5)=
 ### Example 6.5
 
+```{note}
+Interesting result but not examined further.
+```
+
 Verify the BIBO stability condition ({ref}`c_Stability`) for continuous-time LTI systems.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.13 in {cite}`schaum`.
+For the answer, see the solved problem 2.13 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -312,10 +325,6 @@ For the answer, refer to the lecture recording or see solved problem 2.14 in {ci
 (ex7_1)=
 ### Example 7.1
 
-```{note}
-Interesting result but not examined.
-```
-
 
 Consider a continuous-time LTI system with the input-output reltion given by
 
@@ -329,7 +338,7 @@ $$y(t)=\int_{-\infty}^{t}e^{-(t-\tau)}x(\tau)\,d\tau$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, see the solved problem 2.15 in {cite}`schaum`.
+For the answer, refer to the lecture recording or see solved problem 2.15 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -337,7 +346,7 @@ For the answer, see the solved problem 2.15 in {cite}`schaum`.
 ### Example 7.2
 
 ```{note}
-Interesting result but not examined.
+Interesting result but not examined further.
 ```
 
 Consider the continuous-time LTI system described by
@@ -358,7 +367,7 @@ For the answer, see the solved problem 2.16 in {cite}`schaum`.
 ### Example 7.3
 
 ```{note}
-Interesting result but not examined.
+Interesting result that is a foretatbut not examined further. This
 ```
 
 
