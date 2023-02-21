@@ -1323,20 +1323,32 @@ title="Print to PDF"
 <section id="solution">
 <h4>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h4>
 <p>The solution to this problem is part of a journey that leads us from continuous-time LTI systems to the Laplace transform.</p>
+</section>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
 <p>Let <span class="math notranslate nohighlight">\(y(t)\)</span> be the output of the system with input <span class="math notranslate nohighlight">\(x(t)=e^{st}\)</span>. Then</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{T}\left\{e^{st}\right\} = y(t)\]</div>
 <p>Since the system is time-invariant, we have</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{T}\left\{e^{s\left(t + t_0\right)}\right\} = y(t + t_0)\]</div>
-<p>for arbitrary real <span class="math notranslate nohighlight">\(t_0\)</span>.</p>
-<p>Since the system is linear</p>
+<p>for arbitrary real <span class="math notranslate nohighlight">\(t_0\)</span>. Since the system is linear, we have</p>
 <div class="math notranslate nohighlight">
-\[\mathbf{T}\left\{e^{s\left(t-t_0\right)\right\} = \mathbf{T}\left\{e^{s}\left(t-t_0\right)}\right\\]</div>
-</section>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-</div>
+\[\mathbf{T}\left\{e^{s\left(t+t_0\right)}\right\} = \mathbf{T}\left\{e^{st}e^{st_0}\right\} = e^{st_0}\mathbf{T}\left\{s^{st}\right\} = e^{st_0}y(t)\]</div>
+<p>Hence,</p>
+<div class="math notranslate nohighlight">
+\[y(t + t_0) = e^{st_0}y(t)\]</div>
+<p>Setting <span class="math notranslate nohighlight">\(t=0\)</span>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[y(t_0) = y(0)e^{st_0}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(t_0\)</span> is arbitrary, by changing <span class="math notranslate nohighlight">\(t_0\)</span> to <span class="math notranslate nohighlight">\(t\)</span>, we can rewrite <span class="math notranslate nohighlight">\(y(t_0) = y(0)e^{st_0}\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[y(t) = y(0)e^{st} = \lambda e^{st}\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{T}\left\{e^{st}\right\}=\lambda e^{st}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda = y(0)\)</span>.</p>
 <p>For the answer, refer to the lecture recording or see solved problem 1.44 in {cite}schaum.</p>
 </section>
 </section>
@@ -1346,14 +1358,39 @@ title="Print to PDF"
 <p>In particular we have looked at</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#system-representation"><span class="std std-ref">System Representation</span></a></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[y(t) = \mathbf{T}\left\{x(t)\right\}\]</div>
+<ul class="simple">
 <li><p><a class="reference internal" href="#deterministic-and-stochastic-systems"><span class="std std-ref">Deterministic and Stochastic Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#continuous-time-and-discrete-time-systems"><span class="std std-ref">Continuous-Time and Discrete-Time Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#systems-with-memory-and-without-memory"><span class="std std-ref">Systems with Memory and without Memory</span></a></p></li>
 <li><p><a class="reference internal" href="#causal-and-non-causal-systems"><span class="std std-ref">Causal and Non-Causal Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#linear-systems-and-nonlinear-systems"><span class="std std-ref">Linear Systems and Nonlinear Systems</span></a></p></li>
+</ul>
+<p>A continuous-time system is linear if superposition holds. That is</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{T}\left\{\alpha_1 x_1 + \alpha_2 x_2 \right\} = \alpha_1 y_1 + \alpha_2 y_2\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha_1\)</span> and <span class="math notranslate nohighlight">\(\alpha_2\)</span> are arbitrary scalars.</p>
+<ul class="simple">
 <li><p><a class="reference internal" href="#time-invariant-and-time-varying-systems"><span class="std std-ref">Time-Invariant and Time-Varying Systems</span></a></p></li>
+</ul>
+<p>A continuous-time system is time-invariant if</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{T}\left\{x(t - \tau)\right\}=y(t - \tau)\]</div>
+<p>for any real value of <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
+<ul class="simple">
 <li><p><a class="reference internal" href="#linear-time-invariant-systems"><span class="std std-ref">Linear Time-Invariant Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#stable-systems"><span class="std std-ref">Stable Systems</span></a></p></li>
+</ul>
+<p>A system is <em>bounded-input/bounded-output</em> (BIBO) <em>stable</em> if for any bounded input signal <span class="math notranslate nohighlight">\(x\)</span> defined by</p>
+<div class="math notranslate nohighlight">
+\[|x|\le k_1\]</div>
+<p>the corresponding output <span class="math notranslate nohighlight">\(y\)</span> is also bounded defined by</p>
+<div class="math notranslate nohighlight">
+\[|y|\le k_2\]</div>
+<p>where <span class="math notranslate nohighlight">\(k_1\)</span> and <span class="math notranslate nohighlight">\(k_2\)</span> are finite real constants.</p>
+<ul class="simple">
 <li><p><a class="reference internal" href="#feedback-systems"><span class="std std-ref">Feedback Systems</span></a></p></li>
 </ul>
 </section>
