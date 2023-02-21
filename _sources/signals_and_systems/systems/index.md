@@ -496,6 +496,14 @@ $$\mathbf{T}\left\{e^{st}\right\}= \lambda e^{st}$$
 
 where $s$ is a complex variable and $\lambda$ is a complex constant.
 
+```{note}
+:class: dropdown
+
+#### Solution
+
+The solution to this problem is part of a journey that leads us from continuous-time LTI systems to the Laplace transform.
+```
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 For the answer, refer to the lecture recording or see solved problem 1.44 in {cite}schaum.
