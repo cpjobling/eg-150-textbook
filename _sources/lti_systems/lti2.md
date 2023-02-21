@@ -312,6 +312,11 @@ For the answer, refer to the lecture recording or see solved problem 2.14 in {ci
 (ex7_1)=
 ### Example 7.1
 
+```{note}
+Interesting result but not examined.
+```
+
+
 Consider a continuous-time LTI system with the input-output reltion given by
 
 $$y(t)=\int_{-\infty}^{t}e^{-(t-\tau)}x(\tau)\,d\tau$$
@@ -324,12 +329,16 @@ $$y(t)=\int_{-\infty}^{t}e^{-(t-\tau)}x(\tau)\,d\tau$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.15 in {cite}`schaum`.
+For the answer, see the solved problem 2.15 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex7_2)=
 ### Example 7.2
+
+```{note}
+Interesting result but not examined.
+```
 
 Consider the continuous-time LTI system described by
 
@@ -341,18 +350,23 @@ $$y(t) = \frac{1}{T}\int_{t-\frac{T}{2}}^{t+\frac{T}{2}}x(\tau)\,d\tau$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.16 in {cite}`schaum`.
+For the answer, see the solved problem 2.16 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex7_3)=
 ### Example 7.3
 
+```{note}
+Interesting result but not examined.
+```
+
+
 Consider a stable continuous-time LTI system with impulse response $h(t)$ that is real and even. Show that $\cos \omega t$ and $\sin \omega t$ are eigenfunctions of this system with the same eigenvalue.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 2.17 in {cite}`schaum`.
+For the answer, see the solved problem 2.17 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
