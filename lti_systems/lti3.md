@@ -241,7 +241,7 @@ For the answer, refer to the lecture recording or see solved problem 2.19 in in 
 
 (ex8_8)=
 
-### Example 8.8
+### Example 8.3
 
 Consider the system described by
 
@@ -262,7 +262,7 @@ As we will be moving on to show how differential equations can be solved by the 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_3)=
-### Example 8.3
+### Example 8.4
 
 Consider a continuous-time system whose input $x(t)$ and output $y(t)$ are related by
 
@@ -283,7 +283,7 @@ For the answer, see the solved problem 2.20 in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_4)=
-### Example 8.4
+### Example 8.5
 
 Consider the system in {ref}`ex8_3`.
 
@@ -298,7 +298,7 @@ For the answer, see the solved problem 2.21 in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_5)=
-### Example 8.5
+### Example 8.6
 
 Consider the system in {ref}`ex8_3`. Show that the initial rest condition $y(0) = 0$ also implies that the system is time-invariant.
 
@@ -309,7 +309,7 @@ For the answer, see the solved problem 2.22 in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_6)=
-### Example 8.6
+### Example 8.7
 
 Consider the system in {ref}`ex8_3`. Find the impulse response $h(t)$ of the system.
 
@@ -320,7 +320,7 @@ For the answer, see the solved problem 2.23 in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_7)=
-### Example 8.7
+### Example 8.8
 
 Consider the system in {ref}`ex8_3` with $y(0)=0$. 
 
