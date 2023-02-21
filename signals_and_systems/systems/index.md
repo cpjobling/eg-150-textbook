@@ -501,11 +501,19 @@ where $s$ is a complex variable and $\lambda$ is a complex constant.
 
 The solution to this problem is part of a journey that leads us from continuous-time LTI systems to the Laplace transform.
 
-Since the system is time-invariant 
+Let $y(t)$ be the output of the system with input $x(t)=e^{st}$. Then
 
-$$\mathbf{T}\left\{e^{t-t_0}\right\} = y(t - t_0)$$
+$$\mathbf{T}\left\{e^{st}\right\} = y(t)$$
+
+Since the system is time-invariant, we have
+
+$$\mathbf{T}\left\{e^{s\left(t + t_0\right)}\right\} = y(t + t_0)$$
 
 for arbitrary real $t_0$.
+
+Since the system is linear
+
+$$\mathbf{T}\left\{e^{s\left(t-t_0\right)\right\} = \mathbf{T}\left\{e^{s}\left(t-t_0\right)}\right\$$
 ```
 
 +++ {"slideshow": {"slide_type": "notes"}}

@@ -1323,10 +1323,16 @@ title="Print to PDF"
 <section id="solution">
 <h4>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h4>
 <p>The solution to this problem is part of a journey that leads us from continuous-time LTI systems to the Laplace transform.</p>
-<p>Since the system is time-invariant</p>
+<p>Let <span class="math notranslate nohighlight">\(y(t)\)</span> be the output of the system with input <span class="math notranslate nohighlight">\(x(t)=e^{st}\)</span>. Then</p>
 <div class="math notranslate nohighlight">
-\[\mathbf{T}\left\{e^{t-t_0}\right\} = y(t - t_0)\]</div>
+\[\mathbf{T}\left\{e^{st}\right\} = y(t)\]</div>
+<p>Since the system is time-invariant, we have</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{T}\left\{e^{s\left(t + t_0\right)}\right\} = y(t + t_0)\]</div>
 <p>for arbitrary real <span class="math notranslate nohighlight">\(t_0\)</span>.</p>
+<p>Since the system is linear</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{T}\left\{e^{s\left(t-t_0\right)\right\} = \mathbf{T}\left\{e^{s}\left(t-t_0\right)}\right\\]</div>
 </section>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
