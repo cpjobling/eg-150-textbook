@@ -385,7 +385,7 @@ RC circuit
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.32 in {cite}schaum.
+For the answer, refer to the lecture recording or see solved problem 1.32 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -411,7 +411,7 @@ A capacitor citcuit.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.33 in {cite}schaum.
+For the answer, refer to the lecture recording or see solved problem 1.33 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -436,7 +436,7 @@ A signal modulator
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.34 in {cite}schaum.
+For the answer, refer to the lecture recording or see solved problem 1.34 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -451,7 +451,7 @@ Show that this system is nonlinear.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.35 in {cite}schaum.
+For the answer, refer to the lecture recording or see solved problem 1.35 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -466,7 +466,7 @@ where $x$ and $y$ are the input and output respectively and $s$ and $b$ are cons
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.40 in {cite}schaum.
+For the answer, refer to the lecture recording or see solved problem 1.40 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -481,7 +481,7 @@ For the answer, refer to the lecture recording or see solved problem 1.40 in {ci
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.43 in {cite}schaum.
+For the answer, refer to the lecture recording or see solved problem 1.43 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -499,10 +499,10 @@ where $s$ is a complex variable and $\lambda$ is a complex constant.
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ```{note}
-#### Solution
-
-The solution to this problem is part of a journey that leads us from continuous-time LTI systems to the Laplace transform.
+The solution to this problem is part of a journey that leads us from continuous-time LTI systems to the Laplace transform. I have therefore included the solution in full.
 ```
+
+#### Solution
 
 Let $y(t)$ be the output of the system with input $x(t)=e^{st}$. Then
 
@@ -533,10 +533,6 @@ or
 $$\mathbf{T}\left\{e^{st}\right\}=\lambda e^{st}$$
 
 where $\lambda = y(0)$.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-For the answer, refer to the lecture recording or see solved problem 1.44 in {cite}schaum.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -572,6 +568,12 @@ $$\mathbf{T}\left\{x(t - \tau)\right\}=y(t - \tau)$$
 for any real value of $\tau$.
 
 * {ref}`linear_time_invariant_systems`
+
+For continuous-time LTI system represented by $\mathbf{T}$
+
+$$\mathbf{T}\left\{e^{st}\right\}= \lambda e^{st}$$
+
+where $s$ is a complex variable and $\lambda$ is a complex constant. In this formulation $e^{st}$ is called an *eigenfunction* of $\mathbf{T}$ and $\lambda$ is the *eigenvalue*. See {ref}`eigenfunctions_of_continuous_time_LTI_systems` for the further development of this idea.
 
 * {ref}`stable_systems`
 
