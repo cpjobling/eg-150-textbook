@@ -14,6 +14,7 @@ kernelspec:
 
 +++ {"nbpresent": {"id": "90f3c07d-3646-44b0-a549-7020fc10d16f"}, "slideshow": {"slide_type": "slide"}}
 
+(unit4.3)=
 # Unit 4.3 Properties of the Laplace Transform
 
 The preparatory reading for this section is Chapter 2.3 of {cite}`karris` and Chapter 3.3 of {cite}`schaum`.
