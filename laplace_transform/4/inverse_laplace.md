@@ -437,13 +437,13 @@ Do the end of the chapter exercises (Section 3.67) from the {cite}`karris`. Don'
 
 ## Matlab Solutions
 
-For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-247-textbook/tree/master/laplace_transform/matlab) folder.
+For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab) folder.
 
-* Example 1 - Real poles [[ex3_1.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/ex3_1.m)]
-* Example 2 - Real poles cubic denominator [[ex3_2.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/ex3_2.m)]
-* Example 3 - Complex poles [[ex3_3.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/ex3_3.m)]
-* Example 4 - Repeated real poles [[ex3_4.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/ex3_4.m)]
-* Example 5 - Non proper rational polynomial [[ex3_5.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/ex3_5.m)]
+* Example 1 - Real poles [[ex3_1.m](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/ex3_1.m)]
+* Example 2 - Real poles cubic denominator [[ex3_2.m](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/ex3_2.m)]
+* Example 3 - Complex poles [[ex3_3.m](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/ex3_3.m)]
+* Example 4 - Repeated real poles [[ex3_4.m](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/ex3_4.m)]
+* Example 5 - Non proper rational polynomial [[ex3_5.m](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/ex3_5.m)]
 
 ```{code-cell}
 ---
