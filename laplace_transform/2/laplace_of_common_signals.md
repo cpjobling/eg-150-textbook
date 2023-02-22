@@ -14,6 +14,7 @@ kernelspec:
 
 +++ {"nbpresent": {"id": "90f3c07d-3646-44b0-a549-7020fc10d16f"}, "slideshow": {"slide_type": "slide"}}
 
+(unit4.2)=
 # Unit 4.2: Laplace Transform of Some Common Signals
 
 The preparatory reading for this section is Chapter 2.2 of {cite}`karris` and Chapter 3.4 of {cite}`schaum`.
