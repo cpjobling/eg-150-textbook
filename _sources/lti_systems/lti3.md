@@ -229,7 +229,7 @@ For the answer, refer to the lecture recording or see solved problem 2.18 in {ci
 slideshow:
   slide_type: fragment
 ---
-% cd matlab
+cd matlab
 open examples8
 ```
 
