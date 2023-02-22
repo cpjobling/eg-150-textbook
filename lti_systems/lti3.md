@@ -230,6 +230,13 @@ slideshow:
   slide_type: fragment
 ---
 cd matlab
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
 open examples8
 ```
 
@@ -237,8 +244,8 @@ open examples8
 
 You can download and run these scripts and try them yourself.
 
-* MATLAB Scipt [examples8.slx](matlab/examples8.mlx)
-* Simulation model [example8_1.slx](matlab/example1_1.slx)
+* MATLAB Scipt [examples8.slx](https://github.com/cpjobling/eg-150-textbook/blob/main/lti_systems/matlab/examples8.mlx?raw=true)
+* Simulation model [example8_1.slx](https://github.com/cpjobling/eg-150-textbook/blob/main/lti_systems/matlab/example8_1.slx?raw=true)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -261,7 +268,7 @@ For the answer, refer to the lecture recording or see solved problem 2.19 in in 
 
 #### MATLAB Solution
 
-* Simulink model [example8_2.slx](matlab/example8_2.slx)
+* Simulink model [example8_2.slx](https://github.com/cpjobling/eg-150-textbook/blob/main/lti_systems/matlab/example8_2.slx?raw=true)
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
