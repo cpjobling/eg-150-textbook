@@ -125,3 +125,7 @@ _build
 
 introduction/y.asv
 fourier_transform/1/ft1.slides.html
+
+# Simulink projects
+
+slproj
