@@ -19,7 +19,7 @@ kernelspec:
 
 This section is based on Section 2.5 of {cite}`schaum`
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/lti_systems/lti3](https://cpjobling.github.io/eg-150-textbook/lti_systems/lti3)
 
@@ -50,11 +50,12 @@ We conclude our introduction to continuous-time LTI system by considering
 (ccde_a_linear_constant_coefficient_differential_equations)=
 ### A. Linear constant-coefficient differential equations
 
-A general $N$th-order linear constant-coefficient differential (LCCDE) equation is given by
+A general $N$th-order linear constant-coefficient ordinary differential (LCCODE) equation is given by
 
-$$\sum_{k=0}^N a_k \frac{d^ky(t)}{dt^k}=\sum_{k=0}^M b_k \frac{d^k x(t)}{dt^k}$$
+$$a_N\frac{d^N}{dt^N}y(t) + a_{N-1}\frac{d^{N-1}}{dt^{N-1}} y(t) + \cdots + a_1\frac{d}{dt} y(t) +a_0 y(t) + a_0 y(t)\\
+\quad\quad\quad = b_M\frac{d^M}{dt^M}x(t) + b_{M-1}\frac{d^{M-1}}{dt^{M-1}} x(t) + \cdots + b_1\frac{d}{dt} x(t) +a_0 x(t)$$
 
-where the coeeficients $a_k$ and $b_k$ are real constants.
+where the coeeficients $a_k$ and $b_k$ are real constants and usually $N > M$.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -62,9 +63,16 @@ The order $N$ refers to the highest derivative of $y(t)$ in the differential equ
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+The LCCODE can be written in more compact form as
+
+$$\sum_{k=0}^N a_k \frac{d^k}{dt^k} y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)$$
+
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
 #### Applications of linear constant-coefficient differential equations
 
-LCCDEs play a central role in describing the input-output relationships of a wide variety of electrical, mechanical, chemical and biological systems.
+LCCODEs play a central role in describing the input-output relationships of a wide variety of electrical, mechanical, chemical and biological systems.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -88,9 +96,13 @@ $$y(t)=y_p(t)+y_h(t)$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-where $y_p(t)$ is a *particular solution* satisfying the linear constant-coefficient differential equation and $y_h(t)$ is a *homegeneous solution* (or *complementary solution*) satisfying the homegeneous differential equation
+where $y_p(t)$ is a *particular solution* satisfying the linear constant-coefficient differential equation
 
-$$\sum_{k=0}^N a_k \frac{d^ky(t)}{dt^k}=0$$
++++ {"slideshow": {"slide_type": "fragment"}}
+
+and $y_h(t)$ is a *homegeneous solution* (or *complementary solution*) satisfying the homegeneous differential equation
+
+$$\sum_{k=0}^N a_k \frac{d^k}{dt^k}y(t)=0$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -100,11 +112,11 @@ The exact form of $y_h(t)$ is determined by $N$ auxiliary conditions.
 
 Note that 
 
-$$\sum_{k=0}^N a_k \frac{d^ky(t)}{dt^k}=\sum_{k=0}^M b_k \frac{d^k x(t)}{dt^k}$$
+$$\sum_{k=0}^N a_k \frac{d^k}{dt^k}y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)$$
 
 does not completely specify the the output $y(t)$ in terms of $x(t)$ unless auxiliary conditions are defined. In general. a set of auxiliary conditions are the values of
 
-$$y(t),\frac{dy(t)}{dt},\ldots,\frac{d^{N-1}y(t)}{dt^N-1}$$
+$$y(t),\frac{d}{dt}y(t),\ldots,\frac{d^{N-1}}{dt^{N-1}}y(t)$$
 
 at some point in time.
 
@@ -115,7 +127,7 @@ at some point in time.
 
 The system defined by 
 
-$$\sum_{k=0}^N a_k \frac{d^ky(t)}{dt^k}=\sum_{k=0}^M b_k \frac{d^k x(t)}{dt^k}$$
+$$\sum_{k=0}^N a_k \frac{d^k}{dt^k}y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)$$
 
 will be linear only if all the auxilliary conditions are zero (see {ref}`ex8_4`).
 
@@ -137,7 +149,7 @@ This is illustrated in {numref}`fig:zs_and_zi_responses`
 Zero-state and zero-input responses
 :::
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Note that $y_\mathrm{zi}(t) \neq y_h(t)$ and $y_\mathrm{zs}(t) \neq y_p(t)$ and that in general $y_\mathrm{zi}(t)$ contains $y_h(t)$ and $y_\mathrm{zs}(t)$ contains both $y_h(t)$ and $y_p(t)$ (see {ref}`ex8_3`).
 
@@ -148,23 +160,23 @@ Note that $y_\mathrm{zi}(t) \neq y_h(t)$ and $y_\mathrm{zs}(t) \neq y_p(t)$ and 
 
 In order for the linear system described by a linear constant-coefficient differential equation
 
-$$\sum_{k=0}^N a_k \frac{d^ky(t)}{dt^k}=\sum_{k=0}^M b_k \frac{d^k x(t)}{dt^k}$$
+$$\sum_{k=0}^N a_k \frac{d^k}{dt^k}y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k}x(t)$$
 
 to be causal, we must assume the condition of *initial rest* (or an *initially relaxed condition*).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-That is, if $x(y)=0$ for $t\le t_0$, then assume $y(t) = 0$ for $t\le t_0$ (See {ref}`ex4_6`).
+That is, if $x(t)=0$ for $t\le t_0$, then assume $y(t) = 0$ for $t\le t_0$ (See {ref}`ex4_6`).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 Thus, the response for $t > t_0$ can be calculated from the linear constant-coefficient differential equation with the initial conditions
 
-$$y(t_0)=\frac{dy(t_0)}{dt}=\cdots=\frac{d^{N-1}y(t_0)}{dt^{N-1}}=0$$
+$$y(t_0)=\frac{d}{dt}y(t_0)=\cdots=\frac{d^{N-1}}{dt^{N-1}}y(t_0)=0$$
 
 where
 
-$$\frac{d^ky(t_0)}{dt^k} = \left.\frac{d^ky(t)}{dt^k}\right|_{t=t_0}$$
+$$\frac{d^k}{dt^k}y(t_0) = \left.\frac{d^k}{dt^k}y(t)\right|_{t=t_0}$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -184,7 +196,7 @@ For a linear causal system, initial rest also implies time-invariance ({ref}`ex8
 
 The impulse response $h(t)$ of a linear constant-coefficient differential equation satisfies the differential equation
 
-$$\sum_{k=0}^N a_k \frac{d^ky(t)}{dt^k}=\sum_{k=0}^M b_k \frac{d^k \delta(t)}{dt^k}$$
+$$\sum_{k=0}^N a_k \frac{d^k}{dt^k}y(t) = \sum_{k=0}^M b_k \frac{d^k}{dt^k} \delta(t)$$
 
 with the initial rest condition.
 
@@ -194,9 +206,9 @@ Examples of finding impulse responses are given in {ref}`ex8_6` to {ref}`ex8_8`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### A peek into the future
+### A peek into the future
 
-Later in this course, and probably for the rest of your career, you will find the impulse response by using the Laplace transform.
+Later in this course, and probably for the rest of your career, you will find the impulse and other responses by using the Laplace transform.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -227,9 +239,16 @@ For the answer, refer to the lecture recording or see solved problem 2.18 in {ci
 ```{code-cell}
 ---
 slideshow:
+  slide_type: notes
+---
+cd matlab
+```
+
+```{code-cell}
+---
+slideshow:
   slide_type: fragment
 ---
-% cd matlab
 open examples8
 ```
 
@@ -237,8 +256,8 @@ open examples8
 
 You can download and run these scripts and try them yourself.
 
-* MATLAB Scipt [examples8.slx](matlab/examples8.mlx)
-* Simulation model [example8_1.slx](matlab/example1_1.slx)
+* MATLAB Scipt [examples8.slx](https://github.com/cpjobling/eg-150-textbook/blob/main/lti_systems/matlab/examples8.mlx?raw=true)
+* Simulation model [example8_1.slx](https://github.com/cpjobling/eg-150-textbook/blob/main/lti_systems/matlab/example8_1.slx?raw=true)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -261,7 +280,7 @@ For the answer, refer to the lecture recording or see solved problem 2.19 in in 
 
 #### MATLAB Solution
 
-* Simulink model [example8_2.slx](matlab/example8_2.slx)
+* Simulink model [example8_2.slx](https://github.com/cpjobling/eg-150-textbook/blob/main/lti_systems/matlab/example8_2.slx?raw=true)
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -288,7 +307,75 @@ $$x(t) = Ke^{bt}u_0(t)$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, see the solved problem 2.20 in {cite}`schaum`.
+#### Solution
+
+This is an example of how a first-order LCCODE would be solved. We provide as an instructional example but will assume that you will be tested on this in other modules.
+
+a) Given that 
+
+$$\frac{d}{dt}y(t)+ay(t)=x(t)$$
+
+we assume that the *particular solution* will be of the form $y_p(t) = Ae^{-bt}$. 
+
+Substituting for $y_p(t)$ in the differential equation we have
+
+$$-bAe^{-bt}+aAe^{-bt} = Ke^{-bt}$$
+
+from which, after cancelling the constant term $e^{-bt}$, gives
+
+$$A = K(a -b)$$
+
+and 
+
+$$y_p(t) = \frac{K}{a-b}e^{-bt}\quad t > 0$$ 
+
+To obtain the *homegenous solution* we assume that
+
+$$y_h(t) = Be^{st}$$
+
+Substituting for $y_h(t)$ in the differential equation we have
+
+$$sBe^{st} + aBe^{st} =\left( s + a\right)e^{st} = 0$$
+
+so $s=-a$ and
+
+$$y_h(t) = Be^{-at}$$
+
+Combining $y_p(t)$ and $y_h(t)$ we have
+
+$$y(t) = y_p(t) + y_h(t) = Be^{-at} + \frac{K}{a-b}e^{bt}\quad t> 0$$
+
+Using the auxilary equation $y(0) = y_0$
+
+$$B = y_0 - \frac{K}{a - b}$$
+
+then
+
+$$y(t) = \left(y_0 - \frac{K}{a - b}\right) + \frac{K}{a-b}e^{bt}\quad t> 0$$
+
+For $t < 0$ we have $x(t) = 0$ and the differential equation becomes equal to the homogeneous equation $y_h(t)$ so
+
+$$y(t) = Be^{-at}\quad t < 0$$
+
+From the auxillary equation $y(0) = y_0$, we obtain
+
+$$y(t) = y_0e^{-at}\quad t < 0$$
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+b) Combining the solutions for $y(t) > 0$ and $y(t) < 0$, y(t) can be expression in terms of $y_\mathrm{zi}(t)$ (zero-input response and $y_\mathrm{zs}(t)$ (zero-state response) as
+
+$$y(t) = y_0 e^{-at} + \frac{K}{a-b}\left(e^{-bt}-e^{-at}\right) u_0(t)$$
+
+$$y(t) = y_\mathrm{zi}(t) + y_\mathrm{zs}(t)$$
+
+where
+
+$$y_\mathrm{zi}(t) = y_0e^{-at}$$
+
+and
+
+$$y_\mathrm{zs}(t) = \frac{K}{a-b}\left(e^{-bt}-e^{-at}\right) u_0(t)$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
