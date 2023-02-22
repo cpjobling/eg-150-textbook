@@ -222,6 +222,26 @@ For the answer, refer to the lecture recording or see solved problem 2.18 in {ci
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+#### MATLAB Solution
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+% cd matlab
+open examples8
+```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+You can download and run these scripts and try them yourself.
+
+* MATLAB Scipt [examples8.slx](matlab/examples8.mlx)
+* Simulation model [example8_1.slx](matlab/example1_1.slx)
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
 (ex8_2)=
 ### Example 8.2
 
@@ -230,7 +250,7 @@ The continuous-time system shown in {numref}`fig:ex:8.2` consists of two integra
 :::{figure-md} fig:ex:8.2
 <img src="pictures/ex8_2.png" alt="A two-integrator linear system" width="60%">
 
-A one-integrator linear system
+A two-integrator linear system
 :::
 
 +++ {"slideshow": {"slide_type": "notes"}}
@@ -239,19 +259,9 @@ For the answer, refer to the lecture recording or see solved problem 2.19 in in 
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(ex8_8)=
+#### MATLAB Solution
 
-### Example 8.3
-
-Consider the system described by
-
-$$\frac{dy(t)}{dt} + 2y(t) = x(t) + \frac{dx(t)}{dt}$$
-
-Find the impulse response $h(t)$ of the system.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-For the answer, refer to the lecture recording or see solved problem 2.25 in {cite}`schaum`.
+* Simulink model [example8_2.slx](matlab/example8_2.slx)
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -262,7 +272,7 @@ As we will be moving on to show how differential equations can be solved by the 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_3)=
-### Example 8.4
+### Example 8.3
 
 Consider a continuous-time system whose input $x(t)$ and output $y(t)$ are related by
 
@@ -283,7 +293,7 @@ For the answer, see the solved problem 2.20 in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_4)=
-### Example 8.5
+### Example 8.4
 
 Consider the system in {ref}`ex8_3`.
 
@@ -298,7 +308,7 @@ For the answer, see the solved problem 2.21 in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_5)=
-### Example 8.6
+### Example 8.5
 
 Consider the system in {ref}`ex8_3`. Show that the initial rest condition $y(0) = 0$ also implies that the system is time-invariant.
 
@@ -309,7 +319,7 @@ For the answer, see the solved problem 2.22 in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_6)=
-### Example 8.7
+### Example 8.6
 
 Consider the system in {ref}`ex8_3`. Find the impulse response $h(t)$ of the system.
 
@@ -320,7 +330,7 @@ For the answer, see the solved problem 2.23 in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_7)=
-### Example 8.8
+### Example 8.7
 
 Consider the system in {ref}`ex8_3` with $y(0)=0$. 
 
@@ -333,6 +343,22 @@ Consider the system in {ref}`ex8_3` with $y(0)=0$.
 +++ {"slideshow": {"slide_type": "notes"}}
 
 For the answer, see the solved problem 2.24 in {cite}`schaum`.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex8_8)=
+
+### Example 8.6
+
+Consider the system described by
+
+$$\frac{dy(t)}{dt} + 2y(t) = x(t) + \frac{dx(t)}{dt}$$
+
+Find the impulse response $h(t)$ of the system.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+For the answer, refer to the lecture recording or see solved problem 2.25 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

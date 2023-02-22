@@ -690,11 +690,25 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#example-8-1">
      Example 8.1
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#matlab-solution">
+       MATLAB Solution
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-8-2">
      Example 8.2
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       MATLAB Solution
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-8-3">
@@ -722,8 +736,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-8-8">
-     Example 8.8
+    <a class="reference internal nav-link" href="#ex8-8">
+     Example 8.6
     </a>
    </li>
   </ul>
@@ -739,7 +753,7 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id11">
+    <a class="reference internal nav-link" href="#id13">
      Continuous-Time LTI Systems Described by Differential Equations
     </a>
    </li>
@@ -844,11 +858,25 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#example-8-1">
      Example 8.1
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#matlab-solution">
+       MATLAB Solution
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-8-2">
      Example 8.2
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       MATLAB Solution
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-8-3">
@@ -876,8 +904,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-8-8">
-     Example 8.8
+    <a class="reference internal nav-link" href="#ex8-8">
+     Example 8.6
     </a>
    </li>
   </ul>
@@ -893,7 +921,7 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id11">
+    <a class="reference internal nav-link" href="#id13">
      Continuous-Time LTI Systems Described by Differential Equations
     </a>
    </li>
@@ -982,7 +1010,7 @@ title="Print to PDF"
 <p>The system defined by</p>
 <div class="math notranslate nohighlight">
 \[\sum_{k=0}^N a_k \frac{d^ky(t)}{dt^k}=\sum_{k=0}^M b_k \frac{d^k x(t)}{dt^k}\]</div>
-<p>will be linear only if all the auxilliary conditions are zero (see <a class="reference internal" href="#ex8-4"><span class="std std-ref">Example 8.5</span></a>).</p>
+<p>will be linear only if all the auxilliary conditions are zero (see <a class="reference internal" href="#ex8-4"><span class="std std-ref">Example 8.4</span></a>).</p>
 <p>If the auxilliary conditions are not zero, then the response <span class="math notranslate nohighlight">\(y(t)\)</span> of a system can be expressed as</p>
 <div class="math notranslate nohighlight">
 \[y(t) = y_\mathrm{zi}(t) + y_\mathrm{zs}(t)\]</div>
@@ -994,7 +1022,7 @@ title="Print to PDF"
 <p><span class="caption-number">Fig. 38 </span><span class="caption-text">Zero-state and zero-input responses</span><a class="headerlink" href="#fig-zs-and-zi-responses" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Note that <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t) \neq y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t) \neq y_p(t)\)</span> and that in general <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t)\)</span> contains <span class="math notranslate nohighlight">\(y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t)\)</span> contains both <span class="math notranslate nohighlight">\(y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_p(t)\)</span> (see <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.4</span></a>).</p>
+<p>Note that <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t) \neq y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t) \neq y_p(t)\)</span> and that in general <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t)\)</span> contains <span class="math notranslate nohighlight">\(y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t)\)</span> contains both <span class="math notranslate nohighlight">\(y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_p(t)\)</span> (see <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.3</span></a>).</p>
 </section>
 <section id="c-causality">
 <span id="ccde-c-causality"></span><h3>C. Causality<a class="headerlink" href="#c-causality" title="Permalink to this headline">#</a></h3>
@@ -1013,7 +1041,7 @@ title="Print to PDF"
 </section>
 <section id="d-time-invariance">
 <span id="ccde-d-time-invariance"></span><h3>D. Time-invariance<a class="headerlink" href="#d-time-invariance" title="Permalink to this headline">#</a></h3>
-<p>For a linear causal system, initial rest also implies time-invariance (<a class="reference internal" href="#ex8-6"><span class="std std-ref">Example 8.7</span></a>).</p>
+<p>For a linear causal system, initial rest also implies time-invariance (<a class="reference internal" href="#ex8-6"><span class="std std-ref">Example 8.6</span></a>).</p>
 </section>
 <section id="e-impulse-response">
 <span id="ccde-e-impulse-response"></span><h3>E. Impulse response<a class="headerlink" href="#e-impulse-response" title="Permalink to this headline">#</a></h3>
@@ -1021,7 +1049,7 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[\sum_{k=0}^N a_k \frac{d^ky(t)}{dt^k}=\sum_{k=0}^M b_k \frac{d^k \delta(t)}{dt^k}\]</div>
 <p>with the initial rest condition.</p>
-<p>Examples of finding impulse responses are given in <a class="reference internal" href="#ex8-6"><span class="std std-ref">Example 8.7</span></a> to <a class="reference internal" href="#ex8-8"><span class="std std-ref">Example 8.3</span></a>.</p>
+<p>Examples of finding impulse responses are given in <a class="reference internal" href="#ex8-6"><span class="std std-ref">Example 8.6</span></a> to <a class="reference internal" href="#ex8-8"><span class="std std-ref">Example 8.6</span></a>.</p>
 <section id="a-peek-into-the-future">
 <h4>A peek into the future<a class="headerlink" href="#a-peek-into-the-future" title="Permalink to this headline">#</a></h4>
 <p>Later in this course, and probably for the rest of your career, you will find the impulse response by using the Laplace transform.</p>
@@ -1040,6 +1068,30 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <p>For the answer, refer to the lecture recording or see solved problem 2.18 in <span id="id3">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<section id="matlab-solution">
+<h4>MATLAB Solution<a class="headerlink" href="#matlab-solution" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% cd matlab</span>
+<span class="nb">open</span><span class="w"> </span><span class="n">examples8</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Error using open</span>
+<span class=" -Color -Color-Red">File &#39;examples8&#39; not found.</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can download and run these scripts and try them yourself.</p>
+<ul class="simple">
+<li><p>MATLAB Scipt <span class="xref myst">examples8.slx</span></p></li>
+<li><p>Simulation model <span class="xref myst">example8_1.slx</span></p></li>
+</ul>
+</section>
 </section>
 <section id="example-8-2">
 <span id="ex8-2"></span><h3>Example 8.2<a class="headerlink" href="#example-8-2" title="Permalink to this headline">#</a></h3>
@@ -1047,25 +1099,23 @@ title="Print to PDF"
 <figure class="align-default" id="fig-ex-8-2">
 <a class="reference internal image-reference" href="../_images/ex8_2.png"><img alt="A two-integrator linear system" src="../_images/ex8_2.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 40 </span><span class="caption-text">A one-integrator linear system</span><a class="headerlink" href="#fig-ex-8-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">A two-integrator linear system</span><a class="headerlink" href="#fig-ex-8-2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For the answer, refer to the lecture recording or see solved problem 2.19 in in <span id="id4">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
-</section>
-<section id="example-8-3">
-<span id="ex8-8"></span><h3>Example 8.3<a class="headerlink" href="#example-8-3" title="Permalink to this headline">#</a></h3>
-<p>Consider the system described by</p>
-<div class="math notranslate nohighlight">
-\[\frac{dy(t)}{dt} + 2y(t) = x(t) + \frac{dx(t)}{dt}\]</div>
-<p>Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 2.25 in <span id="id5">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<section id="id5">
+<h4>MATLAB Solution<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>Simulink model <span class="xref myst">example8_2.slx</span></p></li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>As we will be moving on to show how differential equations can be solved by the Laplace transform, the remaining examples are optional and will not be examined.</p>
 </div>
 </section>
-<section id="example-8-4">
-<span id="ex8-3"></span><h3>Example 8.4<a class="headerlink" href="#example-8-4" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="example-8-3">
+<span id="ex8-3"></span><h3>Example 8.3<a class="headerlink" href="#example-8-3" title="Permalink to this headline">#</a></h3>
 <p>Consider a continuous-time system whose input <span class="math notranslate nohighlight">\(x(t)\)</span> and output <span class="math notranslate nohighlight">\(y(t)\)</span> are related by</p>
 <div class="math notranslate nohighlight">
 \[\frac{dy(t)}{dt}+ay(t)=x(t)\]</div>
@@ -1076,30 +1126,38 @@ title="Print to PDF"
 <p>(b) Express <span class="math notranslate nohighlight">\(y(t)\)</span> in terms of the zero-input and zero-state responses.</p>
 <p>For the answer, see the solved problem 2.20 in <span id="id6">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-8-5">
-<span id="ex8-4"></span><h3>Example 8.5<a class="headerlink" href="#example-8-5" title="Permalink to this headline">#</a></h3>
-<p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.4</span></a>.</p>
+<section id="example-8-4">
+<span id="ex8-4"></span><h3>Example 8.4<a class="headerlink" href="#example-8-4" title="Permalink to this headline">#</a></h3>
+<p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.3</span></a>.</p>
 <p>(a) Show that the system is not linear if <span class="math notranslate nohighlight">\(y(0)=y_0\neq 0\)</span>.</p>
 <p>(b) Show that the system is linear if <span class="math notranslate nohighlight">\(y(0) = 0\)</span>.</p>
 <p>For the answer, see the solved problem 2.21 in <span id="id7">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-8-6">
-<span id="ex8-5"></span><h3>Example 8.6<a class="headerlink" href="#example-8-6" title="Permalink to this headline">#</a></h3>
-<p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.4</span></a>. Show that the initial rest condition <span class="math notranslate nohighlight">\(y(0) = 0\)</span> also implies that the system is time-invariant.</p>
+<section id="example-8-5">
+<span id="ex8-5"></span><h3>Example 8.5<a class="headerlink" href="#example-8-5" title="Permalink to this headline">#</a></h3>
+<p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.3</span></a>. Show that the initial rest condition <span class="math notranslate nohighlight">\(y(0) = 0\)</span> also implies that the system is time-invariant.</p>
 <p>For the answer, see the solved problem 2.22 in <span id="id8">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-8-7">
-<span id="ex8-6"></span><h3>Example 8.7<a class="headerlink" href="#example-8-7" title="Permalink to this headline">#</a></h3>
-<p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.4</span></a>. Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system.</p>
+<section id="example-8-6">
+<span id="ex8-6"></span><h3>Example 8.6<a class="headerlink" href="#example-8-6" title="Permalink to this headline">#</a></h3>
+<p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.3</span></a>. Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system.</p>
 <p>For the answer, see the solved problem 2.23 in <span id="id9">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-8-8">
-<span id="ex8-7"></span><h3>Example 8.8<a class="headerlink" href="#example-8-8" title="Permalink to this headline">#</a></h3>
-<p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.4</span></a> with <span class="math notranslate nohighlight">\(y(0)=0\)</span>.</p>
+<section id="example-8-7">
+<span id="ex8-7"></span><h3>Example 8.7<a class="headerlink" href="#example-8-7" title="Permalink to this headline">#</a></h3>
+<p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.3</span></a> with <span class="math notranslate nohighlight">\(y(0)=0\)</span>.</p>
 <p>(a) Find the step response <span class="math notranslate nohighlight">\(s(t)\)</span> of the system without using the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>.</p>
-<p>(b) Find the step response <span class="math notranslate nohighlight">\(s(t)\)</span> of the system with the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> obtained in <a class="reference internal" href="#ex8-6"><span class="std std-ref">Example 8.7</span></a>.</p>
+<p>(b) Find the step response <span class="math notranslate nohighlight">\(s(t)\)</span> of the system with the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> obtained in <a class="reference internal" href="#ex8-6"><span class="std std-ref">Example 8.6</span></a>.</p>
 <p>(c) Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> from the step response <span class="math notranslate nohighlight">\(s(t)\)</span>.</p>
 <p>For the answer, see the solved problem 2.24 in <span id="id10">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+</section>
+<section id="ex8-8">
+<span id="id11"></span><h3>Example 8.6<a class="headerlink" href="#ex8-8" title="Permalink to this headline">#</a></h3>
+<p>Consider the system described by</p>
+<div class="math notranslate nohighlight">
+\[\frac{dy(t)}{dt} + 2y(t) = x(t) + \frac{dx(t)}{dt}\]</div>
+<p>Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.25 in <span id="id12">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 </section>
 <section id="summary">
@@ -1108,8 +1166,8 @@ title="Print to PDF"
 <section id="take-aways">
 <h3>Take aways<a class="headerlink" href="#take-aways" title="Permalink to this headline">#</a></h3>
 </section>
-<section id="id11">
-<h3>Continuous-Time LTI Systems Described by Differential Equations<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h3>
+<section id="id13">
+<h3>Continuous-Time LTI Systems Described by Differential Equations<a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="#ccde-a-linear-constant-coefficient-differential-equations"><span class="std std-ref">A. Linear constant-coefficient differential equations</span></a></p></li>
 <li><p><a class="reference internal" href="#ccde-b-linearity"><span class="std std-ref">B. Linearity</span></a></p></li>
@@ -1128,9 +1186,9 @@ title="Print to PDF"
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id12">
+<div class="docutils container" id="id14">
 <dl class="citation">
-<dt class="label" id="id22"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id4">3</a>,<a href="#id5">4</a>,<a href="#id6">5</a>,<a href="#id7">6</a>,<a href="#id8">7</a>,<a href="#id9">8</a>,<a href="#id10">9</a>)</span></dt>
+<dt class="label" id="id24"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id4">3</a>,<a href="#id6">4</a>,<a href="#id7">5</a>,<a href="#id8">6</a>,<a href="#id9">7</a>,<a href="#id10">8</a>,<a href="#id12">9</a>)</span></dt>
 <dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
 </dd>
 </dl>

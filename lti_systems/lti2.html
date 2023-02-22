@@ -959,10 +959,10 @@ title="Print to PDF"
 \[y(t) = \int_0^{\infty}h(\tau)x(t-\tau)\,d\tau\]</div>
 <p>Alternatively, applying the causality to the convolution integral (defined in Section <a class="reference internal" href="lti1.html#convolution-integral"><span class="std std-ref">C. Convolution Integral</span></a>)</p>
 <div class="math notranslate nohighlight">
-\[y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau\]</div>
+\[y(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau\]</div>
 <p>we have</p>
 <div class="math notranslate nohighlight">
-\[y(t) = \int_{-\infty}^{t}x(t)h(t-\tau)\,d\tau\]</div>
+\[y(t) = \int_{-\infty}^{t}x(\tau)h(t-\tau)\,d\tau\]</div>
 <p>This equation shows that the only values of the input <span class="math notranslate nohighlight">\(x(t)\)</span> used to evaluate the output <span class="math notranslate nohighlight">\(y(t)\)</span> are those for <span class="math notranslate nohighlight">\(\tau \le   t\)</span>.</p>
 </section>
 <section id="causal-signals">
@@ -975,14 +975,14 @@ title="Print to PDF"
 \[x(t)=0\quad t \gt 0\]</div>
 <p>Combining the definition of a causal signal with a causal system, when the input <span class="math notranslate nohighlight">\(x(t)\)</span> is causal, the output of a causal continuous-time LTI system is given by</p>
 <div class="math notranslate nohighlight">
-\[y(t) = \int_{0}^{t}h(t)x(t-\tau)\,d\tau =  \int_{0}^{t}x(t)h(t-\tau)\,d\tau\]</div>
+\[y(t) = \int_{0}^{t}h(\tau)x(t-\tau)\,d\tau =  \int_{0}^{t}x(\tau)h(t-\tau)\,d\tau\]</div>
 </section>
 </section>
 <section id="c-stability">
 <span id="id5"></span><h3>C. Stability<a class="headerlink" href="#c-stability" title="Permalink to this headline">#</a></h3>
-<p>The BIBO (bounded-input/bounder-output) stability of an LTI system (Section <a class="reference internal" href="../signals_and_systems/systems/index.html#stable-systems"><span class="std std-ref">Stable Systems</span></a>) is readily acertined by the impuse response. It can be shown (<a class="reference internal" href="#ex6-5"><span class="std std-ref">Example 6.5</span></a>) that a continuous-time LTI system is BIBO stable if its  impulse response is absolutely integrable; that is,</p>
+<p>The BIBO (bounded-input/bounder-output) stability of an LTI system (Section <a class="reference internal" href="../signals_and_systems/systems/index.html#stable-systems"><span class="std std-ref">Stable Systems</span></a>) is readily ascertined by the impuse response. It can be shown (<a class="reference internal" href="#ex6-5"><span class="std std-ref">Example 6.5</span></a>) that a continuous-time LTI system is BIBO stable if its  impulse response is absolutely integrable; that is,</p>
 <div class="math notranslate nohighlight">
-\[\int_{-\infty}^{\infty}\left[h(\tau)\right|\,d\tau \lt \infty\]</div>
+\[\int_{-\infty}^{\infty}\left|h(\tau)\right|\,d\tau \lt \infty\]</div>
 </section>
 </section>
 <section id="eigenfunctions-of-continuous-time-lti-systems">
@@ -1014,7 +1014,7 @@ title="Print to PDF"
 <p>that <span class="math notranslate nohighlight">\(y(0) = H(s)\)</span> (see <span class="xref std std-ref">ex:4_7</span>).</p>
 <section id="looking-ahead">
 <h3>Looking Ahead<a class="headerlink" href="#looking-ahead" title="Permalink to this headline">#</a></h3>
-<p>The above results inderline the definition of the Laplace transform and Fourier transform. The <a class="reference internal" href="../laplace_transform/index.html#laplace"><span class="std std-ref">Unit 4: Laplace Transforms and their Applications</span></a> will be discussed later in this course. The Fourier Transform will be introduced in <strong>EG-247 Digital Signal Processing</strong> next year.</p>
+<p>The above results underline the definition of the Laplace transform and Fourier transform. The <a class="reference internal" href="../laplace_transform/index.html#laplace"><span class="std std-ref">Unit 4: Laplace Transforms and their Applications</span></a> will be discussed later in this course. The Fourier Transform will be introduced in <strong>EG-247 Digital Signal Processing</strong> next year.</p>
 </section>
 </section>
 <section id="examples-6-properties-of-continuous-time-lti-systems">
