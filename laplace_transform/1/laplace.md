@@ -128,6 +128,7 @@ The Laplace transform operator is provided in the MATLAB symbolic math toolkit b
 slideshow:
   slide_type: fragment
 ---
+format compact
 syms s t x(t) % define Laplace transform variable and time as symbols
 X(s) = laplace(x(t))
 ```
