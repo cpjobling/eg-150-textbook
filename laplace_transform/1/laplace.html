@@ -648,8 +648,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-1">
-     Example 1
+    <a class="reference internal nav-link" href="#solved-problem-1">
+     Solved Problem 1
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -665,13 +665,18 @@ title="Print to PDF"
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-2">
-     Example 2
+    <a class="reference internal nav-link" href="#solved-problem-2">
+     Solved Problem 2
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id3">
        MATLAB Analysis
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#by-hand-analysis">
+       By hand analysis
       </a>
      </li>
     </ul>
@@ -769,8 +774,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-1">
-     Example 1
+    <a class="reference internal nav-link" href="#solved-problem-1">
+     Solved Problem 1
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -786,13 +791,18 @@ title="Print to PDF"
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-2">
-     Example 2
+    <a class="reference internal nav-link" href="#solved-problem-2">
+     Solved Problem 2
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id3">
        MATLAB Analysis
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#by-hand-analysis">
+       By hand analysis
       </a>
      </li>
     </ul>
@@ -938,8 +948,8 @@ title="Print to PDF"
 <p>For a Laplace transfomation to exist, the integral must be bounded. That is
 $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ - st}}dt} } \right| &lt; \infty \)</span>$</p>
 <p>The range of values for the complex variables <span class="math notranslate nohighlight">\(s\)</span> for which the Laplace tranform converges is called the <em>region of convergence</em> (ROC). To illustrate this concept, let us consider some examples.</p>
-<section id="example-1">
-<span id="laplace-ex1"></span><h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">#</a></h3>
+<section id="solved-problem-1">
+<span id="laplace-ex1"></span><h3>Solved Problem 1<a class="headerlink" href="#solved-problem-1" title="Permalink to this headline">#</a></h3>
 <p>Consider the signal</p>
 <div class="math notranslate nohighlight">
 \[x(t) = e^{-at}u_0(t)\quad a\, \mathrm{real}\]</div>
@@ -970,9 +980,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x(t) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>exp(-a*t)*heaviside(t)
@@ -1004,9 +1012,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>piecewise(in(s, &#39;real&#39;) &amp; a + s &lt; 0, Inf, ~in(s, &#39;real&#39;) &amp; a + real(s) ~= 0, 1/(a + s) - limit(exp(- t*a - t*s), t, Inf)/(a + s), in(s, &#39;real&#39;) &amp; 0 &lt; a + s | angle(s) in Dom::Interval(-pi/2, pi/2) &amp; 0 &lt; a &amp; s ~= 0, 1/(a + s), (in(s, &#39;real&#39;) | a + real(s) == 0) &amp; (~in(s, &#39;real&#39;) | 0 &lt;= a + s) &amp; (~in(s, &#39;real&#39;) | a + s &lt;= 0) &amp; (~angle(s) in Dom::Interval(-pi/2, pi/2) | a &lt;= 0 | s == 0), int(exp(-t*a)*exp(-t*s), t, 0, Inf))
@@ -1084,17 +1090,18 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </figcaption>
 </figure>
 <p>because <span class="math notranslate nohighlight">\(\lim_{t\to \infty}e^{-(s+a)t} = 0\)</span> only if <span class="math notranslate nohighlight">\(\mathrm{Re}(s + a)\gt 0\)</span> or <span class="math notranslate nohighlight">\(\mathrm{Re}(s)\gt -a\)</span>.</p>
-<p>Thus, the ROC for <a class="reference internal" href="#laplace-ex1"><span class="std std-ref">Example 1</span></a> for <a class="reference internal" href="#laplace-ex1"><span class="std std-ref">Example 1</span></a> is specified as <span class="math notranslate nohighlight">\(\mathrm{Re}(s)\gt -a\)</span> and is illustrated in the complex plane as showm in <a class="reference internal" href="#roc2"><span class="std std-numref">Fig. 42</span></a> by the shaded area to the right of the line $\mathrm{Re}(s)=-a.</p>
+<p>Thus, the ROC for <a class="reference internal" href="#laplace-ex1"><span class="std std-ref">Solved Problem 1</span></a> for <a class="reference internal" href="#laplace-ex1"><span class="std std-ref">Solved Problem 1</span></a> is specified as <span class="math notranslate nohighlight">\(\mathrm{Re}(s)\gt -a\)</span> and is illustrated in the complex plane as showm in <a class="reference internal" href="#roc2"><span class="std std-numref">Fig. 42</span></a> by the shaded area to the right of the line $\mathrm{Re}(s)=-a.</p>
 <p>In Laplace transform applications, the complex plane is commonly referred to as the s-plane. The horizontal and vertical axes are sometimes referred to as the <span class="math notranslate nohighlight">\(\sigma\)</span>-axis (<span class="math notranslate nohighlight">\(\mathrm{Re}(s)\)</span>) and the <span class="math notranslate nohighlight">\(j\omega\)</span>-axis (<span class="math notranslate nohighlight">\(\mathrm{Im}(s)\)</span>), respectively.</p>
 </section>
 </section>
-<section id="example-2">
-<span id="laplace-ex2"></span><h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">#</a></h3>
+<section id="solved-problem-2">
+<span id="laplace-ex2"></span><h3>Solved Problem 2<a class="headerlink" href="#solved-problem-2" title="Permalink to this headline">#</a></h3>
 <p>Consider the signal</p>
 <div class="math notranslate nohighlight">
 \[x(t) = -e^{-at}u_0(-t)\quad a\, \mathrm{real}\]</div>
 <section id="id3">
 <h4>MATLAB Analysis<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
+<p>We will work through the analysis in class</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">)</span>
@@ -1129,6 +1136,9 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <img alt="../../_images/laplace_39_0.png" src="../../_images/laplace_39_0.png" />
 </div>
 </div>
+</section>
+<section id="by-hand-analysis">
+<h4>By hand analysis<a class="headerlink" href="#by-hand-analysis" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">s</span><span class="o">*</span><span class="n">t</span><span class="p">),</span><span class="n">t</span><span class="p">,</span><span class="o">-</span><span class="n">inf</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
@@ -1155,13 +1165,6 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">assume</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">s</span><span class="o">*</span><span class="n">t</span><span class="p">),</span><span class="n">t</span><span class="p">,</span><span class="o">-</span><span class="n">inf</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1176,7 +1179,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/(a + s)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Inf
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
@@ -1211,14 +1214,14 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <p>Its Laplace transform <span class="math notranslate nohighlight">\(X(s)\)</span> is given by <span class="xref std std-ref">ex:9.1</span></p>
 <div class="math notranslate nohighlight">
 \[X(s)=\frac{1}{s+a}\quad \mathrm{Re}(s)\lt -a\]</div>
-<p>Thus the ROC for <a class="reference internal" href="#laplace-ex2"><span class="std std-ref">Example 2</span></a> is specified as <span class="math notranslate nohighlight">\(\mathrm{Re}(s)\lt -a\)</span> and is illustrated in the complex plane as showm in <a class="reference internal" href="#roc2"><span class="std std-numref">Fig. 42</span></a> by the shaded area to the left of the line <span class="math notranslate nohighlight">\(\mathrm{Re}(s)=-a\)</span>.</p>
+<p>Thus the ROC for <a class="reference internal" href="#laplace-ex2"><span class="std std-ref">Solved Problem 2</span></a> is specified as <span class="math notranslate nohighlight">\(\mathrm{Re}(s)\lt -a\)</span> and is illustrated in the complex plane as showm in <a class="reference internal" href="#roc2"><span class="std std-numref">Fig. 42</span></a> by the shaded area to the left of the line <span class="math notranslate nohighlight">\(\mathrm{Re}(s)=-a\)</span>.</p>
 <figure class="align-default" id="roc2">
 <a class="reference internal image-reference" href="../../_images/roc2.png"><img alt="ROC for Example 2" src="../../_images/roc2.png" style="width: 60%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 42 </span><span class="caption-text">ROC for Example 2</span><a class="headerlink" href="#roc2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Comparing the results of <a class="reference internal" href="#laplace-ex1"><span class="std std-ref">Example 1</span></a> and <a class="reference internal" href="#laplace-ex2"><span class="std std-ref">Example 2</span></a>, we see that that algebraic expressions for <span class="math notranslate nohighlight">\(X(s)\)</span> for these two signals are identical apart from the ROCs.</p>
+<p>Comparing the results of <a class="reference internal" href="#laplace-ex1"><span class="std std-ref">Solved Problem 1</span></a> and <a class="reference internal" href="#laplace-ex2"><span class="std std-ref">Solved Problem 2</span></a>, we see that that algebraic expressions for <span class="math notranslate nohighlight">\(X(s)\)</span> for these two signals are identical apart from the ROCs.</p>
 <p>Therefore, in order for the Laplace transform to be unique for each signal <span class="math notranslate nohighlight">\(x(t)\)</span>, <em>the ROC must be specified as part of the transform</em>.</p>
 </section>
 </section>

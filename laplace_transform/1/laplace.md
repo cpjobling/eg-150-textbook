@@ -149,7 +149,7 @@ The range of values for the complex variables $s$ for which the Laplace tranform
 +++ {"nbpresent": {"id": "4ad52fcd-e2e8-4d41-8827-511753bd1148"}, "slideshow": {"slide_type": "subslide"}}
 
 (laplace:ex1)=
-### Example 1
+### Solved Problem 1
 
 Consider the signal
 
@@ -255,7 +255,7 @@ In Laplace transform applications, the complex plane is commonly referred to as 
 +++ {"nbpresent": {"id": "4ad52fcd-e2e8-4d41-8827-511753bd1148"}, "slideshow": {"slide_type": "subslide"}}
 
 (laplace:ex2)=
-### Example 2
+### Solved Problem 2
 
 Consider the signal
 
@@ -264,6 +264,8 @@ $$x(t) = -e^{-at}u_0(-t)\quad a\, \mathrm{real}$$
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 #### MATLAB Analysis
+
+We will work through the analysis in class
 
 ```{code-cell}
 ---
@@ -281,20 +283,16 @@ slideshow:
 fplot(subs(x(t),a,1))
 ```
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### By hand analysis
+
 ```{code-cell}
 ---
 slideshow:
   slide_type: subslide
 ---
 int(x(t)*exp(-s*t),t,-inf,0)
-```
-
-```{code-cell}
----
-slideshow:
-  slide_type: fragment
----
-assume(s + a < 0)
 ```
 
 ```{code-cell}
