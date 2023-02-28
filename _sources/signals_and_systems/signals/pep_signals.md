@@ -208,7 +208,7 @@ A nonperiodic signal
 (e_n_p)=
 ## Energy and Power Signals
 
-Consider $v(t)$ to be the voltage across a resistor $R$ prtoducing a current $i(t)$. ({numref}`resistor_circuit`)
+Consider $v(t)$ to be the voltage across a resistor $R$ producing a current $i(t)$. ({numref}`resistor_circuit`)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 

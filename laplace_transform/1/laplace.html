@@ -651,11 +651,30 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#example-1">
      Example 1
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#by-hand">
+       By hand
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#matlab-analysis">
+       MATLAB analysis
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-2">
      Example 2
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       MATLAB Analysis
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -663,6 +682,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#poles-and-zeros-of-x-s">
    Poles and Zeros of X(s)
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     MATLAB Analysis
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#properties-of-the-roc">
@@ -746,11 +772,30 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#example-1">
      Example 1
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#by-hand">
+       By hand
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#matlab-analysis">
+       MATLAB analysis
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#example-2">
      Example 2
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       MATLAB Analysis
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -758,6 +803,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#poles-and-zeros-of-x-s">
    Poles and Zeros of X(s)
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     MATLAB Analysis
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#properties-of-the-roc">
@@ -810,20 +862,10 @@ title="Print to PDF"
 <h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#laplace-laplace"><span class="std std-ref">The Laplace Transform</span></a></p></li>
-</ul>
-<ul class="simple">
 <li><p><a class="reference internal" href="#laplace-matlab"><span class="std std-ref">MATLAB Representation</span></a></p></li>
-</ul>
-<ul class="simple">
 <li><p><a class="reference internal" href="#laplace-roc"><span class="std std-ref">Region of Convergence</span></a></p></li>
-</ul>
-<ul class="simple">
 <li><p><a class="reference internal" href="#laplace-pops-roc"><span class="std std-ref">Properties of the ROC</span></a></p></li>
-</ul>
-<ul class="simple">
 <li><p><a class="reference internal" href="#laplace-pandz"><span class="std std-ref">Poles and Zeros of X(s)</span></a></p></li>
-</ul>
-<ul class="simple">
 <li><p><span class="xref std std-ref">laplace:example</span></p></li>
 </ul>
 </section>
@@ -840,13 +882,13 @@ title="Print to PDF"
 <p>The function <span class="math notranslate nohighlight">\(H(s)\)</span> above is referred to as the Laplace transform of <span class="math notranslate nohighlight">\(h(t)\)</span>.</p>
 <p>For a general continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span>, the Laplace transform <span class="math notranslate nohighlight">\(X(s)\)</span> is defined as</p>
 <div class="math notranslate nohighlight">
-\[X(s) = \int_{-\infty}^{\infty}h(t)e^{-st}\,dt\]</div>
+\[X(s) = \int_{-\infty}^{\infty}x(t)e^{-st}\,dt\]</div>
 <p>The variable <span class="math notranslate nohighlight">\(s\)</span> is generally complex valued and is expressed as</p>
 <div class="math notranslate nohighlight">
 \[\sigma + j\omega\]</div>
 <p>The Laplace transform defined above is often called the <em>bilateral</em> (or <em>two-sided</em>) Laplace transform in contrast the the <em>unilateral</em> (or <em>one-sided</em>) Laplace transform which is defined as</p>
 <div class="math notranslate nohighlight">
-\[X_I(s) = \int_{0^-}^{\infty}h(t)e^{-st}\,dt\]</div>
+\[X_I(s) = \int_{0^-}^{\infty}x(t)e^{-st}\,dt\]</div>
 <p>where <span class="math notranslate nohighlight">\(0^-=\lim_{\epsilon\to 0}(0-\epsilon)\)</span>.</p>
 <p>Clearly the bilateral and unilateral tranforms are equivalent only if <span class="math notranslate nohighlight">\(x(t)=0\)</span> for <span class="math notranslate nohighlight">\(t\lt 0\)</span>.</p>
 <p>In this course, because we are dealing with causal signals and systems, we will be concerned only with unilateral Laplace transform.</p>
@@ -856,7 +898,7 @@ title="Print to PDF"
 <p>and the signal <span class="math notranslate nohighlight">\(x(t)\)</span> and its Laplace transform <span class="math notranslate nohighlight">\(X(s)\)</span> are said to form a Laplace transform pair denoted as</p>
 <div class="math notranslate nohighlight">
 \[x(t)\Leftrightarrow X(s)\]</div>
-<p>Laplace transform pairs are tabulated for ease of reference.</p>
+<p>Laplace transform pairs are tabulated (<span class="xref std std-doc">lt_table.md</span>) for ease of reference.</p>
 <div class="highlight-admonition notranslate"><div class="highlight"><pre><span></span>By convention, lower-case symbols are used for continuous-time signals and uppercase symbols for their Laplace tranforms.
 </pre></div>
 </div>
@@ -901,6 +943,135 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <p>Consider the signal</p>
 <div class="math notranslate nohighlight">
 \[x(t) = e^{-at}u_0(t)\quad a\, \mathrm{real}\]</div>
+<section id="by-hand">
+<h4>By hand<a class="headerlink" href="#by-hand" title="Permalink to this headline">#</a></h4>
+<p>We will work through the analysis in class</p>
+</section>
+<section id="matlab-analysis">
+<h4>MATLAB analysis<a class="headerlink" href="#matlab-analysis" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% set up</span>
+<span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="w"> </span><span class="s">t</span><span class="w"> </span><span class="s">a</span>
+<span class="n">assume</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="s">&#39;real&#39;</span><span class="p">)</span>
+<span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x(t) =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>exp(-a*t)*heaviside(t)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="n">a</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/laplace_26_0.png" src="../../_images/laplace_26_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">s</span><span class="o">*</span><span class="n">t</span><span class="p">),</span><span class="n">t</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">inf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>piecewise(in(s, &#39;real&#39;) &amp; a + s &lt; 0, Inf, ~in(s, &#39;real&#39;) &amp; a + real(s) ~= 0, 1/(a + s) - limit(exp(- t*a - t*s), t, Inf)/(a + s), in(s, &#39;real&#39;) &amp; 0 &lt; a + s | angle(s) in Dom::Interval(-pi/2, pi/2) &amp; 0 &lt; a &amp; s ~= 0, 1/(a + s), (in(s, &#39;real&#39;) | a + real(s) == 0) &amp; (~in(s, &#39;real&#39;) | 0 &lt;= a + s) &amp; (~in(s, &#39;real&#39;) | a + s &lt;= 0) &amp; (~angle(s) in Dom::Interval(-pi/2, pi/2) | a &lt;= 0 | s == 0), int(exp(-t*a)*exp(-t*s), t, 0, Inf))
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">assume</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">s</span><span class="o">*</span><span class="n">t</span><span class="p">),</span><span class="n">t</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">inf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/(a + s)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">laplace</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X(s) =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/(a + s)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
 <p>The Laplace transform of <span class="math notranslate nohighlight">\(x(t)\)</span></p>
 <div class="math notranslate nohighlight">
 \[X(s)=\int_{-\infty}^{\infty}e^{-at}u_0(t)e^{-st}\,dt = \int_{0^+}^{\infty}e^{-(s+a)t}\,dt\]</div>
@@ -916,11 +1087,127 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <p>Thus, the ROC for <a class="reference internal" href="#laplace-ex1"><span class="std std-ref">Example 1</span></a> for <a class="reference internal" href="#laplace-ex1"><span class="std std-ref">Example 1</span></a> is specified as <span class="math notranslate nohighlight">\(\mathrm{Re}(s)\gt -a\)</span> and is illustrated in the complex plane as showm in <a class="reference internal" href="#roc2"><span class="std std-numref">Fig. 42</span></a> by the shaded area to the right of the line $\mathrm{Re}(s)=-a.</p>
 <p>In Laplace transform applications, the complex plane is commonly referred to as the s-plane. The horizontal and vertical axes are sometimes referred to as the <span class="math notranslate nohighlight">\(\sigma\)</span>-axis (<span class="math notranslate nohighlight">\(\mathrm{Re}(s)\)</span>) and the <span class="math notranslate nohighlight">\(j\omega\)</span>-axis (<span class="math notranslate nohighlight">\(\mathrm{Im}(s)\)</span>), respectively.</p>
 </section>
+</section>
 <section id="example-2">
 <span id="laplace-ex2"></span><h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">#</a></h3>
 <p>Consider the signal</p>
 <div class="math notranslate nohighlight">
 \[x(t) = -e^{-at}u_0(-t)\quad a\, \mathrm{real}\]</div>
+<section id="id3">
+<h4>MATLAB Analysis<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x(t) =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-heaviside(-t)*exp(-a*t)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="n">a</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/laplace_39_0.png" src="../../_images/laplace_39_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">s</span><span class="o">*</span><span class="n">t</span><span class="p">),</span><span class="n">t</span><span class="p">,</span><span class="o">-</span><span class="n">inf</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Inf
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">assume</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">s</span><span class="o">*</span><span class="n">t</span><span class="p">),</span><span class="n">t</span><span class="p">,</span><span class="o">-</span><span class="n">inf</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/(a + s)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="p">(</span><span class="n">s</span><span class="p">)=</span><span class="n">laplace</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X(s) =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
 <p>Its Laplace transform <span class="math notranslate nohighlight">\(X(s)\)</span> is given by <span class="xref std std-ref">ex:9.1</span></p>
 <div class="math notranslate nohighlight">
 \[X(s)=\frac{1}{s+a}\quad \mathrm{Re}(s)\lt -a\]</div>
@@ -935,30 +1222,75 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <p>Therefore, in order for the Laplace transform to be unique for each signal <span class="math notranslate nohighlight">\(x(t)\)</span>, <em>the ROC must be specified as part of the transform</em>.</p>
 </section>
 </section>
+</section>
 <section id="poles-and-zeros-of-x-s">
 <span id="laplace-pandz"></span><h2>Poles and Zeros of X(s)<a class="headerlink" href="#poles-and-zeros-of-x-s" title="Permalink to this headline">#</a></h2>
 <p>Usually, <span class="math notranslate nohighlight">\(X(s)\)</span> will be a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span>; that is</p>
 <div class="math notranslate nohighlight">
 \[X(s)=\frac{b_ms^m+b_{m-1}s^{m-1}+\cdots b_1s + b_0}{a_ns^n+a_{n-1}s^{n-1}+\cdot a_1s + a_0}=\frac{b_m}{a_m}\,\frac{\left(s-z_1\right)\cdots\left(s-z_m\right)}{\left(s-p_1\right)\cdots\left(s-p_n\right)}\]</div>
-<p>The coefficients <span class="math notranslate nohighlight">\(b_k\)</span> and <span class="math notranslate nohighlight">\(a_k\)</span> are real constants, and <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(n\)</span> are positive integers.</p>
+<p>The coefficients <span class="math notranslate nohighlight">\(b_k\)</span> and <span class="math notranslate nohighlight">\(a_k\)</span> are real constants, and <span class="math notranslate nohighlight">\(k\)</span>, <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(n\)</span> are positive integers.</p>
 <p>The transform <span class="math notranslate nohighlight">\(X(s)\)</span> is called a <em>proper</em> rational function if <span class="math notranslate nohighlight">\(n&gt;m\)</span>, and an <em>improper</em> rational function if <span class="math notranslate nohighlight">\(n\le m\)</span>.</p>
 <p>The roots of the numerator polynomial, <span class="math notranslate nohighlight">\(z_k\)</span>, are called the <em>zeros</em> of <span class="math notranslate nohighlight">\(X(s)\)</span> because <span class="math notranslate nohighlight">\(X(s) = 0\)</span> for those values of <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <p>Similarly, the zeros of the denominator polynomial, <span class="math notranslate nohighlight">\(p_k\)</span>, are called the <em>poles</em> of <span class="math notranslate nohighlight">\(X(s)\)</span> because <span class="math notranslate nohighlight">\(X(s)\)</span> is infinite for those values of <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <p>Therefore, the poles of <span class="math notranslate nohighlight">\(X(s)\)</span> lie outside the ROC since, by definition, <span class="math notranslate nohighlight">\(X(s)\)</span> does not converge on the poles.</p>
 <p>The zeros, on the other hand, may lie inside or outside the ROC.</p>
 <p>Except for the scale factor <span class="math notranslate nohighlight">\(b_m/a_n\)</span>, <span class="math notranslate nohighlight">\(X(s)\)</span> can be completely specified by its poles and zeros.</p>
-<p>Thus a very compact representation of <span class="math notranslate nohighlight">\(X(s)\)</span> is the s-plane is to show the locatioons of the poles and zeros in addition to the ROC.</p>
+<p>Thus a very compact representation of <span class="math notranslate nohighlight">\(X(s)\)</span> is the s-plane is to show the locations of the poles and zeros in addition to the ROC.</p>
 <p>Traditionally, an “x” is used to indicate each pole and a “o” is used to indicate each zero.</p>
 <p>This is illustrated in <a class="reference internal" href="#laplace-pzmap"><span class="std std-numref">Fig. 43</span></a> for <span class="math notranslate nohighlight">\(X(s)\)</span> given by</p>
 <div class="math notranslate nohighlight">
-\[X(s) = \frac{2s+4}{s^2+4s+3} = 2 \frac{s+2}{(s+1)(s+3}\quad \mathrm{Re}(s)\gt -1\]</div>
+\[X(s) = \frac{2s+4}{s^2+4s+3} = 2 \frac{(s+2)}{(s+1)(s+3)}\quad \mathrm{Re}(s)\gt -1\]</div>
 <figure class="align-default" id="laplace-pzmap">
 <a class="reference internal image-reference" href="../../_images/pzmap.png"><img alt="s-plane representation of X(s)=(2s^2+4)(s^2+rs+3)" src="../../_images/pzmap.png" style="width: 60%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 43 </span><span class="caption-text">s-plane representation of <span class="math notranslate nohighlight">\(X(s)=(2s^2+4)(s^2+rs+3)\)</span></span><a class="headerlink" href="#laplace-pzmap" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<section id="id4">
+<h3>MATLAB Analysis<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="w"> </span><span class="p">=</span><span class="o">-</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">];</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="n">H</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">zpk</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>H =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    2 (s+2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  (s+1) (s+3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">pzmap</span><span class="p">(</span><span class="n">H</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/laplace_64_0.png" src="../../_images/laplace_64_0.png" />
+</div>
+</div>
 <p>Note that <span class="math notranslate nohighlight">\(X(s)\)</span> has one zero at <span class="math notranslate nohighlight">\(s=-2\)</span> and two poles at <span class="math notranslate nohighlight">\(s=-1\)</span> and <span class="math notranslate nohighlight">\(s=-3\)</span> with scale factor 2. The ROC is <span class="math notranslate nohighlight">\(\mathrm{Re}(s)&gt;-1\)</span>.</p>
+</section>
 </section>
 <section id="properties-of-the-roc">
 <span id="laplace-pops-roc"></span><h2>Properties of the ROC<a class="headerlink" href="#properties-of-the-roc" title="Permalink to this headline">#</a></h2>
@@ -971,7 +1303,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <span id="ex9-1"></span><h3>Example 9.1<a class="headerlink" href="#example-9-1" title="Permalink to this headline">#</a></h3>
 <p>Find the Laplace transform of</p>
 <p>a). <span class="math notranslate nohighlight">\(x(t)=-e^{-at}u_0(-t)\)</span></p>
-<p>b). <span class="math notranslate nohighlight">\(x(t)=-e^{at}u_0(-t)\)</span></p>
+<p>b). <span class="math notranslate nohighlight">\(x(t)= e^{at}u_0(-t)\)</span></p>
 </section>
 <section id="solution">
 <h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h3>
@@ -985,7 +1317,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 \[-e^{-at}u_0(-t) \Leftrightarrow\frac{1}{s+a}\quad\mathrm{Re}(s)\lt-a\]</div>
 <p>b). Similarly</p>
 <div class="math notranslate nohighlight">
-\[X(s) = -\int_{-\infty}^{\infty}e^{at}u_o(-t)e^{-st}\,dt=-\int_{-\infty}^{0^{-}}e^{-(s-a)t}\]</div>
+\[X(s) = \int_{-\infty}^{\infty}e^{at}u_o(-t)e^{-st}\,dt=-\int_{-\infty}^{0^{-}}e^{-(s-a)t}\]</div>
 <div class="math notranslate nohighlight">
 \[X(s) = -\left.\frac{1}{s+a}\right|_{-\infty}^{0^{-}}e^{-(s-a)t}=\frac{1}{s-a}\quad\mathrm{Re}(s)\lt a\]</div>
 <p>Thus we obtain</p>
@@ -1002,12 +1334,12 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id3">
+<div class="docutils container" id="id5">
 <dl class="citation">
-<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id2">Hsu20</a></span></dt>
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id2">Hsu20</a></span></dt>
 <dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
 </dd>
-<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id1">Kar12</a></span></dt>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id1">Kar12</a></span></dt>
 <dd><p>Steven T. Karris. <em>Signals and systems with MATLAB computing and Simulink modeling</em>. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197">https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197</a>.</p>
 </dd>
 </dl>
@@ -1024,16 +1356,16 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "imatlab"
+            mode: "matlab_connect"
         },
         kernelOptions: {
-            kernelName: "imatlab",
+            kernelName: "matlab_connect",
             path: "./laplace_transform/1"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'imatlab'</script>
+    <script>kernelName = 'matlab_connect'</script>
 
               </div>
               
