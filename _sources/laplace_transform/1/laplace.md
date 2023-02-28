@@ -39,7 +39,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook//laplace_transform/1/laplac
 
 * {ref}`laplace:pandz`
 
-* {ref}`laplace:example`
+* {ref}`laplace:examples`
 
 +++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "slide"}}
 
@@ -112,7 +112,7 @@ Laplace transform pairs are tabulated ({doc}`lt_table.md`) for ease of reference
 
 +++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "notes"}}
 
-```admonition note
+```note
 By convention, lower-case symbols are used for continuous-time signals and uppercase symbols for their Laplace tranforms.
 ```
 
