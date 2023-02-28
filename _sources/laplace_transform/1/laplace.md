@@ -235,7 +235,7 @@ $$X(s)=\int_{-\infty}^{\infty}e^{-at}u_0(t)e^{-st}\,dt = \int_{0^+}^{\infty}e^{-
 
 $$X(s) = \left.-\frac{1}{s+a}e^{-(s+a)t}\right|_{0^+}^\infty=\frac{1}{s+a}\quad \mathrm{Re}(s)> -a$$
 
-+++ {"slideshow": {"slide_type": "notes"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 :::{figure-md} ROC1
 <img src="pictures/roc1.png" alt="ROC for Example 1" width="60%">
@@ -284,22 +284,10 @@ slideshow:
 fplot(subs(x(t),a,1))
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-#### By hand analysis
-
 ```{code-cell}
 ---
 slideshow:
   slide_type: subslide
----
-int(x(t)*exp(-s*t),t,-inf,0)
-```
-
-```{code-cell}
----
-slideshow:
-  slide_type: fragment
 ---
 int(x(t)*exp(-s*t),t,-inf,0)
 ```
@@ -311,6 +299,21 @@ slideshow:
 ---
 X(s)=laplace(x(t))
 ```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+assume(s + a < 0)
+int(x(t)*exp(-s*t),t,-inf,0)
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### By hand analysis
+
+See {ref}`ex9.`
 
 +++ {"nbpresent": {"id": "4ad52fcd-e2e8-4d41-8827-511753bd1148"}, "slideshow": {"slide_type": "notes"}}
 
@@ -349,7 +352,7 @@ Therefore, in order for the Laplace transform to be unique for each signal $x(t)
 
 Usually, $X(s)$ will be a rational polynomial in $s$; that is
 
-$$X(s)=\frac{b_ms^m+b_{m-1}s^{m-1}+\cdots b_1s + b_0}{a_ns^n+a_{n-1}s^{n-1}+\cdot a_1s + a_0}=\frac{b_m}{a_m}\,\frac{\left(s-z_1\right)\cdots\left(s-z_m\right)}{\left(s-p_1\right)\cdots\left(s-p_n\right)}$$
+$$X(s)=\frac{b_ms^m+b_{m-1}s^{m-1}+\cdots b_1s + b_0}{a_ns^n+a_{n-1}s^{n-1}+\cdot a_1s + a_0}=\frac{b_m}{a_n}\,\frac{\left(s-z_1\right)\cdots\left(s-z_m\right)}{\left(s-p_1\right)\cdots\left(s-p_n\right)}$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 

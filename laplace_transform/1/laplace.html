@@ -1088,24 +1088,6 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <img alt="../../_images/laplace_39_0.png" src="../../_images/laplace_39_0.png" />
 </div>
 </div>
-</section>
-<section id="by-hand-analysis">
-<h4>By hand analysis<a class="headerlink" href="#by-hand-analysis" title="Permalink to this headline">#</a></h4>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">s</span><span class="o">*</span><span class="n">t</span><span class="p">),</span><span class="n">t</span><span class="p">,</span><span class="o">-</span><span class="n">inf</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Inf
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">s</span><span class="o">*</span><span class="n">t</span><span class="p">),</span><span class="n">t</span><span class="p">,</span><span class="o">-</span><span class="n">inf</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
@@ -1136,6 +1118,26 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">assume</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">s</span><span class="o">*</span><span class="n">t</span><span class="p">),</span><span class="n">t</span><span class="p">,</span><span class="o">-</span><span class="n">inf</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/(a + s)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="by-hand-analysis">
+<h4>By hand analysis<a class="headerlink" href="#by-hand-analysis" title="Permalink to this headline">#</a></h4>
+<p>See <span class="xref std std-ref">ex9.</span></p>
 <p>Its Laplace transform <span class="math notranslate nohighlight">\(X(s)\)</span> is given by <span class="xref std std-ref">ex:9.1</span></p>
 <div class="math notranslate nohighlight">
 \[X(s)=\frac{1}{s+a}\quad \mathrm{Re}(s)\lt -a\]</div>
@@ -1155,7 +1157,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <span id="laplace-pandz"></span><h2>Poles and Zeros of X(s)<a class="headerlink" href="#poles-and-zeros-of-x-s" title="Permalink to this headline">#</a></h2>
 <p>Usually, <span class="math notranslate nohighlight">\(X(s)\)</span> will be a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span>; that is</p>
 <div class="math notranslate nohighlight">
-\[X(s)=\frac{b_ms^m+b_{m-1}s^{m-1}+\cdots b_1s + b_0}{a_ns^n+a_{n-1}s^{n-1}+\cdot a_1s + a_0}=\frac{b_m}{a_m}\,\frac{\left(s-z_1\right)\cdots\left(s-z_m\right)}{\left(s-p_1\right)\cdots\left(s-p_n\right)}\]</div>
+\[X(s)=\frac{b_ms^m+b_{m-1}s^{m-1}+\cdots b_1s + b_0}{a_ns^n+a_{n-1}s^{n-1}+\cdot a_1s + a_0}=\frac{b_m}{a_n}\,\frac{\left(s-z_1\right)\cdots\left(s-z_m\right)}{\left(s-p_1\right)\cdots\left(s-p_n\right)}\]</div>
 <p>The coefficients <span class="math notranslate nohighlight">\(b_k\)</span> and <span class="math notranslate nohighlight">\(a_k\)</span> are real constants, and <span class="math notranslate nohighlight">\(k\)</span>, <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(n\)</span> are positive integers.</p>
 <p>The transform <span class="math notranslate nohighlight">\(X(s)\)</span> is called a <em>proper</em> rational function if <span class="math notranslate nohighlight">\(n&gt;m\)</span>, and an <em>improper</em> rational function if <span class="math notranslate nohighlight">\(n\le m\)</span>.</p>
 <p>The roots of the numerator polynomial, <span class="math notranslate nohighlight">\(z_k\)</span>, are called the <em>zeros</em> of <span class="math notranslate nohighlight">\(X(s)\)</span> because <span class="math notranslate nohighlight">\(X(s) = 0\)</span> for those values of <span class="math notranslate nohighlight">\(s\)</span>.</p>
