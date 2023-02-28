@@ -24,7 +24,3 @@
 
 See also: [Wikibooks: Engineering_Tables/Laplace_Transform_Table](https://en.wikibooks.org/wiki/Engineering_Tables/Laplace_Transform_Table) and [Laplace Transform&mdash;WolframMathworld](https://mathworld.wolfram.com/LaplaceTransform.html) for more complete references.
 <!-- #endregion -->
-
-```python
-
-```

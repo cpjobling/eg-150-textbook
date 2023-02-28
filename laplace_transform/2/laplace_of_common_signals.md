@@ -19,37 +19,25 @@ kernelspec:
 
 The preparatory reading for this section is Chapter 2.2 of {cite}`karris` and Chapter 3.4 of {cite}`schaum`.
 
-+++ {"nbpresent": {"id": "90f3c07d-3646-44b0-a549-7020fc10d16f"}, "slideshow": {"slide_type": "notes"}}
++++ {"nbpresent": {"id": "90f3c07d-3646-44b0-a549-7020fc10d16f"}, "slideshow": {"slide_type": "subslide"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/2/laplace_of_common_signals](https://cpjobling.github.io/eg-150-textbook/laplace_transform/2/laplace_of_common_signals)
 
 ![QR Code for this lecture](pictures/qrcode_laplace_2.png)
 
-+++ {"nbpresent": {"id": "f651cafb-8c2b-4d27-aec9-3491dbcce1aa"}, "slideshow": {"slide_type": "slide"}}
++++ {"nbpresent": {"id": "f651cafb-8c2b-4d27-aec9-3491dbcce1aa"}, "slideshow": {"slide_type": "notes"}}
 
 ## Agenda
 
-+++ {"nbpresent": {"id": "cdff914d-604d-4ae8-a8e6-8e5caf8bd41e"}, "slideshow": {"slide_type": "fragment"}}
-
 * {ref}`lap2:impulse`
-
-+++ {"nbpresent": {"id": "74c922da-bfb7-4f82-808d-a89b61bd1ab6"}, "slideshow": {"slide_type": "fragment"}}
 
 * {ref}`lap2:delayed_impulse`
 
-+++ {"nbpresent": {"id": "e7e4ac91-07af-41a4-98e4-6027ac34b41e"}, "slideshow": {"slide_type": "fragment"}}
-
 * {ref}`lap2:unit_step`
-
-+++ {"nbpresent": {"id": "11a99664-2fdb-4eff-8389-043965b5a6a5"}, "slideshow": {"slide_type": "subslide"}}
 
 * {ref}`lap2:exp`
 
-+++ {"nbpresent": {"id": "a2796ec3-fd12-49d3-99b8-fdc640f0af04"}, "slideshow": {"slide_type": "fragment"}}
-
 * {ref}`lap2:xform_table`
-
-+++
 
 * {ref}`lap2:matlab`
 
@@ -171,14 +159,18 @@ We reproduce Table 3.1 of {cite}`schaum` below. You will find a table of Laplace
 | 1       | $\displaystyle \delta(t)$                      | $\displaystyle 1$                                   | All $s$ |
 | 2       | $\displaystyle \delta(t-a)$                    | $\displaystyle e^{-as}$                             | All $s$ |
 | 3       | $\displaystyle u_0(t)$                         | $\displaystyle \frac{1}{s}$ | Re($s$) > 0 |
-| 4       | $\displaystyle t u_0(t)$                       | $\displaystyle \frac{1}{s^2}$   | Re($s$) > 0 | 
-| 5       | $\displaystyle t^n u_0(t)$                     | $\displaystyle \frac{n!}{s^{n+1}}$ | Re($s$) > 0 | 
-| 6       | $\displaystyle e^{-at}u_0(t)$                  | $\displaystyle \frac{1}{s+a}$ | Re($s$) > $-$Re($a$) | 
-| 7       | $\displaystyle t^n e^{-at} u_0(t)$             | $\displaystyle \frac{n!}{(s+a)^{n+1}}$              |  Re($s$) > $-$Re($a$) | 
-| 8       | $\displaystyle \sin (\omega t) u_0(t)$         | $\displaystyle \frac{\omega}{s^2 + \omega^2}$       | Re($s$) > 0 | 
-| 9       | $\displaystyle \cos (\omega t) u_0(t)$         | $\displaystyle \frac{s}{s^2 + \omega^2}$            | Re($s$) > 0 | 
-| 10      | $\displaystyle e^{-at} \sin (\omega t) u_0(t)$ | $\displaystyle \frac{\omega}{(s + a)^2 + \omega^2}$ | Re($s$) > $-$Re($a$) |
-| 11      | $\displaystyle e^{-at}\cos (\omega t) u_0(t)$  | $\displaystyle \frac{s+a}{(s+a)^2 + \omega^2}$      | Re($s$) > $-$Re($a$) |
+| 4       | $\displaystyle -u_0(-t)$                       | $\displaystyle \frac{1}{s}$ | Re($s$) < 0 |
+| 5       | $\displaystyle t u_0(t)$                       | $\displaystyle \frac{1}{s^2}$   | Re($s$) > 0 | 
+| 6       | $\displaystyle t^n u_0(t)$                     | $\displaystyle \frac{n!}{s^{n+1}}$ | Re($s$) > 0 | 
+| 7       | $\displaystyle e^{-at}u_0(t)$                  | $\displaystyle \frac{1}{s+a}$ | Re($s$) > $-$Re($a$) 
+| 8       | $\displaystyle -e^{-at}u_0(-t)$                | $\displaystyle \frac{1}{s+a}$ | Re($s$)< $-$Re($a$) 
+| 9       | $\displaystyle t^n e^{-at} u_0(t)$             | $\displaystyle \frac{n!}{(s+a)^{n+1}}$              |  Re($s$) > $-$Re($a$) | 
+| 10      | $\displaystyle -t^n e^{-at} u_0(-t)$             | $\displaystyle \frac{n!}{(s+a)^{n+1}}$              |  Re($s$) < $-$Re($a$) | 
+| 11      | $\displaystyle \sin (\omega t) u_0(t)$         | $\displaystyle \frac{\omega}{s^2 + \omega^2}$       | Re($s$) > 0 | 
+| 12      | $\displaystyle \cos (\omega t) u_0(t)$         | $\displaystyle \frac{s}{s^2 + \omega^2}$            | Re($s$) > 0 | 
+| 13      | $\displaystyle e^{-at} \sin (\omega t) u_0(t)$ | $\displaystyle \frac{\omega}{(s + a)^2 + \omega^2}$ | Re($s$) > $-$Re($a$) |
+| 14      | $\displaystyle e^{-at}\cos (\omega t) u_0(t)$  | $\displaystyle \frac{s+a}{(s+a)^2 + \omega^2}$      | Re($s$) > $-$Re($a$) |
+
 
 +++ {"nbpresent": {"id": "2a56e188-1891-420a-a66b-be808a1a11e2"}, "slideshow": {"slide_type": "notes"}}
 
@@ -202,6 +194,7 @@ Let's use the MATLAB Symbolic Math Toolbox to prove some of these transforms.
 slideshow:
   slide_type: fragment
 ---
+format compact
 syms s t a omega
 assume(a>0)
 assume(omega>0)
@@ -246,6 +239,27 @@ laplace(u0(t))
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+For some functions we need to define the ROC and use the integral directly
+
+```{code-cell} matlab
+---
+slideshow:
+  slide_type: fragment
+---
+laplace(-u0(-t))
+```
+
+```{code-cell} matlab
+---
+slideshow:
+  slide_type: fragment
+---
+assume(real(s) < 0)
+int(-u0(-t)*exp(-s*t),t,-inf,0)
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
 ### Unit ramp $u_1(t)=tu_0(t)$
 
 ```{code-cell} matlab
@@ -280,7 +294,43 @@ slideshow:
   slide_type: fragment
 ---
 laplace(exp(-a*t)*u0(t))
+```
+
+```{code-cell} matlab
+---
+slideshow:
+  slide_type: fragment
+---
+laplace(-exp(-a*t)*u0(-t))
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Defining the ROC and using `int`
+
+```{code-cell} matlab
+---
+slideshow:
+  slide_type: fragment
+---
+assume(s + a < 0)
+int(-exp(-a*t)*u0(-t)*exp(-s*t),t,-inf,0)
+```
+
+```{code-cell} matlab
+---
+slideshow:
+  slide_type: subslide
+---
 laplace(t*exp(-a*t)*u0(t))
+```
+
+```{code-cell} matlab
+---
+slideshow:
+  slide_type: fragment
+---
+syms n integer
 laplace(t^n*exp(-a*t)*u0(t))
 ```
 
