@@ -756,6 +756,23 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#take-aways">
      Take aways
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lccodes">
+       LCCODEs
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solution-of-lccodes">
+       Solution of LCCODEs
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#analogue-computer-models">
+       Analogue computer models
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#looking-ahead">
@@ -934,6 +951,23 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#take-aways">
      Take aways
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lccodes">
+       LCCODEs
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solution-of-lccodes">
+       Solution of LCCODEs
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#analogue-computer-models">
+       Analogue computer models
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#looking-ahead">
@@ -1240,16 +1274,27 @@ title="Print to PDF"
 <p>In this lecture we have concluded our introduction to LTI systems by looking at linear constant-coefficient differential equations.</p>
 <section id="take-aways">
 <h3>Take aways<a class="headerlink" href="#take-aways" title="Permalink to this headline">#</a></h3>
-<p>Continuous-time LTI systems are often modelled as linear constant coefficient ordinary differential equations (LCCODEs). The solution of such equations has wide application in Engineerin and Science.</p>
+<section id="lccodes">
+<h4>LCCODEs<a class="headerlink" href="#lccodes" title="Permalink to this headline">#</a></h4>
+<p>Continuous-time LTI systems are often modelled as linear constant coefficient ordinary differential equations (LCCODEs). The solution of such equations has wide application in engineering and science.</p>
 <p>The general description of a LCCODE is given in compact form as:</p>
 <div class="math notranslate nohighlight">
 \[\sum_{k=0}^N a_k \frac{d^k}{dt^k} y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)\]</div>
 <p>where the coefficients <span class="math notranslate nohighlight">\(a_k\)</span> and <span class="math notranslate nohighlight">\(b_k\)</span> are real constants and <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(m\)</span> are integers.</p>
 <p>We illustrated in <span class="xref std std-ref">un3.3:rc</span> that the simple RC circuit can be represented as such an LCCODE.</p>
+</section>
+<section id="solution-of-lccodes">
+<h4>Solution of LCCODEs<a class="headerlink" href="#solution-of-lccodes" title="Permalink to this headline">#</a></h4>
 <p>The solution of LCCODEs requires the determination and combination of the <em>homegenious solution</em> which is due only to the output <span class="math notranslate nohighlight">\(y(t)\)</span> and its derivatives, and a <em>particular solution</em> which takes account of the input <span class="math notranslate nohighlight">\(x(t)\)</span>, its derivatives, and the initial values of <span class="math notranslate nohighlight">\(y(t)\)</span> and its derivatives.</p>
-<p>We noted that continuous-time LTI systems defined by LCCODEs are only causal and time invariant if they are initially at rest.</p>
+<p>We were told that continuous-time LTI systems defined by LCCODEs are only <em>causal</em> and <em>time invariant</em> if they are initially at rest.</p>
 <p>The output of the continuous-time LTI system with input <span class="math notranslate nohighlight">\(x(t)\)</span> that is at rest and has zero initial conditions is called the <em>zero-state</em> output <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t)\)</span>. The outputs due to the inital conditions can be computed from the system with zero input which is named <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t)\)</span>. The total response of such a system is given by <span class="math notranslate nohighlight">\(y(t) = y_\mathrm{zs}(t) + y_\mathrm{zi}(t)\)</span>.</p>
+<p>For reference, a fully worked solution of a first-order LCCODE is provided in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.3</span></a>. <strong>You will not be expected to solve such problems in the assessments for this module</strong>.</p>
+</section>
+<section id="analogue-computer-models">
+<h4>Analogue computer models<a class="headerlink" href="#analogue-computer-models" title="Permalink to this headline">#</a></h4>
 <p>In <a class="reference internal" href="#examples-8"><span class="std std-ref">Examples 8: Systems described by differential equations</span></a> we were introduced to the representation of an LCCODE as a block diagram constructed from integral, gain and summing blocks. Such models were the basis of <em>analogue computation</em> which was used widely by engineers before the widespread adoption of digital computers. Models based on integration are still the basis of modern numerical digital system simulation tools like Multisim and Simulink.</p>
+<p>Examples of the solution of <a class="reference internal" href="#ex8-1"><span class="std std-ref">Example 8.1</span></a> and <a class="reference internal" href="#ex8-2"><span class="std std-ref">Example 8.2</span></a> have been provided in MATLAB and Simulink.</p>
+</section>
 </section>
 <section id="looking-ahead">
 <h3>Looking ahead<a class="headerlink" href="#looking-ahead" title="Permalink to this headline">#</a></h3>
@@ -1270,7 +1315,7 @@ title="Print to PDF"
 <h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
 <p>We move on to consider</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../laplace_transform/index.html"><span class="doc">Unit 4: Laplace Transforms and their Applications</span></a></p></li>
+<li><p><a class="reference internal" href="../laplace_transform/index.html#laplace"><span class="std std-ref">Unit 4: Laplace Transforms and their Applications</span></a></p></li>
 </ul>
 </section>
 <section id="references">

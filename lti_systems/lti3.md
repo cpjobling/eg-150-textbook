@@ -455,7 +455,9 @@ In this lecture we have concluded our introduction to LTI systems by looking at 
 
 ### Take aways
 
-Continuous-time LTI systems are often modelled as linear constant coefficient ordinary differential equations (LCCODEs). The solution of such equations has wide application in Engineerin and Science.
+#### LCCODEs
+
+Continuous-time LTI systems are often modelled as linear constant coefficient ordinary differential equations (LCCODEs). The solution of such equations has wide application in engineering and science.
 
 The general description of a LCCODE is given in compact form as:
 
@@ -465,13 +467,21 @@ where the coefficients $a_k$ and $b_k$ are real constants and $n$ and $m$ are in
 
 We illustrated in {ref}`un3.3:rc` that the simple RC circuit can be represented as such an LCCODE.
 
+#### Solution of LCCODEs
+
 The solution of LCCODEs requires the determination and combination of the *homegenious solution* which is due only to the output $y(t)$ and its derivatives, and a *particular solution* which takes account of the input $x(t)$, its derivatives, and the initial values of $y(t)$ and its derivatives.
 
-We noted that continuous-time LTI systems defined by LCCODEs are only causal and time invariant if they are initially at rest.
+We were told that continuous-time LTI systems defined by LCCODEs are only *causal* and *time invariant* if they are initially at rest.
 
 The output of the continuous-time LTI system with input $x(t)$ that is at rest and has zero initial conditions is called the *zero-state* output $y_\mathrm{zs}(t)$. The outputs due to the inital conditions can be computed from the system with zero input which is named $y_\mathrm{zi}(t)$. The total response of such a system is given by $y(t) = y_\mathrm{zs}(t) + y_\mathrm{zi}(t)$.
 
-In {ref}`examples_8` we were introduced to the representation of an LCCODE as a block diagram constructed from integral, gain and summing blocks. Such models were the basis of *analogue computation* which was used widely by engineers before the widespread adoption of digital computers. Models based on integration are still the basis of modern numerical digital system simulation tools like Multisim and Simulink.
+For reference, a fully worked solution of a first-order LCCODE is provided in {ref}`ex8_3`. **You will not be expected to solve such problems in the assessments for this module**.
+
+#### Analogue computer models
+
+In {ref}`examples_8` we were introduced to the representation of an LCCODE as a block diagram constructed from integral, gain and summing blocks. Such models were the basis of *analogue computation* which was used widely by engineers before the widespread adoption of digital computers. Models based on integration are still the basis of modern numerical digital system simulation tools like Multisim and Simulink. 
+
+Examples of the solution of {ref}`ex8_1` and {ref}`ex8_2` have been provided in MATLAB and Simulink.
 
 ### Looking ahead
 
@@ -493,7 +503,7 @@ Any continuous-time LTI system that can be represented by an LCCODE can be solve
 
 We move on to consider 
 
-* {doc}`../laplace_transform/index`
+* {ref}`laplace`
 
 ## References
 
