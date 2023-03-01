@@ -408,21 +408,38 @@ s-plane representation of $X(s)=(2s^2+4)/(s^2+4s+3)$
 
 #### MATLAB Analysis
 
+In MATLAB we represent polynomials as vectors whose elements are the numerical values of the coeffients in decending order of $s$:
+
 ```{code-cell}
 ---
 slideshow:
   slide_type: fragment
 ---
-z =-2; ; p = [-1, -3]; k = 2;
-H = zpk(z,p,k)
+n = [2 1]; d = [1 4 3];
 ```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+We factorise using function `roots` which determines the zeros of the polynomials:
 
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
-pzmap(H)
+z = roots(n), p = roots(d), k = 2;
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+We can plot these on the $s$-plabne using the function `pzmap`:
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+pzmap(p,z)
 ```
 
 +++ {"slideshow": {"slide_type": "notes"}}
