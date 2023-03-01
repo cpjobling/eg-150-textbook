@@ -128,7 +128,7 @@ $$y(t) = \int_{0}^{t}h(\tau)x(t-\tau)\,d\tau =  \int_{0}^{t}x(\tau)h(t-\tau)\,d\
 (c_Stability)=
 ### C. Stability
 
-The BIBO (bounded-input/bounder-output) stability of an LTI system (Section {ref}`stable_systems`) is readily ascertined by the impuse response. It can be shown ({ref}`ex6_5`) that a continuous-time LTI system is BIBO stable if its  impulse response is absolutely integrable; that is,
+The BIBO (bounded-input/bounded-output) stability of an LTI system (Section {ref}`stable_systems`) is readily ascertained by the impuse response. It can be shown ({ref}`ex6_5`) that a continuous-time LTI system is BIBO stable if its  impulse response is absolutely integrable; that is,
 
 $$\int_{-\infty}^{\infty}\left|h(\tau)\right|\,d\tau \lt \infty$$
 
@@ -387,7 +387,7 @@ Consider a stable continuous-time LTI system with impulse response $h(t)$ that i
 
 For the answer, see the solved problem 2.17 in {cite}`schaum`.
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Summary
 
@@ -397,6 +397,47 @@ We have continued our introdiuction the continuous-time LTI systems by consideri
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
 
 ### Take aways
+
+#### Properties of continuous-time LTI systems
+
+The input to an LTI system is $x(t)$, the impulse response of the LTI system is $h(t)$ and the output is $y(t)$.
+
+The output of any LTI system is computed from the convolution of $h(t)$ with $x(t)$:
+
+$$y(t) = \int_{-\infty}^{\infty} x(\tau)h(t-\tau)\,d\tau = \int_{-\infty}^{\infty} h(\tau)x(t-\tau)\,d\tau$$
+
+The only LTI system that has no memory is the simple gain $y(t) = Kx(t)$ for which the impulse response $h(t) = K\delta(t)$.
+
+Causal LTI systems have an impulse response $h(t)$ that satisfies $h(t) = 0$ $t < 0$. Therefore, for a causal LTI system the output is given by the convolution integral with adjsuted limits:
+
+$$y(t) = \int_{-\infty}^t x(\tau)h(t-\tau)\,d\tau$$
+
+An LTI system is BIBO stable if it's impulse response is integrable. That is:
+
+$$\int_{-\infty}^{\infty}\left|h(\tau)\right|\,d\tau \lt \infty$$
+
+Linear systems in series can be combined by convolution.
+
+#### Eignenfunctions of continuous-time LTI systems
+
+The exponential signal $x(t) = e^{st}$ (where $s$ is a complex variable, $s = \sigma + j\omega$) is an *eigenfunction* of a continuous-time LTI system with impulse response $h(t)$. The eigenvalue of the system is
+
+$$H(s) = \int_{-\infty}^{\infty} h(\tau)e^{-s\tau}\,d\tau.$$
+
+From the equation $y(t) = H(s)e^{st}$, $H(s) = y(0)$.
+
+As we will see in {ref}`unit4.1`, $H(s)$ is called the *Laplace transform* of $h(t)$. It is also known as the *transfer function* of the continuous-time LTI system that has impulse response $h(t)$.
+
+By a similar argument, we can show that if $s = j\omega$, then $e^{j\omega}$ is also an eigenfunction of $h(t)$, and the frequency response of an LTI system is
+
+$$H(j\omega) = \int_{-\infty}^{\infty} h(\tau)e^{-j\omega\tau}\,d\tau.$$
+
+This is called the *Fourier transform* and we will return to it in **EG-247 Digital Signal Processing**.
+
+
+
+
+
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

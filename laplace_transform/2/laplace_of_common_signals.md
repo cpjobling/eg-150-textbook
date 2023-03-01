@@ -52,11 +52,11 @@ $$\mathcal{L}\left\{\delta(t)\right\}=\int_{-\infty}^{\infty}\delta(t)e^{-st}\,d
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Using the sifting property of the Dirac delta function
+Using the *sampling* and *sifting* property of the Dirac delta function
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-$$\mathcal{L}\left\{\delta(t)\right\}=\int_{-\infty}^{\infty}\delta(t)e^{-st}\,dt = e^{-s(0)}=1\quad \mathrm{all}\ s$$
+$$\mathcal{L}\left\{\delta(t)\right\}=\int_{-\infty}^{\infty}e^{-st}\delta(t)\,dt = \int_{-\infty}^{\infty} e^{-s(0)}\delta(t)\,dt= \int_{-\infty}^{\infty}\delta(t)\,dt = 1\quad \mathrm{all}\ s$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -130,10 +130,57 @@ $$e^{-at}u_0(t) \Leftrightarrow \frac{1}{s+a}$$
 
 for $\mathrm{Re}(s) > -a$.
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(lap2:ramp)=
+
+## E. Unit ramp $x(t) = t u_0(t)$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+$$\mathcal{L}\left\{t u_0(t)\right\} = \int_0^\infty t e^{-st}\,dt$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+From tables of integrals:
+
+$$\int te^{-at}\ dt = -\left(\frac{-at + 1}{a^2}\right)e^{-at} + C$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Or MATLAB
+
+```{code-cell} matlab
+---
+slideshow:
+  slide_type: fragment
+---
+syms t a
+int(t * exp(-a*t))
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+so
+
+$$\int_0^\infty t e^{-st}\,dt = -\left.\left(\frac{-st + 1}{(-s)^2}\right)e^{-st}\right|_0^\infty$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+$$F(s) = -\frac{1}{s^2}\left(\left(-st + 1)\right)e^{-\infty} -\left( -0t + 1)\right)e^0\right) = \frac{1}{s^2}$$
+
++++
+
+Thus the Laplace transform pair is
+
+$$t u_0(t) \Leftrightarrow \frac{1}{s^2}$$
+
+for $\mathrm{Re}(s) > 0$.
+
 +++ {"nbpresent": {"id": "e58f747d-f0a8-464d-b62f-f7bb9ce8b605"}, "slideshow": {"slide_type": "slide"}}
 
 (lap2:others)=
-## E. Laplace Transform Pairs for Other Common SIgnals
+## F. Laplace Transform Pairs for Other Common SIgnals
 
 We can continue to derive the Laplace transforms of the most commonly encoutered signals, and in some cases, e.g. unit ramp $r(t)=u_1(t)=tu_0(t)$, $u_n(t)=t^nu_0(t)$, $t^ne^{-at}u_0(t)$, $\cos \omega t u_0(t)$, $\sin \omega t u_0(t)$ and many others, that we use often, the mathematics can tricky.
 
@@ -170,7 +217,6 @@ We reproduce Table 3.1 of {cite}`schaum` below. You will find a table of Laplace
 | 12      | $\displaystyle \cos (\omega t) u_0(t)$         | $\displaystyle \frac{s}{s^2 + \omega^2}$            | Re($s$) > 0 | 
 | 13      | $\displaystyle e^{-at} \sin (\omega t) u_0(t)$ | $\displaystyle \frac{\omega}{(s + a)^2 + \omega^2}$ | Re($s$) > $-$Re($a$) |
 | 14      | $\displaystyle e^{-at}\cos (\omega t) u_0(t)$  | $\displaystyle \frac{s+a}{(s+a)^2 + \omega^2}$      | Re($s$) > $-$Re($a$) |
-
 
 +++ {"nbpresent": {"id": "2a56e188-1891-420a-a66b-be808a1a11e2"}, "slideshow": {"slide_type": "notes"}}
 
@@ -360,13 +406,25 @@ laplace(exp(-a*t)*cos(omega*t)*u0(t))
 laplace(exp(-a*t)*sin(omega*t)*u0(t))
 ```
 
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Summary and Takeaways
+
+It is relatively easy to use the one-sided integral to compute the Laplace transform of commonly used signals. and you would be expected to be able to do this for any of the cases illustrated in this section.
+
+In practice, we use tables of transform pairs $f(t)\Leftrightarrow F(s)$, such as that reproduced here in {ref}`lap:xform_table`. 
+
+Such tables, or at least abstracts of such tables, will be provided in examinations and you will be provided with a copy of the **Tables for Examination Use** that will be used in this year's assessment via Canvas so that you can familiarise yourself with the tables as you work through the examples and exercises to come.
+
+Integrals and Laplace transform pairs can easily be confirmed using the MATLAB Symbolic Math Toolbox functions `int` and `laplace`.
+
 +++ {"nbpresent": {"id": "4f9f0fa3-84d5-45c3-a6fd-78f84f94388c"}, "slideshow": {"slide_type": "slide"}}
 
 ## Next Time
 
 We move on to consider 
 
-* {doc}`../3/laplace_properties.md`
+* {ref}`unit4.3`
 
 ## References
 
