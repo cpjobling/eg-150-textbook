@@ -416,7 +416,7 @@ laplace(exp(-a*t)*sin(omega*t)*u0(t))
 
 We move on to consider 
 
-* {doc}`../3/laplace_properties.md`
+* {ref}`unit4.3`
 
 ## References
 
