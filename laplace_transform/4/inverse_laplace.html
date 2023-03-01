@@ -621,6 +621,16 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#agenda">
+   Agenda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition">
    Definition
   </a>
@@ -778,8 +788,13 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary-and-take-aways">
-   Summary and Take Aways
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#take-aways">
+   Take Aways
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -822,6 +837,16 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#agenda">
+   Agenda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#definition">
    Definition
   </a>
@@ -979,8 +1004,13 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary-and-take-aways">
-   Summary and Take Aways
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#take-aways">
+   Take Aways
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1017,6 +1047,8 @@ title="Print to PDF"
 <span id="unit4-4"></span><h1>Unit 4.4 The Inverse Laplace Transform<a class="headerlink" href="#unit-4-4-the-inverse-laplace-transform" title="Permalink to this headline">#</a></h1>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/4/inverse_laplace">cpjobling.github.io/eg-150-textbook/laplace_transform/4/inverse_laplace</a></p>
 <p><img alt="QR Code for this lecture" src="../../_images/qrcode_laplace4.png" /></p>
+<section id="introduction">
+<span id="ilap-into"></span><h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>The preparatory reading for this section is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=75#ppg=79">Chapter 3</a> of <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> which</p>
 <ul class="simple">
 <li><p>defines the Inverse Laplace transformation</p></li>
@@ -1026,14 +1058,28 @@ title="Print to PDF"
 </ul>
 <p>There is additional coverage, including many worked problems in Chapter 3.5 of <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <p>We will explore the use of MATLAB to solve inverse Laplace tranforms in MATLAB Lab 4.</p>
+</section>
+<section id="agenda">
+<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#ilap-defn"><span class="std std-ref">Definition</span></a></p></li>
+<li><p><a class="reference internal" href="#case-complex-poles"><span class="std std-ref">The case of the complex poles</span></a></p></li>
+<li><p><span class="xref std std-ref">ilap:pfe</span></p></li>
+<li><p><a class="reference internal" href="#ilap-by-pfe"><span class="std std-ref">Inverse Laplace Transform by Partial Fraction Expansion (PFE)</span></a></p></li>
+<li><p><a class="reference internal" href="#ilap-distinct-real-poles"><span class="std std-ref">The case of the distinct real poles</span></a></p></li>
+<li><p><a class="reference internal" href="#ilap-repeated-poles"><span class="std std-ref">The case of the repeated poles</span></a></p></li>
+<li><p><a class="reference internal" href="#ilap-improper"><span class="std std-ref">The case of the improper rational polynomial</span></a></p></li>
+</ul>
+</section>
 <section id="definition">
-<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
+<span id="ilap-defn"></span><h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
 <p>The formal definition of the Inverse Laplace Transform is</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{L}^{-1}\left\{ F(s) \right\} = \frac{1}{2\pi j}\int_{\sigma-j\omega}^{\sigma+j\omega} F(s)e^{st}ds\]</div>
 <p>but this is difficult to use in practice because it requires contour integration using complex variable theory.</p>
 <p>For most engineering problems we can instead refer to <strong>Tables of Properties</strong> and <strong>Common Transform Pairs</strong> to look up the <em>Inverse Laplace Transform</em>.</p>
 <p>(Or, if we are not taking an exam, we can use a computer or mobile device.)</p>
+<p>(ilap:pfe}=</p>
 </section>
 <section id="partial-fraction-expansion">
 <h2>Partial Fraction Expansion<a class="headerlink" href="#partial-fraction-expansion" title="Permalink to this headline">#</a></h2>
@@ -1075,7 +1121,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="inverse-laplace-transform-by-partial-fraction-expansion-pfe">
-<h2>Inverse Laplace Transform by Partial Fraction Expansion (PFE)<a class="headerlink" href="#inverse-laplace-transform-by-partial-fraction-expansion-pfe" title="Permalink to this headline">#</a></h2>
+<span id="ilap-by-pfe"></span><h2>Inverse Laplace Transform by Partial Fraction Expansion (PFE)<a class="headerlink" href="#inverse-laplace-transform-by-partial-fraction-expansion-pfe" title="Permalink to this headline">#</a></h2>
 <p>The poles of <span class="math notranslate nohighlight">\(F(s)\)</span> can be real and distinct, real and repeated, complex conjugate pairs, or a combination.</p>
 <section id="defining-the-problem">
 <h3>Defining the problem<a class="headerlink" href="#defining-the-problem" title="Permalink to this headline">#</a></h3>
@@ -1090,7 +1136,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="the-case-of-the-distinct-real-poles">
-<h2>The case of the distinct real poles<a class="headerlink" href="#the-case-of-the-distinct-real-poles" title="Permalink to this headline">#</a></h2>
+<span id="ilap-distinct-real-poles"></span><h2>The case of the distinct real poles<a class="headerlink" href="#the-case-of-the-distinct-real-poles" title="Permalink to this headline">#</a></h2>
 <p>If the poles <span class="math notranslate nohighlight">\(p_1,\,p_2,\,p_3,\,\ldots,\, p_n\)</span> are <em>distinct</em> we can factor the denominator of <span class="math notranslate nohighlight">\(F(s)\)</span> in the form</p>
 <div class="math notranslate nohighlight">
 \[F(s) = \frac{N(s)}{(s-p_1)(s-p_2)(s-p_3)\ldots(s-p_n)}\]</div>
@@ -1200,7 +1246,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="the-case-of-the-complex-poles">
-<h2>The case of the complex poles<a class="headerlink" href="#the-case-of-the-complex-poles" title="Permalink to this headline">#</a></h2>
+<span id="case-complex-poles"></span><h2>The case of the complex poles<a class="headerlink" href="#the-case-of-the-complex-poles" title="Permalink to this headline">#</a></h2>
 <p>Quite often the poles of <span class="math notranslate nohighlight">\(F(s)\)</span> are complex and because the complex poles occur as complex conjugate pairs, the number of complex poles is even. Thus if <span class="math notranslate nohighlight">\(p_k\)</span> is a complex root of <span class="math notranslate nohighlight">\(D(s)\)</span> then its complex conjugate <span class="math notranslate nohighlight">\(p_k^*\)</span> is also a root of <span class="math notranslate nohighlight">\(D(s)\)</span>.</p>
 <p>You can still use the PFE with complex poles, as demonstrated in Pages 3-5—3-7 in the textbook. However it is easier to use the fact that complex poles will appear as quadratic factors of the form <span class="math notranslate nohighlight">\(s^2 + as + b\)</span> and then call on the two transforms in the PFE</p>
 <div class="math notranslate nohighlight">
@@ -1231,7 +1277,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="the-case-of-the-repeated-poles">
-<h2>The case of the repeated poles<a class="headerlink" href="#the-case-of-the-repeated-poles" title="Permalink to this headline">#</a></h2>
+<span id="ilap-repeated-poles"></span><h2>The case of the repeated poles<a class="headerlink" href="#the-case-of-the-repeated-poles" title="Permalink to this headline">#</a></h2>
 <p>When a rational polynomial has repeated poles</p>
 <div class="math notranslate nohighlight">
 \[F(s) = \frac{N(s)}{(s - p_1)^m(s - p_2)\cdots(s - p_{n-1})(s-p_0)}\]</div>
@@ -1267,7 +1313,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 </section>
 </section>
 <section id="the-case-of-the-improper-rational-polynomial">
-<h2>The case of the improper rational polynomial<a class="headerlink" href="#the-case-of-the-improper-rational-polynomial" title="Permalink to this headline">#</a></h2>
+<span id="ilap-improper"></span><h2>The case of the improper rational polynomial<a class="headerlink" href="#the-case-of-the-improper-rational-polynomial" title="Permalink to this headline">#</a></h2>
 <p>If <span class="math notranslate nohighlight">\(F(s)\)</span> is an improper rational polynomial, that is <span class="math notranslate nohighlight">\(m \ge n\)</span>, we must first divide the numerator <span class="math notranslate nohighlight">\(N(s)\)</span> by the denomonator <span class="math notranslate nohighlight">\(D(s)\)</span> to derive an expression of the form</p>
 <div class="math notranslate nohighlight">
 \[F(s) = k_0 + k_1s + k_2s^2 + \cdots + k_{m-n}s^{m-n} + \frac{N(s)}{D(s)}\]</div>
@@ -1358,8 +1404,21 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 <h2>Lab Work<a class="headerlink" href="#lab-work" title="Permalink to this headline">#</a></h2>
 <p>In MATLAB Lab 4, we will explore the tools provided by MATLAB for taking Laplace transforms, representing polynomials, finding roots and factorizing polynomials and solution of inverse Laplace transform problems.</p>
 </section>
-<section id="summary-and-take-aways">
-<h2>Summary and Take Aways<a class="headerlink" href="#summary-and-take-aways" title="Permalink to this headline">#</a></h2>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<p>In this section we have looked at the inverse Laplace transform. In particular, how to solve continuous-time LTI system problems that take the form of rational polynomials in <span class="math notranslate nohighlight">\(s\)</span>.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#ilap-defn"><span class="std std-ref">Definition</span></a></p></li>
+<li><p><a class="reference internal" href="#case-complex-poles"><span class="std std-ref">The case of the complex poles</span></a></p></li>
+<li><p><span class="xref std std-ref">ilap:pfe</span></p></li>
+<li><p><a class="reference internal" href="#ilap-by-pfe"><span class="std std-ref">Inverse Laplace Transform by Partial Fraction Expansion (PFE)</span></a></p></li>
+<li><p><a class="reference internal" href="#ilap-distinct-real-poles"><span class="std std-ref">The case of the distinct real poles</span></a></p></li>
+<li><p><a class="reference internal" href="#ilap-repeated-poles"><span class="std std-ref">The case of the repeated poles</span></a></p></li>
+<li><p><a class="reference internal" href="#ilap-improper"><span class="std std-ref">The case of the improper rational polynomial</span></a></p></li>
+</ul>
+</section>
+<section id="take-aways">
+<h2>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="next-time">
 <h2>Next time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>

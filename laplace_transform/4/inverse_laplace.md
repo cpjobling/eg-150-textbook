@@ -25,6 +25,9 @@ Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/4/inverse
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
+(ilap:into)=
+## Introduction
+
 The preparatory reading for this section is [Chapter 3](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=75#ppg=79) of {cite}`karris` which
 
 * defines the Inverse Laplace transformation 
@@ -36,8 +39,21 @@ There is additional coverage, including many worked problems in Chapter 3.5 of {
 
 We will explore the use of MATLAB to solve inverse Laplace tranforms in MATLAB Lab 4.
 
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Agenda
+
+* {ref}`ilap:defn`
+* {ref}`case:complex_poles`
+* {ref}`ilap:pfe`
+* {ref}`ilap_by_pfe`
+* {ref}`ilap:distinct_real_poles`
+* {ref}`ilap:repeated_poles`
+* {ref}`ilap:improper`
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(ilap:defn)=
 ## Definition
 
 The formal definition of the Inverse Laplace Transform is
@@ -56,6 +72,7 @@ For most engineering problems we can instead refer to **Tables of Properties** a
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(ilap:pfe}=
 ## Partial Fraction Expansion
 
 Quite often the Laplace Transform we start off with is a *rational polynomial* in $s$.
@@ -103,6 +120,7 @@ $$F(s) = \frac{N(s)}{D(s)} = \frac{1/{a_n}\left({ {b_m}{s^m} + {b_{m - 1}}{s^{m 
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(ilap_by_pfe)=
 ## Inverse Laplace Transform by Partial Fraction Expansion (PFE)
 
 The poles of $F(s)$ can be real and distinct, real and repeated, complex conjugate pairs, or a combination.
@@ -122,6 +140,7 @@ We will examine each case by means of a worked example. Please refer to Chapter 
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(ilap:distinct_real_poles)=
 ## The case of the distinct real poles
 
 +++ {"slideshow": {"slide_type": "fragment"}}
@@ -240,6 +259,7 @@ We will prove this in class.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(case:complex_poles)=
 ## The case of the complex poles
 
 Quite often the poles of $F(s)$ are complex and because the complex poles occur as complex conjugate pairs, the number of complex poles is even. Thus if $p_k$ is a complex root of $D(s)$ then its complex conjugate $p_k^*$ is also a root of $D(s)$.
@@ -287,6 +307,7 @@ You can use trig. identities to simplify this further if you wish.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(ilap:repeated_poles)=
 ## The case of the repeated poles
 
 When a rational polynomial has repeated poles 
@@ -340,6 +361,7 @@ For exam preparation, I would recommend that you use whatever method you find mo
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(ilap:improper)=
 ## The case of the improper rational polynomial
 
 If $F(s)$ is an improper rational polynomial, that is $m \ge n$, we must first divide the numerator $N(s)$ by the denomonator $D(s)$ to derive an expression of the form
@@ -445,7 +467,19 @@ In MATLAB Lab 4, we will explore the tools provided by MATLAB for taking Laplace
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-## Summary and Take Aways
+## Summary
+
+In this section we have looked at the inverse Laplace transform. In particular, how to solve continuous-time LTI system problems that take the form of rational polynomials in $s$. 
+
+* {ref}`ilap:defn`
+* {ref}`case:complex_poles`
+* {ref}`ilap:pfe`
+* {ref}`ilap_by_pfe`
+* {ref}`ilap:distinct_real_poles`
+* {ref}`ilap:repeated_poles`
+* {ref}`ilap:improper`
+
+## Take Aways
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
