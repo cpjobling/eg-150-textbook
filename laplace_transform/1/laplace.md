@@ -415,7 +415,7 @@ In MATLAB we represent polynomials as vectors whose elements are the numerical v
 slideshow:
   slide_type: fragment
 ---
-n = [2 1]; d = [1 4 3];
+n = [2 4]; d = [1 4 3];
 ```
 
 +++ {"slideshow": {"slide_type": "fragment"}}
