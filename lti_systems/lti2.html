@@ -739,6 +739,18 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#take-aways">
      Take aways
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id15">
+       Properties of continuous-time LTI systems
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eignenfunctions-of-continuous-time-lti-systems">
+       Eignenfunctions of continuous-time LTI systems
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -890,6 +902,18 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#take-aways">
      Take aways
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id15">
+       Properties of continuous-time LTI systems
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eignenfunctions-of-continuous-time-lti-systems">
+       Eignenfunctions of continuous-time LTI systems
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -980,7 +1004,7 @@ title="Print to PDF"
 </section>
 <section id="c-stability">
 <span id="id5"></span><h3>C. Stability<a class="headerlink" href="#c-stability" title="Permalink to this headline">#</a></h3>
-<p>The BIBO (bounded-input/bounder-output) stability of an LTI system (Section <a class="reference internal" href="../signals_and_systems/systems/index.html#stable-systems"><span class="std std-ref">Stable Systems</span></a>) is readily ascertined by the impuse response. It can be shown (<a class="reference internal" href="#ex6-5"><span class="std std-ref">Example 6.5</span></a>) that a continuous-time LTI system is BIBO stable if its  impulse response is absolutely integrable; that is,</p>
+<p>The BIBO (bounded-input/bounded-output) stability of an LTI system (Section <a class="reference internal" href="../signals_and_systems/systems/index.html#stable-systems"><span class="std std-ref">Stable Systems</span></a>) is readily ascertained by the impuse response. It can be shown (<a class="reference internal" href="#ex6-5"><span class="std std-ref">Example 6.5</span></a>) that a continuous-time LTI system is BIBO stable if its  impulse response is absolutely integrable; that is,</p>
 <div class="math notranslate nohighlight">
 \[\int_{-\infty}^{\infty}\left|h(\tau)\right|\,d\tau \lt \infty\]</div>
 </section>
@@ -1142,6 +1166,27 @@ title="Print to PDF"
 </ul>
 <section id="take-aways">
 <h3>Take aways<a class="headerlink" href="#take-aways" title="Permalink to this headline">#</a></h3>
+<section id="id15">
+<h4>Properties of continuous-time LTI systems<a class="headerlink" href="#id15" title="Permalink to this headline">#</a></h4>
+<p>The input to an LTI system is <span class="math notranslate nohighlight">\(x(t)\)</span>, the impulse response of the LTI system is <span class="math notranslate nohighlight">\(h(t)\)</span> and the output is <span class="math notranslate nohighlight">\(y(t)\)</span>.</p>
+<p>The output of any LTI system is computed from the convolution of <span class="math notranslate nohighlight">\(h(t)\)</span> with <span class="math notranslate nohighlight">\(x(t)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[y(t) = \int_{-\infty}^{\infty} x(\tau)h(t-\tau)\,d\tau = \int_{-\infty}^{\infty} h(\tau)x(t-\tau)\,d\tau\]</div>
+<p>The only LTI system that has no memory is the simple gain <span class="math notranslate nohighlight">\(y(t) = Kx(t)\)</span> for which the impulse response <span class="math notranslate nohighlight">\(h(t) = K\delta(t)\)</span>.</p>
+<p>Causal LTI systems have an impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> that satisfies <span class="math notranslate nohighlight">\(h(t) = 0\)</span> <span class="math notranslate nohighlight">\(t &lt; 0\)</span>. Therefore, for a causal LTI system the output is given by the convolution integral with adjsuted limits:</p>
+<div class="math notranslate nohighlight">
+\[y(t) = \int_{-\infty}^t x(\tau)h(t-\tau)\,d\tau\]</div>
+<p>An LTI system is BIBO stable if it’s impulse response is integrable. That is:</p>
+<div class="math notranslate nohighlight">
+\[\int_{-\infty}^{\infty}\left|h(\tau)\right|\,d\tau \lt \infty\]</div>
+</section>
+<section id="eignenfunctions-of-continuous-time-lti-systems">
+<h4>Eignenfunctions of continuous-time LTI systems<a class="headerlink" href="#eignenfunctions-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h4>
+<p>The exponential signal <span class="math notranslate nohighlight">\(x(t) = e^{st}\)</span> (where <span class="math notranslate nohighlight">\(s\)</span> is a complex variable, <span class="math notranslate nohighlight">\(s = \sigma + j\omega\)</span>) is an eigenfunction of a continuous-time LTI system. The eigenvalue of the system is</p>
+<p>$<span class="math notranslate nohighlight">\(H(s) = \int_{-\infty}^{\infty} h(\tau)e^{-s\tau}\,d\tau\)</span>$.</p>
+<p>From the equation <span class="math notranslate nohighlight">\(y(t) = H(s)e^{st}\)</span>, <span class="math notranslate nohighlight">\(H(s) = y(0)\)</span>.</p>
+<p>As we will see in <a class="reference internal" href="../laplace_transform/1/laplace.html#unit4-1"><span class="std std-ref">Unit 4.1: The Laplace Transformation</span></a>, H(s) is called the <em>Laplace transform</em> of <span class="math notranslate nohighlight">\(h(t)\)</span>. It is also known as the <em>transfer function</em> of the continuous-time LTI system that has impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>.</p>
+</section>
 </section>
 </section>
 <section id="next-time">
@@ -1153,9 +1198,9 @@ title="Print to PDF"
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id15">
+<div class="docutils container" id="id16">
 <dl class="citation">
-<dt class="label" id="id25"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id7">2</a>,<a href="#id8">3</a>,<a href="#id9">4</a>,<a href="#id10">5</a>,<a href="#id11">6</a>,<a href="#id12">7</a>,<a href="#id13">8</a>,<a href="#id14">9</a>)</span></dt>
+<dt class="label" id="id26"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id7">2</a>,<a href="#id8">3</a>,<a href="#id9">4</a>,<a href="#id10">5</a>,<a href="#id11">6</a>,<a href="#id12">7</a>,<a href="#id13">8</a>,<a href="#id14">9</a>)</span></dt>
 <dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
 </dd>
 </dl>
