@@ -597,10 +597,14 @@ pzmap(Poles,Zeros)
 
 We move on to consider 
 
-* {doc}`../2/laplace_of_common_signals.md`
+* {ref}`unit4.2`
 
 ## References
 
 ```{bibliography}
 :filter: docname in docnames
+```
+
+```{code-cell}
+
 ```

@@ -410,6 +410,14 @@ laplace(exp(-a*t)*sin(omega*t)*u0(t))
 
 ## Summary and Takeaways
 
+It is relatively easy to use the one-sided integral to compute the Laplace transform of commonly used signals. and you would be expected to be able to do this for any of the cases illustrated in this section.
+
+In practice, we use tables of transform pairs $f(t)\Leftrightarrow F(s)$, such as that reproduced here in {ref}`lap:xform_table`. 
+
+Such tables, or at least abstracts of such tables, will be provided in examinations and you will be provided with a copy of the **Tables for Examination Use** that will be used in this year's assessment via Canvas so that you can familiarise yourself with the tables as you work through the examples and exercises to come.
+
+Integrals and Laplace transform pairs can easily be confirmed using the MATLAB Symbolic Math Toolbox functions `int` and `laplace`.
+
 +++ {"nbpresent": {"id": "4f9f0fa3-84d5-45c3-a6fd-78f84f94388c"}, "slideshow": {"slide_type": "slide"}}
 
 ## Next Time
