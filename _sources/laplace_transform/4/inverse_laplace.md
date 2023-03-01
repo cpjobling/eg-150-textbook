@@ -17,6 +17,12 @@ kernelspec:
 (unit4.4)=
 # Unit 4.4 The Inverse Laplace Transform
 
++++
+
+Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/4/inverse_laplace](https://cpjobling.github.io/eg-150-textbook/laplace_transform/4/inverse_laplace)
+
+![QR Code for this lecture](pictures/qrcode_laplace4.png)
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 The preparatory reading for this section is [Chapter 3](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=75#ppg=79) of {cite}`karris` which
@@ -413,6 +419,10 @@ $$f_6(t) = e^{-t}+\delta(t)+\delta'(t)$$
 #### Matlab verification
 
 ```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
 Ns = [1, 2, 2]; Ds = [1 1];
 [r, p, k] = residue(Ns, Ds)
 ```
@@ -425,6 +435,30 @@ slideshow:
 syms s;
 F6 = (s^2 + 2*s + 2)/(s + 1);
 f6 = ilaplace(F6)
+```
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+## Lab Work
+
+In MATLAB Lab 4, we will explore the tools provided by MATLAB for taking Laplace transforms, representing polynomials, finding roots and factorizing polynomials and solution of inverse Laplace transform problems.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Summary and Take Aways
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Next time
+
+We move on to consider 
+
+* {ref}`unit4.5`
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -456,15 +490,3 @@ ls
 open ex3_1
 ex3_1
 ```
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Lab Work
-
-In the lab, next Tuesday, we will explore the tools provided by MATLAB for taking Laplace transforms, representing polynomials, finding roots and factorizing polynomials and solution of inverse Laplace transform problems.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-## Reference
-
-See [Bibliography](/zbib)

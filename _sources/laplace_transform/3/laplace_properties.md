@@ -62,7 +62,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/3/laplace
 
 Basic properties of the Laplace transform are presented in the following. Verification of these properties is given in Worked Problems 3.8 to 3.16 in {cite}`schaum` and in Section 2.2 in {cite}`karris`.
 
-We will verify some of the properties in MATLAB Lab 3, but will not examine them further in this course.
+We will verify some of the properties in MATLAB Lab 4, but will not examine them further in this course.
 
 You will, however, be expected to use **Tables of Properties**, such as that given in {ref}`table_of_props` below, to solve problems.
 
@@ -224,9 +224,15 @@ We will work through a few of the following on the board in class
 (ex10.1)=
 ### Example 10.1: Pulse
 
-Compute the Laplace transform of the pulse shown in the figure.
+Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the pulse shown in {numref}`ig:ex10.1`.
 
-![pulse](pictures/pulse.png)
+:::{figure-md} fig:ex10.1
+<img src="pictures/pulse.png" alt="A rectangular pulse." width="50%">
+
+A rectangular pulse.
+:::
+
++++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "notes"}}
 
 For full solution see [Example 2.4.1](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=63) in Karris.
 
@@ -260,13 +266,20 @@ For full solution see [Example 2.4.1](https://ebookcentral.proquest.com/lib/swan
 (ex10.2)=
 ### Example 10.2: Line segment
 
-Compute the Laplace transform of the line segment shown below.
+Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the line segment shown in {numref}`ig:ex10.2`.
 
-![line](pictures/line.png)
+:::{figure-md} fig:ex10.2
+<img src="pictures/line.png" alt="A line segment." width="50%">
+
+A line segment.
+:::
+
++++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "notes"}}
 
 For full solution see [Example 2.4.2](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=64) in Karris.
 
 <pre style="border: 2px solid blue">
+
 
 
 
@@ -296,9 +309,15 @@ For full solution see [Example 2.4.2](https://ebookcentral.proquest.com/lib/swan
 (ex10.3)=
 ### Example 10.3: Triangular Pulse
 
-Compute the Laplace transform of the triangular pulse shown below
+Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the triangular pulse shown in {numref}`ig:ex10.3`.
 
-![triangle](pictures/triangle.png)
+:::{figure-md} fig:ex10.3
+<img src="pictures/triangle.png" alt="A triangular pulse." width="50%">
+
+A triangular pulse.
+:::
+
++++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "notes"}}
 
 For full solution see [Examples in 2.4.3](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=65) in Karris.
 
@@ -332,9 +351,15 @@ For full solution see [Examples in 2.4.3](https://ebookcentral.proquest.com/lib/
 (ex10.4)=
 ### Example 10.4: Square Wave
 
-Compute the Laplace transform of the periodic function shown below.
+Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the of the periodic function shown in {numref}`ig:ex10.4`.
 
-![square wave](pictures/sqare.png)
+:::{figure-md} fig:ex10.4
+<img src="pictures/sqare.png" alt="A square wave." width="50%">
+
+A square wave.
+:::
+
++++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "notes"}}
 
 For full solution see [Example 2.4.4](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=66) in Karris.
 
@@ -368,9 +393,15 @@ For full solution see [Example 2.4.4](https://ebookcentral.proquest.com/lib/swan
 (ex10.5)=
 ### Example 10.5: Half-rectified Sinewave
 
-Compute the Laplace Transform of the half-rectified sine wave shown below.
+Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the half-rectified sine wave shown in {numref}`ig:ex10.5`.
 
-![half-rectified sinewave](pictures/rectsine.png)
+:::{figure-md} fig:ex10.5
+<img src="pictures/rectsine.png" alt="Half-rectified sine wave." width="50%">
+
+Half-rectified sine wave.
+:::
+
++++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "notes"}}
 
 For full solution see [Example 2.4.5](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=67) in Karris.
 
@@ -399,6 +430,24 @@ For full solution see [Example 2.4.5](https://ebookcentral.proquest.com/lib/swan
 
 </pre>
 
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Summary and Take Aways
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Next time
+
+We move on to consider 
+
+* {ref}`unit4.4`
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
 ## Homework
@@ -407,38 +456,26 @@ Attempt at least one of the end-of-chapter exercises from each question 1-7 of [
 
 If we have time, I will work through one or two of these in class.
 
-## References
-
-See [Bibliography](/zbib).
-
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
 ## Answers to Examples 10
 
-10.1. $$Au_0(t)-Au_0(t-a)\Leftrightarrow \frac{A\left(1-e^{-as}\right)}{s}.$$
+{ref}`ex10.1`
 
-10.2. $$(t-1)u_0(t-1)\Leftrightarrow \frac{e^{-s}}{s}.$$
+$$Au_0(t)-Au_0(t-a)\Leftrightarrow \frac{A\left(1-e^{-as}\right)}{s}.$$
 
-10.3. $$f_T(t)\Leftrightarrow \frac{\left(1-e^{-s}\right)^2}{s^2}.$$
+{ref}`ex10.2`
 
-10.4. $$f_R(t)\Leftrightarrow \frac{A\tanh \left(\frac{As}{2}\right)}{s}.$$
+$$(t-1)u_0(t-1)\Leftrightarrow \frac{e^{-s}}{s}.$$
 
-10.55. $$f_{HW}(t) \Leftrightarrow \frac{1}{\left(s^2 + 1\right)\left(1-e^{\pi s}\right)}.$$
+{ref}`ex10.3` 
 
-+++ {"nbpresent": {"id": "027ac91d-b792-4ffb-a0b4-72a4a144638b"}, "slideshow": {"slide_type": "slide"}}
+$$f_T(t)\Leftrightarrow \frac{\left(1-e^{-s}\right)^2}{s^2}.$$
 
-## Using Matlab to Find Laplace Transforms
+{ref}`ex10.4`
 
-The Matlab function `laplace` can be used to find laplace transforms of time functions. The lab exercises will illustrate this.
+$$f_R(t)\Leftrightarrow \frac{A\tanh \left(\frac{As}{2}\right)}{s}.$$
 
-+++ {"nbpresent": {"id": "4f9f0fa3-84d5-45c3-a6fd-78f84f94388c"}, "slideshow": {"slide_type": "slide"}}
+{ref}`ex10.5`
 
-## Homework
-
-Attempt at least one of the end-of-chapter exercises from each question 1-7 of [Section 2.7](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=75#ppg=71) of {cite}`karris` . Don't look at the answers until you have attempted the problems.
-
-If we have time, I will work through one or two of these in class.
-
-## Reference
-
-See [Bibliography](/zbib)
+$$f_{HW}(t) \Leftrightarrow \frac{1}{\left(s^2 + 1\right)\left(1-e^{\pi s}\right)}.$$
