@@ -25,38 +25,20 @@ Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/3/laplace
 
 ![QR Code for this lecture](pictures/qrcode_laplace_3.png)
 
-+++ {"nbpresent": {"id": "f651cafb-8c2b-4d27-aec9-3491dbcce1aa"}, "slideshow": {"slide_type": "slide"}}
++++ {"nbpresent": {"id": "11a99664-2fdb-4eff-8389-043965b5a6a5"}, "slideshow": {"slide_type": "notes"}}
 
 ## Agenda
 
-+++ {"nbpresent": {"id": "cdff914d-604d-4ae8-a8e6-8e5caf8bd41e"}, "slideshow": {"slide_type": "fragment"}}
+* {ref}`selected_props`
 
-* Definition of the Laplace Transform
+* {ref}`table_of_props`
 
-+++ {"nbpresent": {"id": "74c922da-bfb7-4f82-808d-a89b61bd1ab6"}, "slideshow": {"slide_type": "fragment"}}
-
-* Some Selected Properties
-
-+++ {"nbpresent": {"id": "e7e4ac91-07af-41a4-98e4-6027ac34b41e"}, "slideshow": {"slide_type": "fragment"}}
-
-* Transforms of Elementary Signals
-
-+++ {"nbpresent": {"id": "11a99664-2fdb-4eff-8389-043965b5a6a5"}, "slideshow": {"slide_type": "subslide"}}
-
-* Common system responses
-
-+++ {"nbpresent": {"id": "a2796ec3-fd12-49d3-99b8-fdc640f0af04"}, "slideshow": {"slide_type": "fragment"}}
-
-* Transform tables
-
-+++ {"nbpresent": {"id": "b90e7c7c-1096-4140-81b3-53a0b7e12f6d"}, "slideshow": {"slide_type": "fragment"}}
-
-* Examples
+* {ref}`examples10`
 
 +++ {"nbpresent": {"id": "352d0877-b48f-4b8d-9082-371f06fef621"}, "slideshow": {"slide_type": "slide"}}
 
 (selected_props)=
-## Some Selected Properties
+## Some Selected Properties of the Laplace transform
 
 +++
 
@@ -432,7 +414,16 @@ For full solution see [Example 2.4.5](https://ebookcentral.proquest.com/lib/swan
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-## Summary and Take Aways
+## Summary
+
+In this section we have presented some of the most useful and commonly used properties of the Laplace transform, provided a table of Laplace Transform properties, and given examples of how properties and transform tables can be used to determine the Laplace transform of some useful aperiodic and periodic signals. 
+
+## Take Aways
+
+
+## Still to come
+
+The use of the *derivative property* in the complete solution of continuous-time LTI systems still lies ahead!
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
