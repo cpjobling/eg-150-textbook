@@ -399,9 +399,9 @@ $$X(s) = \frac{2s+4}{s^2+4s+3} = 2 \frac{(s+2)}{(s+1)(s+3)}\quad \mathrm{Re}(s)\
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 :::{figure-md} Laplace:pzmap
-<img src="pictures/pzmap.png" alt="s-plane representation of X(s)=(2s^2+4)(s^2+rs+3)" width="60%">
+<img src="pictures/pzmap.png" alt="s-plane representation of X(s)=(2s^2+4)(s^2+4s+3)" width="60%">
 
-s-plane representation of $X(s)=(2s^2+4)(s^2+rs+3)$
+s-plane representation of $X(s)=(2s^2+4)/(s^2+4s+3)$
 :::
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -477,6 +477,104 @@ Thus we obtain
 $$e^{at}u_0(-t) \Leftrightarrow\frac{1}{s-a}\quad\mathrm{Re}(s)\lt a$$
 
 +++
+
+(l1_summary)=
+## Summary and Takeaways
+
+### The Laplace transform
+
+The Laplace transform of a continuous-time signal or system is defined as
+
+$$\mathcal{f}\left\{f(t)\right\} = F(s) = \int_{-\infty}^{\infty} f(t)e^{-st}\,dt$$
+
+The term $s$ is called the *complex frequency* and is a complex number of form $\sigma + j\omega$. The $s$-plane is a surface representing all the possible values of $s$.
+
+For causal signals and systems that are linear-time invariant, we will use the single-sided Laplace transform
+
+$$F(s) = \int_{0}^{\infty} f(t)e^{-st}\,dt$$
+
+Tunctions of time and their Laplace transforms are often presented using the *transform-pair* notation
+
+$$f(t)\Leftrightarrow F(s)$$
+
+### Region of convergence
+
+The Laplace transform exists only if the integral is finite or 
+
+$$\left| {\int_0^\infty  {f(t){e^{ - st}}dt} } \right| < \infty $$
+
+The region of the $s$-plane for which the Laplace transform is defined is called the *Region of Convergence* (ROC).
+
+To be fully defined, the Laplace tranform of $f(t)$ needs to specify the ROC. But in practice, for the systems and signals we are concerned about, we often neglect the ROC - although it is usually quoted in tables.
+
+### Poles and zeros
+
+For the signals and systems we are concerned about the Laplace transform takes the form of a rational polynomial in $s$ which has the general form
+
+$$F(s)=\frac{b_ms^m+b_{m-1}s^{m-1}+\cdots b_1s + b_0}{a_ns^n+a_{n-1}s^{n-1}+\cdot a_1s + a_0}$$
+
+where $b_k$ and $a_k$ are real constants, $n$ and $m$ are integers and $n > m$.
+
+The numerator and denominator polynomials can be factorised into the so-called zero-pole-gain form polynomial
+
+$$F(s)=\frac{b_m}{a_n}\,\frac{\left(s-z_1\right)\cdots\left(s-z_m\right)}{\left(s-p_1\right)\cdots\left(s-p_n\right)}$$
+
+The terms $z_k$ which appear in the factors of the numerator polynomial and are called zeros (or roots) of the polynomial. (That is the values of $s$ for which the numerator polynomial is zero.) The zeros of the numerator are also the zeros of the Laplace transform $F(s)$.
+
+The terms $p_k$ which appear in the factors of the denominator polynomial and are called the poles of the laplace Transform. This is because any zeros in the denoniminator will result in infinities in the Laplace transform.
+
+The poles and zeros will eaither be real or imaginary. If they are imaginary, they will appear as complex conjugate pairs and can be represented in the polynomial as quadratic factors $s^2 + as + b$.
+
+As we will see later, any function $F(s)$ that has this structure can be expended using partial fractions and the response $f(t)$ will be the sum of simple functions of time that can be readily looked up from tables.
+
+The structure of any $F(s)$ can be represented on the $s$-plane as a pole-zero map, and knowledge of the behaviour of the poles and the impact of the zeros allows us to reason about what the overal system response will look like. We will explore this later in the module and it will be an important topic of study in EG-243 Control Systems next year.
+
+### MATLAB
+
+The Laplace transform is available in the MATLAB Symbolic Math Toolbox as function `laplace`. To use it we usually specify the values `t` and `s` as symbols:
+
+```{code-cell}
+---
+slideshow:
+  slide_type: notes
+---
+syms s t f(t)
+F(s) = laplace(f(t))
+```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+```{warning}
+The Laplace transform provided by MATLAB is single sided. If you need to find the laplace transform of a signal that is not causal, you need to define the region of convergence, and use the integral. See examples above.
+```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+The Laplace transform is representable in MATLAB using polynomials.
+
+The roots of these polynomials can be determined using the `roots` function
+
+Factored polynomials can be presented using the roots and the poles and zeros can be plotted on the $s$-plane using the pzmap function.
+
+#### Example
+
+Factorise
+
+$$X(s) = \frac{3s+9}{s^3+4s^2+7s + 6}$$
+
+and plot the pole-zero map
+
+```{code-cell}
+---
+slideshow:
+  slide_type: notes
+---
+Nx = [3 9]; Dx = conv([1 2],[1 2 3]) % coefficients in descending powers of s
+Zeros = roots(Nx)
+Poles = roots(Dx) % Note the roots are complex!
+K = 3
+pzmap(Poles,Zeros)
+```
 
 ## Next Time
 

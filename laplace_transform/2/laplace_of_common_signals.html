@@ -737,6 +737,11 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary-and-takeaways">
+   Summary and Takeaways
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#next-time">
    Next Time
   </a>
@@ -882,6 +887,11 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary-and-takeaways">
+   Summary and Takeaways
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#next-time">
    Next Time
   </a>
@@ -921,9 +931,9 @@ title="Print to PDF"
 <span id="lap2-impulse"></span><h2>A. Unit impulse function <span class="math notranslate nohighlight">\(\delta(t)\)</span><a class="headerlink" href="#a-unit-impulse-function-delta-t" title="Permalink to this headline">#</a></h2>
 <div class="math notranslate nohighlight">
 \[\mathcal{L}\left\{\delta(t)\right\}=\int_{-\infty}^{\infty}\delta(t)e^{-st}\,dt\]</div>
-<p>Using the sifting property of the Dirac delta function</p>
+<p>Using the <em>sampling</em> and <em>sifting</em> property of the Dirac delta function</p>
 <div class="math notranslate nohighlight">
-\[\mathcal{L}\left\{\delta(t)\right\}=\int_{-\infty}^{\infty}\delta(t)e^{-st}\,dt = e^{-s(0)}=1\quad \mathrm{all}\ s\]</div>
+\[\mathcal{L}\left\{\delta(t)\right\}=\int_{-\infty}^{\infty}e^{-st}\delta(t)\,dt = \int_{-\infty}^{\infty} e^{-s(0)}\delta(t)\,dt= \int_{-\infty}^{\infty}\delta(t)\,dt = 1\quad \mathrm{all}\ s\]</div>
 <p>Thus the Laplace transform pair is</p>
 <div class="math notranslate nohighlight">
 \[\delta(t) \Leftrightarrow 1\]</div>
@@ -1333,6 +1343,9 @@ title="Print to PDF"
 </div>
 </div>
 </section>
+</section>
+<section id="summary-and-takeaways">
+<h2>Summary and Takeaways<a class="headerlink" href="#summary-and-takeaways" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="next-time">
 <h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>

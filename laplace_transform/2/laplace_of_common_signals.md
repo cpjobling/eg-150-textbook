@@ -52,11 +52,11 @@ $$\mathcal{L}\left\{\delta(t)\right\}=\int_{-\infty}^{\infty}\delta(t)e^{-st}\,d
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Using the sifting property of the Dirac delta function
+Using the *sampling* and *sifting* property of the Dirac delta function
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-$$\mathcal{L}\left\{\delta(t)\right\}=\int_{-\infty}^{\infty}\delta(t)e^{-st}\,dt = e^{-s(0)}=1\quad \mathrm{all}\ s$$
+$$\mathcal{L}\left\{\delta(t)\right\}=\int_{-\infty}^{\infty}e^{-st}\delta(t)\,dt = \int_{-\infty}^{\infty} e^{-s(0)}\delta(t)\,dt= \int_{-\infty}^{\infty}\delta(t)\,dt = 1\quad \mathrm{all}\ s$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -170,7 +170,6 @@ We reproduce Table 3.1 of {cite}`schaum` below. You will find a table of Laplace
 | 12      | $\displaystyle \cos (\omega t) u_0(t)$         | $\displaystyle \frac{s}{s^2 + \omega^2}$            | Re($s$) > 0 | 
 | 13      | $\displaystyle e^{-at} \sin (\omega t) u_0(t)$ | $\displaystyle \frac{\omega}{(s + a)^2 + \omega^2}$ | Re($s$) > $-$Re($a$) |
 | 14      | $\displaystyle e^{-at}\cos (\omega t) u_0(t)$  | $\displaystyle \frac{s+a}{(s+a)^2 + \omega^2}$      | Re($s$) > $-$Re($a$) |
-
 
 +++ {"nbpresent": {"id": "2a56e188-1891-420a-a66b-be808a1a11e2"}, "slideshow": {"slide_type": "notes"}}
 
@@ -359,6 +358,10 @@ slideshow:
 laplace(exp(-a*t)*cos(omega*t)*u0(t))
 laplace(exp(-a*t)*sin(omega*t)*u0(t))
 ```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Summary and Takeaways
 
 +++ {"nbpresent": {"id": "4f9f0fa3-84d5-45c3-a6fd-78f84f94388c"}, "slideshow": {"slide_type": "slide"}}
 
