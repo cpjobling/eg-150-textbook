@@ -48,7 +48,7 @@ We will sketch the solution in our OneNote notebook
 
 ## About the Laplace Transformation
 
-The Laplace Transformation (named after [Pierre-Simon Laplace](https://en.wikipedia.org/wiki/Pierre-Simon_Laplace)) is a useful mathematical tool that is used in many branches of engineering including signals and systems theory, control theory, communications, mechanical engineering, etc. 
+The Laplace Transformation (named after [Pierre-Simon Laplace](https://en.wikipedia.org/wiki/Pierre-Simon_Laplace)) is a useful mathematical tool that is used in many branches of engineering including signals and systems theory, control theory, communications, mechanical engineering, etc.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
