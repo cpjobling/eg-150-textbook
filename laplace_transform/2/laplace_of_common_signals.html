@@ -658,8 +658,16 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#e-laplace-transform-pairs-for-other-common-signals">
-   E. Laplace Transform Pairs for Other Common SIgnals
+  <a class="reference internal nav-link" href="#e-unit-ramp-x-t-t-u-0-t">
+   E. Unit ramp
+   <span class="math notranslate nohighlight">
+    \(x(t) = t u_0(t)\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#f-laplace-transform-pairs-for-other-common-signals">
+   F. Laplace Transform Pairs for Other Common SIgnals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -808,8 +816,16 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#e-laplace-transform-pairs-for-other-common-signals">
-   E. Laplace Transform Pairs for Other Common SIgnals
+  <a class="reference internal nav-link" href="#e-unit-ramp-x-t-t-u-0-t">
+   E. Unit ramp
+   <span class="math notranslate nohighlight">
+    \(x(t) = t u_0(t)\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#f-laplace-transform-pairs-for-other-common-signals">
+   F. Laplace Transform Pairs for Other Common SIgnals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -973,8 +989,51 @@ title="Print to PDF"
 \[e^{-at}u_0(t) \Leftrightarrow \frac{1}{s+a}\]</div>
 <p>for <span class="math notranslate nohighlight">\(\mathrm{Re}(s) &gt; -a\)</span>.</p>
 </section>
-<section id="e-laplace-transform-pairs-for-other-common-signals">
-<span id="lap2-others"></span><h2>E. Laplace Transform Pairs for Other Common SIgnals<a class="headerlink" href="#e-laplace-transform-pairs-for-other-common-signals" title="Permalink to this headline">#</a></h2>
+<section id="e-unit-ramp-x-t-t-u-0-t">
+<span id="lap2-ramp"></span><h2>E. Unit ramp <span class="math notranslate nohighlight">\(x(t) = t u_0(t)\)</span><a class="headerlink" href="#e-unit-ramp-x-t-t-u-0-t" title="Permalink to this headline">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\mathcal{L}\left\{t u_0(t)\right\} = \int_0^\infty t e^{-st}\,dt\]</div>
+<p>From tables of integrals:</p>
+<div class="math notranslate nohighlight">
+\[\int te^{-at}\ dt = -\left(\frac{-at + 1}{a^2}\right)e^{-at} + C\]</div>
+<p>Or MATLAB</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">t</span><span class="w"> </span><span class="s">a</span>
+<span class="n">int</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-(exp(-a*t)*(a*t + 1))/a^2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>so</p>
+<div class="math notranslate nohighlight">
+\[\int_0^\infty t e^{-st}\,dt = -\left.\left(\frac{-st + 1}{(-s)^2}\right)e^{-st}\right|_0^\infty\]</div>
+<div class="math notranslate nohighlight">
+\[F(s) = -\frac{1}{s^2}\left(\left(-st + 1)\right)e^{-\infty} -\left( -0t + 1)\right)e^0\right) = \frac{1}{s^2}\]</div>
+<p>Thus the Laplace transform pair is</p>
+<div class="math notranslate nohighlight">
+\[t u_0(t) \Leftrightarrow \frac{1}{s^2}\]</div>
+<p>for <span class="math notranslate nohighlight">\(\mathrm{Re}(s) &gt; 0\)</span>.</p>
+</section>
+<section id="f-laplace-transform-pairs-for-other-common-signals">
+<span id="lap2-others"></span><h2>F. Laplace Transform Pairs for Other Common SIgnals<a class="headerlink" href="#f-laplace-transform-pairs-for-other-common-signals" title="Permalink to this headline">#</a></h2>
 <p>We can continue to derive the Laplace transforms of the most commonly encoutered signals, and in some cases, e.g. unit ramp <span class="math notranslate nohighlight">\(r(t)=u_1(t)=tu_0(t)\)</span>, <span class="math notranslate nohighlight">\(u_n(t)=t^nu_0(t)\)</span>, <span class="math notranslate nohighlight">\(t^ne^{-at}u_0(t)\)</span>, <span class="math notranslate nohighlight">\(\cos \omega t u_0(t)\)</span>, <span class="math notranslate nohighlight">\(\sin \omega t u_0(t)\)</span> and many others, that we use often, the mathematics can tricky.</p>
 <p>Luckily for us, most of the most useful transforms have already been calculated for us and gathered together into tables.</p>
 <p>Here are a couple that are on the net for your reference</p>

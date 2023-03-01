@@ -130,10 +130,57 @@ $$e^{-at}u_0(t) \Leftrightarrow \frac{1}{s+a}$$
 
 for $\mathrm{Re}(s) > -a$.
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(lap2:ramp)=
+
+## E. Unit ramp $x(t) = t u_0(t)$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+$$\mathcal{L}\left\{t u_0(t)\right\} = \int_0^\infty t e^{-st}\,dt$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+From tables of integrals:
+
+$$\int te^{-at}\ dt = -\left(\frac{-at + 1}{a^2}\right)e^{-at} + C$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Or MATLAB
+
+```{code-cell} matlab
+---
+slideshow:
+  slide_type: fragment
+---
+syms t a
+int(t * exp(-a*t))
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+so
+
+$$\int_0^\infty t e^{-st}\,dt = -\left.\left(\frac{-st + 1}{(-s)^2}\right)e^{-st}\right|_0^\infty$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+$$F(s) = -\frac{1}{s^2}\left(\left(-st + 1)\right)e^{-\infty} -\left( -0t + 1)\right)e^0\right) = \frac{1}{s^2}$$
+
++++
+
+Thus the Laplace transform pair is
+
+$$t u_0(t) \Leftrightarrow \frac{1}{s^2}$$
+
+for $\mathrm{Re}(s) > 0$.
+
 +++ {"nbpresent": {"id": "e58f747d-f0a8-464d-b62f-f7bb9ce8b605"}, "slideshow": {"slide_type": "slide"}}
 
 (lap2:others)=
-## E. Laplace Transform Pairs for Other Common SIgnals
+## F. Laplace Transform Pairs for Other Common SIgnals
 
 We can continue to derive the Laplace transforms of the most commonly encoutered signals, and in some cases, e.g. unit ramp $r(t)=u_1(t)=tu_0(t)$, $u_n(t)=t^nu_0(t)$, $t^ne^{-at}u_0(t)$, $\cos \omega t u_0(t)$, $\sin \omega t u_0(t)$ and many others, that we use often, the mathematics can tricky.
 
