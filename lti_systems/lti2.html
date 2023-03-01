@@ -1179,13 +1179,19 @@ title="Print to PDF"
 <p>An LTI system is BIBO stable if it’s impulse response is integrable. That is:</p>
 <div class="math notranslate nohighlight">
 \[\int_{-\infty}^{\infty}\left|h(\tau)\right|\,d\tau \lt \infty\]</div>
+<p>Linear systems in series can be combined by convolution.</p>
 </section>
 <section id="eignenfunctions-of-continuous-time-lti-systems">
 <h4>Eignenfunctions of continuous-time LTI systems<a class="headerlink" href="#eignenfunctions-of-continuous-time-lti-systems" title="Permalink to this headline">#</a></h4>
-<p>The exponential signal <span class="math notranslate nohighlight">\(x(t) = e^{st}\)</span> (where <span class="math notranslate nohighlight">\(s\)</span> is a complex variable, <span class="math notranslate nohighlight">\(s = \sigma + j\omega\)</span>) is an eigenfunction of a continuous-time LTI system. The eigenvalue of the system is</p>
-<p>$<span class="math notranslate nohighlight">\(H(s) = \int_{-\infty}^{\infty} h(\tau)e^{-s\tau}\,d\tau\)</span>$.</p>
+<p>The exponential signal <span class="math notranslate nohighlight">\(x(t) = e^{st}\)</span> (where <span class="math notranslate nohighlight">\(s\)</span> is a complex variable, <span class="math notranslate nohighlight">\(s = \sigma + j\omega\)</span>) is an <em>eigenfunction</em> of a continuous-time LTI system with impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>. The eigenvalue of the system is</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \int_{-\infty}^{\infty} h(\tau)e^{-s\tau}\,d\tau.\]</div>
 <p>From the equation <span class="math notranslate nohighlight">\(y(t) = H(s)e^{st}\)</span>, <span class="math notranslate nohighlight">\(H(s) = y(0)\)</span>.</p>
-<p>As we will see in <a class="reference internal" href="../laplace_transform/1/laplace.html#unit4-1"><span class="std std-ref">Unit 4.1: The Laplace Transformation</span></a>, H(s) is called the <em>Laplace transform</em> of <span class="math notranslate nohighlight">\(h(t)\)</span>. It is also known as the <em>transfer function</em> of the continuous-time LTI system that has impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>.</p>
+<p>As we will see in <a class="reference internal" href="../laplace_transform/1/laplace.html#unit4-1"><span class="std std-ref">Unit 4.1: The Laplace Transformation</span></a>, <span class="math notranslate nohighlight">\(H(s)\)</span> is called the <em>Laplace transform</em> of <span class="math notranslate nohighlight">\(h(t)\)</span>. It is also known as the <em>transfer function</em> of the continuous-time LTI system that has impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>.</p>
+<p>By a similar argument, we can show that if <span class="math notranslate nohighlight">\(s = j\omega\)</span>, then <span class="math notranslate nohighlight">\(e^{j\omega}\)</span> is also an eigenfunction of <span class="math notranslate nohighlight">\(h(t)\)</span>, and the frequency response of an LTI system is</p>
+<div class="math notranslate nohighlight">
+\[H(j\omega) = \int_{-\infty}^{\infty} h(\tau)e^{-j\omega\tau}\,d\tau.\]</div>
+<p>This is called the <em>Fourier transform</em> and we will return to it in <strong>EG-247 Digital Signal Processing</strong>.</p>
 </section>
 </section>
 </section>

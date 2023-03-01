@@ -416,15 +416,23 @@ An LTI system is BIBO stable if it's impulse response is integrable. That is:
 
 $$\int_{-\infty}^{\infty}\left|h(\tau)\right|\,d\tau \lt \infty$$
 
+Linear systems in series can be combined by convolution.
+
 #### Eignenfunctions of continuous-time LTI systems
 
-The exponential signal $x(t) = e^{st}$ (where $s$ is a complex variable, $s = \sigma + j\omega$) is an eigenfunction of a continuous-time LTI system. The eigenvalue of the system is
+The exponential signal $x(t) = e^{st}$ (where $s$ is a complex variable, $s = \sigma + j\omega$) is an *eigenfunction* of a continuous-time LTI system with impulse response $h(t)$. The eigenvalue of the system is
 
-$$H(s) = \int_{-\infty}^{\infty} h(\tau)e^{-s\tau}\,d\tau$$.
+$$H(s) = \int_{-\infty}^{\infty} h(\tau)e^{-s\tau}\,d\tau.$$
 
 From the equation $y(t) = H(s)e^{st}$, $H(s) = y(0)$.
 
-As we will see in {ref}`unit4.1`, H(s) is called the *Laplace transform* of $h(t)$. It is also known as the *transfer function* of the continuous-time LTI system that has impulse response $h(t)$.
+As we will see in {ref}`unit4.1`, $H(s)$ is called the *Laplace transform* of $h(t)$. It is also known as the *transfer function* of the continuous-time LTI system that has impulse response $h(t)$.
+
+By a similar argument, we can show that if $s = j\omega$, then $e^{j\omega}$ is also an eigenfunction of $h(t)$, and the frequency response of an LTI system is
+
+$$H(j\omega) = \int_{-\infty}^{\infty} h(\tau)e^{-j\omega\tau}\,d\tau.$$
+
+This is called the *Fourier transform* and we will return to it in **EG-247 Digital Signal Processing**.
 
 
 

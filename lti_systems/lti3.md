@@ -67,7 +67,6 @@ The LCCODE can be written in more compact form as
 
 $$\sum_{k=0}^N a_k \frac{d^k}{dt^k} y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)$$
 
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 #### Applications of linear constant-coefficient differential equations
@@ -76,6 +75,7 @@ LCCODEs play a central role in describing the input-output relationships of a wi
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+{un3.3:rc}=
 #### Illustration: An RC Circuit
 
 For instance, in the RC circuit considered in {ref}`ex4.1`, the input $x(t)=v_s(t)$ and the output $y(t)=v_c(t)$ are related by a first-order constant-coefficient differential equation
@@ -454,6 +454,28 @@ For the answer, refer to the lecture recording or see solved problem 2.25 in {ci
 In this lecture we have concluded our introduction to LTI systems by looking at linear constant-coefficient differential equations.
 
 ### Take aways
+
+Continuous-time LTI systems are often modelled as linear constant coefficient ordinary differential equations (LCCODEs). The solution of such equations has wide application in Engineerin and Science.
+
+The general description of a LCCODE is given in compact form as:
+
+$$\sum_{k=0}^N a_k \frac{d^k}{dt^k} y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)$$
+
+where the coefficients $a_k$ and $b_k$ are real constants and $n$ and $m$ are integers.
+
+We illustrated in {ref}`un3.3:rc` that the simple RC circuit can be represented as such an LCCODE.
+
+The solution of LCCODEs requires the determination and combination of the *homegenious solution* which is due only to the output $y(t)$ and its derivatives, and a *particular solution* which takes account of the input $x(t)$, its derivatives, and the initial values of $y(t)$ and its derivatives.
+
+We noted that continuous-time LTI systems defined by LCCODEs are only causal and time invariant if they are initially at rest.
+
+The output of the continuous-time LTI system with input $x(t)$ that is at rest and has zero initial conditions is called the *zero-state* output $y_\mathrm{zs}(t)$. The outputs due to the inital conditions can be computed from the system with zero input which is named $y_\mathrm{zi}(t)$. The total response of such a system is given by $y(t) = y_\mathrm{zs}(t) + y_\mathrm{zi}(t)$.
+
+In {ref}`examples_8` we were introduced to the representation of an LCCODE as a block diagram constructed from integral, gain and summing blocks. Such models were the basis of *analogue computation* which was used widely by engineers before the widespread adoption of digital computers. Models based on integration are still the basis of modern numerical digital system simulation tools like Multisim and Simulink.
+
+### Looking ahead
+
+Any continuous-time LTI system that can be represented by an LCCODE can be solved by taking the *Laplace transform* of the differential equation. The derivative terms like $a_k d^n y(t)/dt^n$ become polynomial terms like $a_k s^n Y(s)$, where $Y(s)$ is the Laplace transform of $y(t)$. As we shall see in {ref}`unit4`, such systems are then representable as rational polynomials in $s$ and are easily solved using algebraic techniques such as *polynomial factorization* and *partial fraction expansion*.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
