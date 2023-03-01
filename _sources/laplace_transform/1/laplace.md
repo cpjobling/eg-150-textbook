@@ -432,7 +432,7 @@ z = roots(n), p = roots(d), k = 2;
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-We can plot these on the $s$-plabne using the function `pzmap`:
+We can plot these on the $s$-plane using the function `pzmap`:
 
 ```{code-cell}
 ---
@@ -453,7 +453,7 @@ Note that $X(s)$ has one zero at $s=-2$ and two poles at $s=-1$ and $s=-3$ with 
 
 [not examinable]
 
-The properties of the ROC are summarised in 3.1 D of {ref}`schaum` and as they are not examinable, we leave their study to the interested student.
+The properties of the ROC are summarised in **Section 3.1 D** of {ref}`schaum` and as they are ***not examinable***, we leave their study to the interested student.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -544,7 +544,7 @@ The poles and zeros will eaither be real or imaginary. If they are imaginary, th
 
 As we will see later, any function $F(s)$ that has this structure can be expended using partial fractions and the response $f(t)$ will be the sum of simple functions of time that can be readily looked up from tables.
 
-The structure of any $F(s)$ can be represented on the $s$-plane as a pole-zero map, and knowledge of the behaviour of the poles and the impact of the zeros allows us to reason about what the overal system response will look like. We will explore this later in the module and it will be an important topic of study in EG-243 Control Systems next year.
+The structure of any $F(s)$ can be represented on the $s$-plane as a pole-zero map, and knowledge of the behaviour of the poles and the impact of the zeros allows us to reason about what the overal system response will look like. We will explore this later in the module and it will be an important topic of study in **EG-243 Control Systems** next year.
 
 ### MATLAB
 
