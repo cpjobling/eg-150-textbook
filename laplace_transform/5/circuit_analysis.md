@@ -14,7 +14,7 @@ kernelspec:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(laplace_4_circs)=
+(unit4.5)=
 # Unit 4.5: Using Laplace Transforms for Circuit Analysis
 
 +++ {"slideshow": {"slide_type": "notes"}}
@@ -300,6 +300,7 @@ The current and voltage are transformed but so is the capacitance. The complex f
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(complex_impedance)=
 ## Complex Impedance $Z(s)$
 
 Consider the $s$-domain RLC series circuit, where the initial conditions are assumed to be zero.
@@ -371,10 +372,6 @@ $$Y(s) = G + \frac{1}{sL} + sC.$$
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 $Y(s)$ is complex and is known as the *complex input admittance* of this GLC parallel circuit.
-
-## Reference
-
-See [Bibliography](/zbib).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -1013,8 +1010,27 @@ y10 = 1/z10;
 pretty(y10)
 ```
 
+## Lab Work
+
+In MATLAB Lab 5, we will explore the tools provided by MATLAB for solving circuit analysis problems.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+## Next time
+
+We move on to consider 
+
+* {ref}`unit4.6`
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(matlab_solutions12)=
 ## Matlab Solutions
 
 For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-247-textbook/tree/master/laplace_transform/matlab) folder in the [GitHub repository](https://github.com/cpjobling/eg-247-textbook).
