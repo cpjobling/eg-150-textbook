@@ -50,6 +50,7 @@ We will explore the use of MATLAB to solve inverse Laplace tranforms in MATLAB L
 * {ref}`ilap:distinct_real_poles`
 * {ref}`ilap:repeated_poles`
 * {ref}`ilap:improper`
+* {ref}`examples11`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -458,6 +459,9 @@ syms s;
 F6 = (s^2 + 2*s + 2)/(s + 1);
 f6 = ilaplace(F6)
 ```
+
+(examples11)=
+## Examples 11
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
