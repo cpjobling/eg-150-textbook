@@ -27,7 +27,7 @@ The preparatory reading for this section is [Chapter 4](https://ebookcentral.pro
 
 We look at applications of the Laplace Transform for
 
-* {ref}`cicuit_transforms`
+* {ref}`circuit_transforms`
 
 * {ref}`complex_impedance`
 
@@ -82,11 +82,11 @@ $$I_R(s) = RV_R(s)$$
 
 #### In the complex frequency domain
 
-We take the Laplace transforms of {ref}`eq:vrt` and {ref}`eq:irt` to obtain
+We take the Laplace transforms of {eq}`eq:vrt` and {eq}`eq:irt` to obtain
 
 $$V_R(s) = R I_R(s)$$ (eq:Vrs)
 
-$$I_R(t) = \frac{V_r(s)}{R}$$ (eq:Irs)
+$$I_R(t) = \frac{V_R(s)}{R}$$ (eq:Irs)
 
 ```{note}
 The current and voltage are transformed but the resitance is unchanged by the transformation.
