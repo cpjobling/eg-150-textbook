@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Using Laplace Transforms for Circuit Analysis &#8212; EG-150 Signals and Systems</title>
+    <title>Unit 4.5: Using Laplace Transforms for Circuit Analysis &#8212; EG-150 Signals and Systems</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -656,21 +656,49 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#time-domain-model-of-an-inductive-network">
      Time Domain Model of an Inductive Network
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       In the time domain
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#complex-frequency-domain-model-of-an-inductive-network">
      Complex Frequency Domain Model of an Inductive Network
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       In the complex frequency domain
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#time-domain-model-of-a-capacitive-network">
      Time Domain Model of a Capacitive Network
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       In the time domain
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#complex-frequency-domain-of-a-capacitive-network">
      Complex Frequency Domain of a Capacitive Network
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       In the complex frequency domain
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -701,12 +729,12 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
+    <a class="reference internal nav-link" href="#id7">
      Time Domain Model of an Inductive Network
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
+    <a class="reference internal nav-link" href="#id8">
      Time Domain Model of a Capacitive Network
     </a>
    </li>
@@ -803,7 +831,7 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id5">
+  <a class="reference internal nav-link" href="#id9">
    Complex Impedance
    <span class="math notranslate nohighlight">
     \(Z(s)\)
@@ -823,7 +851,7 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id6">
+  <a class="reference internal nav-link" href="#id10">
    Complex Admittance
    <span class="math notranslate nohighlight">
     \(Y(s)\)
@@ -870,7 +898,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Using Laplace Transforms for Circuit Analysis</h1>
+                <h1>Unit 4.5: Using Laplace Transforms for Circuit Analysis</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -916,21 +944,49 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#time-domain-model-of-an-inductive-network">
      Time Domain Model of an Inductive Network
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       In the time domain
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#complex-frequency-domain-model-of-an-inductive-network">
      Complex Frequency Domain Model of an Inductive Network
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       In the complex frequency domain
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#time-domain-model-of-a-capacitive-network">
      Time Domain Model of a Capacitive Network
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       In the time domain
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#complex-frequency-domain-of-a-capacitive-network">
      Complex Frequency Domain of a Capacitive Network
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       In the complex frequency domain
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -961,12 +1017,12 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
+    <a class="reference internal nav-link" href="#id7">
      Time Domain Model of an Inductive Network
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
+    <a class="reference internal nav-link" href="#id8">
      Time Domain Model of a Capacitive Network
     </a>
    </li>
@@ -1063,7 +1119,7 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id5">
+  <a class="reference internal nav-link" href="#id9">
    Complex Impedance
    <span class="math notranslate nohighlight">
     \(Z(s)\)
@@ -1083,7 +1139,7 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id6">
+  <a class="reference internal nav-link" href="#id10">
    Complex Admittance
    <span class="math notranslate nohighlight">
     \(Y(s)\)
@@ -1131,9 +1187,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="using-laplace-transforms-for-circuit-analysis">
-<span id="laplace-4-circs"></span><h1>Using Laplace Transforms for Circuit Analysis<a class="headerlink" href="#using-laplace-transforms-for-circuit-analysis" title="Permalink to this headline">#</a></h1>
-<p>The preparatory reading for this section is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=101">Chapter 4</a> <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> which presents examples of the applications of the Laplace transform for electrical solving circuit problems. Much of the same material is covered in Section … of <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="unit-4-5-using-laplace-transforms-for-circuit-analysis">
+<span id="laplace-4-circs"></span><h1>Unit 4.5: Using Laplace Transforms for Circuit Analysis<a class="headerlink" href="#unit-4-5-using-laplace-transforms-for-circuit-analysis" title="Permalink to this headline">#</a></h1>
+<p>The preparatory reading for this section is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=101">Chapter 4</a> <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> which presents examples of the applications of the Laplace transform for electrical solving circuit problems. Much of the same material is covered in <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section36">Section 3.7 D</a> of <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <section id="agenda">
 <h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
 <p>We look at applications of the Laplace Transform for</p>
@@ -1155,6 +1211,7 @@ title="Print to PDF"
 <p>The voltage across the resistor is</p>
 <div class="math notranslate nohighlight" id="equation-eq-vrt">
 <span class="eqno">(1)<a class="headerlink" href="#equation-eq-vrt" title="Permalink to this equation">#</a></span>\[v_R(t) = R i_R(t)\]</div>
+<p>The current flowing through the resistor is</p>
 <div class="math notranslate nohighlight" id="equation-eq-irt">
 <span class="eqno">(2)<a class="headerlink" href="#equation-eq-irt" title="Permalink to this equation">#</a></span>\[i_R(t) = \frac{v_r(t)}{R}\]</div>
 <p>For the circuit shown, which of the following equations represent the Laplace transform of the current flowing through, and the voltage across, the resistor <span class="math notranslate nohighlight">\(R\)</span>?</p>
@@ -1174,7 +1231,7 @@ title="Print to PDF"
 <div class="math notranslate nohighlight" id="equation-eq-vrs">
 <span class="eqno">(3)<a class="headerlink" href="#equation-eq-vrs" title="Permalink to this equation">#</a></span>\[V_R(s) = R I_R(s)\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-irs">
-<span class="eqno">(4)<a class="headerlink" href="#equation-eq-irs" title="Permalink to this equation">#</a></span>\[I_R(t) = \frac{V_R(s)}{R}\]</div>
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-irs" title="Permalink to this equation">#</a></span>\[I_R(s) = \frac{V_R(s)}{R}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The current and voltage are transformed but the resitance is unchanged by the transformation.</p>
@@ -1188,6 +1245,14 @@ title="Print to PDF"
 <section id="time-domain-model-of-an-inductive-network">
 <span id="inductive-network"></span><h3>Time Domain Model of an Inductive Network<a class="headerlink" href="#time-domain-model-of-an-inductive-network" title="Permalink to this headline">#</a></h3>
 <p><img alt="Inductive Network - Time Domain" src="../../_images/inductive_time.png" /></p>
+<section id="id3">
+<h4>In the time domain<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
+<p>The voltage across the inductor is</p>
+<div class="math notranslate nohighlight" id="equation-eq-vlt">
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq-vlt" title="Permalink to this equation">#</a></span>\[v_L(t) = L \frac{d}{dt} i_L(t) \]</div>
+<p>The current flowing through the inductor is</p>
+<div class="math notranslate nohighlight" id="equation-eq-ilt">
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-ilt" title="Permalink to this equation">#</a></span>\[i_L(t) = \frac{1}{L}\int_{-\infty}^{t} v_L(t)\, dt\]</div>
 <p>For the circuit shown, which of the following equations represent the Laplace transform of the current flowing through, and the voltage across, the inductor <span class="math notranslate nohighlight">\(L\)</span>?</p>
 <div class="math notranslate nohighlight">
 \[I_L(s)=sLV_L(s) - Lv_L(0^-)\]</div>
@@ -1199,17 +1264,61 @@ title="Print to PDF"
 \[V_L(s)=\frac{I_L(s)}{sL} + \frac{i_L(0^-)}{s}\]</div>
 <p><strong>-&gt; Open poll</strong></p>
 </section>
+</section>
 <section id="complex-frequency-domain-model-of-an-inductive-network">
 <span id="complex-inductive-network"></span><h3>Complex Frequency Domain Model of an Inductive Network<a class="headerlink" href="#complex-frequency-domain-model-of-an-inductive-network" title="Permalink to this headline">#</a></h3>
 <p><img alt="Inductive Network - Complex Frequency Domain" src="../../_images/inductive_freq.png" /></p>
+<section id="id4">
+<h4>In the complex frequency domain<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
+<p>We take the Laplace transforms of <a class="reference internal" href="#equation-eq-vlt">(9)</a> and <a class="reference internal" href="#equation-eq-ilt">(10)</a> to obtain</p>
+<div class="math notranslate nohighlight" id="equation-eq-vls">
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq-vls" title="Permalink to this equation">#</a></span>\[V_L(s) = s L I_L(s) - Li_L(0^-)\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-ils">
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq-ils" title="Permalink to this equation">#</a></span>\[I_L(s) = \frac{V_L(s)}{sL} + L \frac{i_L(0^-)}{s}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The current and voltage are transformed but so is the inductance. The complex frequency representation has used the derivative property for the voltage across the inductor and the integration properties for the current through the inductor. The use of the dervative and integration transforms has introduced a term that depends on the initial current flowing through the inductor. Therefore, the initial current would need to be considered in computing the actual voltage and current in the complex frequency domain.</p>
+</div>
+</section>
 </section>
 <section id="time-domain-model-of-a-capacitive-network">
 <span id="capacitive-network"></span><h3>Time Domain Model of a Capacitive Network<a class="headerlink" href="#time-domain-model-of-a-capacitive-network" title="Permalink to this headline">#</a></h3>
 <p><img alt="Capacitive Network - Time Domain" src="../../_images/capacitive_time.png" /></p>
+<section id="id5">
+<h4>In the time domain<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h4>
+<p>The voltage across the inductor is</p>
+<div class="math notranslate nohighlight" id="equation-eq-vlt">
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq-vlt" title="Permalink to this equation">#</a></span>\[v_L(t) = L \frac{d}{dt} i_L(t) \]</div>
+<p>The current flowing through the inductor is</p>
+<div class="math notranslate nohighlight" id="equation-eq-ilt">
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-ilt" title="Permalink to this equation">#</a></span>\[i_L(t) = \frac{1}{L}\int_{-\infty}^{t} v_L(t)\, dt\]</div>
+<p>For the circuit shown, which of the following equations represent the Laplace transform of the current flowing through, and the voltage across, the capacitor <span class="math notranslate nohighlight">\(C\)</span>?</p>
+<div class="math notranslate nohighlight">
+\[V_c(s)=sCI_C(s) - Ci_C(0^-)\]</div>
+<div class="math notranslate nohighlight">
+\[I_c(s) = sCV_C(s) - Cv_C(0^-)\]</div>
+<div class="math notranslate nohighlight">
+\[V_c(s) = \frac{I_C(s)}{sC} + \frac{i_C(0^-)}{s}\]</div>
+<div class="math notranslate nohighlight">
+\[I_c(s)=\frac{V_C(s)}{sC} + \frac{v_C(0^-)}{s}\]</div>
+<p><strong>-&gt; Open poll</strong></p>
+</section>
 </section>
 <section id="complex-frequency-domain-of-a-capacitive-network">
 <h3>Complex Frequency Domain of a Capacitive Network<a class="headerlink" href="#complex-frequency-domain-of-a-capacitive-network" title="Permalink to this headline">#</a></h3>
 <p><img alt="Capacitive Network - Complex Frequency Domain" src="../../_images/capacitive_freq.png" /></p>
+<section id="id6">
+<h4>In the complex frequency domain<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h4>
+<p>We take the Laplace transforms of <a class="reference internal" href="#equation-eq-vlt">(9)</a> and <a class="reference internal" href="#equation-eq-ilt">(10)</a> to obtain</p>
+<div class="math notranslate nohighlight" id="equation-eq-vls">
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq-vls" title="Permalink to this equation">#</a></span>\[V_L(s) = s L I_L(s) - Li_L(0^-)\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-ils">
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq-ils" title="Permalink to this equation">#</a></span>\[I_L(s) = \frac{V_L(s)}{sL} + L \frac{i_L(0^-)}{s}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The current and voltage are transformed but so is the inductance. The complex frequency representation has used the derivative property for the voltage across the inductor and the integration properties for the current through the inductor. The use of the dervative and integration transforms has introduced a term that depends on the initial current flowing through the inductor. Therefore, the initial current would need to be considered in computing the actual voltage and current in the complex frequency domain.</p>
+</div>
+</section>
 </section>
 </section>
 <section id="complex-impedance-z-s">
@@ -1260,23 +1369,13 @@ title="Print to PDF"
 <section id="examples-12">
 <span id="examples12"></span><h2>Examples 12<a class="headerlink" href="#examples-12" title="Permalink to this headline">#</a></h2>
 <p>We will work through these in class.</p>
-<section id="id3">
-<h3>Time Domain Model of an Inductive Network<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<section id="id7">
+<h3>Time Domain Model of an Inductive Network<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
 <p><img alt="Inductive Network - Time Domain" src="../../_images/inductive_time.png" /></p>
 </section>
-<section id="id4">
-<h3>Time Domain Model of a Capacitive Network<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<section id="id8">
+<h3>Time Domain Model of a Capacitive Network<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h3>
 <p><img alt="Capacitive Network - Time Domain" src="../../_images/capacitive_time.png" /></p>
-<p>For the circuit shown, which of the following equations represent the Laplace transform of the current flowing through, and the voltage across, the capacitor <span class="math notranslate nohighlight">\(C\)</span>?</p>
-<div class="math notranslate nohighlight">
-\[V_c(s)=sCI_C(s) - Ci_C(0^-)\]</div>
-<div class="math notranslate nohighlight">
-\[I_c(s) = sCV_C(s) - Cv_C(0^-)\]</div>
-<div class="math notranslate nohighlight">
-\[V_c(s) = \frac{I_C(s)}{sC} + \frac{i_C(0^-)}{s}\]</div>
-<div class="math notranslate nohighlight">
-\[I_c(s)=\frac{V_C(s)}{sC} + \frac{v_C(0^-)}{s}\]</div>
-<p><strong>-&gt; Open poll</strong></p>
 </section>
 </section>
 <section id="examples">
@@ -1562,8 +1661,8 @@ into a linear and a quadratic factor.</p>
 </section>
 </section>
 </section>
-<section id="id5">
-<h2>Complex Impedance <span class="math notranslate nohighlight">\(Z(s)\)</span><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<section id="id9">
+<h2>Complex Impedance <span class="math notranslate nohighlight">\(Z(s)\)</span><a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h2>
 <p>For the resistance <span class="math notranslate nohighlight">\(R\)</span><span class="math notranslate nohighlight">\(\Omega\)</span>, inductance <span class="math notranslate nohighlight">\(L\)</span>H and capacitance <span class="math notranslate nohighlight">\(C\)</span>F, which of the following represent the complex impedance of the components?</p>
 <div class="math notranslate nohighlight">
 \[sL\]</div>
@@ -1645,8 +1744,8 @@ into a linear and a quadratic factor.</p>
 <p><strong>Solutions</strong>: Pencasts <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/ex4_1.pdf">ex4_1.pdf</a> and <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/ex4_2.pdf">ex4_2.pdf</a> – open in Adobe Acrobat.</p>
 </section>
 </section>
-<section id="id6">
-<h2>Complex Admittance <span class="math notranslate nohighlight">\(Y(s)\)</span><a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<section id="id10">
+<h2>Complex Admittance <span class="math notranslate nohighlight">\(Y(s)\)</span><a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h2>
 <p>For the resistor <span class="math notranslate nohighlight">\(R\)</span>Ω, inductor <span class="math notranslate nohighlight">\(L\)</span>H and capacitance <span class="math notranslate nohighlight">\(C\)</span>F, which of the following represent the complex admittance of the components?</p>
 <div class="math notranslate nohighlight">
 \[sL\]</div>
