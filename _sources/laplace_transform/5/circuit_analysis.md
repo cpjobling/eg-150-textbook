@@ -21,7 +21,7 @@ kernelspec:
 
 The preparatory reading for this section is [Chapter 4](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=101) {cite}`karris` which presents examples of the applications of the Laplace transform for electrical solving circuit problems. Much of the same material is covered in [Section 3.7 D](https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section36) of {cite}`schaum`.
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Agenda
 
@@ -35,6 +35,22 @@ We look at applications of the Laplace Transform for
 
 * {ref}`examples11`
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/5/circuit_analysis](https://cpjobling.github.io/eg-150-textbook/laplace_transform/5/circuit_analysis)
+
+![QR Code for this lecture](pictures/qrcode_laplace5.png)
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+% initialize MATLAB
+clearvars
+syms t L R C i_R(t) v_R(t) i_L(t) v_L(t) v_C(t) i_C(t)
+```
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (circuit_transforms)=
@@ -47,24 +63,43 @@ We look at applications of the Laplace Transform for
 
 ![Resistive Network: Time Domain](pictures/resistive_time.png)
 
-+++ {"slideshow": {"slide_type": "notes"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 #### In the time domain
 
-The voltage across the resistor is 
+The voltage across the resistor $v_R(t)$ is proportional to the current flowing through the resistor $i_R(t)$
 
 $$v_R(t) = R i_R(t)$$ (eq:vrt)
 
-The current flowing through the resistor is
-
-$$i_R(t) = \frac{v_r(t)}{R}$$ (eq:irt)
-
-
-
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+eqvrt = v_R(t) == R * i_R(t)
+```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-For the circuit shown, which of the following equations represent the Laplace transform of the current flowing through, and the voltage across, the resistor $R$?
+The current flowing through the resistor is inversely proportional to the voltage across the resistor. This is easily confirmed by rewriting {eq}`eq:vrt` to isolate $i_R(t)$
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+eqirt = isolate(eqvrt,i_R(t))
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Rewritten nicely as
+
+$$i_R(t) = \frac{v_R(t)}{R}$$ (eq:irt)
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+From these results, which of the following equations represent the Laplace transform of the current flowing through, and the voltage across, the resistor $R$?
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -94,9 +129,6 @@ $$I_R(s) = \frac{V_R(s)}{R}$$ (eq:Irs)
 The current and voltage are transformed but the resitance is unchanged by the transformation.
 ```
 
-
-
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (complex_resistive_network)=
@@ -111,24 +143,44 @@ The current and voltage are transformed but the resitance is unchanged by the tr
 
 ![Inductive Network - Time Domain](pictures/inductive_time.png)
 
-+++ {"slideshow": {"slide_type": "notes"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 #### In the time domain
 
-The voltage across the inductor is 
+The voltage across the inductor $i_L(t)$ is proportional to the rate of change of the current $i_L(t)$ flowing through the inductor 
 
 $$v_L(t) = L \frac{d}{dt} i_L(t) $$ (eq:vlt)
 
-The current flowing through the inductor is
-
-$$i_L(t) = \frac{1}{L}\int_{-\infty}^{t} v_L(t)\, dt$$ (eq:ilt)
-
-
-
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+eqvlt = v_L(t) == L*diff(i_L(t))
+```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-For the circuit shown, which of the following equations represent the Laplace transform of the current flowing through, and the voltage across, the inductor $L$?
+The current flowing through the inductor is inversely proportional to the integral of the voltage across the inductor which is easily confirmed by taking the integral of both sides of {eq}`eq:vlt` and rewriting the equation to isolate $i_L(t)$
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+int(lhs(eqvlt)) == int(rhs(eqvlt));
+eqilt = isolate(ans,i_L(t))
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Rewritten nicely as
+
+$$i_L(t) = \frac{1}{L}\int_{-\infty}^{t} v_L(t)\, dt$$ (eq:ilt)
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+From these results, which of the following equations represent the Laplace transform of the current flowing through, and the voltage across, the inductor $L$?
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -159,14 +211,11 @@ We take the Laplace transforms of {eq}`eq:vlt` and {eq}`eq:ilt` to obtain
 
 $$V_L(s) = s L I_L(s) - Li_L(0^-)$$ (eq:Vls)
 
-$$I_L(s) = \frac{V_L(s)}{sL} + L \frac{i_L(0^-)}{s}$$ (eq:Ils)
+$$I_L(s) = \frac{V_L(s)}{sL} + \frac{i_L(0^-)}{s}$$ (eq:Ils)
 
 ```{note}
 The current and voltage are transformed but so is the inductance. The complex frequency representation has used the derivative property for the voltage across the inductor and the integration properties for the current through the inductor. The use of the dervative and integration transforms has introduced a term that depends on the initial current flowing through the inductor. Therefore, the initial current would need to be considered in computing the actual voltage and current in the complex frequency domain.
 ```
-
-
-
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -175,24 +224,44 @@ The current and voltage are transformed but so is the inductance. The complex fr
 
 ![Capacitive Network - Time Domain](pictures/capacitive_time.png)
 
-+++ {"slideshow": {"slide_type": "notes"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 #### In the time domain
 
-The voltage across the inductor is 
+The current flowing into the capacitor is proportional to the change in voltage across the capacitor
 
-$$v_L(t) = L \frac{d}{dt} i_L(t) $$ (eq:vlt)
+$$i_C(t) = C \frac{d}{dt} v_C(t) $$ (eq:ict)
 
-The current flowing through the inductor is
-
-$$i_L(t) = \frac{1}{L}\int_{-\infty}^{t} v_L(t)\, dt$$ (eq:ilt)
-
-
-
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+eqict = i_C(t) == C * diff(v_C(t))
+```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-For the circuit shown, which of the following equations represent the Laplace transform of the current flowing through, and the voltage across, the capacitor $C$?
+The voltage across the capacitor is inversely proportional to the integral of the current flowing into the capacitor which is easily confirmed by taking the integral of both sides of {eq}`eq:ict` and rewriting the equation to isolate $v_C(t)$
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+int(lhs(eqict)) == int(rhs(eqict));
+eqvct = isolate(ans,v_C(t))
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Which can be rwritten nicely as 
+
+$$v_C(t) = \frac{1}{C}\int_{-\infty}^{t} i_C(t)\, dt$$ (eq:vct)
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+From the previous results, which of the following equations represent the Laplace transform of the current flowing into, and the voltage across, the capacitor $C$?
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -208,28 +277,26 @@ $$I_c(s)=\frac{V_C(s)}{sC} + \frac{v_C(0^-)}{s}$$
 
 **-> Open poll**
 
++++ {"slideshow": {"slide_type": "notes"}}
+
+#### In the complex frequency domain
+
+We take the Laplace transforms of {eq}`eq:ict` and {eq}`eq:vct` to obtain
+
+$$I_C(s) = s C V_C(s) - C v_C(0^-)$$ (eq:Ics)
+
+$$V_C(s) = \frac{I_C(s)}{sC} + \frac{v_C(0^-)}{s}$$ (eq:Vcs)
+
+
+```{note}
+The current and voltage are transformed but so is the capacitance. The complex frequency representation has used the derivative property for the voltage across the capacitor and the integration property for the current flowing into the capacitor. The use of the dervative and integration transforms has introduced a term that depends on the initial voltage (initial charge) across the capacitor. Therefore, the initial voltage would need to be considered in computing the actual voltage and current introduced by the capacitor in the complex frequency domain.
+```
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Complex Frequency Domain of a Capacitive Network
 
 ![Capacitive Network - Complex Frequency Domain](pictures/capacitive_freq.png)
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-#### In the complex frequency domain
-
-We take the Laplace transforms of {eq}`eq:vlt` and {eq}`eq:ilt` to obtain
-
-$$V_L(s) = s L I_L(s) - Li_L(0^-)$$ (eq:Vls)
-
-$$I_L(s) = \frac{V_L(s)}{sL} + L \frac{i_L(0^-)}{s}$$ (eq:Ils)
-
-```{note}
-The current and voltage are transformed but so is the inductance. The complex frequency representation has used the derivative property for the voltage across the inductor and the integration properties for the current through the inductor. The use of the dervative and integration transforms has introduced a term that depends on the initial current flowing through the inductor. Therefore, the initial current would need to be considered in computing the actual voltage and current in the complex frequency domain.
-```
-
-
-
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
