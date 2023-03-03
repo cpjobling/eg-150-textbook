@@ -220,7 +220,7 @@ and then $N(s)/D(s)$ will be a proper rational polynomial.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Lecturer clear all cells and set up MATLAB 
+Lecturer clear all cells and set up MATLAB
 
 ```{code-cell}
 ---
@@ -486,17 +486,17 @@ $$\frac{s + 3}{(s+1)(s^2 + 4s + 8)} = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 
 
 putting both sides on a common denominator, 
 
-$$\frac{s+3}{(s+1)(s^2 + 4s + 8)} = \frac{(2/5)(s^2 + 4s + 8) + r_2(s + 1) + r_3(s + 1)(s + 2)}{(s+1)(s^2 + 4s + 8)}$$ 
+$$\frac{s+3}{(s+1)(s^2 + 4s + 8)} = \frac{(2/5)(s^2 + 4s + 8) + r_2(s + 1) + r_3(s + 1)(s + 2)}{(s+1)(s^2 + 4s + 8)}$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 and then solving for $r_2$ and $r_3$ by equating the numerator coefficients on the left and right sides.
 
-$$s+3 = (2/5)(s^2 + 4s + 8) + r_2(s + 1) + r_3(s^2 + 3s + 2)$$ 
+$$s+3 = (2/5)(s^2 + 4s + 8) + r_2(s + 1) + r_3(s^2 + 3s + 2)$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-The completion of this problem is left as a *homework exercise* for the student. 
+The completion of this problem is left as a *homework exercise* for the student.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -576,7 +576,6 @@ $$F_4(s) = \frac{s+3}{(s+2)(s+1)^2}$$
 
 
 </pre>
-
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
