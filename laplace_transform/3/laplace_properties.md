@@ -412,18 +412,26 @@ For full solution see [Example 2.4.5](https://ebookcentral.proquest.com/lib/swan
 
 </pre>
 
++++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
+
+## Homework
+
+Attempt at least one of the end-of-chapter exercises from each question 1-7 of [Section 2.7](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=75#ppg=71) of {cite}`karris`. Don't look at the answers until you have attempted the problems.
+
+If we have time, I will work through one or two of these in class.
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## Summary
 
 In this section we have presented some of the most useful and commonly used properties of the Laplace transform, provided a table of Laplace Transform properties, and given examples of how properties and transform tables can be used to determine the Laplace transform of some useful aperiodic and periodic signals. 
 
-## Take Aways
+### Take Aways
 
 
-## Still to come
+### Still to come
 
-The use of the *derivative property* in the complete solution of continuous-time LTI systems still lies ahead!
+The use of the *derivative property* in the complete solution of continuous-time LTI systems will be covered in {ref}`unit4.6`!
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -438,14 +446,6 @@ We move on to consider
 ```{bibliography}
 :filter: docname in docnames
 ```
-
-+++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
-
-## Homework
-
-Attempt at least one of the end-of-chapter exercises from each question 1-7 of [Section 2.7](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=75#ppg=71) of {cite}`karris`. Don't look at the answers until you have attempted the problems.
-
-If we have time, I will work through one or two of these in class.
 
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
