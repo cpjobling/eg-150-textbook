@@ -179,6 +179,26 @@ Note the ROC of $H(s)$ is not specified by {eq}`eq:340` but must be inferred wit
 (block_diagrams)=
 ## Block diagrams for Systems Interconnection
 
+For two LTI systems (with $h_1(t)$ and $h_2(t)$, respectively) in cascade ({numref}`Fig:3-8`(a)), the overall impulse response is given
+
+$$h(t) = h_1(t) * h_2(t)$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Thus, the corresponding transfer functions are related by the product
+
+$$H(s) = H_1(s)H_2(s)$$ (eq:341)
+
+This relationship is illustrated in {numref}`Fig:3-8`(b)
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+:::{figure-md} Fig:3-8
+<img src="pictures/bd1.png" alt="Two systems in cascade (a) Time-domain representation; (b) s-domain presentation." width="70%">
+
+Two systems in cascade (a) Time-domain representation; (b) s-domain representation.
+:::
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (examples13)=

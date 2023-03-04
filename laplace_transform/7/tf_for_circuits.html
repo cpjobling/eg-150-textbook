@@ -1153,22 +1153,22 @@ title="Print to PDF"
 <span id="system-function"></span><h2>The Transfer Function<a class="headerlink" href="#the-transfer-function" title="Permalink to this headline">#</a></h2>
 <p>In <a class="reference internal" href="../../lti_systems/lti1.html#response-of-a-continuous-time-lti-system-and-the-convolution-integral"><span class="std std-ref">Unit 3.1: Response of a Continuous-Time LTI System and the Convolution Integral</span></a> we showed that the output <span class="math notranslate nohighlight">\(y(t)\)</span> of a continuous-time LTI system equals the convolution of the input <span class="math notranslate nohighlight">\(x(t)\)</span> with the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>; that is,</p>
 <div class="math notranslate nohighlight" id="equation-eq-335">
-<span class="eqno">(25)<a class="headerlink" href="#equation-eq-335" title="Permalink to this equation">#</a></span>\[y(t) = x(t) * h(t)\]</div>
+<span class="eqno">(26)<a class="headerlink" href="#equation-eq-335" title="Permalink to this equation">#</a></span>\[y(t) = x(t) * h(t)\]</div>
 <p>Applying the <a class="reference internal" href="../3/laplace_properties.html#lap3-conv"><span class="std std-ref">Convolution in the time domain</span></a> property, we obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-336">
-<span class="eqno">(26)<a class="headerlink" href="#equation-eq-336" title="Permalink to this equation">#</a></span>\[Y(s) = X(s)H(s)\]</div>
+<span class="eqno">(27)<a class="headerlink" href="#equation-eq-336" title="Permalink to this equation">#</a></span>\[Y(s) = X(s)H(s)\]</div>
 <p>where <span class="math notranslate nohighlight">\(Y(s)\)</span>, <span class="math notranslate nohighlight">\(X(s)\)</span>, and <span class="math notranslate nohighlight">\(H(s)\)</span> are the Laplace transforms of <span class="math notranslate nohighlight">\(y(t)\)</span>, <span class="math notranslate nohighlight">\(x(t)\)</span>, and <span class="math notranslate nohighlight">\(h(t)\)</span>, respectively.</p>
-<p>Equation <a class="reference internal" href="#equation-eq-336">(26)</a> can be expressed as</p>
+<p>Equation <a class="reference internal" href="#equation-eq-336">(27)</a> can be expressed as</p>
 <div class="math notranslate nohighlight" id="equation-eq-337">
-<span class="eqno">(27)<a class="headerlink" href="#equation-eq-337" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)}\]</div>
+<span class="eqno">(28)<a class="headerlink" href="#equation-eq-337" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)}\]</div>
 <p>The laplace transform <span class="math notranslate nohighlight">\(H(s)\)</span> of <span class="math notranslate nohighlight">\(h(t)\)</span> is called the <em>transfer function</em> (or <em>system function</em>) of the system.</p>
-<p>By <a class="reference internal" href="#equation-eq-337">(27)</a>, the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> can also be defined as the ratio of the Laplace transforms of the output <span class="math notranslate nohighlight">\(y(t)\)</span> and the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
+<p>By <a class="reference internal" href="#equation-eq-337">(28)</a>, the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> can also be defined as the ratio of the Laplace transforms of the output <span class="math notranslate nohighlight">\(y(t)\)</span> and the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
 <p>The transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> completely characterizes the system because the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> completely characterizes the system.</p>
-<p><a class="reference internal" href="#fig-3-7"><span class="std std-numref">Fig. 59</span></a> illustrates the relationship of Equations <a href="#id3"><span class="problematic" id="id4">:ex:`eq:335`</span></a> and <a href="#id5"><span class="problematic" id="id6">:ex:`eq:336`</span></a>.</p>
+<p><a class="reference internal" href="#fig-3-7"><span class="std std-numref">Fig. 60</span></a> illustrates the relationship of Equations <a href="#id3"><span class="problematic" id="id4">:ex:`eq:335`</span></a> and <a href="#id5"><span class="problematic" id="id6">:ex:`eq:336`</span></a>.</p>
 <figure class="align-default" id="fig-3-7">
 <a class="reference internal image-reference" href="laplace_transform/7/pictures/system_function.png"><img alt="Impulse response and system function." src="laplace_transform/7/pictures/system_function.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Impulse response and system function</span><a class="headerlink" href="#fig-3-7" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 60 </span><span class="caption-text">Impulse response and system function</span><a class="headerlink" href="#fig-3-7" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1212,7 +1212,7 @@ title="Print to PDF"
 <span id="tf-for-lccode"></span><h2>Transfer functions for LTI system described by Linear Constant-Coefficient Ordinary Differential Equations<a class="headerlink" href="#transfer-functions-for-lti-system-described-by-linear-constant-coefficient-ordinary-differential-equations" title="Permalink to this headline">#</a></h2>
 <p>In <a class="reference internal" href="../../lti_systems/lti3.html#systems-described-by-differential-equations"><span class="std std-ref">Unit 3.3: Systems Described by Differential Equations</span></a> we considered a continuous-time LTI systemfor which input <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(y(t)\)</span> satisfy the general linear constant-coefficient ordinary differential equation (LCCODE) of the form</p>
 <div class="math notranslate nohighlight" id="equation-eq-338">
-<span class="eqno">(28)<a class="headerlink" href="#equation-eq-338" title="Permalink to this equation">#</a></span>\[\sum_{k=0}^N a_k \frac{d^k}{dt^k} y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)\]</div>
+<span class="eqno">(29)<a class="headerlink" href="#equation-eq-338" title="Permalink to this equation">#</a></span>\[\sum_{k=0}^N a_k \frac{d^k}{dt^k} y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)\]</div>
 <p>Applying the Laplace transform and using the <a class="reference internal" href="../3/laplace_properties.html#lap-diff-prop"><span class="std std-ref">Differentiation in the time domain</span></a></p>
 </section>
 <section id="transfer-functions-for-circuits">

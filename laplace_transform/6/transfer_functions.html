@@ -831,13 +831,13 @@ title="Print to PDF"
 <div class="math notranslate nohighlight" id="equation-eq-336">
 <span class="eqno">(19)<a class="headerlink" href="#equation-eq-336" title="Permalink to this equation">#</a></span>\[Y(s) = X(s)H(s)\]</div>
 <p>where <span class="math notranslate nohighlight">\(Y(s)\)</span>, <span class="math notranslate nohighlight">\(X(s)\)</span>, and <span class="math notranslate nohighlight">\(H(s)\)</span> are the Laplace transforms of <span class="math notranslate nohighlight">\(y(t)\)</span>, <span class="math notranslate nohighlight">\(x(t)\)</span>, and <span class="math notranslate nohighlight">\(h(t)\)</span>, respectively.</p>
-<p>Equation <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-336">(26)</a> can be expressed as</p>
+<p>Equation <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-336">(27)</a> can be expressed as</p>
 <div class="math notranslate nohighlight" id="equation-eq-337">
 <span class="eqno">(20)<a class="headerlink" href="#equation-eq-337" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)}\]</div>
 <p>The laplace transform <span class="math notranslate nohighlight">\(H(s)\)</span> of <span class="math notranslate nohighlight">\(h(t)\)</span> is called the <em>transfer function</em> (or <em>system function</em>) of the system.</p>
-<p>By <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-337">(27)</a>, the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> can also be defined as the ratio of the Laplace transforms of the output <span class="math notranslate nohighlight">\(y(t)\)</span> and the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
+<p>By <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-337">(28)</a>, the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> can also be defined as the ratio of the Laplace transforms of the output <span class="math notranslate nohighlight">\(y(t)\)</span> and the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
 <p>The transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> completely characterizes the system because the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> completely characterizes the system.</p>
-<p><a class="reference internal" href="../7/tf_for_circuits.html#fig-3-7"><span class="std std-numref">Fig. 59</span></a> illustrates the relationship of Equations <a href="#id3"><span class="problematic" id="id4">:ex:`eq:335`</span></a> and <a href="#id5"><span class="problematic" id="id6">:ex:`eq:336`</span></a>.</p>
+<p><a class="reference internal" href="../7/tf_for_circuits.html#fig-3-7"><span class="std std-numref">Fig. 60</span></a> illustrates the relationship of Equations <a href="#id3"><span class="problematic" id="id4">:ex:`eq:335`</span></a> and <a href="#id5"><span class="problematic" id="id6">:ex:`eq:336`</span></a>.</p>
 <figure class="align-default" id="fig-3-7">
 <a class="reference internal image-reference" href="../../_images/system_function.png"><img alt="Impulse response and system function." src="../../_images/system_function.png" style="width: 60%;" /></a>
 <figcaption>
@@ -897,12 +897,25 @@ title="Print to PDF"
 <span class="eqno">(23)<a class="headerlink" href="#equation-eq-340" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)} = \frac{\displaystyle \sum_{k=0}^M b_k s^k}{\displaystyle\sum_{k=0}^N a_k s^k}\]</div>
 <p>Expanding <a class="reference internal" href="#equation-eq-340">(23)</a>, <span class="math notranslate nohighlight">\(H(s)\)</span> can be written in the more familiar form</p>
 <div class="math notranslate nohighlight" id="equation-eq-341">
-<span class="eqno">(24)<a class="headerlink" href="#equation-eq-341" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}\]</div>
+<span class="eqno">(25)<a class="headerlink" href="#equation-eq-341" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}\]</div>
 <p>Hence, <span class="math notranslate nohighlight">\(H(s)\)</span> is always a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <p>Note the ROC of <span class="math notranslate nohighlight">\(H(s)\)</span> is not specified by <a class="reference internal" href="#equation-eq-340">(23)</a> but must be inferred with additional requirements on the system such as causality and stability.</p>
 </section>
 <section id="block-diagrams-for-systems-interconnection">
 <span id="block-diagrams"></span><h2>Block diagrams for Systems Interconnection<a class="headerlink" href="#block-diagrams-for-systems-interconnection" title="Permalink to this headline">#</a></h2>
+<p>For two LTI systems (with <span class="math notranslate nohighlight">\(h_1(t)\)</span> and <span class="math notranslate nohighlight">\(h_2(t)\)</span>, respectively) in cascade (<a class="reference internal" href="#fig-3-8"><span class="std std-numref">Fig. 59</span></a>(a)), the overall impulse response is given</p>
+<div class="math notranslate nohighlight">
+\[h(t) = h_1(t) * h_2(t)\]</div>
+<p>Thus, the corresponding transfer functions are related by the product</p>
+<div class="math notranslate nohighlight" id="equation-eq-341">
+<span class="eqno">(25)<a class="headerlink" href="#equation-eq-341" title="Permalink to this equation">#</a></span>\[H(s) = H_1(s)H_2(s)\]</div>
+<p>This relationship is illustrated in <a class="reference internal" href="#fig-3-8"><span class="std std-numref">Fig. 59</span></a>(b)</p>
+<figure class="align-default" id="fig-3-8">
+<a class="reference internal image-reference" href="../../_images/bd1.png"><img alt="Two systems in cascade (a) Time-domain representation; (b) s-domain presentation." src="../../_images/bd1.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Two systems in cascade (a) Time-domain representation; (b) s-domain representation.</span><a class="headerlink" href="#fig-3-8" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="examples-13-transfer-functions">
 <span id="examples13"></span><h2>Examples 13: Transfer functions<a class="headerlink" href="#examples-13-transfer-functions" title="Permalink to this headline">#</a></h2>
