@@ -831,13 +831,13 @@ title="Print to PDF"
 <div class="math notranslate nohighlight" id="equation-eq-336">
 <span class="eqno">(19)<a class="headerlink" href="#equation-eq-336" title="Permalink to this equation">#</a></span>\[Y(s) = X(s)H(s)\]</div>
 <p>where <span class="math notranslate nohighlight">\(Y(s)\)</span>, <span class="math notranslate nohighlight">\(X(s)\)</span>, and <span class="math notranslate nohighlight">\(H(s)\)</span> are the Laplace transforms of <span class="math notranslate nohighlight">\(y(t)\)</span>, <span class="math notranslate nohighlight">\(x(t)\)</span>, and <span class="math notranslate nohighlight">\(h(t)\)</span>, respectively.</p>
-<p>Equation <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-336">(27)</a> can be expressed as</p>
+<p>Equation <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-336">(28)</a> can be expressed as</p>
 <div class="math notranslate nohighlight" id="equation-eq-337">
 <span class="eqno">(20)<a class="headerlink" href="#equation-eq-337" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)}\]</div>
 <p>The laplace transform <span class="math notranslate nohighlight">\(H(s)\)</span> of <span class="math notranslate nohighlight">\(h(t)\)</span> is called the <em>transfer function</em> (or <em>system function</em>) of the system.</p>
-<p>By <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-337">(28)</a>, the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> can also be defined as the ratio of the Laplace transforms of the output <span class="math notranslate nohighlight">\(y(t)\)</span> and the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
+<p>By <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-337">(29)</a>, the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> can also be defined as the ratio of the Laplace transforms of the output <span class="math notranslate nohighlight">\(y(t)\)</span> and the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
 <p>The transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> completely characterizes the system because the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> completely characterizes the system.</p>
-<p><a class="reference internal" href="../7/tf_for_circuits.html#fig-3-7"><span class="std std-numref">Fig. 60</span></a> illustrates the relationship of Equations <a href="#id3"><span class="problematic" id="id4">:ex:`eq:335`</span></a> and <a href="#id5"><span class="problematic" id="id6">:ex:`eq:336`</span></a>.</p>
+<p><a class="reference internal" href="../7/tf_for_circuits.html#fig-3-7"><span class="std std-numref">Fig. 61</span></a> illustrates the relationship of Equations <a href="#id3"><span class="problematic" id="id4">:ex:`eq:335`</span></a> and <a href="#id5"><span class="problematic" id="id6">:ex:`eq:336`</span></a>.</p>
 <figure class="align-default" id="fig-3-7">
 <a class="reference internal image-reference" href="../../_images/system_function.png"><img alt="Impulse response and system function." src="../../_images/system_function.png" style="width: 60%;" /></a>
 <figcaption>
@@ -914,6 +914,19 @@ title="Print to PDF"
 <a class="reference internal image-reference" href="../../_images/bd1.png"><img alt="Two systems in cascade (a) Time-domain representation; (b) s-domain presentation." src="../../_images/bd1.png" style="width: 70%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 59 </span><span class="caption-text">Two systems in cascade (a) Time-domain representation; (b) s-domain representation.</span><a class="headerlink" href="#fig-3-8" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Similarly, the impulse response of a parallel combination of two LTI systems (<a class="reference internal" href="#fig-3-9"><span class="std std-numref">Fig. 60</span></a>(a)) is given by</p>
+<div class="math notranslate nohighlight">
+\[h(t) = h_1(t) + h_2(t)\]</div>
+<p>Thus,</p>
+<div class="math notranslate nohighlight" id="equation-eq-342">
+<span class="eqno">(26)<a class="headerlink" href="#equation-eq-342" title="Permalink to this equation">#</a></span>\[H(s) = H_1(s) + H_2(s)\]</div>
+<p>This relationship is illustrated in <a class="reference internal" href="#fig-3-9"><span class="std std-numref">Fig. 60</span></a>(b).</p>
+<figure class="align-default" id="fig-3-9">
+<a class="reference internal image-reference" href="../../_images/bd2.png"><img alt="Two systems in parallel. (a) Time-domain representation; (b) s-domain representation." src="../../_images/bd2.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 60 </span><span class="caption-text">Two systems in parallel. (a) Time-domain representation; (b) s-domain representation.</span><a class="headerlink" href="#fig-3-9" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>

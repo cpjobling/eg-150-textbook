@@ -33,7 +33,7 @@ We look at applications of the Laplace Transform for circuit analysis. In partic
 
 * {ref}`complex_admittance`
 
-* {ref}`examples21`
+* {ref}`examples12`
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -1140,7 +1140,7 @@ In this section we have looked at the application of the Laplace transform to ci
 
 * {ref}`complex_admittance`
 
-* {ref}`examples21`
+* {ref}`examples12`
 
 ## Take Aways
 

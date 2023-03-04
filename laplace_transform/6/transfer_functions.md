@@ -199,6 +199,30 @@ This relationship is illustrated in {numref}`Fig:3-8`(b)
 Two systems in cascade (a) Time-domain representation; (b) s-domain representation.
 :::
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Similarly, the impulse response of a parallel combination of two LTI systems ({numref}`Fig:3-9`(a)) is given by 
+
+$$h(t) = h_1(t) + h_2(t)$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Thus,
+
+$$H(s) = H_1(s) + H_2(s)$$ (eq:342)
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+This relationship is illustrated in {numref}`Fig:3-9`(b).
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+:::{figure-md} Fig:3-9
+<img src="pictures/bd2.png" alt="Two systems in parallel. (a) Time-domain representation; (b) s-domain representation." width="70%">
+
+Two systems in parallel. (a) Time-domain representation; (b) s-domain representation.
+:::
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (examples13)=
