@@ -244,6 +244,16 @@ const thebe_selector_output = ".output, .cell_output"
      Unit 4.5 Using Laplace Transforms for Circuit Analysis
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6/transfer_functions.html">
+     Unit 4.6 Transfer Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../7/tf_for_circuits.html">
+     Unit 4.7 Transfer Functions for Circuit Analysis
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -1337,7 +1347,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 <p>Rework Example 3-2 from the <span id="id4">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> using quadratic factors.</p>
 <p>Find the Inverse Laplace Transform of</p>
 <div class="math notranslate nohighlight" id="equation-pfe1">
-<span class="eqno">(2)<a class="headerlink" href="#equation-pfe1" title="Permalink to this equation">#</a></span>\[F_3(s) = \frac{s + 3}{(s+1)(s^2 + 4s + 8)}\]</div>
+<span class="eqno">(3)<a class="headerlink" href="#equation-pfe1" title="Permalink to this equation">#</a></span>\[F_3(s) = \frac{s + 3}{(s+1)(s^2 + 4s + 8)}\]</div>
 <p>(Quick solution: <a class="reference external" href="https://www.wolframalpha.com/input/?i=inverse+laplace+transform+%28s%2B3%29%2F%28%28s+%2B+1%29%28s%5E2+%2B+4s+%2B+8%29%29">Wolfram Alpha</a> – Shows that the computer is not always best!)</p>
 <section id="solution-11-3">
 <h4>Solution 11.3<a class="headerlink" href="#solution-11-3" title="Permalink to this headline">#</a></h4>
@@ -1402,10 +1412,10 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 <p>Then comparing this with the desired form <span class="math notranslate nohighlight">\((s + a)^2 + \omega^2\)</span>, we have <span class="math notranslate nohighlight">\(a = 2\)</span> and <span class="math notranslate nohighlight">\(\omega^2 = 4 \to \omega = \sqrt{4} = 2\)</span>.</p>
 <p>To solve this, we need to find the PFE for the assumed solution:</p>
 <div class="math notranslate nohighlight" id="equation-pfe1">
-<span class="eqno">(2)<a class="headerlink" href="#equation-pfe1" title="Permalink to this equation">#</a></span>\[F_3(s) = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 2^2} + r_3\frac{s + 2}{(s + 2)^2 + 2^2}  \]</div>
-<p>which we do by equating <code class="xref eq docutils literal notranslate"><span class="pre">pfe2</span></code> to <a class="reference internal" href="#equation-pfe1">(2)</a>,</p>
+<span class="eqno">(3)<a class="headerlink" href="#equation-pfe1" title="Permalink to this equation">#</a></span>\[F_3(s) = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 2^2} + r_3\frac{s + 2}{(s + 2)^2 + 2^2}  \]</div>
+<p>which we do by equating <code class="xref eq docutils literal notranslate"><span class="pre">pfe2</span></code> to <a class="reference internal" href="#equation-pfe1">(3)</a>,</p>
 <div class="math notranslate nohighlight" id="equation-pfe3">
-<span class="eqno">(3)<a class="headerlink" href="#equation-pfe3" title="Permalink to this equation">#</a></span>\[\frac{s + 3}{(s+1)(s^2 + 4s + 8)} = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 2^2} + r_3\frac{s + 2}{(s + 2)^2 + 2^2}\]</div>
+<span class="eqno">(4)<a class="headerlink" href="#equation-pfe3" title="Permalink to this equation">#</a></span>\[\frac{s + 3}{(s+1)(s^2 + 4s + 8)} = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 2^2} + r_3\frac{s + 2}{(s + 2)^2 + 2^2}\]</div>
 <p>putting both sides on a common denominator,</p>
 <div class="math notranslate nohighlight">
 \[\frac{s+3}{(s+1)(s^2 + 4s + 8)} = \frac{(2/5)(s^2 + 4s + 8) + r_2(s + 1) + r_3(s + 1)(s + 2)}{(s+1)(s^2 + 4s + 8)}\]</div>
@@ -1415,7 +1425,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 <p>The completion of this problem is left as a <em>homework exercise</em> for the student.</p>
 <p>The solution should be:</p>
 <div class="math notranslate nohighlight" id="equation-pfe4">
-<span class="eqno">(4)<a class="headerlink" href="#equation-pfe4" title="Permalink to this equation">#</a></span>\[f_3(t) = \frac{2}{5}e^{-t} + \frac{3}{10} e^{-2t}\sin 2t - \frac{2}{5} e^{-2t}\cos 2t \]</div>
+<span class="eqno">(5)<a class="headerlink" href="#equation-pfe4" title="Permalink to this equation">#</a></span>\[f_3(t) = \frac{2}{5}e^{-t} + \frac{3}{10} e^{-2t}\sin 2t - \frac{2}{5} e^{-2t}\cos 2t \]</div>
 <p>You can use trig. identities to simplify this further if you wish.</p>
 </section>
 </section>
@@ -1556,7 +1566,7 @@ k =
 </section>
 <section id="homework">
 <h2>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">#</a></h2>
-<p>Complete <a class="reference internal" href="#ex-11-3"><span class="std std-ref">Example 11.3</span></a> to confirm the result <a class="reference internal" href="#equation-pfe4">(4)</a>. Then do the end of the chapter exercises (Section 3.67) from the <span id="id7">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>. Don’t look at the answers until you have attempted the problems.</p>
+<p>Complete <a class="reference internal" href="#ex-11-3"><span class="std std-ref">Example 11.3</span></a> to confirm the result <a class="reference internal" href="#equation-pfe4">(5)</a>. Then do the end of the chapter exercises (Section 3.67) from the <span id="id7">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>. Don’t look at the answers until you have attempted the problems.</p>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>

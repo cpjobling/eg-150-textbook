@@ -394,7 +394,7 @@ For this circuit, the sum
 
 $$R + sL + \frac{1}{sC}$$ 
 
-represents that total opposition to current flow. 
+represents that total opposition to current flow.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 

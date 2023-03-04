@@ -74,6 +74,7 @@ $$f(at)\Leftrightarrow \frac{1}{a}F\left(\frac{s}{a}\right)$$
 
 +++ {"nbpresent": {"id": "9385975e-7004-4c81-b8f7-1e59b6c578bb"}, "slideshow": {"slide_type": "subslide"}}
 
+(lap:diff_prop)=
 ### Differentiation in the time domain
 
 $$f'(t) = \frac{d}{dt} f(t) \Leftrightarrow sF(s) - f(0^-)$$
@@ -145,6 +146,7 @@ $$\lim_{t\to \infty}f(t) \Leftrightarrow \lim_{s\to 0} sF(s) = f(\infty)$$
 
 +++ {"nbpresent": {"id": "509b27f0-eef5-446b-b7be-6be1757afd6a"}, "slideshow": {"slide_type": "subslide"}}
 
+(lap3:conv)=
 ### Convolution in the time domain
 
 $$f_1(t)*f_2(t) = \int_{0}^{t}f_1(\tau)f_2(t-\tau) d\tau \Leftrightarrow F_1(s) F_2(s)$$
@@ -412,7 +414,7 @@ For full solution see [Example 2.4.5](https://ebookcentral.proquest.com/lib/swan
 
 </pre>
 
-+++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
++++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "notes"}}
 
 ## Homework
 

@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/5/circuit_analysis.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Fourier Series" href="../../fourier_series/index.html" />
+    <link rel="next" title="Transfer Functions" href="../6/transfer_functions.html" />
     <link rel="prev" title="Unit 4.4 The Inverse Laplace Transform" href="../4/inverse_laplace.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -242,6 +242,16 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Unit 4.5 Using Laplace Transforms for Circuit Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6/transfer_functions.html">
+     Unit 4.6 Transfer Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../7/tf_for_circuits.html">
+     Unit 4.7 Transfer Functions for Circuit Analysis
     </a>
    </li>
   </ul>
@@ -1241,7 +1251,7 @@ title="Print to PDF"
 <h4>In the time domain<a class="headerlink" href="#in-the-time-domain" title="Permalink to this headline">#</a></h4>
 <p>In <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:res_circ_t</span></code> the voltage across the resistor <span class="math notranslate nohighlight">\(v_R(t)\)</span> is proportional to the current flowing through the resistor <span class="math notranslate nohighlight">\(i_R(t)\)</span></p>
 <div class="math notranslate nohighlight" id="equation-eq-vrt">
-<span class="eqno">(5)<a class="headerlink" href="#equation-eq-vrt" title="Permalink to this equation">#</a></span>\[v_R(t) = R i_R(t)\]</div>
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq-vrt" title="Permalink to this equation">#</a></span>\[v_R(t) = R i_R(t)\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">eqvrt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">v_R</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i_R</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
@@ -1264,7 +1274,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>The current flowing through the resistor is inversely proportional to the voltage across the resistor. This is easily confirmed by rewriting <a class="reference internal" href="#equation-eq-vrt">(5)</a> to isolate <span class="math notranslate nohighlight">\(i_R(t)\)</span></p>
+<p>The current flowing through the resistor is inversely proportional to the voltage across the resistor. This is easily confirmed by rewriting <a class="reference internal" href="#equation-eq-vrt">(6)</a> to isolate <span class="math notranslate nohighlight">\(i_R(t)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">eqirt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">isolate</span><span class="p">(</span><span class="n">eqvrt</span><span class="p">,</span><span class="n">i_R</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
@@ -1291,7 +1301,7 @@ title="Print to PDF"
 </div>
 <p>Rewritten nicely as</p>
 <div class="math notranslate nohighlight" id="equation-eq-irt">
-<span class="eqno">(6)<a class="headerlink" href="#equation-eq-irt" title="Permalink to this equation">#</a></span>\[i_R(t) = \frac{v_R(t)}{R}\]</div>
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-irt" title="Permalink to this equation">#</a></span>\[i_R(t) = \frac{v_R(t)}{R}\]</div>
 <p>From these results, which of the following equations represent the Laplace transform of the current flowing through, and the voltage across, the resistor <span class="math notranslate nohighlight">\(R\)</span>?</p>
 <div class="math notranslate nohighlight">
 \[V_R(s) = RI_R(s)\]</div>
@@ -1305,11 +1315,11 @@ title="Print to PDF"
 </section>
 <section id="in-the-complex-frequency-domain">
 <h4>In the complex frequency domain<a class="headerlink" href="#in-the-complex-frequency-domain" title="Permalink to this headline">#</a></h4>
-<p>We take the Laplace transforms of <a class="reference internal" href="#equation-eq-vrt">(5)</a> and <a class="reference internal" href="#equation-eq-irt">(6)</a> to obtain</p>
+<p>We take the Laplace transforms of <a class="reference internal" href="#equation-eq-vrt">(6)</a> and <a class="reference internal" href="#equation-eq-irt">(7)</a> to obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-vrs">
-<span class="eqno">(7)<a class="headerlink" href="#equation-eq-vrs" title="Permalink to this equation">#</a></span>\[V_R(s) = R I_R(s)\]</div>
+<span class="eqno">(8)<a class="headerlink" href="#equation-eq-vrs" title="Permalink to this equation">#</a></span>\[V_R(s) = R I_R(s)\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-irs">
-<span class="eqno">(8)<a class="headerlink" href="#equation-eq-irs" title="Permalink to this equation">#</a></span>\[I_R(s) = \frac{V_R(s)}{R}\]</div>
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq-irs" title="Permalink to this equation">#</a></span>\[I_R(s) = \frac{V_R(s)}{R}\]</div>
 <p>which we illustrate in <a class="reference internal" href="#fig-res-circ-s"><span class="std std-numref">Fig. 51</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1340,7 +1350,7 @@ title="Print to PDF"
 <h4>In the time domain<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
 <p>The voltage across the inductor <span class="math notranslate nohighlight">\(i_L(t)\)</span> is proportional to the rate of change of the current <span class="math notranslate nohighlight">\(i_L(t)\)</span> flowing through the inductor</p>
 <div class="math notranslate nohighlight" id="equation-eq-vlt">
-<span class="eqno">(9)<a class="headerlink" href="#equation-eq-vlt" title="Permalink to this equation">#</a></span>\[v_L(t) = L \frac{d}{dt} i_L(t) \]</div>
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-vlt" title="Permalink to this equation">#</a></span>\[v_L(t) = L \frac{d}{dt} i_L(t) \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">eqvlt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">v_L</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">L</span><span class="o">*</span><span class="nb">diff</span><span class="p">(</span><span class="n">i_L</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
@@ -1365,7 +1375,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>The current flowing through the inductor is inversely proportional to the integral of the voltage across the inductor which is easily confirmed by taking the integral of both sides of <a class="reference internal" href="#equation-eq-vlt">(9)</a> and rewriting the equation to isolate <span class="math notranslate nohighlight">\(i_L(t)\)</span></p>
+<p>The current flowing through the inductor is inversely proportional to the integral of the voltage across the inductor which is easily confirmed by taking the integral of both sides of <a class="reference internal" href="#equation-eq-vlt">(10)</a> and rewriting the equation to isolate <span class="math notranslate nohighlight">\(i_L(t)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">int</span><span class="p">(</span><span class="n">lhs</span><span class="p">(</span><span class="n">eqvlt</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">rhs</span><span class="p">(</span><span class="n">eqvlt</span><span class="p">));</span>
@@ -1393,7 +1403,7 @@ title="Print to PDF"
 </div>
 <p>Rewritten nicely as</p>
 <div class="math notranslate nohighlight" id="equation-eq-ilt">
-<span class="eqno">(10)<a class="headerlink" href="#equation-eq-ilt" title="Permalink to this equation">#</a></span>\[i_L(t) = \frac{1}{L}\int_{-\infty}^{t} v_L(t)\, dt\]</div>
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq-ilt" title="Permalink to this equation">#</a></span>\[i_L(t) = \frac{1}{L}\int_{-\infty}^{t} v_L(t)\, dt\]</div>
 <p>From these results, which of the following equations represent the Laplace transform of the current flowing through, and the voltage across, the inductor <span class="math notranslate nohighlight">\(L\)</span>?</p>
 <div class="math notranslate nohighlight">
 \[I_L(s)=sLV_L(s) - Lv_L(0^-)\]</div>
@@ -1418,11 +1428,11 @@ title="Print to PDF"
 <p><img alt="Inductive Network - Complex Frequency Domain" src="../../_images/inductive_freq.png" /></p>
 <section id="id6">
 <h4>In the complex frequency domain<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h4>
-<p>We take the Laplace transforms of <a class="reference internal" href="#equation-eq-vlt">(9)</a> and <a class="reference internal" href="#equation-eq-ilt">(10)</a> to obtain</p>
+<p>We take the Laplace transforms of <a class="reference internal" href="#equation-eq-vlt">(10)</a> and <a class="reference internal" href="#equation-eq-ilt">(11)</a> to obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-vls">
-<span class="eqno">(11)<a class="headerlink" href="#equation-eq-vls" title="Permalink to this equation">#</a></span>\[V_L(s) = s L I_L(s) - Li_L(0^-)\]</div>
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq-vls" title="Permalink to this equation">#</a></span>\[V_L(s) = s L I_L(s) - Li_L(0^-)\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-ils">
-<span class="eqno">(12)<a class="headerlink" href="#equation-eq-ils" title="Permalink to this equation">#</a></span>\[I_L(s) = \frac{V_L(s)}{sL} + \frac{i_L(0^-)}{s}\]</div>
+<span class="eqno">(13)<a class="headerlink" href="#equation-eq-ils" title="Permalink to this equation">#</a></span>\[I_L(s) = \frac{V_L(s)}{sL} + \frac{i_L(0^-)}{s}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The current and voltage are transformed but so is the inductance. The complex frequency representation has used the derivative property for the voltage across the inductor and the integration properties for the current through the inductor. The use of the dervative and integration transforms has introduced a term that depends on the initial current flowing through the inductor. Therefore, the initial current would need to be considered in computing the actual voltage and current in the complex frequency domain.</p>
@@ -1443,7 +1453,7 @@ title="Print to PDF"
 <h4>In the time domain<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h4>
 <p>The current flowing into the capacitor is proportional to the change in voltage across the capacitor</p>
 <div class="math notranslate nohighlight" id="equation-eq-ict">
-<span class="eqno">(13)<a class="headerlink" href="#equation-eq-ict" title="Permalink to this equation">#</a></span>\[i_C(t) = C \frac{d}{dt} v_C(t) \]</div>
+<span class="eqno">(14)<a class="headerlink" href="#equation-eq-ict" title="Permalink to this equation">#</a></span>\[i_C(t) = C \frac{d}{dt} v_C(t) \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">eqict</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">i_C</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">diff</span><span class="p">(</span><span class="n">v_C</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
@@ -1468,7 +1478,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>The voltage across the capacitor is inversely proportional to the integral of the current flowing into the capacitor which is easily confirmed by taking the integral of both sides of <a class="reference internal" href="#equation-eq-ict">(13)</a> and rewriting the equation to isolate <span class="math notranslate nohighlight">\(v_C(t)\)</span></p>
+<p>The voltage across the capacitor is inversely proportional to the integral of the current flowing into the capacitor which is easily confirmed by taking the integral of both sides of <a class="reference internal" href="#equation-eq-ict">(14)</a> and rewriting the equation to isolate <span class="math notranslate nohighlight">\(v_C(t)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">int</span><span class="p">(</span><span class="n">lhs</span><span class="p">(</span><span class="n">eqict</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">rhs</span><span class="p">(</span><span class="n">eqict</span><span class="p">));</span>
@@ -1496,7 +1506,7 @@ title="Print to PDF"
 </div>
 <p>Which can be rwritten nicely as</p>
 <div class="math notranslate nohighlight" id="equation-eq-vct">
-<span class="eqno">(14)<a class="headerlink" href="#equation-eq-vct" title="Permalink to this equation">#</a></span>\[v_C(t) = \frac{1}{C}\int_{-\infty}^{t} i_C(t)\, dt\]</div>
+<span class="eqno">(15)<a class="headerlink" href="#equation-eq-vct" title="Permalink to this equation">#</a></span>\[v_C(t) = \frac{1}{C}\int_{-\infty}^{t} i_C(t)\, dt\]</div>
 <p>From the previous results, which of the following equations represent the Laplace transform of the current flowing into, and the voltage across, the capacitor <span class="math notranslate nohighlight">\(C\)</span>?</p>
 <div class="math notranslate nohighlight">
 \[V_c(s)=sCI_C(s) - Ci_C(0^-)\]</div>
@@ -1510,11 +1520,11 @@ title="Print to PDF"
 </section>
 <section id="id9">
 <h4>In the complex frequency domain<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h4>
-<p>We take the Laplace transforms of <a class="reference internal" href="#equation-eq-ict">(13)</a> and <a class="reference internal" href="#equation-eq-vct">(14)</a> to obtain</p>
+<p>We take the Laplace transforms of <a class="reference internal" href="#equation-eq-ict">(14)</a> and <a class="reference internal" href="#equation-eq-vct">(15)</a> to obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-ics">
-<span class="eqno">(15)<a class="headerlink" href="#equation-eq-ics" title="Permalink to this equation">#</a></span>\[I_C(s) = s C V_C(s) - C v_C(0^-)\]</div>
+<span class="eqno">(16)<a class="headerlink" href="#equation-eq-ics" title="Permalink to this equation">#</a></span>\[I_C(s) = s C V_C(s) - C v_C(0^-)\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-vcs">
-<span class="eqno">(16)<a class="headerlink" href="#equation-eq-vcs" title="Permalink to this equation">#</a></span>\[V_C(s) = \frac{I_C(s)}{sC} + \frac{v_C(0^-)}{s}\]</div>
+<span class="eqno">(17)<a class="headerlink" href="#equation-eq-vcs" title="Permalink to this equation">#</a></span>\[V_C(s) = \frac{I_C(s)}{sC} + \frac{v_C(0^-)}{s}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The current and voltage are transformed but so is the capacitance. The complex frequency representation has used the derivative property for the voltage across the capacitor and the integration property for the current flowing into the capacitor. The use of the dervative and integration transforms has introduced a term that depends on the initial voltage (initial charge) across the capacitor. Therefore, the initial voltage would need to be considered in computing the actual voltage and current introduced by the capacitor in the complex frequency domain.</p>
@@ -2196,10 +2206,10 @@ into a linear and a quadratic factor.</p>
             <p class="prev-next-title">Unit 4.4 The Inverse Laplace Transform</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../../fourier_series/index.html" title="next page">
+    <a class='right-next' id="next-link" href="../6/transfer_functions.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fourier Series</p>
+        <p class="prev-next-title">Transfer Functions</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

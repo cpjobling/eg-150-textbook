@@ -130,7 +130,7 @@ $$y(t) = \int_{0}^{t}h(\tau)x(t-\tau)\,d\tau =  \int_{0}^{t}x(\tau)h(t-\tau)\,d\
 
 The BIBO (bounded-input/bounded-output) stability of an LTI system (Section {ref}`stable_systems`) is readily ascertained by the impuse response. It can be shown ({ref}`ex6_5`) that a continuous-time LTI system is BIBO stable if its  impulse response is absolutely integrable; that is,
 
-$$\int_{-\infty}^{\infty}\left|h(\tau)\right|\,d\tau \lt \infty$$
+$$\int_{-\infty}^{\infty}\left|h(\tau)\right|\,d\tau \lt \infty$$ (eq:221)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -433,11 +433,6 @@ By a similar argument, we can show that if $s = j\omega$, then $e^{j\omega}$ is 
 $$H(j\omega) = \int_{-\infty}^{\infty} h(\tau)e^{-j\omega\tau}\,d\tau.$$
 
 This is called the *Fourier transform* and we will return to it in **EG-247 Digital Signal Processing**.
-
-
-
-
-
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

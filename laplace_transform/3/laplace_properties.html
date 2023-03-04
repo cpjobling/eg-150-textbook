@@ -244,6 +244,16 @@ const thebe_selector_output = ".output, .cell_output"
      Unit 4.5 Using Laplace Transforms for Circuit Analysis
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../6/transfer_functions.html">
+     Unit 4.6 Transfer Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../7/tf_for_circuits.html">
+     Unit 4.7 Transfer Functions for Circuit Analysis
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -980,7 +990,7 @@ title="Print to PDF"
 \[f(at)\Leftrightarrow \frac{1}{a}F\left(\frac{s}{a}\right)\]</div>
 </section>
 <section id="differentiation-in-the-time-domain">
-<h3>Differentiation in the time domain<a class="headerlink" href="#differentiation-in-the-time-domain" title="Permalink to this headline">#</a></h3>
+<span id="lap-diff-prop"></span><h3>Differentiation in the time domain<a class="headerlink" href="#differentiation-in-the-time-domain" title="Permalink to this headline">#</a></h3>
 <div class="math notranslate nohighlight">
 \[f'(t) = \frac{d}{dt} f(t) \Leftrightarrow sF(s) - f(0^-)\]</div>
 <p>This property facilitates the solution of differential equations</p>
@@ -1032,7 +1042,7 @@ $<span class="math notranslate nohighlight">\(f''(t) = \frac{d^2}{dt^2}f(t) \Lef
 \[\lim_{t\to \infty}f(t) \Leftrightarrow \lim_{s\to 0} sF(s) = f(\infty)\]</div>
 </section>
 <section id="convolution-in-the-time-domain">
-<h3>Convolution in the time domain<a class="headerlink" href="#convolution-in-the-time-domain" title="Permalink to this headline">#</a></h3>
+<span id="lap3-conv"></span><h3>Convolution in the time domain<a class="headerlink" href="#convolution-in-the-time-domain" title="Permalink to this headline">#</a></h3>
 <div class="math notranslate nohighlight">
 \[f_1(t)*f_2(t) = \int_{0}^{t}f_1(\tau)f_2(t-\tau) d\tau \Leftrightarrow F_1(s) F_2(s)\]</div>
 <p>This is another important result as it allows us to compute the response of a system by simply multiplying the Laplace transforms of the system and the signal and then inverse Laplace transforming the result.</p>
