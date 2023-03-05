@@ -27,7 +27,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/2/laplace
 
 +++ {"nbpresent": {"id": "f651cafb-8c2b-4d27-aec9-3491dbcce1aa"}, "slideshow": {"slide_type": "notes"}}
 
-In this unit, we will continue our introduction to the Laplace transform by presenting the transforms of the most commonly encoutered common signals. In the cases {ref}`lap2:impulse`&mdash;{ref}`lap2:exp`, we will determine the transforms from the Laplace transform itself (see the OneNote Class Notebook and recording of the active session for these). For the remaining, we will present tables of transforms. We conclude by demonstrating that the Symbolic Math Toolbox "knows" these transforms.
+In this unit, we will continue our introduction to the Laplace transform by presenting the transforms of the most commonly encountered common signals. In the cases {ref}`lap2:impulse`&mdash;{ref}`lap2:exp`, we will determine the transforms from the Laplace transform itself (see the OneNote Class Notebook and recording of the active session for these). For the remaining, we will present tables of transforms. We conclude by demonstrating that the Symbolic Math Toolbox "knows" these transforms.
 
 ## Agenda
 
