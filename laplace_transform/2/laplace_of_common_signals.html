@@ -671,8 +671,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#f-transforms-of-common-signals">
-   F. Transforms of Common Signals
+  <a class="reference internal nav-link" href="#g-laplace-tranforms-pairs-for-common-signals">
+   G. Laplace tranforms pairs for common signals
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -683,8 +683,8 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#g-matlab-examples">
-   G. MATLAB Examples
+  <a class="reference internal nav-link" href="#h-matlab-examples">
+   H. MATLAB Examples
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -745,9 +745,21 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary-and-takeaways">
-   Summary and Takeaways
+  <a class="reference internal nav-link" href="#homework">
+   Homework
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#takeaways">
+     Takeaways
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#next-time">
@@ -829,8 +841,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#f-transforms-of-common-signals">
-   F. Transforms of Common Signals
+  <a class="reference internal nav-link" href="#g-laplace-tranforms-pairs-for-common-signals">
+   G. Laplace tranforms pairs for common signals
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -841,8 +853,8 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#g-matlab-examples">
-   G. MATLAB Examples
+  <a class="reference internal nav-link" href="#h-matlab-examples">
+   H. MATLAB Examples
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -903,9 +915,21 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary-and-takeaways">
-   Summary and Takeaways
+  <a class="reference internal nav-link" href="#homework">
+   Homework
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#takeaways">
+     Takeaways
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#next-time">
@@ -932,6 +956,7 @@ title="Print to PDF"
 <p>The preparatory reading for this section is Chapter 2.2 of <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> and Chapter 3.4 of <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/2/laplace_of_common_signals">cpjobling.github.io/eg-150-textbook/laplace_transform/2/laplace_of_common_signals</a></p>
 <p><img alt="QR Code for this lecture" src="../../_images/qrcode_laplace_2.png" /></p>
+<p>In this unit, we will continue our introduction to the Laplace transform by presenting the transforms of the most commonly encoutered common signals. In the cases <a class="reference internal" href="#lap2-impulse"><span class="std std-ref">A. Unit impulse function \delta(t)</span></a>—<a class="reference internal" href="#lap2-exp"><span class="std std-ref">D. Exponential function x(t) = e^{-at}u_0(t)</span></a>, we will determine the transforms from the Laplace transform itself (see the OneNote Class Notebook and recording of the active session for these). For the remaining, we will present tables of transforms. We conclude by demonstrating that the Symbolic Math Toolbox “knows” these transforms.</p>
 <section id="agenda">
 <h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
@@ -940,7 +965,7 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="#lap2-unit-step"><span class="std std-ref">C. Unit step function u_0(t)</span></a></p></li>
 <li><p><a class="reference internal" href="#lap2-exp"><span class="std std-ref">D. Exponential function x(t) = e^{-at}u_0(t)</span></a></p></li>
 <li><p><span class="xref std std-ref">lap2:xform_table</span></p></li>
-<li><p><a class="reference internal" href="#lap2-matlab"><span class="std std-ref">G. MATLAB Examples</span></a></p></li>
+<li><p><a class="reference internal" href="#lap2-matlab"><span class="std std-ref">H. MATLAB Examples</span></a></p></li>
 </ul>
 </section>
 <section id="a-unit-impulse-function-delta-t">
@@ -1041,11 +1066,11 @@ title="Print to PDF"
 <li><p>Laplace transform <a class="reference external" href="https://en.wikipedia.org/wiki/Laplace_transform">(Wikipedia)</a></p></li>
 <li><p>Laplace Transform <a class="reference external" href="https://mathworld.wolfram.com/LaplaceTransform.html">(Wolfram Alpha)</a></p></li>
 </ul>
-<p>Every textbook that covers Laplace transforms will provide tables of properties (see <span class="xref std std-doc">laplace_transfer_properties</span>) and the most commonly encountered transforms. You will find such tables in  Tables 2.1 and 2.2 of <span id="id3">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> and Table 3.1 and Table 3.3 of <span id="id4">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
-<p>We reproduce Table 3.1 of <span id="id5">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span> below. You will find a table of Laplace transform properties in the next chapter.</p>
+<p>Every textbook that covers Laplace transforms will provide tables of properties (see <span class="xref std std-ref">laplace_transfer_properties</span>) and the most commonly encountered transforms. You will find such tables in  Tables 2.1 and 2.2 of <span id="id3">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> and Table 3.1 and Table 3.3 of <span id="id4">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>We reproduce Table 3.1 of <span id="id5">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span> in <span class="xref std std-ref">laplace_transform_table</span>. You will find a table of Laplace transform properties in <span class="xref std std-ref">laplace_table_of_props</span> in <a class="reference internal" href="../3/laplace_properties.html#unit4-3"><span class="std std-ref">Unit 4.3 Properties of the Laplace Transform</span></a>.</p>
 </section>
-<section id="f-transforms-of-common-signals">
-<span id="lap-xform-table"></span><h2>F. Transforms of Common Signals<a class="headerlink" href="#f-transforms-of-common-signals" title="Permalink to this headline">#</a></h2>
+<section id="g-laplace-tranforms-pairs-for-common-signals">
+<span id="lap-xform-table"></span><h2>G. Laplace tranforms pairs for common signals<a class="headerlink" href="#g-laplace-tranforms-pairs-for-common-signals" title="Permalink to this headline">#</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p> </p></th>
@@ -1133,8 +1158,8 @@ title="Print to PDF"
 <p>Tables of Laplace transform properties and transforms will be included with the exam paper.</p>
 </section>
 </section>
-<section id="g-matlab-examples">
-<span id="lap2-matlab"></span><h2>G. MATLAB Examples<a class="headerlink" href="#g-matlab-examples" title="Permalink to this headline">#</a></h2>
+<section id="h-matlab-examples">
+<span id="lap2-matlab"></span><h2>H. MATLAB Examples<a class="headerlink" href="#h-matlab-examples" title="Permalink to this headline">#</a></h2>
 <p>Let’s use the MATLAB Symbolic Math Toolbox to prove some of these transforms.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1401,14 +1426,32 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>lap2:homework</p>
 </section>
 </section>
-<section id="summary-and-takeaways">
-<h2>Summary and Takeaways<a class="headerlink" href="#summary-and-takeaways" title="Permalink to this headline">#</a></h2>
+<section id="homework">
+<h2>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">#</a></h2>
+<p>For week 5, you should complete <span class="xref std std-ref">ex:9.1</span> from <a class="reference internal" href="../1/laplace.html#unit4-1"><span class="std std-ref">Unit 4.1: The Laplace Transformation</span></a> and study Solved Problems 3.2—3.6 of <span id="id7">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>If you want more practice, try to solve Supplementary Problems 3.43—3.46 of <span id="id8">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+</section>
+<section id="summary">
+<span id="lap2-summary"></span><h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<p>In this unit, we continued our introduction to the Laplace transform by presenting the transforms of the most commonly encoutered common signals. The topucs covered were:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#lap2-impulse"><span class="std std-ref">A. Unit impulse function \delta(t)</span></a></p></li>
+<li><p><a class="reference internal" href="#lap2-delayed-impulse"><span class="std std-ref">B. Delayed impulse function \delta(t-a)</span></a></p></li>
+<li><p><a class="reference internal" href="#lap2-unit-step"><span class="std std-ref">C. Unit step function u_0(t)</span></a></p></li>
+<li><p><a class="reference internal" href="#lap2-exp"><span class="std std-ref">D. Exponential function x(t) = e^{-at}u_0(t)</span></a></p></li>
+<li><p><span class="xref std std-ref">lap2:xform_table</span></p></li>
+<li><p><a class="reference internal" href="#lap2-matlab"><span class="std std-ref">H. MATLAB Examples</span></a></p></li>
+</ul>
+<section id="takeaways">
+<h3>Takeaways<a class="headerlink" href="#takeaways" title="Permalink to this headline">#</a></h3>
 <p>It is relatively easy to use the one-sided integral to compute the Laplace transform of commonly used signals. and you would be expected to be able to do this for any of the cases illustrated in this section.</p>
-<p>In practice, we use tables of transform pairs <span class="math notranslate nohighlight">\(f(t)\Leftrightarrow F(s)\)</span>, such as that reproduced here in <a class="reference internal" href="#lap-xform-table"><span class="std std-ref">F. Transforms of Common Signals</span></a>.</p>
+<p>In practice, we use tables of transform pairs <span class="math notranslate nohighlight">\(f(t)\Leftrightarrow F(s)\)</span>, such as that reproduced here in <a class="reference internal" href="#lap-xform-table"><span class="std std-ref">G. Laplace tranforms pairs for common signals</span></a>.</p>
 <p>Such tables, or at least abstracts of such tables, will be provided in examinations and you will be provided with a copy of the <strong>Tables for Examination Use</strong> that will be used in this year’s assessment via Canvas so that you can familiarise yourself with the tables as you work through the examples and exercises to come.</p>
 <p>Integrals and Laplace transform pairs can easily be confirmed using the MATLAB Symbolic Math Toolbox functions <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">laplace</span></code>.</p>
+</section>
 </section>
 <section id="next-time">
 <h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
@@ -1419,12 +1462,12 @@ title="Print to PDF"
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id7">
+<div class="docutils container" id="id9">
 <dl class="citation">
-<dt class="label" id="id17"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id4">2</a>,<a href="#id5">3</a>)</span></dt>
+<dt class="label" id="id19"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id4">2</a>,<a href="#id5">3</a>,<a href="#id7">4</a>,<a href="#id8">5</a>)</span></dt>
 <dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
 </dd>
-<dt class="label" id="id13"><span class="brackets">Kar12</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id6">3</a>)</span></dt>
+<dt class="label" id="id15"><span class="brackets">Kar12</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id6">3</a>)</span></dt>
 <dd><p>Steven T. Karris. <em>Signals and systems with MATLAB computing and Simulink modeling</em>. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197">https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197</a>.</p>
 </dd>
 </dl>

@@ -27,7 +27,10 @@ Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/2/laplace
 
 +++ {"nbpresent": {"id": "f651cafb-8c2b-4d27-aec9-3491dbcce1aa"}, "slideshow": {"slide_type": "notes"}}
 
+In this unit, we will continue our introduction to the Laplace transform by presenting the transforms of the most commonly encoutered common signals. In the cases {ref}`lap2:impulse`&mdash;{ref}`lap2:exp`, we will determine the transforms from the Laplace transform itself (see the OneNote Class Notebook and recording of the active session for these). For the remaining, we will present tables of transforms. We conclude by demonstrating that the Symbolic Math Toolbox "knows" these transforms.
+
 ## Agenda
+
 
 * {ref}`lap2:impulse`
 
@@ -191,15 +194,14 @@ Here are a couple that are on the net for your reference
 * Laplace transform [(Wikipedia)](https://en.wikipedia.org/wiki/Laplace_transform)
 * Laplace Transform [(Wolfram Alpha)](https://mathworld.wolfram.com/LaplaceTransform.html)
 
-Every textbook that covers Laplace transforms will provide tables of properties (see {doc}`laplace_transfer_properties`) and the most commonly encountered transforms. You will find such tables in  Tables 2.1 and 2.2 of {cite}`karris` and Table 3.1 and Table 3.3 of {cite}`schaum`. 
+Every textbook that covers Laplace transforms will provide tables of properties (see {ref}`laplace_transfer_properties`) and the most commonly encountered transforms. You will find such tables in  Tables 2.1 and 2.2 of {cite}`karris` and Table 3.1 and Table 3.3 of {cite}`schaum`. 
 
-We reproduce Table 3.1 of {cite}`schaum` below. You will find a table of Laplace transform properties in the next chapter.
+We reproduce Table 3.1 of {cite}`schaum` in {ref}`laplace_transform_table`. You will find a table of Laplace transform properties in {ref}`laplace_table_of_props` in {ref}`unit4.3`.
 
 +++ {"nbpresent": {"id": "2a56e188-1891-420a-a66b-be808a1a11e2"}, "slideshow": {"slide_type": "slide"}}
 
 (lap:xform_table)=
-## F. Transforms of Common Signals
-
+## G. Laplace tranforms pairs for common signals
 
 | &nbsp;  | $f(t)$                                         | $F(s)$                                              | ROC |
 |---------|------------------------------------------------|-----------------------------------------------------|-----|
@@ -231,7 +233,7 @@ Tables of Laplace transform properties and transforms will be included with the 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (lap2:matlab)=
-## G. MATLAB Examples
+## H. MATLAB Examples
 
 Let's use the MATLAB Symbolic Math Toolbox to prove some of these transforms.
 
@@ -408,7 +410,33 @@ laplace(exp(-a*t)*sin(omega*t)*u0(t))
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-## Summary and Takeaways
+lap2:homework
+## Homework
+
+For week 5, you should complete {ref}`ex:9.1` from {ref}`unit4.1` and study Solved Problems 3.2&mdash;3.6 of {cite}`schaum`.
+
+If you want more practice, try to solve Supplementary Problems 3.43&mdash;3.46 of {cite}`schaum`.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+(lap2:summary)=
+## Summary
+
+In this unit, we continued our introduction to the Laplace transform by presenting the transforms of the most commonly encoutered common signals. The topucs covered were:
+
+* {ref}`lap2:impulse`
+
+* {ref}`lap2:delayed_impulse`
+
+* {ref}`lap2:unit_step`
+
+* {ref}`lap2:exp`
+
+* {ref}`lap2:xform_table`
+
+* {ref}`lap2:matlab`
+
+### Takeaways
 
 It is relatively easy to use the one-sided integral to compute the Laplace transform of commonly used signals. and you would be expected to be able to do this for any of the cases illustrated in this section.
 
