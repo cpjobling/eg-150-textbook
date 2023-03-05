@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Block Diagrams and System Simulation &#8212; EG-150 Signals and Systems</title>
+    <title>Unit 4.8: Computer-Aided Systems Analysis and Simulation &#8212; EG-150 Signals and Systems</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,9 +51,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/8/block_diagrams.html" />
+    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/8/casas.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Fourier Series" href="../../fourier_series/index.html" />
+    <link rel="prev" title="Unit 4.7: Transfer Functions for Circuit Analysis" href="../7/tf_for_circuits.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,7 +115,7 @@ const thebe_selector_output = ".output, .cell_output"
   Online notes
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../introduction/index.html">
    Unit 1 Introduction
@@ -205,16 +207,16 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../index.html">
    Unit 4 Laplace Transforms and their Applications
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../1/laplace.html">
      Unit 4.1 The Laplace Transformation
@@ -248,6 +250,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../7/tf_for_circuits.html">
      Unit 4.7 Transfer Functions for Circuit Analysis
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Unit 4.8 Computer-Aided Systems Analysis and Simulation
     </a>
    </li>
   </ul>
@@ -435,7 +442,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/laplace_transform/8/block_diagrams.md"
+        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/laplace_transform/8/casas.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -495,7 +502,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Flaplace_transform/8/block_diagrams.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Flaplace_transform/8/casas.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -512,7 +519,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/laplace_transform/8/block_diagrams.md"
+        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/laplace_transform/8/casas.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -540,7 +547,7 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/laplace_transform/8/block_diagrams.ipynb"
+        <a href="../../_sources/laplace_transform/8/casas.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -557,7 +564,7 @@ title="Download notebook file"
       </li>
       
       <li>
-        <a href="../../_sources/laplace_transform/8/block_diagrams.md"
+        <a href="../../_sources/laplace_transform/8/casas.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -606,7 +613,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Block Diagrams and System Simulation</h1>
+                <h1>Unit 4.8: Computer-Aided Systems Analysis and Simulation</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -618,8 +625,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="block-diagrams-and-system-simulation">
-<h1>Block Diagrams and System Simulation<a class="headerlink" href="#block-diagrams-and-system-simulation" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="unit-4-8-computer-aided-systems-analysis-and-simulation">
+<span id="unit4-8"></span><h1>Unit 4.8: Computer-Aided Systems Analysis and Simulation<a class="headerlink" href="#unit-4-8-computer-aided-systems-analysis-and-simulation" title="Permalink to this headline">#</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -649,6 +656,20 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../7/tf_for_circuits.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Unit 4.7: Transfer Functions for Circuit Analysis</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../fourier_series/index.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Fourier Series</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
