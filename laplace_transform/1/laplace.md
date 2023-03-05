@@ -27,6 +27,8 @@ Follow along at [cpjobling.github.io/eg-150-textbook//laplace_transform/1/laplac
 
 +++ {"nbpresent": {"id": "f651cafb-8c2b-4d27-aec9-3491dbcce1aa"}, "slideshow": {"slide_type": "notes"}}
 
+In this unit we will present the Laplace transform and look at some important properties that go with it.
+
 ## Agenda
 
 * {ref}`laplace:laplace`
@@ -493,12 +495,29 @@ Thus we obtain
 
 $$e^{at}u_0(-t) \Leftrightarrow\frac{1}{s-a}\quad\mathrm{Re}(s)\lt a$$
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
-(l1_summary)=
-## Summary and Takeaways
+(lap1:summary)=
+## Summary
 
-### The Laplace transform
+In this unit we presented the Laplace transform and look at some important properties that go with it. The following topics were covered:
+
+* {ref}`laplace:laplace`
+
+* {ref}`laplace:matlab`
+
+* {ref}`laplace:roc`
+
+* {ref}`laplace:pops_roc`
+
+* {ref}`laplace:pandz`
+
+* {ref}`laplace:examples`
+
+(unit4.1:takeaways)=
+### Takeaways
+
+#### The Laplace transform
 
 The Laplace transform of a continuous-time signal or system is defined as
 
@@ -514,7 +533,7 @@ Tunctions of time and their Laplace transforms are often presented using the *tr
 
 $$f(t)\Leftrightarrow F(s)$$
 
-### Region of convergence
+#### Region of convergence
 
 The Laplace transform exists only if the integral is finite or 
 
@@ -524,7 +543,7 @@ The region of the $s$-plane for which the Laplace transform is defined is called
 
 To be fully defined, the Laplace tranform of $f(t)$ needs to specify the ROC. But in practice, for the systems and signals we are concerned about, we often neglect the ROC - although it is usually quoted in tables.
 
-### Poles and zeros
+#### Poles and zeros
 
 For the signals and systems we are concerned about the Laplace transform takes the form of a rational polynomial in $s$ which has the general form
 
@@ -546,7 +565,7 @@ As we will see later, any function $F(s)$ that has this structure can be expende
 
 The structure of any $F(s)$ can be represented on the $s$-plane as a pole-zero map, and knowledge of the behaviour of the poles and the impact of the zeros allows us to reason about what the overal system response will look like. We will explore this later in the module and it will be an important topic of study in **EG-243 Control Systems** next year.
 
-### MATLAB
+#### MATLAB
 
 The Laplace transform is available in the MATLAB Symbolic Math Toolbox as function `laplace`. To use it we usually specify the values `t` and `s` as symbols:
 
@@ -586,7 +605,7 @@ and plot the pole-zero map
 slideshow:
   slide_type: notes
 ---
-Nx = [3 9]; Dx = conv([1 2],[1 2 3]) % coefficients in descending powers of s
+Nx = [3 9]; Dx = [1 4 7 6]; % coefficients in descending powers of s
 Zeros = roots(Nx)
 Poles = roots(Dx) % Note the roots are complex!
 K = 3
@@ -603,8 +622,4 @@ We move on to consider
 
 ```{bibliography}
 :filter: docname in docnames
-```
-
-```{code-cell}
-
 ```

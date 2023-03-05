@@ -15,7 +15,7 @@ kernelspec:
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (unit4.7)=
-# Transfer Functions for Circuit Analysis
+# Unit 4.7: Transfer Functions for Circuit Analysis
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -70,7 +70,7 @@ Applying the {ref}`lap3:conv` property, we obtain
 
 $$Y(s) = X(s)H(s)$$ (eq:336)
 
-where $Y(s)$, $X(s)$, and $H(s)$ are the Laplace transforms of $y(t)$, $x(t)$, and $h(t)$, respectively. 
+where $Y(s)$, $X(s)$, and $H(s)$ are the Laplace transforms of $y(t)$, $x(t)$, and $h(t)$, respectively.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -88,7 +88,7 @@ By {eq}`eq:337`, the transfer function $H(s)$ can also be defined as the ratio o
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-The transfer function $H(s)$ completely characterizes the system because the impulse response $h(t)$ completely characterizes the system. 
+The transfer function $H(s)$ completely characterizes the system because the impulse response $h(t)$ completely characterizes the system.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 

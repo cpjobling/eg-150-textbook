@@ -44,10 +44,10 @@ We will explore the use of MATLAB to solve inverse Laplace tranforms in MATLAB L
 ## Agenda
 
 * {ref}`ilap:defn`
-* {ref}`case:complex_poles`
 * {ref}`ilap:pfe`
 * {ref}`ilap_by_pfe`
 * {ref}`ilap:distinct_real_poles`
+* {ref}`case:complex_poles`
 * {ref}`ilap:repeated_poles`
 * {ref}`ilap:improper`
 * {ref}`examples11`
@@ -73,7 +73,7 @@ For most engineering problems we can instead refer to **Tables of Properties** a
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(ilap:pfe}=
+(ilap:pfe)=
 ## Partial Fraction Expansion
 
 Quite often the Laplace Transform we start off with is a *rational polynomial* in $s$.
@@ -474,7 +474,7 @@ Then comparing this with the desired form $(s + a)^2 + \omega^2$, we have $a = 2
 
 To solve this, we need to find the PFE for the assumed solution:
 
-$$F_3(s) = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 2^2} + r_3\frac{s + 2}{(s + 2)^2 + 2^2}  $$ (pfe1)
+$$F_3(s) = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 2^2} + r_3\frac{s + 2}{(s + 2)^2 + 2^2}  $$ (pfe2)
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -486,7 +486,7 @@ $$\frac{s + 3}{(s+1)(s^2 + 4s + 8)} = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 
 
 putting both sides on a common denominator, 
 
-$$\frac{s+3}{(s+1)(s^2 + 4s + 8)} = \frac{(2/5)(s^2 + 4s + 8) + r_2(s + 1) + r_3(s + 1)(s + 2)}{(s+1)(s^2 + 4s + 8)}$$
+$$\frac{s+3}{(s+1)(s^2 + 4s + 8)} = \frac{(2/5)(s^2 + 4s + 8) + r_2(s + 1) + r_3(s + 1)(s + 2)}{(s+1)(s^2 + 4s + 8)}$$ (pfe4)
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -502,7 +502,7 @@ The completion of this problem is left as a *homework exercise* for the student.
 
 The solution should be:
 
-$$f_3(t) = \frac{2}{5}e^{-t} + \frac{3}{10} e^{-2t}\sin 2t - \frac{2}{5} e^{-2t}\cos 2t $$ (pfe4)
+$$f_3(t) = \frac{2}{5}e^{-t} + \frac{3}{10} e^{-2t}\sin 2t - \frac{2}{5} e^{-2t}\cos 2t $$ (pfe5)
 
 You can use trig. identities to simplify this further if you wish.
 
@@ -670,12 +670,13 @@ Complete {ref}`ex:11.3` to confirm the result {eq}`pfe4`. Then do the end of the
 In this section we have looked at the inverse Laplace transform. In particular, how to solve continuous-time LTI system problems that take the form of rational polynomials in $s$. 
 
 * {ref}`ilap:defn`
-* {ref}`case:complex_poles`
 * {ref}`ilap:pfe`
 * {ref}`ilap_by_pfe`
 * {ref}`ilap:distinct_real_poles`
+* {ref}`case:complex_poles`
 * {ref}`ilap:repeated_poles`
 * {ref}`ilap:improper`
+* {ref}`examples11`
 
 ## Take Aways
 

@@ -19,7 +19,7 @@ kernelspec:
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-The preparatory reading for this section is [Chapter 4.4](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=75#ppg=113) {cite}`karris` which discusses transfer function models of electrical circuits. We have also adapted content from [3.6 The System Function](https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section28) from {cite}`schaum`.
+The preparatory reading for this section is [3.6 The System Function](https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section28) from {cite}`schaum`.
 
 +++
 
@@ -347,7 +347,7 @@ We will do some problems from these sets in Examples Class 4.
 ### Supplementary Problems
 Supplementary problems 3.52-3.55 in {cite}`schaum` are related to the content covered in this unit.
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Summary
 
@@ -362,6 +362,9 @@ In this unit we have presented the idea of a *transfer function* (or *system fun
 * {ref}`block_diagrams`
 
 * {ref}`examples13`
+
+**My main message to you is that, as an engineer faced with a LCCODE to solve, you should use Laplace transforms!**
+
 
 ### Take Aways
 
@@ -393,11 +396,10 @@ and taking inverse Laplace transforms using the Partial Fraction Expansion metho
 
 Several examples are given in {ref}`examples12` in which the problems given in {ref}`examples8` of {ref}`unit3.3` are redone as Laplace transform problems. 
 
-My main message to you is that, as an engineer faced with a LCCODE to solve, you should use Laplace transforms!
 
 #### Block diagrams
 
-Complex systems can be broken down into subsystems which may be represented by block diagrams which have either series or parallel connections (see {numref}`Fig:3-8` and {numref}`Fig:3-9` and feedback (See {ref}`ex"13.8`)
+Complex systems can be broken down into subsystems which may be represented by block diagrams which have either series or parallel connections (see {numref}`Fig:3-8` and {numref}`Fig:3-9` and feedback (See {ref}`ex:13.8`)
 
 
 ### Still to come

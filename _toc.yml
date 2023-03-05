@@ -52,7 +52,7 @@ parts:
       title: Unit 4.6 Transfer Functions
     - file: laplace_transform/7/tf_for_circuits
       title: Unit 4.7 Transfer Functions for Circuit Analysis
-    - file: laplace_transform/8/matlab
+    - file: laplace_transform/8/casas
       title: Unit 4.8 Computer-Aided Systems Analysis and Simulation 
   - file: fourier_series/index
     title: Fourier Series

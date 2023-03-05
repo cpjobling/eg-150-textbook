@@ -82,7 +82,7 @@ In this section of the course we will cover:
 * {ref}`unit4.2`
 * {ref}`unit4.3`
 * {ref}`unit4.4`
-* Using Laplace Transforms for Circuit Analysis
-* Transfer Functions
-* Block Diagram Analysis
-* System Simulation
+* {ref}`unit4.5`
+* {ref}`unit4.6`
+* {ref}`unit4.7`
+* {ref}`unit4.8`
