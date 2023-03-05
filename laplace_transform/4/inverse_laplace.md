@@ -44,10 +44,10 @@ We will explore the use of MATLAB to solve inverse Laplace tranforms in MATLAB L
 ## Agenda
 
 * {ref}`ilap:defn`
-* {ref}`case:complex_poles`
 * {ref}`ilap:pfe`
 * {ref}`ilap_by_pfe`
 * {ref}`ilap:distinct_real_poles`
+* {ref}`case:complex_poles`
 * {ref}`ilap:repeated_poles`
 * {ref}`ilap:improper`
 * {ref}`examples11`
@@ -670,12 +670,13 @@ Complete {ref}`ex:11.3` to confirm the result {eq}`pfe4`. Then do the end of the
 In this section we have looked at the inverse Laplace transform. In particular, how to solve continuous-time LTI system problems that take the form of rational polynomials in $s$. 
 
 * {ref}`ilap:defn`
-* {ref}`case:complex_poles`
 * {ref}`ilap:pfe`
 * {ref}`ilap_by_pfe`
 * {ref}`ilap:distinct_real_poles`
+* {ref}`case:complex_poles`
 * {ref}`ilap:repeated_poles`
 * {ref}`ilap:improper`
+* {ref}`examples11`
 
 ## Take Aways
 
