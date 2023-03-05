@@ -14,836 +14,408 @@ kernelspec:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-# Transfer Functions
+(unit4.6)=
+# Unit 4.6: Transfer Functions
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-The preparatory reading for this section is [Chapter 4.4](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=75#ppg=113) {cite}`karris` which discusses transfer function models of electrical circuits.
+The preparatory reading for this section is [Chapter 4.4](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=75#ppg=113) {cite}`karris` which discusses transfer function models of electrical circuits. We have also adapted content from [3.6 The System Function](https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section28) from {cite}`schaum`.
+
++++
+
+Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/6/transfer_functions](https://cpjobling.github.io/eg-150-textbook/laplace_transform/6/transfer_functions)
+
+![QR Code for this lecture](pictures/qrcode_laplace6.png)
 
 +++ {"slideshow": {"slide_type": "notes"}}
-
-## Colophon
-
-
-An annotatable worksheet for this presentation is available as [**Worksheet 7**](https://cpjobling.github.io/eg-247-textbook/laplace_transform/4/worksheet7.html).
-
-* The source code for this page is [laplace_transform/4/transfer_functions.ipynb](https://github.com/cpjobling/eg-247-textbook/blob/master/laplace_transform/4/transfer_functions.ipynb).
-
-* You can view the notes for this presentation as a webpage ([HTML](https://cpjobling.github.io/eg-247-textbook/laplace_transform/4/transfer_functions.html)). 
-
-* This page is downloadable as a [PDF](https://cpjobling.github.io/eg-247-textbook/laplace_transform/4/transfer_functions.pdf) file.
-
-+++ {"slideshow": {"slide_type": "slide"}}
 
 ## Agenda
 
-+++ {"slideshow": {"slide_type": "fragment"}}
+* {ref}`system_function`
 
-* Transfer Functions
+* {ref}`char_LTI_systems`
 
-+++ {"slideshow": {"slide_type": "fragment"}}
+* {ref}`tf_for_LCCODE`
 
-* A Couple of Examples
+* {ref}`block_diagrams`
 
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-* Circuit Analysis Using MATLAB LTI Transfer Function Block
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-* Circuit Simulation Using Simulink Transfer Function Block
-
-```{code-cell}
----
-slideshow:
-  slide_type: skip
----
-% Matlab setup
-clear all
-cd ../matlab 
-pwd
-format compact
-```
+* {ref}`examples13`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Transfer Functions for Circuits
+(system_function)=
+## The Transfer Function
 
-When doing circuit analysis with components defined in the complex frequency domain, the ratio of the output voltage $V_{\mathrm{out}}(s)$ to the input voltage $V_{\mathrm{in}}(s)$ *under zero initial conditions* is of great interest.
+In {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral` we showed that the output $y(t)$ of a continuous-time LTI system equals the convolution of the input $x(t)$ with the impulse response $h(t)$; that is,
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-This ratio is known as the *voltage transfer function* denoted $G_v(s)$:
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-$$G_v(s) = \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)}$$
+$$y(t) = x(t) * h(t)$$ (eq:335)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Similarly, the ratio of the output current $I_{\mathrm{out}}(s)$ to the input current $I_{\mathrm{in}}(s)$ *under zero initial conditions*, is called the *cuurent transfer function* denoted $G_i(s)$:
+Applying the {ref}`lap3:conv` property, we obtain
+
+$$Y(s) = X(s)H(s)$$ (eq:336)
+
+where $Y(s)$, $X(s)$, and $H(s)$ are the Laplace transforms of $y(t)$, $x(t)$, and $h(t)$, respectively.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-$$G_i(s) = \frac{I_{\mathrm{out}}(s)}{I_{\mathrm{in}}(s)}$$
+Equation {eq}`eq:336` can be expressed as
+
+$$H(s) = \frac{Y(s)}{X(s)}$$ (eq:337)
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+The laplace transform $H(s)$ of $h(t)$ is called the *transfer function* (or *system function*) of the system.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+By {eq}`eq:337`, the transfer function $H(s)$ can also be defined as the ratio of the Laplace transforms of the output $y(t)$ and the input $x(t)$.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+The transfer function $H(s)$ completely characterizes the system because the impulse response $h(t)$ completely characterizes the system.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+{numref}`fig:3-7` illustrates the relationship of Equations {ex}`eq:335` and {ex}`eq:336`.
+
+:::{figure-md} fig:3-7
+<img src="pictures/system_function.png" alt="Impulse response and system function." width="60%">
+
+Impulse response and system function
+:::
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-In practice, the current transfer function is rarely used, so we will use the voltage transfer function denoted:
+(char_LTI_systems)=
+## Characterization of LTI Systems
 
-$$G(s) = \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)}$$
+```{note}
+This section is for reference only and is not examinable.
+```
+
+Many properties of continuous-time LTI systems can be closely associated with the characteristics of $H(s)$ in the $s$-plane and in particular with the pole locations and the region of convergence (ROC).
+
+(hs_casuality)=
+### Causality
+
+Fot a causal continuous-time LTI system, we have
+
+$$h(t) = 0\qquad t<0$$
+
+Since $h(t)$ is a right-sided signal, the corresponding requirement on $H(s)$ is that the ROC of $H(s)$ must be of the form
+
+$$\mathrm{Re}(s) > \sigma_\mathrm{max}$$
+
+That is, the ROC is the region in the $s$-plane to the right of all the system poles. Similarly, if the system is anticausal, then
+
+$$h(t) = 0\qquad t>0$$
+
+and $h(t)$ is left-sided. Thus, the ROC of $H(s)$ must be of the form 
+
+$$\mathrm{Re}(s) < \sigma_\mathrm{max}$$
+
+That is, the ROC is the region in the $s$-plane to the left of all the system poles.
+
+(hs_stability)=
+### Stability
+
+In {ref}`c_Stability` we stated that a continuous-time LTI system is BIBO stable if and only if [Eq. {eq}`eq:221`]
+
+$$\int_{-\infty}^{\infty}\left|h(\tau)\right|\,d\tau \lt \infty$$
+
+The corresponding requirement on $H(s)$ is that the ROC of $H(s)$ contains the $j\omega$ axis (that is $s = j\omega). This is key result, proved in Prob. 3.26 in {ref}`schaum`, that is fundamental to systems and control theory. 
+
+(hs_causal_and_stable)=
+### Causal and stable systems
+If a system is both causal and stable then all the poles must be in the left-half of the $s$-plane: that is they all have negative real parts because the ROC is of the form $\mathrm{Re}(s) > \sigma_\mathrm{max}$ and since the $j\omega$ axis is included in the ROC, we must have $\sigma_\mathrm{max} < 0$.
+
+The conditions for which the closed-loop poles in continuous-time LTI systems with feedback are stable is a key underlyting principle of the control theory to be studied in **EG-243 Control Systems** next year.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Examples
+(tf_for_LCCODE)=
 
-See [Worksheet 7](worksheet7) for the worked solutions to the examples. We will work through these in class. Here I'll demonstrate the MATLAB solutions.
+## Transfer functions for LTI system described by Linear Constant-Coefficient Ordinary Differential Equations
 
-+++ {"slideshow": {"slide_type": "subslide"}}
+In {ref}`Systems_Described_by_Differential_Equations` we considered a continuous-time LTI systemfor which input $x(t)$ and output $y(t)$ satisfy the general linear constant-coefficient ordinary differential equation (LCCODE) of the form
 
-### Example 6
-
-Derive an expression for the transfer function $G(s)$ for the circuit below. In this circuit $R_g$ represents the internal resistance of the applied (voltage) source $v_s$, and $R_L$ represents the resistance of the load that consists of $R_L$, $L$ and $C$.
+$$\sum_{k=0}^N a_k \frac{d^k}{dt^k} y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)$$ (eq:338)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-<img title="Circuit for Example 6" src="pictures/example6.png" width="50%" />
+Applying the Laplace transform and using the {ref}`lap:diff_prop` of the Laplace transform, we obtain
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### Sketch of Solution
+$$\sum_{k=0}^N a_k s^k Y(s)=\sum_{k=0}^M b_k s^k X(s)$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-* Replace $v_s(t)$, $R_g$, $R_L$, $L$ and $C$ by their transformed (*complex frequency*) equivalents: $V_s(s)$, $R_g$, $R_L$, $sL$ and $1/(sC)$
+or
 
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-* Use the *Voltage Divider Rule* to determine $V_\mathrm{out}(s)$ as a function of $V_s(s)$
+$$Y(s) \sum_{k=0}^N a_k s^k = X(s) \sum_{k=0}^M b_k s^k $$ (eq:339)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-* Form $G(s)$ by writing down the ratio $V_\mathrm{out}(s)/V_s(s)$
+Thus,
+
+$$H(s) = \frac{Y(s)}{X(s)} = \frac{\displaystyle \sum_{k=0}^M b_k s^k}{\displaystyle\sum_{k=0}^N a_k s^k}$$ (eq:340)
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Expanding {eq}`eq:340`, $H(s)$ can be written in the more familiar form
+
+$$H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}$$ (eq:341)
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Hence, $H(s)$ is always a rational polynomial in $s$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-### Worked solution.
-
-Pencast: [ex6.pdf](https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/ex6.pdf) - open in Adobe Acrobat Reader.
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### Answer
-
-$$G(s) = \frac{V_\mathrm{out}(s)}{V_s(s)} = \frac{R_L + sL + 1/sC}{R_g + R_L + sL + 1/sC}.$$
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### Example 7
-
-Compute the transfer function for the op-amp circuit shown below in terms of the circuit constants $R_1$, $R_2$, $R_3$, $C_1$ and $C_2$.
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-<img alt="Circuit for Example 7" src="pictures/example7.png" width="50%" />
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-Then replace the complex variable $s$ with $j\omega$, and the circuit constants with their numerical values and plot the magnitude
-
-$$\left|G(j\omega)\right| = \frac{\left|V_{\mathrm{out}}(j\omega)\right|}{\left|V_{\mathrm{in}}(j\omega)\right|}$$
-
-versus radian frequency $\omega$ rad/s.
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### Sketch of Solution
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-* Replace the components and voltages in the circuit diagram with their complex frequency equivalents
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-* Use nodal analysis to determine the voltages at the nodes either side of the 50K resistor $R_3$
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-* Note that the voltage at the input to the op-amp is a virtual ground
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-* Solve for $V_{\mathrm{out}}(s)$ as a function of $V_{\mathrm{in}}(s)$
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-* Form the reciprocal $G(s) = V_{\mathrm{out}}(s)/V_{\mathrm{in}}(s)$
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-* Use MATLAB to calculate the component values, then replace $s$ by $j\omega$.
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-* Plot on log-linear "paper":
-
-$$\left|G(j\omega)\right|$$
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-### Worked solution.
-
-Pencast: [ex7.pdf](https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/ex7.pdf) - open in Adobe Acrobat Reader.
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### Answer
-
-$$G(s) = \frac{V_\mathrm{out}(s)}{V_\mathrm{in}(s)} = \frac{-1}{R_1\left(\left(1/R_1 + 1/R_2 + 1/R_3 + sC_1\right)\left(sC_2R_3\right)+1/R_2\right)}.$$
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### The Matlab Bit
-
-See attached script: [solution7.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution7.m).
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-#### Week 3: Solution 7
-
-```{code-cell}
----
-slideshow:
-  slide_type: fragment
----
-syms s;
-```
-
-```{code-cell}
----
-slideshow:
-  slide_type: subslide
----
-R1 = 200*10^3; 
-R2 = 40*10^3;
-R3 = 50*10^3;
-
-C1 = 25*10^(-9);
-C2 = 10*10^(-9);
-```
-
-```{code-cell}
----
-slideshow:
-  slide_type: subslide
----
-den = R1*((1/R1+ 1/R2 + 1/R3 + s*C1)*(s*R3*C2) + 1/R2);
-simplify(den)
-```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-Simplify coefficients of s in denominator
-
-```{code-cell}
----
-slideshow:
-  slide_type: subslide
----
-format long
-denG = sym2poly(ans)
-```
-
-```{code-cell}
----
-slideshow:
-  slide_type: subslide
----
-numG = -1;
-```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-Plot
-
-For convenience, define coefficients $a$ and $b$:
-
-```{code-cell}
----
-slideshow:
-  slide_type: fragment
----
-a = denG(1);
-b = denG(2);
-```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-$$G(j\omega) = \frac{-1}{a\omega^2 - jb\omega + 5}$$
-
-```{code-cell}
----
-slideshow:
-  slide_type: fragment
----
-w = 1:10:10000;
-Gs = -1./(a*w.^2 - j.*b.*w + denG(3));
-```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-Plot
-
-```{code-cell}
----
-slideshow:
-  slide_type: fragment
----
-semilogx(w, abs(Gs))
-xlabel('Radian frequency w (rad/s')
-ylabel('|Vout/Vin|')
-title('Magnitude Vout/Vin vs. Radian Frequency')
-grid
-```
+Note the ROC of $H(s)$ is not specified by {eq}`eq:340` but must be inferred with additional requirements on the system such as causality and stability.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Using Transfer Functions in MATLAB for System Analysis
+(block_diagrams)=
+## Block diagrams for Systems Interconnection
 
-Please use the file [tf_matlab.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/tf_matlab.m) to explore the Transfer Function features provide by MATLAB. Open the file as a Live Script to see a nicely formatted document.
+For two LTI systems (with $h_1(t)$ and $h_2(t)$, respectively) in cascade ({numref}`Fig:3-8`(a)), the overall impulse response is given
+
+$$h(t) = h_1(t) * h_2(t)$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Thus, the corresponding transfer functions are related by the product
+
+$$H(s) = H_1(s)H_2(s)$$ (eq:341)
+
+This relationship is illustrated in {numref}`Fig:3-8`(b)
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+:::{figure-md} Fig:3-8
+<img src="pictures/bd1.png" alt="Two systems in cascade (a) Time-domain representation; (b) s-domain presentation." width="70%">
+
+Two systems in cascade (a) Time-domain representation; (b) s-domain representation.
+:::
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Similarly, the impulse response of a parallel combination of two LTI systems ({numref}`Fig:3-9`(a)) is given by 
+
+$$h(t) = h_1(t) + h_2(t)$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Thus,
+
+$$H(s) = H_1(s) + H_2(s)$$ (eq:342)
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+This relationship is illustrated in {numref}`Fig:3-9`(b).
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+:::{figure-md} Fig:3-9
+<img src="pictures/bd2.png" alt="Two systems in parallel. (a) Time-domain representation; (b) s-domain representation." width="70%">
+
+Two systems in parallel. (a) Time-domain representation; (b) s-domain representation.
+:::
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Using Transfer Functions in Simulink for System Simulation
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-![Using Transfer Functions in Simulink for System Simulation](pictures/sim_tf.png)
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-The Simulink transfer function (**`Transfer Fcn`**) block implements a transfer function
+(examples13)=
+## Examples 13: Transfer functions
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-The transfer function block represents a general input output function
+(ex:13.1)=
 
-$$G(s) = \frac{N(s)}{D(s)}$$
+### Example 13.1
 
-and is not specific nor restricted to circuit analysis.
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-It can, however be used in modelling and simulation studies.
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### Example
-
-Recast Example 7 as a MATLAB problem using the LTI Transfer Function block. 
-
-For simplicity use parameters $R_1 = R_2 = R_3 = 1\; \Omega$, and $C_1 = C_2 = 1$ F.
-
-Calculate the step response using the LTI functions.
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-Verify the result with Simulink.
-
-The Matlab solution: [example8.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/example8.m)
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-#### MATLAB Solution
-From a previous analysis the transfer function is:
-
-$$G(s) = \frac{V_\mathrm{out}}{V_\mathrm{in}} = \frac{-1}{R_1\left[(1/R_1 + 1/R_2 + 1/R_3 + sC_1)(sR_3C_2) + 1/R_2\right]}$$
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-so substituting the component values we get:
-
-$$G(s) = \frac{V_{\mathrm{out}}}{V_{\mathrm{in}}} = \frac{-1}{s^2 + 3s + 1}$$
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-We can find the step response by letting $v_{\mathrm{in}}(t) = u_0(t)$ so that
-$V_{\mathrm{in}}(s)=1/s$ then 
-
-$$V_{\mathrm{out}}(s) = \frac{-1}{s^2 + 3s + 1}.\frac{1}{s}$$
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-We can solve this by partial fraction expansion and inverse Laplace transform
-as is done in the text book with the help of MATLAB's `residue` function.
-
-Here, however we'll use the LTI block.
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-Define the circuit as a transfer function
-
-```{code-cell}
----
-slideshow:
-  slide_type: fragment
----
-G = tf([-1],[1 3 1])
-```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-step response is then:
-
-```{code-cell}
----
-slideshow:
-  slide_type: fragment
----
-step(G)
-```
+Find the transfer function $H(s)$ and the impulse reponse $h(t)$ of the RC circuit in {numref}`fig:rc_circuit` ({ref}`ex4.1`).
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Simples!
+For the answer, refer to the lecture recording or see solved problem 3.23 in in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### Simulink model
+(ex:13.2)=
+### Example 13.2
 
-See [example_8.slx](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/example_8.slx)
-
-```{code-cell}
----
-slideshow:
-  slide_type: fragment
----
-open example_8
-```
+Use the Laplace transform to redo {ref}`ex5_5`.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-![Simulink model](pictures/ex8_sim.png)
+For the answer, refer to the lecture recording or see solved problem 3.24 in in {cite}`schaum`.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex:13.3)=
+### Example 13.3
+
+The output $y(t)$ of a continuous-time LTI system is found to be $2e^{-3t}u_0(t)$ when the input $x(t)$ is $u_0(t)$.
+
+a). Find the impulse response $h(t)$ of the system.
+
+b). Find the output $y(t)$ when the input is $e^{-t}u_0(t)$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Result
-
-![Simulation result](pictures/ex8_sim_result.png)
+For the answer, refer to the lecture recording or see solved problem 3.25 in in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Let's go a bit further by finding the frequency response:
+(ex:13.4)=
+### Example 13.4
 
-```{code-cell}
----
-slideshow:
-  slide_type: subslide
----
-bode(G)
-```
-
-## Reference 
-
-See [Bibliography](/zbib).
-
-## Agenda
-
-* Transfer Functions
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-* A Couple of Examples
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-* Circuit Analysis Using MATLAB LTI Transfer Function Block
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-* Circuit Simulation Using Simulink Transfer Function Block
-
-```{code-cell}
----
-slideshow:
-  slide_type: skip
-tags: [remove-output]
----
-% Matlab setup
-clear all
-cd ../matlab 
-pwd
-format compact
-```
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Transfer Functions for Circuits
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### Example 6
-
-Derive an expression for the transfer function $G(s)$ for the circuit below. In this circuit $R_g$ represents the internal resistance of the applied (voltage) source $v_s$, and $R_L$ represents the resistance of the load that consists of $R_L$, $L$ and $C$.
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-<img title="Circuit for Example 6" src="pictures/example6.png" width="50%" />
+Use the Laplace transform to redo {ref}`ex6_6`.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
+For the answer, refer to the lecture recording or see solved problem 3.27 in in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Sketch of Solution for Example 6
+(ex:13.5)=
+### Example 13.5
 
-* Replace $v_s(t)$, $R_g$, $R_L$, $L$ and $C$ by their transformed (*complex frequency*) equivalents: $V_s(s)$, $R_g$, $R_L$, $sL$ and $1/(sC)$
-* Use the *Voltage Divider Rule* to determine $V_\mathrm{out}(s)$ as a function of $V_s(s)$ 
-* Form $G(s)$ by writing down the ratio $V_\mathrm{out}(s)/V_s(s)$
+Use the Laplace transform to redo {ref}`ex8_6`.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-### Worked solution for Example 6
-
-Pencast: [ex6.pdf](https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/ex6.pdf) - open in Adobe Acrobat Reader.
+For the answer, refer to the lecture recording or see solved problem 3.28 in in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Answer for Example 6
+(ex:13.6)=
+### Example 13.6
 
-$$G(s) = \frac{V_\mathrm{out}(s)}{V_s(s)} = \frac{R_L + sL + 1/sC}{R_g + R_L + sL + 1/sC}.$$
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### Example 7
-
-Compute the transfer function for the op-amp circuit shown below in terms of the circuit constants $R_1$, $R_2$, $R_3$, $C_1$ and $C_2$. Then replace the complex variable $s$ with $j\omega$, and the circuit constants with their numerical values and plot the magnitude
-
-$$\left|G(j\omega)\right| = \frac{\left|V_{\mathrm{out}}(j\omega)\right|}{\left|V_{\mathrm{in}}(j\omega)\right|}$$
-
-versus radian frequency $\omega$ rad/s.
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-<img alt="Circuit for Example 7" src="pictures/example7.png" height="50%" />
+Use the Laplace transform to redo {ref}`ex8_8`.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
+For the answer, refer to the lecture recording or see solved problem 3.29 in in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Sketch of Solution for Example 7
+(ex:13.7)=
+### Example 13.7
 
-* Replace the components and voltages in the circuit diagram with their complex frequency equivalents
-* Use nodal analysis to determine the voltages at the nodes either side of the 50K resistor $R_3$
-* Note that the voltage at the input to the op-amp is a virtual ground
-* Solve for $V_{\mathrm{out}}(s)$ as a function of $V_{\mathrm{in}}(s)$
-* Form the reciprocal $G(s) = V_{\mathrm{out}}(s)/V_{\mathrm{in}}(s)$
-* Use MATLAB to calculate the component values, then replace $s$ by $j\omega$.
-* Plot 
-    $$\left|G(j\omega)\right|$$
-  on log-linear "paper".
+Consider a continuous-time LTI system for which the input $x(t)$ and output $y(t)$ are related by
+
+$$\frac{d^2 y(t)}{dt^2} + \frac{dy(t)}{dt} - 2y(t) = x(t)$$ (eq:386)
+
+a) Find the transfer function $H(s)$
+
+b) Find the impulse response $h(t)$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-### Worked solution for Example 7
-
-Pencast: [ex7.pdf](https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/ex7.pdf) - open in Adobe Acrobat Reader.
+For the answer, refer to the lecture recording or see solved problem 3.30 in in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Answer for Example 7
+(ex:13.8)=
+### Example 13.8
 
-$$G(s) = \frac{V_\mathrm{out}(s)}{V_\mathrm{in}(s)} = \frac{-1}{R_1\left(\left(1/R_1 + 1/R_2 + 1/R_3 + sC_1\right)\left(sC_2R_3\right)+1/R_2\right)}.$$
+The feedback interconnection of two causal subsytems with transfer functions $F(s)$ and $G(s)$ is shown in {numref}`fig:ex13.8`. Find the overall system function $H(s)$ for this feedback system.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
+:::{figure-md} fig:ex13.8
+<img src="pictures/figex13_8.png" alt="Feedback system" width="50%">
 
-### The Matlab Bit
-
-See attached script: [solution7.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution7.m).
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-#### Week 3: Solution 7
-
-```{code-cell}
----
-slideshow:
-  slide_type: fragment
-tags: [remove-output]
----
-syms s;
-```
-
-```{code-cell}
----
-slideshow:
-  slide_type: subslide
-tags: [remove-output]
----
-R1 = 200*10^3; % 200 kOhm 
-R2 = 40*10^3; % 40 kOhm
-R3 = 50*10^3; % 50 kOhm
-
-C1 = 25*10^(-9); % 25 nF
-C2 = 10*10^(-9); % 10 nF
-```
-
-```{code-cell}
----
-slideshow:
-  slide_type: subslide
-tags: [remove-output]
----
-den = R1*((1/R1+ 1/R2 + 1/R3 + s*C1)*(s*R3*C2) + 1/R2);
-simplify(den)
-```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-Result is: `100*s*((7555786372591433*s)/302231454903657293676544 + 1/20000) + 5`
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-Simplify coefficients of s in denominator
-
-```{code-cell}
----
-slideshow:
-  slide_type: subslide
-tags: [remove-output]
----
-format long
-denG = sym2poly(ans)
-```
-
-```{code-cell}
----
-slideshow:
-  slide_type: subslide
-tags: [remove-output]
----
-numG = -1;
-```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-Plot
-
-For convenience, define coefficients $a$ and $b$:
-
-```{code-cell}
-:tags: [remove-output]
-
-a = denG(1);
-b = denG(2);
-```
-
-```{code-cell}
----
-slideshow:
-  slide_type: subslide
-tags: [remove-output]
----
-w = 1:10:10000;
-```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-$$G(j\omega) = \frac{-1}{a\omega^2 - jb\omega + 5}$$
-
-```{code-cell}
----
-slideshow:
-  slide_type: subslide
-tags: [remove-output]
----
-Gw = -1./(a*w.^2 - j.*b.*w + denG(3));
-```
-
-```{code-cell}
----
-slideshow:
-  slide_type: subslide
-tags: [remove-output]
----
-semilogx(w, abs(Gw))
-xlabel('Radian frequency w (rad/s)')
-ylabel('|Vout/Vin|')
-title('Magnitude Vout/Vin vs. Radian Frequency')
-grid
-```
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Using Transfer Functions in Matlab for System Analysis
-
-Please use the file [tf_matlab.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/tf_matlab.m) to explore the Transfer Function features provide by Matlab. Use the *publish* option to generate a nicely formatted document.
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Using Transfer Functions in Simulink for System Simulation
-
-![Using Transfer Functions in Simulink for System Simulation](pictures/sim_tf.png)
-
-The Simulink transfer function (**`Transfer Fcn`**) block shown above implements a transfer function representing a general
-input output function
-
-$$G(s) = \frac{N(s)}{D(s)}$$
-
-that it is not specific nor restricted to circuit analysis. It can, however be used in modelling and simulation studies.
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### Example
-
-Recast Example 7 as a MATLAB problem using the LTI Transfer Function block. 
-
-For simplicity use parameters $R_1 = R_2 = R_3 = 1\; \Omega$, and $C_1 = C_2 = 1$ F.
-
-Calculate the step response using the LTI functions.
-
-Verify the result with Simulink.
-
-The Matlab solution: [example8.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/example8.m)
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-#### MATLAB Solution
-From a previous analysis the transfer function is:
-
-$$G(s) = \frac{V_\mathrm{out}}{V_\mathrm{in}} = \frac{-1}{R_1\left[(1/R_1 + 1/R_2 + 1/R_3 + sC_1)(sR_3C_2) + 1/R_2\right]}$$
-
-so substituting the component values we get:
-
-$$G(s) = \frac{V_{\mathrm{out}}}{V_{\mathrm{in}}} = \frac{-1}{s^2 + 3s + 1}$$
-
-We can find the step response by letting $v_{\mathrm{in}}(t) = u_0(t)$ so that
-$V_{\mathrm{in}}(s)=1/s$ then 
-
-$$V_{\mathrm{out}}(s) = \frac{-1}{s^2 + 3s + 1}.\frac{1}{s}$$
- 
-We can solve this by partial fraction expansion and inverse Laplace transform
-as is done in the text book with the help of Matlab's `residue` function.
-
-Here, however we'll use the LTI block that was introduced in the lecture.
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-Define the circuit as a transfer function
-
-```{code-cell}
----
-slideshow:
-  slide_type: subslide
-tags: [remove-output]
----
-G = tf([-1],[1 3 1])
-```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-step response is then:
-
-```{code-cell}
----
-slideshow:
-  slide_type: subslide
-tags: [remove-output]
----
-step(G)
-```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-Simples!
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-#### Simulink model
-
-See [example_8.slx](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/example_8.slx)
-
-```{code-cell}
----
-slideshow:
-  slide_type: fragment
-tags: [remove-output]
----
-open example_8
-```
+Feedback system
+:::
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-![Simulink model](pictures/ex8_sim.png)
+For the answer, refer to the lecture recording or see solved problem 3.31 in in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Result
+## Homework
 
-![Simulation result](pictures/ex8_sim_result.png)
+Attempt any of the questions in {ref}`examples12` of these course notes that have not been covered in the examples class.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
+The solutions for Unit 4.6 are in **Section 3.8 Solved Problems** {schaum}`schaum` starting at 3.23. (The actual numbers are listed with the examples above.)
 
-Let's go a bit further by finding the frequency response:
+We will do some problems from these sets in Examples Class 4.
 
-```{code-cell}
----
-slideshow:
-  slide_type: subslide
-tags: [remove-output]
----
-%bode(G)
-nyquist(G)
-%rlocus(G)
-```
+### Supplementary Problems
+Supplementary problems 3.52-3.55 in {cite}`schaum` are related to the content covered in this unit.
 
-## Matlab Solutions
++++
 
-For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-247-textbook/tree/master/laplace_transform/matlab) folder.
+## Summary
 
-* Solution 7 [[solution7.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution7.m)]
-* Example 8  [[example8.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/example8.m)]
-* Simulink model [[example_8.slx](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/example_8.slx)]
+In this unit we have presented the idea of a *transfer function* (or *system function*) that allows us to represent the impulse response $h(t)$ by the Laplace transform $H(s)$. We also looked at the characteristics of the Laplace transform, transform functions for LCCODEs and series and parallel combination of transfer functions. 
 
-```{code-cell}
-:tags: [remove-output]
+* {ref}`system_function`
 
-cd ../matlab
-ls
-open solution7
+* {ref}`char_LTI_systems`
+
+* {ref}`tf_for_LCCODE`
+
+* {ref}`block_diagrams`
+
+* {ref}`examples13`
+
+### Take Aways
+
+#### Transfer function
+
+The summary of the time-domain and s-domain transforms are illustrated in {numref}`fig:3-7`. The key result is $Y(s) = H(s)X(s)$ which simplifies the computation of the system response $y(t) = h(t)*x(t)$ which has to be done using time-convolution.
+
+If we know $Y(s)$ and $X(s)$ we can determine $H(s)$ using
+
+$$H(s) = \frac{Y(s)}{X(s)}$$
+
+and $h(t) = \mathcal{L}^{-1}\left\{H(s)\right\}$
+
+#### Characterization of LTI Systems
+
+For continuous-time LTI systems the causality and stabilty of a system is guaranteed if all the poles of the transfer function are in the left-half of the $s$-plane and the $j\omega$ axis is included in the region of convergence. That is, if the poles of the system $H(s)$, $s_k$ have real part $-\sigma_k$, the system will be causal and stable if $\sigma_k < 0$ for all $k$.
+
+#### Laplace transforms of LCCODEs
+
+The linear constant coefficient ordinary differential equation (LLCODE) of a system involving input signal $x(t)$ and output signal $y(t)$ is given in {eq}`eq:338`. When we take Laplace transforms of this differential equation, ignoring initial conditions, we get the polynomial equation {eq}`eq:339` from which we can determine the transfer function:
+
+$$H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}$$
+
+This is a rational polynomial in $s$ and it can be solved for any input $x(t)$ that has a Laplace transform $X(s)$ by forming
+
+$$Y(s) = H(s)X(s)$$
+
+and taking inverse Laplace transforms using the Partial Fraction Expansion method discussed in {ref}`unit4.5`.
+
+Several examples are given in {ref}`examples12` in which the problems given in {ref}`examples8` of {ref}`unit3.3` are redone as Laplace transform problems. 
+
+My main message to you is that, as an engineer faced with a LCCODE to solve, you should use Laplace transforms!
+
+#### Block diagrams
+
+Complex systems can be broken down into subsystems which may be represented by block diagrams which have either series or parallel connections (see {numref}`Fig:3-8` and {numref}`Fig:3-9` and feedback (See {ref}`ex"13.8`)
+
+
+### Still to come
+
+We will use transfer functions to solve circuit problems in {ref}`unit4.6` and conclude our study of Laplace transforms in {ref}`unit4.8` with a look at the use of Transfer functions in the MATLAB control systems toolbox and the sumulation tool Simulink. We will also look at some of the problems you have studied in **EG-152 Analogue Design** hopefully confirming some of the results you have obbserved in the lab.
+
+In **EG-247 Digital Signal Processing** we will start from the knowledge gained in {ref}`Unit 4` developing transform ideas further via the Fourier Transform, Z-Transform and the design of systems for signal processing. In **EG-243 Control Systems** you will model feedback control signals using block diagrams and transfer functions. You will also study how knowledge of poles and zeros can be exploited in the design of systems with stable responses.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Next time
+
+We move on to consider 
+
+* {ref}`unit4.7`
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
 ```

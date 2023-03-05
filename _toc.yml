@@ -48,8 +48,12 @@ parts:
       title: Unit 4.4 The Inverse Laplace Transform
     - file: laplace_transform/5/circuit_analysis
       title: Unit 4.5 Using Laplace Transforms for Circuit Analysis
-    - file: laplace_transform/7/transfer_functions
-      title: Unit 4.6 The System Function and Transfer Functions
+    - file: laplace_transform/6/transfer_functions
+      title: Unit 4.6 Transfer Functions
+    - file: laplace_transform/7/tf_for_circuits
+      title: Unit 4.7 Transfer Functions for Circuit Analysis
+    - file: laplace_transform/8/matlab
+      title: Unit 4.8 Computer-Aided Systems Analysis and Simulation 
   - file: fourier_series/index
     title: Fourier Series
     sections:

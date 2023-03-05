@@ -435,7 +435,7 @@ For the answer, see the solved problem 2.24 in {cite}`schaum`.
 
 (ex8_8)=
 
-### Example 8.6
+### Example 8.8
 
 Consider the system described by
 

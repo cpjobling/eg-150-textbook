@@ -367,6 +367,8 @@ You will see examples of systems with feedback when you study op-amp circuits in
 We will solve this example by hand and then give the solution in the MATLAB lab.
 ```
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
 (ex4.1)=
 
 ### Example 4.1: RC Circuit 
