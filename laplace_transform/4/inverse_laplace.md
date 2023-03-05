@@ -486,7 +486,7 @@ $$\frac{s + 3}{(s+1)(s^2 + 4s + 8)} = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 
 
 putting both sides on a common denominator, 
 
-$$\frac{s+3}{(s+1)(s^2 + 4s + 8)} = \frac{(2/5)(s^2 + 4s + 8) + r_2(s + 1) + r_3(s + 1)(s + 2)}{(s+1)(s^2 + 4s + 8)}$$
+$$\frac{s+3}{(s+1)(s^2 + 4s + 8)} = \frac{(2/5)(s^2 + 4s + 8) + r_2(s + 1) + r_3(s + 1)(s + 2)}{(s+1)(s^2 + 4s + 8)}$$ (pfe4)
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -502,7 +502,7 @@ The completion of this problem is left as a *homework exercise* for the student.
 
 The solution should be:
 
-$$f_3(t) = \frac{2}{5}e^{-t} + \frac{3}{10} e^{-2t}\sin 2t - \frac{2}{5} e^{-2t}\cos 2t $$ (pfe4)
+$$f_3(t) = \frac{2}{5}e^{-t} + \frac{3}{10} e^{-2t}\sin 2t - \frac{2}{5} e^{-2t}\cos 2t $$ (pfe5)
 
 You can use trig. identities to simplify this further if you wish.
 
