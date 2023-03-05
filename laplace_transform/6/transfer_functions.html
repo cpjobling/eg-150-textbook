@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Transfer Functions &#8212; EG-150 Signals and Systems</title>
+    <title>Unit 4.6: Transfer Functions &#8212; EG-150 Signals and Systems</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -666,11 +666,60 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#examples-13-transfer-functions">
    Examples 13: Transfer functions
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-13-1">
+     Example 13.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-13-2">
+     Example 13.2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-13-3">
+     Example 13.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-13-4">
+     Example 13.4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-13-5">
+     Example 13.5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-13-6">
+     Example 13.6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-13-7">
+     Example 13.7
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-13-8">
+     Example 13.8
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#homework">
    Homework
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#supplementary-problems">
+     Supplementary Problems
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
@@ -681,6 +730,28 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#take-aways">
      Take Aways
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#transfer-function">
+       Transfer function
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id18">
+       Characterization of LTI Systems
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#laplace-transforms-of-lccodes">
+       Laplace transforms of LCCODEs
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id19">
+       Block diagrams
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#still-to-come">
@@ -708,7 +779,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Transfer Functions</h1>
+                <h1>Unit 4.6: Transfer Functions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -764,11 +835,60 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#examples-13-transfer-functions">
    Examples 13: Transfer functions
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-13-1">
+     Example 13.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-13-2">
+     Example 13.2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-13-3">
+     Example 13.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-13-4">
+     Example 13.4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-13-5">
+     Example 13.5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-13-6">
+     Example 13.6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-13-7">
+     Example 13.7
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-13-8">
+     Example 13.8
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#homework">
    Homework
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#supplementary-problems">
+     Supplementary Problems
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
@@ -779,6 +899,28 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#take-aways">
      Take Aways
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#transfer-function">
+       Transfer function
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id18">
+       Characterization of LTI Systems
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#laplace-transforms-of-lccodes">
+       Laplace transforms of LCCODEs
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id19">
+       Block diagrams
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#still-to-come">
@@ -807,8 +949,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="transfer-functions">
-<h1>Transfer Functions<a class="headerlink" href="#transfer-functions" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="unit-4-6-transfer-functions">
+<span id="unit4-6"></span><h1>Unit 4.6: Transfer Functions<a class="headerlink" href="#unit-4-6-transfer-functions" title="Permalink to this headline">#</a></h1>
 <p>The preparatory reading for this section is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=75#ppg=113">Chapter 4.4</a> <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> which discusses transfer function models of electrical circuits. We have also adapted content from <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section28">3.6 The System Function</a> from <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/6/transfer_functions">cpjobling.github.io/eg-150-textbook/laplace_transform/6/transfer_functions</a></p>
 <p><img alt="QR Code for this lecture" src="../../_images/qrcode_laplace6.png" /></p>
@@ -831,13 +973,13 @@ title="Print to PDF"
 <div class="math notranslate nohighlight" id="equation-eq-336">
 <span class="eqno">(19)<a class="headerlink" href="#equation-eq-336" title="Permalink to this equation">#</a></span>\[Y(s) = X(s)H(s)\]</div>
 <p>where <span class="math notranslate nohighlight">\(Y(s)\)</span>, <span class="math notranslate nohighlight">\(X(s)\)</span>, and <span class="math notranslate nohighlight">\(H(s)\)</span> are the Laplace transforms of <span class="math notranslate nohighlight">\(y(t)\)</span>, <span class="math notranslate nohighlight">\(x(t)\)</span>, and <span class="math notranslate nohighlight">\(h(t)\)</span>, respectively.</p>
-<p>Equation <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-336">(28)</a> can be expressed as</p>
+<p>Equation <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-336">(29)</a> can be expressed as</p>
 <div class="math notranslate nohighlight" id="equation-eq-337">
 <span class="eqno">(20)<a class="headerlink" href="#equation-eq-337" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)}\]</div>
 <p>The laplace transform <span class="math notranslate nohighlight">\(H(s)\)</span> of <span class="math notranslate nohighlight">\(h(t)\)</span> is called the <em>transfer function</em> (or <em>system function</em>) of the system.</p>
-<p>By <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-337">(29)</a>, the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> can also be defined as the ratio of the Laplace transforms of the output <span class="math notranslate nohighlight">\(y(t)\)</span> and the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
+<p>By <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-337">(30)</a>, the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> can also be defined as the ratio of the Laplace transforms of the output <span class="math notranslate nohighlight">\(y(t)\)</span> and the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
 <p>The transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> completely characterizes the system because the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> completely characterizes the system.</p>
-<p><a class="reference internal" href="../7/tf_for_circuits.html#fig-3-7"><span class="std std-numref">Fig. 61</span></a> illustrates the relationship of Equations <a href="#id3"><span class="problematic" id="id4">:ex:`eq:335`</span></a> and <a href="#id5"><span class="problematic" id="id6">:ex:`eq:336`</span></a>.</p>
+<p><a class="reference internal" href="../7/tf_for_circuits.html#fig-3-7"><span class="std std-numref">Fig. 62</span></a> illustrates the relationship of Equations <a href="#id3"><span class="problematic" id="id4">:ex:`eq:335`</span></a> and <a href="#id5"><span class="problematic" id="id6">:ex:`eq:336`</span></a>.</p>
 <figure class="align-default" id="fig-3-7">
 <a class="reference internal image-reference" href="../../_images/system_function.png"><img alt="Impulse response and system function." src="../../_images/system_function.png" style="width: 60%;" /></a>
 <figcaption>
@@ -883,7 +1025,7 @@ title="Print to PDF"
 </section>
 <section id="transfer-functions-for-lti-system-described-by-linear-constant-coefficient-ordinary-differential-equations">
 <span id="tf-for-lccode"></span><h2>Transfer functions for LTI system described by Linear Constant-Coefficient Ordinary Differential Equations<a class="headerlink" href="#transfer-functions-for-lti-system-described-by-linear-constant-coefficient-ordinary-differential-equations" title="Permalink to this headline">#</a></h2>
-<p>In <a class="reference internal" href="../../lti_systems/lti3.html#systems-described-by-differential-equations"><span class="std std-ref">Unit 3.3: Systems Described by Differential Equations</span></a> we considered a continuous-time LTI systemfor which input <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(y(t)\)</span> satisfy the general linear constant-coefficient ordinary differential equation (LCCODE) of the form</p>
+<p>In <a class="reference internal" href="../../lti_systems/lti3.html#systems-described-by-differential-equations"><span class="std std-ref">Unit 3.3: Systems Described by Differential Equations</span></a> we considered a continuous-time LTI systemfor which input <span class="math notranslate nohighlight">\(x(t)\)</span> and output <span class="math notranslate nohighlight">\(y(t)\)</span> satisfy the general linear constant-coefficient ordinary differential equation (LCCODE) of the form</p>
 <div class="math notranslate nohighlight" id="equation-eq-338">
 <span class="eqno">(21)<a class="headerlink" href="#equation-eq-338" title="Permalink to this equation">#</a></span>\[\sum_{k=0}^N a_k \frac{d^k}{dt^k} y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)\]</div>
 <p>Applying the Laplace transform and using the <a class="reference internal" href="../3/laplace_properties.html#lap-diff-prop"><span class="std std-ref">Differentiation in the time domain</span></a> of the Laplace transform, we obtain</p>
@@ -932,21 +1074,114 @@ title="Print to PDF"
 </section>
 <section id="examples-13-transfer-functions">
 <span id="examples13"></span><h2>Examples 13: Transfer functions<a class="headerlink" href="#examples-13-transfer-functions" title="Permalink to this headline">#</a></h2>
+<section id="example-13-1">
+<span id="ex-13-1"></span><h3>Example 13.1<a class="headerlink" href="#example-13-1" title="Permalink to this headline">#</a></h3>
+<p>Find the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> and the impulse reponse <span class="math notranslate nohighlight">\(h(t)\)</span> of the RC circuit in <a class="reference internal" href="../../signals_and_systems/systems/index.html#fig-rc-circuit"><span class="std std-numref">Fig. 30</span></a> (<a class="reference internal" href="../../signals_and_systems/systems/index.html#ex4-1"><span class="std std-ref">Example 4.1: RC Circuit</span></a>).</p>
+<p>For the answer, refer to the lecture recording or see solved problem 3.23 in in <span id="id7">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+</section>
+<section id="example-13-2">
+<span id="ex-13-2"></span><h3>Example 13.2<a class="headerlink" href="#example-13-2" title="Permalink to this headline">#</a></h3>
+<p>Use the Laplace transform to redo <a class="reference internal" href="../../lti_systems/lti1.html#ex5-5"><span class="std std-ref">Example 5.5</span></a>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 3.24 in in <span id="id8">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+</section>
+<section id="example-13-3">
+<span id="ex-13-3"></span><h3>Example 13.3<a class="headerlink" href="#example-13-3" title="Permalink to this headline">#</a></h3>
+<p>The output <span class="math notranslate nohighlight">\(y(t)\)</span> of a continuous-time LTI system is found to be <span class="math notranslate nohighlight">\(2e^{-3t}u_0(t)\)</span> when the input <span class="math notranslate nohighlight">\(x(t)\)</span> is <span class="math notranslate nohighlight">\(u_0(t)\)</span>.</p>
+<p>a). Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system.</p>
+<p>b). Find the output <span class="math notranslate nohighlight">\(y(t)\)</span> when the input is <span class="math notranslate nohighlight">\(e^{-t}u_0(t)\)</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 3.25 in in <span id="id9">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+</section>
+<section id="example-13-4">
+<span id="ex-13-4"></span><h3>Example 13.4<a class="headerlink" href="#example-13-4" title="Permalink to this headline">#</a></h3>
+<p>Use the Laplace transform to redo <a class="reference internal" href="../../lti_systems/lti2.html#ex6-6"><span class="std std-ref">Example 6.6</span></a>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 3.27 in in <span id="id10">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+</section>
+<section id="example-13-5">
+<span id="ex-13-5"></span><h3>Example 13.5<a class="headerlink" href="#example-13-5" title="Permalink to this headline">#</a></h3>
+<p>Use the Laplace transform to redo <a class="reference internal" href="../../lti_systems/lti3.html#ex8-6"><span class="std std-ref">Example 8.6</span></a>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 3.28 in in <span id="id11">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+</section>
+<section id="example-13-6">
+<span id="ex-13-6"></span><h3>Example 13.6<a class="headerlink" href="#example-13-6" title="Permalink to this headline">#</a></h3>
+<p>Use the Laplace transform to redo <a class="reference internal" href="../../lti_systems/lti3.html#ex8-8"><span class="std std-ref">Example 8.8</span></a>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 3.29 in in <span id="id12">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+</section>
+<section id="example-13-7">
+<span id="ex-13-7"></span><h3>Example 13.7<a class="headerlink" href="#example-13-7" title="Permalink to this headline">#</a></h3>
+<p>Consider a continuous-time LTI system for which the input <span class="math notranslate nohighlight">\(x(t)\)</span> and output <span class="math notranslate nohighlight">\(y(t)\)</span> are related by</p>
+<div class="math notranslate nohighlight" id="equation-eq-386">
+<span class="eqno">(27)<a class="headerlink" href="#equation-eq-386" title="Permalink to this equation">#</a></span>\[\frac{d^2 y(t)}{dt^2} + \frac{dy(t)}{dt} - 2y(t) = x(t)\]</div>
+<p>a) Find the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span></p>
+<p>b) Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span></p>
+<p>For the answer, refer to the lecture recording or see solved problem 3.30 in in <span id="id13">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+</section>
+<section id="example-13-8">
+<span id="ex-13-8"></span><h3>Example 13.8<a class="headerlink" href="#example-13-8" title="Permalink to this headline">#</a></h3>
+<p>The feedback interconnection of two causal subsytems with transfer functions <span class="math notranslate nohighlight">\(F(s)\)</span> and <span class="math notranslate nohighlight">\(G(s)\)</span> is shown in <a class="reference internal" href="#fig-ex13-8"><span class="std std-numref">Fig. 61</span></a>. Find the overall system function <span class="math notranslate nohighlight">\(H(s)\)</span> for this feedback system.</p>
+<figure class="align-default" id="fig-ex13-8">
+<a class="reference internal image-reference" href="../../_images/figex13_8.png"><img alt="Feedback system" src="../../_images/figex13_8.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 61 </span><span class="caption-text">Feedback system</span><a class="headerlink" href="#fig-ex13-8" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For the answer, refer to the lecture recording or see solved problem 3.31 in in <span id="id14">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+</section>
 </section>
 <section id="homework">
 <h2>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">#</a></h2>
-<p>Attempt at least one of the end-of-chapter exercises from each question 1-7 of <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=75#ppg=71">Section 2.7</a> of <span id="id7">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>. Don’t look at the answers until you have attempted the problems.</p>
-<p>If we have time, I will work through one or two of these in class.</p>
+<p>Attempt any of the questions in <a class="reference internal" href="../5/circuit_analysis.html#examples12"><span class="std std-ref">Examples 12</span></a> of these course notes that have not been covered in the examples class.</p>
+<p>The solutions for Unit 4.6 are in <strong>Section 3.8 Solved Problems</strong> <a href="#id15"><span class="problematic" id="id16">:schaum:`schaum`</span></a> starting at 3.23. (The actual numbers are listed with the examples above.)</p>
+<p>We will do some problems from these sets in Examples Class 4.</p>
+<section id="supplementary-problems">
+<h3>Supplementary Problems<a class="headerlink" href="#supplementary-problems" title="Permalink to this headline">#</a></h3>
+<p>Supplementary problems 3.52-3.55 in <span id="id17">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span> are related to the content covered in this unit.</p>
+</section>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
-<p>In this section we have presented some of the most useful and commonly used properties of the Laplace transform, provided a table of Laplace Transform properties, and given examples of how properties and transform tables can be used to determine the Laplace transform of some useful aperiodic and periodic signals.</p>
+<p>In this unit we have presented the idea of a <em>transfer function</em> (or <em>system function</em>) that allows us to represent the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> by the Laplace transform <span class="math notranslate nohighlight">\(H(s)\)</span>. We also looked at the characteristics of the Laplace transform, transform functions for LCCODEs and series and parallel combination of transfer functions.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../7/tf_for_circuits.html#system-function"><span class="std std-ref">The Transfer Function</span></a></p></li>
+<li><p><a class="reference internal" href="../7/tf_for_circuits.html#char-lti-systems"><span class="std std-ref">Characterization of LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="../7/tf_for_circuits.html#tf-for-lccode"><span class="std std-ref">Transfer functions for LTI system described by Linear Constant-Coefficient Ordinary Differential Equations</span></a></p></li>
+<li><p><a class="reference internal" href="#block-diagrams"><span class="std std-ref">Block diagrams for Systems Interconnection</span></a></p></li>
+<li><p><a class="reference internal" href="#examples13"><span class="std std-ref">Examples 13: Transfer functions</span></a></p></li>
+</ul>
 <section id="take-aways">
 <h3>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this headline">#</a></h3>
+<section id="transfer-function">
+<h4>Transfer function<a class="headerlink" href="#transfer-function" title="Permalink to this headline">#</a></h4>
+<p>The summary of the time-domain and s-domain transforms are illustrated in <a class="reference internal" href="../7/tf_for_circuits.html#fig-3-7"><span class="std std-numref">Fig. 62</span></a>. The key result is <span class="math notranslate nohighlight">\(Y(s) = H(s)X(s)\)</span> which simplifies the computation of the system response <span class="math notranslate nohighlight">\(y(t) = h(t)*x(t)\)</span> which has to be done using time-convolution.</p>
+<p>If we know <span class="math notranslate nohighlight">\(Y(s)\)</span> and <span class="math notranslate nohighlight">\(X(s)\)</span> we can determine <span class="math notranslate nohighlight">\(H(s)\)</span> using</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \frac{Y(s)}{X(s)}\]</div>
+<p>and <span class="math notranslate nohighlight">\(h(t) = \mathcal{L}^{-1}\left\{H(s)\right\}\)</span></p>
+</section>
+<section id="id18">
+<h4>Characterization of LTI Systems<a class="headerlink" href="#id18" title="Permalink to this headline">#</a></h4>
+<p>For continuous-time LTI systems the causality and stabilty of a system is guaranteed if all the poles of the transfer function are in the left-half of the <span class="math notranslate nohighlight">\(s\)</span>-plane and the <span class="math notranslate nohighlight">\(j\omega\)</span> axis is included in the region of convergence. That is, if the poles of the system <span class="math notranslate nohighlight">\(H(s)\)</span>, <span class="math notranslate nohighlight">\(s_k\)</span> have real part <span class="math notranslate nohighlight">\(-\sigma_k\)</span>, the system will be causal and stable if <span class="math notranslate nohighlight">\(\sigma_k &lt; 0\)</span> for all <span class="math notranslate nohighlight">\(k\)</span>.</p>
+</section>
+<section id="laplace-transforms-of-lccodes">
+<h4>Laplace transforms of LCCODEs<a class="headerlink" href="#laplace-transforms-of-lccodes" title="Permalink to this headline">#</a></h4>
+<p>The linear constant coefficient ordinary differential equation (LLCODE) of a system involving input signal <span class="math notranslate nohighlight">\(x(t)\)</span> and output signal <span class="math notranslate nohighlight">\(y(t)\)</span> is given in <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-338">(31)</a>. When we take Laplace transforms of this differential equation, ignoring initial conditions, we get the polynomial equation <a class="reference internal" href="#equation-eq-339">(22)</a> from which we can determine the transfer function:</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}\]</div>
+<p>This is a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span> and it can be solved for any input <span class="math notranslate nohighlight">\(x(t)\)</span> that has a Laplace transform <span class="math notranslate nohighlight">\(X(s)\)</span> by forming</p>
+<div class="math notranslate nohighlight">
+\[Y(s) = H(s)X(s)\]</div>
+<p>and taking inverse Laplace transforms using the Partial Fraction Expansion method discussed in <a class="reference internal" href="../5/circuit_analysis.html#unit4-5"><span class="std std-ref">Unit 4.5: Using Laplace Transforms for Circuit Analysis</span></a>.</p>
+<p>Several examples are given in <a class="reference internal" href="../5/circuit_analysis.html#examples12"><span class="std std-ref">Examples 12</span></a> in which the problems given in <span class="xref std std-ref">examples8</span> of <span class="xref std std-ref">unit3.3</span> are redone as Laplace transform problems.</p>
+<p>My main message to you is that, as an engineer faced with a LCCODE to solve, you should use Laplace transforms!</p>
+</section>
+<section id="id19">
+<h4>Block diagrams<a class="headerlink" href="#id19" title="Permalink to this headline">#</a></h4>
+<p>Complex systems can be broken down into subsystems which may be represented by block diagrams which have either series or parallel connections (see <a class="reference internal" href="#fig-3-8"><span class="std std-numref">Fig. 59</span></a> and <a class="reference internal" href="#fig-3-9"><span class="std std-numref">Fig. 60</span></a> and feedback (See <span class="xref std std-ref">ex”13.8</span>)</p>
+</section>
 </section>
 <section id="still-to-come">
 <h3>Still to come<a class="headerlink" href="#still-to-come" title="Permalink to this headline">#</a></h3>
-<p>The use of the <em>derivative property</em> in the complete solution of continuous-time LTI systems will be covered in <span class="xref std std-ref">unit4.6</span>!</p>
+<p>We will use transfer functions to solve circuit problems in <a class="reference internal" href="#unit4-6"><span class="std std-ref">Unit 4.6: Transfer Functions</span></a> and conclude our study of Laplace transforms in <span class="xref std std-ref">unit4.8</span> with a look at the use of Transfer functions in the MATLAB control systems toolbox and the sumulation tool Simulink. We will also look at some of the problems you have studied in <strong>EG-152 Analogue Design</strong> hopefully confirming some of the results you have obbserved in the lab.</p>
+<p>In <strong>EG-247 Digital Signal Processing</strong> we will start from the knowledge gained in <span class="xref std std-ref">Unit 4</span> developing transform ideas further via the Fourier Transform, Z-Transform and the design of systems for signal processing. In <strong>EG-243 Control Systems</strong> you will model feedback control signals using block diagrams and transfer functions. You will also study how knowledge of poles and zeros can be exploited in the design of systems with stable responses.</p>
 </section>
 </section>
 <section id="next-time">
@@ -958,12 +1193,12 @@ title="Print to PDF"
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id8">
+<div class="docutils container" id="id20">
 <dl class="citation">
-<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id2">Hsu20</a></span></dt>
+<dt class="label" id="id30"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id7">2</a>,<a href="#id8">3</a>,<a href="#id9">4</a>,<a href="#id10">5</a>,<a href="#id11">6</a>,<a href="#id12">7</a>,<a href="#id13">8</a>,<a href="#id14">9</a>,<a href="#id17">10</a>)</span></dt>
 <dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
 </dd>
-<dt class="label" id="id14"><span class="brackets">Kar12</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id7">2</a>)</span></dt>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id1">Kar12</a></span></dt>
 <dd><p>Steven T. Karris. <em>Signals and systems with MATLAB computing and Simulink modeling</em>. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197">https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197</a>.</p>
 </dd>
 </dl>

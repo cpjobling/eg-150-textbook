@@ -741,8 +741,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ex8-8">
-     Example 8.6
+    <a class="reference internal nav-link" href="#example-8-8">
+     Example 8.8
     </a>
    </li>
   </ul>
@@ -780,7 +780,7 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id12">
+    <a class="reference internal nav-link" href="#id11">
      Continuous-Time LTI Systems Described by Differential Equations
     </a>
    </li>
@@ -936,8 +936,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ex8-8">
-     Example 8.6
+    <a class="reference internal nav-link" href="#example-8-8">
+     Example 8.8
     </a>
    </li>
   </ul>
@@ -975,7 +975,7 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id12">
+    <a class="reference internal nav-link" href="#id11">
      Continuous-Time LTI Systems Described by Differential Equations
     </a>
    </li>
@@ -1109,7 +1109,7 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[\sum_{k=0}^N a_k \frac{d^k}{dt^k}y(t) = \sum_{k=0}^M b_k \frac{d^k}{dt^k} \delta(t)\]</div>
 <p>with the initial rest condition.</p>
-<p>Examples of finding impulse responses are given in <a class="reference internal" href="#ex8-6"><span class="std std-ref">Example 8.6</span></a> to <a class="reference internal" href="#ex8-8"><span class="std std-ref">Example 8.6</span></a>.</p>
+<p>Examples of finding impulse responses are given in <a class="reference internal" href="#ex8-6"><span class="std std-ref">Example 8.6</span></a> to <a class="reference internal" href="#ex8-8"><span class="std std-ref">Example 8.8</span></a>.</p>
 </section>
 <section id="a-peek-into-the-future">
 <h3>A peek into the future<a class="headerlink" href="#a-peek-into-the-future" title="Permalink to this headline">#</a></h3>
@@ -1260,13 +1260,13 @@ title="Print to PDF"
 <p>(c) Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> from the step response <span class="math notranslate nohighlight">\(s(t)\)</span>.</p>
 <p>For the answer, see the solved problem 2.24 in <span id="id9">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="ex8-8">
-<span id="id10"></span><h3>Example 8.6<a class="headerlink" href="#ex8-8" title="Permalink to this headline">#</a></h3>
+<section id="example-8-8">
+<span id="ex8-8"></span><h3>Example 8.8<a class="headerlink" href="#example-8-8" title="Permalink to this headline">#</a></h3>
 <p>Consider the system described by</p>
 <div class="math notranslate nohighlight">
 \[\frac{dy(t)}{dt} + 2y(t) = x(t) + \frac{dx(t)}{dt}\]</div>
 <p>Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 2.25 in <span id="id11">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.25 in <span id="id10">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 </section>
 <section id="summary">
@@ -1300,8 +1300,8 @@ title="Print to PDF"
 <h3>Looking ahead<a class="headerlink" href="#looking-ahead" title="Permalink to this headline">#</a></h3>
 <p>Any continuous-time LTI system that can be represented by an LCCODE can be solved by taking the <em>Laplace transform</em> of the differential equation. The derivative terms like <span class="math notranslate nohighlight">\(a_k d^n y(t)/dt^n\)</span> become polynomial terms like <span class="math notranslate nohighlight">\(a_k s^n Y(s)\)</span>, where <span class="math notranslate nohighlight">\(Y(s)\)</span> is the Laplace transform of <span class="math notranslate nohighlight">\(y(t)\)</span>. As we shall see in <span class="xref std std-ref">unit4</span>, such systems are then representable as rational polynomials in <span class="math notranslate nohighlight">\(s\)</span> and are easily solved using algebraic techniques such as <em>polynomial factorization</em> and <em>partial fraction expansion</em>.</p>
 </section>
-<section id="id12">
-<h3>Continuous-Time LTI Systems Described by Differential Equations<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h3>
+<section id="id11">
+<h3>Continuous-Time LTI Systems Described by Differential Equations<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="#ccde-a-linear-constant-coefficient-differential-equations"><span class="std std-ref">A. Linear constant-coefficient differential equations</span></a></p></li>
 <li><p><a class="reference internal" href="#ccde-b-linearity"><span class="std std-ref">B. Linearity</span></a></p></li>
@@ -1320,9 +1320,9 @@ title="Print to PDF"
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id13">
+<div class="docutils container" id="id12">
 <dl class="citation">
-<dt class="label" id="id23"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id4">3</a>,<a href="#id6">4</a>,<a href="#id7">5</a>,<a href="#id8">6</a>,<a href="#id9">7</a>,<a href="#id11">8</a>)</span></dt>
+<dt class="label" id="id22"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id4">3</a>,<a href="#id6">4</a>,<a href="#id7">5</a>,<a href="#id8">6</a>,<a href="#id9">7</a>,<a href="#id10">8</a>)</span></dt>
 <dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
 </dd>
 </dl>
