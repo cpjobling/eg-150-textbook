@@ -73,7 +73,7 @@ For most engineering problems we can instead refer to **Tables of Properties** a
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(ilap:pfe}=
+(ilap:pfe)=
 ## Partial Fraction Expansion
 
 Quite often the Laplace Transform we start off with is a *rational polynomial* in $s$.
