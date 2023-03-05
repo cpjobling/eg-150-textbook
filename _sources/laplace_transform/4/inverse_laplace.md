@@ -474,7 +474,7 @@ Then comparing this with the desired form $(s + a)^2 + \omega^2$, we have $a = 2
 
 To solve this, we need to find the PFE for the assumed solution:
 
-$$F_3(s) = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 2^2} + r_3\frac{s + 2}{(s + 2)^2 + 2^2}  $$ (pfe1)
+$$F_3(s) = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 2^2} + r_3\frac{s + 2}{(s + 2)^2 + 2^2}  $$ (pfe2)
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 

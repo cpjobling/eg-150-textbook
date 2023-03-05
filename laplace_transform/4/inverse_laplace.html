@@ -1351,7 +1351,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 <p>Rework Example 3-2 from the <span id="id4">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> using quadratic factors.</p>
 <p>Find the Inverse Laplace Transform of</p>
 <div class="math notranslate nohighlight" id="equation-pfe1">
-<span class="eqno">(3)<a class="headerlink" href="#equation-pfe1" title="Permalink to this equation">#</a></span>\[F_3(s) = \frac{s + 3}{(s+1)(s^2 + 4s + 8)}\]</div>
+<span class="eqno">(2)<a class="headerlink" href="#equation-pfe1" title="Permalink to this equation">#</a></span>\[F_3(s) = \frac{s + 3}{(s+1)(s^2 + 4s + 8)}\]</div>
 <p>(Quick solution: <a class="reference external" href="https://www.wolframalpha.com/input/?i=inverse+laplace+transform+%28s%2B3%29%2F%28%28s+%2B+1%29%28s%5E2+%2B+4s+%2B+8%29%29">Wolfram Alpha</a> – Shows that the computer is not always best!)</p>
 <section id="solution-11-3">
 <h4>Solution 11.3<a class="headerlink" href="#solution-11-3" title="Permalink to this headline">#</a></h4>
@@ -1415,9 +1415,9 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 \[s^2 + 4s + 8 = (s + 2)^2 + 4\]</div>
 <p>Then comparing this with the desired form <span class="math notranslate nohighlight">\((s + a)^2 + \omega^2\)</span>, we have <span class="math notranslate nohighlight">\(a = 2\)</span> and <span class="math notranslate nohighlight">\(\omega^2 = 4 \to \omega = \sqrt{4} = 2\)</span>.</p>
 <p>To solve this, we need to find the PFE for the assumed solution:</p>
-<div class="math notranslate nohighlight" id="equation-pfe1">
-<span class="eqno">(3)<a class="headerlink" href="#equation-pfe1" title="Permalink to this equation">#</a></span>\[F_3(s) = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 2^2} + r_3\frac{s + 2}{(s + 2)^2 + 2^2}  \]</div>
-<p>which we do by equating <code class="xref eq docutils literal notranslate"><span class="pre">pfe2</span></code> to <a class="reference internal" href="#equation-pfe1">(3)</a>,</p>
+<div class="math notranslate nohighlight" id="equation-pfe2">
+<span class="eqno">(3)<a class="headerlink" href="#equation-pfe2" title="Permalink to this equation">#</a></span>\[F_3(s) = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 2^2} + r_3\frac{s + 2}{(s + 2)^2 + 2^2}  \]</div>
+<p>which we do by equating <a class="reference internal" href="#equation-pfe2">(3)</a> to <a class="reference internal" href="#equation-pfe1">(2)</a>,</p>
 <div class="math notranslate nohighlight" id="equation-pfe3">
 <span class="eqno">(4)<a class="headerlink" href="#equation-pfe3" title="Permalink to this equation">#</a></span>\[\frac{s + 3}{(s+1)(s^2 + 4s + 8)} = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 2^2} + r_3\frac{s + 2}{(s + 2)^2 + 2^2}\]</div>
 <p>putting both sides on a common denominator,</p>
