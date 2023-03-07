@@ -471,4 +471,8 @@ $$f_R(t)\Leftrightarrow \frac{A\tanh \left(\frac{As}{2}\right)}{s}.$$
 
 {ref}`ex10.5`
 
-$$f_{HW}(t) \Leftrightarrow \frac{1}{\left(s^2 + 1\right)\left(1-e^{\pi s}\right)}.$$
+$$f_{HW}(t) \Leftrightarrow \frac{1}{\left(s^2 + 1\right)\left(1-e^{-\pi s}\right)}.$$
+
+```{code-cell} ipython3
+
+```
