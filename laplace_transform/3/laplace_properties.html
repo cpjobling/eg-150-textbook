@@ -1333,10 +1333,15 @@ $<span class="math notranslate nohighlight">\(f''(t) = \frac{d^2}{dt^2}f(t) \Lef
 <p>In this section we have presented some of the most useful and commonly used properties of the Laplace transform, provided a table of Laplace Transform properties, and given examples of how properties and transform tables can be used to determine the Laplace transform of some useful aperiodic and periodic signals.</p>
 <section id="take-aways">
 <h3>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this headline">#</a></h3>
+<p>There are a number of useful properties of the Laplace transform that we can use to simplify more complex problems in signals and systems, for example to find the laplace transforms of more complex signals than those studied in <a class="reference internal" href="../2/laplace_of_common_signals.html#unit4-2"><span class="std std-ref">Unit 4.2: Laplace Transform of Some Common Signals</span></a>. In particular we found that the time delay property <span class="math notranslate nohighlight">\(f(t-a) \Leftrightarrow e^{-as}F(s)\)</span> and the linearity property <span class="math notranslate nohighlight">\(c_1f_1(t) + c_2f_2(t) + \ldots + c_nf_n(t) \Leftrightarrow c_1F_1(s) + c_2F_2(s) + \ldots + c_nF_n(s)\)</span> are particularly useful.</p>
+<p>If you have a periodic signal <span class="math notranslate nohighlight">\(x(t) = x(t + nT)\)</span>, you <em>must</em> use the periodicity property</p>
+<div class="math notranslate nohighlight">
+\[f(t+nT) \Leftrightarrow \frac{\int_0^T f(t)e^{-st}dt}{1-e^{-sT}}\]</div>
+<p>to compute its Laplace transform.</p>
 </section>
 <section id="still-to-come">
 <h3>Still to come<a class="headerlink" href="#still-to-come" title="Permalink to this headline">#</a></h3>
-<p>The use of the <em>derivative property</em> in the complete solution of continuous-time LTI systems will be covered in <a class="reference internal" href="../6/transfer_functions.html#unit4-6"><span class="std std-ref">Unit 4.6: Transfer Functions</span></a>!</p>
+<p>The use of the <em>derivative property</em> and <em>integration property</em> will be useful when defining the in complex frequency equavalent of the time domain modles used to define electrical circuit components. We study these in detail on <a class="reference internal" href="../5/circuit_analysis.html#unit4-5"><span class="std std-ref">Unit 4.5: Using Laplace Transforms for Circuit Analysis</span></a>. The use of the <em>derivative property</em> will be used to determine the complete solution of continuous-time LTI systems defined by differential equations in <a class="reference internal" href="../6/transfer_functions.html#unit4-6"><span class="std std-ref">Unit 4.6: Transfer Functions</span></a>.</p>
 </section>
 </section>
 <section id="next-time">

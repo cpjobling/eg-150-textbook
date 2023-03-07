@@ -430,10 +430,17 @@ In this section we have presented some of the most useful and commonly used prop
 
 ### Take Aways
 
+There are a number of useful properties of the Laplace transform that we can use to simplify more complex problems in signals and systems, for example to find the laplace transforms of more complex signals than those studied in {ref}`unit4.2`. In particular we found that the time delay property $f(t-a) \Leftrightarrow e^{-as}F(s)$ and the linearity property $c_1f_1(t) + c_2f_2(t) + \ldots + c_nf_n(t) \Leftrightarrow c_1F_1(s) + c_2F_2(s) + \ldots + c_nF_n(s)$ are particularly useful. 
+
+If you have a periodic signal $x(t) = x(t + nT)$, you *must* use the periodicity property
+
+$$f(t+nT) \Leftrightarrow \frac{\int_0^T f(t)e^{-st}dt}{1-e^{-sT}}$$
+
+to compute its Laplace transform.
 
 ### Still to come
 
-The use of the *derivative property* in the complete solution of continuous-time LTI systems will be covered in {ref}`unit4.6`!
+The use of the *derivative property* and *integration property* will be useful when defining the in complex frequency equavalent of the time domain modles used to define electrical circuit components. We study these in detail on {ref}`unit4.5`. The use of the *derivative property* will be used to determine the complete solution of continuous-time LTI systems defined by differential equations in {ref}`unit4.6`.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
