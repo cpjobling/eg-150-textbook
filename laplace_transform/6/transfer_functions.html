@@ -973,16 +973,16 @@ title="Print to PDF"
 <span id="system-function"></span><h2>The Transfer Function<a class="headerlink" href="#the-transfer-function" title="Permalink to this headline">#</a></h2>
 <p>In <a class="reference internal" href="../../lti_systems/lti1.html#response-of-a-continuous-time-lti-system-and-the-convolution-integral"><span class="std std-ref">Unit 3.1: Response of a Continuous-Time LTI System and the Convolution Integral</span></a> we showed that the output <span class="math notranslate nohighlight">\(y(t)\)</span> of a continuous-time LTI system equals the convolution of the input <span class="math notranslate nohighlight">\(x(t)\)</span> with the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>; that is,</p>
 <div class="math notranslate nohighlight" id="equation-eq-335">
-<span class="eqno">(19)<a class="headerlink" href="#equation-eq-335" title="Permalink to this equation">#</a></span>\[y(t) = x(t) * h(t)\]</div>
+<span class="eqno">(20)<a class="headerlink" href="#equation-eq-335" title="Permalink to this equation">#</a></span>\[y(t) = x(t) * h(t)\]</div>
 <p>Applying the <a class="reference internal" href="../3/laplace_properties.html#lap3-conv"><span class="std std-ref">Convolution in the time domain</span></a> property, we obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-336">
-<span class="eqno">(20)<a class="headerlink" href="#equation-eq-336" title="Permalink to this equation">#</a></span>\[Y(s) = X(s)H(s)\]</div>
+<span class="eqno">(21)<a class="headerlink" href="#equation-eq-336" title="Permalink to this equation">#</a></span>\[Y(s) = X(s)H(s)\]</div>
 <p>where <span class="math notranslate nohighlight">\(Y(s)\)</span>, <span class="math notranslate nohighlight">\(X(s)\)</span>, and <span class="math notranslate nohighlight">\(H(s)\)</span> are the Laplace transforms of <span class="math notranslate nohighlight">\(y(t)\)</span>, <span class="math notranslate nohighlight">\(x(t)\)</span>, and <span class="math notranslate nohighlight">\(h(t)\)</span>, respectively.</p>
-<p>Equation <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-336">(30)</a> can be expressed as</p>
+<p>Equation <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-336">(31)</a> can be expressed as</p>
 <div class="math notranslate nohighlight" id="equation-eq-337">
-<span class="eqno">(21)<a class="headerlink" href="#equation-eq-337" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)}\]</div>
+<span class="eqno">(22)<a class="headerlink" href="#equation-eq-337" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)}\]</div>
 <p>The laplace transform <span class="math notranslate nohighlight">\(H(s)\)</span> of <span class="math notranslate nohighlight">\(h(t)\)</span> is called the <em>transfer function</em> (or <em>system function</em>) of the system.</p>
-<p>By <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-337">(31)</a>, the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> can also be defined as the ratio of the Laplace transforms of the output <span class="math notranslate nohighlight">\(y(t)\)</span> and the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
+<p>By <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-337">(32)</a>, the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> can also be defined as the ratio of the Laplace transforms of the output <span class="math notranslate nohighlight">\(y(t)\)</span> and the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
 <p>The transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> completely characterizes the system because the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> completely characterizes the system.</p>
 <p><a class="reference internal" href="../7/tf_for_circuits.html#fig-3-7"><span class="std std-numref">Fig. 62</span></a> illustrates the relationship of Equations <a href="#id2"><span class="problematic" id="id3">:ex:`eq:335`</span></a> and <a href="#id4"><span class="problematic" id="id5">:ex:`eq:336`</span></a>.</p>
 <figure class="align-default" id="fig-3-7">
@@ -1032,21 +1032,21 @@ title="Print to PDF"
 <span id="tf-for-lccode"></span><h2>Transfer functions for LTI system described by Linear Constant-Coefficient Ordinary Differential Equations<a class="headerlink" href="#transfer-functions-for-lti-system-described-by-linear-constant-coefficient-ordinary-differential-equations" title="Permalink to this headline">#</a></h2>
 <p>In <a class="reference internal" href="../../lti_systems/lti3.html#systems-described-by-differential-equations"><span class="std std-ref">Unit 3.3: Systems Described by Differential Equations</span></a> we considered a continuous-time LTI systemfor which input <span class="math notranslate nohighlight">\(x(t)\)</span> and output <span class="math notranslate nohighlight">\(y(t)\)</span> satisfy the general linear constant-coefficient ordinary differential equation (LCCODE) of the form</p>
 <div class="math notranslate nohighlight" id="equation-eq-338">
-<span class="eqno">(22)<a class="headerlink" href="#equation-eq-338" title="Permalink to this equation">#</a></span>\[\sum_{k=0}^N a_k \frac{d^k}{dt^k} y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)\]</div>
+<span class="eqno">(23)<a class="headerlink" href="#equation-eq-338" title="Permalink to this equation">#</a></span>\[\sum_{k=0}^N a_k \frac{d^k}{dt^k} y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)\]</div>
 <p>Applying the Laplace transform and using the <a class="reference internal" href="../3/laplace_properties.html#lap-diff-prop"><span class="std std-ref">Differentiation in the time domain</span></a> of the Laplace transform, we obtain</p>
 <div class="math notranslate nohighlight">
 \[\sum_{k=0}^N a_k s^k Y(s)=\sum_{k=0}^M b_k s^k X(s)\]</div>
 <p>or</p>
 <div class="math notranslate nohighlight" id="equation-eq-339">
-<span class="eqno">(23)<a class="headerlink" href="#equation-eq-339" title="Permalink to this equation">#</a></span>\[Y(s) \sum_{k=0}^N a_k s^k = X(s) \sum_{k=0}^M b_k s^k \]</div>
+<span class="eqno">(24)<a class="headerlink" href="#equation-eq-339" title="Permalink to this equation">#</a></span>\[Y(s) \sum_{k=0}^N a_k s^k = X(s) \sum_{k=0}^M b_k s^k \]</div>
 <p>Thus,</p>
 <div class="math notranslate nohighlight" id="equation-eq-340">
-<span class="eqno">(24)<a class="headerlink" href="#equation-eq-340" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)} = \frac{\displaystyle \sum_{k=0}^M b_k s^k}{\displaystyle\sum_{k=0}^N a_k s^k}\]</div>
-<p>Expanding <a class="reference internal" href="#equation-eq-340">(24)</a>, <span class="math notranslate nohighlight">\(H(s)\)</span> can be written in the more familiar form</p>
+<span class="eqno">(25)<a class="headerlink" href="#equation-eq-340" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)} = \frac{\displaystyle \sum_{k=0}^M b_k s^k}{\displaystyle\sum_{k=0}^N a_k s^k}\]</div>
+<p>Expanding <a class="reference internal" href="#equation-eq-340">(25)</a>, <span class="math notranslate nohighlight">\(H(s)\)</span> can be written in the more familiar form</p>
 <div class="math notranslate nohighlight" id="equation-eq-341">
-<span class="eqno">(26)<a class="headerlink" href="#equation-eq-341" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}\]</div>
+<span class="eqno">(27)<a class="headerlink" href="#equation-eq-341" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}\]</div>
 <p>Hence, <span class="math notranslate nohighlight">\(H(s)\)</span> is always a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span>.</p>
-<p>Note the ROC of <span class="math notranslate nohighlight">\(H(s)\)</span> is not specified by <a class="reference internal" href="#equation-eq-340">(24)</a> but must be inferred with additional requirements on the system such as causality and stability.</p>
+<p>Note the ROC of <span class="math notranslate nohighlight">\(H(s)\)</span> is not specified by <a class="reference internal" href="#equation-eq-340">(25)</a> but must be inferred with additional requirements on the system such as causality and stability.</p>
 </section>
 <section id="block-diagrams-for-systems-interconnection">
 <span id="block-diagrams"></span><h2>Block diagrams for Systems Interconnection<a class="headerlink" href="#block-diagrams-for-systems-interconnection" title="Permalink to this headline">#</a></h2>
@@ -1055,7 +1055,7 @@ title="Print to PDF"
 \[h(t) = h_1(t) * h_2(t)\]</div>
 <p>Thus, the corresponding transfer functions are related by the product</p>
 <div class="math notranslate nohighlight" id="equation-eq-341">
-<span class="eqno">(26)<a class="headerlink" href="#equation-eq-341" title="Permalink to this equation">#</a></span>\[H(s) = H_1(s)H_2(s)\]</div>
+<span class="eqno">(27)<a class="headerlink" href="#equation-eq-341" title="Permalink to this equation">#</a></span>\[H(s) = H_1(s)H_2(s)\]</div>
 <p>This relationship is illustrated in <a class="reference internal" href="#fig-3-8"><span class="std std-numref">Fig. 59</span></a>(b)</p>
 <figure class="align-default" id="fig-3-8">
 <a class="reference internal image-reference" href="../../_images/bd1.png"><img alt="Two systems in cascade (a) Time-domain representation; (b) s-domain presentation." src="../../_images/bd1.png" style="width: 70%;" /></a>
@@ -1068,7 +1068,7 @@ title="Print to PDF"
 \[h(t) = h_1(t) + h_2(t)\]</div>
 <p>Thus,</p>
 <div class="math notranslate nohighlight" id="equation-eq-342">
-<span class="eqno">(27)<a class="headerlink" href="#equation-eq-342" title="Permalink to this equation">#</a></span>\[H(s) = H_1(s) + H_2(s)\]</div>
+<span class="eqno">(28)<a class="headerlink" href="#equation-eq-342" title="Permalink to this equation">#</a></span>\[H(s) = H_1(s) + H_2(s)\]</div>
 <p>This relationship is illustrated in <a class="reference internal" href="#fig-3-9"><span class="std std-numref">Fig. 60</span></a>(b).</p>
 <figure class="align-default" id="fig-3-9">
 <a class="reference internal image-reference" href="../../_images/bd2.png"><img alt="Two systems in parallel. (a) Time-domain representation; (b) s-domain representation." src="../../_images/bd2.png" style="width: 70%;" /></a>
@@ -1115,7 +1115,7 @@ title="Print to PDF"
 <span id="ex-13-7"></span><h3>Example 13.7<a class="headerlink" href="#example-13-7" title="Permalink to this headline">#</a></h3>
 <p>Consider a continuous-time LTI system for which the input <span class="math notranslate nohighlight">\(x(t)\)</span> and output <span class="math notranslate nohighlight">\(y(t)\)</span> are related by</p>
 <div class="math notranslate nohighlight" id="equation-eq-386">
-<span class="eqno">(28)<a class="headerlink" href="#equation-eq-386" title="Permalink to this equation">#</a></span>\[\frac{d^2 y(t)}{dt^2} + \frac{dy(t)}{dt} - 2y(t) = x(t)\]</div>
+<span class="eqno">(29)<a class="headerlink" href="#equation-eq-386" title="Permalink to this equation">#</a></span>\[\frac{d^2 y(t)}{dt^2} + \frac{dy(t)}{dt} - 2y(t) = x(t)\]</div>
 <p>a) Find the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span></p>
 <p>b) Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span></p>
 <p>For the answer, refer to the lecture recording or see solved problem 3.30 in in <span id="id12">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
@@ -1169,7 +1169,7 @@ title="Print to PDF"
 </section>
 <section id="laplace-transforms-of-lccodes">
 <h4>Laplace transforms of LCCODEs<a class="headerlink" href="#laplace-transforms-of-lccodes" title="Permalink to this headline">#</a></h4>
-<p>The linear constant coefficient ordinary differential equation (LLCODE) of a system involving input signal <span class="math notranslate nohighlight">\(x(t)\)</span> and output signal <span class="math notranslate nohighlight">\(y(t)\)</span> is given in <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-338">(32)</a>. When we take Laplace transforms of this differential equation, ignoring initial conditions, we get the polynomial equation <a class="reference internal" href="#equation-eq-339">(23)</a> from which we can determine the transfer function:</p>
+<p>The linear constant coefficient ordinary differential equation (LLCODE) of a system involving input signal <span class="math notranslate nohighlight">\(x(t)\)</span> and output signal <span class="math notranslate nohighlight">\(y(t)\)</span> is given in <a class="reference internal" href="../7/tf_for_circuits.html#equation-eq-338">(33)</a>. When we take Laplace transforms of this differential equation, ignoring initial conditions, we get the polynomial equation <a class="reference internal" href="#equation-eq-339">(24)</a> from which we can determine the transfer function:</p>
 <div class="math notranslate nohighlight">
 \[H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}\]</div>
 <p>This is a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span> and it can be solved for any input <span class="math notranslate nohighlight">\(x(t)\)</span> that has a Laplace transform <span class="math notranslate nohighlight">\(X(s)\)</span> by forming</p>

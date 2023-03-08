@@ -78,7 +78,7 @@ For most engineering problems we can instead refer to **Tables of Properties** a
 
 Quite often the Laplace Transform we start off with is a *rational polynomial* in $s$.
 
-$$F(s) = \frac{N(s)}{D(s)} = \frac{b_ms^m + b_{m-1}s^{m-1}+b_{m-2}s^{m-2}+ \cdots +b_{1}s+b_{0}}{a_ns^n + a_{n-1}s^{n-1}+a_{n-2}s^{n-2}+ \cdots +a_{1}s+a_{0}}$$
+$$F(s) = \frac{N(s)}{D(s)} = \frac{b_ms^m + b_{m-1}s^{m-1}+b_{m-2}s^{m-2}+ \cdots +b_{1}s+b_{0}}{a_ns^n + a_{n-1}s^{n-1}+a_{n-2}s^{n-2}+ \cdots +a_{1}s+a_{0}}$$ (eq:4.4:1)
 
 The coefficients $a_k$ and $b_k$ are real for $k = 1, 2, 3, \ldots$
 
@@ -672,13 +672,39 @@ In this section we have looked at the inverse Laplace transform. In particular, 
 * {ref}`ilap:defn`
 * {ref}`ilap:pfe`
 * {ref}`ilap_by_pfe`
+* {ref}`examples11`
+
+## Take Aways
+
+For causal signals and continuous-time LTI systems, the Laplace transform usually takes the form of a rational polynomial with general form $F(s)$ as shown in equation {eq}`eg:4.4:1`. The denominator of $F(s)$, $D(s)$, can always be factorised, and the factors (zeros of D(s), poles of F(s)) will be real $(s - p_k)$, real and repeated, such as $(s - p_k)^n$ or complex conjugate pairs $(s - \sigma_k - j\omega_k)(s - \sigma_k + j\omega_k)^*$, or a combination of these. 
+
+Each such rational polynomial can then be represented as a *partial fraction* with *residues* $r_k$ whose values are determined by using one of the *partial fraction expansion* methods presented in this unit: 
+
 * {ref}`ilap:distinct_real_poles`
 * {ref}`case:complex_poles`
 * {ref}`ilap:repeated_poles`
 * {ref}`ilap:improper`
-* {ref}`examples11`
 
-## Take Aways
+The factored polynomial which represents $F(s)$ can then be converted into the equivalent $f(t)$ by use of the *linearity property* ({ref}`lprops:linearity`) and tables of Laplace transforms (e.g. {ref}`ap:xform_table`).
+
+<hr/>
+* A pair of complex conjugate factors can be represented as a single quadratic factor
+
+$$(s - \sigma - j\omega)(s - \sigma + j\omega)$$
+
+which, when $\sigma < 0$, will be
+
+$$s^2 + 2\sigma s +(\sigma^2 + \omega^2)$$
+
+By completing the square we get
+
+$$(s + \sigma)^2 - \sigma^2 + (\sigma^2 + \omega^2) = \left((s + \sigma)^2 + \omega^2\right)$$
+
+which implies that the inverse Laplace transform of a complex pole pair will be a linear combination of the damped cosine and sine transform pairs:
+
+$$\frac{(s + \sigma)}{\left(s + \sigma\right)^2 + \omega^2}\Leftrightarrow e^{-\sigma t}\cos(\omega t)u_0(t) $$
+
+$$\frac{\omega}{\left(s + \sigma\right)^2 + \omega^2}\Leftrightarrow e^{-\sigma t}\sin(\omega t)u_0(t) $$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
