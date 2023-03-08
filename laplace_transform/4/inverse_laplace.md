@@ -672,7 +672,7 @@ In this section we have looked at the inverse Laplace transform. In particular, 
 
 ## Take Aways
 
-For causal signals and continuous-time LTI systems, the Laplace transform usually takes the form of a rational polynomial with general form $F(s)$ as shown in equation {eq}`eq:4.4:2`. The denominator of $F(s)$, $D(s)$, can always be factorised, and the factors (zeros of D(s), poles of F(s)) will be real $(s - p_k)$, real and repeated, such as $(s - p_k)^n$ or complex conjugate pairs $(s - \sigma_k - j\omega_k)(s - \sigma_k + j\omega_k)^\dagger$, or a combination of these. 
+For causal signals and continuous-time LTI systems, the Laplace transform usually takes the form of a rational polynomial with general form $F(s)$ as shown in equation {eq}`eq:4.4:2`. The denominator of $F(s)$, $D(s)$, can always be factorised, and the factors (zeros of D(s), poles of F(s)) will be real $(s - p_k)$, real and repeated, such as $(s - p_k)^n$ or complex conjugate pairs $(s - \sigma_k - j\omega_k)(s - \sigma_k + j\omega_k)^1$, or a combination of these. 
 
 Each such rational polynomial can then be represented as a *partial fraction* with *residues* $r_k$ whose values are determined by using one of the *partial fraction expansion* methods presented in this unit: 
 
@@ -684,7 +684,7 @@ Each such rational polynomial can then be represented as a *partial fraction* wi
 The factored polynomial which represents $F(s)$ can then be converted into the equivalent $f(t)$ by use of the *linearity property* ({ref}`lprops:linearity`) and tables of Laplace transforms (e.g. {ref}`ap:xform_table`).
 
 <hr/>
-$\dagger$ A pair of complex conjugate factors 
+Footnote $1$ A pair of complex conjugate factors 
 
 $$(s - \sigma - j\omega)(s - \sigma + j\omega)$$
 
@@ -701,6 +701,10 @@ which implies that the inverse Laplace transform of a complex pole pair will be 
 $$\frac{(s + \sigma)}{\left(s + \sigma\right)^2 + \omega^2}\Leftrightarrow e^{-\sigma t}\cos(\omega t)u_0(t) $$
 
 $$\frac{\omega}{\left(s + \sigma\right)^2 + \omega^2}\Leftrightarrow e^{-\sigma t}\sin(\omega t)u_0(t) $$
+
+### MATLAB
+
+The inverse Laplace transform is given by the Symbolic math toolbox function *ilaplace*. We can determine the partial fraction of a rational polynomial with constant coefficients using the function *residue* we can factorise a symbolic polynomial using `factor` and expand a product of rational terms using `expand`. A symbolic polynomial with numerical coeffients can be converted into a numerial polynomial using `sym2poly`. For more information and examples on how to use these functions please consult the [MATLAB help centre](https://uk.mathworks.com/help/index.html).
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
