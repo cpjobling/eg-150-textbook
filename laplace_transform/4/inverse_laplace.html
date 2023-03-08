@@ -1603,8 +1603,12 @@ k =
 <li><p><a class="reference internal" href="#ilap-improper"><span class="std std-ref">The case of the improper rational polynomial</span></a></p></li>
 </ul>
 <p>The factored polynomial which represents <span class="math notranslate nohighlight">\(F(s)\)</span> can then be converted into the equivalent <span class="math notranslate nohighlight">\(f(t)\)</span> by use of the <em>linearity property</em> (<a class="reference internal" href="../3/laplace_properties.html#lprops-linearity"><span class="std std-ref">Linearity</span></a>) and tables of Laplace transforms (e.g. <span class="xref std std-ref">ap:xform_table</span>).</p>
+<section id="matlab">
+<h3>MATLAB<a class="headerlink" href="#matlab" title="Permalink to this headline">#</a></h3>
+<p>The inverse Laplace transform is given by the Symbolic math toolbox function <code class="docutils literal notranslate"><span class="pre">ilaplace</span></code>. We can determine the partial fraction of a rational polynomial with constant coefficients using the function <code class="docutils literal notranslate"><span class="pre">residue</span></code> we can factorise a symbolic polynomial using <code class="docutils literal notranslate"><span class="pre">factor</span></code> and expand a product of rational terms using <code class="docutils literal notranslate"><span class="pre">expand</span></code>. A symbolic polynomial with numerical coeffients can be converted into a numerial polynomial using <code class="docutils literal notranslate"><span class="pre">sym2poly</span></code> and you can go the other way using <code class="docutils literal notranslate"><span class="pre">poly2sym</span></code>. For more information and examples on how to use these functions please consult the <a class="reference external" href="https://uk.mathworks.com/help/index.html">MATLAB help centre</a>.</p>
 <hr/>
-Footnote $1$ A pair of complex conjugate factors 
+<p><em>Footnote</em></p>
+<p>1 A pair of complex conjugate factors</p>
 <div class="math notranslate nohighlight">
 \[(s - \sigma - j\omega)(s - \sigma + j\omega)\]</div>
 <p>can be represented as a single quadratic factor which, when <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span>, will be</p>
@@ -1618,9 +1622,6 @@ Footnote $1$ A pair of complex conjugate factors
 \[\frac{(s + \sigma)}{\left(s + \sigma\right)^2 + \omega^2}\Leftrightarrow e^{-\sigma t}\cos(\omega t)u_0(t) \]</div>
 <div class="math notranslate nohighlight">
 \[\frac{\omega}{\left(s + \sigma\right)^2 + \omega^2}\Leftrightarrow e^{-\sigma t}\sin(\omega t)u_0(t) \]</div>
-<section id="matlab">
-<h3>MATLAB<a class="headerlink" href="#matlab" title="Permalink to this headline">#</a></h3>
-<p>The inverse Laplace transform is given by the Symbolic math toolbox function <em>ilaplace</em>. We can determine the partial fraction of a rational polynomial with constant coefficients using the function <em>residue</em> we can factorise a symbolic polynomial using <code class="docutils literal notranslate"><span class="pre">factor</span></code> and expand a product of rational terms using <code class="docutils literal notranslate"><span class="pre">expand</span></code>. A symbolic polynomial with numerical coeffients can be converted into a numerial polynomial using <code class="docutils literal notranslate"><span class="pre">sym2poly</span></code>. For more information and examples on how to use these functions please consult the <a class="reference external" href="https://uk.mathworks.com/help/index.html">MATLAB help centre</a>.</p>
 </section>
 </section>
 <section id="next-time">

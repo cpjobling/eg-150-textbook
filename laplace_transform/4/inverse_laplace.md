@@ -683,8 +683,15 @@ Each such rational polynomial can then be represented as a *partial fraction* wi
 
 The factored polynomial which represents $F(s)$ can then be converted into the equivalent $f(t)$ by use of the *linearity property* ({ref}`lprops:linearity`) and tables of Laplace transforms (e.g. {ref}`ap:xform_table`).
 
+### MATLAB
+
+The inverse Laplace transform is given by the Symbolic math toolbox function `ilaplace`. We can determine the partial fraction of a rational polynomial with constant coefficients using the function `residue` we can factorise a symbolic polynomial using `factor` and expand a product of rational terms using `expand`. A symbolic polynomial with numerical coeffients can be converted into a numerial polynomial using `sym2poly` and you can go the other way using `poly2sym`. For more information and examples on how to use these functions please consult the [MATLAB help centre](https://uk.mathworks.com/help/index.html).
+
 <hr/>
-Footnote $1$ A pair of complex conjugate factors 
+
+*Footnote* 
+
+1 A pair of complex conjugate factors 
 
 $$(s - \sigma - j\omega)(s - \sigma + j\omega)$$
 
@@ -702,9 +709,7 @@ $$\frac{(s + \sigma)}{\left(s + \sigma\right)^2 + \omega^2}\Leftrightarrow e^{-\
 
 $$\frac{\omega}{\left(s + \sigma\right)^2 + \omega^2}\Leftrightarrow e^{-\sigma t}\sin(\omega t)u_0(t) $$
 
-### MATLAB
 
-The inverse Laplace transform is given by the Symbolic math toolbox function *ilaplace*. We can determine the partial fraction of a rational polynomial with constant coefficients using the function *residue* we can factorise a symbolic polynomial using `factor` and expand a product of rational terms using `expand`. A symbolic polynomial with numerical coeffients can be converted into a numerial polynomial using `sym2poly`. For more information and examples on how to use these functions please consult the [MATLAB help centre](https://uk.mathworks.com/help/index.html).
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
