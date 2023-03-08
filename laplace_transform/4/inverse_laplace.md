@@ -46,10 +46,6 @@ We will explore the use of MATLAB to solve inverse Laplace tranforms in MATLAB L
 * {ref}`ilap:defn`
 * {ref}`ilap:pfe`
 * {ref}`ilap_by_pfe`
-* {ref}`ilap:distinct_real_poles`
-* {ref}`case:complex_poles`
-* {ref}`ilap:repeated_poles`
-* {ref}`ilap:improper`
 * {ref}`examples11`
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -59,7 +55,7 @@ We will explore the use of MATLAB to solve inverse Laplace tranforms in MATLAB L
 
 The formal definition of the Inverse Laplace Transform is
 
-$$\mathcal{L}^{-1}\left\{ F(s) \right\} = \frac{1}{2\pi j}\int_{\sigma-j\omega}^{\sigma+j\omega} F(s)e^{st}ds$$ eq:4.4:1)
+$$\mathcal{L}^{-1}\left\{ F(s) \right\} = \frac{1}{2\pi j}\int_{\sigma-j\omega}^{\sigma+j\omega} F(s)e^{st}ds$$ (eq:4.4:1)
 
 but this is difficult to use in practice because it requires contour integration using complex variable theory.
 
@@ -115,7 +111,7 @@ The coefficients $a_k$ and $b_k$ are real for $k = 1, 2, 3, \ldots$
 
 If $F(s)$ is proper then it is conventional to make the coefficient $s_n$ unity thus:
 
-$$F(s) = \frac{N(s)}{D(s)} = \frac{1/{a_n}\left({ {b_m}{s^m} + {b_{m - 1}}{s^{m - 1}} + {b_{m - 2}}{s^{m - 2}} +  \cdots  + {b_1}s + {b_0}} \right)}{s^n + \frac{a_{n - 1}}{a_n}{s^{n - 1}} + \frac{a_{n - 2}}{a_n}{s^{n - 2}} +  \cdots  + \frac{a_1}{a_n}s + \frac{a_0}{a_n}}$$
+$$F(s) = \frac{N(s)}{D(s)} = \frac{1/{a_n}\left({ {b_m}{s^m} + {b_{m - 1}}{s^{m - 1}} + {b_{m - 2}}{s^{m - 2}} +  \cdots  + {b_1}s + {b_0}} \right)}{s^n + \frac{a_{n - 1}}{a_n}{s^{n - 1}} + \frac{a_{n - 2}}{a_n}{s^{n - 2}} +  \cdots  + \frac{a_1}{a_n}s + \frac{a_0}{a_n}}$$ (eq:4.4:3)
 
 (I know it doesn't look simpler, but remember that the $a$ and $b$ coefficients are numbers in practice!)
 
@@ -148,19 +144,19 @@ We will examine each case by means of a worked example. Please refer to Chapter 
 
 If the poles $p_1,\,p_2,\,p_3,\,\ldots,\, p_n$ are *distinct* we can factor the denominator of $F(s)$ in the form 
 
-$$F(s) = \frac{N(s)}{(s-p_1)(s-p_2)(s-p_3)\ldots(s-p_n)}$$
+$$F(s) = \frac{N(s)}{(s-p_1)(s-p_2)(s-p_3)\ldots(s-p_n)}$$ (eq:4.4:4)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 Next, using *partial fraction expansion*
 
-$$F(s)=\frac{r_1}{s-p_1}+\frac{r_2}{s-p_2}+\frac{r_3}{s-p_3}+\cdots + \frac{r_n}{s-p_n}$$
+$$F(s)=\frac{r_1}{s-p_1}+\frac{r_2}{s-p_2}+\frac{r_3}{s-p_3}+\cdots + \frac{r_n}{s-p_n}$$ ((eq:4.4:5)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 To evaluate the *residue* $r_k$, we multiply both sides by $(s-p_k)$ then let $s \to p_k$
 
-$$r_k = \lim_{s\to p_k}(s-p_k)F(s) = \left.(s-p_k)F(s)\right|_{s=p_k}$$
+$$r_k = \lim_{s\to p_k}(s-p_k)F(s) = \left.(s-p_k)F(s)\right|_{s=p_k}$$ (eq:4.4:6)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -172,9 +168,9 @@ Quite often the poles of $F(s)$ are complex and because the complex poles occur 
 You can still use the PFE with complex poles, as demonstrated in Pages 3-5&mdash;3-7 in the textbook. However it is easier to use the fact that complex poles will appear as quadratic factors of the form $s^2 + as + b$ and then call on the two transforms in the PFE
 
 
-$$\frac{\omega}{(s - a)^2 + \omega^2} \Leftrightarrow e^{at}\sin\;\omega t$$
+$$\frac{\omega}{(s - a)^2 + \omega^2} \Leftrightarrow e^{at}\sin\;\omega t$$ (eq:4.4:7)
 
-$$\frac{s + a}{(s - a)^2 + \omega^2} \Leftrightarrow e^{at}\cos\;\omega t$$
+$$\frac{s + a}{(s - a)^2 + \omega^2} \Leftrightarrow e^{at}\cos\;\omega t$$ (eq:4.4:8)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -183,7 +179,7 @@ $$\frac{s + a}{(s - a)^2 + \omega^2} \Leftrightarrow e^{at}\cos\;\omega t$$
 
 When a rational polynomial has repeated poles 
 
-$$F(s) = \frac{N(s)}{(s - p_1)^m(s - p_2)\cdots(s - p_{n-1})(s-p_0)}$$
+$$F(s) = \frac{N(s)}{(s - p_1)^m(s - p_2)\cdots(s - p_{n-1})(s-p_0)}$$ (eq:4.4:9)
 
 and the PFE will have the form:
 
@@ -198,7 +194,7 @@ The ordinary residues $r_k$ can be found using the rule used for distinct roots.
 
 To find the residuals for the repeated term $r_{1k}$ we need to multiply both sides of the expression by $(s+p_1)^m$ and take repeated derivatives as described in detail in Pages 3-7&mdash;3-9 of the text book. This yields the general formula
 
-$$r_{1k}=\lim_{s\to p_1}\frac{1}{(k-1)!}\frac{d^{k-1}}{ds^{k-1}}\left[(s-p_1)^mF(s)\right]$$
+$$r_{1k}=\lim_{s\to p_1}\frac{1}{(k-1)!}\frac{d^{k-1}}{ds^{k-1}}\left[(s-p_1)^mF(s)\right]$$ ((eq:4.4:10)
 
 which in the age of computers is rarely needed.
 
@@ -209,7 +205,7 @@ which in the age of computers is rarely needed.
 
 If $F(s)$ is an improper rational polynomial, that is $m \ge n$, we must first divide the numerator $N(s)$ by the denomonator $D(s)$ to derive an expression of the form
 
-$$F(s) = k_0 + k_1s + k_2s^2 + \cdots + k_{m-n}s^{m-n} + \frac{N(s)}{D(s)}$$
+$$F(s) = k_0 + k_1s + k_2s^2 + \cdots + k_{m-n}s^{m-n} + \frac{N(s)}{D(s)}$$ ((eq:4.4:11)
 
 and then $N(s)/D(s)$ will be a proper rational polynomial.
 

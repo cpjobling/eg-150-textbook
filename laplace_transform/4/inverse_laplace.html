@@ -639,6 +639,11 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#definition">
    Definition
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partial-fraction-expansion">
+   Partial Fraction Expansion
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#proper-and-improper-rational-functions">
@@ -849,6 +854,11 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#definition">
    Definition
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partial-fraction-expansion">
+   Partial Fraction Expansion
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#proper-and-improper-rational-functions">
@@ -1056,21 +1066,25 @@ title="Print to PDF"
 <h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#ilap-defn"><span class="std std-ref">Definition</span></a></p></li>
-<li><p><span class="xref std std-ref">ilap:pfe</span></p></li>
+<li><p><a class="reference internal" href="#ilap-pfe"><span class="std std-ref">Partial Fraction Expansion</span></a></p></li>
 <li><p><a class="reference internal" href="#ilap-by-pfe"><span class="std std-ref">Inverse Laplace Transform by Partial Fraction Expansion (PFE)</span></a></p></li>
-<li><p><a class="reference internal" href="#ilap-distinct-real-poles"><span class="std std-ref">The case of the distinct real poles</span></a></p></li>
-<li><p><a class="reference internal" href="#case-complex-poles"><span class="std std-ref">The case of the complex poles</span></a></p></li>
-<li><p><a class="reference internal" href="#ilap-repeated-poles"><span class="std std-ref">The case of the repeated poles</span></a></p></li>
-<li><p><a class="reference internal" href="#ilap-improper"><span class="std std-ref">The case of the improper rational polynomial</span></a></p></li>
 <li><p><a class="reference internal" href="#examples11"><span class="std std-ref">Examples 11: Inverse Laplace Transforms</span></a></p></li>
 </ul>
 </section>
 <section id="definition">
 <span id="ilap-defn"></span><h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
 <p>The formal definition of the Inverse Laplace Transform is</p>
+<div class="math notranslate nohighlight" id="equation-eq-4-4-1">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-4-4-1" title="Permalink to this equation">#</a></span>\[\mathcal{L}^{-1}\left\{ F(s) \right\} = \frac{1}{2\pi j}\int_{\sigma-j\omega}^{\sigma+j\omega} F(s)e^{st}ds\]</div>
+<p>but this is difficult to use in practice because it requires contour integration using complex variable theory.</p>
+<p>For most engineering problems we can instead refer to <strong>Tables of Properties</strong> and <strong>Common Transform Pairs</strong> to look up the <em>Inverse Laplace Transform</em>.</p>
+<p>(Or, if we are not taking an exam, we can use a computer or mobile device.)</p>
+</section>
+<section id="partial-fraction-expansion">
+<span id="ilap-pfe"></span><h2>Partial Fraction Expansion<a class="headerlink" href="#partial-fraction-expansion" title="Permalink to this headline">#</a></h2>
+<p>Quite often the Laplace Transform we start off with is a <em>rational polynomial</em> in <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-4-4-2">
-<span class="eqno">(2)<a class="headerlink" href="#equation-eq-4-4-2" title="Permalink to this equation">#</a></span>\[ \begin{align}\begin{aligned}\mathcal{L}^{-1}\left\{ F(s) \right\} = \frac{1}{2\pi j}\int_{\sigma-j\omega}^{\sigma+j\omega} F(s)e^{st}ds$$ eq:4.4:1)\\but this is difficult to use in practice because it requires contour integration using complex variable theory.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\For most engineering problems we can instead refer to **Tables of Properties** and **Common Transform Pairs** to look up the *Inverse Laplace Transform*.\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;subslide&quot;}}\\(Or, if we are not taking an exam, we can use a computer or mobile device.)\\+++ {&quot;slideshow&quot;: {&quot;slide_type&quot;: &quot;slide&quot;}}\\(ilap:pfe)=
-## Partial Fraction Expansion\\Quite often the Laplace Transform we start off with is a *rational polynomial* in $s$.\\$$F(s) = \frac{N(s)}{D(s)} = \frac{b_ms^m + b_{m-1}s^{m-1}+b_{m-2}s^{m-2}+ \cdots +b_{1}s+b_{0}}{a_ns^n + a_{n-1}s^{n-1}+a_{n-2}s^{n-2}+ \cdots +a_{1}s+a_{0}}\end{aligned}\end{align} \]</div>
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq-4-4-2" title="Permalink to this equation">#</a></span>\[F(s) = \frac{N(s)}{D(s)} = \frac{b_ms^m + b_{m-1}s^{m-1}+b_{m-2}s^{m-2}+ \cdots +b_{1}s+b_{0}}{a_ns^n + a_{n-1}s^{n-1}+a_{n-2}s^{n-2}+ \cdots +a_{1}s+a_{0}}\]</div>
 <p>The coefficients <span class="math notranslate nohighlight">\(a_k\)</span> and <span class="math notranslate nohighlight">\(b_k\)</span> are real for <span class="math notranslate nohighlight">\(k = 1, 2, 3, \ldots\)</span></p>
 <section id="proper-and-improper-rational-functions">
 <h3>Proper and Improper Rational Functions<a class="headerlink" href="#proper-and-improper-rational-functions" title="Permalink to this headline">#</a></h3>
@@ -1100,8 +1114,8 @@ title="Print to PDF"
 <section id="a-further-simplifying-assumption">
 <h3>A Further Simplifying Assumption<a class="headerlink" href="#a-further-simplifying-assumption" title="Permalink to this headline">#</a></h3>
 <p>If <span class="math notranslate nohighlight">\(F(s)\)</span> is proper then it is conventional to make the coefficient <span class="math notranslate nohighlight">\(s_n\)</span> unity thus:</p>
-<div class="math notranslate nohighlight">
-\[F(s) = \frac{N(s)}{D(s)} = \frac{1/{a_n}\left({ {b_m}{s^m} + {b_{m - 1}}{s^{m - 1}} + {b_{m - 2}}{s^{m - 2}} +  \cdots  + {b_1}s + {b_0}} \right)}{s^n + \frac{a_{n - 1}}{a_n}{s^{n - 1}} + \frac{a_{n - 2}}{a_n}{s^{n - 2}} +  \cdots  + \frac{a_1}{a_n}s + \frac{a_0}{a_n}}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-4-4-3">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-4-4-3" title="Permalink to this equation">#</a></span>\[F(s) = \frac{N(s)}{D(s)} = \frac{1/{a_n}\left({ {b_m}{s^m} + {b_{m - 1}}{s^{m - 1}} + {b_{m - 2}}{s^{m - 2}} +  \cdots  + {b_1}s + {b_0}} \right)}{s^n + \frac{a_{n - 1}}{a_n}{s^{n - 1}} + \frac{a_{n - 2}}{a_n}{s^{n - 2}} +  \cdots  + \frac{a_1}{a_n}s + \frac{a_0}{a_n}}\]</div>
 <p>(I know it doesn’t look simpler, but remember that the <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> coefficients are numbers in practice!)</p>
 </section>
 </section>
@@ -1123,29 +1137,29 @@ title="Print to PDF"
 <section id="the-case-of-the-distinct-real-poles">
 <span id="ilap-distinct-real-poles"></span><h2>The case of the distinct real poles<a class="headerlink" href="#the-case-of-the-distinct-real-poles" title="Permalink to this headline">#</a></h2>
 <p>If the poles <span class="math notranslate nohighlight">\(p_1,\,p_2,\,p_3,\,\ldots,\, p_n\)</span> are <em>distinct</em> we can factor the denominator of <span class="math notranslate nohighlight">\(F(s)\)</span> in the form</p>
-<div class="math notranslate nohighlight">
-\[F(s) = \frac{N(s)}{(s-p_1)(s-p_2)(s-p_3)\ldots(s-p_n)}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-4-4-4">
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq-4-4-4" title="Permalink to this equation">#</a></span>\[F(s) = \frac{N(s)}{(s-p_1)(s-p_2)(s-p_3)\ldots(s-p_n)}\]</div>
 <p>Next, using <em>partial fraction expansion</em></p>
-<div class="math notranslate nohighlight">
-\[F(s)=\frac{r_1}{s-p_1}+\frac{r_2}{s-p_2}+\frac{r_3}{s-p_3}+\cdots + \frac{r_n}{s-p_n}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-4-4-5">
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq-4-4-5" title="Permalink to this equation">#</a></span>\[F(s)=\frac{r_1}{s-p_1}+\frac{r_2}{s-p_2}+\frac{r_3}{s-p_3}+\cdots + \frac{r_n}{s-p_n}\]</div>
 <p>To evaluate the <em>residue</em> <span class="math notranslate nohighlight">\(r_k\)</span>, we multiply both sides by <span class="math notranslate nohighlight">\((s-p_k)\)</span> then let <span class="math notranslate nohighlight">\(s \to p_k\)</span></p>
-<div class="math notranslate nohighlight">
-\[r_k = \lim_{s\to p_k}(s-p_k)F(s) = \left.(s-p_k)F(s)\right|_{s=p_k}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-4-4-6">
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-4-4-6" title="Permalink to this equation">#</a></span>\[r_k = \lim_{s\to p_k}(s-p_k)F(s) = \left.(s-p_k)F(s)\right|_{s=p_k}\]</div>
 </section>
 <section id="the-case-of-the-complex-poles">
 <span id="case-complex-poles"></span><h2>The case of the complex poles<a class="headerlink" href="#the-case-of-the-complex-poles" title="Permalink to this headline">#</a></h2>
 <p>Quite often the poles of <span class="math notranslate nohighlight">\(F(s)\)</span> are complex and because the complex poles occur as complex conjugate pairs, the number of complex poles is even. Thus if <span class="math notranslate nohighlight">\(p_k\)</span> is a complex root of <span class="math notranslate nohighlight">\(D(s)\)</span> then its complex conjugate <span class="math notranslate nohighlight">\(p_k^*\)</span> is also a root of <span class="math notranslate nohighlight">\(D(s)\)</span>.</p>
 <p>You can still use the PFE with complex poles, as demonstrated in Pages 3-5—3-7 in the textbook. However it is easier to use the fact that complex poles will appear as quadratic factors of the form <span class="math notranslate nohighlight">\(s^2 + as + b\)</span> and then call on the two transforms in the PFE</p>
-<div class="math notranslate nohighlight">
-\[\frac{\omega}{(s - a)^2 + \omega^2} \Leftrightarrow e^{at}\sin\;\omega t\]</div>
-<div class="math notranslate nohighlight">
-\[\frac{s + a}{(s - a)^2 + \omega^2} \Leftrightarrow e^{at}\cos\;\omega t\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-4-4-7">
+<span class="eqno">(8)<a class="headerlink" href="#equation-eq-4-4-7" title="Permalink to this equation">#</a></span>\[\frac{\omega}{(s - a)^2 + \omega^2} \Leftrightarrow e^{at}\sin\;\omega t\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-4-4-8">
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq-4-4-8" title="Permalink to this equation">#</a></span>\[\frac{s + a}{(s - a)^2 + \omega^2} \Leftrightarrow e^{at}\cos\;\omega t\]</div>
 </section>
 <section id="the-case-of-the-repeated-poles">
 <span id="ilap-repeated-poles"></span><h2>The case of the repeated poles<a class="headerlink" href="#the-case-of-the-repeated-poles" title="Permalink to this headline">#</a></h2>
 <p>When a rational polynomial has repeated poles</p>
-<div class="math notranslate nohighlight">
-\[F(s) = \frac{N(s)}{(s - p_1)^m(s - p_2)\cdots(s - p_{n-1})(s-p_0)}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-4-4-9">
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-4-4-9" title="Permalink to this equation">#</a></span>\[F(s) = \frac{N(s)}{(s - p_1)^m(s - p_2)\cdots(s - p_{n-1})(s-p_0)}\]</div>
 <p>and the PFE will have the form:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{array}{c}
@@ -1154,15 +1168,15 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 \end{array}\end{split}\]</div>
 <p>The ordinary residues <span class="math notranslate nohighlight">\(r_k\)</span> can be found using the rule used for distinct roots.</p>
 <p>To find the residuals for the repeated term <span class="math notranslate nohighlight">\(r_{1k}\)</span> we need to multiply both sides of the expression by <span class="math notranslate nohighlight">\((s+p_1)^m\)</span> and take repeated derivatives as described in detail in Pages 3-7—3-9 of the text book. This yields the general formula</p>
-<div class="math notranslate nohighlight">
-\[r_{1k}=\lim_{s\to p_1}\frac{1}{(k-1)!}\frac{d^{k-1}}{ds^{k-1}}\left[(s-p_1)^mF(s)\right]\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-4-4-10">
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq-4-4-10" title="Permalink to this equation">#</a></span>\[r_{1k}=\lim_{s\to p_1}\frac{1}{(k-1)!}\frac{d^{k-1}}{ds^{k-1}}\left[(s-p_1)^mF(s)\right]\]</div>
 <p>which in the age of computers is rarely needed.</p>
 </section>
 <section id="the-case-of-the-improper-rational-polynomial">
 <span id="ilap-improper"></span><h2>The case of the improper rational polynomial<a class="headerlink" href="#the-case-of-the-improper-rational-polynomial" title="Permalink to this headline">#</a></h2>
 <p>If <span class="math notranslate nohighlight">\(F(s)\)</span> is an improper rational polynomial, that is <span class="math notranslate nohighlight">\(m \ge n\)</span>, we must first divide the numerator <span class="math notranslate nohighlight">\(N(s)\)</span> by the denomonator <span class="math notranslate nohighlight">\(D(s)\)</span> to derive an expression of the form</p>
-<div class="math notranslate nohighlight">
-\[F(s) = k_0 + k_1s + k_2s^2 + \cdots + k_{m-n}s^{m-n} + \frac{N(s)}{D(s)}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-4-4-11">
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq-4-4-11" title="Permalink to this equation">#</a></span>\[F(s) = k_0 + k_1s + k_2s^2 + \cdots + k_{m-n}s^{m-n} + \frac{N(s)}{D(s)}\]</div>
 <p>and then <span class="math notranslate nohighlight">\(N(s)/D(s)\)</span> will be a proper rational polynomial.</p>
 </section>
 <section id="examples-11-inverse-laplace-transforms">
@@ -1333,7 +1347,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 <p>Rework Example 3-2 from the <span id="id4">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> using quadratic factors.</p>
 <p>Find the Inverse Laplace Transform of</p>
 <div class="math notranslate nohighlight" id="equation-pfe1">
-<span class="eqno">(3)<a class="headerlink" href="#equation-pfe1" title="Permalink to this equation">#</a></span>\[F_3(s) = \frac{s + 3}{(s+1)(s^2 + 4s + 8)}\]</div>
+<span class="eqno">(13)<a class="headerlink" href="#equation-pfe1" title="Permalink to this equation">#</a></span>\[F_3(s) = \frac{s + 3}{(s+1)(s^2 + 4s + 8)}\]</div>
 <p>(Quick solution: <a class="reference external" href="https://www.wolframalpha.com/input/?i=inverse+laplace+transform+%28s%2B3%29%2F%28%28s+%2B+1%29%28s%5E2+%2B+4s+%2B+8%29%29">Wolfram Alpha</a> – Shows that the computer is not always best!)</p>
 <section id="solution-11-3">
 <h4>Solution 11.3<a class="headerlink" href="#solution-11-3" title="Permalink to this headline">#</a></h4>
@@ -1398,20 +1412,20 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 <p>Then comparing this with the desired form <span class="math notranslate nohighlight">\((s + a)^2 + \omega^2\)</span>, we have <span class="math notranslate nohighlight">\(a = 2\)</span> and <span class="math notranslate nohighlight">\(\omega^2 = 4 \to \omega = \sqrt{4} = 2\)</span>.</p>
 <p>To solve this, we need to find the PFE for the assumed solution:</p>
 <div class="math notranslate nohighlight" id="equation-pfe2">
-<span class="eqno">(4)<a class="headerlink" href="#equation-pfe2" title="Permalink to this equation">#</a></span>\[F_3(s) = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 2^2} + r_3\frac{s + 2}{(s + 2)^2 + 2^2}  \]</div>
-<p>which we do by equating <a class="reference internal" href="#equation-pfe2">(4)</a> to <a class="reference internal" href="#equation-pfe1">(3)</a>,</p>
+<span class="eqno">(14)<a class="headerlink" href="#equation-pfe2" title="Permalink to this equation">#</a></span>\[F_3(s) = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 2^2} + r_3\frac{s + 2}{(s + 2)^2 + 2^2}  \]</div>
+<p>which we do by equating <a class="reference internal" href="#equation-pfe2">(14)</a> to <a class="reference internal" href="#equation-pfe1">(13)</a>,</p>
 <div class="math notranslate nohighlight" id="equation-pfe3">
-<span class="eqno">(5)<a class="headerlink" href="#equation-pfe3" title="Permalink to this equation">#</a></span>\[\frac{s + 3}{(s+1)(s^2 + 4s + 8)} = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 2^2} + r_3\frac{s + 2}{(s + 2)^2 + 2^2}\]</div>
+<span class="eqno">(15)<a class="headerlink" href="#equation-pfe3" title="Permalink to this equation">#</a></span>\[\frac{s + 3}{(s+1)(s^2 + 4s + 8)} = \frac{2/5}{s+1} + r_2\frac{2}{(s + 2)^2 + 2^2} + r_3\frac{s + 2}{(s + 2)^2 + 2^2}\]</div>
 <p>putting both sides on a common denominator,</p>
 <div class="math notranslate nohighlight" id="equation-pfe4">
-<span class="eqno">(6)<a class="headerlink" href="#equation-pfe4" title="Permalink to this equation">#</a></span>\[\frac{s+3}{(s+1)(s^2 + 4s + 8)} = \frac{(2/5)(s^2 + 4s + 8) + r_2(s + 1) + r_3(s + 1)(s + 2)}{(s+1)(s^2 + 4s + 8)}\]</div>
+<span class="eqno">(16)<a class="headerlink" href="#equation-pfe4" title="Permalink to this equation">#</a></span>\[\frac{s+3}{(s+1)(s^2 + 4s + 8)} = \frac{(2/5)(s^2 + 4s + 8) + r_2(s + 1) + r_3(s + 1)(s + 2)}{(s+1)(s^2 + 4s + 8)}\]</div>
 <p>and then solving for <span class="math notranslate nohighlight">\(r_2\)</span> and <span class="math notranslate nohighlight">\(r_3\)</span> by equating the numerator coefficients on the left and right sides.</p>
 <div class="math notranslate nohighlight">
 \[s+3 = (2/5)(s^2 + 4s + 8) + r_2(s + 1) + r_3(s^2 + 3s + 2)\]</div>
 <p>The completion of this problem is left as a <em>homework exercise</em> for the student.</p>
 <p>The solution should be:</p>
 <div class="math notranslate nohighlight" id="equation-pfe5">
-<span class="eqno">(7)<a class="headerlink" href="#equation-pfe5" title="Permalink to this equation">#</a></span>\[f_3(t) = \frac{2}{5}e^{-t} + \frac{3}{10} e^{-2t}\sin 2t - \frac{2}{5} e^{-2t}\cos 2t \]</div>
+<span class="eqno">(17)<a class="headerlink" href="#equation-pfe5" title="Permalink to this equation">#</a></span>\[f_3(t) = \frac{2}{5}e^{-t} + \frac{3}{10} e^{-2t}\sin 2t - \frac{2}{5} e^{-2t}\cos 2t \]</div>
 <p>You can use trig. identities to simplify this further if you wish.</p>
 </section>
 </section>
@@ -1552,21 +1566,21 @@ k =
 </section>
 <section id="homework">
 <h2>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">#</a></h2>
-<p>Complete <a class="reference internal" href="#ex-11-3"><span class="std std-ref">Example 11.3</span></a> to confirm the result <a class="reference internal" href="#equation-pfe4">(6)</a>. Then do the end of the chapter exercises (Section 3.67) from the <span id="id7">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>. Don’t look at the answers until you have attempted the problems.</p>
+<p>Complete <a class="reference internal" href="#ex-11-3"><span class="std std-ref">Example 11.3</span></a> to confirm the result <a class="reference internal" href="#equation-pfe4">(16)</a>. Then do the end of the chapter exercises (Section 3.67) from the <span id="id7">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>. Don’t look at the answers until you have attempted the problems.</p>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
 <p>In this section we have looked at the inverse Laplace transform. In particular, how to solve continuous-time LTI system problems that take the form of rational polynomials in <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#ilap-defn"><span class="std std-ref">Definition</span></a></p></li>
-<li><p><span class="xref std std-ref">ilap:pfe</span></p></li>
+<li><p><a class="reference internal" href="#ilap-pfe"><span class="std std-ref">Partial Fraction Expansion</span></a></p></li>
 <li><p><a class="reference internal" href="#ilap-by-pfe"><span class="std std-ref">Inverse Laplace Transform by Partial Fraction Expansion (PFE)</span></a></p></li>
 <li><p><a class="reference internal" href="#examples11"><span class="std std-ref">Examples 11: Inverse Laplace Transforms</span></a></p></li>
 </ul>
 </section>
 <section id="take-aways">
 <h2>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this headline">#</a></h2>
-<p>For causal signals and continuous-time LTI systems, the Laplace transform usually takes the form of a rational polynomial with general form <span class="math notranslate nohighlight">\(F(s)\)</span> as shown in equation <a class="reference internal" href="#equation-eq-4-4-2">(2)</a>. The denominator of <span class="math notranslate nohighlight">\(F(s)\)</span>, <span class="math notranslate nohighlight">\(D(s)\)</span>, can always be factorised, and the factors (zeros of D(s), poles of F(s)) will be real <span class="math notranslate nohighlight">\((s - p_k)\)</span>, real and repeated, such as <span class="math notranslate nohighlight">\((s - p_k)^n\)</span> or complex conjugate pairs <span class="math notranslate nohighlight">\((s - \sigma_k - j\omega_k)(s - \sigma_k + j\omega_k)^\dagger\)</span>, or a combination of these.</p>
+<p>For causal signals and continuous-time LTI systems, the Laplace transform usually takes the form of a rational polynomial with general form <span class="math notranslate nohighlight">\(F(s)\)</span> as shown in equation <a class="reference internal" href="#equation-eq-4-4-2">(3)</a>. The denominator of <span class="math notranslate nohighlight">\(F(s)\)</span>, <span class="math notranslate nohighlight">\(D(s)\)</span>, can always be factorised, and the factors (zeros of D(s), poles of F(s)) will be real <span class="math notranslate nohighlight">\((s - p_k)\)</span>, real and repeated, such as <span class="math notranslate nohighlight">\((s - p_k)^n\)</span> or complex conjugate pairs <span class="math notranslate nohighlight">\((s - \sigma_k - j\omega_k)(s - \sigma_k + j\omega_k)^\dagger\)</span>, or a combination of these.</p>
 <p>Each such rational polynomial can then be represented as a <em>partial fraction</em> with <em>residues</em> <span class="math notranslate nohighlight">\(r_k\)</span> whose values are determined by using one of the <em>partial fraction expansion</em> methods presented in this unit:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#ilap-distinct-real-poles"><span class="std std-ref">The case of the distinct real poles</span></a></p></li>
