@@ -1124,11 +1124,21 @@ y10 = 1/z10;
 pretty(y10)
 ```
 
++++ {"slideshow": {"slide_type": "notes"}}
+
 ## Lab Work
 
 In MATLAB Lab 5, we will explore the tools provided by MATLAB for solving circuit analysis problems.
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Homework
+
+Complete any exercises that were not covered in the class or follow-up examples class. There are a number of related problems in [Solved Problems 3.39](https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section47#ch03fig14)&mdash;3.41 in {cite}`schaum` and in section [4.7 Exercises](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=121) in {cite}`karris`. 
+
+Supplementary problems [3.52 and following](https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section48) ({cite}`schaum`) provide opportunities for extra practice.
+
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Summary
 

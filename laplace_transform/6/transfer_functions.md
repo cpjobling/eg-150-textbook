@@ -340,7 +340,7 @@ For the answer, refer to the lecture recording or see solved problem 3.31 in in 
 
 Attempt any of the questions in {ref}`examples12` of these course notes that have not been covered in the examples class.
 
-The solutions for Unit 4.6 are in **Section 3.8 Solved Problems** {schaum}`schaum` starting at 3.23. (The actual numbers are listed with the examples above.)
+The solutions for Unit 4.6 are in **Section 3.8 Solved Problems** {cite}`schaum` starting at 3.23. (The actual numbers are listed with the examples above.)
 
 We will do some problems from these sets in Examples Class 4.
 

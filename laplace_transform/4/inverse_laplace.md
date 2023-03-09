@@ -17,13 +17,13 @@ kernelspec:
 (unit4.4)=
 # Unit 4.4 The Inverse Laplace Transform
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/4/inverse_laplace](https://cpjobling.github.io/eg-150-textbook/laplace_transform/4/inverse_laplace)
 
 ![QR Code for this lecture](pictures/qrcode_laplace4.png)
 
-+++ {"slideshow": {"slide_type": "notes"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (ilap:into)=
 ## Introduction
@@ -46,10 +46,6 @@ We will explore the use of MATLAB to solve inverse Laplace tranforms in MATLAB L
 * {ref}`ilap:defn`
 * {ref}`ilap:pfe`
 * {ref}`ilap_by_pfe`
-* {ref}`ilap:distinct_real_poles`
-* {ref}`case:complex_poles`
-* {ref}`ilap:repeated_poles`
-* {ref}`ilap:improper`
 * {ref}`examples11`
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -57,9 +53,9 @@ We will explore the use of MATLAB to solve inverse Laplace tranforms in MATLAB L
 (ilap:defn)=
 ## Definition
 
-The formal definition of the Inverse Laplace Transform is
+The formal definition of the inverse Laplace transform is
 
-$$\mathcal{L}^{-1}\left\{ F(s) \right\} = \frac{1}{2\pi j}\int_{\sigma-j\omega}^{\sigma+j\omega} F(s)e^{st}ds$$
+$$\mathcal{L}^{-1}\left\{ F(s) \right\} = \frac{1}{2\pi j}\int_{\sigma-j\omega}^{\sigma+j\omega} F(s)e^{st}ds$$ (eq:4.4:1)
 
 but this is difficult to use in practice because it requires contour integration using complex variable theory.
 
@@ -78,7 +74,7 @@ For most engineering problems we can instead refer to **Tables of Properties** a
 
 Quite often the Laplace Transform we start off with is a *rational polynomial* in $s$.
 
-$$F(s) = \frac{N(s)}{D(s)} = \frac{b_ms^m + b_{m-1}s^{m-1}+b_{m-2}s^{m-2}+ \cdots +b_{1}s+b_{0}}{a_ns^n + a_{n-1}s^{n-1}+a_{n-2}s^{n-2}+ \cdots +a_{1}s+a_{0}}$$
+$$F(s) = \frac{N(s)}{D(s)} = \frac{b_ms^m + b_{m-1}s^{m-1}+b_{m-2}s^{m-2}+ \cdots +b_{1}s+b_{0}}{a_ns^n + a_{n-1}s^{n-1}+a_{n-2}s^{n-2}+ \cdots +a_{1}s+a_{0}}$$ (eq:4.4:2)
 
 The coefficients $a_k$ and $b_k$ are real for $k = 1, 2, 3, \ldots$
 
@@ -115,7 +111,7 @@ The coefficients $a_k$ and $b_k$ are real for $k = 1, 2, 3, \ldots$
 
 If $F(s)$ is proper then it is conventional to make the coefficient $s_n$ unity thus:
 
-$$F(s) = \frac{N(s)}{D(s)} = \frac{1/{a_n}\left({ {b_m}{s^m} + {b_{m - 1}}{s^{m - 1}} + {b_{m - 2}}{s^{m - 2}} +  \cdots  + {b_1}s + {b_0}} \right)}{s^n + \frac{a_{n - 1}}{a_n}{s^{n - 1}} + \frac{a_{n - 2}}{a_n}{s^{n - 2}} +  \cdots  + \frac{a_1}{a_n}s + \frac{a_0}{a_n}}$$
+$$F(s) = \frac{N(s)}{D(s)} = \frac{1/{a_n}\left({ {b_m}{s^m} + {b_{m - 1}}{s^{m - 1}} + {b_{m - 2}}{s^{m - 2}} +  \cdots  + {b_1}s + {b_0}} \right)}{s^n + \frac{a_{n - 1}}{a_n}{s^{n - 1}} + \frac{a_{n - 2}}{a_n}{s^{n - 2}} +  \cdots  + \frac{a_1}{a_n}s + \frac{a_0}{a_n}}$$ (eq:4.4:3)
 
 (I know it doesn't look simpler, but remember that the $a$ and $b$ coefficients are numbers in practice!)
 
@@ -148,19 +144,19 @@ We will examine each case by means of a worked example. Please refer to Chapter 
 
 If the poles $p_1,\,p_2,\,p_3,\,\ldots,\, p_n$ are *distinct* we can factor the denominator of $F(s)$ in the form 
 
-$$F(s) = \frac{N(s)}{(s-p_1)(s-p_2)(s-p_3)\ldots(s-p_n)}$$
+$$F(s) = \frac{N(s)}{(s-p_1)(s-p_2)(s-p_3)\ldots(s-p_n)}$$ (eq:4.4:4)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 Next, using *partial fraction expansion*
 
-$$F(s)=\frac{r_1}{s-p_1}+\frac{r_2}{s-p_2}+\frac{r_3}{s-p_3}+\cdots + \frac{r_n}{s-p_n}$$
+$$F(s)=\frac{r_1}{s-p_1}+\frac{r_2}{s-p_2}+\frac{r_3}{s-p_3}+\cdots + \frac{r_n}{s-p_n}$$ ((eq:4.4:5)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 To evaluate the *residue* $r_k$, we multiply both sides by $(s-p_k)$ then let $s \to p_k$
 
-$$r_k = \lim_{s\to p_k}(s-p_k)F(s) = \left.(s-p_k)F(s)\right|_{s=p_k}$$
+$$r_k = \lim_{s\to p_k}(s-p_k)F(s) = \left.(s-p_k)F(s)\right|_{s=p_k}$$ (eq:4.4:6)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -172,9 +168,9 @@ Quite often the poles of $F(s)$ are complex and because the complex poles occur 
 You can still use the PFE with complex poles, as demonstrated in Pages 3-5&mdash;3-7 in the textbook. However it is easier to use the fact that complex poles will appear as quadratic factors of the form $s^2 + as + b$ and then call on the two transforms in the PFE
 
 
-$$\frac{\omega}{(s - a)^2 + \omega^2} \Leftrightarrow e^{at}\sin\;\omega t$$
+$$\frac{\omega}{(s - a)^2 + \omega^2} \Leftrightarrow e^{at}\sin\;\omega t$$ (eq:4.4:7)
 
-$$\frac{s + a}{(s - a)^2 + \omega^2} \Leftrightarrow e^{at}\cos\;\omega t$$
+$$\frac{s + a}{(s - a)^2 + \omega^2} \Leftrightarrow e^{at}\cos\;\omega t$$ (eq:4.4:8)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -183,7 +179,7 @@ $$\frac{s + a}{(s - a)^2 + \omega^2} \Leftrightarrow e^{at}\cos\;\omega t$$
 
 When a rational polynomial has repeated poles 
 
-$$F(s) = \frac{N(s)}{(s - p_1)^m(s - p_2)\cdots(s - p_{n-1})(s-p_0)}$$
+$$F(s) = \frac{N(s)}{(s - p_1)^m(s - p_2)\cdots(s - p_{n-1})(s-p_0)}$$ (eq:4.4:9)
 
 and the PFE will have the form:
 
@@ -198,7 +194,7 @@ The ordinary residues $r_k$ can be found using the rule used for distinct roots.
 
 To find the residuals for the repeated term $r_{1k}$ we need to multiply both sides of the expression by $(s+p_1)^m$ and take repeated derivatives as described in detail in Pages 3-7&mdash;3-9 of the text book. This yields the general formula
 
-$$r_{1k}=\lim_{s\to p_1}\frac{1}{(k-1)!}\frac{d^{k-1}}{ds^{k-1}}\left[(s-p_1)^mF(s)\right]$$
+$$r_{1k}=\lim_{s\to p_1}\frac{1}{(k-1)!}\frac{d^{k-1}}{ds^{k-1}}\left[(s-p_1)^mF(s)\right]$$ ((eq:4.4:10)
 
 which in the age of computers is rarely needed.
 
@@ -209,7 +205,7 @@ which in the age of computers is rarely needed.
 
 If $F(s)$ is an improper rational polynomial, that is $m \ge n$, we must first divide the numerator $N(s)$ by the denomonator $D(s)$ to derive an expression of the form
 
-$$F(s) = k_0 + k_1s + k_2s^2 + \cdots + k_{m-n}s^{m-n} + \frac{N(s)}{D(s)}$$
+$$F(s) = k_0 + k_1s + k_2s^2 + \cdots + k_{m-n}s^{m-n} + \frac{N(s)}{D(s)}$$ ((eq:4.4:11)
 
 and then $N(s)/D(s)$ will be a proper rational polynomial.
 
@@ -317,6 +313,7 @@ slideshow:
 syms s t;
 Fs = (2*s + 5)/(s^2 + 5*s + 6);
 ft = ilaplace(Fs)
+fplot(ft,[0,5])
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -672,13 +669,48 @@ In this section we have looked at the inverse Laplace transform. In particular, 
 * {ref}`ilap:defn`
 * {ref}`ilap:pfe`
 * {ref}`ilap_by_pfe`
+* {ref}`examples11`
+
+## Take Aways
+
+For causal signals and continuous-time LTI systems, the Laplace transform usually takes the form of a rational polynomial with general form $F(s)$ as shown in equation {eq}`eq:4.4:2`. The denominator of $F(s)$, $D(s)$, can always be factorised, and the factors (zeros of D(s), poles of F(s)) will be real $(s - p_k)$, real and repeated, such as $(s - p_k)^n$ or complex conjugate pairs $(s - \sigma_k - j\omega_k)(s - \sigma_k + j\omega_k)^1$, or a combination of these. 
+
+Each such rational polynomial can then be represented as a *partial fraction* with *residues* $r_k$ whose values are determined by using one of the *partial fraction expansion* methods presented in this unit: 
+
 * {ref}`ilap:distinct_real_poles`
 * {ref}`case:complex_poles`
 * {ref}`ilap:repeated_poles`
 * {ref}`ilap:improper`
-* {ref}`examples11`
 
-## Take Aways
+The factored polynomial which represents $F(s)$ can then be converted into the equivalent $f(t)$ by use of the *linearity property* ({ref}`lprops:linearity`) and tables of Laplace transforms (e.g. {ref}`ap:xform_table`).
+
+### MATLAB
+
+The inverse Laplace transform is given by the Symbolic math toolbox function `ilaplace`. We can determine the partial fraction of a rational polynomial with constant coefficients using the function `residue` we can factorise a symbolic polynomial using `factor` and expand a product of rational terms using `expand`. A symbolic polynomial with numerical coeffients can be converted into a numerial polynomial using `sym2poly` and you can go the other way using `poly2sym`. For more information and examples on how to use these functions please consult the [MATLAB help centre](https://uk.mathworks.com/help/index.html).
+
+<hr/>
+
+*Footnote* 
+
+1 A pair of complex conjugate factors 
+
+$$(s - \sigma - j\omega)(s - \sigma + j\omega)$$
+
+can be represented as a single quadratic factor which, when $\sigma < 0$, will be
+
+$$s^2 + 2\sigma s +(\sigma^2 + \omega^2)$$
+
+By completing the square we get
+
+$$(s + \sigma)^2 - \sigma^2 + (\sigma^2 + \omega^2) = \left((s + \sigma)^2 + \omega^2\right)$$
+
+which implies that the inverse Laplace transform of a complex pole pair will be a linear combination of the damped cosine and sine transform pairs:
+
+$$\frac{(s + \sigma)}{\left(s + \sigma\right)^2 + \omega^2}\Leftrightarrow e^{-\sigma t}\cos(\omega t)u_0(t) $$
+
+$$\frac{\omega}{\left(s + \sigma\right)^2 + \omega^2}\Leftrightarrow e^{-\sigma t}\sin(\omega t)u_0(t) $$
+
+
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
