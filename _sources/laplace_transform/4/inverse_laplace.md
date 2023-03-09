@@ -17,13 +17,13 @@ kernelspec:
 (unit4.4)=
 # Unit 4.4 The Inverse Laplace Transform
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/4/inverse_laplace](https://cpjobling.github.io/eg-150-textbook/laplace_transform/4/inverse_laplace)
 
 ![QR Code for this lecture](pictures/qrcode_laplace4.png)
 
-+++ {"slideshow": {"slide_type": "notes"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (ilap:into)=
 ## Introduction
@@ -53,7 +53,7 @@ We will explore the use of MATLAB to solve inverse Laplace tranforms in MATLAB L
 (ilap:defn)=
 ## Definition
 
-The formal definition of the Inverse Laplace Transform is
+The formal definition of the inverse Laplace transform is
 
 $$\mathcal{L}^{-1}\left\{ F(s) \right\} = \frac{1}{2\pi j}\int_{\sigma-j\omega}^{\sigma+j\omega} F(s)e^{st}ds$$ (eq:4.4:1)
 
@@ -313,6 +313,7 @@ slideshow:
 syms s t;
 Fs = (2*s + 5)/(s^2 + 5*s + 6);
 ft = ilaplace(Fs)
+fplot(ft,[0,5])
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}

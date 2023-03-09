@@ -1087,7 +1087,7 @@ title="Print to PDF"
 </section>
 <section id="definition">
 <span id="ilap-defn"></span><h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
-<p>The formal definition of the Inverse Laplace Transform is</p>
+<p>The formal definition of the inverse Laplace transform is</p>
 <div class="math notranslate nohighlight" id="equation-eq-4-4-1">
 <span class="eqno">(2)<a class="headerlink" href="#equation-eq-4-4-1" title="Permalink to this equation">#</a></span>\[\mathcal{L}^{-1}\left\{ F(s) \right\} = \frac{1}{2\pi j}\int_{\sigma-j\omega}^{\sigma+j\omega} F(s)e^{st}ds\]</div>
 <p>but this is difficult to use in practice because it requires contour integration using complex variable theory.</p>
@@ -1280,6 +1280,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="w"> </span><span class="s">t</span><span class="p">;</span>
 <span class="n">Fs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">s</span>^<span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
 <span class="n">ft</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ilaplace</span><span class="p">(</span><span class="n">Fs</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">ft</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1290,6 +1291,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>exp(-2*t) + exp(-3*t)
 </pre></div>
 </div>
+<img alt="../../_images/inverse_laplace_32_2.png" src="../../_images/inverse_laplace_32_2.png" />
 </div>
 </div>
 </section>
@@ -1548,7 +1550,9 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p =
     -1
-k =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>k =
      1     1
 </pre></div>
 </div>
