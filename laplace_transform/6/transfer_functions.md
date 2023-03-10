@@ -404,7 +404,7 @@ Complex systems can be broken down into subsystems which may be represented by b
 
 ### Still to come
 
-We will use transfer functions to solve circuit problems in {ref}`unit4.6` and conclude our study of Laplace transforms in {ref}`unit4.8` with a look at the use of Transfer functions in the MATLAB control systems toolbox and the sumulation tool Simulink. We will also look at some of the problems you have studied in **EG-152 Analogue Design** hopefully confirming some of the results you have obbserved in the lab.
+We will use transfer functions to solve circuit problems in {ref}`unit4.7` and conclude our study of Laplace transforms in {ref}`unit4.8` with a look at the use of Transfer functions in the MATLAB control systems toolbox and the simulation tool Simulink. We will also look at some of the problems you have studied in **EG-152 Analogue Design** hopefully confirming some of the results you have obbserved in the lab.
 
 In **EG-247 Digital Signal Processing** we will start from the knowledge gained in {ref}`Unit 4` developing transform ideas further via the Fourier Transform, Z-Transform and the design of systems for signal processing. In **EG-243 Control Systems** you will model feedback control signals using block diagrams and transfer functions. You will also study how knowledge of poles and zeros can be exploited in the design of systems with stable responses.
 

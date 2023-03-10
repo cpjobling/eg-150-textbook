@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/8/casas.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -601,12 +603,305 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#agenda">
+   Agenda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defining-transfer-functions-in-matlab">
+   Defining Transfer Functions in MATLAB
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#defining-polynomials-symbolically">
+     Defining polynomials symbolically
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polynomials-factorised-form">
+     Polynomials - Factorised form
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-linear-time-invariant-lti-system-object">
+     The Linear Time Invariant (LTI) System Object
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-lti-properties">
+     Setting LTI Properties
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#system-transformations">
+     System Transformations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combining-lti-system-objects">
+     Combining LTI System Objects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples-14">
+   Examples 14
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-14-1">
+     Example 14.1
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sketch-of-solution-for-example-14-1">
+       Sketch of Solution for Example 14.1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#worked-solution-for-example-14-1">
+       Worked solution for Example 14.1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#answer-for-example-14-1">
+       Answer for Example 14.1
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-14-2">
+     Example 14.2
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sketch-of-solution-for-example-14-2">
+       Sketch of Solution for Example 14.2
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sketch-of-solution-for-example-14-2-continued">
+       Sketch of Solution for Example 14.2 (continued)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#answer-for-example-14-2">
+       Answer for Example 14.2
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#worked-solution-for-example-14-2">
+       Worked solution for Example 14.2
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Sketch of Solution for Example 14.2 (continued)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-matlab-bit">
+       The Matlab Bit
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-transfer-functions-in-simulink-for-system-simulation">
+   Using Transfer Functions in Simulink for System Simulation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     Example
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#matlab-solution">
+       MATLAB Solution
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#simulink-model">
+       Simulink model
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference">
+   Reference
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Agenda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transfer-functions-for-circuits">
+   Transfer Functions for Circuits
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-6">
+     Example 6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sketch-of-solution-for-example-6">
+     Sketch of Solution for Example 6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#worked-solution-for-example-6">
+     Worked solution for Example 6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#answer-for-example-6">
+     Answer for Example 6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-7">
+     Example 7
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sketch-of-solution-for-example-7">
+     Sketch of Solution for Example 7
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#worked-solution-for-example-7">
+     Worked solution for Example 7
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#answer-for-example-7">
+     Answer for Example 7
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     The Matlab Bit
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#week-3-solution-7">
+       Week 3: Solution 7
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-transfer-functions-in-matlab-for-system-analysis">
+   Using Transfer Functions in Matlab for System Analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   Using Transfer Functions in Simulink for System Simulation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Example
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       MATLAB Solution
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       Simulink model
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matlab-solutions">
+   Matlab Solutions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#take-aways">
+     Take Aways
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#transfer-function">
+       Transfer function
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#characterization-of-lti-systems">
+       Characterization of LTI Systems
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#laplace-transforms-of-lccodes">
+       Laplace transforms of LCCODEs
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#block-diagrams">
+       Block diagrams
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#still-to-come">
+     Still to come
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -618,6 +913,288 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#agenda">
+   Agenda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defining-transfer-functions-in-matlab">
+   Defining Transfer Functions in MATLAB
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#defining-polynomials-symbolically">
+     Defining polynomials symbolically
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polynomials-factorised-form">
+     Polynomials - Factorised form
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-linear-time-invariant-lti-system-object">
+     The Linear Time Invariant (LTI) System Object
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-lti-properties">
+     Setting LTI Properties
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#system-transformations">
+     System Transformations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combining-lti-system-objects">
+     Combining LTI System Objects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples-14">
+   Examples 14
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-14-1">
+     Example 14.1
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sketch-of-solution-for-example-14-1">
+       Sketch of Solution for Example 14.1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#worked-solution-for-example-14-1">
+       Worked solution for Example 14.1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#answer-for-example-14-1">
+       Answer for Example 14.1
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-14-2">
+     Example 14.2
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sketch-of-solution-for-example-14-2">
+       Sketch of Solution for Example 14.2
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sketch-of-solution-for-example-14-2-continued">
+       Sketch of Solution for Example 14.2 (continued)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#answer-for-example-14-2">
+       Answer for Example 14.2
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#worked-solution-for-example-14-2">
+       Worked solution for Example 14.2
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Sketch of Solution for Example 14.2 (continued)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-matlab-bit">
+       The Matlab Bit
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-transfer-functions-in-simulink-for-system-simulation">
+   Using Transfer Functions in Simulink for System Simulation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     Example
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#matlab-solution">
+       MATLAB Solution
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#simulink-model">
+       Simulink model
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference">
+   Reference
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Agenda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transfer-functions-for-circuits">
+   Transfer Functions for Circuits
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-6">
+     Example 6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sketch-of-solution-for-example-6">
+     Sketch of Solution for Example 6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#worked-solution-for-example-6">
+     Worked solution for Example 6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#answer-for-example-6">
+     Answer for Example 6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-7">
+     Example 7
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sketch-of-solution-for-example-7">
+     Sketch of Solution for Example 7
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#worked-solution-for-example-7">
+     Worked solution for Example 7
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#answer-for-example-7">
+     Answer for Example 7
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     The Matlab Bit
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#week-3-solution-7">
+       Week 3: Solution 7
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-transfer-functions-in-matlab-for-system-analysis">
+   Using Transfer Functions in Matlab for System Analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   Using Transfer Functions in Simulink for System Simulation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Example
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       MATLAB Solution
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       Simulink model
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matlab-solutions">
+   Matlab Solutions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#take-aways">
+     Take Aways
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#transfer-function">
+       Transfer function
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#characterization-of-lti-systems">
+       Characterization of LTI Systems
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#laplace-transforms-of-lccodes">
+       Laplace transforms of LCCODEs
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#block-diagrams">
+       Block diagrams
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#still-to-come">
+     Still to come
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -627,6 +1204,1275 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="unit-4-8-computer-aided-systems-analysis-and-simulation">
 <span id="unit4-8"></span><h1>Unit 4.8: Computer-Aided Systems Analysis and Simulation<a class="headerlink" href="#unit-4-8-computer-aided-systems-analysis-and-simulation" title="Permalink to this headline">#</a></h1>
+<p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/8/casas">cpjobling.github.io/eg-150-textbook/laplace_transform/8/casas</a></p>
+<p><img alt="QR Code for this lecture" src="../../_images/qrcode_lap8.png" /></p>
+<section id="agenda">
+<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
+<p>We conclude our introduction to the applications of the Laplace transform by demonstrating the facilties provided by the <em>Control Systems Toolbox</em> and the simulation tool <em>Simulink</em>. We will repeat <span class="xref std std-ref">ex:14.2</span> using these tools and we will conclude by exploring some of the problems you have studied in <strong>EG-152 Analogue Design</strong> hopefully confirming some of the results you have obbserved in that lab.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../7/tf_for_circuits.html#circ-tf"><span class="std std-ref">Transfer Functions for Circuits</span></a></p></li>
+<li><p>Circuit Analysis Using MATLAB LTI Transfer Function Block</p></li>
+<li><p>Circuit Simulation Using Simulink Transfer Function Block</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Initialize MATLAB</span>
+<span class="nb">clearvars</span>
+<span class="nb">cd</span><span class="w"> </span><span class="p">.</span><span class="o">./</span><span class="n">matlab</span><span class="w"> </span>
+<span class="nb">pwd</span>
+<span class="nb">format</span><span class="w"> </span><span class="n">compact</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
+
+    &#39;/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/laplace_transform/matlab&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="defining-transfer-functions-in-matlab">
+<span id="matlab-tf"></span><h2>Defining Transfer Functions in MATLAB<a class="headerlink" href="#defining-transfer-functions-in-matlab" title="Permalink to this headline">#</a></h2>
+<p>There are two forms of polynomial representation in MATLAB. The most obvious is the <strong>expanded polynomial</strong> form where the numerator and denominator of a transfer function would be entered as two row vectors with the polynomial coefficients entered in the order of <strong>descending</strong> powers of <span class="math notranslate nohighlight">\(s\)</span>.</p>
+<p>For example, if:</p>
+<div class="math notranslate nohighlight" id="equation-eq-8-1">
+<span class="eqno">(41)<a class="headerlink" href="#equation-eq-8-1" title="Permalink to this equation">#</a></span>\[G(s) = \frac{a(s)}{b(s)} = \frac{s^2 +2s+3}{s^3 +4s^2 +5s+6}\]</div>
+<p>The numerator and denominator polynomials from Eq. <code class="xref eq docutils literal notranslate"><span class="pre">eg:8.1</span></code> are entered in MATLAB as</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">];</span><span class="w">    </span><span class="c">% s^2 + 2s + 3</span>
+<span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">];</span><span class="w"> </span><span class="c">% s^3 + 4s^2 + 5s + 6</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Missing coefficients must be entered as zero: so <span class="math notranslate nohighlight">\(q(s) = s^2 + 2s\)</span> and <span class="math notranslate nohighlight">\(r(s) = s^4 + s^2 + 1\)</span> are entered as</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">];</span>
+<span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="defining-polynomials-symbolically">
+<h3>Defining polynomials symbolically<a class="headerlink" href="#defining-polynomials-symbolically" title="Permalink to this headline">#</a></h3>
+<p>We have already seen that we can use the symbolic math toolbox to define polynomials
+symbolically.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Define a rational polynomial</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">s</span>^<span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">s</span>^<span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">4</span><span class="o">*</span><span class="n">s</span>^<span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G(s) =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(s^2 + 2*s + 3)/(s^3 + 4*s^2 + 5*s + 6)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Extract numerator and denominator polynomials</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Num</span><span class="p">,</span><span class="n">Den</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">numden</span><span class="p">(</span><span class="n">G</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Num =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>s^2 + 2*s + 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Den =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>s^3 + 4*s^2 + 5*s + 6
+</pre></div>
+</div>
+</div>
+</div>
+<p>Providing that the  the coefficients are numeric, we can convert back and forth between symbolic polynomials and numeric polynomials using the functions <code class="docutils literal notranslate"><span class="pre">sym2poly</span></code> and <code class="docutils literal notranslate"><span class="pre">poly2sym</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">nNum</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sym2poly</span><span class="p">(</span><span class="n">Num</span><span class="p">),</span><span class="w"> </span><span class="n">nDen</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sym2poly</span><span class="p">(</span><span class="n">Den</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nNum =
+     1     2     3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nDen =
+     1     4     5     6
+</pre></div>
+</div>
+</div>
+</div>
+<p>Convert from numerical polynomial to symbolic. Second argument is polynomial variable. The default is x.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">poly2sym</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>s^4 + 2*s^2 + 1
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="polynomials-factorised-form">
+<h3>Polynomials - Factorised form<a class="headerlink" href="#polynomials-factorised-form" title="Permalink to this headline">#</a></h3>
+<p>If you know the <em>poles</em> amd <em>zeros</em> of a transfer function you can represent it in a factorized form.</p>
+<div class="math notranslate nohighlight" id="equation-eq-8-2">
+<span class="eqno">(42)<a class="headerlink" href="#equation-eq-8-2" title="Permalink to this equation">#</a></span>\[G(s) = \frac{(s+1)(s+3)}{s(s+2)(s+4)}\]</div>
+<p>The advantage of this formulation is that the zeros of the numerator and denominator polynomials are obvious by inspection. So it is often used in the preliminary analysis of the performance of a dynamic system.</p>
+<p>The poles of the transfer function Eq. <a class="reference internal" href="#equation-eq-8-2">(42)</a> are <span class="math notranslate nohighlight">\(s = 0,\,-1\,-4\)</span> and the zeros are <span class="math notranslate nohighlight">\(s = -1,\,-3\)</span></p>
+<p>In MATLAB, this form of transfer function is specified by a column vector of the zeros and a column vector of the poles:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">];</span>
+<span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="o">-</span><span class="mi">4</span><span class="p">];</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A third parameter, the overall gain , completes the definition of the so called <em>pole-zero-gain</em> form of transfer function.</p>
+<p>In this case</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">K</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-linear-time-invariant-lti-system-object">
+<h3>The Linear Time Invariant (LTI) System Object<a class="headerlink" href="#the-linear-time-invariant-lti-system-object" title="Permalink to this headline">#</a></h3>
+<p>A few years ago, the Mathworks introduced a new data object for the creation and manipulation of system transfer functions.</p>
+<p>This object is called the <em>Linear Time Invariant (LTI) System Object</em>.</p>
+<p>It is used to gather the components of a transfer function into a single variable which can then easily be combined with other LTI system objects and passed to system analysis functions.</p>
+<p>To create a LTI system object representing the factored transfer function from Eq. <a class="reference internal" href="#equation-eq-8-2">(42)</a> the following command is issued:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">zpk</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">K</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   (s+1) (s+3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s (s+2) (s+4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The expanded numerator and denominator form of the transfer function is readily obtained by using the <em>data extraction function</em> <code class="docutils literal notranslate"><span class="pre">tfdata</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">num</span><span class="p">,</span><span class="n">den</span><span class="p">]=</span><span class="n">tfdata</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s">&#39;v&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>num =
+     0     1     4     3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>den =
+     1     6     8     0
+</pre></div>
+</div>
+</div>
+</div>
+<p>LTI system objects can also be created from the expanded form of a transfer function directly:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G2</span><span class="p">=</span><span class="n">tf</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">den</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G2 =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    s^2 + 4 s + 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 6 s^2 + 8 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+</div>
+</div>
+<p>and the zeros and poles similarly extracted:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nb">zeros</span><span class="p">,</span><span class="n">poles</span><span class="p">,</span><span class="n">gain</span><span class="p">]=</span><span class="n">zpkdata</span><span class="p">(</span><span class="n">G2</span><span class="p">,</span><span class="s">&#39;v&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zeros =
+    -3
+    -1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>poles =
+     0
+    -4
+    -2
+gain =
+     1
+</pre></div>
+</div>
+</div>
+</div>
+<p>LTI system objects can also be created from the expanded form of a transfer function directly:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G2</span><span class="p">=</span><span class="n">tf</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">den</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G2 =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    s^2 + 4 s + 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
+  s^3 + 6 s^2 + 8 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+</div>
+</div>
+<p>and the zeros and poles similarly extracted:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nb">zeros</span><span class="p">,</span><span class="n">poles</span><span class="p">,</span><span class="n">gain</span><span class="p">]=</span><span class="n">zpkdata</span><span class="p">(</span><span class="n">G2</span><span class="p">,</span><span class="s">&#39;v&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zeros =
+    -3
+    -1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>poles =
+     0
+    -4
+    -2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gain =
+     1
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="setting-lti-properties">
+<h3>Setting LTI Properties<a class="headerlink" href="#setting-lti-properties" title="Permalink to this headline">#</a></h3>
+<p>Numerous options are available to document the LTI system objects that you create.</p>
+<p>For example, suppose the transfer function <code class="docutils literal notranslate"><span class="pre">G</span></code> represents a servomechanism (discussed next year) with input <code class="docutils literal notranslate"><span class="pre">'Voltage'</span></code> and output <code class="docutils literal notranslate"><span class="pre">'Angular</span> <span class="pre">Position'</span></code> We can add this information to the LTI system as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s">&#39;InputName&#39;</span><span class="p">,</span><span class="s">&#39;Voltage&#39;</span><span class="p">,</span><span class="s">&#39;OutputName&#39;</span><span class="p">,</span><span class="s">&#39;Angular Position&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Such documentary information is probably best added when the LTI system object is created, for example as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G3</span><span class="p">=</span><span class="n">zpk</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">K</span><span class="p">,</span><span class="s">&#39;InputName&#39;</span><span class="p">,</span><span class="s">&#39;Armature Voltage (V)&#39;</span><span class="p">,</span><span class="k">...</span>
+<span class="w">    </span><span class="s">&#39;OutputName&#39;</span><span class="p">,</span><span class="s">&#39;Load Shaft Position (rad)&#39;</span><span class="p">,</span><span class="k">...</span>
+<span class="w">    </span><span class="s">&#39;notes&#39;</span><span class="p">,</span><span class="s">&#39;An armature voltage controlled servomechanism&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G3 =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  From input &quot;Armature Voltage (V)&quot; to output &quot;Load Shaft Position (rad)&quot;:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   (s+1) (s+3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s (s+2) (s+4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once the LTI object has been documented, the documentation can be extracted using commands like:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">get</span><span class="p">(</span><span class="n">G3</span><span class="p">,</span><span class="s">&#39;notes&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
+  1x1 cell array
+    {&#39;An armature voltage controlled servomechanism&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>One can also access the documentation using an <em>object reference</em> notation</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">in</span><span class="p">=</span><span class="n">G3</span><span class="p">.</span><span class="n">InputName</span><span class="p">,</span><span class="w"> </span><span class="n">out</span><span class="p">=</span><span class="n">G3</span><span class="p">.</span><span class="n">OutputName</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>in =
+  1x1 cell array
+    {&#39;Armature Voltage (V)&#39;}
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>out =
+  1x1 cell array
+    {&#39;Load Shaft Position (rad)&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>All the documentation available on an LTI system object may be extracted with a single command:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">get</span><span class="p">(</span><span class="n">G3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                Z: {[2x1 double]}
+                P: {[3x1 double]}
+                K: 1
+    DisplayFormat: &#39;roots&#39;
+         Variable: &#39;s&#39;
+          IODelay: 0
+       InputDelay: 0
+      OutputDelay: 0
+        InputName: {&#39;Armature Voltage (V)&#39;}
+        InputUnit: {&#39;&#39;}
+       InputGroup: [1x1 struct]
+       OutputName: {&#39;Load Shaft Position (rad)&#39;}
+       OutputUnit: {&#39;&#39;}
+      OutputGroup: [1x1 struct]
+            Notes: {&#39;An armature voltage controlled servomechanism&#39;}
+         UserData: []
+             Name: &#39;&#39;
+               Ts: 0
+         TimeUnit: &#39;seconds&#39;
+     SamplingGrid: [1x1 struct]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="system-transformations">
+<h3>System Transformations<a class="headerlink" href="#system-transformations" title="Permalink to this headline">#</a></h3>
+<p>MATLAB supports the easy transformation of LTI system objects between expanded and factored forms. For example to convert a transfer function from expanded form to pole-zero-gain form the following command is used:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G4</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">zpk</span><span class="p">(</span><span class="n">G2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G4 =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   (s+3) (s+1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s (s+4) (s+2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+</pre></div>
+</div>
+</div>
+</div>
+<p>To convert from zero-pole-gain form to expanded form we use the function <code class="docutils literal notranslate"><span class="pre">tf</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G5</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G5 =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  From input &quot;Voltage&quot; to output &quot;Angular Position&quot;:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    s^2 + 4 s + 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 6 s^2 + 8 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Please note that these transformations are merely a convenience that allow you to work with your preferred form of representation. Most of the tools that deal with LTI system objects will work with any form. Furthermore, you can always use the data extraction functions <code class="docutils literal notranslate"><span class="pre">zpdata</span></code> and <code class="docutils literal notranslate"><span class="pre">tfdata</span></code> to extract the zero-pole-gain and numerator-denominator parameters from a LTI system, no matter in which form it was originally defined, without the need for an explicit conversion.</p>
+</section>
+<section id="combining-lti-system-objects">
+<h3>Combining LTI System Objects<a class="headerlink" href="#combining-lti-system-objects" title="Permalink to this headline">#</a></h3>
+<p>A powerful feature of the LTI system object representation is the ease with which LTI objects can be combined. For example, suppose we have two systems with transfer functions</p>
+<p>and</p>
+<p>then the series combination of the two transfer functions</p>
+<p>is obtained using the <em>? (multiplication) operator:
+G1=tf([1 1],[1 3]);
+G2=tf(10,conv([1 0],[1 2])); % conv is polynomial multiplication
+Gs=G1</em>G2 % series connection of two LTI objects</p>
+<p>[zeros,poles,K]=zpkdata(Gs,’v’)</p>
+<p>The parallel connection of two LTI system objects corresponds to addition</p>
+<p>Gp = G1 + G2</p>
+<p>The feedback connection of two LTI system objects is also supported. The function feedback is used for this. Let</p>
+<p>be the forward transfer function of a closed-loop system and</p>
+<p>be the feedback network. Then the closed-loop transfer function (assuming negative feedback) is</p>
+<p>In matlab:
+G = tf([2 5 1],[1 2 3],’inputname’,’torque’,…
+‘outputname’,’velocity’);
+H = zpk(-2,-10,5);
+Gc = feedback(G,H) % negative feedback assumed</p>
+<p>The Analysis of LTI System Objects
+Matlab uses the LTI system objects as parameters for the analysis tools such as impulse, step, nyquist, bode and rlocus. As an example of their use try each of following:
+Root locus
+rlocus(G*H)</p>
+<p>open-loop frequency response
+bode(G*H)</p>
+<p>closed-loop step response
+step(Gc)</p>
+<p>closed-loop frequency response
+bode(Gc)</p>
+<p>closed-loop impulse response
+impulse(Gc)</p>
+<p>Nyquist diagram
+nyquist(G*H)</p>
+<p>Matlab also provides two interactive graphical tools that work with LTI system objects. * ltiview is a graphical tool that can be used to analyze systems defined by LTI objects. It provides easy access to LTI objects and time and frequency response analysis tools. * rltool is an interactive tool for designing controllers using the root locus method.
+Control engineers will find sisotool useful.
+You are encouraged to experiment with these tools.
+Partial Fraction Expansions
+Matlab provides a command called residue that returns the partial fraction expansion of a transfer function. That is, given</p>
+<p>it returns</p>
+<p>where  are the poles of the transfer function,  are the coefficients of the partial fraction terms (called the residues of the poles) and  is a remainder polynomial which is usually empty.
+To use this, the starting point must (rather perversely) be the expanded form of the transfer function in polynomial form.
+Thus given</p>
+<p>we obtain the partial fraction expansion using the Matlab command sequence:
+k = 5; z = [-2]; p = [0; -3; -10]; % zero-pole-gain form
+C = zpk(z,p,k);
+[num,den] = tfdata(C,’v’)</p>
+<p>[r,p,k] = residue(num,den)</p>
+<p>which we interpret to mean</p>
+<p>If  represents the step response of the system</p>
+<p>then the step response is, by Inverse Laplace Transform:</p>
+<p>You can check this with the commands:
+newC = tf([5, 10],[1, 13, 30])
+step(newC) % provides <span class="math notranslate nohighlight">\(u_0(t)\)</span></p>
+<p>t = 0:.05:1.5; % time vector
+c = 0.3333 + 0.2381 * exp(-3<em>t) - 0.5714 * exp(-10</em>t);
+plot(t,c)</p>
+<p>There are numerous other documentation features provided for LTI system objects. Please consult the <a class="reference external" href="https://uk.mathworks.com/help/control/getstart/linear-lti-models.html">on-line help</a> for full details.</p>
+</section>
+</section>
+<section id="examples-14">
+<span id="examples14"></span><h2>Examples 14<a class="headerlink" href="#examples-14" title="Permalink to this headline">#</a></h2>
+<p>We will work through these and demonstrate the MATLAB solutions in class.</p>
+<section id="example-14-1">
+<h3>Example 14.1<a class="headerlink" href="#example-14-1" title="Permalink to this headline">#</a></h3>
+<p>Derive an expression for the transfer function <span class="math notranslate nohighlight">\(G(s)\)</span> for the circuit shown in <a class="reference internal" href="#fig-ex14-1"><span class="std std-numref">Fig. 64</span></a>.</p>
+<p>In this circuit <span class="math notranslate nohighlight">\(R_g\)</span> represents the internal resistance of the applied (voltage) source <span class="math notranslate nohighlight">\(v_s\)</span>, and <span class="math notranslate nohighlight">\(R_L\)</span> represents the resistance of the load that consists of <span class="math notranslate nohighlight">\(R_L\)</span>, <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<figure class="align-default" id="fig-ex14-1">
+<a class="reference internal image-reference" href="laplace_transform/8/pictures/Example6.png"><img alt="Circuit for Example 14.1" src="laplace_transform/8/pictures/Example6.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 64 </span><span class="caption-text">Circuit for Example 14.1</span><a class="headerlink" href="#fig-ex14-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="sketch-of-solution-for-example-14-1">
+<h4>Sketch of Solution for Example 14.1<a class="headerlink" href="#sketch-of-solution-for-example-14-1" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>Replace <span class="math notranslate nohighlight">\(v_s(t)\)</span>, <span class="math notranslate nohighlight">\(R_g\)</span>, <span class="math notranslate nohighlight">\(R_L\)</span>, <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(C\)</span> by their transformed (<em>complex frequency</em>) equivalents: <span class="math notranslate nohighlight">\(V_s(s)\)</span>, <span class="math notranslate nohighlight">\(R_g\)</span>, <span class="math notranslate nohighlight">\(R_L\)</span>, <span class="math notranslate nohighlight">\(sL\)</span> and <span class="math notranslate nohighlight">\(1/(sC)\)</span></p></li>
+</ul>
+<ul class="simple">
+<li><p>Use the <em>Voltage Divider Rule</em> to determine <span class="math notranslate nohighlight">\(V_\mathrm{out}(s)\)</span> as a function of <span class="math notranslate nohighlight">\(V_s(s)\)</span></p></li>
+</ul>
+<ul class="simple">
+<li><p>Form <span class="math notranslate nohighlight">\(G(s)\)</span> by writing down the ratio <span class="math notranslate nohighlight">\(V_\mathrm{out}(s)/V_s(s)\)</span></p></li>
+</ul>
+<p>Switch to virtual whiteboard in OneNote.</p>
+<pre style="border: 2px solid blue">
+Solve in OneNote
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre></section>
+<section id="worked-solution-for-example-14-1">
+<h4>Worked solution for Example 14.1<a class="headerlink" href="#worked-solution-for-example-14-1" title="Permalink to this headline">#</a></h4>
+<p>Pencast: <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/ex6.pdf">ex6.pdf</a> - open in Adobe Acrobat Reader.</p>
+</section>
+<section id="answer-for-example-14-1">
+<h4>Answer for Example 14.1<a class="headerlink" href="#answer-for-example-14-1" title="Permalink to this headline">#</a></h4>
+<div class="math notranslate nohighlight">
+\[G(s) = \frac{V_\mathrm{out}(s)}{V_s(s)} = \frac{R_L + sL + 1/sC}{R_g + R_L + sL + 1/sC}.\]</div>
+</section>
+</section>
+<section id="example-14-2">
+<h3>Example 14.2<a class="headerlink" href="#example-14-2" title="Permalink to this headline">#</a></h3>
+<p>Compute the transfer function for the op-amp circuit shown in <a class="reference internal" href="#fig-ex14-2"><span class="std std-numref">Fig. 65</span></a> in terms of the circuit constants <span class="math notranslate nohighlight">\(R_1\)</span>, <span class="math notranslate nohighlight">\(R_2\)</span>, <span class="math notranslate nohighlight">\(R_3\)</span>, <span class="math notranslate nohighlight">\(C_1\)</span> and <span class="math notranslate nohighlight">\(C_2\)</span>.</p>
+<figure class="align-default" id="fig-ex14-2">
+<a class="reference internal image-reference" href="laplace_transform/8/pictures/example7.png"><img alt="OpAmp circuit for Example 14.2" src="laplace_transform/8/pictures/example7.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 65 </span><span class="caption-text">OpAmp circuit for Example 14.2</span><a class="headerlink" href="#fig-ex14-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Then replace the complex variable <span class="math notranslate nohighlight">\(s\)</span> with <span class="math notranslate nohighlight">\(j\omega\)</span>, and the circuit constants with their numerical values and plot the magnitude</p>
+<div class="math notranslate nohighlight">
+\[\left|G(j\omega)\right| = \frac{\left|V_{\mathrm{out}}(j\omega)\right|}{\left|V_{\mathrm{in}}(j\omega)\right|}\]</div>
+<p>versus radian frequency <span class="math notranslate nohighlight">\(\omega\)</span> rad/s.</p>
+<section id="sketch-of-solution-for-example-14-2">
+<h4>Sketch of Solution for Example 14.2<a class="headerlink" href="#sketch-of-solution-for-example-14-2" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>Replace the components and voltages in the circuit diagram with their complex frequency equivalents</p></li>
+</ul>
+<ul class="simple">
+<li><p>Use nodal analysis to determine the voltages at the nodes either side of the 50K resistor <span class="math notranslate nohighlight">\(R_3\)</span></p></li>
+</ul>
+</section>
+<section id="sketch-of-solution-for-example-14-2-continued">
+<h4>Sketch of Solution for Example 14.2 (continued)<a class="headerlink" href="#sketch-of-solution-for-example-14-2-continued" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>Note that the voltage at the input to the op-amp is a virtual ground</p></li>
+</ul>
+<ul class="simple">
+<li><p>Solve for <span class="math notranslate nohighlight">\(V_{\mathrm{out}}(s)\)</span> as a function of <span class="math notranslate nohighlight">\(V_{\mathrm{in}}(s)\)</span></p></li>
+</ul>
+<ul class="simple">
+<li><p>Form the reciprocal <span class="math notranslate nohighlight">\(G(s) = V_{\mathrm{out}}(s)/V_{\mathrm{in}}(s)\)</span></p></li>
+</ul>
+<p>Switch to virtual whiteboard in OneNote.</p>
+<pre style="border: 2px solid blue">
+Solve in OneNote
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre></section>
+<section id="answer-for-example-14-2">
+<h4>Answer for Example 14.2<a class="headerlink" href="#answer-for-example-14-2" title="Permalink to this headline">#</a></h4>
+<div class="math notranslate nohighlight" id="equation-ex-14-2">
+<span class="eqno">(43)<a class="headerlink" href="#equation-ex-14-2" title="Permalink to this equation">#</a></span>\[G(s) = \frac{V_\mathrm{out}(s)}{V_\mathrm{in}(s)} = \frac{-1}{R_1\left(\left(1/R_1 + 1/R_2 + 1/R_3 + sC_1\right)\left(sC_2R_3\right)+1/R_2\right)}.\]</div>
+</section>
+<section id="worked-solution-for-example-14-2">
+<h4>Worked solution for Example 14.2<a class="headerlink" href="#worked-solution-for-example-14-2" title="Permalink to this headline">#</a></h4>
+<p>Pencast: <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/ex7.pdf">ex7.pdf</a> - open in Adobe Acrobat Reader.</p>
+</section>
+<section id="id1">
+<h4>Sketch of Solution for Example 14.2 (continued)<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>Use MATLAB to calculate the component values, then replace <span class="math notranslate nohighlight">\(s\)</span> by <span class="math notranslate nohighlight">\(j\omega\)</span>.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Compute <span class="math notranslate nohighlight">\(\left|G(j\omega)\right|\)</span> and plot on log-linear “paper”.</p></li>
+</ul>
+</section>
+<section id="the-matlab-bit">
+<h4>The Matlab Bit<a class="headerlink" href="#the-matlab-bit" title="Permalink to this headline">#</a></h4>
+<p>Set up the symbols we will be using. In this case just the Laplace complex frequency <span class="math notranslate nohighlight">\(s\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now define the values of the components</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">R1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">200</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span><span class="w"> </span>
+<span class="n">R2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">40</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span>
+<span class="n">R3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">50</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span>
+
+<span class="n">C1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">25</span><span class="o">*</span><span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">);</span>
+<span class="n">C2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Define the transfer function derived from analysis (Eq. <code class="xref eq docutils literal notranslate"><span class="pre">eg:ex14.2</span></code>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">den</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R1</span><span class="o">*</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">R1</span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="o">*</span><span class="n">C1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">*</span><span class="n">R3</span><span class="o">*</span><span class="n">C2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>den =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100*s*((7555786372591433*s)/302231454903657293676544 + 1/20000) + 5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Simplify coefficients of <span class="math notranslate nohighlight">\(s\)</span> in the denominator. Note <code class="docutils literal notranslate"><span class="pre">sym2poly</span></code> converts a symbolic polynomial with numerical coeficients into a MATLAB polynomial.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="w"> </span><span class="n">long</span>
+<span class="n">denG</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sym2poly</span><span class="p">(</span><span class="n">den</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>denG =
+   0.000002500000000   0.005000000000000   5.000000000000000
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now define the denominator</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">numG</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Plot the frequency response</strong></p>
+<p>For convenience, define coefficients <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[G(j\omega) = \frac{-1}{a\omega^2 - jb\omega + 5}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">10000</span><span class="p">;</span>
+<span class="n">Gw</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">w</span><span class="o">.^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">j</span><span class="o">.*</span><span class="n">b</span><span class="o">.*</span><span class="n">w</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Plot <span class="math notranslate nohighlight">\(|G(j\omega)|\)</span> against <span class="math notranslate nohighlight">\(\omega\)</span> on log-lin “graph paper”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">semilogx</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">Gw</span><span class="p">))</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Radian frequency w (rad/s&#39;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;|Vout/Vin|&#39;</span><span class="p">)</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Magnitude Vout/Vin vs. Radian Frequency&#39;</span><span class="p">)</span>
+<span class="nb">grid</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/casas_108_0.png" src="../../_images/casas_108_0.png" />
+</div>
+</div>
+<p>Note that this is a low-pass filter. Sinusoids at low frequencies are passed with a gain of 0.2. For frequencies above around 100 ra/s, the filter starts to reduce the attenuation of the passed signal. At 10,000 rad/s, the attenuation is 1/10 of the attenuation at 1 rad/s.</p>
+</section>
+</section>
+</section>
+<section id="using-transfer-functions-in-simulink-for-system-simulation">
+<h2>Using Transfer Functions in Simulink for System Simulation<a class="headerlink" href="#using-transfer-functions-in-simulink-for-system-simulation" title="Permalink to this headline">#</a></h2>
+<p><img alt="Using Transfer Functions in Simulink for System Simulation" src="laplace_transform/8/pictures/sim_tf.png" /></p>
+<p>The Simulink transfer function (<strong><code class="docutils literal notranslate"><span class="pre">Transfer</span> <span class="pre">Fcn</span></code></strong>) block implements a transfer function</p>
+<p>The transfer function block represents a general input output function</p>
+<div class="math notranslate nohighlight">
+\[G(s) = \frac{N(s)}{D(s)}\]</div>
+<p>and is not specific nor restricted to circuit analysis.</p>
+<p>It can, however be used in modelling and simulation studies.</p>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h3>
+<p>Recast Example 7 as a MATLAB problem using the LTI Transfer Function block.</p>
+<p>For simplicity use parameters <span class="math notranslate nohighlight">\(R_1 = R_2 = R_3 = 1\; \Omega\)</span>, and <span class="math notranslate nohighlight">\(C_1 = C_2 = 1\)</span> F.</p>
+<p>Calculate the step response using the LTI functions.</p>
+<p>Verify the result with Simulink.</p>
+<p>The Matlab solution: <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/example8.m">example8.m</a></p>
+<section id="matlab-solution">
+<h4>MATLAB Solution<a class="headerlink" href="#matlab-solution" title="Permalink to this headline">#</a></h4>
+<p>From a previous analysis the transfer function is:</p>
+<div class="math notranslate nohighlight">
+\[G(s) = \frac{V_\mathrm{out}}{V_\mathrm{in}} = \frac{-1}{R_1\left[(1/R_1 + 1/R_2 + 1/R_3 + sC_1)(sR_3C_2) + 1/R_2\right]}\]</div>
+<p>so substituting the component values we get:</p>
+<div class="math notranslate nohighlight">
+\[G(s) = \frac{V_{\mathrm{out}}}{V_{\mathrm{in}}} = \frac{-1}{s^2 + 3s + 1}\]</div>
+<p>We can find the step response by letting <span class="math notranslate nohighlight">\(v_{\mathrm{in}}(t) = u_0(t)\)</span> so that
+<span class="math notranslate nohighlight">\(V_{\mathrm{in}}(s)=1/s\)</span> then</p>
+<div class="math notranslate nohighlight">
+\[V_{\mathrm{out}}(s) = \frac{-1}{s^2 + 3s + 1}.\frac{1}{s}\]</div>
+<p>We can solve this by partial fraction expansion and inverse Laplace transform
+as is done in the text book with the help of MATLAB’s <code class="docutils literal notranslate"><span class="pre">residue</span></code> function.</p>
+<p>Here, however we’ll use the LTI block.</p>
+<p>Define the circuit as a transfer function</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       -1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + 3 s + 1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+</div>
+</div>
+<p>step response is then:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">step</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/casas_124_0.png" src="../../_images/casas_124_0.png" />
+</div>
+</div>
+<p>Simples!</p>
+</section>
+<section id="simulink-model">
+<h4>Simulink model<a class="headerlink" href="#simulink-model" title="Permalink to this headline">#</a></h4>
+<p>See <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/example_8.slx">example_8.slx</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="w"> </span><span class="n">example_8</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="Simulink model" src="laplace_transform/8/pictures/ex8_sim.png" /></p>
+<p>Result</p>
+<p><img alt="Simulation result" src="laplace_transform/8/pictures/ex8_sim_result.png" /></p>
+<p>Let’s go a bit further by finding the frequency response:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/casas_131_0.png" src="../../_images/casas_131_0.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">#</a></h2>
+<p>See <a class="reference internal" href="../../zbib.html"><span class="doc std std-doc">Bibliography</span></a>.</p>
+</section>
+<section id="id2">
+<h2>Agenda<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Transfer Functions</p></li>
+</ul>
+<ul class="simple">
+<li><p>A Couple of Examples</p></li>
+</ul>
+<ul class="simple">
+<li><p>Circuit Analysis Using MATLAB LTI Transfer Function Block</p></li>
+</ul>
+<ul class="simple">
+<li><p>Circuit Simulation Using Simulink Transfer Function Block</p></li>
+</ul>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Matlab setup</span>
+<span class="nb">clear</span><span class="w"> </span><span class="nb">all</span>
+<span class="nb">cd</span><span class="w"> </span><span class="p">.</span><span class="o">./</span><span class="n">matlab</span><span class="w"> </span>
+<span class="nb">pwd</span>
+<span class="nb">format</span><span class="w"> </span><span class="n">compact</span>
+</pre></div>
+</div>
+</div>
+</div>
+<pre style="border: 2px solid blue">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre></section>
+<section id="transfer-functions-for-circuits">
+<h2>Transfer Functions for Circuits<a class="headerlink" href="#transfer-functions-for-circuits" title="Permalink to this headline">#</a></h2>
+<section id="example-6">
+<h3>Example 6<a class="headerlink" href="#example-6" title="Permalink to this headline">#</a></h3>
+<p>Derive an expression for the transfer function <span class="math notranslate nohighlight">\(G(s)\)</span> for the circuit below. In this circuit <span class="math notranslate nohighlight">\(R_g\)</span> represents the internal resistance of the applied (voltage) source <span class="math notranslate nohighlight">\(v_s\)</span>, and <span class="math notranslate nohighlight">\(R_L\)</span> represents the resistance of the load that consists of <span class="math notranslate nohighlight">\(R_L\)</span>, <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<a class="reference internal image-reference" href="laplace_transform/8/pictures/example6.png"><img alt="laplace_transform/8/pictures/example6.png" src="laplace_transform/8/pictures/example6.png" style="width: 50%;" /></a>
+</section>
+<section id="sketch-of-solution-for-example-6">
+<h3>Sketch of Solution for Example 6<a class="headerlink" href="#sketch-of-solution-for-example-6" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Replace <span class="math notranslate nohighlight">\(v_s(t)\)</span>, <span class="math notranslate nohighlight">\(R_g\)</span>, <span class="math notranslate nohighlight">\(R_L\)</span>, <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(C\)</span> by their transformed (<em>complex frequency</em>) equivalents: <span class="math notranslate nohighlight">\(V_s(s)\)</span>, <span class="math notranslate nohighlight">\(R_g\)</span>, <span class="math notranslate nohighlight">\(R_L\)</span>, <span class="math notranslate nohighlight">\(sL\)</span> and <span class="math notranslate nohighlight">\(1/(sC)\)</span></p></li>
+<li><p>Use the <em>Voltage Divider Rule</em> to determine <span class="math notranslate nohighlight">\(V_\mathrm{out}(s)\)</span> as a function of <span class="math notranslate nohighlight">\(V_s(s)\)</span></p></li>
+<li><p>Form <span class="math notranslate nohighlight">\(G(s)\)</span> by writing down the ratio <span class="math notranslate nohighlight">\(V_\mathrm{out}(s)/V_s(s)\)</span></p></li>
+</ul>
+</section>
+<section id="worked-solution-for-example-6">
+<h3>Worked solution for Example 6<a class="headerlink" href="#worked-solution-for-example-6" title="Permalink to this headline">#</a></h3>
+<p>Pencast: <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/ex6.pdf">ex6.pdf</a> - open in Adobe Acrobat Reader.</p>
+</section>
+<section id="answer-for-example-6">
+<h3>Answer for Example 6<a class="headerlink" href="#answer-for-example-6" title="Permalink to this headline">#</a></h3>
+<div class="math notranslate nohighlight">
+\[G(s) = \frac{V_\mathrm{out}(s)}{V_s(s)} = \frac{R_L + sL + 1/sC}{R_g + R_L + sL + 1/sC}.\]</div>
+</section>
+<section id="example-7">
+<h3>Example 7<a class="headerlink" href="#example-7" title="Permalink to this headline">#</a></h3>
+<p>Compute the transfer function for the op-amp circuit shown below in terms of the circuit constants <span class="math notranslate nohighlight">\(R_1\)</span>, <span class="math notranslate nohighlight">\(R_2\)</span>, <span class="math notranslate nohighlight">\(R_3\)</span>, <span class="math notranslate nohighlight">\(C_1\)</span> and <span class="math notranslate nohighlight">\(C_2\)</span>. Then replace the complex variable <span class="math notranslate nohighlight">\(s\)</span> with <span class="math notranslate nohighlight">\(j\omega\)</span>, and the circuit constants with their numerical values and plot the magnitude</p>
+<div class="math notranslate nohighlight">
+\[\left|G(j\omega)\right| = \frac{\left|V_{\mathrm{out}}(j\omega)\right|}{\left|V_{\mathrm{in}}(j\omega)\right|}\]</div>
+<p>versus radian frequency <span class="math notranslate nohighlight">\(\omega\)</span> rad/s.</p>
+</section>
+<section id="sketch-of-solution-for-example-7">
+<h3>Sketch of Solution for Example 7<a class="headerlink" href="#sketch-of-solution-for-example-7" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Replace the components and voltages in the circuit diagram with their complex frequency equivalents</p></li>
+<li><p>Use nodal analysis to determine the voltages at the nodes either side of the 50K resistor <span class="math notranslate nohighlight">\(R_3\)</span></p></li>
+<li><p>Note that the voltage at the input to the op-amp is a virtual ground</p></li>
+<li><p>Solve for <span class="math notranslate nohighlight">\(V_{\mathrm{out}}(s)\)</span> as a function of <span class="math notranslate nohighlight">\(V_{\mathrm{in}}(s)\)</span></p></li>
+<li><p>Form the reciprocal <span class="math notranslate nohighlight">\(G(s) = V_{\mathrm{out}}(s)/V_{\mathrm{in}}(s)\)</span></p></li>
+<li><p>Use MATLAB to calculate the component values, then replace <span class="math notranslate nohighlight">\(s\)</span> by <span class="math notranslate nohighlight">\(j\omega\)</span>.</p></li>
+<li><p>Plot
+$<span class="math notranslate nohighlight">\(\left|G(j\omega)\right|\)</span>$
+on log-linear “paper”.</p></li>
+</ul>
+</section>
+<section id="worked-solution-for-example-7">
+<h3>Worked solution for Example 7<a class="headerlink" href="#worked-solution-for-example-7" title="Permalink to this headline">#</a></h3>
+<p>Pencast: <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/ex7.pdf">ex7.pdf</a> - open in Adobe Acrobat Reader.</p>
+</section>
+<section id="answer-for-example-7">
+<h3>Answer for Example 7<a class="headerlink" href="#answer-for-example-7" title="Permalink to this headline">#</a></h3>
+<div class="math notranslate nohighlight">
+\[G(s) = \frac{V_\mathrm{out}(s)}{V_\mathrm{in}(s)} = \frac{-1}{R_1\left(\left(1/R_1 + 1/R_2 + 1/R_3 + sC_1\right)\left(sC_2R_3\right)+1/R_2\right)}.\]</div>
+</section>
+<section id="id3">
+<h3>The Matlab Bit<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<p>See attached script: <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution7.m">solution7.m</a>.</p>
+<section id="week-3-solution-7">
+<h4>Week 3: Solution 7<a class="headerlink" href="#week-3-solution-7" title="Permalink to this headline">#</a></h4>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">R1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">200</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">% 200 kOhm </span>
+<span class="n">R2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">40</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">% 40 kOhm</span>
+<span class="n">R3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">50</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">% 50 kOhm</span>
+
+<span class="n">C1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">25</span><span class="o">*</span><span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">);</span><span class="w"> </span><span class="c">% 25 nF</span>
+<span class="n">C2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">);</span><span class="w"> </span><span class="c">% 10 nF</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">den</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R1</span><span class="o">*</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">R1</span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="o">*</span><span class="n">C1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">*</span><span class="n">R3</span><span class="o">*</span><span class="n">C2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R2</span><span class="p">);</span>
+<span class="nb">simplify</span><span class="p">(</span><span class="n">den</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Result is: <code class="docutils literal notranslate"><span class="pre">100*s*((7555786372591433*s)/302231454903657293676544</span> <span class="pre">+</span> <span class="pre">1/20000)</span> <span class="pre">+</span> <span class="pre">5</span></code></p>
+<p>Simplify coefficients of s in denominator</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="w"> </span><span class="n">long</span>
+<span class="n">denG</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sym2poly</span><span class="p">(</span><span class="nb">ans</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">numG</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Plot</p>
+<p>For convenience, define coefficients <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">10000</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[G(j\omega) = \frac{-1}{a\omega^2 - jb\omega + 5}\]</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Gw</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">w</span><span class="o">.^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">j</span><span class="o">.*</span><span class="n">b</span><span class="o">.*</span><span class="n">w</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">semilogx</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">Gw</span><span class="p">))</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Radian frequency w (rad/s)&#39;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;|Vout/Vin|&#39;</span><span class="p">)</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Magnitude Vout/Vin vs. Radian Frequency&#39;</span><span class="p">)</span>
+<span class="nb">grid</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="using-transfer-functions-in-matlab-for-system-analysis">
+<h2>Using Transfer Functions in Matlab for System Analysis<a class="headerlink" href="#using-transfer-functions-in-matlab-for-system-analysis" title="Permalink to this headline">#</a></h2>
+<p>Please use the file <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/tf_matlab.m">tf_matlab.m</a> to explore the Transfer Function features provide by Matlab. Use the <em>publish</em> option to generate a nicely formatted document.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">edit</span><span class="w"> </span><span class="n">tf_matlab</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h2>Using Transfer Functions in Simulink for System Simulation<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h2>
+<p><img alt="Using Transfer Functions in Simulink for System Simulation" src="laplace_transform/8/pictures/sim_tf.png" /></p>
+<p>The Simulink transfer function (<strong><code class="docutils literal notranslate"><span class="pre">Transfer</span> <span class="pre">Fcn</span></code></strong>) block shown above implements a transfer function representing a general
+input output function</p>
+<div class="math notranslate nohighlight">
+\[G(s) = \frac{N(s)}{D(s)}\]</div>
+<p>that it is not specific nor restricted to circuit analysis. It can, however be used in modelling and simulation studies.</p>
+<section id="id5">
+<h3>Example<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<p>Recast Example 7 as a MATLAB problem using the LTI Transfer Function block.</p>
+<p>For simplicity use parameters <span class="math notranslate nohighlight">\(R_1 = R_2 = R_3 = 1\; \Omega\)</span>, and <span class="math notranslate nohighlight">\(C_1 = C_2 = 1\)</span> F.</p>
+<p>Calculate the step response using the LTI functions.</p>
+<p>Verify the result with Simulink.</p>
+<p>The Matlab solution: <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/example8.m">example8.m</a></p>
+<section id="id6">
+<h4>MATLAB Solution<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h4>
+<p>From a previous analysis the transfer function is:</p>
+<div class="math notranslate nohighlight">
+\[G(s) = \frac{V_\mathrm{out}}{V_\mathrm{in}} = \frac{-1}{R_1\left[(1/R_1 + 1/R_2 + 1/R_3 + sC_1)(sR_3C_2) + 1/R_2\right]}\]</div>
+<p>so substituting the component values we get:</p>
+<div class="math notranslate nohighlight">
+\[G(s) = \frac{V_{\mathrm{out}}}{V_{\mathrm{in}}} = \frac{-1}{s^2 + 3s + 1}\]</div>
+<p>We can find the step response by letting <span class="math notranslate nohighlight">\(v_{\mathrm{in}}(t) = u_0(t)\)</span> so that
+<span class="math notranslate nohighlight">\(V_{\mathrm{in}}(s)=1/s\)</span> then</p>
+<div class="math notranslate nohighlight">
+\[V_{\mathrm{out}}(s) = \frac{-1}{s^2 + 3s + 1}.\frac{1}{s}\]</div>
+<p>We can solve this by partial fraction expansion and inverse Laplace transform
+as is done in the text book with the help of Matlab’s <code class="docutils literal notranslate"><span class="pre">residue</span></code> function.</p>
+<p>Here, however we’ll use the LTI block that was introduced in the lecture.</p>
+<p>Define the circuit as a transfer function</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>step response is then:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">step</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Simples!</p>
+</section>
+<section id="id7">
+<h4>Simulink model<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h4>
+<p>See <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/example_8.slx">example_8.slx</a></p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="w"> </span><span class="n">example_8</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="Simulink model" src="laplace_transform/8/pictures/ex8_sim.png" /></p>
+<p>Result</p>
+<p><img alt="Simulation result" src="laplace_transform/8/pictures/ex8_sim_result.png" /></p>
+<p>Let’s go a bit further by finding the frequency response:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%bode(G)</span>
+<span class="n">nyquist</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="c">%rlocus(G)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="matlab-solutions">
+<h2>Matlab Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this headline">#</a></h2>
+<p>For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab">MATLAB</a> folder.</p>
+<ul class="simple">
+<li><p><span class="xref std std-ref">ex:14.2</span> [<a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_14.2.mlx">example_14.2.mlx</a>]</p></li>
+<li><p>Example 8  [<a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example8.m">example8.m</a>]</p></li>
+<li><p>Simulink model [<a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_8.slx">example_8.slx</a>]</p></li>
+</ul>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<p>In this unit we have presented the idea of a <em>transfer function</em> (or <em>system function</em>) that allows us to represent the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> by the Laplace transform <span class="math notranslate nohighlight">\(H(s)\)</span>. We also looked at the characteristics of the Laplace transform, transform functions for LCCODEs and series and parallel combination of transfer functions.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../6/transfer_functions.html#system-function"><span class="std std-ref">The Transfer Function</span></a></p></li>
+<li><p><a class="reference internal" href="../6/transfer_functions.html#char-lti-systems"><span class="std std-ref">Characterization of LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="../6/transfer_functions.html#tf-for-lccode"><span class="std std-ref">Transfer functions for LTI system described by Linear Constant-Coefficient Ordinary Differential Equations</span></a></p></li>
+<li><p><a class="reference internal" href="../6/transfer_functions.html#block-diagrams"><span class="std std-ref">Block diagrams for Systems Interconnection</span></a></p></li>
+<li><p><a class="reference internal" href="../6/transfer_functions.html#examples13"><span class="std std-ref">Examples 13: Transfer functions</span></a></p></li>
+</ul>
+<p><strong>My main message to you is that, as an engineer faced with a LCCODE to solve, you should use Laplace transforms!</strong></p>
+<section id="take-aways">
+<h3>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this headline">#</a></h3>
+<section id="transfer-function">
+<h4>Transfer function<a class="headerlink" href="#transfer-function" title="Permalink to this headline">#</a></h4>
+<p>The summary of the time-domain and s-domain transforms are illustrated in <a class="reference internal" href="../6/transfer_functions.html#fig-3-7"><span class="std std-numref">Fig. 58</span></a>. The key result is <span class="math notranslate nohighlight">\(Y(s) = H(s)X(s)\)</span> which simplifies the computation of the system response <span class="math notranslate nohighlight">\(y(t) = h(t)*x(t)\)</span> which has to be done using time-convolution.</p>
+<p>If we know <span class="math notranslate nohighlight">\(Y(s)\)</span> and <span class="math notranslate nohighlight">\(X(s)\)</span> we can determine <span class="math notranslate nohighlight">\(H(s)\)</span> using</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \frac{Y(s)}{X(s)}\]</div>
+<p>and <span class="math notranslate nohighlight">\(h(t) = \mathcal{L}^{-1}\left\{H(s)\right\}\)</span></p>
+</section>
+<section id="characterization-of-lti-systems">
+<h4>Characterization of LTI Systems<a class="headerlink" href="#characterization-of-lti-systems" title="Permalink to this headline">#</a></h4>
+<p>For continuous-time LTI systems the causality and stabilty of a system is guaranteed if all the poles of the transfer function are in the left-half of the <span class="math notranslate nohighlight">\(s\)</span>-plane and the <span class="math notranslate nohighlight">\(j\omega\)</span> axis is included in the region of convergence. That is, if the poles of the system <span class="math notranslate nohighlight">\(H(s)\)</span>, <span class="math notranslate nohighlight">\(s_k\)</span> have real part <span class="math notranslate nohighlight">\(-\sigma_k\)</span>, the system will be causal and stable if <span class="math notranslate nohighlight">\(\sigma_k &lt; 0\)</span> for all <span class="math notranslate nohighlight">\(k\)</span>.</p>
+</section>
+<section id="laplace-transforms-of-lccodes">
+<h4>Laplace transforms of LCCODEs<a class="headerlink" href="#laplace-transforms-of-lccodes" title="Permalink to this headline">#</a></h4>
+<p>The linear constant coefficient ordinary differential equation (LLCODE) of a system involving input signal <span class="math notranslate nohighlight">\(x(t)\)</span> and output signal <span class="math notranslate nohighlight">\(y(t)\)</span> is given in <a class="reference internal" href="../6/transfer_functions.html#equation-eq-338">(33)</a>. When we take Laplace transforms of this differential equation, ignoring initial conditions, we get the polynomial equation <a class="reference internal" href="../6/transfer_functions.html#equation-eq-339">(34)</a> from which we can determine the transfer function:</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}\]</div>
+<p>This is a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span> and it can be solved for any input <span class="math notranslate nohighlight">\(x(t)\)</span> that has a Laplace transform <span class="math notranslate nohighlight">\(X(s)\)</span> by forming</p>
+<div class="math notranslate nohighlight">
+\[Y(s) = H(s)X(s)\]</div>
+<p>and taking inverse Laplace transforms using the Partial Fraction Expansion method discussed in <a class="reference internal" href="../5/circuit_analysis.html#unit4-5"><span class="std std-ref">Unit 4.5: Using Laplace Transforms for Circuit Analysis</span></a>.</p>
+<p>Several examples are given in <a class="reference internal" href="../5/circuit_analysis.html#examples12"><span class="std std-ref">Examples 12</span></a> in which the problems given in <span class="xref std std-ref">examples8</span> of <span class="xref std std-ref">unit3.3</span> are redone as Laplace transform problems.</p>
+</section>
+<section id="block-diagrams">
+<h4>Block diagrams<a class="headerlink" href="#block-diagrams" title="Permalink to this headline">#</a></h4>
+<p>Complex systems can be broken down into subsystems which may be represented by block diagrams which have either series or parallel connections (see <a class="reference internal" href="../6/transfer_functions.html#fig-3-8"><span class="std std-numref">Fig. 59</span></a> and <a class="reference internal" href="../6/transfer_functions.html#fig-3-9"><span class="std std-numref">Fig. 60</span></a> and feedback (See <a class="reference internal" href="../6/transfer_functions.html#ex-13-8"><span class="std std-ref">Example 13.8</span></a>)</p>
+</section>
+</section>
+<section id="still-to-come">
+<h3>Still to come<a class="headerlink" href="#still-to-come" title="Permalink to this headline">#</a></h3>
+<p>We will use transfer functions to solve circuit problems in <a class="reference internal" href="../7/tf_for_circuits.html#unit4-7"><span class="std std-ref">Unit 4.7: Transfer Functions for Circuit Analysis</span></a> and conclude our study of Laplace transforms in <a class="reference internal" href="#unit4-8"><span class="std std-ref">Unit 4.8: Computer-Aided Systems Analysis and Simulation</span></a> with a look at the use of Transfer functions in the MATLAB control systems toolbox and the sumulation tool Simulink. We will also look at some of the problems you have studied in <strong>EG-152 Analogue Design</strong> hopefully confirming some of the results you have obbserved in the lab.</p>
+<p>In <strong>EG-247 Digital Signal Processing</strong> we will start from the knowledge gained in <span class="xref std std-ref">Unit 4</span> developing transform ideas further via the Fourier Transform, Z-Transform and the design of systems for signal processing. In <strong>EG-243 Control Systems</strong> you will model feedback control signals using block diagrams and transfer functions. You will also study how knowledge of poles and zeros can be exploited in the design of systems with stable responses.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="p">.</span><span class="o">./</span><span class="n">matlab</span>
+<span class="nb">ls</span>
+<span class="nb">open</span><span class="w"> </span><span class="n">example_14_2</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
