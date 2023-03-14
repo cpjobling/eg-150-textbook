@@ -154,13 +154,13 @@ Complex Frequency Domain Model of a Resistive Circuit
 (inductive_network)=
 ###  Time Domain Model of an Inductive Network
 
-Consider {numref}`fig:res_circ_t`
+Consider {numref}`fig:ind_circ_t`
 
-:::{figure-md} fig:res_circ_t
+:::{figure-md} fig:ind_circ_t
 
 <img src="pictures/inductive_time.png" alt="Time Domain Model of a Resistive Network." width="60%">
 
-Time Domain Model of a Resistive Network.
+Time Domain Model of an Inductive Network.
 :::
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -221,9 +221,9 @@ $$V_L(s)=\frac{I_L(s)}{sL} + \frac{i_L(0^-)}{s}$$
 (complex_inductive_network)=
 ### Complex Frequency Domain Model of an Inductive Network 
 
-Consider {numref}`fig:res_circ_t`
+Consider {numref}`fig:ind_circ_s`
 
-:::{figure-md} fig:res_circ_t
+:::{figure-md} fig:ind_circ_s
 
 <img src="pictures/inductive_freq.png" alt="Time Domain Model of a Resistive Network." width="60%">
 
@@ -249,13 +249,13 @@ The current and voltage are transformed but so is the inductance. The complex fr
 (capacitive_network)=
 ### Time Domain Model of a Capacitive Network
 
-Consider {numref}`fig:res_circ_t`
+Consider {numref}`fig:cap_circ_t`
 
-:::{figure-md} fig:res_circ_t
+:::{figure-md} fig:cap_circ_t
 
 <img src="pictures/capacitive_time.png" alt="Time Domain Model of a Resistive Network." width="60%">
 
-Time Domain Model of a Resistive Network.
+Time Domain Model of a Capacitive Network.
 :::
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -330,13 +330,13 @@ The current and voltage are transformed but so is the capacitance. The complex f
 
 ### Complex Frequency Domain of a Capacitive Network
 
-Consider {numref}`fig:res_circ_t`
+Consider {numref}`fig:cap_circ_s`
 
-:::{figure-md} fig:res_circ_t
+:::{figure-md} fig:cap_circ_s
 
 <img src="pictures/capacitive_freq.png" alt="Time Domain Model of a Resistive Network." width="60%">
 
-Time Domain Model of a Resistive Network.
+Time Domain Model of a Capacitive Network.
 :::
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -381,7 +381,7 @@ $$R$$
 
 Consider the $s$-domain RLC series circuit shown in {numref}`fig:complex_imp`, where the initial conditions are assumed to be zero.
 
-:::{figure-md} fig:res_circ_t
+:::{figure-md} fig:complex_imp
 
 <img src="pictures/impedence.png" alt="RLC series circuit." width="60%">
 
