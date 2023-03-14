@@ -941,7 +941,11 @@ Condider {numref}`fig:complex_imp` and give an expression for $V_c(s)$.
 
 For the network shown in {numref}`fig:ex12.5`, all the complex impedance values are given in $\Omega$ (ohms). 
 
-![Circuit for example 4](pictures/example4.png)
+:::{figure-md} Fig:ex12.5
+<img src="pictures/example4.png" alt="Circuit for Example 12.5" width="60%">
+
+Circuit for Example 12.5
+:::
 
 Find $Z(s)$ using:
     
@@ -1157,5 +1161,5 @@ We move on to consider
 
 For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-247-textbook/tree/master/laplace_transform/matlab) folder in the [GitHub repository](https://github.com/cpjobling/eg-247-textbook).
 
-* Solution 3 [[solution3.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution3.m)]
-* Solution 5 [[solution5.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution5.m)]
+* Solution 3 [[solution12_3.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m)]
+* Solution 5 [[solution12_6](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m)]
