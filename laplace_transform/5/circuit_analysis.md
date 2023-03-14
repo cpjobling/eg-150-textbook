@@ -637,7 +637,7 @@ In the circuit below, switch $S_1$ closes at $t=0$, while at the same time, swit
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-We can show how with the assistance of MATLAB (See [solution3.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution3.m)) that the solution is
+We can show how with the assistance of MATLAB (See [solution12_3.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m)) that the solution is
 
 $$V_{\mathrm{out}}=\left(1.36e^{-6.57t}+0.64e^{-0.715t}\cos 0.316t - 1.84e^{-0.715t}\sin 0.316t\right)u_0(t)$$
 
@@ -774,7 +774,7 @@ Determine equation for $V_{\rm out}(s)$.
 (sol:mat12.3)=
 #### 4. Complete solution in MATLAB
 
-In the lecture we showed that after simplification for Example 3
+In the lecture we showed that after simplification for {ref}`ex:12.3`
 
 $$V_{\mathrm{out}}(s)=\frac{2s(s+3)}{s^3 + 8s^2 + 10s + 4}$$
 
@@ -877,14 +877,12 @@ ylabel('Vout(t) V'),xlabel('Time t s')
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-#### Worked Solution: Example 3
+#### Worked Solution: {ref}`ex:12.3`
 
 
-File Pencast: [example3.pdf](https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/example3.pdf) - Download and open in Adobe Acrobat Reader.
+File Pencast: [example12_3.pdf](https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/example3.pdf) - Download and open in Adobe Acrobat Reader.
 
-The attached "PenCast" works through the solution to Example 3 by hand. It's quite a complex, error-prone (as you will see!) calculation that needs careful attention to detail. This in itself gives justification to my belief that you should use computers wherever possible.
-
-Please note, the PenCast takes around 39 minutes (I said it was a complex calculation) but you can fast forward and replay any part of it.
+The attached PDF works through the solution to {ref}`ex:12.3` by hand. It's quite a complex, error-prone (as you will see!) calculation that needs careful attention to detail. This in itself gives justification to my belief that you should use computers wherever possible.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -907,32 +905,6 @@ tags: [remove-output]
 ---
 impulse(Vout)
 ```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-For this circuit, the sum
-
-$$R + sL + \frac{1}{sC}$$ 
-
-represents that total opposition to current flow. Then,
-
-$$I(s) = \frac{V_s(s)}{R + sL + 1/(sC)}$$
-
-and defining the ratio $V_s(s)/I(s)$ as $Z(s)$, we obtain
-
-$$Z(s) = \frac{V_s(s)}{I(s)} = R + sL + \frac{1}{sC}$$
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-The $s$-domain current $I(s)$ can be found from 
-
-$$I(s) = \frac{V_s(s)}{Z(s)}$$
-
-where
-
-$$Z(s) = R + sL + \frac{1}{sC}.$$
-
-Since $s = \sigma + j\omega$ is a complex number, $Z(s)$ is also complex and is known as the *complex input impedance* of this RLC series circuit.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -1075,12 +1047,12 @@ $$Z(s) = \frac{65s^4 + 490s^3 + 528s^2 + 400s + 128}{s(5s^2 + 30s + 16)}$$
 
 $$Y(s) = \frac{1}{Z(s)} = \frac{s(5s^2 + 30s + 16)}{65s^4 + 490s^3 + 528s^2 + 400s + 128}$$
 
-Matlab verification: [solution5.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution5.m)
+Matlab verification: [solution12_6.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_6.m)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (mat:12.6)=
-#### Example 5: Verification of Solution
+#### Example 12.6: Verification of Solution
 
 ```{code-cell}
 ---

@@ -1,9 +1,10 @@
-remive%% Week 3: Solution 7
+% + magic_args="Week 3: Solution 7"
 syms s;
 %%
 R1 = 200*10^3; 
 R2 = 40*10^3;
 R3 = 50*10^3;
+% -
 
 C1 = 25*10^(-9);
 C2 = 10*10^(-9);

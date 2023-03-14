@@ -1,21 +1,21 @@
-%% solution3 - Solution for Example 3 from Week 3 notes.
+% % solution 12.3 - Solution for Example 12.3 from Week 7 notes.
 
 % ADD NEW CODE HERE (1)
-%% 
+% % 
 % In the lecture we showed that after simplification for Example 3
-% 
+%
 % $V_{\mathrm{out}}(s)=\frac{2s(s+3)}{s^3 + 8s^2 + 10s + 4}$ (1)
-% 
+%
 % We will use MATLAB to factorize the denominator $D(s)$ of the equation into 
 % a linear and a quadratic factor.
-% 
+%
 % Note that, when the denominator is factorized, equation (1) will be 
-% 
+%
 % $V_{\mathrm{out}}(s)=\frac{2s(s+3)}{(s - p_1)(s - p_2)(s - p_3)}$ (2)
-% 
+%
 % where $p_1$ is real and $p_2$ and $p_3$ are complex with $p_3 =p_2^*$ (the 
 % complex conjugate of $p_2$).
-%% Find roots of D(s)
+% % Find roots of D(s)
 
 d = [1, 8, 10, 4];
 format long
@@ -32,7 +32,7 @@ y = vpa(y,10)
 % Define the factors of the denominator and rewrite |Vout| in factored form
 
 % ADD NEW CODE HERE (2)
-%% Plot result
+% % Plot result
 
 t=0:0.01:10;
 Vout = 1.36.*exp(-6.57.*t)+0.64.*exp(-0.715.*t).*cos(0.316.*t)-1.84.*exp(-0.715.*t).*sin(0.316.*t);
