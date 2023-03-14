@@ -433,12 +433,14 @@ $$I(s) = V(s) Y(s)$$
 
 from which
 
-$$Y(s) = \frac{I(s)}{V(s)}$$.
+$$Y(s) = \frac{I(s)}{V(s)}$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (complex_component_admittance)=
 ### Complex admittance of components
+
+For the resistance $R$$\Omega$, inductance $L$H and capacitance $C$F, which of the following represent the complex admittance, $Y(s) = I(s)/V(s)$ of the components?
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
