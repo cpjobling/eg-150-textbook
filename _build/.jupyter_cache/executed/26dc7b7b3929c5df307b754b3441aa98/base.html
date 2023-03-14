@@ -51,7 +51,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/_build/.jupyter_cache/executed/77f2f34b52ee7727d680d1cb255784ea/base.html" />
+    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/_build/.jupyter_cache/executed/26dc7b7b3929c5df307b754b3441aa98/base.html" />
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -440,7 +440,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/_build/.jupyter_cache/executed/77f2f34b52ee7727d680d1cb255784ea/base.ipynb"
+        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/_build/.jupyter_cache/executed/26dc7b7b3929c5df307b754b3441aa98/base.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -500,7 +500,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2F_build/.jupyter_cache/executed/77f2f34b52ee7727d680d1cb255784ea/base.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2F_build/.jupyter_cache/executed/26dc7b7b3929c5df307b754b3441aa98/base.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -517,7 +517,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/_build/.jupyter_cache/executed/77f2f34b52ee7727d680d1cb255784ea/base.ipynb"
+        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/_build/.jupyter_cache/executed/26dc7b7b3929c5df307b754b3441aa98/base.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -545,7 +545,7 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../../_sources/_build/.jupyter_cache/executed/77f2f34b52ee7727d680d1cb255784ea/base.ipynb"
+        <a href="../../../../_sources/_build/.jupyter_cache/executed/26dc7b7b3929c5df307b754b3441aa98/base.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -850,7 +850,9 @@ title="Print to PDF"
      0
     -4
     -2
-gain =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gain =
      1
 </pre></div>
 </div>
@@ -873,7 +875,9 @@ gain =
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
-  s^3 + 6 s^2 + 8 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 6 s^2 + 8 s
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
@@ -1079,87 +1083,277 @@ gain =
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">R1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">200</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span><span class="w"> </span>
-<span class="n">R2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">40</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span>
-<span class="n">R3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">50</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span>
-
-<span class="n">C1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">25</span><span class="o">*</span><span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">);</span>
-<span class="n">C2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">den</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R1</span><span class="o">*</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">R1</span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="o">*</span><span class="n">C1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">*</span><span class="n">R3</span><span class="o">*</span><span class="n">C2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R2</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G1</span><span class="p">=</span><span class="n">tf</span><span class="p">([</span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="w"> </span><span class="mi">3</span><span class="p">]);</span>
+<span class="n">G2</span><span class="p">=</span><span class="n">tf</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="nb">conv</span><span class="p">([</span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">]));</span><span class="w"> </span><span class="c">% conv is polynomial multiplication</span>
+<span class="n">Gs</span><span class="p">=</span><span class="n">G1</span><span class="o">*</span><span class="n">G2</span><span class="w"> </span><span class="c">% series connection of two LTI objects</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gs =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      10 s + 10
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 5 s^2 + 6 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nb">zeros</span><span class="p">,</span><span class="n">poles</span><span class="p">,</span><span class="n">K</span><span class="p">]=</span><span class="n">zpkdata</span><span class="p">(</span><span class="n">Gs</span><span class="p">,</span><span class="s">&#39;v&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zeros =
+    -1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>poles =
+         0
+   -3.0000
+   -2.0000
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>K =
+    10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Gp</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">G1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">G2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gp =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 3 s^2 + 12 s + 30
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     s^3 + 5 s^2 + 6 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">([</span><span class="mi">2</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="s">&#39;inputname&#39;</span><span class="p">,</span><span class="s">&#39;torque&#39;</span><span class="p">,</span><span class="k">...</span>
+<span class="w">    </span><span class="s">&#39;outputname&#39;</span><span class="p">,</span><span class="s">&#39;velocity&#39;</span><span class="p">);</span>
+<span class="n">H</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">zpk</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Gc</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">feedback</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">H</span><span class="p">)</span><span class="w"> </span><span class="c">% negative feedback assumed</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gc =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  From input &quot;torque&quot; to output &quot;velocity&quot;:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.18182 (s+0.2192) (s+2.281) (s+10)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   (s+3.419) (s^2 + 1.763s + 1.064)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">rlocus</span><span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">H</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/base_28_0.png" src="../../../../_images/base_28_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">H</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/base_29_0.png" src="../../../../_images/base_29_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">step</span><span class="p">(</span><span class="n">Gc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/base_30_0.png" src="../../../../_images/base_30_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">Gc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/base_31_0.png" src="../../../../_images/base_31_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">impulse</span><span class="p">(</span><span class="n">Gc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/base_32_0.png" src="../../../../_images/base_32_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">nyquist</span><span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">H</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/base_33_0.png" src="../../../../_images/base_33_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">k</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">];</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="o">-</span><span class="mi">10</span><span class="p">];</span><span class="w"> </span><span class="c">% zero-pole-gain form</span>
+<span class="n">C</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">zpk</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">k</span><span class="p">);</span>
+<span class="p">[</span><span class="n">num</span><span class="p">,</span><span class="n">den</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tfdata</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="s">&#39;v&#39;</span><span class="p">)</span>
+<span class="c">%</span>
+<span class="c">% (Note that the leading terms in num are zero).</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>num =
+     0     0     5    10
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>den =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100*s*((7555786372591433*s)/302231454903657293676544 + 1/20000) + 5
+     1    13    30     0
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="w"> </span><span class="n">long</span>
-<span class="n">denG</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sym2poly</span><span class="p">(</span><span class="n">den</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">residue</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">den</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>denG =
-   0.000002500000000   0.005000000000000   5.000000000000000
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>r =
+   -0.5714
+    0.2381
+    0.3333
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p =
+   -10
+    -3
+     0
+k =
+     []
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">numG</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">10000</span><span class="p">;</span>
-<span class="n">Gw</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">w</span><span class="o">.^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">j</span><span class="o">.*</span><span class="n">b</span><span class="o">.*</span><span class="n">w</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">semilogx</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">Gw</span><span class="p">))</span>
-<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Radian frequency w (rad/s&#39;</span><span class="p">)</span>
-<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;|Vout/Vin|&#39;</span><span class="p">)</span>
-<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Magnitude Vout/Vin vs. Radian Frequency&#39;</span><span class="p">)</span>
-<span class="nb">grid</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">newC</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">])</span>
+<span class="nb">step</span><span class="p">(</span><span class="n">newC</span><span class="p">)</span><span class="w"> </span><span class="c">% provides $u_0(t)$</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/base_30_01.png" src="../../../../_images/base_30_01.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>newC =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     5 s + 10
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  ---------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + 13 s + 30
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<img alt="../../../../_images/base_36_7.png" src="../../../../_images/base_36_7.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mf">.05</span><span class="p">:</span><span class="mf">1.5</span><span class="p">;</span><span class="w"> </span><span class="c">% time vector</span>
+<span class="n">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.3333</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.2381</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.5714</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="o">*</span><span class="n">t</span><span class="p">);</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/base_37_0.png" src="../../../../_images/base_37_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1199,7 +1393,7 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/base_32_01.png" src="../../../../_images/base_32_01.png" />
+<img alt="../../../../_images/base_39_0.png" src="../../../../_images/base_39_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1216,139 +1410,7 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/base_34_0.png" src="../../../../_images/base_34_0.png" />
-</div>
-</div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Matlab setup</span>
-<span class="nb">clear</span><span class="w"> </span><span class="nb">all</span>
-<span class="nb">cd</span><span class="w"> </span><span class="p">.</span><span class="o">./</span><span class="n">matlab</span><span class="w"> </span>
-<span class="nb">pwd</span>
-<span class="nb">format</span><span class="w"> </span><span class="n">compact</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">R1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">200</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">% 200 kOhm </span>
-<span class="n">R2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">40</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">% 40 kOhm</span>
-<span class="n">R3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">50</span><span class="o">*</span><span class="mi">10</span>^<span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">% 50 kOhm</span>
-
-<span class="n">C1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">25</span><span class="o">*</span><span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">);</span><span class="w"> </span><span class="c">% 25 nF</span>
-<span class="n">C2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">);</span><span class="w"> </span><span class="c">% 10 nF</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">den</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">R1</span><span class="o">*</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">R1</span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="o">*</span><span class="n">C1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">*</span><span class="n">R3</span><span class="o">*</span><span class="n">C2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">R2</span><span class="p">);</span>
-<span class="nb">simplify</span><span class="p">(</span><span class="n">den</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="w"> </span><span class="n">long</span>
-<span class="n">denG</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sym2poly</span><span class="p">(</span><span class="nb">ans</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">numG</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">10000</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Gw</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">w</span><span class="o">.^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">j</span><span class="o">.*</span><span class="n">b</span><span class="o">.*</span><span class="n">w</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">denG</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">semilogx</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">Gw</span><span class="p">))</span>
-<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Radian frequency w (rad/s)&#39;</span><span class="p">)</span>
-<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;|Vout/Vin|&#39;</span><span class="p">)</span>
-<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Magnitude Vout/Vin vs. Radian Frequency&#39;</span><span class="p">)</span>
-<span class="nb">grid</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">edit</span><span class="w"> </span><span class="n">tf_matlab</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">step</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="w"> </span><span class="n">example_8</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%bode(G)</span>
-<span class="n">nyquist</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
-<span class="c">%rlocus(G)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="p">.</span><span class="o">./</span><span class="n">matlab</span>
-<span class="nb">ls</span>
-<span class="nb">open</span><span class="w"> </span><span class="n">example_14_2</span>
-</pre></div>
-</div>
+<img alt="../../../../_images/base_41_0.png" src="../../../../_images/base_41_0.png" />
 </div>
 </div>
 
@@ -1365,7 +1427,7 @@ gain =
         },
         kernelOptions: {
             kernelName: "matlab",
-            path: "./_build/.jupyter_cache/executed/77f2f34b52ee7727d680d1cb255784ea"
+            path: "./_build/.jupyter_cache/executed/26dc7b7b3929c5df307b754b3441aa98"
         },
         predefinedOutput: true
     }

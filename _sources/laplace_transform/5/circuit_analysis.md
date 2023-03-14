@@ -158,12 +158,10 @@ Consider {numref}`fig:res_circ_t`
 
 :::{figure-md} fig:res_circ_t
 
-<img src="pictures/resistive_time.png" alt="Time Domain Model of a Resistive Network." width="60%">
+<img src="pictures/inductive_time.png" alt="Time Domain Model of a Resistive Network." width="60%">
 
 Time Domain Model of a Resistive Network.
 :::
-
-![Inductive Network - Time Domain](pictures/inductive_time.png)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -227,12 +225,10 @@ Consider {numref}`fig:res_circ_t`
 
 :::{figure-md} fig:res_circ_t
 
-<img src="pictures/resistive_time.png" alt="Time Domain Model of a Resistive Network." width="60%">
+<img src="pictures/inductive_freq.png" alt="Time Domain Model of a Resistive Network." width="60%">
 
 Time Domain Model of a Resistive Network.
 :::
-
-![Inductive Network - Complex Frequency Domain](pictures/inductive_freq.png)
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -257,12 +253,10 @@ Consider {numref}`fig:res_circ_t`
 
 :::{figure-md} fig:res_circ_t
 
-<img src="pictures/resistive_time.png" alt="Time Domain Model of a Resistive Network." width="60%">
+<img src="pictures/capacitive_time.png" alt="Time Domain Model of a Resistive Network." width="60%">
 
 Time Domain Model of a Resistive Network.
 :::
-
-![Capacitive Network - Time Domain](pictures/capacitive_time.png)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -340,17 +334,30 @@ Consider {numref}`fig:res_circ_t`
 
 :::{figure-md} fig:res_circ_t
 
-<img src="pictures/resistive_time.png" alt="Time Domain Model of a Resistive Network." width="60%">
+<img src="pictures/capacitive_freq.png" alt="Time Domain Model of a Resistive Network." width="60%">
 
 Time Domain Model of a Resistive Network.
 :::
-
-![Capacitive Network - Complex Frequency Domain](pictures/capacitive_freq.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (complex_impedance)=
 ## Complex Impedance $Z(s)$
+
+By analogy with the *resistance* of a resistor $R$, a component with complex impedance $Z(s)$ satisfies Ohm's law:
+
+$$V(s) = I(s) Z(s)$$
+
+from which
+
+$$Z(s) = \frac{V(s)}{I(s)}$$.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(complex_impedance_comps)=
+### Complex impedance of components
+
+For the resistance $R$$\Omega$, inductance $L$H and capacitance $C$F, which of the following represent the complex impedance, $Z(s) = V(s)/I(s)$ of the components?
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -365,13 +372,6 @@ $$\frac{1}{sC}$$
 $$\frac{1}{sL}$$
 
 $$R$$
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-(complex_impedance_comps)=
-### Complex impedance of components
-
-For the resistance $R$$\Omega$, inductance $L$H and capacitance $C$F, which of the following represent the complex impedance of the components?
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -426,6 +426,14 @@ Since $s = \sigma + j\omega$ is a complex number, $Z(s)$ is also complex and is 
 
 (complex_admittance)=
 ## Complex Admittance $Y(s)$
+
+By analogy with the *admittance* of a resistor $G$, a component with complex admittance $Y(s)$ satisfies Ohm's law:
+
+$$I(s) = V(s) Y(s)$$
+
+from which
+
+$$Y(s) = \frac{I(s)}{V(s)}$$.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -856,7 +864,7 @@ slideshow:
 tags: [remove-output]
 ---
 [r, p, k] = residue(2*conv([1,0],[1,3]),[1 8, 10,4])
-yt=0:0.01:10;
+t=0:0.01:10;
 Vout = 1.36.*exp(r(1).*t)...
    +0.64.*exp(real(r(2)).*t).*cos(imag(r(2)).*t)...
    -1.84.*exp(real(r(3)).*t).*sin(-imag(r(3)).*t);
