@@ -1,5 +1,6 @@
-%% Example 5: Verification of Solution
+% + magic_args="Example 12.6: Verification of Solution"
 syms s;
+% -
 
 z1 = 13*s + 8/s;
 z2 = 5*s + 10;

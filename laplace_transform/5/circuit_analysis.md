@@ -154,16 +154,14 @@ Complex Frequency Domain Model of a Resistive Circuit
 (inductive_network)=
 ###  Time Domain Model of an Inductive Network
 
-Consider {numref}`fig:res_circ_t`
+Consider {numref}`fig:ind_circ_t`
 
-:::{figure-md} fig:res_circ_t
+:::{figure-md} fig:ind_circ_t
 
-<img src="pictures/resistive_time.png" alt="Time Domain Model of a Resistive Network." width="60%">
+<img src="pictures/inductive_time.png" alt="Time Domain Model of a Resistive Network." width="60%">
 
-Time Domain Model of a Resistive Network.
+Time Domain Model of an Inductive Network.
 :::
-
-![Inductive Network - Time Domain](pictures/inductive_time.png)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -223,16 +221,14 @@ $$V_L(s)=\frac{I_L(s)}{sL} + \frac{i_L(0^-)}{s}$$
 (complex_inductive_network)=
 ### Complex Frequency Domain Model of an Inductive Network 
 
-Consider {numref}`fig:res_circ_t`
+Consider {numref}`fig:ind_circ_s`
 
-:::{figure-md} fig:res_circ_t
+:::{figure-md} fig:ind_circ_s
 
-<img src="pictures/resistive_time.png" alt="Time Domain Model of a Resistive Network." width="60%">
+<img src="pictures/inductive_freq.png" alt="Time Domain Model of a Resistive Network." width="60%">
 
 Time Domain Model of a Resistive Network.
 :::
-
-![Inductive Network - Complex Frequency Domain](pictures/inductive_freq.png)
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -253,16 +249,14 @@ The current and voltage are transformed but so is the inductance. The complex fr
 (capacitive_network)=
 ### Time Domain Model of a Capacitive Network
 
-Consider {numref}`fig:res_circ_t`
+Consider {numref}`fig:cap_circ_t`
 
-:::{figure-md} fig:res_circ_t
+:::{figure-md} fig:cap_circ_t
 
-<img src="pictures/resistive_time.png" alt="Time Domain Model of a Resistive Network." width="60%">
+<img src="pictures/capacitive_time.png" alt="Time Domain Model of a Resistive Network." width="60%">
 
-Time Domain Model of a Resistive Network.
+Time Domain Model of a Capacitive Network.
 :::
-
-![Capacitive Network - Time Domain](pictures/capacitive_time.png)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -336,21 +330,34 @@ The current and voltage are transformed but so is the capacitance. The complex f
 
 ### Complex Frequency Domain of a Capacitive Network
 
-Consider {numref}`fig:res_circ_t`
+Consider {numref}`fig:cap_circ_s`
 
-:::{figure-md} fig:res_circ_t
+:::{figure-md} fig:cap_circ_s
 
-<img src="pictures/resistive_time.png" alt="Time Domain Model of a Resistive Network." width="60%">
+<img src="pictures/capacitive_freq.png" alt="Time Domain Model of a Resistive Network." width="60%">
 
-Time Domain Model of a Resistive Network.
+Time Domain Model of a Capacitive Network.
 :::
-
-![Capacitive Network - Complex Frequency Domain](pictures/capacitive_freq.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (complex_impedance)=
 ## Complex Impedance $Z(s)$
+
+By analogy with the *resistance* of a resistor $R$, a component with complex impedance $Z(s)$ satisfies Ohm's law:
+
+$$V(s) = I(s) Z(s)$$
+
+from which
+
+$$Z(s) = \frac{V(s)}{I(s)}$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(complex_impedance_comps)=
+### Complex impedance of components
+
+For the resistance $R$$\Omega$, inductance $L$H and capacitance $C$F, which of the following represent the complex impedance, $Z(s) = V(s)/I(s)$ of the components?
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -366,13 +373,6 @@ $$\frac{1}{sL}$$
 
 $$R$$
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-(complex_impedance_comps)=
-### Complex impedance of components
-
-For the resistance $R$$\Omega$, inductance $L$H and capacitance $C$F, which of the following represent the complex impedance of the components?
-
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 **-> Open Poll**
@@ -381,7 +381,7 @@ For the resistance $R$$\Omega$, inductance $L$H and capacitance $C$F, which of t
 
 Consider the $s$-domain RLC series circuit shown in {numref}`fig:complex_imp`, where the initial conditions are assumed to be zero.
 
-:::{figure-md} fig:res_circ_t
+:::{figure-md} fig:complex_imp
 
 <img src="pictures/impedence.png" alt="RLC series circuit." width="60%">
 
@@ -427,10 +427,20 @@ Since $s = \sigma + j\omega$ is a complex number, $Z(s)$ is also complex and is 
 (complex_admittance)=
 ## Complex Admittance $Y(s)$
 
+By analogy with the *admittance* of a resistor $G$, a component with complex admittance $Y(s)$ satisfies Ohm's law:
+
+$$I(s) = V(s) Y(s)$$
+
+from which
+
+$$Y(s) = \frac{I(s)}{V(s)}$$
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (complex_component_admittance)=
 ### Complex admittance of components
+
+For the resistance $R$$\Omega$, inductance $L$H and capacitance $C$F, which of the following represent the complex admittance, $Y(s) = I(s)/V(s)$ of the components?
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -627,7 +637,7 @@ In the circuit below, switch $S_1$ closes at $t=0$, while at the same time, swit
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-We can show how with the assistance of MATLAB (See [solution3.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution3.m)) that the solution is
+We can show how with the assistance of MATLAB (See [solution12_3.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m)) that the solution is
 
 $$V_{\mathrm{out}}=\left(1.36e^{-6.57t}+0.64e^{-0.715t}\cos 0.316t - 1.84e^{-0.715t}\sin 0.316t\right)u_0(t)$$
 
@@ -764,7 +774,7 @@ Determine equation for $V_{\rm out}(s)$.
 (sol:mat12.3)=
 #### 4. Complete solution in MATLAB
 
-In the lecture we showed that after simplification for Example 3
+In the lecture we showed that after simplification for {ref}`ex:12.3`
 
 $$V_{\mathrm{out}}(s)=\frac{2s(s+3)}{s^3 + 8s^2 + 10s + 4}$$
 
@@ -856,7 +866,7 @@ slideshow:
 tags: [remove-output]
 ---
 [r, p, k] = residue(2*conv([1,0],[1,3]),[1 8, 10,4])
-yt=0:0.01:10;
+t=0:0.01:10;
 Vout = 1.36.*exp(r(1).*t)...
    +0.64.*exp(real(r(2)).*t).*cos(imag(r(2)).*t)...
    -1.84.*exp(real(r(3)).*t).*sin(-imag(r(3)).*t);
@@ -867,14 +877,12 @@ ylabel('Vout(t) V'),xlabel('Time t s')
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-#### Worked Solution: Example 3
+#### Worked Solution: {ref}`ex:12.3`
 
 
-File Pencast: [example3.pdf](https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/example3.pdf) - Download and open in Adobe Acrobat Reader.
+File Pencast: [example12_3.pdf](https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/example3.pdf) - Download and open in Adobe Acrobat Reader.
 
-The attached "PenCast" works through the solution to Example 3 by hand. It's quite a complex, error-prone (as you will see!) calculation that needs careful attention to detail. This in itself gives justification to my belief that you should use computers wherever possible.
-
-Please note, the PenCast takes around 39 minutes (I said it was a complex calculation) but you can fast forward and replay any part of it.
+The attached PDF works through the solution to {ref}`ex:12.3` by hand. It's quite a complex, error-prone (as you will see!) calculation that needs careful attention to detail. This in itself gives justification to my belief that you should use computers wherever possible.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -897,32 +905,6 @@ tags: [remove-output]
 ---
 impulse(Vout)
 ```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-For this circuit, the sum
-
-$$R + sL + \frac{1}{sC}$$ 
-
-represents that total opposition to current flow. Then,
-
-$$I(s) = \frac{V_s(s)}{R + sL + 1/(sC)}$$
-
-and defining the ratio $V_s(s)/I(s)$ as $Z(s)$, we obtain
-
-$$Z(s) = \frac{V_s(s)}{I(s)} = R + sL + \frac{1}{sC}$$
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-The $s$-domain current $I(s)$ can be found from 
-
-$$I(s) = \frac{V_s(s)}{Z(s)}$$
-
-where
-
-$$Z(s) = R + sL + \frac{1}{sC}.$$
-
-Since $s = \sigma + j\omega$ is a complex number, $Z(s)$ is also complex and is known as the *complex input impedance* of this RLC series circuit.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -959,7 +941,11 @@ Condider {numref}`fig:complex_imp` and give an expression for $V_c(s)$.
 
 For the network shown in {numref}`fig:ex12.5`, all the complex impedance values are given in $\Omega$ (ohms). 
 
-![Circuit for example 4](pictures/example4.png)
+:::{figure-md} Fig:ex12.5
+<img src="pictures/example4.png" alt="Circuit for Example 12.5" width="60%">
+
+Circuit for Example 12.5
+:::
 
 Find $Z(s)$ using:
     
@@ -1065,12 +1051,12 @@ $$Z(s) = \frac{65s^4 + 490s^3 + 528s^2 + 400s + 128}{s(5s^2 + 30s + 16)}$$
 
 $$Y(s) = \frac{1}{Z(s)} = \frac{s(5s^2 + 30s + 16)}{65s^4 + 490s^3 + 528s^2 + 400s + 128}$$
 
-Matlab verification: [solution5.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution5.m)
+Matlab verification: [solution12_6.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_6.m)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (mat:12.6)=
-#### Example 5: Verification of Solution
+#### Example 12.6: Verification of Solution
 
 ```{code-cell}
 ---
@@ -1154,6 +1140,16 @@ In this section we have looked at the application of the Laplace transform to ci
 
 ## Take Aways
 
+Circuit analysis can be performed using Laplace transforms by using the Laplace transform equivalents of the component impedence or admittance. In particular, for impedence, we use $R$, $sL$ and $1/sC$; for admittance we use $G = 1/R$, $1/sL$, $sC$. Once the circuit has been reduced to a rational polynomial in $s$, the inverse laplace transform can be used to determine the time response of the circuit.
+
+When dealing with components using their complex component equivalents, the usual circuit analysis rules, KVL, KCL, voltage-divider rule, etc, can all be used.
+
+Complex impedence of a circuit is the resistance to current flow and is given by the general law $V(s) = Z(s) I(s)$ from which the impendence is given by $Z(s) = V(s)/I(s)$. Similarly, the complex admittance of a circuit is given by $Y(s) = I(s)/V(s)$.
+
+Complex admittance is the reciprocal of complex impedence $Y(s) = 1/Z(s)$.
+
+Though not a consequence of the Laplace transform, it is worth noting that the use impedence facilitates the analysis of circuits for which the compoents are commected in series; for circuits with parallel connection of components, the use of admittance facilitates the analsysis.
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ## Next time
@@ -1175,5 +1171,5 @@ We move on to consider
 
 For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-247-textbook/tree/master/laplace_transform/matlab) folder in the [GitHub repository](https://github.com/cpjobling/eg-247-textbook).
 
-* Solution 3 [[solution3.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution3.m)]
-* Solution 5 [[solution5.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution5.m)]
+* Solution 3 [[solution12_3.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m)]
+* Solution 5 [[solution12_6](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m)]
