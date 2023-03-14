@@ -1140,6 +1140,16 @@ In this section we have looked at the application of the Laplace transform to ci
 
 ## Take Aways
 
+Circuit analysis can be performed using Laplace transforms by using the Laplace transform equivalents of the component impedence or admittance. In particular, for impedence, we use $R$, $sL$ and $1/sC$; for admittance we use $G = 1/R$, $1/sL$, $sC$. Once the circuit has been reduced to a rational polynomial in $s$, the inverse laplace transform can be used to determine the time response of the circuit.
+
+When dealing with components using their complex component equivalents, the usual circuit analysis rules, KVL, KCL, voltage-divider rule, etc, can all be used.
+
+Complex impedence of a circuit is the resistance to current flow and is given by the general law $V(s) = Z(s) I(s)$ from which the impendence is given by $Z(s) = V(s)/I(s)$. Similarly, the complex admittance of a circuit is given by $Y(s) = I(s)/V(s)$.
+
+Complex admittance is the reciprocal of complex impedence $Y(s) = 1/Z(s)$.
+
+Though not a consequence of the Laplace transform, it is worth noting that the use impedence facilitates the analysis of circuits for which the compoents are commected in series; for circuits with parallel connection of components, the use of admittance facilitates the analsysis.
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ## Next time

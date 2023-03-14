@@ -2162,6 +2162,11 @@ into a linear and a quadratic factor.</p>
 </section>
 <section id="take-aways">
 <h2>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this headline">#</a></h2>
+<p>Circuit analysis can be performed using Laplace transforms by using the Laplace transform equivalents of the component impedence or admittance. In particular, for impedence, we use <span class="math notranslate nohighlight">\(R\)</span>, <span class="math notranslate nohighlight">\(sL\)</span> and <span class="math notranslate nohighlight">\(1/sC\)</span>; for admittance we use <span class="math notranslate nohighlight">\(G = 1/R\)</span>, <span class="math notranslate nohighlight">\(1/sL\)</span>, <span class="math notranslate nohighlight">\(sC\)</span>. Once the circuit has been reduced to a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span>, the inverse laplace transform can be used to determine the time response of the circuit.</p>
+<p>When dealing with components using their complex component equivalents, the usual circuit analysis rules, KVL, KCL, voltage-divider rule, etc, can all be used.</p>
+<p>Complex impedence of a circuit is the resistance to current flow and is given by the general law <span class="math notranslate nohighlight">\(V(s) = Z(s) I(s)\)</span> from which the impendence is given by <span class="math notranslate nohighlight">\(Z(s) = V(s)/I(s)\)</span>. Similarly, the complex admittance of a circuit is given by <span class="math notranslate nohighlight">\(Y(s) = I(s)/V(s)\)</span>.</p>
+<p>Complex admittance is the reciprocal of complex impedence <span class="math notranslate nohighlight">\(Y(s) = 1/Z(s)\)</span>.</p>
+<p>Though not a consequence of the Laplace transform, it is worth noting that the use impedence facilitates the analysis of circuits for which the compoents are commected in series; for circuits with parallel connection of components, the use of admittance facilitates the analsysis.</p>
 </section>
 <section id="next-time">
 <h2>Next time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
