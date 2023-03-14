@@ -350,7 +350,7 @@ $$V(s) = I(s) Z(s)$$
 
 from which
 
-$$Z(s) = \frac{V(s)}{I(s)}$$.
+$$Z(s) = \frac{V(s)}{I(s)}$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
