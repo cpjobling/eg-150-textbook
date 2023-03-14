@@ -515,9 +515,13 @@ We will work through these in class.
 (ex:12.1)=
 ### Example 12.1
 
-Use the Laplace transform method and apply Kirchoff's Current Law (KCL) to find the voltage $v_c(t)$ across the capacitor for the circuit below given that $v_c(0^-) = 6$ V.
+Use the Laplace transform method and apply Kirchoff's Current Law (KCL) to find the voltage $v_c(t)$ across the capacitor for the circuit in {numref}`fig:12.1` given that $v_c(0^-) = 6$ V.
 
-![Circuit for Example 1](pictures/example1_2.png)
+:::{figure-md} fig:12.1
+<img src="pictures/example1_2.png" alt="Circuit for Example 12.1" width="60%">
+
+Circuit for Example 12.1
+:::
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -573,9 +577,13 @@ Use the Laplace transform method and apply Kirchoff's Current Law (KCL) to find 
 (ex:12.2)=
 ### Example 12.2
 
-Use the Laplace transform method and apply Kirchoff's Voltage Law (KVL) to find the voltage $v_c(t)$ across the capacitor for the circuit below given that $v_c(0^-) = 6$ V.
+Use the Laplace transform method and apply Kirchoff's Voltage Law (KVL) to find the voltage $v_c(t)$ across the capacitor for the circuit shown in {numref}`fig:12.2` given that $v_c(0^-) = 6$ V.
 
-![Circuit for Example 2](pictures/example1_2.png)
+:::{figure-md} Fig:ex12.2
+<img src="pictures/example1_2.png" alt="Circuit for Example 12.2" width="60%">
+
+Circuit for Example 12.2
+:::
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -631,17 +639,30 @@ Use the Laplace transform method and apply Kirchoff's Voltage Law (KVL) to find 
 (ex:12.3)=
 ### Example 12.3
 
-In the circuit below, switch $S_1$ closes at $t=0$, while at the same time, switch $S_2$ opens. Use the Laplace transform method to find $v_{\mathrm{out}}(t)$ for $t > 0$.
+In the circuit shown in {numref}`fig:ex12.3`, switch $S_1$ closes at $t=0$, while at the same time, switch $S_2$ opens. Use the Laplace transform method to find $v_{\mathrm{out}}(t)$ for $t > 0$.
 
-![Circuit for Example 3](pictures/example3.png)
+:::{figure-md} Fig:ex12.3
+<img src="pictures/Example3.png" alt="Circuit for Example 12.3" width="1000%">
+
+Circuit for Example 12.3
+:::
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 We can show how with the assistance of MATLAB (See [solution12_3.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m)) that the solution is
 
-$$V_{\mathrm{out}}=\left(1.36e^{-6.57t}+0.64e^{-0.715t}\cos 0.316t - 1.84e^{-0.715t}\sin 0.316t\right)u_0(t)$$
+$$V_{\mathrm{out}}=\left(1.36e^{-6.57t}+0.64e^{-0.715t}\cos 0.316t - 1.84e^{-0.715t}\sin 0.316t\right)u_0(t)$$ (sol:12.3)
 
 and we can plot the result (see {ref}`sol:mat12.3`)
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+#### Worked Solution: {ref}`ex:12.3`
+
+
+File Pencast: [example12_3.pdf](https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/example3.pdf) - Download and open in Adobe Acrobat Reader.
+
+The attached PDF gives the solution to {ref}`ex:12.3` by hand. It's quite a complex, error-prone (as you can see by the crosssings out!) calculation that needs careful attention to detail. This in itself gives justification to my belief that you should use computers wherever possible.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -859,30 +880,22 @@ y = sym2poly(y)
 
 ##### Plot result
 
+From equation {eq}`sol:12.3`
+
 ```{code-cell}
 ---
 slideshow:
   slide_type: subslide
 tags: [remove-output]
 ---
-[r, p, k] = residue(2*conv([1,0],[1,3]),[1 8, 10,4])
 t=0:0.01:10;
-Vout = 1.36.*exp(r(1).*t)...
-   +0.64.*exp(real(r(2)).*t).*cos(imag(r(2)).*t)...
-   -1.84.*exp(real(r(3)).*t).*sin(-imag(r(3)).*t);
+Vout = 1.36.*exp(-6.57.*t)...
+   +0.64.*exp(-0.715.*t).*cos(0.316.*t)...
+   -1.84.*exp(-0.715.*t).*sin(0.316.*t);
 plot(t, Vout); grid
 title('Plot of Vout(t) for the circuit of Example 3')
 ylabel('Vout(t) V'),xlabel('Time t s')
 ```
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-#### Worked Solution: {ref}`ex:12.3`
-
-
-File Pencast: [example12_3.pdf](https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/example3.pdf) - Download and open in Adobe Acrobat Reader.
-
-The attached PDF works through the solution to {ref}`ex:12.3` by hand. It's quite a complex, error-prone (as you will see!) calculation that needs careful attention to detail. This in itself gives justification to my belief that you should use computers wherever possible.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -910,7 +923,7 @@ impulse(Vout)
 
 ### Example 12.4
 
-Condider {numref}`fig:complex_imp` and give an expression for $V_c(s)$.
+Consider {numref}`fig:complex_imp` and give an expression for $V_c(s)$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -1007,9 +1020,13 @@ Find $Z(s)$ using:
 (ex:12.6)=
 ### Example 12.6 - Do It Yourself
 
-Compute $Z(s)$ and $Y(s)$ for the circuit shown below. All impedence values are in $\Omega$ (ohms). Verify your answers with MATLAB.
+Compute $Z(s)$ and $Y(s)$ for the circuit shown in {numref}`fig:ex12.6`. All impedence values are in $\Omega$ (ohms). Verify your answers with MATLAB.
 
-![Circuit for Example 5](pictures/example5.png)
+:::{figure-md} fig:ex12.6
+<img src="pictures/example5.png" alt="Circuit for Example 12.6" width="60%">
+
+Circuit for Example 12.6
+:::
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -1171,5 +1188,5 @@ We move on to consider
 
 For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-247-textbook/tree/master/laplace_transform/matlab) folder in the [GitHub repository](https://github.com/cpjobling/eg-247-textbook).
 
-* Solution 3 [[solution12_3.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m)]
-* Solution 5 [[solution12_6](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m)]
+* Solution 12.3 [[solution12_3.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m)]
+* Solution 12.6 [[solution12_6](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_6.m)]

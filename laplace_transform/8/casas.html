@@ -1015,7 +1015,7 @@ title="Print to PDF"
 <p>There are two forms of polynomial representation in MATLAB. The most obvious is the <strong>expanded polynomial</strong> form where the numerator and denominator of a transfer function would be entered as two row vectors with the polynomial coefficients entered in the order of <strong>descending</strong> powers of <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <p>For example, if:</p>
 <div class="math notranslate nohighlight" id="equation-eq-8-1">
-<span class="eqno">(41)<a class="headerlink" href="#equation-eq-8-1" title="Permalink to this equation">#</a></span>\[G(s) = \frac{a(s)}{b(s)} = \frac{s^2 +2s+3}{s^3 +4s^2 +5s+6}\]</div>
+<span class="eqno">(42)<a class="headerlink" href="#equation-eq-8-1" title="Permalink to this equation">#</a></span>\[G(s) = \frac{a(s)}{b(s)} = \frac{s^2 +2s+3}{s^3 +4s^2 +5s+6}\]</div>
 <p>The numerator and denominator polynomials from Eq. <code class="xref eq docutils literal notranslate"><span class="pre">eg:8.1</span></code> are entered in MATLAB as</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1122,9 +1122,9 @@ symbolically.</p>
 <h3>Polynomials - Factorised form<a class="headerlink" href="#polynomials-factorised-form" title="Permalink to this headline">#</a></h3>
 <p>If you know the <em>poles</em> amd <em>zeros</em> of a transfer function you can represent it in a factorized form.</p>
 <div class="math notranslate nohighlight" id="equation-eq-8-2">
-<span class="eqno">(42)<a class="headerlink" href="#equation-eq-8-2" title="Permalink to this equation">#</a></span>\[G(s) = \frac{(s+1)(s+3)}{s(s+2)(s+4)}\]</div>
+<span class="eqno">(43)<a class="headerlink" href="#equation-eq-8-2" title="Permalink to this equation">#</a></span>\[G(s) = \frac{(s+1)(s+3)}{s(s+2)(s+4)}\]</div>
 <p>The advantage of this formulation is that the zeros of the numerator and denominator polynomials are obvious by inspection. So it is often used in the preliminary analysis of the performance of a dynamic system.</p>
-<p>The poles of the transfer function Eq. <a class="reference internal" href="#equation-eq-8-2">(42)</a> are <span class="math notranslate nohighlight">\(s = 0,\,-1\,-4\)</span> and the zeros are <span class="math notranslate nohighlight">\(s = -1,\,-3\)</span></p>
+<p>The poles of the transfer function Eq. <a class="reference internal" href="#equation-eq-8-2">(43)</a> are <span class="math notranslate nohighlight">\(s = 0,\,-1\,-4\)</span> and the zeros are <span class="math notranslate nohighlight">\(s = -1,\,-3\)</span></p>
 <p>In MATLAB, this form of transfer function is specified by a column vector of the zeros and a column vector of the poles:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1149,7 +1149,7 @@ symbolically.</p>
 <p>A few years ago, the Mathworks introduced a new data object for the creation and manipulation of system transfer functions.</p>
 <p>This object is called the <em>Linear Time Invariant (LTI) System Object</em>.</p>
 <p>It is used to gather the components of a transfer function into a single variable which can then easily be combined with other LTI system objects and passed to system analysis functions.</p>
-<p>To create a LTI system object representing the factored transfer function from Eq. <a class="reference internal" href="#equation-eq-8-2">(42)</a> the following command is issued:</p>
+<p>To create a LTI system object representing the factored transfer function from Eq. <a class="reference internal" href="#equation-eq-8-2">(43)</a> the following command is issued:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">zpk</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">K</span><span class="p">)</span>
@@ -1866,11 +1866,11 @@ k =
 </section>
 <section id="using-transfer-functions-in-simulink-for-system-simulation">
 <span id="simulink-tf"></span><h2>Using Transfer Functions in Simulink for System Simulation<a class="headerlink" href="#using-transfer-functions-in-simulink-for-system-simulation" title="Permalink to this headline">#</a></h2>
-<p>The Simulink transfer function (<strong><code class="docutils literal notranslate"><span class="pre">Transfer</span> <span class="pre">Fcn</span></code></strong>) block (see <a class="reference internal" href="#fig-sim-tf"><span class="std std-numref">Fig. 65</span></a>) implements a transfer function</p>
+<p>The Simulink transfer function (<strong><code class="docutils literal notranslate"><span class="pre">Transfer</span> <span class="pre">Fcn</span></code></strong>) block (see <a class="reference internal" href="#fig-sim-tf"><span class="std std-numref">Fig. 69</span></a>) implements a transfer function</p>
 <figure class="align-default" id="fig-sim-tf">
 <img alt="The LTI Block in Simulink" src="../../_images/sim_tf.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 65 </span><span class="caption-text">The LTI Block in Simulink</span><a class="headerlink" href="#fig-sim-tf" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 69 </span><span class="caption-text">The LTI Block in Simulink</span><a class="headerlink" href="#fig-sim-tf" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The transfer function block represents a general input output function</p>

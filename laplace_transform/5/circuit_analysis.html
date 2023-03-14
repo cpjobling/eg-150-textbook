@@ -756,6 +756,14 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#worked-solution-ex-12-3">
+       Worked Solution:
+       <span class="xref std std-ref">
+        ex:12.3
+       </span>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#solution-to-example-12-3">
        Solution to Example 12.3
       </a>
@@ -807,16 +815,6 @@ title="Print to PDF"
          Plot result
         </a>
        </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#worked-solution-ex-12-3">
-       Worked Solution:
-       <span class="xref std std-ref">
-        ex:12.3
-       </span>
-      </a>
-      <ul class="nav section-nav flex-column">
        <li class="toc-h5 nav-item toc-entry">
         <a class="reference internal nav-link" href="#alternative-solution-using-transfer-functions">
          Alternative solution using transfer functions
@@ -1064,6 +1062,14 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#worked-solution-ex-12-3">
+       Worked Solution:
+       <span class="xref std std-ref">
+        ex:12.3
+       </span>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#solution-to-example-12-3">
        Solution to Example 12.3
       </a>
@@ -1115,16 +1121,6 @@ title="Print to PDF"
          Plot result
         </a>
        </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#worked-solution-ex-12-3">
-       Worked Solution:
-       <span class="xref std std-ref">
-        ex:12.3
-       </span>
-      </a>
-      <ul class="nav section-nav flex-column">
        <li class="toc-h5 nav-item toc-entry">
         <a class="reference internal nav-link" href="#alternative-solution-using-transfer-functions">
          Alternative solution using transfer functions
@@ -1307,7 +1303,9 @@ title="Print to PDF"
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqirt =
- 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i_R(t) == v_R(t)/R
@@ -1406,9 +1404,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqilt =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i_L(t) == int(v_L(t), t)/L
@@ -1662,8 +1658,13 @@ title="Print to PDF"
 <p>We will work through these in class.</p>
 <section id="example-12-1">
 <span id="ex-12-1"></span><h3>Example 12.1<a class="headerlink" href="#example-12-1" title="Permalink to this headline">#</a></h3>
-<p>Use the Laplace transform method and apply Kirchoff’s Current Law (KCL) to find the voltage <span class="math notranslate nohighlight">\(v_c(t)\)</span> across the capacitor for the circuit below given that <span class="math notranslate nohighlight">\(v_c(0^-) = 6\)</span> V.</p>
-<p><img alt="Circuit for Example 1" src="../../_images/example1_2.png" /></p>
+<p>Use the Laplace transform method and apply Kirchoff’s Current Law (KCL) to find the voltage <span class="math notranslate nohighlight">\(v_c(t)\)</span> across the capacitor for the circuit in <a class="reference internal" href="#fig-12-1"><span class="std std-numref">Fig. 58</span></a> given that <span class="math notranslate nohighlight">\(v_c(0^-) = 6\)</span> V.</p>
+<figure class="align-default" id="fig-12-1">
+<a class="reference internal image-reference" href="../../_images/example1_2.png"><img alt="Circuit for Example 12.1" src="../../_images/example1_2.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Circuit for Example 12.1</span><a class="headerlink" href="#fig-12-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><strong>OneNote Class Notebook Scratch Pad</strong></p>
 <pre style="border: 2px solid blue">
 
@@ -1711,8 +1712,13 @@ title="Print to PDF"
 </pre></section>
 <section id="example-12-2">
 <span id="ex-12-2"></span><h3>Example 12.2<a class="headerlink" href="#example-12-2" title="Permalink to this headline">#</a></h3>
-<p>Use the Laplace transform method and apply Kirchoff’s Voltage Law (KVL) to find the voltage <span class="math notranslate nohighlight">\(v_c(t)\)</span> across the capacitor for the circuit below given that <span class="math notranslate nohighlight">\(v_c(0^-) = 6\)</span> V.</p>
-<p><img alt="Circuit for Example 2" src="../../_images/example1_2.png" /></p>
+<p>Use the Laplace transform method and apply Kirchoff’s Voltage Law (KVL) to find the voltage <span class="math notranslate nohighlight">\(v_c(t)\)</span> across the capacitor for the circuit shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:12.2</span></code> given that <span class="math notranslate nohighlight">\(v_c(0^-) = 6\)</span> V.</p>
+<figure class="align-default" id="fig-ex12-2">
+<a class="reference internal image-reference" href="../../_images/example1_2.png"><img alt="Circuit for Example 12.2" src="../../_images/example1_2.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Circuit for Example 12.2</span><a class="headerlink" href="#fig-ex12-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><strong>OneNote Class Notebook Scratch Pad</strong></p>
 <pre style="border: 2px solid blue">
 
@@ -1760,12 +1766,22 @@ title="Print to PDF"
 </pre></section>
 <section id="example-12-3">
 <span id="ex-12-3"></span><h3>Example 12.3<a class="headerlink" href="#example-12-3" title="Permalink to this headline">#</a></h3>
-<p>In the circuit below, switch <span class="math notranslate nohighlight">\(S_1\)</span> closes at <span class="math notranslate nohighlight">\(t=0\)</span>, while at the same time, switch <span class="math notranslate nohighlight">\(S_2\)</span> opens. Use the Laplace transform method to find <span class="math notranslate nohighlight">\(v_{\mathrm{out}}(t)\)</span> for <span class="math notranslate nohighlight">\(t &gt; 0\)</span>.</p>
-<p><img alt="Circuit for Example 3" src="../../_images/example3.png" /></p>
+<p>In the circuit shown in <a class="reference internal" href="#fig-ex12-3"><span class="std std-numref">Fig. 60</span></a>, switch <span class="math notranslate nohighlight">\(S_1\)</span> closes at <span class="math notranslate nohighlight">\(t=0\)</span>, while at the same time, switch <span class="math notranslate nohighlight">\(S_2\)</span> opens. Use the Laplace transform method to find <span class="math notranslate nohighlight">\(v_{\mathrm{out}}(t)\)</span> for <span class="math notranslate nohighlight">\(t &gt; 0\)</span>.</p>
+<figure class="align-default" id="fig-ex12-3">
+<a class="reference internal image-reference" href="../../_images/Example3.png"><img alt="Circuit for Example 12.3" src="../../_images/Example3.png" style="width: 1000%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 60 </span><span class="caption-text">Circuit for Example 12.3</span><a class="headerlink" href="#fig-ex12-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>We can show how with the assistance of MATLAB (See <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m">solution12_3.m</a>) that the solution is</p>
-<div class="math notranslate nohighlight">
-\[V_{\mathrm{out}}=\left(1.36e^{-6.57t}+0.64e^{-0.715t}\cos 0.316t - 1.84e^{-0.715t}\sin 0.316t\right)u_0(t)\]</div>
+<div class="math notranslate nohighlight" id="equation-sol-12-3">
+<span class="eqno">(30)<a class="headerlink" href="#equation-sol-12-3" title="Permalink to this equation">#</a></span>\[V_{\mathrm{out}}=\left(1.36e^{-6.57t}+0.64e^{-0.715t}\cos 0.316t - 1.84e^{-0.715t}\sin 0.316t\right)u_0(t)\]</div>
 <p>and we can plot the result (see <a class="reference internal" href="#sol-mat12-3"><span class="std std-ref">4. Complete solution in MATLAB</span></a>)</p>
+<section id="worked-solution-ex-12-3">
+<h4>Worked Solution: <a class="reference internal" href="#ex-12-3"><span class="std std-ref">Example 12.3</span></a><a class="headerlink" href="#worked-solution-ex-12-3" title="Permalink to this headline">#</a></h4>
+<p>File Pencast: <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/example3.pdf">example12_3.pdf</a> - Download and open in Adobe Acrobat Reader.</p>
+<p>The attached PDF gives the solution to <a class="reference internal" href="#ex-12-3"><span class="std std-ref">Example 12.3</span></a> by hand. It’s quite a complex, error-prone (as you can see by the crosssings out!) calculation that needs careful attention to detail. This in itself gives justification to my belief that you should use computers wherever possible.</p>
+</section>
 <section id="solution-to-example-12-3">
 <span id="sol-12-3"></span><h4>Solution to Example 12.3<a class="headerlink" href="#solution-to-example-12-3" title="Permalink to this headline">#</a></h4>
 <p>We will use a combination of pen-and-paper and MATLAB to solve this.</p>
@@ -1935,13 +1951,13 @@ into a linear and a quadratic factor.</p>
 </pre></section>
 <section id="plot-result">
 <h5>Plot result<a class="headerlink" href="#plot-result" title="Permalink to this headline">#</a></h5>
+<p>From equation <a class="reference internal" href="#equation-sol-12-3">(30)</a></p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">residue</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">conv</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]),[</span><span class="mi">1</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
-<span class="n">t</span><span class="p">=</span><span class="mi">0</span><span class="p">:</span><span class="mf">0.01</span><span class="p">:</span><span class="mi">10</span><span class="p">;</span>
-<span class="n">Vout</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.36</span><span class="o">.*</span><span class="nb">exp</span><span class="p">(</span><span class="n">r</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.*</span><span class="n">t</span><span class="p">)</span><span class="k">...</span>
-<span class="w">   </span><span class="o">+</span><span class="mf">0.64</span><span class="o">.*</span><span class="nb">exp</span><span class="p">(</span><span class="nb">real</span><span class="p">(</span><span class="n">r</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span><span class="o">.*</span><span class="n">t</span><span class="p">)</span><span class="o">.*</span><span class="nb">cos</span><span class="p">(</span><span class="nb">imag</span><span class="p">(</span><span class="n">r</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span><span class="o">.*</span><span class="n">t</span><span class="p">)</span><span class="k">...</span>
-<span class="w">   </span><span class="o">-</span><span class="mf">1.84</span><span class="o">.*</span><span class="nb">exp</span><span class="p">(</span><span class="nb">real</span><span class="p">(</span><span class="n">r</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span><span class="o">.*</span><span class="n">t</span><span class="p">)</span><span class="o">.*</span><span class="nb">sin</span><span class="p">(</span><span class="o">-</span><span class="nb">imag</span><span class="p">(</span><span class="n">r</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span><span class="o">.*</span><span class="n">t</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="p">=</span><span class="mi">0</span><span class="p">:</span><span class="mf">0.01</span><span class="p">:</span><span class="mi">10</span><span class="p">;</span>
+<span class="n">Vout</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.36</span><span class="o">.*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">6.57</span><span class="o">.*</span><span class="n">t</span><span class="p">)</span><span class="k">...</span>
+<span class="w">   </span><span class="o">+</span><span class="mf">0.64</span><span class="o">.*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.715</span><span class="o">.*</span><span class="n">t</span><span class="p">)</span><span class="o">.*</span><span class="nb">cos</span><span class="p">(</span><span class="mf">0.316</span><span class="o">.*</span><span class="n">t</span><span class="p">)</span><span class="k">...</span>
+<span class="w">   </span><span class="o">-</span><span class="mf">1.84</span><span class="o">.*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.715</span><span class="o">.*</span><span class="n">t</span><span class="p">)</span><span class="o">.*</span><span class="nb">sin</span><span class="p">(</span><span class="mf">0.316</span><span class="o">.*</span><span class="n">t</span><span class="p">);</span>
 <span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">Vout</span><span class="p">);</span><span class="w"> </span><span class="n">grid</span>
 <span class="s">title(&#39;Plot of Vout(t) for the circuit of Example 3&#39;)</span>
 <span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Vout(t) V&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time t s&#39;</span><span class="p">)</span>
@@ -1950,11 +1966,6 @@ into a linear and a quadratic factor.</p>
 </div>
 </div>
 </section>
-</section>
-<section id="worked-solution-ex-12-3">
-<h4>Worked Solution: <a class="reference internal" href="#ex-12-3"><span class="std std-ref">Example 12.3</span></a><a class="headerlink" href="#worked-solution-ex-12-3" title="Permalink to this headline">#</a></h4>
-<p>File Pencast: <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/example3.pdf">example12_3.pdf</a> - Download and open in Adobe Acrobat Reader.</p>
-<p>The attached PDF works through the solution to <a class="reference internal" href="#ex-12-3"><span class="std std-ref">Example 12.3</span></a> by hand. It’s quite a complex, error-prone (as you will see!) calculation that needs careful attention to detail. This in itself gives justification to my belief that you should use computers wherever possible.</p>
 <section id="alternative-solution-using-transfer-functions">
 <h5>Alternative solution using transfer functions<a class="headerlink" href="#alternative-solution-using-transfer-functions" title="Permalink to this headline">#</a></h5>
 <div class="cell tag_remove-output docutils container">
@@ -1976,7 +1987,7 @@ into a linear and a quadratic factor.</p>
 </section>
 <section id="example-12-4">
 <h3>Example 12.4<a class="headerlink" href="#example-12-4" title="Permalink to this headline">#</a></h3>
-<p>Condider <a class="reference internal" href="#fig-complex-imp"><span class="std std-numref">Fig. 56</span></a> and give an expression for <span class="math notranslate nohighlight">\(V_c(s)\)</span>.</p>
+<p>Consider <a class="reference internal" href="#fig-complex-imp"><span class="std std-numref">Fig. 56</span></a> and give an expression for <span class="math notranslate nohighlight">\(V_c(s)\)</span>.</p>
 <p><strong>OneNote Class Notebook Scratch Pad</strong></p>
 <pre style="border: 2px solid blue">
 
@@ -1997,11 +2008,11 @@ into a linear and a quadratic factor.</p>
 </pre></section>
 <section id="example-12-5">
 <span id="ex-12-5"></span><h3>Example 12.5<a class="headerlink" href="#example-12-5" title="Permalink to this headline">#</a></h3>
-<p>For the network shown in <a class="reference internal" href="#fig-ex12-5"><span class="std std-numref">Fig. 58</span></a>, all the complex impedance values are given in <span class="math notranslate nohighlight">\(\Omega\)</span> (ohms).</p>
+<p>For the network shown in <a class="reference internal" href="#fig-ex12-5"><span class="std std-numref">Fig. 61</span></a>, all the complex impedance values are given in <span class="math notranslate nohighlight">\(\Omega\)</span> (ohms).</p>
 <figure class="align-default" id="fig-ex12-5">
 <a class="reference internal image-reference" href="../../_images/example4.png"><img alt="Circuit for Example 12.5" src="../../_images/example4.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Circuit for Example 12.5</span><a class="headerlink" href="#fig-ex12-5" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 61 </span><span class="caption-text">Circuit for Example 12.5</span><a class="headerlink" href="#fig-ex12-5" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Find <span class="math notranslate nohighlight">\(Z(s)\)</span> using:</p>
@@ -2054,8 +2065,13 @@ into a linear and a quadratic factor.</p>
 </section>
 <section id="example-12-6-do-it-yourself">
 <span id="ex-12-6"></span><h3>Example 12.6 - Do It Yourself<a class="headerlink" href="#example-12-6-do-it-yourself" title="Permalink to this headline">#</a></h3>
-<p>Compute <span class="math notranslate nohighlight">\(Z(s)\)</span> and <span class="math notranslate nohighlight">\(Y(s)\)</span> for the circuit shown below. All impedence values are in <span class="math notranslate nohighlight">\(\Omega\)</span> (ohms). Verify your answers with MATLAB.</p>
-<p><img alt="Circuit for Example 5" src="../../_images/example5.png" /></p>
+<p>Compute <span class="math notranslate nohighlight">\(Z(s)\)</span> and <span class="math notranslate nohighlight">\(Y(s)\)</span> for the circuit shown in <a class="reference internal" href="#fig-ex12-6"><span class="std std-numref">Fig. 62</span></a>. All impedence values are in <span class="math notranslate nohighlight">\(\Omega\)</span> (ohms). Verify your answers with MATLAB.</p>
+<figure class="align-default" id="fig-ex12-6">
+<a class="reference internal image-reference" href="../../_images/example5.png"><img alt="Circuit for Example 12.6" src="../../_images/example5.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 62 </span><span class="caption-text">Circuit for Example 12.6</span><a class="headerlink" href="#fig-ex12-6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <section id="solution-12-6">
 <h4>Solution 12.6<a class="headerlink" href="#solution-12-6" title="Permalink to this headline">#</a></h4>
 <p><strong>OneNote Class Notebook Scratch Pad</strong></p>
@@ -2192,8 +2208,8 @@ into a linear and a quadratic factor.</p>
 <span id="matlab-solutions12"></span><h2>Matlab Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this headline">#</a></h2>
 <p>For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying <a class="reference external" href="https://github.com/cpjobling/eg-247-textbook/tree/master/laplace_transform/matlab">MATLAB</a> folder in the <a class="reference external" href="https://github.com/cpjobling/eg-247-textbook">GitHub repository</a>.</p>
 <ul class="simple">
-<li><p>Solution 3 [<a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m">solution12_3.m</a>]</p></li>
-<li><p>Solution 5 [<a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m">solution12_6</a>]</p></li>
+<li><p>Solution 12.3 [<a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m">solution12_3.m</a>]</p></li>
+<li><p>Solution 12.6 [<a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_6.m">solution12_6</a>]</p></li>
 </ul>
 </section>
 </section>

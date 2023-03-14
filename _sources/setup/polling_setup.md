@@ -21,6 +21,8 @@ We will be using Pingo mobile response system polling in this session.
 <!-- #region slideshow={"slide_type": "subslide"} -->
 ## Setup
 
+[Lectuer: Set up Pingo on lectern]
+
 Browse to: [pingo.coactum.de/804079](https://pingo.coactum.de/804079). 
 
 <img src="https://chart.googleapis.com/chart?cht=qr&chs=300x300&choe=UTF-8&chld=H&chl=https://pingo.coactum.de/804079" alt="QR Code" />
