@@ -204,11 +204,11 @@ From these results, which of the following equations represent the Laplace trans
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-$$I_L(s)=sLV_L(s) - Lv_L(0^-)$$
+$$I_L(s)=sLV_L(s) - v_L(0^-)$$
 
 $$I_L(s)=\frac{V_L(s)}{sL} + \frac{v_L(0^-)}{s}$$
 
-$$V_L(s) = sLI_L(s) - Li_L(0^-)$$
+$$V_L(s) = sLI_L(s) - i_L(0^-)$$
 
 $$V_L(s)=\frac{I_L(s)}{sL} + \frac{i_L(0^-)}{s}$$
 
