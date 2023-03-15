@@ -642,7 +642,7 @@ Circuit for Example 12.2
 In the circuit shown in {numref}`fig:ex12.3`, switch $S_1$ closes at $t=0$, while at the same time, switch $S_2$ opens. Use the Laplace transform method to find $v_{\mathrm{out}}(t)$ for $t > 0$.
 
 :::{figure-md} Fig:ex12.3
-<img src="pictures/Example3.png" alt="Circuit for Example 12.3" width="1000%">
+<img src="pictures/example3.png" alt="Circuit for Example 12.3" width="1000%">
 
 Circuit for Example 12.3
 :::
