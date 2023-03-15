@@ -236,7 +236,7 @@ Time Domain Model of a Resistive Network.
 
 We take the Laplace transforms of {eq}`eq:vlt` and {eq}`eq:ilt` to obtain
 
-$$V_L(s) = s L I_L(s) - Li_L(0^-)$$ (eq:Vls)
+$$V_L(s) = s L I_L(s) - i_L(0^-)$$ (eq:Vls)
 
 $$I_L(s) = \frac{V_L(s)}{sL} + \frac{i_L(0^-)}{s}$$ (eq:Ils)
 
@@ -299,9 +299,9 @@ From the previous results, which of the following equations represent the Laplac
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-$$V_c(s)=sCI_C(s) - Ci_C(0^-)$$
+$$V_c(s)=sCI_C(s) - i_C(0^-)$$
 
-$$I_c(s) = sCV_C(s) - Cv_C(0^-)$$
+$$I_c(s) = sCV_C(s) - v_C(0^-)$$
 
 $$V_c(s) = \frac{I_C(s)}{sC} + \frac{i_C(0^-)}{s}$$
 
@@ -317,7 +317,7 @@ $$I_c(s)=\frac{V_C(s)}{sC} + \frac{v_C(0^-)}{s}$$
 
 We take the Laplace transforms of {eq}`eq:ict` and {eq}`eq:vct` to obtain
 
-$$I_C(s) = s C V_C(s) - C v_C(0^-)$$ (eq:Ics)
+$$I_C(s) = s C V_C(s) - v_C(0^-)$$ (eq:Ics)
 
 $$V_C(s) = \frac{I_C(s)}{sC} + \frac{v_C(0^-)}{s}$$ (eq:Vcs)
 
