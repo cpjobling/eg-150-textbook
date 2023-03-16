@@ -184,7 +184,7 @@ For two LTI systems (with $h_1(t)$ and $h_2(t)$, respectively) in cascade ({numr
 
 $$h(t) = h_1(t) * h_2(t)$$
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Thus, the corresponding transfer functions are related by the product
 

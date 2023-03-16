@@ -494,7 +494,7 @@ As an example of their use try each of following:
 slideshow:
   slide_type: fragment
 ---
-rlocus(G*H)
+rlocus(G*H),sgrid
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -506,7 +506,7 @@ rlocus(G*H)
 slideshow:
   slide_type: fragment
 ---
-bode(G*H)
+bode(G*H),grid
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -518,7 +518,7 @@ bode(G*H)
 slideshow:
   slide_type: fragment
 ---
-step(Gc)
+step(Gc),grid
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -530,7 +530,7 @@ step(Gc)
 slideshow:
   slide_type: fragment
 ---
-bode(Gc)
+bode(Gc),grid
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -542,7 +542,7 @@ bode(Gc)
 slideshow:
   slide_type: fragment
 ---
-impulse(Gc)
+impulse(Gc),grid
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -554,7 +554,7 @@ impulse(Gc)
 slideshow:
   slide_type: fragment
 ---
-nyquist(G*H)
+nyquist(G*H),grid
 ```
 
 +++ {"slideshow": {"slide_type": "notes"}}
@@ -637,7 +637,7 @@ slideshow:
   slide_type: fragment
 ---
 newC = tf([5, 10],[1, 13, 30])
-step(newC) % provides $u_0(t)$
+step(newC),grid % provides $u_0(t)$
 ```
 
 ```{code-cell}
@@ -647,7 +647,7 @@ slideshow:
 ---
 t = 0:.05:1.5; % time vector
 c = 0.3333 + 0.2381 * exp(-3*t) - 0.5714 * exp(-10*t);
-plot(t,c)
+plot(t,c),grid
 ```
 
 +++ {"slideshow": {"slide_type": "notes"}}
@@ -753,7 +753,7 @@ step response is then:
 slideshow:
   slide_type: fragment
 ---
-step(G)
+step(G),grid
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -789,24 +789,99 @@ Let's go a bit further by finding the frequency response:
 slideshow:
   slide_type: subslide
 ---
-bode(G)
+bode(G),grid
 ```
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-**TODO** Add additional examples from EG-152
+```{note}
+The following examples have been adapted from *Session 3: RC Networks and the Op-Amp in the Time-Domain*, from **EG-152 Analogue Design**.
+```
 
 +++
+
+(ex15.2)=
+### Example 15.2: Periodic Excitation
+
+Consider the RC circuit shown in {numref}`fig:ex15.2`(b). The circuit is subjected to the periodic signal $x(t) = v_1(t)$ shown in {numref}`fig:ex15.2`(a).
+
+:::{figure-md} fig:ex15.2
+<img src="pictures/eg-152-3.1.png" alt="Circuit for Investigating Recurrent Boundary Conditions." width="60%">
+
+Circuit for Investigating Recurrent Boundary Conditions (Figure 3.0 of {cite}`eg152`)
+:::
+
+a) Use the Laplace transform to determine the transfer function $H(s)$ and the impulse response $h(t)$ of the RC circuit.
+
+b) Determine the step response of the RC circuit.
+
+c) use the results of Example 15.2(a) and (b) and properties of the Laplace transform to determine the response $y(t) = v_2(t)$ to $v_1(t)$. 
+
+d) Given that $V_L = -5$ V and $V_U = 5$ V, and assuming that the time constant $\tau = RC = T_A = 2 T_B$,  use MATLAB to plot the response $v_1(t)$ over two cycles of the input signal. Use any suitable values of $T_A$, $T_B$ and $RC$ that you feel are appropriate.
+
+e) Use the transfer function block and the signal editor provided by Simulink to confirm by simulation the response computed in Example 15.2(d).
+
+
+
++++
+
+(15.3)=
+### Example 15.3: Operational Differentiator
+
+In Section 3.3 of {cite}`eg152` it is given that the differential equation of the *operational differentiator* illustrated in {numref}`fig:15.3` is
+
+$$v_2(t) = -R i(t) = -RC \frac{d}{dt}v_1(t)$$
+
+:::{figure-md} fig:15.3
+<img src="pictures/eg-152-3.4.png" alt="Schematic of Operational Differentiator." width="60%">
+
+Schematic of Operational Differentiator (Figure 3.4 of {cite}`eg152`)
+
+:::
+
+
+
+a) Give the transfer function $H(s) = V_2(s)/V_1(s)$ of the operational differentiator.
+
+b) Compute the impulse and step response of the operational differentiator.
+
+c) Compute and plot the response of the operational differentiator to three cycles of the input of {numref}`fig:ex12.2`(a) when $V_L = -6$ V, $V_U = 3$ V, given that the waveform period $T = 1$ ms, the duty cycle $D = T_A/(T_A + T_B) = 2/5$ and time constant $\tau = RC = 50$ ms.
+
++++
+
+(15.4)=
+### Example 15.4: Operational Integrator
+
+In Section 3.5 of {cite}`eg152` it is given that the differential equation of the *operational inetgrator* illustrated in {numref}`fig:15.4` is
+
+$$v_2(t) = -\frac{1}{RC} \int_0^t v_1(\tau)\, d\tau.$$
+
+:::{figure-md} fig:15.4
+<img src="pictures/eg-152-3.7.png" alt="Schematic of Operational Integrator." width="60%">
+
+Schematic of Operational Integrator (Figure 3.7 of {cite}`eg152`)
+
+:::
+
+
+
+a) Give the transfer function $H(s) = V_2(s)/V_1(s)$ of the operational interator.
+
+b) Compute the impulse and step response of the operational integrator.
+
+c) Compute and plot the response of the operational differentiator to three cycles of the input of {numref}`fig:ex12.2`(a) when $V_L = -3$ V, $V_U = 6$ V given that the waveform period $T = 5$ ms, the duty cycle $D = T_A/(T_A + T_B) = 1/3$ and time constant $\tau = RC = 200$ ms.
+
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Lab 5
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Summary
 
 ### Takeaways
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Next time
 
