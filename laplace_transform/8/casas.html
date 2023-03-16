@@ -753,6 +753,21 @@ title="Print to PDF"
      </li>
     </ul>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-15-2-periodic-excitation">
+     Example 15.2: Periodic Excitation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-15-3-operational-differentiator">
+     Example 15.3: Operational Differentiator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-15-4-operational-integrator">
+     Example 15.4: Operational Integrator
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -933,6 +948,21 @@ title="Print to PDF"
       </a>
      </li>
     </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-15-2-periodic-excitation">
+     Example 15.2: Periodic Excitation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-15-3-operational-differentiator">
+     Example 15.3: Operational Differentiator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-15-4-operational-integrator">
+     Example 15.4: Operational Integrator
+    </a>
    </li>
   </ul>
  </li>
@@ -1665,7 +1695,7 @@ symbolically.</p>
 <h4>Root locus<a class="headerlink" href="#root-locus" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">rlocus</span><span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">H</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">rlocus</span><span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">H</span><span class="p">),</span><span class="n">sgrid</span>
 </pre></div>
 </div>
 </div>
@@ -1678,7 +1708,7 @@ symbolically.</p>
 <h4>Open-loop frequency response<a class="headerlink" href="#open-loop-frequency-response" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">H</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">H</span><span class="p">),</span><span class="nb">grid</span>
 </pre></div>
 </div>
 </div>
@@ -1691,7 +1721,7 @@ symbolically.</p>
 <h4>Closed-loop step response<a class="headerlink" href="#closed-loop-step-response" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">step</span><span class="p">(</span><span class="n">Gc</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">step</span><span class="p">(</span><span class="n">Gc</span><span class="p">),</span><span class="nb">grid</span>
 </pre></div>
 </div>
 </div>
@@ -1704,7 +1734,7 @@ symbolically.</p>
 <h4>Closed-loop frequency response<a class="headerlink" href="#closed-loop-frequency-response" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">Gc</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">Gc</span><span class="p">),</span><span class="nb">grid</span>
 </pre></div>
 </div>
 </div>
@@ -1717,7 +1747,7 @@ symbolically.</p>
 <h4>Closed-loop impulse response<a class="headerlink" href="#closed-loop-impulse-response" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">impulse</span><span class="p">(</span><span class="n">Gc</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">impulse</span><span class="p">(</span><span class="n">Gc</span><span class="p">),</span><span class="nb">grid</span>
 </pre></div>
 </div>
 </div>
@@ -1730,7 +1760,7 @@ symbolically.</p>
 <h4>Nyquist diagram<a class="headerlink" href="#nyquist-diagram" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">nyquist</span><span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">H</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">nyquist</span><span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">H</span><span class="p">),</span><span class="nb">grid</span>
 </pre></div>
 </div>
 </div>
@@ -1819,7 +1849,7 @@ k =
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">newC</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">])</span>
-<span class="nb">step</span><span class="p">(</span><span class="n">newC</span><span class="p">)</span><span class="w"> </span><span class="c">% provides $u_0(t)$</span>
+<span class="nb">step</span><span class="p">(</span><span class="n">newC</span><span class="p">),</span><span class="nb">grid</span><span class="w"> </span><span class="c">% provides $u_0(t)$</span>
 </pre></div>
 </div>
 </div>
@@ -1852,7 +1882,7 @@ k =
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mf">.05</span><span class="p">:</span><span class="mf">1.5</span><span class="p">;</span><span class="w"> </span><span class="c">% time vector</span>
 <span class="n">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.3333</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.2381</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.5714</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="o">*</span><span class="n">t</span><span class="p">);</span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">c</span><span class="p">),</span><span class="nb">grid</span>
 </pre></div>
 </div>
 </div>
@@ -1936,7 +1966,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <p>step response is then:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">step</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">step</span><span class="p">(</span><span class="n">G</span><span class="p">),</span><span class="nb">grid</span>
 </pre></div>
 </div>
 </div>
@@ -1961,7 +1991,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <p>Let’s go a bit further by finding the frequency response:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">G</span><span class="p">),</span><span class="nb">grid</span>
 </pre></div>
 </div>
 </div>
@@ -1969,8 +1999,56 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <img alt="../../_images/casas_116_0.png" src="../../_images/casas_116_0.png" />
 </div>
 </div>
-<p><strong>TODO</strong> Add additional examples from EG-152</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following examples have been adapted from <em>Session 3: RC Networks and the Op-Amp in the Time-Domain</em>, from <strong>EG-152 Analogue Design</strong>.</p>
+</div>
 </section>
+</section>
+<section id="example-15-2-periodic-excitation">
+<span id="ex15-2"></span><h3>Example 15.2: Periodic Excitation<a class="headerlink" href="#example-15-2-periodic-excitation" title="Permalink to this headline">#</a></h3>
+<p>Consider the RC circuit shown in <a class="reference internal" href="#fig-ex15-2"><span class="std std-numref">Fig. 70</span></a>(b). The circuit is subjected to the periodic signal <span class="math notranslate nohighlight">\(x(t) = v_1(t)\)</span> shown in <a class="reference internal" href="#fig-ex15-2"><span class="std std-numref">Fig. 70</span></a>(a).</p>
+<figure class="align-default" id="fig-ex15-2">
+<a class="reference internal image-reference" href="../../_images/eg-152-3.1.png"><img alt="Circuit for Investigating Recurrent Boundary Conditions." src="../../_images/eg-152-3.1.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 70 </span><span class="caption-text">Circuit for Investigating Recurrent Boundary Conditions (Figure 3.0 of <span id="id1">[]</span>)</span><a class="headerlink" href="#fig-ex15-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>a) Use the Laplace transform to determine the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> and the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the RC circuit.</p>
+<p>b) Determine the step response of the RC circuit.</p>
+<p>c) use the results of Example 15.2(a) and (b) and properties of the Laplace transform to determine the response <span class="math notranslate nohighlight">\(y(t) = v_2(t)\)</span> to <span class="math notranslate nohighlight">\(v_1(t)\)</span>.</p>
+<p>d) Given that <span class="math notranslate nohighlight">\(V_L = -5\)</span> V and <span class="math notranslate nohighlight">\(V_U = 5\)</span> V, and assuming that the time constant <span class="math notranslate nohighlight">\(\tau = RC = T_A = 2 T_B\)</span>,  use MATLAB to plot the response <span class="math notranslate nohighlight">\(v_1(t)\)</span> over two cycles of the input signal. Use any suitable values of <span class="math notranslate nohighlight">\(T_A\)</span>, <span class="math notranslate nohighlight">\(T_B\)</span> and <span class="math notranslate nohighlight">\(RC\)</span> that you feel are appropriate.</p>
+<p>e) Use the transfer function block and the signal editor provided by Simulink to confirm by simulation the response computed in Example 15.2(d).</p>
+</section>
+<section id="example-15-3-operational-differentiator">
+<span id="id2"></span><h3>Example 15.3: Operational Differentiator<a class="headerlink" href="#example-15-3-operational-differentiator" title="Permalink to this headline">#</a></h3>
+<p>In Section 3.3 of <span id="id3">[]</span> it is given that the differential equation of the <em>operational differentiator</em> illustrated in <a class="reference internal" href="#fig-15-3"><span class="std std-numref">Fig. 71</span></a> is</p>
+<div class="math notranslate nohighlight">
+\[v_2(t) = -R i(t) = -RC \frac{d}{dt}v_1(t)\]</div>
+<figure class="align-default" id="fig-15-3">
+<a class="reference internal image-reference" href="../../_images/eg-152-3.4.png"><img alt="Schematic of Operational Differentiator." src="../../_images/eg-152-3.4.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 71 </span><span class="caption-text">Schematic of Operational Differentiator (Figure 3.4 of <span id="id4">[]</span>)</span><a class="headerlink" href="#fig-15-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>a) Give the transfer function <span class="math notranslate nohighlight">\(H(s) = V_2(s)/V_1(s)\)</span> of the operational differentiator.</p>
+<p>b) Compute the impulse and step response of the operational differentiator.</p>
+<p>c) Compute and plot the response of the operational differentiator to three cycles of the input of <a class="reference internal" href="../5/circuit_analysis.html#fig-ex12-2"><span class="std std-numref">Fig. 59</span></a>(a) when <span class="math notranslate nohighlight">\(V_L = -6\)</span> V, <span class="math notranslate nohighlight">\(V_U = 3\)</span> V, given that the waveform period <span class="math notranslate nohighlight">\(T = 1\)</span> ms, the duty cycle <span class="math notranslate nohighlight">\(D = T_A/(T_A + T_B) = 2/5\)</span> and time constant <span class="math notranslate nohighlight">\(\tau = RC = 50\)</span> ms.</p>
+</section>
+<section id="example-15-4-operational-integrator">
+<span id="id5"></span><h3>Example 15.4: Operational Integrator<a class="headerlink" href="#example-15-4-operational-integrator" title="Permalink to this headline">#</a></h3>
+<p>In Section 3.5 of <span id="id6">[]</span> it is given that the differential equation of the <em>operational inetgrator</em> illustrated in <a class="reference internal" href="#fig-15-4"><span class="std std-numref">Fig. 72</span></a> is</p>
+<div class="math notranslate nohighlight">
+\[v_2(t) = -\frac{1}{RC} \int_0^t v_1(\tau)\, d\tau.\]</div>
+<figure class="align-default" id="fig-15-4">
+<a class="reference internal image-reference" href="../../_images/eg-152-3.7.png"><img alt="Schematic of Operational Integrator." src="../../_images/eg-152-3.7.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 72 </span><span class="caption-text">Schematic of Operational Integrator (Figure 3.7 of <span id="id7">[]</span>)</span><a class="headerlink" href="#fig-15-4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>a) Give the transfer function <span class="math notranslate nohighlight">\(H(s) = V_2(s)/V_1(s)\)</span> of the operational interator.</p>
+<p>b) Compute the impulse and step response of the operational integrator.</p>
+<p>c) Compute and plot the response of the operational differentiator to three cycles of the input of <a class="reference internal" href="../5/circuit_analysis.html#fig-ex12-2"><span class="std std-numref">Fig. 59</span></a>(a) when <span class="math notranslate nohighlight">\(V_L = -3\)</span> V, <span class="math notranslate nohighlight">\(V_U = 6\)</span> V given that the waveform period <span class="math notranslate nohighlight">\(T = 5\)</span> ms, the duty cycle <span class="math notranslate nohighlight">\(D = T_A/(T_A + T_B) = 1/3\)</span> and time constant <span class="math notranslate nohighlight">\(\tau = RC = 200\)</span> ms.</p>
 </section>
 </section>
 <section id="lab-5">
@@ -1991,7 +2069,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<span class="target" id="id1"></span></section>
+<span class="target" id="id8"></span></section>
 <section id="matlab-solutions">
 <h2>Matlab Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this headline">#</a></h2>
 <p>For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab">MATLAB</a> folder.</p>
