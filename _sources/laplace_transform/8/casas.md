@@ -795,7 +795,7 @@ bode(G),grid
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ```{note}
-The following examples have been adapted from *Session 3: RC Networks and the Op-Amp in the Time-Domain*, from **EG-152 Analogue Design**.
+The following examples have been adapted from *Session 3: RC Networks and the Op-Amp in the Time-Domain*, from **EG-152 Analogue Design** ({cite}`eg152`).
 ```
 
 +++
@@ -806,7 +806,7 @@ The following examples have been adapted from *Session 3: RC Networks and the Op
 Consider the RC circuit shown in {numref}`fig:ex15.2`(b). The circuit is subjected to the periodic signal $x(t) = v_1(t)$ shown in {numref}`fig:ex15.2`(a).
 
 :::{figure-md} fig:ex15.2
-<img src="pictures/eg-152-3.1.png" alt="Circuit for Investigating Recurrent Boundary Conditions." width="60%">
+<img src="pictures/eg-152-3.1.png" alt="Circuit for Investigating Recurrent Boundary Conditions." width="80%">
 
 Circuit for Investigating Recurrent Boundary Conditions (Figure 3.0 of {cite}`eg152`)
 :::

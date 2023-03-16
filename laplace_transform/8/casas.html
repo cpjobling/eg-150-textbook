@@ -2001,7 +2001,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The following examples have been adapted from <em>Session 3: RC Networks and the Op-Amp in the Time-Domain</em>, from <strong>EG-152 Analogue Design</strong>.</p>
+<p>The following examples have been adapted from <em>Session 3: RC Networks and the Op-Amp in the Time-Domain</em>, from <strong>EG-152 Analogue Design</strong> (<span id="id1">[]</span>).</p>
 </div>
 </section>
 </section>
@@ -2009,9 +2009,9 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <span id="ex15-2"></span><h3>Example 15.2: Periodic Excitation<a class="headerlink" href="#example-15-2-periodic-excitation" title="Permalink to this headline">#</a></h3>
 <p>Consider the RC circuit shown in <a class="reference internal" href="#fig-ex15-2"><span class="std std-numref">Fig. 70</span></a>(b). The circuit is subjected to the periodic signal <span class="math notranslate nohighlight">\(x(t) = v_1(t)\)</span> shown in <a class="reference internal" href="#fig-ex15-2"><span class="std std-numref">Fig. 70</span></a>(a).</p>
 <figure class="align-default" id="fig-ex15-2">
-<a class="reference internal image-reference" href="../../_images/eg-152-3.1.png"><img alt="Circuit for Investigating Recurrent Boundary Conditions." src="../../_images/eg-152-3.1.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../../_images/eg-152-3.1.png"><img alt="Circuit for Investigating Recurrent Boundary Conditions." src="../../_images/eg-152-3.1.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 70 </span><span class="caption-text">Circuit for Investigating Recurrent Boundary Conditions (Figure 3.0 of <span id="id1">[]</span>)</span><a class="headerlink" href="#fig-ex15-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 70 </span><span class="caption-text">Circuit for Investigating Recurrent Boundary Conditions (Figure 3.0 of <span id="id2">[]</span>)</span><a class="headerlink" href="#fig-ex15-2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>a) Use the Laplace transform to determine the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> and the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the RC circuit.</p>
@@ -2021,14 +2021,14 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <p>e) Use the transfer function block and the signal editor provided by Simulink to confirm by simulation the response computed in Example 15.2(d).</p>
 </section>
 <section id="example-15-3-operational-differentiator">
-<span id="id2"></span><h3>Example 15.3: Operational Differentiator<a class="headerlink" href="#example-15-3-operational-differentiator" title="Permalink to this headline">#</a></h3>
-<p>In Section 3.3 of <span id="id3">[]</span> it is given that the differential equation of the <em>operational differentiator</em> illustrated in <a class="reference internal" href="#fig-15-3"><span class="std std-numref">Fig. 71</span></a> is</p>
+<span id="id3"></span><h3>Example 15.3: Operational Differentiator<a class="headerlink" href="#example-15-3-operational-differentiator" title="Permalink to this headline">#</a></h3>
+<p>In Section 3.3 of <span id="id4">[]</span> it is given that the differential equation of the <em>operational differentiator</em> illustrated in <a class="reference internal" href="#fig-15-3"><span class="std std-numref">Fig. 71</span></a> is</p>
 <div class="math notranslate nohighlight">
 \[v_2(t) = -R i(t) = -RC \frac{d}{dt}v_1(t)\]</div>
 <figure class="align-default" id="fig-15-3">
 <a class="reference internal image-reference" href="../../_images/eg-152-3.4.png"><img alt="Schematic of Operational Differentiator." src="../../_images/eg-152-3.4.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 71 </span><span class="caption-text">Schematic of Operational Differentiator (Figure 3.4 of <span id="id4">[]</span>)</span><a class="headerlink" href="#fig-15-3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 71 </span><span class="caption-text">Schematic of Operational Differentiator (Figure 3.4 of <span id="id5">[]</span>)</span><a class="headerlink" href="#fig-15-3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>a) Give the transfer function <span class="math notranslate nohighlight">\(H(s) = V_2(s)/V_1(s)\)</span> of the operational differentiator.</p>
@@ -2036,14 +2036,14 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <p>c) Compute and plot the response of the operational differentiator to three cycles of the input of <a class="reference internal" href="../5/circuit_analysis.html#fig-ex12-2"><span class="std std-numref">Fig. 59</span></a>(a) when <span class="math notranslate nohighlight">\(V_L = -6\)</span> V, <span class="math notranslate nohighlight">\(V_U = 3\)</span> V, given that the waveform period <span class="math notranslate nohighlight">\(T = 1\)</span> ms, the duty cycle <span class="math notranslate nohighlight">\(D = T_A/(T_A + T_B) = 2/5\)</span> and time constant <span class="math notranslate nohighlight">\(\tau = RC = 50\)</span> ms.</p>
 </section>
 <section id="example-15-4-operational-integrator">
-<span id="id5"></span><h3>Example 15.4: Operational Integrator<a class="headerlink" href="#example-15-4-operational-integrator" title="Permalink to this headline">#</a></h3>
-<p>In Section 3.5 of <span id="id6">[]</span> it is given that the differential equation of the <em>operational inetgrator</em> illustrated in <a class="reference internal" href="#fig-15-4"><span class="std std-numref">Fig. 72</span></a> is</p>
+<span id="id6"></span><h3>Example 15.4: Operational Integrator<a class="headerlink" href="#example-15-4-operational-integrator" title="Permalink to this headline">#</a></h3>
+<p>In Section 3.5 of <span id="id7">[]</span> it is given that the differential equation of the <em>operational inetgrator</em> illustrated in <a class="reference internal" href="#fig-15-4"><span class="std std-numref">Fig. 72</span></a> is</p>
 <div class="math notranslate nohighlight">
 \[v_2(t) = -\frac{1}{RC} \int_0^t v_1(\tau)\, d\tau.\]</div>
 <figure class="align-default" id="fig-15-4">
 <a class="reference internal image-reference" href="../../_images/eg-152-3.7.png"><img alt="Schematic of Operational Integrator." src="../../_images/eg-152-3.7.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 72 </span><span class="caption-text">Schematic of Operational Integrator (Figure 3.7 of <span id="id7">[]</span>)</span><a class="headerlink" href="#fig-15-4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 72 </span><span class="caption-text">Schematic of Operational Integrator (Figure 3.7 of <span id="id8">[]</span>)</span><a class="headerlink" href="#fig-15-4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>a) Give the transfer function <span class="math notranslate nohighlight">\(H(s) = V_2(s)/V_1(s)\)</span> of the operational interator.</p>
@@ -2069,7 +2069,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<span class="target" id="id8"></span></section>
+<span class="target" id="id9"></span></section>
 <section id="matlab-solutions">
 <h2>Matlab Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this headline">#</a></h2>
 <p>For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab">MATLAB</a> folder.</p>
