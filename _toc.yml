@@ -55,12 +55,12 @@ parts:
     - file: laplace_transform/8/casas
       title: Unit 4.8 Computer-Aided Systems Analysis and Simulation 
   - file: fourier_series/index
-    title: Fourier Series
+    title: Unit 5 Fourier Series
     sections:
     - file: fourier_series/1/trig_fseries
-      title: Trigonometric Fourier Series
+      title: Unit 5.1 Fourier Analysis
     - file: fourier_series/2/exp_fs1
-      title: Exponential Fourier Series
+      title: Unit 5.2 Exponential Fourier Series
     - file: fourier_series/3/exp_fs2
       title: Line Spectra and their Applications
   - file: zbib
