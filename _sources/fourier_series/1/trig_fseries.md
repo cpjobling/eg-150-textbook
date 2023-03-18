@@ -54,7 +54,7 @@ Fourier analysis has important applications in many branches of electronics but 
 
 * {ref}`fs1:matlab`
 
-* {ref}`gibbs`
+* {ref}`fs1:gibbs`
 
 * {ref}`examples16`
 
@@ -682,7 +682,7 @@ In this unit we ...
 
 * {ref}`fs1:matlab`
 
-* {ref}`gibbs`
+* {ref}`fs1:gibbs`
 
 * {ref}`examples16`
 
