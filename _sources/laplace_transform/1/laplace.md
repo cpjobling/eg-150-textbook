@@ -17,7 +17,7 @@ kernelspec:
 (unit4.1)=
 # Unit 4.1: The Laplace Transformation
 
-The preparatory reading for this section is [Chapter 2](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=43) of  {cite}`karris` and [Chapter 3]() of {cite}`schaum`.
+The preparatory reading for this section is [Chapter 2](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=43) of  {cite}`karris` and [Chapter 3](https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section1) of {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 

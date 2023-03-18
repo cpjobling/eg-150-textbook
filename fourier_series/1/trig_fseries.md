@@ -15,66 +15,154 @@ kernelspec:
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (unit5.1)=
-# Trigonometric Fourier Series
+# Unit 5.1: Fourier Analysis
 
+The preparatory reading for this section is [Chapter 7](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=213) of  {cite}`karris` and [Chapter 5](https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter5/section/section1) of {cite}`schaum`.
 
++++ {"slideshow": {"slide_type": "subslide"}}
 
-Any periodic waveform can be approximated by a DC component (which may be 0) and the sum of the fundamental and harmomic sinusoidal waveforms. This has important applications in many applications of electronics but is particularly crucial for signal processing and communications.
+Follow along at [cpjobling.github.io/eg-150-textbook/fourier_series/1/trig_fseries](https://cpjobling.github.io/eg-150-textbook/fourier_series/1/trig_fseries)
 
-+++ {"slideshow": {"slide_type": "skip"}}
-
-## Colophon
-
-An annotatable worksheet for this presentation is available as [**Worksheet 9**](https://cpjobling.github.io/eg-247-textbook/fourier_series/1/worksheet9.html).
-
-* The source code for this page is [fourier_series/1/trig_fseries.md](https://github.com/cpjobling/eg-247-textbook/blob/master/fourier_series/1/trig_fseries.md).
-
-* You can view the notes for this presentation as a webpage ([HTML](https://cpjobling.github.io/eg-247-textbook/fourier_series/1/trig_fseries.html)). 
-
-* This page is downloadable as a [PDF](https://cpjobling.github.io/eg-247-textbook/fourier_series/1/trig_fseries.pdf) file.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-## Revision?
-
-I believe that this subject has been covered in EG-150 Signals and Systems and so we present the notes as background for the Fourier transform.
+![QR Code for this lecture](pictures/qrcode_fs1.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Agenda
+(fs1:intro)=
+## Introduction
 
-+++ {"slideshow": {"slide_type": "fragment"}}
+Any periodic waveform with *fundamental frequency* $\Omega_0 = 2\pi F_0$ can be approximated by a DC component (which may be 0) and the sum of sinusoidal waveforms at the fundamental and *integer multiples* of the fundamental frequency. 
 
-* Motivating examples
+These integer multiples of the fundamental frequency $2\Omega_0$, $3\Omega_0$, $4\Omega_0$, $\ldots,\ \Omega_N$ are called the *harmonic frequencies*.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
+The approximation of a periodic waveform by a sum of *harmonic waveforms*, is known as *Fourier analysis*.
 
-* Wave analysis and the Trig. Fourier Series
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-* Symmetry in Trigonometric Fourier Series
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-* Computing coefficients of Trig. Fourier Series in MATLAB
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-* Gibbs Phenomenon
+Fourier analysis has important applications in many branches of electronics but is particularly crucial for signal processing and communications.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
+## Agenda
+
+* {ref}`fs1:intro`
+
+* {ref}`fs1:periodic_signals`
+
+* {ref}`fs1:motivation`
+
+* {ref}`fs1:wave_analysis`
+
+* {ref}`fs1:symmetry`
+
+* {ref}`fs1:matlab`
+
+* {ref}`gibbs`
+
+* {ref}`examples16`
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(fs1:periodic_signals)=
+## Periodic Signals
+
+In {ref}`periodic_signals` we defined a continuous-time signal $x(t)$ to be periodic if there is a positive nonzero value of $T$ for which
+
+$$x(t + nT) = x(t)\qquad\mathrm{all}\ t$$ (eq:fs1:1)
+
+The *fundamental period* $T_0$ of $x(t)$ is the smallest positive value of $T$ for which Eq. {eq}`eq:fs1:1` is satisfied, and $1/T_0 = ƒ_0$ is referred to as the *fundamental frequency*.
+
+Two basic examples of periodic signals are the real sinusoidal signal
+
+$$x(t) = \cos\left(\Omega_0 t + \phi\right)$$ (eq:fs1:2)
+
+and the complex exponential signal
+
+$$x(t) = e^{j\Omega t}$$ (eq:fs1:3)
+
+where $\Omega_0 = 2\pi/T_0 = 2\piƒ_0$ is called the *fundamental angular frequency*.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(fs1:motivation)=
 ## Motivating Examples
 
 This [Fourier Series demo](http://dspfirst.gatech.edu/matlab/#fseriesdemo), developed by Members of the Center for Signal and Image Processing (CSIP) at the [School of Electrical and Computer Engineering](https://www.ece.gatech.edu/) at the [Georgia Institute of Technology](https://www.gatech.edu/), shows how periodic signals can be synthesised by a sum of sinusoidal signals.
 
-It is here used as a motivational example in our introduction to [Fourier Series](https://en.wikipedia.org/wiki/Fourier_series). (See also [Fourier Series](https://mathworld.wolfram.com/FourierSeries.html) from Wolfram MathWorld referenced in the **Quick Reference** on Blackboard.)
+It is here used as a motivational example in our introduction to [Fourier Series](https://en.wikipedia.org/wiki/Fourier_series) [Wikipedia]. (See also [Fourier Series](https://mathworld.wolfram.com/FourierSeries.html) from Wolfram MathWorld)
 
 To install this example, download the [zip file](http://dspfirst.gatech.edu/matlab/ZipFiles/fseriesdemo-v144.zip) and unpack it somewhere on your MATLAB path.
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Demo 1
+
+Building up wave forms from sinusoids.
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+fseriesdemo
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Demo 2
+
+Actual measurements
+
+Taken by Dr Tim Davies with a Rhode&Schwarz Oscilloscope.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Note all spectra shown in these slides are generated numerically from the input signals by sampling and the application of the Fast Fourier Transform (FFT).
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### 1 kHz Sinewave
+
+![A 1 kHz sinewave](pictures/1kHz_Sinewave.png "A 1kHz sinewave")
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### Spectrum of 1kHz sinewave
+
+![Spectrum of 1kHz sinewave. Note one line at fundamental frequency.](pictures/fft_of_sinwave.png "Spectrum of 1kHz sinewave. Note one line at fundamental frequency.")
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### 1 kHz Squarewave
+
+![A 1 kHz square wave](pictures/1kHz_sqr.png "A 1kHz square wave.")
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### Spectrum of 1kHz square wave
+
+![Spectrum of 1kHz sinewave. Note only odd harmonics present.](pictures/FFT_sqr.png "Spectrum of 1kHz square wave. Note only odd harmonics present.")
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Clearly showing peaks at fundamental, 1/3, 1/5, 1/7 and 1/9 at 3rd, 5th and 7th harmonic frequencies. Note for the square wave, harmonics decline in amplitude as the reciprocal of the harmonic number $n$.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### 1 kHz triangle waveform
+
+![A 1 kHz triangle waveform](pictures/1kHz_saw.png "A 1 kHz triangle waveform")
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### Spectrum of 1kHz triangle waveform
+
+![Spectrum of 1kHz triangle wavform.](pictures/1kHz_saw_fft.png "Spectrum of 1kHz triangle wavform.")
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Clearly showing peaks at fundamental, 1/9, 1/25, 1/7 and 1/49 at 3rd, 5th and 7th harmonic frequencies. Note for the triangle waveform, harmonics decline in amplitude as the reciprocal of the square of $n$.
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(fs1:wave_analysis)=
 ## Wave Analysis
 
 * [Jean Baptiste Joseph Fourier](https://en.wikipedia.org/wiki/Joseph_Fourier) (21 March 1768 – 16 May 1830) discovered that any _**periodic**_ signal could be represented as a series of *harmonically related* sinusoids.
@@ -94,13 +182,13 @@ $$
   f(t) &=& \frac{1}{2}{a_0} + {a_1}\cos \Omega_0 t + {a_2}\cos 2\Omega_0 t + {a_3}\cos 3\Omega_0 t +  \cdots  + {a_n}\cos n\Omega_0 t +  \cdots  \\ 
    &+& {b_1}\sin \Omega_0 t + {b_2}\sin 2\Omega_0 t + {b_3}\sin 3\Omega_0 t +  \cdots  + {b_n}\sin n\Omega_0 t +  \cdots  \\ 
 \end{eqnarray*}
-$$
+$$ (eq:fs1:4)
 
 or equivalently (if more confusingly)
 
 $$
 f(t) = \frac{1}{2}{a_0} + \sum\limits_{n = 1}^\infty  {({a_n}\cos n\Omega_0 t + {b_n}\sin n\Omega_0 t)}
-$$
+$$ (eq:fs1:5)
 
 where $\Omega_0$ rad/s is the *fundamental frequency*.
 
@@ -134,14 +222,15 @@ To generate this picture use [fourier_series1.m](https://cpjobling.github.io/eg-
 
 The coefficients are obtained from the following expressions (valid for any periodic waveform with fundamental frequency $\Omega_0$ so long as we integrate over one period $0\to T_0$ where $T_0 = 2\pi/\Omega_0$), and $\theta = \Omega_0 t$:
 
-$$\frac{1}{2}a_0 = \frac{1}{T_0}\int_{0}^{T_0}f(t)d t = \frac{1}{\pi}\int_{0}^{2\pi}f(\theta )d \theta$$
+$$\frac{1}{2}a_0 = \frac{1}{T_0}\int_{0}^{T_0}f(t)d t = \frac{1}{\pi}\int_{0}^{2\pi}f(\theta )d \theta$$ (eq:fs1:6)
 
-$$a_n = \frac{1}{T_0}\int_{0}^{T_0}f(t)\cos n\Omega_0 t\,dt = \frac{1}{2\pi}\int_{0}^{2\pi}f(\theta)\cos n\theta\,d\theta$$
+$$a_n = \frac{1}{T_0}\int_{0}^{T_0}f(t)\cos n\Omega_0 t\,dt = \frac{1}{2\pi}\int_{0}^{2\pi}f(\theta)\cos n\theta\,d\theta$$ (eq:fs1:7)
 
-$$b_n = \frac{1}{T_0}\int_{0}^{T_0}f(t)\sin n\Omega_0 t\,dt = \frac{1}{2\pi}\int_{0}^{2\pi}f(\theta)\sin n\theta \,d\theta$$
+$$b_n = \frac{1}{T_0}\int_{0}^{T_0}f(t)\sin n\Omega_0 t\,dt = \frac{1}{2\pi}\int_{0}^{2\pi}f(\theta)\sin n\theta \,d\theta$$ (eq:fs1:8)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(fs1:symmetry)=
 ## Odd, Even and Half-wave Symmetry
 
 ### Odd and even symmetry
@@ -149,7 +238,7 @@ $$b_n = \frac{1}{T_0}\int_{0}^{T_0}f(t)\sin n\Omega_0 t\,dt = \frac{1}{2\pi}\int
 * An *odd* function is one for which $f(t) = -f(-t)$. The function $\sin t$ is an *odd* function.
 * An *even* function is one for which $f(t) = f(-t)$. The function $\cos t$ is an *even* function.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Half-wave symmetry
 
@@ -158,97 +247,13 @@ $$b_n = \frac{1}{T_0}\int_{0}^{T_0}f(t)\sin n\Omega_0 t\,dt = \frac{1}{2\pi}\int
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-## Symmetry in Trigonometric Fourier Series
+### Symmetry in Trigonometric Fourier Series
 
 There are simplifications we can make if the original periodic properties has certain properties:
 
 * If $f(t)$ is odd, $a_0=0$ and there will be no cosine terms so ${a_n} = 0\; \forall n > 0$
 * If $f(t)$ is even, there will be no sine terms and ${b_n} = 0\; \forall n > 0$. The DC may or may not be zero.
 * If $f(t)$ has *half-wave symmetry* only the odd harmonics will be present. That is $a_n$ and $b_n$ is zero for all even values of $n$ (0, 2, 4, ...)
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-### Symmetry in Common Waveforms
-
-To reproduce the following waveforms (without annotation) publish the script [waves.m](https://cpjobling.github.io/eg-247-textbook/fourier_series/matlab/waves.m).
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-#### Squarewave
-
-<img src="pictures/square.png">
-
-* Average value over period $T$ is ...?
-* It is an **odd**/**even**function?
-* It **has/has not** half-wave symmetry $f(t)=-f(t+T/2)$?
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-#### Shifted Squarewave
-
-<img src="pictures/shifted_sq.png">
-
-* Average value over period $T$ is ...?
-* It is an **odd**/**even** function?
-* It **has/has not** half-wave symmetry $f(t)=-f(t+T/2)$?
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-#### Sawtooth
-
-<img src="pictures/sawtooth.png">
-
-* Average value over period $T$ is ...?
-* It is an **odd**/**even** function?
-* It **has/has not** half-wave symmetry $f(t)=-f(t+T/2)$?
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-#### Triangle
-
-<img src="pictures/triangle.png">
-
-* Average value over period $T$ is ...?
-* It is an **odd**/**even**function?
-* It **has/has not** half-wave symmetry $f(t)=-f(t+T/2)$?
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-### Symmetry in fundamental, Second and Third Harmonics
-
-In the following, $T/2$ is taken to be the half-period of the fundamental sinewave.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-#### Fundamental
-
-<img src="pictures/fundamental.png">
-
-
-* Average value over period $T$ is ...?
-* It is an **odd**/**even**function?
-* It **has/has not** half-wave symmetry $f(t)=-f(t+T/2)$?
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-#### Second Harmonic
-
-<img src="pictures/2nd_harm.png">
-
-
-* Average value over period $T$ is ...?
-* It is an **odd**/**even** function?
-* It **has/has not** half-wave symmetry $f(t)=-f(t+T/2)$?
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-#### Third Harmonic
-
-<img src="pictures/3rd_harm.png">
-
-* Average value over period $T$ is ...?
-* It is an **odd**/**even** function?
-* It **has/has not** half-wave symmetry $f(t)=-f(t+T/2)$?
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -261,11 +266,14 @@ In the following, $T/2$ is taken to be the half-period of the fundamental sinewa
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-(For more details see page 7-10 of Karris)
+(For more details see page 7-10 of {cite}`karris`)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(fs1:matlab)=
 ## Computing coefficients of Trig. Fourier Series in MATLAB 
+
+The computation of the coefficients of the trig. fourier series is a painstaking, error-prone process and we need to use a computer.
 
 As an example let's take a square wave with amplitude $\pm A$ and period $T$.
 
@@ -283,7 +291,6 @@ slideshow:
 clear all
 cd ../matlab
 format compact
-imatlab_export_fig('print-svg')  % Static svg figures.
 ```
 
 ```{code-cell}
@@ -393,7 +400,7 @@ hold off
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-To run the full solution yourself download and run [square_ftrig.mlx](https://cpjobling.github.io/eg-247-textbook/fourier_series/matlab/square_ftrig.mlx).
+To run the full solution yourself download and run [square_ftrig.mlx](https://cpjobling.github.io/eg-150-textbook/fourier_series/matlab/square_ftrig.mlx).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -415,15 +422,131 @@ Note that the coefficients match those given in the textbook (Section 7.4.1).
 
 $$f(t) = \frac{4A}{\pi}\left(\sin \Omega_0 t + \frac{1}{3}\sin 3\Omega_0 t + \frac{1}{5}\sin 5\Omega_0 t + \cdots\right) = \frac{4A}{\pi}\sum_{n=\mathrm{odd}}\frac{1}{n}\sin n\Omega_0 t$$
 
++++ {"slideshow": {"slide_type": "slide"}}
+
+(fs1:gibbs)=
+## Gibbs Phenomenon
+
+In an earlier slide we found that the trigonometric for of the Fourier series of the square waveform is
+
+$$f(t) = \frac{4A}{\pi}\left(\sin \Omega_0 t + \frac{1}{3}\sin 3\Omega_0 t + \frac{1}{5}\sin 5\Omega_0 t + \cdots\right) = \frac{4A}{\pi}\sum_{n=\mathrm{odd}}\frac{1}{n}\sin n\Omega_0 t$$
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+This figure shows the approximation for the first 11 harmonics:
+
+<img src="pictures/fsq_trig.png">
+
+As we add more harmonics, the sum looks more and more like a square wave. However the crests do not become flattened; this is known as *Gibbs Phenomenon* and it occurs because of the discontinuity of the perfect sqare waveform as it changes from 
+$+A$ to $-A$ and *vice versa*.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(examples16)=
+# Examples 16
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Using symmetry - computing the Fourier series coefficients of the shifted square wave
+(ex:16.1)=
+### Example 16.1: Symmetry in Common Waveforms
+
+To reproduce the following waveforms (without annotation) publish the script [waves.m](https://cpjobling.github.io/eg-150-textbook/fourier_series/matlab/waves.m).
+
+For each of the following, determine the average value of the waveform over 1 period, state whether it is even or odd, determine if the waveform has halfwave symmetry $f(t) = -f(t + T/2)$.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### a) Squarewave
+
+<img src="pictures/square.png">
+
+* Average value over period $T$ is ...?
+* It is an **odd**/**even** function?
+* It **has/has not** half-wave symmetry $f(t)=-f(t+T/2)$?
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### b) Shifted Squarewave
+
+<img src="pictures/shifted_sq.png">
+
+* Average value over period $T$ is 
+* It is an **odd**/**even** function?
+* It **has/has not** half-wave symmetry $f(t)=-f(t+T/2)$?
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### c) Sawtooth
+
+<img src="pictures/sawtooth.png">
+
+* Average value over period $T$ is 
+* It is an **odd**/**even** function?
+* It **has/has not** half-wave symmetry $f(t)=-f(t+T/2)$?
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### Triangle
+
+<img src="pictures/triangle.png">
+
+* Average value over period $T$ is 
+* It is an **odd**/**even** function?
+* It **has/has not** half-wave symmetry $f(t)=-f(t+T/2)$?
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(ex:16.2)=
+### Example 16.2: Symmetry in fundamental, Second and Third Harmonics
+
+In the following, $T/2$ is taken to be the half-period of the fundamental sinewave.
+
+Evaluate the symmetry of the following fundamental and harmonic frequencies.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### a) Fundamental
+
+<img src="pictures/fundamental.png">
+
+
+* Average value over period $T$ is 
+* It is an **odd**/**even** function?
+* It **has/has not** half-wave symmetry $f(t)=-f(t+T/2)$?
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### b) Second Harmonic
+
+<img src="pictures/2nd_harm.png">
+
+
+* Average value over period $T$ is 
+* It is an **odd**/**even** function?
+* It **has/has not** half-wave symmetry $f(t)=-f(t+T/2)$?
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### b) Third Harmonic
+
+<img src="pictures/3rd_harm.png">
+
+* Average value over period $T$ is 
+* It is an **odd**/**even** function?
+* It **has/has not** half-wave symmetry $f(t)=-f(t+T/2)$?
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex:16.3)=
+### Example 16.3: Using symmetry - computing the Fourier series coefficients of the shifted square wave
 
 <img src="pictures/shifted_square_wave.png">
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Calculation of Fourier coefficients for Shifted Square Wave Exploiting half-wave symmetry. This is almost the same procedure as before. You can confirm the results by downloading and executing this file: [shifted_sq_ftrig.mlx](https://cpjobling.github.io/eg-247-textbook/fourier_series/matlab/shifted_sq_ftrig.mlx).
+Calculation of Fourier coefficients for Shifted Square Wave Exploiting half-wave symmetry. This is almost the same procedure as illustrated in {ref}`fs1:matlab`. 
+
+You can confirm the results by downloading and executing this file: [shifted_sq_ftrig.mlx](https://cpjobling.github.io/eg-150-textbook/fourier_series/matlab/shifted_sq_ftrig.mlx).
 
 ```{code-cell}
 ---
@@ -467,7 +590,7 @@ Compute harmonics - use half-wave symmetry
 slideshow:
   slide_type: notes
 ---
-ai = 4/pi*int(A*cos(n*t),t,0,(sym(pi)/2));
+ai = 4/pi*int(A*cos(n*t),t,0,pi/2);
 ```
 
 ```{code-cell}
@@ -536,23 +659,46 @@ hold off
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Note that the coefficients match those given in the textbook (Section 7.4.2).
+Note that the coefficients match those given in the {cite|`karris` (Section 7.4.2).
 
 $$f(t) = \frac{4A}{\pi}\left(\cos \Omega_0 t - \frac{1}{3}\cos 3\Omega_0 t + \frac{1}{5}\cos 5\Omega_0 t - \cdots\right) = \frac{4A}{\pi}\sum_{n=\mathrm{odd}}(-1)^{\frac{n-1}{2}} \frac{1}{n}\cos n\Omega_0 t$$
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
-## Gibbs Phenomenon
+(fs1:summary)=
+## Summary
 
-In an earlier slide we found that the trigonometric for of the Fourier series of the square waveform is
+In this unit we ...
 
-$$f(t) = \frac{4A}{\pi}\left(\sin \Omega_0 t + \frac{1}{3}\sin 3\Omega_0 t + \frac{1}{5}\sin 5\Omega_0 t + \cdots\right) = \frac{4A}{\pi}\sum_{n=\mathrm{odd}}\frac{1}{n}\sin n\Omega_0 t$$
+* {ref}`fs1:intro`
 
-+++ {"slideshow": {"slide_type": "slide"}}
+* {ref}`fs1:periodic_signals`
 
-This figure shows the approximation for the first 11 harmonics:
+* {ref}`fs1:motivation`
 
-<img src="pictures/fsq_trig.png">
+* {ref}`fs1:wave_analysis`
 
-As we add more harmonics, the sum looks more and more like a square wave. However the crests do not become flattened; this is known as *Gibbs Phenomenon* and it occurs because of the discontinuity of the perfect sqare waveform as it changes from 
-$+A$ to $-A$ and *vice versa*.
+* {ref}`fs1:symmetry`
+
+* {ref}`fs1:matlab`
+
+* {ref}`gibbs`
+
+* {ref}`examples16`
+
+(unit5.1:takeaways)=
+### Takeaways
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Next Time
+
+We move on to consider 
+
+* {ref}`unit5.2`
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
