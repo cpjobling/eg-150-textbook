@@ -14,8 +14,8 @@ kernelspec:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(unit5.3)=
-# Unit 5.3: Computing Line Spectra
+#### (unit5.4)=
+# Unit 5.4: Applications of Line Spectra
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
