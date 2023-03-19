@@ -62,7 +62,9 @@ parts:
     - file: fourier_series/2/exp_fs1
       title: Unit 5.2 Exponential Fourier Series
     - file: fourier_series/3/exp_fs2
-      title: Line Spectra and their Applications
+      title: Unit 5.3 Computing Line Spectra
+    - file: fourier_series/4/exp_fs3
+      title: Unit 5.4 Applications of Line Spectra
   - file: zbib
     title: Bibliography
 - caption: FAQs

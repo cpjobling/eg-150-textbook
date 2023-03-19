@@ -189,7 +189,7 @@ When $\sigma = 0$, $e^{\sigma t} = 1$ and the the signal is the {ref}`fs2:a_imag
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-### A note on Poles and Stability
+### A note on poles and stability
 
 The variable $s$ in the Laplace Transform 
 
