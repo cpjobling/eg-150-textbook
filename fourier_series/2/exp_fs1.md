@@ -395,9 +395,13 @@ $C_{-k} = C_{k}^*$ **always**
 (fs2:eg)=
 ## Computating the Exponential Fourier Series
 
-Compute the exponential Fourier series (EFS) for the square wave shown below assuming that $\omega = 1$
+Compute the exponential Fourier series (EFS) for the square wave shown in {numref}`fig:ex:17.1` assuming that $\omega = 1$
 
-<img src="pictures/sqw.png">
+:::{figure-md} Fig:ex:17.1
+<img src="pictures/sqw.png" alt="Squarewave with odd-symmetry" width="60%">
+
+Squarewave with odd-symmetry
+:::
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -592,9 +596,7 @@ These are useful when simplifying expressions that result from integrating funct
 (ex17.2)
 ## Example 17.2
 
-Compute the Exponential Fourier Series for the square wave shown below assuming that $\omega = 1$
-
-<img src="pictures/sqw.png">
+Compute the Exponential Fourier Series for the square wave shown below in {numref}`fig:ex:17.1` that $\omega = 1$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
