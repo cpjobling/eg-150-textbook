@@ -752,6 +752,11 @@ title="Print to PDF"
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#live-script-solution">
+       Live Script Solution
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#simulink-model">
        Simulink model
       </a>
@@ -952,6 +957,11 @@ title="Print to PDF"
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#matlab-solution">
        MATLAB Solution
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#live-script-solution">
+       Live Script Solution
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -1848,7 +1858,9 @@ symbolically.</p>
    -10
     -3
      0
-k =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>k =
      []
 </pre></div>
 </div>
@@ -1998,12 +2010,16 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </div>
 </div>
 </section>
+<section id="live-script-solution">
+<h4>Live Script Solution<a class="headerlink" href="#live-script-solution" title="Permalink to this headline">#</a></h4>
+<p>A standalone script version of this solution is available as <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example15_1.mlx">example15_1.mlx</a></p>
+</section>
 <section id="simulink-model">
 <h4>Simulink model<a class="headerlink" href="#simulink-model" title="Permalink to this headline">#</a></h4>
-<p>See <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_8.slx">example_8.slx</a></p>
+<p>See <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_15_1.slx">example_15_1.slx</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="w"> </span><span class="n">example_8</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="w"> </span><span class="n">example_15_1</span>
 </pre></div>
 </div>
 </div>
@@ -2116,7 +2132,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <td class="text-align:left"><p>-</p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">numden</span></code></p></td>
-<td class="text-align:left"><p>Extracts numerator and denominator from a rational polynomila expressed in symbolic form</p></td>
+<td class="text-align:left"><p>Extracts numerator and denominator from a rational polynomial expressed in symbolic form</p></td>
 <td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">[n,d]</span> <span class="pre">=</span> <span class="pre">numden((s</span> <span class="pre">+</span> <span class="pre">1)/(s^2</span> <span class="pre">+</span> <span class="pre">2*s</span> <span class="pre">*</span> <span class="pre">3'))</span></code></p></td>
 <td class="text-align:left"><p><a class="reference external" href="https://uk.mathworks.com/help/symbolic/sym.numden.html">numden</a></p></td>
 <td class="text-align:left"><p>-</p></td>
@@ -2176,7 +2192,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <td class="text-align:left"><p>Works for both continuous-time and discrete-time systems.</p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">nyquist</span></code></p></td>
-<td class="text-align:left"><p>Compoutes and plots the Nyquist diagram</p></td>
+<td class="text-align:left"><p>Computes and plots the Nyquist diagram for an LTI system</p></td>
 <td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">nyquist(H)</span></code></p></td>
 <td class="text-align:left"><p><a class="reference external" href="https://uk.mathworks.com/help/ident/ref/dynamicsystem.nyquist.html">nyquist</a></p></td>
 <td class="text-align:left"><p>Nyquist plots are used in Control systems analysis and design</p></td>
@@ -2237,7 +2253,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <h2>Matlab Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this headline">#</a></h2>
 <p>For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab">MATLAB</a> folder.</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#ex-15-1"><span class="std std-ref">Example 15.1</span></a> [<a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_14.2.mlx">example_14.2.mlx</a>]</p></li>
+<li><p><a class="reference internal" href="#ex-15-1"><span class="std std-ref">Example 15.1</span></a> <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example15_1.mlx">example15.1.mlx</a>]</p></li>
 </ul>
 </section>
 </section>

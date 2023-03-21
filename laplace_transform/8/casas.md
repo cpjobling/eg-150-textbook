@@ -764,16 +764,20 @@ step(G),grid
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+#### Live Script Solution
+
+A standalone script version of this solution is available as [example15_1.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example15_1.mlx)
+
 #### Simulink model
 
-See [example_8.slx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_8.slx)
+See [example_15_1.slx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_15_1.slx)
 
 ```{code-cell}
 ---
 slideshow:
   slide_type: fragment
 ---
-open example_8
+open example_15_1
 ```
 
 +++ {"slideshow": {"slide_type": "notes"}}
@@ -804,7 +808,7 @@ bode(G),grid
 The following examples have been adapted from *Session 3: RC Networks and the Op-Amp in the Time-Domain*, from **EG-152 Analogue Design** ({cite}`eg152`).
 ```
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex15.2)=
 ### Example 15.2: Periodic Excitation
@@ -827,7 +831,7 @@ d) Given that $V_L = -5$ V and $V_U = 5$ V, and assuming that the time constant 
 
 e) Use the transfer function block and the signal editor provided by Simulink to confirm by simulation the response computed in Example 15.2(d).
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (15.3)=
 ### Example 15.3: Operational Differentiator
@@ -851,7 +855,7 @@ b) Compute the impulse and step response of the operational differentiator.
 
 c) Compute and plot the response of the operational differentiator to three cycles of the input of {numref}`fig:ex12.2`(a) when $V_L = -6$ V, $V_U = 3$ V, given that the waveform period $T = 1$ ms, the duty cycle $D = T_A/(T_A + T_B) = 2/5$ and time constant $\tau = RC = 50$ ms.
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (15.4)=
 ### Example 15.4: Operational Integrator
@@ -905,7 +909,7 @@ The MATLAB commands discussed in this section are summarized in the table given 
 |:------|:---------|:-------|:-----------|:-------|
 | `sym2poly` | Converts a symbolic polynomial to a numerical polynomial | `p = sym2poly(x^2 + 2*x + 4)` | [sym2poly](https://uk.mathworks.com/help/symbolic/sym.sym2poly.html) |Coefficents of the symbolic polynomial must be numbers |
 | `poly2sym` | Converts a numerical polynomial to a symbolic polynomial | `ps = poly2sym([1,2,4],'s')` | [poly2sym](https://uk.mathworks.com/help/symbolic/sym.poly2sym.html) | - |
-| `numden` | Extracts numerator and denominator from a rational polynomila expressed in symbolic form |  `[n,d] = numden((s + 1)/(s^2 + 2*s * 3'))` | [numden](https://uk.mathworks.com/help/symbolic/sym.numden.html) | - |
+| `numden` | Extracts numerator and denominator from a rational polynomial expressed in symbolic form |  `[n,d] = numden((s + 1)/(s^2 + 2*s * 3'))` | [numden](https://uk.mathworks.com/help/symbolic/sym.numden.html) | - |
 | | Numerical LTI object which represents a continuous-time or discrete-time LTI system |  | [Numeric Linear Time Invariant (LTI) Models](https://uk.mathworks.com/help/control/ug/numeric-models.html) | - |
 | `zpk` | Numerical LTI object representing a transfer function model in zero-pole-gain (factorized) form | `G = zpk(z,p,k)` | [zpk](https://uk.mathworks.com/help/control/ref/zpk.html) | - |
 | `tf` | Numerical LTI object representing a transfer function model in polynomial form | `G = tf(num,den)` | [tf](https://uk.mathworks.com/help/control/ref/tf.html) | - |
@@ -915,7 +919,7 @@ The MATLAB commands discussed in this section are summarized in the table given 
 | `feedback` | Connect two LTI objects in a feedback connention | `GH = feedback(G,H)` | [feedback](https://uk.mathworks.com/help/control/ref/inputoutputmodel.feedback.html) | Default assumes negative feedback so `feedback(G,H)` is equivalent to `feedback(G,H,-1)`. For series connection of LTI systems the multiplication operator can be used `H = H1*H2`. For parallel connection the addition operator can be used `H = H1 + H2`. There are also functions `series` and `parallel` that can be used if preferred.  | 
 | `impulse` | Computes and plots the impulse response of an LTI system | `impulse(H)` | [impulse](https://uk.mathworks.com/help/ident/ref/dynamicsystem.impulse.html) | Works for both continuous-time and discrete-time systems. |
 | `step` | Computes and plots the step response of an LTI system | `step(G)` | [step](https://uk.mathworks.com/help/ident/ref/dynamicsystem.step.html) | Works for both continuous-time and discrete-time systems. |
-| `nyquist` | Compoutes and plots the Nyquist diagram | `nyquist(H)` | [nyquist](https://uk.mathworks.com/help/ident/ref/dynamicsystem.nyquist.html) | Nyquist plots are used in Control systems analysis and design |
+| `nyquist` | Computes and plots the Nyquist diagram for an LTI system | `nyquist(H)` | [nyquist](https://uk.mathworks.com/help/ident/ref/dynamicsystem.nyquist.html) | Nyquist plots are used in Control systems analysis and design |
 | `bode` | Computes and plots a Bode diagram for an LTI system | `bode(H)` | [bode](https://uk.mathworks.com/help/ident/ref/dynamicsystem.bode.html) | Bode plots present the frequency response of a system using a combined plot of maginutude (in DB) and phase (in degrees) plotted against log radian frequency. |
 | `rlocus` | Computes and plots the root locus of an open-loop system | `rlocus(H)` | [rlocus](https://uk.mathworks.com/help/control/ref/dynamicsystem.rlocus.html) | Root locus diagrams shows the movement of the closed-loop poles of a feedback system when some parameter, usually gain, is changed. They are used in control system analysis and design. |
 | `residue` | Computes the residues of a partial fraction expansion of a numrical rational polynomial | `[r,p,k] = residue(num,den)` | [residue](https://uk.mathworks.com/help/matlab/ref/residue.html) | `r` is the list of residues, `p` is the list of poles, `k` is the remainder which will be the empty matrix unless the polynomial is non proper. When there are repeated roots, the residues are presented in order of the repitition. I.e. for $1/(s + 1)^3$, `r(1)` will be for the factor $1/(s + 1)$, `r(2)` for the factor $1/(s + 1)^2$ and `r(3)` for the factor $1/(s + 1)^3$. |
@@ -942,4 +946,8 @@ We will complete this course with an introduction to Frequency response analysis
 
 For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab) folder.
 
-* {ref}`ex:15.1` [[example_14.2.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_14.2.mlx)]
+* {ref}`ex:15.1` [example15.1.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example15_1.mlx)]
+
+```{code-cell}
+
+```
