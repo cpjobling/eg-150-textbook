@@ -639,6 +639,11 @@ Circuit for Example 12.2
 (ex:12.3)=
 ### Example 12.3
 
+`````{admonition} MATLAB Example
+:class: tip
+We will solve this examples by hand and then review the solution in MATLAB lab 5.
+`````
+
 In the circuit shown in {numref}`fig:ex12.3`, switch $S_1$ closes at $t=0$, while at the same time, switch $S_2$ opens. Use the Laplace transform method to find $v_{\mathrm{out}}(t)$ for $t > 0$.
 
 :::{figure-md} Fig:ex12.3
@@ -952,6 +957,12 @@ Consider {numref}`fig:complex_imp` and give an expression for $V_c(s)$.
 (ex:12.5)=
 ### Example 12.5
 
+
+`````{admonition} MATLAB Example
+:class: tip
+We will solve this examples by hand and then review the solution in MATLAB lab 5.
+`````
+
 For the network shown in {numref}`fig:ex12.5`, all the complex impedance values are given in $\Omega$ (ohms). 
 
 :::{figure-md} Fig:ex12.5
@@ -1019,6 +1030,11 @@ Find $Z(s)$ using:
 
 (ex:12.6)=
 ### Example 12.6 - Do It Yourself
+
+`````{admonition} MATLAB Example
+:class: tip
+We will solve this examples by hand and then review the solution in MATLAB lab 5.
+`````
 
 Compute $Z(s)$ and $Y(s)$ for the circuit shown in {numref}`fig:ex12.6`. All impedence values are in $\Omega$ (ohms). Verify your answers with MATLAB.
 

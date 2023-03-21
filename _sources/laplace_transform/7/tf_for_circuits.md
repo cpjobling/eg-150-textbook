@@ -79,7 +79,7 @@ $$G(s) = \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)}$$
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-#### (examples14)=
+(examples14)=
 ## Examples 14
 
 We will work through these and demonstrate the MATLAB solutions in class.

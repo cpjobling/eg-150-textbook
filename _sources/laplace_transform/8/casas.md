@@ -31,7 +31,7 @@ We conclude our introduction to the applications of the Laplace transform by dem
 
 * {ref}`circ_tf`
 * {ref}`matlab_tf`
-* (ref}`simulink_tf`
+* {ref}`simulink_tf`
 * {ref}`examples15`
 
 ```{code-cell}
@@ -697,6 +697,11 @@ It can, however be used in modelling and simulation studies.
 (ex:15.1)=
 ### Example 15.1 
 
+`````{admonition} MATLAB Example
+:class: tip
+We will solve this examples by hand and then review the solution in MATLAB lab 5.
+`````
+
 Recast {ref}`ex:14.2` as a MATLAB problem using the LTI Transfer Function block. 
 
 For simplicity use parameters $R_1 = R_2 = R_3 = 1\; \Omega$, and $C_1 = C_2 = 1$ F.
@@ -821,8 +826,6 @@ d) Given that $V_L = -5$ V and $V_U = 5$ V, and assuming that the time constant 
 
 e) Use the transfer function block and the signal editor provided by Simulink to confirm by simulation the response computed in Example 15.2(d).
 
-
-
 +++
 
 (15.3)=
@@ -875,9 +878,19 @@ c) Compute and plot the response of the operational differentiator to three cycl
 
 ## Lab 5
 
+In Lab 5 we will have the opportunity to explore some of the features discussed in this class.
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## Summary
+
+In this section we have explored the various methods that we can use the computer to solve Laplace transform problems for which the system is cast as a transfer function. We have covered the following topics:
+
+* {ref}`circ_tf`
+* {ref}`matlab_tf`
+* {ref}`simulink_tf`
+* {ref}`examples15`
+
 
 ### Takeaways
 

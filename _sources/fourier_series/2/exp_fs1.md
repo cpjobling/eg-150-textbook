@@ -42,7 +42,7 @@ The result is called the *Exponential Fourier Series*.
 * {ref}`fs2:symmetry`
 * {ref}`fs2:eg`
 * {ref}`fs2:matlab`
-* {ref}`fs2:examples17`
+* {ref}`examples17`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -680,7 +680,7 @@ $${C_k \atop {k=\mathrm{even}}} = 0.$$
 * {ref}`fs2:symmetry`
 * {ref}`fs2:eg`
 * {ref}`fs2:matlab`
-* {ref}`fs2:examples17`
+* {ref}`examples17`
 
 ### Take Aways
 
@@ -697,6 +697,10 @@ We move on to consider
 ```{bibliography}
 :filter: docname in docnames
 ```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Homework
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
