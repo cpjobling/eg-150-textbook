@@ -690,7 +690,7 @@ It can, however be used in modelling and simulation studies.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(example15)=
+(examples15)=
 ## Examples 15
 
 +++ {"slideshow": {"slide_type": "slide"}}
