@@ -31,7 +31,7 @@ We conclude our introduction to the applications of the Laplace transform by dem
 
 * {ref}`circ_tf`
 * {ref}`matlab_tf`
-* (ref}`simulink_tf`
+* {ref}`simulink_tf`
 * {ref}`examples15`
 
 ```{code-cell}
@@ -61,7 +61,7 @@ $$G(s) = \frac{a(s)}{b(s)} = \frac{s^2 +2s+3}{s^3 +4s^2 +5s+6}$$ (eq:8.1)
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-The numerator and denominator polynomials from Eq. {eq}`eg:8.1` are entered in MATLAB as
+The numerator and denominator polynomials from Eq. {eq}`eq:8.1` are entered in MATLAB as
 
 ```{code-cell}
 ---
@@ -277,6 +277,7 @@ slideshow:
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(lti:props)=
 ### Setting LTI Properties
 
 Numerous options are available to document the LTI system objects that you create. 
@@ -689,13 +690,18 @@ It can, however be used in modelling and simulation studies.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(example15)=
+(examples15)=
 ## Examples 15
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (ex:15.1)=
 ### Example 15.1 
+
+`````{admonition} MATLAB Example
+:class: tip
+We will solve this examples by hand and then review the solution in MATLAB lab 5.
+`````
 
 Recast {ref}`ex:14.2` as a MATLAB problem using the LTI Transfer Function block. 
 
@@ -758,16 +764,20 @@ step(G),grid
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+#### Live Script Solution
+
+A standalone script version of this solution is available as [example15_1.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example15_1.mlx)
+
 #### Simulink model
 
-See [example_8.slx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_8.slx)
+See [example_15_1.slx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_15_1.slx)
 
 ```{code-cell}
 ---
 slideshow:
   slide_type: fragment
 ---
-open example_8
+open example_15_1
 ```
 
 +++ {"slideshow": {"slide_type": "notes"}}
@@ -798,7 +808,7 @@ bode(G),grid
 The following examples have been adapted from *Session 3: RC Networks and the Op-Amp in the Time-Domain*, from **EG-152 Analogue Design** ({cite}`eg152`).
 ```
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex15.2)=
 ### Example 15.2: Periodic Excitation
@@ -821,9 +831,7 @@ d) Given that $V_L = -5$ V and $V_U = 5$ V, and assuming that the time constant 
 
 e) Use the transfer function block and the signal editor provided by Simulink to confirm by simulation the response computed in Example 15.2(d).
 
-
-
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (15.3)=
 ### Example 15.3: Operational Differentiator
@@ -847,7 +855,7 @@ b) Compute the impulse and step response of the operational differentiator.
 
 c) Compute and plot the response of the operational differentiator to three cycles of the input of {numref}`fig:ex12.2`(a) when $V_L = -6$ V, $V_U = 3$ V, given that the waveform period $T = 1$ ms, the duty cycle $D = T_A/(T_A + T_B) = 2/5$ and time constant $\tau = RC = 50$ ms.
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (15.4)=
 ### Example 15.4: Operational Integrator
@@ -875,11 +883,48 @@ c) Compute and plot the response of the operational differentiator to three cycl
 
 ## Lab 5
 
+In Lab 5 we will have the opportunity to explore some of the features discussed in this class.
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## Summary
 
+In this section we have explored the various methods that we can use the computer to solve Laplace transform problems for which the system is cast as a transfer function. We have covered the following topics:
+
+* {ref}`circ_tf`
+* {ref}`matlab_tf`
+* {ref}`simulink_tf`
+* {ref}`examples15`
+
+
 ### Takeaways
+
+In MATLAB the rational polynomials that represent the transfer functions of continuous-time LTI systems can be defined numerically or symbolicly (see {ref}`matlab_tf`). There are two forms of numerical representation. The first of these uses the expanded polynomials (called *transfer function*), the second uses the factors (called *zero-pole-gain* form). The Control Systems Toolbox in MATLAB provides an object called the LTI block which supports both forms (and a third form, called *state-space*, not studied here, which is used in filter design and advanced control systems).
+
+The MATLAB commands discussed in this section are summarized in the table given below.
+
+#### Quick Reference to MATLAB objects and functions
+
+| Name | Purpose | Usage | Reference | Notes |
+|:------|:---------|:-------|:-----------|:-------|
+| `sym2poly` | Converts a symbolic polynomial to a numerical polynomial | `p = sym2poly(x^2 + 2*x + 4)` | [sym2poly](https://uk.mathworks.com/help/symbolic/sym.sym2poly.html) |Coefficents of the symbolic polynomial must be numbers |
+| `poly2sym` | Converts a numerical polynomial to a symbolic polynomial | `ps = poly2sym([1,2,4],'s')` | [poly2sym](https://uk.mathworks.com/help/symbolic/sym.poly2sym.html) | - |
+| `numden` | Extracts numerator and denominator from a rational polynomial expressed in symbolic form |  `[n,d] = numden((s + 1)/(s^2 + 2*s * 3'))` | [numden](https://uk.mathworks.com/help/symbolic/sym.numden.html) | - |
+| | Numerical LTI object which represents a continuous-time or discrete-time LTI system |  | [Numeric Linear Time Invariant (LTI) Models](https://uk.mathworks.com/help/control/ug/numeric-models.html) | - |
+| `zpk` | Numerical LTI object representing a transfer function model in zero-pole-gain (factorized) form | `G = zpk(z,p,k)` | [zpk](https://uk.mathworks.com/help/control/ref/zpk.html) | - |
+| `tf` | Numerical LTI object representing a transfer function model in polynomial form | `G = tf(num,den)` | [tf](https://uk.mathworks.com/help/control/ref/tf.html) | - |
+| `tfdata` | Data extraction function that returns the numerator and denominator polynomials from an LTI model | `[num,den] = tfdata(H,'v')` | [tfdata](https://uk.mathworks.com/help/ident/ref/dynamicsystem.tfdata.html) | - |
+| `zpkdata` | Data extraction function that returns the *zeros*, *poles* and *gain* from an LTI model | `[z,p,k]=zpkdata(H,'v')` | [zpkdata](https://uk.mathworks.com/help/ident/ref/dynamicsystem.zpkdata.html) | - |
+| `set`, `get` | Set and retrieve properties of LTI system objects | See {ref}`lti:props` | [set](https://uk.mathworks.com/help/ident/ref/inputoutputmodel.set.html), [get](https://uk.mathworks.com/help/ident/ref/inputoutputmodel.get.html) | Useful for documenting your work |
+| `feedback` | Connect two LTI objects in a feedback connention | `GH = feedback(G,H)` | [feedback](https://uk.mathworks.com/help/control/ref/inputoutputmodel.feedback.html) | Default assumes negative feedback so `feedback(G,H)` is equivalent to `feedback(G,H,-1)`. For series connection of LTI systems the multiplication operator can be used `H = H1*H2`. For parallel connection the addition operator can be used `H = H1 + H2`. There are also functions `series` and `parallel` that can be used if preferred.  | 
+| `impulse` | Computes and plots the impulse response of an LTI system | `impulse(H)` | [impulse](https://uk.mathworks.com/help/ident/ref/dynamicsystem.impulse.html) | Works for both continuous-time and discrete-time systems. |
+| `step` | Computes and plots the step response of an LTI system | `step(G)` | [step](https://uk.mathworks.com/help/ident/ref/dynamicsystem.step.html) | Works for both continuous-time and discrete-time systems. |
+| `nyquist` | Computes and plots the Nyquist diagram for an LTI system | `nyquist(H)` | [nyquist](https://uk.mathworks.com/help/ident/ref/dynamicsystem.nyquist.html) | Nyquist plots are used in Control systems analysis and design |
+| `bode` | Computes and plots a Bode diagram for an LTI system | `bode(H)` | [bode](https://uk.mathworks.com/help/ident/ref/dynamicsystem.bode.html) | Bode plots present the frequency response of a system using a combined plot of maginutude (in DB) and phase (in degrees) plotted against log radian frequency. |
+| `rlocus` | Computes and plots the root locus of an open-loop system | `rlocus(H)` | [rlocus](https://uk.mathworks.com/help/control/ref/dynamicsystem.rlocus.html) | Root locus diagrams shows the movement of the closed-loop poles of a feedback system when some parameter, usually gain, is changed. They are used in control system analysis and design. |
+| `residue` | Computes the residues of a partial fraction expansion of a numrical rational polynomial | `[r,p,k] = residue(num,den)` | [residue](https://uk.mathworks.com/help/matlab/ref/residue.html) | `r` is the list of residues, `p` is the list of poles, `k` is the remainder which will be the empty matrix unless the polynomial is non proper. When there are repeated roots, the residues are presented in order of the repitition. I.e. for $1/(s + 1)^3$, `r(1)` will be for the factor $1/(s + 1)$, `r(2)` for the factor $1/(s + 1)^2$ and `r(3)` for the factor $1/(s + 1)^3$. |
+| `factor` | Computes the factors of a symbolic polynomial | `fact(s^2 + 2*s + 4)` | [factor](https://uk.mathworks.com/help/symbolic/factor.html) | This function can also find prime factors or numbers.  |
+| `expand` | Expands a factorised polynomial | `q = expand((s + 1 + 2*j)*(s + 1 -2 *j)` | [expand](https://uk.mathworks.com/help/symbolic/sym.expand.html) | This function is useful for converting systems that have pairs of complex poles into quadratic factors |
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -901,4 +946,8 @@ We will complete this course with an introduction to Frequency response analysis
 
 For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab) folder.
 
-* {ref}`ex:15.1` [[example_14.2.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_14.2.mlx)]
+* {ref}`ex:15.1` [example15.1.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example15_1.mlx)]
+
+```{code-cell}
+
+```
