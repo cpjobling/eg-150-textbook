@@ -707,16 +707,9 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
+  <a class="reference internal nav-link" href="#matlab-solutions">
+   MATLAB Solutions
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#take-away">
-     Take Away
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#next-time">
@@ -729,9 +722,16 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matlab-solutions">
-   Matlab Solutions
+  <a class="reference internal nav-link" href="#summary">
+   Summary
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#take-away">
+     Take Away
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -829,16 +829,9 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
+  <a class="reference internal nav-link" href="#matlab-solutions">
+   MATLAB Solutions
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#take-away">
-     Take Away
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#next-time">
@@ -851,9 +844,16 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matlab-solutions">
-   Matlab Solutions
+  <a class="reference internal nav-link" href="#summary">
+   Summary
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#take-away">
+     Take Away
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -882,15 +882,7 @@ title="Print to PDF"
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Initialize MATLAB</span>
 <span class="nb">clearvars</span>
 <span class="nb">cd</span><span class="w"> </span><span class="p">.</span><span class="o">./</span><span class="n">matlab</span><span class="w"> </span>
-<span class="nb">pwd</span>
 <span class="nb">format</span><span class="w"> </span><span class="n">compact</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-
-    &#39;/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/laplace_transform/matlab&#39;
 </pre></div>
 </div>
 </div>
@@ -933,6 +925,7 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>Form <span class="math notranslate nohighlight">\(G(s)\)</span> by writing down the ratio <span class="math notranslate nohighlight">\(V_\mathrm{out}(s)/V_s(s)\)</span></p></li>
 </ul>
+<p>Have a go for the next five minutes.</p>
 <p>Switch to virtual whiteboard in OneNote.</p>
 <pre style="border: 2px solid blue">
 Solve in OneNote
@@ -1006,6 +999,7 @@ Solve in OneNote
 <ul class="simple">
 <li><p>Form the reciprocal <span class="math notranslate nohighlight">\(G(s) = V_{\mathrm{out}}(s)/V_{\mathrm{in}}(s)\)</span></p></li>
 </ul>
+<p>Have a go for the next five minutes</p>
 <p>Switch to virtual whiteboard in OneNote.</p>
 <pre style="border: 2px solid blue">
 Solve in OneNote
@@ -1160,30 +1154,18 @@ Solve in OneNote
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/tf_for_circuits_56_0.png" src="../../_images/tf_for_circuits_56_0.png" />
+<img alt="../../_images/tf_for_circuits_58_0.png" src="../../_images/tf_for_circuits_58_0.png" />
 </div>
 </div>
-<p>Note that this is a low-pass filter. Sinusoids at low frequencies are passed with a gain of 0.2. For frequencies above around 100 ra/s, the filter starts to reduce the attenuation of the passed signal. At 10,000 rad/s, the attenuation is 1/10 of the attenuation at 1 rad/s.</p>
 </section>
 </section>
 </section>
-<section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
-<p>In this unit, we will explored how transfer functions introduced in <a class="reference internal" href="../6/transfer_functions.html#unit4-6"><span class="std std-ref">Unit 4.6: Transfer Functions</span></a> can be applied to the analysis of circuits.</p>
+<section id="matlab-solutions">
+<h2>MATLAB Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this headline">#</a></h2>
+<p>For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab">MATLAB</a> folder.</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#circ-tf"><span class="std std-ref">Transfer Functions for Circuits</span></a></p></li>
-<li><p><a class="reference internal" href="#examples14"><span class="std std-ref">Examples 14</span></a></p></li>
+<li><p><span class="xref std std-ref">ex:14.2</span> [<a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_14.2.mlx">example_14.2.mlx</a>]</p></li>
 </ul>
-<section id="take-away">
-<h3>Take Away<a class="headerlink" href="#take-away" title="Permalink to this headline">#</a></h3>
-<p>The ratio of the output voltage  <span class="math notranslate nohighlight">\(V_\mathrm{out}(s)\)</span> to the input voltage <span class="math notranslate nohighlight">\(V_\mathrm{in}(s)\)</span> under zero initial conditions is of great interest. We call this ratio the <em>voltage transfer function</em></p>
-<div class="math notranslate nohighlight">
-\[G_v(s) = \frac{V_\mathrm{out}(s)}{V_\mathrm{in}(s)}\]</div>
-<p>We can consider other ratios such as the <em>current transfer function</em></p>
-<div class="math notranslate nohighlight">
-\[G_i(s) = \frac{I_\mathrm{out}(s)}{I_\mathrm{in}(s)}\]</div>
-<p>but in practice this is rarely used.</p>
-</section>
 </section>
 <section id="next-time">
 <h2>Next time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
@@ -1205,12 +1187,24 @@ Solve in OneNote
 </dl>
 </div>
 </section>
-<section id="matlab-solutions">
-<h2>Matlab Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this headline">#</a></h2>
-<p>For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab">MATLAB</a> folder.</p>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<p>In this unit, we will explored how transfer functions introduced in <a class="reference internal" href="../6/transfer_functions.html#unit4-6"><span class="std std-ref">Unit 4.6: Transfer Functions</span></a> can be applied to the analysis of circuits.</p>
 <ul class="simple">
-<li><p><span class="xref std std-ref">ex:14.2</span> [<a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_14.2.mlx">example_14.2.mlx</a>]</p></li>
+<li><p><a class="reference internal" href="#circ-tf"><span class="std std-ref">Transfer Functions for Circuits</span></a></p></li>
+<li><p><a class="reference internal" href="#examples14"><span class="std std-ref">Examples 14</span></a></p></li>
 </ul>
+<section id="take-away">
+<h3>Take Away<a class="headerlink" href="#take-away" title="Permalink to this headline">#</a></h3>
+<p>The ratio of the output voltage  <span class="math notranslate nohighlight">\(V_\mathrm{out}(s)\)</span> to the input voltage <span class="math notranslate nohighlight">\(V_\mathrm{in}(s)\)</span> under zero initial conditions is of great interest. We call this ratio the <em>voltage transfer function</em></p>
+<div class="math notranslate nohighlight">
+\[G_v(s) = \frac{V_\mathrm{out}(s)}{V_\mathrm{in}(s)}\]</div>
+<p>We can consider other ratios such as the <em>current transfer function</em></p>
+<div class="math notranslate nohighlight">
+\[G_i(s) = \frac{I_\mathrm{out}(s)}{I_\mathrm{in}(s)}\]</div>
+<p>but in practice this is rarely used.</p>
+<p>Note that this is a low-pass filter. Sinusoids at low frequencies are passed with a gain of 0.2. For frequencies above around 100 ra/s, the filter starts to reduce the attenuation of the passed signal. At 10,000 rad/s, the attenuation is 1/10 of the attenuation at 1 rad/s.</p>
+</section>
 </section>
 </section>
 

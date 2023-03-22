@@ -39,12 +39,11 @@ In this unit, we will explore how transfer functions introduced in {ref}`unit4.6
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: skip
 ---
 % Initialize MATLAB
 clearvars
 cd ../matlab 
-pwd
 format compact
 ```
 
@@ -115,6 +114,10 @@ Circuit for Example 14.1
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 * Form $G(s)$ by writing down the ratio $V_\mathrm{out}(s)/V_s(s)$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Have a go for the next five minutes.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -213,6 +216,10 @@ versus radian frequency $\omega$ rad/s.
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 * Form the reciprocal $G(s) = V_{\mathrm{out}}(s)/V_{\mathrm{in}}(s)$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Have a go for the next five minutes
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -402,11 +409,27 @@ title('Magnitude Vout/Vin vs. Radian Frequency')
 grid
 ```
 
+## MATLAB Solutions
+
+For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab) folder.
+
+* {ref}`ex:14.2` [[example_14.2.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_14.2.mlx)]
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Note that this is a low-pass filter. Sinusoids at low frequencies are passed with a gain of 0.2. For frequencies above around 100 ra/s, the filter starts to reduce the attenuation of the passed signal. At 10,000 rad/s, the attenuation is 1/10 of the attenuation at 1 rad/s.
+## Next time
 
-+++
+We explore the facilties provided by other toolboxes in MATLAB, most notably the *Control Systems Toolbox* and the simulation tool Simulink in {ref}`unit4.8`. We will also look at some of the problems you have studied in **EG-152 Analogue Design** hopefully confirming some of the results you have obbserved in the lab.
+
+* {ref}`unit4.8`
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Summary
 
@@ -427,24 +450,6 @@ $$G_i(s) = \frac{I_\mathrm{out}(s)}{I_\mathrm{in}(s)}$$
 
 but in practice this is rarely used.
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
-## Next time
-
-We explore the facilties provided by other toolboxes in MATLAB, most notably the *Control Systems Toolbox* and the simulation tool Simulink in {ref}`unit4.8`. We will also look at some of the problems you have studied in **EG-152 Analogue Design** hopefully confirming some of the results you have obbserved in the lab.
-
-* {ref}`unit4.8`
-
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```
-
-+++
-
-## Matlab Solutions
-
-For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab) folder.
-
-* {ref}`ex:14.2` [[example_14.2.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_14.2.mlx)]
+Note that this is a low-pass filter. Sinusoids at low frequencies are passed with a gain of 0.2. For frequencies above around 100 ra/s, the filter starts to reduce the attenuation of the passed signal. At 10,000 rad/s, the attenuation is 1/10 of the attenuation at 1 rad/s.

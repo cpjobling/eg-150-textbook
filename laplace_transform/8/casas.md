@@ -925,6 +925,7 @@ The MATLAB commands discussed in this section are summarized in the table given 
 | `residue` | Computes the residues of a partial fraction expansion of a numrical rational polynomial | `[r,p,k] = residue(num,den)` | [residue](https://uk.mathworks.com/help/matlab/ref/residue.html) | `r` is the list of residues, `p` is the list of poles, `k` is the remainder which will be the empty matrix unless the polynomial is non proper. When there are repeated roots, the residues are presented in order of the repitition. I.e. for $1/(s + 1)^3$, `r(1)` will be for the factor $1/(s + 1)$, `r(2)` for the factor $1/(s + 1)^2$ and `r(3)` for the factor $1/(s + 1)^3$. |
 | `factor` | Computes the factors of a symbolic polynomial | `fact(s^2 + 2*s + 4)` | [factor](https://uk.mathworks.com/help/symbolic/factor.html) | This function can also find prime factors or numbers.  |
 | `expand` | Expands a factorised polynomial | `q = expand((s + 1 + 2*j)*(s + 1 -2 *j)` | [expand](https://uk.mathworks.com/help/symbolic/sym.expand.html) | This function is useful for converting systems that have pairs of complex poles into quadratic factors |
+|`lsim` | Plots simulated time response of dynamic system to arbitrary inputs | `lsim(H,t,x)` | [lsim](https://uk.mathworks.com/help/control/ref/dynamicsystem.lsim.html?searchHighlight=lsim&s_tid=srchtitle_lsim_1) | `t` is time vector; `x` is the system input $x(t)$ and is an arbitrary function. |
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -946,7 +947,8 @@ We will complete this course with an introduction to Frequency response analysis
 
 For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab) folder.
 
-* {ref}`ex:15.1` [example15.1.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example15_1.mlx)]
+* {ref}`ex:15.1` [example15.1.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example15_1.mlx)
+* {ref}`ex:15.2` [example15.2.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example15_2.mlx)
 
 ```{code-cell}
 
