@@ -101,7 +101,6 @@ Building up wave forms from sinusoids.
 slideshow:
   slide_type: fragment
 ---
-path(path,'~/Documents/MATLAB/fseriesdemo')
 fseriesdemo
 ```
 
