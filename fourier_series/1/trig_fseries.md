@@ -659,7 +659,7 @@ hold off
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Note that the coefficients match those given in the {cite|`karris` (Section 7.4.2).
+Note that the coefficients match those given in Section 7.4.2 of {cite}`karris`.
 
 $$f(t) = \frac{4A}{\pi}\left(\cos \Omega_0 t - \frac{1}{3}\cos 3\Omega_0 t + \frac{1}{5}\cos 5\Omega_0 t - \cdots\right) = \frac{4A}{\pi}\sum_{n=\mathrm{odd}}(-1)^{\frac{n-1}{2}} \frac{1}{n}\cos n\Omega_0 t$$
 

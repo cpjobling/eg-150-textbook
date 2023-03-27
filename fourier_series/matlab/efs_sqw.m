@@ -28,5 +28,5 @@ xlabel('Hamonic frequencies: \Omega_0 (rad/sec)');
 ylabel('|c_k|');
 subplot(212)
 stem(w,angle(Xw), 'o-');
-xlabel('Hamonic frequencies: k\Omega_0 (rad/sec)'); 
+xlabel('Harmonic frequencies: k\Omega_0 (rad/sec)'); 
 ylabel('\angle c_k [radians]');
