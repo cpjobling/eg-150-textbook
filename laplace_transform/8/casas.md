@@ -57,7 +57,7 @@ There are two forms of polynomial representation in MATLAB. The most obvious is 
 
 For example, if:
 
-$$G(s) = \frac{a(s)}{b(s)} = \frac{s^2 +2s+3}{s^3 +4s^2 +5s+6}$$ (eq:8.1)
+$$G(s) = \frac{b(s)}{a(s)} = \frac{s^2 +2s+3}{s^3 +4s^2 +5s+6}$$ (eq:8.1)
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -79,7 +79,7 @@ Missing coefficients must be entered as zero: so $q(s) = s^2 + 2s$ and $r(s) = s
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
 q = [1, 2, 0];
 r = [1, 0, 2, 0, 1];
@@ -145,18 +145,18 @@ Convert from numerical polynomial to symbolic. Second argument is polynomial var
 slideshow:
   slide_type: fragment
 ---
-poly2sym(r,s)
+poly2sym(nNum,s)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Polynomials - Factorised form
 
-If you know the *poles* amd *zeros* of a transfer function you can represent it in a factorized form.
+If you know the *poles* and *zeros* of a transfer function you can represent it in a factorized form.
 
 $$G(s) = \frac{(s+1)(s+3)}{s(s+2)(s+4)}$$ (eq:8.2)
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 The advantage of this formulation is that the zeros of the numerator and denominator polynomials are obvious by inspection. So it is often used in the preliminary analysis of the performance of a dynamic system.
 
@@ -241,6 +241,14 @@ slideshow:
   slide_type: fragment
 ---
 G2=tf(num,den)
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+G2 = tf(G)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -825,9 +833,9 @@ a) Use the Laplace transform to determine the transfer function $H(s)$ and the i
 
 b) Determine the step response of the RC circuit.
 
-c) use the results of Example 15.2(a) and (b) and properties of the Laplace transform to determine the response $y(t) = v_2(t)$ to $v_1(t)$. 
+c) Use the results of Example 15.2(a) and (b) and properties of the Laplace transform to determine the response $y(t) = v_2(t)$ to $v_1(t)$. 
 
-d) Given that $V_L = -5$ V and $V_U = 5$ V, and assuming that the time constant $\tau = RC = T_A = 2 T_B$,  use MATLAB to plot the response $v_1(t)$ over two cycles of the input signal. Use any suitable values of $T_A$, $T_B$ and $RC$ that you feel are appropriate.
+d) Given that $V_L = -5$ V and $V_U = 5$ V, and assuming that the time constant $\tau = RC = T_A = 2 T_B$,  use MATLAB to plot the response $v_1(t)$ over two cycles of the input signal. Use any suitable values of $RC$ that you feel are appropriate.
 
 e) Use the transfer function block and the signal editor provided by Simulink to confirm by simulation the response computed in Example 15.2(d).
 
@@ -925,6 +933,7 @@ The MATLAB commands discussed in this section are summarized in the table given 
 | `residue` | Computes the residues of a partial fraction expansion of a numrical rational polynomial | `[r,p,k] = residue(num,den)` | [residue](https://uk.mathworks.com/help/matlab/ref/residue.html) | `r` is the list of residues, `p` is the list of poles, `k` is the remainder which will be the empty matrix unless the polynomial is non proper. When there are repeated roots, the residues are presented in order of the repitition. I.e. for $1/(s + 1)^3$, `r(1)` will be for the factor $1/(s + 1)$, `r(2)` for the factor $1/(s + 1)^2$ and `r(3)` for the factor $1/(s + 1)^3$. |
 | `factor` | Computes the factors of a symbolic polynomial | `fact(s^2 + 2*s + 4)` | [factor](https://uk.mathworks.com/help/symbolic/factor.html) | This function can also find prime factors or numbers.  |
 | `expand` | Expands a factorised polynomial | `q = expand((s + 1 + 2*j)*(s + 1 -2 *j)` | [expand](https://uk.mathworks.com/help/symbolic/sym.expand.html) | This function is useful for converting systems that have pairs of complex poles into quadratic factors |
+|`lsim` | Plots simulated time response of dynamic system to arbitrary inputs | `lsim(H,t,x)` | [lsim](https://uk.mathworks.com/help/control/ref/dynamicsystem.lsim.html?searchHighlight=lsim&s_tid=srchtitle_lsim_1) | `t` is time vector; `x` is the system input $x(t)$ and is an arbitrary function. |
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -946,7 +955,8 @@ We will complete this course with an introduction to Frequency response analysis
 
 For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab) folder.
 
-* {ref}`ex:15.1` [example15.1.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example15_1.mlx)]
+* {ref}`ex:15.1` [example15.1.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example15_1.mlx)
+* {ref}`ex:15.2` [example15.2.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example15_2.mlx)
 
 ```{code-cell}
 
