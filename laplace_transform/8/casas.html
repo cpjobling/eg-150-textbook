@@ -1074,7 +1074,7 @@ title="Print to PDF"
 <p>There are two forms of polynomial representation in MATLAB. The most obvious is the <strong>expanded polynomial</strong> form where the numerator and denominator of a transfer function would be entered as two row vectors with the polynomial coefficients entered in the order of <strong>descending</strong> powers of <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <p>For example, if:</p>
 <div class="math notranslate nohighlight" id="equation-eq-8-1">
-<span class="eqno">(42)<a class="headerlink" href="#equation-eq-8-1" title="Permalink to this equation">#</a></span>\[G(s) = \frac{a(s)}{b(s)} = \frac{s^2 +2s+3}{s^3 +4s^2 +5s+6}\]</div>
+<span class="eqno">(42)<a class="headerlink" href="#equation-eq-8-1" title="Permalink to this equation">#</a></span>\[G(s) = \frac{b(s)}{a(s)} = \frac{s^2 +2s+3}{s^3 +4s^2 +5s+6}\]</div>
 <p>The numerator and denominator polynomials from Eq. <a class="reference internal" href="#equation-eq-8-1">(42)</a> are entered in MATLAB as</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1163,7 +1163,7 @@ symbolically.</p>
 <p>Convert from numerical polynomial to symbolic. Second argument is polynomial variable. The default is x.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">poly2sym</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">poly2sym</span><span class="p">(</span><span class="n">nNum</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1171,7 +1171,7 @@ symbolically.</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>s^4 + 2*s^2 + 1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>s^2 + 2*s + 3
 </pre></div>
 </div>
 </div>
@@ -1179,7 +1179,7 @@ symbolically.</p>
 </section>
 <section id="polynomials-factorised-form">
 <h3>Polynomials - Factorised form<a class="headerlink" href="#polynomials-factorised-form" title="Permalink to this headline">#</a></h3>
-<p>If you know the <em>poles</em> amd <em>zeros</em> of a transfer function you can represent it in a factorized form.</p>
+<p>If you know the <em>poles</em> and <em>zeros</em> of a transfer function you can represent it in a factorized form.</p>
 <div class="math notranslate nohighlight" id="equation-eq-8-2">
 <span class="eqno">(43)<a class="headerlink" href="#equation-eq-8-2" title="Permalink to this equation">#</a></span>\[G(s) = \frac{(s+1)(s+3)}{s(s+2)(s+4)}\]</div>
 <p>The advantage of this formulation is that the zeros of the numerator and denominator polynomials are obvious by inspection. So it is often used in the preliminary analysis of the performance of a dynamic system.</p>
@@ -1261,6 +1261,36 @@ symbolically.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G2</span><span class="p">=</span><span class="n">tf</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">den</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G2 =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    s^2 + 4 s + 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 6 s^2 + 8 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1729,7 +1759,7 @@ symbolically.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/casas_74_0.png" src="../../_images/casas_74_0.png" />
+<img alt="../../_images/casas_75_0.png" src="../../_images/casas_75_0.png" />
 </div>
 </div>
 </section>
@@ -1742,7 +1772,7 @@ symbolically.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/casas_76_0.png" src="../../_images/casas_76_0.png" />
+<img alt="../../_images/casas_77_0.png" src="../../_images/casas_77_0.png" />
 </div>
 </div>
 </section>
@@ -1755,7 +1785,7 @@ symbolically.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/casas_78_0.png" src="../../_images/casas_78_0.png" />
+<img alt="../../_images/casas_79_0.png" src="../../_images/casas_79_0.png" />
 </div>
 </div>
 </section>
@@ -1768,7 +1798,7 @@ symbolically.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/casas_80_0.png" src="../../_images/casas_80_0.png" />
+<img alt="../../_images/casas_81_0.png" src="../../_images/casas_81_0.png" />
 </div>
 </div>
 </section>
@@ -1781,7 +1811,7 @@ symbolically.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/casas_82_0.png" src="../../_images/casas_82_0.png" />
+<img alt="../../_images/casas_83_0.png" src="../../_images/casas_83_0.png" />
 </div>
 </div>
 </section>
@@ -1794,7 +1824,7 @@ symbolically.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/casas_84_0.png" src="../../_images/casas_84_0.png" />
+<img alt="../../_images/casas_85_0.png" src="../../_images/casas_85_0.png" />
 </div>
 </div>
 <p>MATLAB also provides two interactive graphical tools that work with LTI system objects</p>
@@ -1906,7 +1936,7 @@ symbolically.</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
 </pre></div>
 </div>
-<img alt="../../_images/casas_92_7.png" src="../../_images/casas_92_7.png" />
+<img alt="../../_images/casas_93_7.png" src="../../_images/casas_93_7.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1918,7 +1948,7 @@ symbolically.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/casas_93_0.png" src="../../_images/casas_93_0.png" />
+<img alt="../../_images/casas_94_0.png" src="../../_images/casas_94_0.png" />
 </div>
 </div>
 <p>Completing the problem using the Symbolic toolbox is left as an exercise for the reader.</p>
@@ -2006,7 +2036,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/casas_110_0.png" src="../../_images/casas_110_0.png" />
+<img alt="../../_images/casas_111_0.png" src="../../_images/casas_111_0.png" />
 </div>
 </div>
 </section>
@@ -2035,7 +2065,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/casas_116_0.png" src="../../_images/casas_116_0.png" />
+<img alt="../../_images/casas_117_0.png" src="../../_images/casas_117_0.png" />
 </div>
 </div>
 <div class="admonition note">
@@ -2055,8 +2085,8 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </figure>
 <p>a) Use the Laplace transform to determine the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> and the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the RC circuit.</p>
 <p>b) Determine the step response of the RC circuit.</p>
-<p>c) use the results of Example 15.2(a) and (b) and properties of the Laplace transform to determine the response <span class="math notranslate nohighlight">\(y(t) = v_2(t)\)</span> to <span class="math notranslate nohighlight">\(v_1(t)\)</span>.</p>
-<p>d) Given that <span class="math notranslate nohighlight">\(V_L = -5\)</span> V and <span class="math notranslate nohighlight">\(V_U = 5\)</span> V, and assuming that the time constant <span class="math notranslate nohighlight">\(\tau = RC = T_A = 2 T_B\)</span>,  use MATLAB to plot the response <span class="math notranslate nohighlight">\(v_1(t)\)</span> over two cycles of the input signal. Use any suitable values of <span class="math notranslate nohighlight">\(T_A\)</span>, <span class="math notranslate nohighlight">\(T_B\)</span> and <span class="math notranslate nohighlight">\(RC\)</span> that you feel are appropriate.</p>
+<p>c) Use the results of Example 15.2(a) and (b) and properties of the Laplace transform to determine the response <span class="math notranslate nohighlight">\(y(t) = v_2(t)\)</span> to <span class="math notranslate nohighlight">\(v_1(t)\)</span>.</p>
+<p>d) Given that <span class="math notranslate nohighlight">\(V_L = -5\)</span> V and <span class="math notranslate nohighlight">\(V_U = 5\)</span> V, and assuming that the time constant <span class="math notranslate nohighlight">\(\tau = RC = T_A = 2 T_B\)</span>,  use MATLAB to plot the response <span class="math notranslate nohighlight">\(v_1(t)\)</span> over two cycles of the input signal. Use any suitable values of <span class="math notranslate nohighlight">\(RC\)</span> that you feel are appropriate.</p>
 <p>e) Use the transfer function block and the signal editor provided by Simulink to confirm by simulation the response computed in Example 15.2(d).</p>
 </section>
 <section id="example-15-3-operational-differentiator">
