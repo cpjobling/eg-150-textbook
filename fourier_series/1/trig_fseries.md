@@ -30,11 +30,17 @@ Follow along at [cpjobling.github.io/eg-150-textbook/fourier_series/1/trig_fseri
 (fs1:intro)=
 ## Introduction
 
-Any periodic waveform with *fundamental frequency* $\Omega_0 = 2\pi F_0$ can be approximated by a DC component (which may be 0) and the sum of sinusoidal waveforms at the fundamental and *integer multiples* of the fundamental frequency. 
+Any periodic waveform with *fundamental frequency* $\Omega_0 = 2\pi f_0$ can be approximated by a DC component (which may be 0) and the sum of sinusoidal waveforms at the fundamental and *integer multiples* of the fundamental frequency. 
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 These integer multiples of the fundamental frequency $2\Omega_0$, $3\Omega_0$, $4\Omega_0$, $\ldots,\ \Omega_N$ are called the *harmonic frequencies*.
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 The approximation of a periodic waveform by a sum of *harmonic waveforms*, is known as *Fourier analysis*.
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Fourier analysis has important applications in many branches of electronics but is particularly crucial for signal processing and communications.
 
@@ -46,9 +52,9 @@ Fourier analysis has important applications in many branches of electronics but 
 
 * {ref}`fs1:periodic_signals`
 
-* {ref}`fs1:motivation`
-
 * {ref}`fs1:wave_analysis`
+
+* {ref}`fs1:trig_fs`
 
 * {ref}`fs1:symmetry`
 
@@ -67,22 +73,41 @@ In {ref}`periodic_signals` we defined a continuous-time signal $x(t)$ to be peri
 
 $$x(t + nT) = x(t)\qquad\mathrm{all}\ t$$ (eq:fs1:1)
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 The *fundamental period* $T_0$ of $x(t)$ is the smallest positive value of $T$ for which Eq. {eq}`eq:fs1:1` is satisfied, and $1/T_0 = ƒ_0$ is referred to as the *fundamental frequency*.
+
++++ {"slideshow": {"slide_type": "slide"}}
 
 Two basic examples of periodic signals are the real sinusoidal signal
 
 $$x(t) = \cos\left(\Omega_0 t + \phi\right)$$ (eq:fs1:2)
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 and the complex exponential signal
 
-$$x(t) = e^{j\Omega t}$$ (eq:fs1:3)
+$$x(t) = e^{j\Omega_0 t}$$ (eq:fs1:3)
+
++++ {"slideshow": {"slide_type": "slide"}}
 
 where $\Omega_0 = 2\pi/T_0 = 2\piƒ_0$ is called the *fundamental angular frequency*.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(fs1:wave_analysis)=
+## Wave Analysis
+
+* [Jean Baptiste Joseph Fourier](https://en.wikipedia.org/wiki/Joseph_Fourier) (21 March 1768 – 16 May 1830) discovered that any _**periodic**_ signal could be represented as a series of *harmonically related* sinusoids.
+
+* An *harmonic* is a frequency whose value is an integer multiple of some *fundamental frequency*
+
+* For example, the frequencies 2 MHz, 3 Mhz, 4 MHz are the second, third and fourth harmonics of a sinusoid with fundamental frequency 1 Mhz.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
 (fs1:motivation)=
-## Motivating Examples
+### Motivating Examples
 
 This [Fourier Series demo](http://dspfirst.gatech.edu/matlab/#fseriesdemo), developed by Members of the Center for Signal and Image Processing (CSIP) at the [School of Electrical and Computer Engineering](https://www.ece.gatech.edu/) at the [Georgia Institute of Technology](https://www.gatech.edu/), shows how periodic signals can be synthesised by a sum of sinusoidal signals.
 
@@ -92,7 +117,7 @@ To install this example, download the [zip file](http://dspfirst.gatech.edu/matl
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Demo 1
+#### Demo 1
 
 Building up wave forms from sinusoids.
 
@@ -106,7 +131,7 @@ fseriesdemo
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Demo 2
+#### Demo 2
 
 Actual measurements
 
@@ -118,25 +143,25 @@ Note all spectra shown in these slides are generated numerically from the input 
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### 1 kHz Sinewave
+##### 1 kHz Sinewave
 
 ![A 1 kHz sinewave](pictures/1kHz_Sinewave.png "A 1kHz sinewave")
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### Spectrum of 1kHz sinewave
+##### Spectrum of 1kHz sinewave
 
 ![Spectrum of 1kHz sinewave. Note one line at fundamental frequency.](pictures/fft_of_sinwave.png "Spectrum of 1kHz sinewave. Note one line at fundamental frequency.")
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### 1 kHz Squarewave
+##### 1 kHz Squarewave
 
 ![A 1 kHz square wave](pictures/1kHz_sqr.png "A 1kHz square wave.")
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### Spectrum of 1kHz square wave
+##### Spectrum of 1kHz square wave
 
 ![Spectrum of 1kHz sinewave. Note only odd harmonics present.](pictures/FFT_sqr.png "Spectrum of 1kHz square wave. Note only odd harmonics present.")
 
@@ -146,7 +171,7 @@ Clearly showing peaks at fundamental, 1/3, 1/5, 1/7 and 1/9 at 3rd, 5th and 7th 
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### 1 kHz triangle waveform
+##### 1 kHz triangle waveform
 
 ![A 1 kHz triangle waveform](pictures/1kHz_saw.png "A 1 kHz triangle waveform")
 
@@ -160,20 +185,10 @@ Clearly showing peaks at fundamental, 1/3, 1/5, 1/7 and 1/9 at 3rd, 5th and 7th 
 
 Clearly showing peaks at fundamental, 1/9, 1/25, 1/7 and 1/49 at 3rd, 5th and 7th harmonic frequencies. Note for the triangle waveform, harmonics decline in amplitude as the reciprocal of the square of $n$.
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-(fs1:wave_analysis)=
-## Wave Analysis
-
-* [Jean Baptiste Joseph Fourier](https://en.wikipedia.org/wiki/Joseph_Fourier) (21 March 1768 – 16 May 1830) discovered that any _**periodic**_ signal could be represented as a series of *harmonically related* sinusoids.
-
-* An *harmonic* is a frequency whose value is an integer multiple of some *fundamental frequency*
-
-* For example, the frequencies 2 MHz, 3 Mhz, 4 MHz are the second, third and fourth harmonics of a sinusoid with fundamental frequency 1 Mhz.
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### The Trigonometric Fourier Series
+(fs1:trig_fs)=
+## The Trigonometric Fourier Series
 
 Any periodic waveform $f(t)$ can be represented as
 
@@ -184,17 +199,19 @@ $$
 \end{eqnarray*}
 $$ (eq:fs1:4)
 
-or equivalently (if more confusingly)
+where $\Omega_0$ rad/s is the *fundamental frequency*.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+This is often written as a summation
 
 $$
 f(t) = \frac{1}{2}{a_0} + \sum\limits_{n = 1}^\infty  {({a_n}\cos n\Omega_0 t + {b_n}\sin n\Omega_0 t)}
 $$ (eq:fs1:5)
 
-where $\Omega_0$ rad/s is the *fundamental frequency*.
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Notation
+#### Notation
 
 * The first term $a_o/2$ is a constant and represents the DC (average) component of the signal $f(t)$
 * The terms with coefficients $a_1$ and $b_1$ together represent the fundamental frequency component of $f(t)$ at frequency $\Omega_0$.
@@ -674,9 +691,9 @@ In this unit we ...
 
 * {ref}`fs1:periodic_signals`
 
-* {ref}`fs1:motivation`
-
 * {ref}`fs1:wave_analysis`
+
+* {ref}`fs1:trig_fs`
 
 * {ref}`fs1:symmetry`
 
