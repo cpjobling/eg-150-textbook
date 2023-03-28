@@ -51,7 +51,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/_build/.jupyter_cache/executed/d2122943cd5c49660e2b94ae805fb100/base.html" />
+    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/_build/.jupyter_cache/executed/9e0addd08984fd345646d2e4f4e3f9d5/base.html" />
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -443,7 +443,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/_build/.jupyter_cache/executed/d2122943cd5c49660e2b94ae805fb100/base.ipynb"
+        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/_build/.jupyter_cache/executed/9e0addd08984fd345646d2e4f4e3f9d5/base.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -503,7 +503,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2F_build/.jupyter_cache/executed/d2122943cd5c49660e2b94ae805fb100/base.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2F_build/.jupyter_cache/executed/9e0addd08984fd345646d2e4f4e3f9d5/base.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -520,7 +520,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/_build/.jupyter_cache/executed/d2122943cd5c49660e2b94ae805fb100/base.ipynb"
+        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/_build/.jupyter_cache/executed/9e0addd08984fd345646d2e4f4e3f9d5/base.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -548,7 +548,7 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../../_sources/_build/.jupyter_cache/executed/d2122943cd5c49660e2b94ae805fb100/base.ipynb"
+        <a href="../../../../_sources/_build/.jupyter_cache/executed/9e0addd08984fd345646d2e4f4e3f9d5/base.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -638,81 +638,138 @@ title="Print to PDF"
                 
   <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% The decaying exponential</span>
+<span class="n">t</span><span class="p">=</span><span class="nb">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1000</span><span class="p">);</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="nb">exp</span><span class="p">(</span><span class="n">t</span><span class="p">),</span><span class="n">t</span><span class="p">,</span><span class="nb">exp</span><span class="p">(</span><span class="mi">0</span><span class="o">.*</span><span class="n">t</span><span class="p">),</span><span class="n">t</span><span class="p">,</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">)),</span><span class="k">...</span>
+<span class="w">    </span><span class="nb">axis</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">]),</span><span class="k">...</span>
+<span class="w">    </span><span class="nb">title</span><span class="p">([</span><span class="nb">texlabel</span><span class="p">(</span><span class="s">&#39;x(t) = e^{at}&#39;</span><span class="p">),</span><span class="s">&#39; -- a real&#39;</span><span class="p">]),</span><span class="k">...</span>
+<span class="w">    </span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t (s)&#39;</span><span class="p">),</span><span class="k">...</span>
+<span class="w">    </span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">),</span><span class="k">...</span>
+<span class="w">    </span><span class="nb">legend</span><span class="p">(</span><span class="nb">texlabel</span><span class="p">(</span><span class="s">&#39;x(t) = e^t&#39;</span><span class="p">),</span><span class="nb">texlabel</span><span class="p">(</span><span class="s">&#39;x(t) = e^0&#39;</span><span class="p">),</span><span class="nb">texlabel</span><span class="p">(</span><span class="s">&#39;x(t)=e^{-t}&#39;</span><span class="p">)),</span><span class="k">...</span>
+<span class="w">    </span><span class="nb">grid</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/base_0_010.png" src="../../../../_images/base_0_010.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">t</span>
-<span class="n">T</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c">% period of periodic signal</span>
-<span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">t</span><span class="o">*</span><span class="p">(</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">T</span><span class="p">));</span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;A Single period of x(t)&#39;</span><span class="p">)</span>
+<span class="n">sigma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mf">0.5</span><span class="p">;</span><span class="w"> </span><span class="n">omega</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="n">xr</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="nb">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">);</span><span class="w"> </span><span class="c">% real part</span>
+<span class="n">xi</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">);</span><span class="w"> </span><span class="c">% imaginary part</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">xr</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Re x(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
+<span class="nb">hold</span><span class="w"> </span><span class="n">on</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="nb">exp</span><span class="p">(</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="s">&#39;--&#39;</span><span class="p">,</span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="s">&#39;red&#39;</span><span class="p">)</span>
+<span class="nb">hold</span><span class="w"> </span><span class="n">off</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">xi</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Im x(t) &#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
+<span class="nb">hold</span><span class="w"> </span><span class="n">on</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="nb">exp</span><span class="p">(</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="s">&#39;--&#39;</span><span class="p">,</span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="s">&#39;red&#39;</span><span class="p">)</span>
+<span class="nb">hold</span><span class="w"> </span><span class="n">off</span>
+<span class="nb">sgtitle</span><span class="p">(</span><span class="s">&#39;x(t) = exp(\sigma + j\omega t), \sigma &lt; 0&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/base_0_011.png" src="../../../../_images/base_0_011.png" />
+<img alt="../../../../_images/base_1_07.png" src="../../../../_images/base_1_07.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">signal1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">T</span><span class="p">)</span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">signal1</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;A Single period of x(t+T)&#39;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">sigma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"> </span><span class="n">omega</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="n">xr</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="nb">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">);</span><span class="w"> </span><span class="c">% real part</span>
+<span class="n">xi</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">);</span><span class="w"> </span><span class="c">% imaginary part</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">xr</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Re x(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
+<span class="nb">hold</span><span class="w"> </span><span class="n">on</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="nb">exp</span><span class="p">(</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="s">&#39;--&#39;</span><span class="p">,</span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="s">&#39;red&#39;</span><span class="p">)</span>
+<span class="nb">hold</span><span class="w"> </span><span class="n">off</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">xi</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Im x(t) &#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
+<span class="nb">hold</span><span class="w"> </span><span class="n">on</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="nb">exp</span><span class="p">(</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="s">&#39;--&#39;</span><span class="p">,</span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="s">&#39;red&#39;</span><span class="p">)</span>
+<span class="nb">hold</span><span class="w"> </span><span class="n">off</span>
+<span class="nb">sgtitle</span><span class="p">(</span><span class="s">&#39;x(t) = exp(\sigma + j\omega t), \sigma &gt; 0&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>signal1 =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(t + 1)*(heaviside(t + 1) - heaviside(t))
-</pre></div>
-</div>
-<img alt="../../../../_images/base_1_22.png" src="../../../../_images/base_1_22.png" />
+<img alt="../../../../_images/base_2_013.png" src="../../../../_images/base_2_013.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">signal2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">T</span><span class="p">)</span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">signal2</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;A Single period of x(t)&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>signal2 =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(heaviside(t - 2) - heaviside(t - 3))*(t - 2)
-</pre></div>
-</div>
-<img alt="../../../../_images/base_2_23.png" src="../../../../_images/base_2_23.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">periodic_signal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="k">for</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">5</span>
-<span class="w">    </span><span class="n">periodic_signal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">periodic_signal</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="o">*</span><span class="n">T</span><span class="p">);</span>
-<span class="k">end</span>
-<span class="n">periodic_signal</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>periodic_signal =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(t + 1)*(heaviside(t + 1) - heaviside(t)) + (heaviside(t - 1) - heaviside(t - 2))*(t - 1) - (heaviside(t + 1) - heaviside(t + 2))*(t + 2) + (heaviside(t - 2) - heaviside(t - 3))*(t - 2) - (heaviside(t + 2) - heaviside(t + 3))*(t + 3) + (heaviside(t - 3) - heaviside(t - 4))*(t - 3) - (heaviside(t + 3) - heaviside(t + 4))*(t + 4) + (heaviside(t - 4) - heaviside(t - 5))*(t - 4) - (heaviside(t + 4) - heaviside(t + 5))*(t + 5) + (heaviside(t - 5) - heaviside(t - 6))*(t - 5) - t*(heaviside(t - 1) - heaviside(t))
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="p">.</span><span class="o">./</span><span class="n">matlab</span>
+<span class="nb">format</span><span class="w"> </span><span class="n">compact</span>
+<span class="nb">open</span><span class="w"> </span><span class="n">efs_sqw</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">periodic_signal</span><span class="p">,</span><span class="s">&#39;g-&#39;</span><span class="p">,</span><span class="s">&quot;LineWidth&quot;</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="k">...</span>
-<span class="w">    </span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;T = 1&#39;</span><span class="p">)</span>
-<span class="nb">xlim</span><span class="p">([</span><span class="o">-</span><span class="mf">3.00</span><span class="w"> </span><span class="mf">3.00</span><span class="p">])</span>
-<span class="nb">ylim</span><span class="p">([</span><span class="mf">0.00</span><span class="w"> </span><span class="mf">2.00</span><span class="p">])</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">t</span><span class="w"> </span><span class="s">A</span><span class="p">;</span>
+
+<span class="n">tau</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">T0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="nb">pi</span><span class="p">;</span><span class="w"> </span><span class="c">% w = 2*pi*f -&gt; t = 2*pi/omega</span>
+<span class="n">k_vec</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:</span><span class="mi">5</span><span class="p">];</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">xt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">A</span><span class="o">*</span><span class="p">(</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">T0</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">A</span><span class="o">*</span><span class="p">(</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">T0</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">T0</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">FourierSeries</span><span class="p">(</span><span class="n">xt</span><span class="p">,</span><span class="w"> </span><span class="n">T0</span><span class="p">,</span><span class="w"> </span><span class="n">k_vec</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/base_4_08.png" src="../../../../_images/base_4_08.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(A*2i)/(5*pi), 0, (A*2i)/(3*pi), 0, (A*2i)/pi, 0, -(A*2i)/pi, 0, -(A*2i)/(3*pi), 0, -(A*2i)/(5*pi)]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>w =
+    -5    -4    -3    -2    -1     0     1     2     3     4     5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Xw</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">subs</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+<span class="nb">stem</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="nb">abs</span><span class="p">(</span><span class="n">Xw</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;o-&#39;</span><span class="p">);</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Exponential Fourier Series for Square Waveform with Odd Symmetry&#39;</span><span class="p">)</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Hamonic frequencies: k\Omega_0 (rad/sec)&#39;</span><span class="p">);</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;|c_k|&#39;</span><span class="p">);</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
+<span class="nb">stem</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="nb">angle</span><span class="p">(</span><span class="n">Xw</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;o-&#39;</span><span class="p">);</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Hamonic frequencies: k\Omega_0 (rad/sec)&#39;</span><span class="p">);</span><span class="w"> </span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;\angle c_k [radians]&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/base_8_014.png" src="../../../../_images/base_8_014.png" />
 </div>
 </div>
 
@@ -729,7 +786,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "matlab",
-            path: "./_build/.jupyter_cache/executed/d2122943cd5c49660e2b94ae805fb100"
+            path: "./_build/.jupyter_cache/executed/9e0addd08984fd345646d2e4f4e3f9d5"
         },
         predefinedOutput: true
     }
