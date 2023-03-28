@@ -181,7 +181,7 @@ sgtitle('x(t) = exp(\sigma + j\omega t), \sigma > 0')
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Then signal $x(t)$ in Eq. {eq}`eq:fs2:1` is known as a general complex exponential signal whose real part $e^{\sigma t}\sin\omega t$ and imaginary part $e^{\sigma t}\sin \omega t$ are exponentially increasing ($σ > 0$) or decreasing ($σ < 0$) sinusoidal signals .
+Then signal $x(t)$ in Eq. {eq}`eq:fs2:1` is known as a general complex exponential signal whose real part $e^{\sigma t}\sin\omega t$ and imaginary part $e^{\sigma t}\sin \omega t$ are exponentially increasing ($σ > 0$) or decreasing ($σ < 0$) sinusoidal signals.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -201,7 +201,7 @@ is a *complex exponential*.
 
 The poles of a rational polynomial in $s$ will exhibit one of the properties discussed above. Therefore, for any system whose poles are known, we can reason about the likely response of the system. 
 
-For stable systems, the real part of the pole will be negative so the response will be a linear combination of exponential delays or exponentially decaying sinusoids.
+For stable systems, the real part of the pole will be negative so the response will be a linear combination of exponential decays or exponentially decaying sinusoids.
 
 The overall response of a system will depend on the relative size of the real part of the real or complex poles and the frequency of the imaginary parts of the complex poles and is also influenced by the size of the partial fraction residues.
 
@@ -414,7 +414,7 @@ $${C_k \atop {k=\mathrm{even}}} =  0$$
 $${C_k \atop {k=\mathrm{odd}}} =  \frac{2A}{j\pi k}$$
 
 
-See {ref}`ex:17.1` and solution in {ref}`sol:17.1`.
+See {ref}`ex:17.2` and solution in {ref}`sol:17.2`.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -467,7 +467,7 @@ Solution calculates the Exponential Fourier for a Square Wave with Odd Symmetry.
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
 cd ../matlab
 format compact
@@ -481,7 +481,7 @@ Set up parameters
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
 syms t A;
 
@@ -499,7 +499,7 @@ Define f(t)
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
 xt = A*(heaviside(t)-heaviside(t-T0/2)) - A*(heaviside(t-T0/2)-heaviside(t-T0));
 ```
@@ -511,7 +511,7 @@ Compute EFS
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
 [X, w] = FourierSeries(xt, T0, k_vec)
 ```
@@ -520,12 +520,14 @@ slideshow:
 
 Plot the numerical results from MATLAB calculation.
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 Convert symbolic to numeric result
 
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
 Xw = subs(X,A,1);
 ```
@@ -593,10 +595,10 @@ These are useful when simplifying expressions that result from integrating funct
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(ex17.2)
+(ex:17.2)=
 ## Example 17.2
 
-Compute the Exponential Fourier Series for the square wave shown below in {numref}`fig:ex:17.1` that $\omega = 1$
+Compute the Exponential Fourier Series for the square wave shown below in {numref}`fig:ex:17.1` assuming that $\omega = 1$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -722,7 +724,7 @@ It is also worth being aware that $n\omega t$, when $n$ is an integer, produces 
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-(sol:17.1)=
+(sol:17.2)=
 ### Solution to Example 17.2
 
 * Square wave is an **odd** function!
@@ -752,3 +754,7 @@ $$\frac{A}{2j\pi k}\left(e^{-j2k \pi} - 2e^{-jk\pi} -1 \right) = \frac{A}{2j\pi 
 For $k$ odd*, $e^{-jk\pi} = -1$. Therefore
 
 $${C_k \atop {k=\mathrm{odd}}} = \frac{A}{2j\pi k}\left(e^{-jk\pi}-1\right)^2 = \frac{A}{2j\pi k}\left(-1-1\right)^2 = \frac{A}{2j\pi k}\left(-2\right)^2 = \frac{2A}{j\pi k}$$
+
+```{code-cell}
+
+```

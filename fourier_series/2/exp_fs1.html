@@ -1329,7 +1329,7 @@ title="Print to PDF"
 <img alt="../../_images/exp_fs1_20_0.png" src="../../_images/exp_fs1_20_0.png" />
 </div>
 </div>
-<p>Then signal <span class="math notranslate nohighlight">\(x(t)\)</span> in Eq. <a class="reference internal" href="#equation-eq-fs2-1">(52)</a> is known as a general complex exponential signal whose real part <span class="math notranslate nohighlight">\(e^{\sigma t}\sin\omega t\)</span> and imaginary part <span class="math notranslate nohighlight">\(e^{\sigma t}\sin \omega t\)</span> are exponentially increasing (<span class="math notranslate nohighlight">\(σ &gt; 0\)</span>) or decreasing (<span class="math notranslate nohighlight">\(σ &lt; 0\)</span>) sinusoidal signals .</p>
+<p>Then signal <span class="math notranslate nohighlight">\(x(t)\)</span> in Eq. <a class="reference internal" href="#equation-eq-fs2-1">(52)</a> is known as a general complex exponential signal whose real part <span class="math notranslate nohighlight">\(e^{\sigma t}\sin\omega t\)</span> and imaginary part <span class="math notranslate nohighlight">\(e^{\sigma t}\sin \omega t\)</span> are exponentially increasing (<span class="math notranslate nohighlight">\(σ &gt; 0\)</span>) or decreasing (<span class="math notranslate nohighlight">\(σ &lt; 0\)</span>) sinusoidal signals.</p>
 </section>
 <section id="id4">
 <h4>Case where <span class="math notranslate nohighlight">\(\sigma = 0\)</span><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
@@ -1343,7 +1343,7 @@ title="Print to PDF"
 \[\int_{0}^{\infty} f(t)e^{-st} dt\]</div>
 <p>is a <em>complex exponential</em>.</p>
 <p>The poles of a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span> will exhibit one of the properties discussed above. Therefore, for any system whose poles are known, we can reason about the likely response of the system.</p>
-<p>For stable systems, the real part of the pole will be negative so the response will be a linear combination of exponential delays or exponentially decaying sinusoids.</p>
+<p>For stable systems, the real part of the pole will be negative so the response will be a linear combination of exponential decays or exponentially decaying sinusoids.</p>
 <p>The overall response of a system will depend on the relative size of the real part of the real or complex poles and the frequency of the imaginary parts of the complex poles and is also influenced by the size of the partial fraction residues.</p>
 <p>The combined behaviour of the poles have particular significance in the development of system stability theories and in control systems analysis and design. Look out for them in <strong>EG-243 Control Systems</strong></p>
 </section>
@@ -1477,7 +1477,7 @@ title="Print to PDF"
 \[{C_k \atop {k=\mathrm{even}}} =  0\]</div>
 <div class="math notranslate nohighlight">
 \[{C_k \atop {k=\mathrm{odd}}} =  \frac{2A}{j\pi k}\]</div>
-<p>See <span class="xref std std-ref">ex:17.1</span> and solution in <span class="xref std std-ref">sol:17.1</span>.</p>
+<p>See <a class="reference internal" href="#ex-17-2"><span class="std std-ref">Example 17.2</span></a> and solution in <a class="reference internal" href="#sol-17-2"><span class="std std-ref">Solution to Example 17.2</span></a>.</p>
 </section>
 <section id="exponential-fourier-series-for-the-square-wave-with-odd-symmetry">
 <h3>Exponential Fourier series for the square wave with odd symmetry<a class="headerlink" href="#exponential-fourier-series-for-the-square-wave-with-odd-symmetry" title="Permalink to this headline">#</a></h3>
@@ -1584,7 +1584,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/exp_fs1_65_0.png" src="../../_images/exp_fs1_65_0.png" />
+<img alt="../../_images/exp_fs1_66_0.png" src="../../_images/exp_fs1_66_0.png" />
 </div>
 </div>
 </section>
@@ -1619,11 +1619,10 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 
 
 
-</pre><p>(ex17.2)</p>
-</section>
+</pre></section>
 <section id="example-17-2">
-<h2>Example 17.2<a class="headerlink" href="#example-17-2" title="Permalink to this headline">#</a></h2>
-<p>Compute the Exponential Fourier Series for the square wave shown below in <a class="reference internal" href="#fig-ex-17-1"><span class="std std-numref">Fig. 74</span></a> that <span class="math notranslate nohighlight">\(\omega = 1\)</span></p>
+<span id="ex-17-2"></span><h2>Example 17.2<a class="headerlink" href="#example-17-2" title="Permalink to this headline">#</a></h2>
+<p>Compute the Exponential Fourier Series for the square wave shown below in <a class="reference internal" href="#fig-ex-17-1"><span class="std std-numref">Fig. 74</span></a> assuming that <span class="math notranslate nohighlight">\(\omega = 1\)</span></p>
 <section id="some-questions-for-you">
 <h3>Some questions for you<a class="headerlink" href="#some-questions-for-you" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
@@ -1736,7 +1735,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 <p>It is also worth being aware that <span class="math notranslate nohighlight">\(n\omega t\)</span>, when <span class="math notranslate nohighlight">\(n\)</span> is an integer, produces rotations that often map back to the simpler cases given above. For example see <span class="math notranslate nohighlight">\(e^{j2\pi}\)</span> above.</p>
 </section>
 <section id="solution-to-example-17-2">
-<span id="id22"></span><h3>Solution to Example 17.2<a class="headerlink" href="#solution-to-example-17-2" title="Permalink to this headline">#</a></h3>
+<span id="sol-17-2"></span><h3>Solution to Example 17.2<a class="headerlink" href="#solution-to-example-17-2" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Square wave is an <strong>odd</strong> function!</p></li>
 <li><p>DC component is <strong>zero</strong>!</p></li>
