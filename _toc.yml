@@ -71,12 +71,18 @@ parts:
   chapters:
   - file: FAQS/faq
     title: Answers to Frequently Asked Questions
-- caption: Lab Exercises
-  chapters:
-  - file: labs/index
-    title: Laboratory Exercises
+#- caption: Lab Exercises
+#  chapters:
+#  - file: labs/index
+#    title: Laboratory Exercises
 - caption: Appendices
   chapters:
+  - file: takeaways
+    title: Unit takeaways
+  - file: exercises
+    title: List of Unit Exercises
+  - file: homework
+    title: List of Homework Problems
   - file: laplace_transform/1/lt_props
     title: Properties of the Laplace Transform
   - file: laplace_transform/1/lt_table
