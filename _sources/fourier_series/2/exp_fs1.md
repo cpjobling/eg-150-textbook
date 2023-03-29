@@ -225,7 +225,7 @@ $$\sin \omega t = \frac{e^{j\omega t} - e^{-j\omega t}}{j2}$$ (eq:fs2:3)
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-We can use this result to convert the *Trigonometric Fourier Series* into an *Exponential Fourier Series* which has only one integral term to solve per harmonic.
+We can use these identities to convert the *Trigonometric Fourier Series* into an *Exponential Fourier Series* which has only one integral term to solve per harmonic.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -325,14 +325,14 @@ so
 
 $$b_k = j\left(C_k - C_{-k}\right)$$ (ex:fs2:14)
 
-Thus we can easily go back to the Trigonetric Fourier series if we want to.
+Thus we can easily go back to the trigonometric Fourier series, e.g. to visualize the harmonic approximation, if we need to.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (fs2:symmetry)=
 ## Symmetry in Exponential Fourier Series
 
-Since the coefficients of the Exponential Fourier Series are complex numbers, we can use symmetry to determine the form of the coefficients and thereby simplify the computation of series for wave forms that have symmetry.
+Since the coefficients of the exponential Fourier series are complex numbers, we can use symmetry to determine the form of the coefficients and thereby simplify the computation of the series for wave forms that have symmetry.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -352,7 +352,7 @@ and
 
 $$C_k = \frac{1}{2}\left(a_k+\frac{b_k}{j}\right) = \frac{1}{2}\left(a_k-jb_k\right)$$
 
-From knowledge of the trig. fourier series, even functions have no sine terms so the $b_k$ coefficients are 0. Therefore both $C_{-k}$ and $C_k$ are real.
+From knowledge of the trig. Fourier series, even functions have no sine terms so the $b_k$ coefficients are 0. Therefore both $C_{-k}$ and $C_k$ are real.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -361,6 +361,8 @@ From knowledge of the trig. fourier series, even functions have no sine terms so
 For odd functions, all coefficients $C_k$ are imaginary.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
+
+**Proof**
 
 By a similar argument, all odd functions have no cosine terms so the $a_k$ coefficients are 0. Therefore both $C_{-k}$ and $C_k$ are imaginary.
 
@@ -376,7 +378,7 @@ For the proof see the notes.
 
 **Proof**
 
-From Trigonometric Fourier Series, if there is half-wave symmetry, all even harnonics are zero, thus both $a_k$ and $b_k$ are zero for $k$ even. Hence $C_{-k}$ and $C_k$ are also zero when $k$ is even.
+From trig. Fourier series, if there is half-wave symmetry, all even harnonics are zero, thus both $a_k$ and $b_k$ are zero for $k$ even. Hence $C_{-k}$ and $C_k$ are also zero when $k$ is even.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -395,7 +397,7 @@ $C_{-k} = C_{k}^*$ **always**
 (fs2:eg)=
 ## Computating the Exponential Fourier Series
 
-Compute the exponential Fourier series (EFS) for the square wave shown in {numref}`fig:ex:17.1` assuming that $\omega = 1$
+Compute the exponential Fourier series (EFS) for the square wave shown in {numref}`fig:ex:17.1` assuming that $\Omega_0 = 1$ rad/s.
 
 :::{figure-md} Fig:ex:17.1
 <img src="pictures/sqw.png" alt="Squarewave with odd-symmetry" width="60%">
@@ -411,8 +413,7 @@ It will be shown that
 
 $${C_k \atop {k=\mathrm{even}}} =  0$$
 
-$${C_k \atop {k=\mathrm{odd}}} =  \frac{2A}{j\pi k}$$
-
+$${C_k \atop {k=\mathrm{odd}}} =  \frac{1}{k}\left(\frac{2A}{j\pi}\right)$$
 
 See {ref}`ex:17.2` and solution in {ref}`sol:17.2`.
 
@@ -598,7 +599,7 @@ These are useful when simplifying expressions that result from integrating funct
 (ex:17.2)=
 ## Example 17.2
 
-Compute the Exponential Fourier Series for the square wave shown below in {numref}`fig:ex:17.1` assuming that $\omega = 1$
+Compute the Exponential Fourier Series for the square wave shown in {numref}`fig:ex:17.1` assuming that $\Omega_0 = 1$ rad/s.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -738,19 +739,27 @@ Hence
 * Subscripts $k$ are **odd only**!
 * What is the integral that needs to be solved for $C_k$?
 
-$$C_k = \frac{1}{2\pi}\int_{0}^{2\pi} f(\Omega_0 t)e^{-jk(\Omega_0 t)}\, d(\Omega_0 t) = \frac{1}{2\pi}\left[\int_{0}^{\pi} Ae^{-jk(\Omega_0 t)}\, d(\Omega_0 t) + \int_{\pi}^{2\pi} (-A)e^{-jk(\Omega_0 t)}\, d(\Omega_0 t)\right]$$
+$$C_k = \frac{1}{2\pi}\int_{0}^{2\pi} f(\theta)e^{-jk\theta}\, d\theta = \frac{1}{2\pi}\left[\int_{0}^{\pi} Ae^{-jk\theta}\, d\theta + \int_{\pi}^{2\pi} (-A)e^{-jk\theta}\, d\theta\right]$$
+
+where $\theta = \Omega_0 t$ rad.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ### Computation of $C_k$
 
-$$\frac{1}{2\pi}\left[\int_{0}^{\pi} Ae^{-jk(\Omega_0 t)}\, d(\Omega_0 t) + \int_{\pi}^{2\pi} (-A)e^{-jk(\Omega_0 t)}\, d(\Omega_0 t)\right] = \frac{1}{2\pi}\left[\left.\frac{A}{-jk}e^{-jk(\Omega_0 t)}\right|_0^\pi+\left.\frac{-A}{-jk}e^{-jk(\Omega_0 t)}\right|_\pi^{2\pi}\right]$$
+$$\frac{1}{2\pi}\left[\int_{0}^{\pi} Ae^{-jk\theta}\, d\theta + \int_{\pi}^{2\pi} (-A)e^{-jk\theta}\, d\theta\right] = \frac{1}{2\pi}\left[\left.\frac{A}{-jk}e^{-jk\theta}\right|_0^\pi+\left.\frac{-A}{-jk}e^{-jk\theta}\right|_\pi^{2\pi}\right]$$
 
 $$ = \frac{1}{2\pi}\left[\frac{A}{-jk}\left(e^{-jk\pi} - 1\right)+\frac{A}{jk}\left(e^{-j2k \pi}-e^{-jk\pi}\right)\right] =
 \frac{A}{2j\pi k}\left(1 - e^{-jk\pi}+ e^{-j2k \pi}-e^{-jk\pi}\right)$$
 
 $$\frac{A}{2j\pi k}\left(e^{-j2k \pi} - 2e^{-jk\pi} -1 \right) = \frac{A}{2j\pi k}\left(e^{-jk\pi}-1\right)^2$$
 
-For $k$ odd*, $e^{-jk\pi} = -1$. Therefore
+For $k$ even, $e^{-jk\pi} = +1$, $e^{-jk\pi}-1 = 0$ and 
 
-$${C_k \atop {k=\mathrm{odd}}} = \frac{A}{2j\pi k}\left(e^{-jk\pi}-1\right)^2 = \frac{A}{2j\pi k}\left(-1-1\right)^2 = \frac{A}{2j\pi k}\left(-2\right)^2 = \frac{2A}{j\pi k}$$
+$${C_k\atop {k = \mathrm{even}}} = 0.$$ 
+
+For $k$ odd*, $e^{-jk\pi} = -1$. 
+
+Therefore
+
+$${C_k \atop {k=\mathrm{odd}}} = \frac{A}{2j\pi k}\left(e^{-jk\pi}-1\right)^2 = \frac{A}{2j\pi k}\left(-1-1\right)^2 = \frac{A}{2j\pi k}\left(-2\right)^2 = \frac{2A}{j\pi k} = \frac{1}{k}\left(\frac{2A}{j\pi}\right)$$

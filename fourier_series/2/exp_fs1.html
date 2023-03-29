@@ -1353,7 +1353,7 @@ title="Print to PDF"
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-eq-fs2-3">
 <span class="eqno">(54)<a class="headerlink" href="#equation-eq-fs2-3" title="Permalink to this equation">#</a></span>\[\sin \omega t = \frac{e^{j\omega t} - e^{-j\omega t}}{j2}\]</div>
-<p>We can use this result to convert the <em>Trigonometric Fourier Series</em> into an <em>Exponential Fourier Series</em> which has only one integral term to solve per harmonic.</p>
+<p>We can use these identities to convert the <em>Trigonometric Fourier Series</em> into an <em>Exponential Fourier Series</em> which has only one integral term to solve per harmonic.</p>
 </section>
 </section>
 <section id="the-exponential-fourier-series">
@@ -1420,12 +1420,12 @@ title="Print to PDF"
 <p>so</p>
 <div class="math notranslate nohighlight" id="equation-ex-fs2-14">
 <span class="eqno">(66)<a class="headerlink" href="#equation-ex-fs2-14" title="Permalink to this equation">#</a></span>\[b_k = j\left(C_k - C_{-k}\right)\]</div>
-<p>Thus we can easily go back to the Trigonetric Fourier series if we want to.</p>
+<p>Thus we can easily go back to the trigonometric Fourier series, e.g. to visualize the harmonic approximation, if we need to.</p>
 </section>
 </section>
 <section id="symmetry-in-exponential-fourier-series">
 <span id="fs2-symmetry"></span><h2>Symmetry in Exponential Fourier Series<a class="headerlink" href="#symmetry-in-exponential-fourier-series" title="Permalink to this headline">#</a></h2>
-<p>Since the coefficients of the Exponential Fourier Series are complex numbers, we can use symmetry to determine the form of the coefficients and thereby simplify the computation of series for wave forms that have symmetry.</p>
+<p>Since the coefficients of the exponential Fourier series are complex numbers, we can use symmetry to determine the form of the coefficients and thereby simplify the computation of the series for wave forms that have symmetry.</p>
 <section id="even-functions">
 <h3>Even Functions<a class="headerlink" href="#even-functions" title="Permalink to this headline">#</a></h3>
 <p>For even functions, all coefficients <span class="math notranslate nohighlight">\(C_k\)</span> are real.</p>
@@ -1436,11 +1436,12 @@ title="Print to PDF"
 <p>and</p>
 <div class="math notranslate nohighlight">
 \[C_k = \frac{1}{2}\left(a_k+\frac{b_k}{j}\right) = \frac{1}{2}\left(a_k-jb_k\right)\]</div>
-<p>From knowledge of the trig. fourier series, even functions have no sine terms so the <span class="math notranslate nohighlight">\(b_k\)</span> coefficients are 0. Therefore both <span class="math notranslate nohighlight">\(C_{-k}\)</span> and <span class="math notranslate nohighlight">\(C_k\)</span> are real.</p>
+<p>From knowledge of the trig. Fourier series, even functions have no sine terms so the <span class="math notranslate nohighlight">\(b_k\)</span> coefficients are 0. Therefore both <span class="math notranslate nohighlight">\(C_{-k}\)</span> and <span class="math notranslate nohighlight">\(C_k\)</span> are real.</p>
 </section>
 <section id="odd-functions">
 <h3>Odd Functions<a class="headerlink" href="#odd-functions" title="Permalink to this headline">#</a></h3>
 <p>For odd functions, all coefficients <span class="math notranslate nohighlight">\(C_k\)</span> are imaginary.</p>
+<p><strong>Proof</strong></p>
 <p>By a similar argument, all odd functions have no cosine terms so the <span class="math notranslate nohighlight">\(a_k\)</span> coefficients are 0. Therefore both <span class="math notranslate nohighlight">\(C_{-k}\)</span> and <span class="math notranslate nohighlight">\(C_k\)</span> are imaginary.</p>
 </section>
 <section id="half-wave-symmetry">
@@ -1448,7 +1449,7 @@ title="Print to PDF"
 <p>If there is <em>half-wave symmetry</em>, <span class="math notranslate nohighlight">\(C_k = 0\)</span> for <span class="math notranslate nohighlight">\(k\)</span> even.</p>
 <p>For the proof see the notes.</p>
 <p><strong>Proof</strong></p>
-<p>From Trigonometric Fourier Series, if there is half-wave symmetry, all even harnonics are zero, thus both <span class="math notranslate nohighlight">\(a_k\)</span> and <span class="math notranslate nohighlight">\(b_k\)</span> are zero for <span class="math notranslate nohighlight">\(k\)</span> even. Hence <span class="math notranslate nohighlight">\(C_{-k}\)</span> and <span class="math notranslate nohighlight">\(C_k\)</span> are also zero when <span class="math notranslate nohighlight">\(k\)</span> is even.</p>
+<p>From trig. Fourier series, if there is half-wave symmetry, all even harnonics are zero, thus both <span class="math notranslate nohighlight">\(a_k\)</span> and <span class="math notranslate nohighlight">\(b_k\)</span> are zero for <span class="math notranslate nohighlight">\(k\)</span> even. Hence <span class="math notranslate nohighlight">\(C_{-k}\)</span> and <span class="math notranslate nohighlight">\(C_k\)</span> are also zero when <span class="math notranslate nohighlight">\(k\)</span> is even.</p>
 </section>
 <section id="no-symmetry">
 <h3>No symmetry<a class="headerlink" href="#no-symmetry" title="Permalink to this headline">#</a></h3>
@@ -1461,7 +1462,7 @@ title="Print to PDF"
 </section>
 <section id="computating-the-exponential-fourier-series">
 <span id="fs2-eg"></span><h2>Computating the Exponential Fourier Series<a class="headerlink" href="#computating-the-exponential-fourier-series" title="Permalink to this headline">#</a></h2>
-<p>Compute the exponential Fourier series (EFS) for the square wave shown in <a class="reference internal" href="#fig-ex-17-1"><span class="std std-numref">Fig. 74</span></a> assuming that <span class="math notranslate nohighlight">\(\omega = 1\)</span></p>
+<p>Compute the exponential Fourier series (EFS) for the square wave shown in <a class="reference internal" href="#fig-ex-17-1"><span class="std std-numref">Fig. 74</span></a> assuming that <span class="math notranslate nohighlight">\(\Omega_0 = 1\)</span> rad/s.</p>
 <figure class="align-default" id="fig-ex-17-1">
 <a class="reference internal image-reference" href="../../_images/sqw.png"><img alt="Squarewave with odd-symmetry" src="../../_images/sqw.png" style="width: 60%;" /></a>
 <figcaption>
@@ -1474,7 +1475,7 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[{C_k \atop {k=\mathrm{even}}} =  0\]</div>
 <div class="math notranslate nohighlight">
-\[{C_k \atop {k=\mathrm{odd}}} =  \frac{2A}{j\pi k}\]</div>
+\[{C_k \atop {k=\mathrm{odd}}} =  \frac{1}{k}\left(\frac{2A}{j\pi}\right)\]</div>
 <p>See <a class="reference internal" href="#ex-17-2"><span class="std std-ref">Example 17.2</span></a> and solution in <a class="reference internal" href="#sol-17-2"><span class="std std-ref">Solution to Example 17.2</span></a>.</p>
 </section>
 <section id="exponential-fourier-series-for-the-square-wave-with-odd-symmetry">
@@ -1620,7 +1621,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 </pre></section>
 <section id="example-17-2">
 <span id="ex-17-2"></span><h2>Example 17.2<a class="headerlink" href="#example-17-2" title="Permalink to this headline">#</a></h2>
-<p>Compute the Exponential Fourier Series for the square wave shown below in <a class="reference internal" href="#fig-ex-17-1"><span class="std std-numref">Fig. 74</span></a> assuming that <span class="math notranslate nohighlight">\(\omega = 1\)</span></p>
+<p>Compute the Exponential Fourier Series for the square wave shown in <a class="reference internal" href="#fig-ex-17-1"><span class="std std-numref">Fig. 74</span></a> assuming that <span class="math notranslate nohighlight">\(\Omega_0 = 1\)</span> rad/s.</p>
 <section id="some-questions-for-you">
 <h3>Some questions for you<a class="headerlink" href="#some-questions-for-you" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
@@ -1747,20 +1748,25 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 <li><p>What is the integral that needs to be solved for <span class="math notranslate nohighlight">\(C_k\)</span>?</p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[C_k = \frac{1}{2\pi}\int_{0}^{2\pi} f(\Omega_0 t)e^{-jk(\Omega_0 t)}\, d(\Omega_0 t) = \frac{1}{2\pi}\left[\int_{0}^{\pi} Ae^{-jk(\Omega_0 t)}\, d(\Omega_0 t) + \int_{\pi}^{2\pi} (-A)e^{-jk(\Omega_0 t)}\, d(\Omega_0 t)\right]\]</div>
+\[C_k = \frac{1}{2\pi}\int_{0}^{2\pi} f(\theta)e^{-jk\theta}\, d\theta = \frac{1}{2\pi}\left[\int_{0}^{\pi} Ae^{-jk\theta}\, d\theta + \int_{\pi}^{2\pi} (-A)e^{-jk\theta}\, d\theta\right]\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta = \Omega_0 t\)</span> rad.</p>
 </section>
 <section id="computation-of-c-k">
 <h3>Computation of <span class="math notranslate nohighlight">\(C_k\)</span><a class="headerlink" href="#computation-of-c-k" title="Permalink to this headline">#</a></h3>
 <div class="math notranslate nohighlight">
-\[\frac{1}{2\pi}\left[\int_{0}^{\pi} Ae^{-jk(\Omega_0 t)}\, d(\Omega_0 t) + \int_{\pi}^{2\pi} (-A)e^{-jk(\Omega_0 t)}\, d(\Omega_0 t)\right] = \frac{1}{2\pi}\left[\left.\frac{A}{-jk}e^{-jk(\Omega_0 t)}\right|_0^\pi+\left.\frac{-A}{-jk}e^{-jk(\Omega_0 t)}\right|_\pi^{2\pi}\right]\]</div>
+\[\frac{1}{2\pi}\left[\int_{0}^{\pi} Ae^{-jk\theta}\, d\theta + \int_{\pi}^{2\pi} (-A)e^{-jk\theta}\, d\theta\right] = \frac{1}{2\pi}\left[\left.\frac{A}{-jk}e^{-jk\theta}\right|_0^\pi+\left.\frac{-A}{-jk}e^{-jk\theta}\right|_\pi^{2\pi}\right]\]</div>
 <div class="math notranslate nohighlight">
 \[ = \frac{1}{2\pi}\left[\frac{A}{-jk}\left(e^{-jk\pi} - 1\right)+\frac{A}{jk}\left(e^{-j2k \pi}-e^{-jk\pi}\right)\right] =
 \frac{A}{2j\pi k}\left(1 - e^{-jk\pi}+ e^{-j2k \pi}-e^{-jk\pi}\right)\]</div>
 <div class="math notranslate nohighlight">
 \[\frac{A}{2j\pi k}\left(e^{-j2k \pi} - 2e^{-jk\pi} -1 \right) = \frac{A}{2j\pi k}\left(e^{-jk\pi}-1\right)^2\]</div>
-<p>For <span class="math notranslate nohighlight">\(k\)</span> odd*, <span class="math notranslate nohighlight">\(e^{-jk\pi} = -1\)</span>. Therefore</p>
+<p>For <span class="math notranslate nohighlight">\(k\)</span> even, <span class="math notranslate nohighlight">\(e^{-jk\pi} = +1\)</span>, <span class="math notranslate nohighlight">\(e^{-jk\pi}-1 = 0\)</span> and</p>
 <div class="math notranslate nohighlight">
-\[{C_k \atop {k=\mathrm{odd}}} = \frac{A}{2j\pi k}\left(e^{-jk\pi}-1\right)^2 = \frac{A}{2j\pi k}\left(-1-1\right)^2 = \frac{A}{2j\pi k}\left(-2\right)^2 = \frac{2A}{j\pi k}\]</div>
+\[{C_k\atop {k = \mathrm{even}}} = 0.\]</div>
+<p>For <span class="math notranslate nohighlight">\(k\)</span> odd*, <span class="math notranslate nohighlight">\(e^{-jk\pi} = -1\)</span>.</p>
+<p>Therefore</p>
+<div class="math notranslate nohighlight">
+\[{C_k \atop {k=\mathrm{odd}}} = \frac{A}{2j\pi k}\left(e^{-jk\pi}-1\right)^2 = \frac{A}{2j\pi k}\left(-1-1\right)^2 = \frac{A}{2j\pi k}\left(-2\right)^2 = \frac{2A}{j\pi k} = \frac{1}{k}\left(\frac{2A}{j\pi}\right)\]</div>
 </section>
 </section>
 </section>
