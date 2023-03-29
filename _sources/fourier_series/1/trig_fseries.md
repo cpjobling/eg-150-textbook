@@ -643,6 +643,14 @@ Make numeric and print to 4 sig. figs.
 slideshow:
   slide_type: notes
 ---
+ft
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: notes
+---
 ft_num = subs(ft,A,1.0);
 ft_num = vpa(ft_num, 4)
 ```

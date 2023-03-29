@@ -393,7 +393,7 @@ $C_{-k} = C_{k}^*$ **always**
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (fs2:eg)=
-## Computating the Exponential Fourier Series
+## Computing the Exponential Fourier Series
 
 Compute the exponential Fourier series (EFS) for the square wave shown in {numref}`fig:ex:17.1` assuming that $\Omega_0 = 1$ rad/s.
 
@@ -672,9 +672,67 @@ Solve the problem
 
 $${C_k \atop {k=\mathrm{even}}} = 0.$$
 
++++
+
+(ex:17.2)=
+
+### Example 17.3
+
+Consider the square wave shown in {numref}`fig:ex:17.3`.
+
+a) Compute the Fourier series coefficients $C_k$ for this signal.
+
+b) Give an expression for the trig. Fourier series for this signal.
+
+:::{figure-md} Fig:ex:17.3
+<img src="pictures/shifted_square_wave.png" alt="Periodic Waveform for Example 17.3" width="60%">
+
+Periodic Waveform for Example 17.3
+:::
+
++++
+
+(ex:17.4)=
+
+### Example 17.4
+
+Consider the pulsed periodic waveform with fundamental period $T_0$ shown in {numref}`fig:ex:17.4`.
+
+a) Compute the Fourier series coefficients $C_k$ for this signal.
+
+b) Give an expression for the trig. Fourier series for this signal.
+
+:::{figure-md} Fig:ex:17.4
+<img src="pictures/fig17_4.png" alt="Periodic Waveform for Example 17.4" width="60%">
+
+Periodic Waveform for Example 17.4
+:::
+
++++
+
+(ex:17.5)=
+
+### Example 17.5
+
+Consider the sawtooth periodic waveform with fundamental period $T_0$ shown in {numref}`fig:ex:17.5`.
+
+a) Compute the Fourier series coefficients $C_k$ for this signal.
+
+b) Give an expression for the trig. Fourier series for this signal.
+
+:::{figure-md} Fig:ex:17.5
+<img src="pictures/fig17_5.png" alt="Periodic Waveform for Example 17.5" width="60%">
+
+Periodic Waveform for Example 17.5
+:::
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## Summary
+
+In this unit we have extended our exploration of Fourier analysis by examining the properties of the exponential signal $x(t) = e^{at}$ which is used to simplify the compution of the Fourier series coefficients.
+
+We covered:
 
 * {ref}`fs2:expsignals`
 * {ref}`fs2:exp_fs`
@@ -685,6 +743,58 @@ $${C_k \atop {k=\mathrm{even}}} = 0.$$
 
 (unit5.2:takeaways)=
 ### Unit 5.2: Take Aways
+
+#### Exponential signals and stabilty
+
+The exponential signal $x(t) = e^{at}$  is one of the most important functions in signals and systems analysis. 
+* For continuous-time LTI systems, $x(t)=e^{st}$ is an eigenfunction of a system with impulse response $h(t)$ (see {ref}`eigenfunctions_of_continuous_time_LTI_systems`).
+* The impulse response of a continuous-time LTI system will be a linear combination of exponential signals. 
+
+In this unit, we examined the form of the signal $x(t)=e^{at}$ for $a$ is real ({ref}`fs2:a_real`), $a$ is imaginary $a = j\omega$ (see {ref}`fs2:a_imag`) and $a$ is complex $a = \sigma + j\sigma$ (see {ref}`fs2:a_complex`). It is also worth noting that a signal $x(t)$ is only bounded if $\mathrm{Re}\left\{a\right\} < 0$ and a continuous-time LTI system is BIBO stable only if all its poles have negative real part.
+
+#### Euler identities
+
+It is important to learn how to use the following identities which are named after mathematician [Leonhard Euler](https://en.wikipedia.org/wiki/Leonhard_Euler):
+
+$$e^{j\omega t} = \cos \omega t + j\sin \omega t$$
+
+$$e^{-j\omega t} = \cos \omega t - j\sin \omega t$$
+
+$$\cos \omega t = \frac{e^{j\omega t} + e^{-j\omega t}}{2}$$
+
+$$\sin \omega t = \frac{e^{j\omega t} - e^{-j\omega t}}{j2}$$
+
+#### Exponential Fourier series
+
+The exponential Fourier series is defined as:
+
+$$f(t) = \sum_{k=-N}^{N} C_k e^{jk\Omega_t}$$
+
+where $k$ are the integer harmonic numbers.
+
+The coefficients are computed from the integral
+
+$$C_k = \frac{1}{2\pi}\int_0^{2\pi}f(\theta)e^{-jk\theta}\,d\theta = \frac{1}{T_0}\int_0^{T_0}f(t)e^{-jk\Omega_0 t}\,dt$$
+
+where $T_0$ is the fundamental period of the periodic signal $f(t)$ and $\theta = \Omega_0 t$ where $\Omega_0$ is the angular frequency of the fundamental term ($k = 1$), and $\Omega_0 = 2\pi/T_0$.
+
+#### Properties of the exponential Fourier series coefficients
+
+* $C_k = C_{-k}^*$ - i.e. the coeffients of the negative harmonic frequencies are the complex conjugates of the positive harmomic frequencies.
+* Exponential Fourier series coefficients from the trig. Fourier series coefficents:
+ * $C_0 = a_0/2$
+ * $C_{-k} = \left(a_k + jb_k\right)/2$
+ * $C_{k} = \left(a_k - jb_k\right)/2$
+* Trig. Fourier series coefficients from the exponential Fourier series coefficents:
+ * $a_k = C_k + C_{-k}$
+ * $b_k = j\left(C_k - C_{-k}\right)$
+ 
+#### Symmetry
+
+* If $x(t)$ is odd, all coefficients $C_k$ are imaginary.
+* If $x(t)$ is real, all coefficients $C_k$ are real.
+* If $x(t)$ has half-wave symmetry, $C_k = 0$, for $k$ even.
+* If there is no symmetry $C_k$ are complex.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -703,6 +813,8 @@ We move on to consider
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## Homework
+
+To practice the computation of the expontial Fourier series, you should attempt the examples given below. To simplify the results you should take advantage of symmetry. Further simplifications will be found if you pay attention to the values of $e^{-jk\Omega_0 t}$ for particular angles $\theta = k\Omega_0 t$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

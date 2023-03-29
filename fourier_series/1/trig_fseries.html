@@ -1627,6 +1627,21 @@ f(t) = \frac{1}{2}{a_0} + \sum\limits_{n = 1}^\infty  {({a_n}\cos n\Omega_0 t + 
 <p>Make numeric and print to 4 sig. figs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">ft</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ft =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2*A*cos(2*t)*sin(pi))/pi + (4*A*sin(pi/2)*cos(t))/pi + (A*cos(4*t)*sin(2*pi))/pi + (4*A*cos(3*t)*sin((3*pi)/2))/(3*pi) + (2*A*cos(6*t)*sin(3*pi))/(3*pi) + (4*A*cos(5*t)*sin((5*pi)/2))/(5*pi) + (A*cos(8*t)*sin(4*pi))/(2*pi) + (2*A*cos(10*t)*sin(5*pi))/(5*pi) + (4*A*cos(7*t)*sin((7*pi)/2))/(7*pi) + (4*A*cos(9*t)*sin((9*pi)/2))/(9*pi) + (4*A*cos(11*t)*sin((11*pi)/2))/(11*pi)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">ft_num</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">subs</span><span class="p">(</span><span class="n">ft</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="mf">1.0</span><span class="p">);</span>
 <span class="n">ft_num</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">vpa</span><span class="p">(</span><span class="n">ft_num</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
@@ -1658,7 +1673,7 @@ f(t) = \frac{1}{2}{a_0} + \sum\limits_{n = 1}^\infty  {({a_n}\cos n\Omega_0 t + 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/trig_fseries_85_0.png" src="../../_images/trig_fseries_85_0.png" />
+<img alt="../../_images/trig_fseries_86_0.png" src="../../_images/trig_fseries_86_0.png" />
 </div>
 </div>
 <ul class="simple">
