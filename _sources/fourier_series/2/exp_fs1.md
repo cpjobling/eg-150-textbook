@@ -683,7 +683,7 @@ $${C_k \atop {k=\mathrm{even}}} = 0.$$
 * {ref}`fs2:matlab`
 * {ref}`examples17`
 
-(unit:5.2_takeaways)=
+(unit5.2:takeaways)=
 ### Unit 5.2: Take Aways
 
 +++ {"slideshow": {"slide_type": "notes"}}
