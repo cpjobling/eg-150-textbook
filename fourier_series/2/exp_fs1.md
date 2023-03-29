@@ -372,8 +372,6 @@ By a similar argument, all odd functions have no cosine terms so the $a_k$ coeff
 
 If there is *half-wave symmetry*, $C_k = 0$ for $k$ even.
 
-For the proof see the notes.
-
 +++ {"slideshow": {"slide_type": "notes"}}
 
 **Proof**
