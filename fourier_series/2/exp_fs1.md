@@ -33,7 +33,7 @@ However, by exploiting the exponential function $e^{at}$, we can derive a method
 
 The result is called the *Exponential Fourier Series*.
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Agenda
 
@@ -181,7 +181,7 @@ sgtitle('x(t) = exp(\sigma + j\omega t), \sigma > 0')
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Then signal $x(t)$ in Eq. {eq}`eq:fs2:1` is known as a general complex exponential signal whose real part $e^{\sigma t}\sin\omega t$ and imaginary part $e^{\sigma t}\sin \omega t$ are exponentially increasing ($σ > 0$) or decreasing ($σ < 0$) sinusoidal signals .
+Then signal $x(t)$ in Eq. {eq}`eq:fs2:1` is known as a general complex exponential signal whose real part $e^{\sigma t}\sin\omega t$ and imaginary part $e^{\sigma t}\sin \omega t$ are exponentially increasing ($σ > 0$) or decreasing ($σ < 0$) sinusoidal signals.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -201,7 +201,7 @@ is a *complex exponential*.
 
 The poles of a rational polynomial in $s$ will exhibit one of the properties discussed above. Therefore, for any system whose poles are known, we can reason about the likely response of the system. 
 
-For stable systems, the real part of the pole will be negative so the response will be a linear combination of exponential delays or exponentially decaying sinusoids.
+For stable systems, the real part of the pole will be negative so the response will be a linear combination of exponential decays or exponentially decaying sinusoids.
 
 The overall response of a system will depend on the relative size of the real part of the real or complex poles and the frequency of the imaginary parts of the complex poles and is also influenced by the size of the partial fraction residues.
 
@@ -225,7 +225,7 @@ $$\sin \omega t = \frac{e^{j\omega t} - e^{-j\omega t}}{j2}$$ (eq:fs2:3)
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-We can use this result to convert the *Trigonometric Fourier Series* into an *Exponential Fourier Series* which has only one integral term to solve per harmonic.
+We can use these identities to convert the *Trigonometric Fourier Series* into an *Exponential Fourier Series* which has only one integral term to solve per harmonic.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -325,14 +325,14 @@ so
 
 $$b_k = j\left(C_k - C_{-k}\right)$$ (ex:fs2:14)
 
-Thus we can easily go back to the Trigonetric Fourier series if we want to.
+Thus we can easily go back to the trigonometric Fourier series, e.g. to visualize the harmonic approximation, if we need to.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (fs2:symmetry)=
 ## Symmetry in Exponential Fourier Series
 
-Since the coefficients of the Exponential Fourier Series are complex numbers, we can use symmetry to determine the form of the coefficients and thereby simplify the computation of series for wave forms that have symmetry.
+Since the coefficients of the exponential Fourier series are complex numbers, we can use symmetry to determine the form of the coefficients and thereby simplify the computation of the series for wave forms that have symmetry.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -340,7 +340,7 @@ Since the coefficients of the Exponential Fourier Series are complex numbers, we
 
 For even functions, all coefficients $C_k$ are real.
 
-+++ {"slideshow": {"slide_type": "notes"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 **Proof**
 
@@ -352,7 +352,7 @@ and
 
 $$C_k = \frac{1}{2}\left(a_k+\frac{b_k}{j}\right) = \frac{1}{2}\left(a_k-jb_k\right)$$
 
-From knowledge of the trig. fourier series, even functions have no sine terms so the $b_k$ coefficients are 0. Therefore both $C_{-k}$ and $C_k$ are real.
+From knowledge of the trig. Fourier series, even functions have no sine terms so the $b_k$ coefficients are 0. Therefore both $C_{-k}$ and $C_k$ are real.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -362,6 +362,8 @@ For odd functions, all coefficients $C_k$ are imaginary.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+**Proof**
+
 By a similar argument, all odd functions have no cosine terms so the $a_k$ coefficients are 0. Therefore both $C_{-k}$ and $C_k$ are imaginary.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -370,13 +372,11 @@ By a similar argument, all odd functions have no cosine terms so the $a_k$ coeff
 
 If there is *half-wave symmetry*, $C_k = 0$ for $k$ even.
 
-For the proof see the notes.
-
 +++ {"slideshow": {"slide_type": "notes"}}
 
 **Proof**
 
-From Trigonometric Fourier Series, if there is half-wave symmetry, all even harnonics are zero, thus both $a_k$ and $b_k$ are zero for $k$ even. Hence $C_{-k}$ and $C_k$ are also zero when $k$ is even.
+From trig. Fourier series, if there is half-wave symmetry, all even harnonics are zero, thus both $a_k$ and $b_k$ are zero for $k$ even. Hence $C_{-k}$ and $C_k$ are also zero when $k$ is even.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -393,9 +393,9 @@ $C_{-k} = C_{k}^*$ **always**
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (fs2:eg)=
-## Computating the Exponential Fourier Series
+## Computing the Exponential Fourier Series
 
-Compute the exponential Fourier series (EFS) for the square wave shown in {numref}`fig:ex:17.1` assuming that $\omega = 1$
+Compute the exponential Fourier series (EFS) for the square wave shown in {numref}`fig:ex:17.1` assuming that $\Omega_0 = 1$ rad/s.
 
 :::{figure-md} Fig:ex:17.1
 <img src="pictures/sqw.png" alt="Squarewave with odd-symmetry" width="60%">
@@ -411,10 +411,9 @@ It will be shown that
 
 $${C_k \atop {k=\mathrm{even}}} =  0$$
 
-$${C_k \atop {k=\mathrm{odd}}} =  \frac{2A}{j\pi k}$$
+$${C_k \atop {k=\mathrm{odd}}} =  \frac{1}{k}\left(\frac{2A}{j\pi}\right)$$
 
-
-See {ref}`ex:17.1` and solution in {ref}`sol:17.1`.
+See {ref}`ex:17.2` and solution in {ref}`sol:17.2`.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -467,7 +466,7 @@ Solution calculates the Exponential Fourier for a Square Wave with Odd Symmetry.
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
 cd ../matlab
 format compact
@@ -481,7 +480,7 @@ Set up parameters
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
 syms t A;
 
@@ -499,7 +498,7 @@ Define f(t)
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
 xt = A*(heaviside(t)-heaviside(t-T0/2)) - A*(heaviside(t-T0/2)-heaviside(t-T0));
 ```
@@ -511,7 +510,7 @@ Compute EFS
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
 [X, w] = FourierSeries(xt, T0, k_vec)
 ```
@@ -520,12 +519,14 @@ slideshow:
 
 Plot the numerical results from MATLAB calculation.
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 Convert symbolic to numeric result
 
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
 Xw = subs(X,A,1);
 ```
@@ -593,10 +594,10 @@ These are useful when simplifying expressions that result from integrating funct
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(ex17.2)
+(ex:17.2)=
 ## Example 17.2
 
-Compute the Exponential Fourier Series for the square wave shown below in {numref}`fig:ex:17.1` that $\omega = 1$
+Compute the Exponential Fourier Series for the square wave shown in {numref}`fig:ex:17.1` assuming that $\Omega_0 = 1$ rad/s.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -671,9 +672,67 @@ Solve the problem
 
 $${C_k \atop {k=\mathrm{even}}} = 0.$$
 
++++
+
+(ex:17.2)=
+
+### Example 17.3
+
+Consider the square wave shown in {numref}`fig:ex:17.3`.
+
+a) Compute the Fourier series coefficients $C_k$ for this signal.
+
+b) Give an expression for the trig. Fourier series for this signal.
+
+:::{figure-md} Fig:ex:17.3
+<img src="pictures/shifted_square_wave.png" alt="Periodic Waveform for Example 17.3" width="60%">
+
+Periodic Waveform for Example 17.3
+:::
+
++++
+
+(ex:17.4)=
+
+### Example 17.4
+
+Consider the pulsed periodic waveform with fundamental period $T_0$ shown in {numref}`fig:ex:17.4`.
+
+a) Compute the Fourier series coefficients $C_k$ for this signal.
+
+b) Give an expression for the trig. Fourier series for this signal.
+
+:::{figure-md} Fig:ex:17.4
+<img src="pictures/fig17_4.png" alt="Periodic Waveform for Example 17.4" width="60%">
+
+Periodic Waveform for Example 17.4
+:::
+
++++
+
+(ex:17.5)=
+
+### Example 17.5
+
+Consider the sawtooth periodic waveform with fundamental period $T_0$ shown in {numref}`fig:ex:17.5`.
+
+a) Compute the Fourier series coefficients $C_k$ for this signal.
+
+b) Give an expression for the trig. Fourier series for this signal.
+
+:::{figure-md} Fig:ex:17.5
+<img src="pictures/fig17_5.png" alt="Periodic Waveform for Example 17.5" width="60%">
+
+Periodic Waveform for Example 17.5
+:::
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## Summary
+
+In this unit we have extended our exploration of Fourier analysis by examining the properties of the exponential signal $x(t) = e^{at}$ which is used to simplify the compution of the Fourier series coefficients.
+
+We covered:
 
 * {ref}`fs2:expsignals`
 * {ref}`fs2:exp_fs`
@@ -682,7 +741,60 @@ $${C_k \atop {k=\mathrm{even}}} = 0.$$
 * {ref}`fs2:matlab`
 * {ref}`examples17`
 
-### Take Aways
+(unit5.2:takeaways)=
+### Unit 5.2: Take Aways
+
+#### Exponential signals and stabilty
+
+The exponential signal $x(t) = e^{at}$  is one of the most important functions in signals and systems analysis. 
+* For continuous-time LTI systems, $x(t)=e^{st}$ is an eigenfunction of a system with impulse response $h(t)$ (see {ref}`eigenfunctions_of_continuous_time_LTI_systems`).
+* The impulse response of a continuous-time LTI system will be a linear combination of exponential signals. 
+
+In this unit, we examined the form of the signal $x(t)=e^{at}$ for $a$ is real ({ref}`fs2:a_real`), $a$ is imaginary $a = j\omega$ (see {ref}`fs2:a_imag`) and $a$ is complex $a = \sigma + j\sigma$ (see {ref}`fs2:a_complex`). It is also worth noting that a signal $x(t)$ is only bounded if $\mathrm{Re}\left\{a\right\} < 0$ and a continuous-time LTI system is BIBO stable only if all its poles have negative real part.
+
+#### Euler identities
+
+It is important to learn how to use the following identities which are named after mathematician [Leonhard Euler](https://en.wikipedia.org/wiki/Leonhard_Euler):
+
+$$e^{j\omega t} = \cos \omega t + j\sin \omega t$$
+
+$$e^{-j\omega t} = \cos \omega t - j\sin \omega t$$
+
+$$\cos \omega t = \frac{e^{j\omega t} + e^{-j\omega t}}{2}$$
+
+$$\sin \omega t = \frac{e^{j\omega t} - e^{-j\omega t}}{j2}$$
+
+#### Exponential Fourier series
+
+The exponential Fourier series is defined as:
+
+$$f(t) = \sum_{k=-N}^{N} C_k e^{jk\Omega_t}$$
+
+where $k$ are the integer harmonic numbers.
+
+The coefficients are computed from the integral
+
+$$C_k = \frac{1}{2\pi}\int_0^{2\pi}f(\theta)e^{-jk\theta}\,d\theta = \frac{1}{T_0}\int_0^{T_0}f(t)e^{-jk\Omega_0 t}\,dt$$
+
+where $T_0$ is the fundamental period of the periodic signal $f(t)$ and $\theta = \Omega_0 t$ where $\Omega_0$ is the angular frequency of the fundamental term ($k = 1$), and $\Omega_0 = 2\pi/T_0$.
+
+#### Properties of the exponential Fourier series coefficients
+
+* $C_k = C_{-k}^*$ - i.e. the coeffients of the negative harmonic frequencies are the complex conjugates of the positive harmomic frequencies.
+* Exponential Fourier series coefficients from the trig. Fourier series coefficents:
+ * $C_0 = a_0/2$
+ * $C_{-k} = \left(a_k + jb_k\right)/2$
+ * $C_{k} = \left(a_k - jb_k\right)/2$
+* Trig. Fourier series coefficients from the exponential Fourier series coefficents:
+ * $a_k = C_k + C_{-k}$
+ * $b_k = j\left(C_k - C_{-k}\right)$
+ 
+#### Symmetry
+
+* If $x(t)$ is odd, all coefficients $C_k$ are imaginary.
+* If $x(t)$ is real, all coefficients $C_k$ are real.
+* If $x(t)$ has half-wave symmetry, $C_k = 0$, for $k$ even.
+* If there is no symmetry $C_k$ are complex.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -701,6 +813,8 @@ We move on to consider
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## Homework
+
+To practice the computation of the expontial Fourier series, you should attempt the examples given below. To simplify the results you should take advantage of symmetry. Further simplifications will be found if you pay attention to the values of $e^{-jk\Omega_0 t}$ for particular angles $\theta = k\Omega_0 t$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -722,7 +836,7 @@ It is also worth being aware that $n\omega t$, when $n$ is an integer, produces 
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-(sol:17.1)=
+(sol:17.2)=
 ### Solution to Example 17.2
 
 * Square wave is an **odd** function!
@@ -736,19 +850,31 @@ Hence
 * Subscripts $k$ are **odd only**!
 * What is the integral that needs to be solved for $C_k$?
 
-$$C_k = \frac{1}{2\pi}\int_{0}^{2\pi} f(\Omega_0 t)e^{-jk(\Omega_0 t)}\, d(\Omega_0 t) = \frac{1}{2\pi}\left[\int_{0}^{\pi} Ae^{-jk(\Omega_0 t)}\, d(\Omega_0 t) + \int_{\pi}^{2\pi} (-A)e^{-jk(\Omega_0 t)}\, d(\Omega_0 t)\right]$$
+$$C_k = \frac{1}{2\pi}\int_{0}^{2\pi} f(\theta)e^{-jk\theta}\, d\theta = \frac{1}{2\pi}\left[\int_{0}^{\pi} Ae^{-jk\theta}\, d\theta + \int_{\pi}^{2\pi} (-A)e^{-jk\theta}\, d\theta\right]$$
+
+where $\theta = \Omega_0 t$ rad.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ### Computation of $C_k$
 
-$$\frac{1}{2\pi}\left[\int_{0}^{\pi} Ae^{-jk(\Omega_0 t)}\, d(\Omega_0 t) + \int_{\pi}^{2\pi} (-A)e^{-jk(\Omega_0 t)}\, d(\Omega_0 t)\right] = \frac{1}{2\pi}\left[\left.\frac{A}{-jk}e^{-jk(\Omega_0 t)}\right|_0^\pi+\left.\frac{-A}{-jk}e^{-jk(\Omega_0 t)}\right|_\pi^{2\pi}\right]$$
+$$\frac{1}{2\pi}\left[\int_{0}^{\pi} Ae^{-jk\theta}\, d\theta + \int_{\pi}^{2\pi} (-A)e^{-jk\theta}\, d\theta\right] = \frac{1}{2\pi}\left[\left.\frac{A}{-jk}e^{-jk\theta}\right|_0^\pi+\left.\frac{-A}{-jk}e^{-jk\theta}\right|_\pi^{2\pi}\right]$$
 
 $$ = \frac{1}{2\pi}\left[\frac{A}{-jk}\left(e^{-jk\pi} - 1\right)+\frac{A}{jk}\left(e^{-j2k \pi}-e^{-jk\pi}\right)\right] =
 \frac{A}{2j\pi k}\left(1 - e^{-jk\pi}+ e^{-j2k \pi}-e^{-jk\pi}\right)$$
 
 $$\frac{A}{2j\pi k}\left(e^{-j2k \pi} - 2e^{-jk\pi} -1 \right) = \frac{A}{2j\pi k}\left(e^{-jk\pi}-1\right)^2$$
 
-For $k$ odd*, $e^{-jk\pi} = -1$. Therefore
+For $k$ even, $e^{-jk\pi} = +1$, $e^{-jk\pi}-1 = 0$ and 
 
-$${C_k \atop {k=\mathrm{odd}}} = \frac{A}{2j\pi k}\left(e^{-jk\pi}-1\right)^2 = \frac{A}{2j\pi k}\left(-1-1\right)^2 = \frac{A}{2j\pi k}\left(-2\right)^2 = \frac{2A}{j\pi k}$$
+$${C_k\atop {k = \mathrm{even}}} = 0.$$ 
+
+For $k$ odd*, $e^{-jk\pi} = -1$. 
+
+Therefore
+
+$${C_k \atop {k=\mathrm{odd}}} = \frac{A}{2j\pi k}\left(e^{-jk\pi}-1\right)^2 = \frac{A}{2j\pi k}\left(-1-1\right)^2 = \frac{A}{2j\pi k}\left(-2\right)^2 = \frac{2A}{j\pi k} = \frac{1}{k}\left(\frac{2A}{j\pi}\right)$$
+
+```{code-cell}
+
+```

@@ -30,11 +30,17 @@ Follow along at [cpjobling.github.io/eg-150-textbook/fourier_series/1/trig_fseri
 (fs1:intro)=
 ## Introduction
 
-Any periodic waveform with *fundamental frequency* $\Omega_0 = 2\pi F_0$ can be approximated by a DC component (which may be 0) and the sum of sinusoidal waveforms at the fundamental and *integer multiples* of the fundamental frequency. 
+Any periodic waveform with *fundamental frequency* $\Omega_0 = 2\pi f_0$ can be approximated by a DC component (which may be 0) and the sum of sinusoidal waveforms at the fundamental and *integer multiples* of the fundamental frequency.
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 These integer multiples of the fundamental frequency $2\Omega_0$, $3\Omega_0$, $4\Omega_0$, $\ldots,\ \Omega_N$ are called the *harmonic frequencies*.
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 The approximation of a periodic waveform by a sum of *harmonic waveforms*, is known as *Fourier analysis*.
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Fourier analysis has important applications in many branches of electronics but is particularly crucial for signal processing and communications.
 
@@ -46,9 +52,9 @@ Fourier analysis has important applications in many branches of electronics but 
 
 * {ref}`fs1:periodic_signals`
 
-* {ref}`fs1:motivation`
-
 * {ref}`fs1:wave_analysis`
+
+* {ref}`fs1:trig_fs`
 
 * {ref}`fs1:symmetry`
 
@@ -67,22 +73,41 @@ In {ref}`periodic_signals` we defined a continuous-time signal $x(t)$ to be peri
 
 $$x(t + nT) = x(t)\qquad\mathrm{all}\ t$$ (eq:fs1:1)
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 The *fundamental period* $T_0$ of $x(t)$ is the smallest positive value of $T$ for which Eq. {eq}`eq:fs1:1` is satisfied, and $1/T_0 = ƒ_0$ is referred to as the *fundamental frequency*.
+
++++ {"slideshow": {"slide_type": "slide"}}
 
 Two basic examples of periodic signals are the real sinusoidal signal
 
 $$x(t) = \cos\left(\Omega_0 t + \phi\right)$$ (eq:fs1:2)
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 and the complex exponential signal
 
-$$x(t) = e^{j\Omega t}$$ (eq:fs1:3)
+$$x(t) = e^{j\Omega_0 t}$$ (eq:fs1:3)
+
++++ {"slideshow": {"slide_type": "slide"}}
 
 where $\Omega_0 = 2\pi/T_0 = 2\piƒ_0$ is called the *fundamental angular frequency*.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(fs1:wave_analysis)=
+## Wave Analysis
+
+* [Jean Baptiste Joseph Fourier](https://en.wikipedia.org/wiki/Joseph_Fourier) (21 March 1768 – 16 May 1830) discovered that any _**periodic**_ signal could be represented as a series of *harmonically related* sinusoids.
+
+* An *harmonic* is a frequency whose value is an integer multiple of some *fundamental frequency*
+
+* For example, the frequencies 2 MHz, 3 Mhz, 4 MHz are the second, third and fourth harmonics of a sinusoid with fundamental frequency 1 Mhz.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
 (fs1:motivation)=
-## Motivating Examples
+### Motivating Examples
 
 This [Fourier Series demo](http://dspfirst.gatech.edu/matlab/#fseriesdemo), developed by Members of the Center for Signal and Image Processing (CSIP) at the [School of Electrical and Computer Engineering](https://www.ece.gatech.edu/) at the [Georgia Institute of Technology](https://www.gatech.edu/), shows how periodic signals can be synthesised by a sum of sinusoidal signals.
 
@@ -92,7 +117,7 @@ To install this example, download the [zip file](http://dspfirst.gatech.edu/matl
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Demo 1
+#### Demo 1
 
 Building up wave forms from sinusoids.
 
@@ -106,7 +131,7 @@ fseriesdemo
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Demo 2
+#### Demo 2
 
 Actual measurements
 
@@ -118,25 +143,25 @@ Note all spectra shown in these slides are generated numerically from the input 
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### 1 kHz Sinewave
+##### 1 kHz Sinewave
 
 ![A 1 kHz sinewave](pictures/1kHz_Sinewave.png "A 1kHz sinewave")
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### Spectrum of 1kHz sinewave
+##### Spectrum of 1kHz sinewave
 
 ![Spectrum of 1kHz sinewave. Note one line at fundamental frequency.](pictures/fft_of_sinwave.png "Spectrum of 1kHz sinewave. Note one line at fundamental frequency.")
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### 1 kHz Squarewave
+##### 1 kHz Squarewave
 
 ![A 1 kHz square wave](pictures/1kHz_sqr.png "A 1kHz square wave.")
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### Spectrum of 1kHz square wave
+##### Spectrum of 1kHz square wave
 
 ![Spectrum of 1kHz sinewave. Note only odd harmonics present.](pictures/FFT_sqr.png "Spectrum of 1kHz square wave. Note only odd harmonics present.")
 
@@ -146,7 +171,7 @@ Clearly showing peaks at fundamental, 1/3, 1/5, 1/7 and 1/9 at 3rd, 5th and 7th 
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### 1 kHz triangle waveform
+##### 1 kHz triangle waveform
 
 ![A 1 kHz triangle waveform](pictures/1kHz_saw.png "A 1 kHz triangle waveform")
 
@@ -160,20 +185,10 @@ Clearly showing peaks at fundamental, 1/3, 1/5, 1/7 and 1/9 at 3rd, 5th and 7th 
 
 Clearly showing peaks at fundamental, 1/9, 1/25, 1/7 and 1/49 at 3rd, 5th and 7th harmonic frequencies. Note for the triangle waveform, harmonics decline in amplitude as the reciprocal of the square of $n$.
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-(fs1:wave_analysis)=
-## Wave Analysis
-
-* [Jean Baptiste Joseph Fourier](https://en.wikipedia.org/wiki/Joseph_Fourier) (21 March 1768 – 16 May 1830) discovered that any _**periodic**_ signal could be represented as a series of *harmonically related* sinusoids.
-
-* An *harmonic* is a frequency whose value is an integer multiple of some *fundamental frequency*
-
-* For example, the frequencies 2 MHz, 3 Mhz, 4 MHz are the second, third and fourth harmonics of a sinusoid with fundamental frequency 1 Mhz.
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### The Trigonometric Fourier Series
+(fs1:trig_fs)=
+## The Trigonometric Fourier Series
 
 Any periodic waveform $f(t)$ can be represented as
 
@@ -184,17 +199,19 @@ $$
 \end{eqnarray*}
 $$ (eq:fs1:4)
 
-or equivalently (if more confusingly)
+where $\Omega_0$ rad/s is the *fundamental frequency*.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+This is often written as a summation
 
 $$
 f(t) = \frac{1}{2}{a_0} + \sum\limits_{n = 1}^\infty  {({a_n}\cos n\Omega_0 t + {b_n}\sin n\Omega_0 t)}
 $$ (eq:fs1:5)
 
-where $\Omega_0$ rad/s is the *fundamental frequency*.
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Notation
+#### Notation
 
 * The first term $a_o/2$ is a constant and represents the DC (average) component of the signal $f(t)$
 * The terms with coefficients $a_1$ and $b_1$ together represent the fundamental frequency component of $f(t)$ at frequency $\Omega_0$.
@@ -222,7 +239,7 @@ To generate this picture use [fourier_series1.m](https://cpjobling.github.io/eg-
 
 The coefficients are obtained from the following expressions (valid for any periodic waveform with fundamental frequency $\Omega_0$ so long as we integrate over one period $0\to T_0$ where $T_0 = 2\pi/\Omega_0$), and $\theta = \Omega_0 t$:
 
-$$\frac{1}{2}a_0 = \frac{1}{T_0}\int_{0}^{T_0}f(t)d t = \frac{1}{\pi}\int_{0}^{2\pi}f(\theta )d \theta$$ (eq:fs1:6)
+$$\frac{1}{2}a_0 = \frac{1}{T_0}\int_{0}^{T_0}f(t)d t = \frac{1}{2\pi}\int_{0}^{2\pi}f(\theta )d \theta$$ (eq:fs1:6)
 
 $$a_n = \frac{1}{T_0}\int_{0}^{T_0}f(t)\cos n\Omega_0 t\,dt = \frac{1}{2\pi}\int_{0}^{2\pi}f(\theta)\cos n\theta\,d\theta$$ (eq:fs1:7)
 
@@ -257,6 +274,7 @@ There are simplifications we can make if the original periodic properties has ce
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(fs1:consequences)=
 ### Some simplifications that result from symmetry
 
 * The limits of the integrals used to compute the coefficents $a_n$ and $b_n$ of the Fourier series are given as $0\to 2\pi$ which is one period $T$
@@ -625,6 +643,14 @@ Make numeric and print to 4 sig. figs.
 slideshow:
   slide_type: notes
 ---
+ft
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: notes
+---
 ft_num = subs(ft,A,1.0);
 ft_num = vpa(ft_num, 4)
 ```
@@ -668,15 +694,15 @@ $$f(t) = \frac{4A}{\pi}\left(\cos \Omega_0 t - \frac{1}{3}\cos 3\Omega_0 t + \fr
 (fs1:summary)=
 ## Summary
 
-In this unit we ...
+In this unit we have introduced the idea of Fourier analysis which allows us to view the properties of a periodic signal in the frequency domain. We have covered the following:
 
 * {ref}`fs1:intro`
 
 * {ref}`fs1:periodic_signals`
 
-* {ref}`fs1:motivation`
-
 * {ref}`fs1:wave_analysis`
+
+* {ref}`fs1:trig_fs`
 
 * {ref}`fs1:symmetry`
 
@@ -687,7 +713,47 @@ In this unit we ...
 * {ref}`examples16`
 
 (unit5.1:takeaways)=
-### Takeaways
+### Unit 5.1: Takeaways
+
+#### Periodic signals
+
+* *Periodic signals* satisfy the relationship $x(t + nT) = x(t)$ for all $t$. 
+* The fundamental period $T_0$ (s) of $x(t)$ is the smallest value of $T$ for which the periodicity relationship holds. 
+* The *fundamental frequency* $f_0 = 1/T_0$ (Hz or $\mathrm{s}^{-1}$). 
+* The *fundamental angular frequency* is $\Omega_0 = 2\pi f_0 = 2\pi/T_0$ ($\mathrm{rad.s}^{-1}$ or rad/s).
+
+See {ref}`fs1:periodic_signals`.
+
+
+#### Wave analysis
+
+Was discovered by Fourier in the 18th Century. Fourier discovered that any periodic signal could be represented by a series of *harmonically related sinusoids*. See {ref}`fs1:wave_analysis`.
+
+#### Trigonometric Fourier series
+
+Any periodic signal $f(t)$ can be approximated by harmonically related sinusoids defined in Eq. {eq}`eq:fs1:5`
+
+$$f(t) = \frac{1}{2}{a_0} + \sum\limits_{n = 1}^\infty  {({a_n}\cos n\Omega_0 t + {b_n}\sin n\Omega_0 t)}$$
+
+The coefficients of the Fourier series $a_0$, $a_k$ and $b_k$ are computed using the integrals defined in Eqs. {eq}`eq:fs1:6`, {eq}`eq:fs1:7` and {eq}`eq:fs1:8`.
+
+See {ref}`fs1:trig_fs` for more detail.
+
+#### Symmetry
+
+* Because $\cos(k\Omega_0 t)$ is an *even function*, the coefficients of the trig. Fourier series $b_k\sin\left(k\Omega_0 t\right)$, which is odd, are zero for an even periodic function for which $f(t) = f(-t)$.
+* Because $\sin(k\Omega_0 t)$ is an *odd function*, the coefficients of the trig. Fourier series $a_k\cos\left(k\Omega_0 t\right)$, which is even, are zero for an odd periodic function for which $f(t) = -f(-t)$. By definition, if $f(t)$ is odd, $a_0$ must be zero.
+* If $f(t)$ has half-wave symmetry $f(t) = -f(t - T/2)$, the even numbered coefficients $a_k$ and $b_k$ will be zero.
+
+The consequences of symmetry, which can simplify the computation of the trig. Fourier series coefficents are summarized in {ref}`fs1:consequences`.
+
+#### Computing the trig. Fourier series coefficients with MATLAB
+
+A MATLAB app that can be used to explore Fourier Analysis is `fseriesdemo` presented in {ref}`fs1:motivation` and demonstrated in the lecture.
+
+We would not expect you to compute the coefficients of the trig. Fourier series by hand. We have provided examples of how the coefficents can be computed using the `int` (integral) function from the symbolic math toolbox. See {ref}`fs1:matlab` and {ref}`ex:16.3`.
+
+In the next unit {ref}`unit5.2` we reference two MATLAB functions [FourierSeries.m](https://github.com/cpjobling/eg-150-textbook/raw/main/fourier_series/matlab/FourierSeries.m) and [TrigFourierSeries.m](https://raw.githubusercontent.com/cpjobling/eg-150-textbook/main/fourier_series/matlab/TrigFourierSeries.m) which will do these computations automatically for any integrable periodic function $f(t)$ that can be defined symbolically over one period $[0,\dots,T_0]$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
