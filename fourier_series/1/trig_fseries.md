@@ -274,6 +274,7 @@ There are simplifications we can make if the original periodic properties has ce
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(fs1:consequences)=
 ### Some simplifications that result from symmetry
 
 * The limits of the integrals used to compute the coefficents $a_n$ and $b_n$ of the Fourier series are given as $0\to 2\pi$ which is one period $T$
@@ -685,7 +686,7 @@ $$f(t) = \frac{4A}{\pi}\left(\cos \Omega_0 t - \frac{1}{3}\cos 3\Omega_0 t + \fr
 (fs1:summary)=
 ## Summary
 
-In this unit we ...
+In this unit we have introduced the idea of Fourier analysis which allows us to view the properties of a periodic signal in the frequency domain. We have covered the following:
 
 * {ref}`fs1:intro`
 
@@ -726,9 +727,25 @@ Any periodic signal $f(t)$ can be approximated by harmonically related sinusoids
 
 $$f(t) = \frac{1}{2}{a_0} + \sum\limits_{n = 1}^\infty  {({a_n}\cos n\Omega_0 t + {b_n}\sin n\Omega_0 t)}$$
 
-The coefficients of the Fourier series $a_0$, $a_k$ and $b_k$ are computed using the integrals defined in Eqs. {eq}`eq:fs1:6`, {eq}`eq:fs1:7` and {eq}`eq:fs1:7`.
+The coefficients of the Fourier series $a_0$, $a_k$ and $b_k$ are computed using the integrals defined in Eqs. {eq}`eq:fs1:6`, {eq}`eq:fs1:7` and {eq}`eq:fs1:8`.
 
 See {ref}`fs1:trig_fs` for more detail.
+
+#### Symmetry
+
+* Because $\cos(k\Omega_0 t)$ is an *even function*, the coefficients of the trig. Fourier series $b_k\sin\left(k\Omega_0 t\right)$, which is odd, are zero for an even periodic function for which $f(t) = f(-t)$.
+* Because $\sin(k\Omega_0 t)$ is an *odd function*, the coefficients of the trig. Fourier series $a_k\cos\left(k\Omega_0 t\right)$, which is even, are zero for an odd periodic function for which $f(t) = -f(-t)$. By definition, if $f(t)$ is odd, $a_0$ must be zero.
+* If $f(t)$ has half-wave symmetry $f(t) = -f(t - T/2)$, the even numbered coefficients $a_k$ and $b_k$ will be zero.
+
+The consequences of symmetry, which can simplify the computation of the trig. Fourier series coefficents are summarized in {ref}`fs1:consequences`.
+
+#### Computing the trig. Fourier series coefficients with MATLAB
+
+A MATLAB app that can be used to explore Fourier Analysis is `fseriesdemo` presented in {ref}`fs1:motivation` and demonstrated in the lecture.
+
+We would not expect you to compute the coefficients of the trig. Fourier series by hand. We have provided examples of how the coefficents can be computed using the `int` (integral) function from the symbolic math toolbox. See {ref}`fs1:matlab` and {ref}`ex:16.3`.
+
+In the next unit {ref}`unit5.2` we reference two MATLAB functions [FourierSeries.m](https://github.com/cpjobling/eg-150-textbook/raw/main/fourier_series/matlab/FourierSeries.m) and [TrigFourierSeries.m](https://raw.githubusercontent.com/cpjobling/eg-150-textbook/main/fourier_series/matlab/TrigFourierSeries.m) which will do these computations automatically for any integrable periodic function $f(t)$ that can be defined symbolically over one period $[0,\dots,T_0]$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
