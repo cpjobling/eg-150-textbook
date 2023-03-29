@@ -706,6 +706,30 @@ In this unit we ...
 (unit5.1:takeaways)=
 ### Unit 5.1: Takeaways
 
+#### Periodic signals
+
+* *Periodic signals* satisfy the relationship $x(t + nT) = x(t)$ for all $t$. 
+* The fundamental period $T_0$ (s) of $x(t)$ is the smallest value of $T$ for which the periodicity relationship holds. 
+* The *fundamental frequency* $f_0 = 1/T_0$ (Hz or $\mathrm{s}^{-1}$). 
+* The *fundamental angular frequency* is $\Omega_0 = 2\pi f_0 = 2\pi/T_0$ ($\mathrm{rad.s}^{-1}$ or rad/s).
+
+See {ref}`fs1:periodic_signals`.
+
+
+#### Wave analysis
+
+Was discovered by Fourier in the 18th Century. Fourier discovered that any periodic signal could be represented by a series of *harmonically related sinusoids*. See {ref}`fs1:wave_analysis`.
+
+#### Trigonometric Fourier series
+
+Any periodic signal $f(t)$ can be approximated by harmonically related sinusoids defined in Eq. {eq}`eq:fs1:5`
+
+$$f(t) = \frac{1}{2}{a_0} + \sum\limits_{n = 1}^\infty  {({a_n}\cos n\Omega_0 t + {b_n}\sin n\Omega_0 t)}$$
+
+The coefficients of the Fourier series $a_0$, $a_k$ and $b_k$ are computed using the integrals defined in Eqs. {eq}`eq:fs1:6`, {eq}`eq:fs1:7` and {eq}`eq:fs1:7`.
+
+See {ref}`fs1:trig_fs` for more detail.
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## Next Time
