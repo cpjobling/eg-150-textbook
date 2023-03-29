@@ -30,7 +30,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook/fourier_series/1/trig_fseri
 (fs1:intro)=
 ## Introduction
 
-Any periodic waveform with *fundamental frequency* $\Omega_0 = 2\pi f_0$ can be approximated by a DC component (which may be 0) and the sum of sinusoidal waveforms at the fundamental and *integer multiples* of the fundamental frequency. 
+Any periodic waveform with *fundamental frequency* $\Omega_0 = 2\pi f_0$ can be approximated by a DC component (which may be 0) and the sum of sinusoidal waveforms at the fundamental and *integer multiples* of the fundamental frequency.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -704,7 +704,7 @@ In this unit we ...
 * {ref}`examples16`
 
 (unit5.1:takeaways)=
-### Takeaways
+### Unit 5.1: Takeaways
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

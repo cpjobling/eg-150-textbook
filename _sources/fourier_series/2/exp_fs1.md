@@ -33,7 +33,7 @@ However, by exploiting the exponential function $e^{at}$, we can derive a method
 
 The result is called the *Exponential Fourier Series*.
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Agenda
 
@@ -340,7 +340,7 @@ Since the coefficients of the exponential Fourier series are complex numbers, we
 
 For even functions, all coefficients $C_k$ are real.
 
-+++ {"slideshow": {"slide_type": "notes"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 **Proof**
 
@@ -683,7 +683,8 @@ $${C_k \atop {k=\mathrm{even}}} = 0.$$
 * {ref}`fs2:matlab`
 * {ref}`examples17`
 
-### Take Aways
+(unit:5.2_ta)=
+### Unit 5.2: Take Aways
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -761,3 +762,7 @@ For $k$ odd*, $e^{-jk\pi} = -1$.
 Therefore
 
 $${C_k \atop {k=\mathrm{odd}}} = \frac{A}{2j\pi k}\left(e^{-jk\pi}-1\right)^2 = \frac{A}{2j\pi k}\left(-1-1\right)^2 = \frac{A}{2j\pi k}\left(-2\right)^2 = \frac{2A}{j\pi k} = \frac{1}{k}\left(\frac{2A}{j\pi}\right)$$
+
+```{code-cell}
+
+```
