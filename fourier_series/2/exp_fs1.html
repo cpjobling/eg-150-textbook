@@ -845,16 +845,37 @@ title="Print to PDF"
       <a class="reference internal nav-link" href="#example-17-3">
        Example 17.3
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#answers">
+         Answers
+        </a>
+       </li>
+      </ul>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#example-17-4">
        Example 17.4
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id7">
+         Answers
+        </a>
+       </li>
+      </ul>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#example-17-5">
        Example 17.5
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id8">
+         Answers
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
@@ -1173,16 +1194,37 @@ title="Print to PDF"
       <a class="reference internal nav-link" href="#example-17-3">
        Example 17.3
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#answers">
+         Answers
+        </a>
+       </li>
+      </ul>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#example-17-4">
        Example 17.4
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id7">
+         Answers
+        </a>
+       </li>
+      </ul>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#example-17-5">
        Example 17.5
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id8">
+         Answers
+        </a>
+       </li>
+      </ul>
      </li>
     </ul>
    </li>
@@ -1769,6 +1811,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 </pre><p><sup>*</sup> You may want to verify that <span class="math notranslate nohighlight">\(C_0 = 0\)</span> and</p>
 <div class="math notranslate nohighlight">
 \[{C_k \atop {k=\mathrm{even}}} = 0.\]</div>
+<p>Solution as MATLAB Live Script file <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/blob/main/fourier_series/matlab/ex17_2.mlx?raw=true">ex17_2.mlx</a>.</p>
 </section>
 <section id="example-17-3">
 <span id="id6"></span><h3>Example 17.3<a class="headerlink" href="#example-17-3" title="Permalink to this headline">#</a></h3>
@@ -1781,6 +1824,24 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 <p><span class="caption-number">Fig. 75 </span><span class="caption-text">Periodic Waveform for Example 17.3</span><a class="headerlink" href="#fig-ex-17-3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<section id="answers">
+<h4>Answers<a class="headerlink" href="#answers" title="Permalink to this headline">#</a></h4>
+<p>a).</p>
+<div class="math notranslate nohighlight">
+\[C_0 = \frac{A^2}{2}\]</div>
+<div class="math notranslate nohighlight">
+\[C_k = (-1)^{(k+1)/2}A\left((-1)^{(2k + 1)/2}-j\right)^2 = \left[\cdots -\frac{2A}{7\pi}, 0, + \frac{2A}{5\pi}, 0, -\frac{2A}{3\pi}, 0, +\frac{2A}{\pi}, 0, +\frac{2A}{\pi}, 0. -\frac{2A}{3\pi}, 0,  +\frac{2A}{5\pi},0, - \frac{2A}{5\pi}\cdots \right]\]</div>
+<p>b).</p>
+<div class="math notranslate nohighlight">
+\[a_0 = 0\]</div>
+<div class="math notranslate nohighlight">
+\[a_k = 0\]</div>
+<div class="math notranslate nohighlight">
+\[b_k = \left[\frac{4A}{\pi},0, - \frac{4A}{3\pi}, 0, \frac{4A}{5\pi}, 0, -\frac{4A}{7\pi}, \cdots\right]\]</div>
+<div class="math notranslate nohighlight">
+\[X(t) = \left(\frac{4A}{\pi}\right)\left(\sin(\Omega_0 t) - \frac{1}{3}\sin(3\Omega_0 t)+ \frac{1}{5}\sin(5\Omega_0 t) -\frac{1}{7}\sin(7\Omega_0 t) \cdots\right)\]</div>
+<p>Solution as MATLAB Live Script file <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/blob/main/fourier_series/matlab/ex17_3.mlx?raw=true">ex17_3.mlx</a>.</p>
+</section>
 </section>
 <section id="example-17-4">
 <span id="ex-17-4"></span><h3>Example 17.4<a class="headerlink" href="#example-17-4" title="Permalink to this headline">#</a></h3>
@@ -1793,6 +1854,25 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 <p><span class="caption-number">Fig. 76 </span><span class="caption-text">Periodic Waveform for Example 17.4</span><a class="headerlink" href="#fig-ex-17-4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<section id="id7">
+<h4>Answers<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h4>
+<p>a)</p>
+<div class="math notranslate nohighlight">
+\[C_0 = A/2\]</div>
+<div class="math notranslate nohighlight">
+\[C_k = 0 \qquad k\ \mathrm{even}\]</div>
+<div class="math notranslate nohighlight">
+\[C_k = \frac{A}{jk\pi}\qquad k\ \mathrm{odd}\]</div>
+<p>b)</p>
+<div class="math notranslate nohighlight">
+\[a_0 = A\]</div>
+<p><span class="math notranslate nohighlight">\(x(t)\)</span> has half-wave symmetry so <span class="math notranslate nohighlight">\(a_k = 0\quad \forall k\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[b_k = \frac{2A}{k\pi}\]</div>
+<div class="math notranslate nohighlight">
+\[X(t) = \frac{A}{2} + \left(\frac{2A}{\pi}\right) \sum_{k\,\mathrm{odd}} \frac{1}{k}\sin(k\Omega_0 t)\]</div>
+<p>Solution as MATLAB Live Script file <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/blob/main/fourier_series/matlab/ex17_4.mlx?raw=true">ex17_4.mlx</a>.</p>
+</section>
 </section>
 <section id="example-17-5">
 <span id="ex-17-5"></span><h3>Example 17.5<a class="headerlink" href="#example-17-5" title="Permalink to this headline">#</a></h3>
@@ -1805,6 +1885,24 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 <p><span class="caption-number">Fig. 77 </span><span class="caption-text">Periodic Waveform for Example 17.5</span><a class="headerlink" href="#fig-ex-17-5" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<section id="id8">
+<h4>Answers<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h4>
+<p>a).</p>
+<div class="math notranslate nohighlight">
+\[C_0 = \frac{A^2}{2}\]</div>
+<div class="math notranslate nohighlight">
+\[C_k = -\frac{A^2}{j2k\pi}\]</div>
+<p>b).</p>
+<div class="math notranslate nohighlight">
+\[a_0 = A^2\]</div>
+<div class="math notranslate nohighlight">
+\[a_k = 0\]</div>
+<div class="math notranslate nohighlight">
+\[b_k = -\frac{A^2}{k\pi}\]</div>
+<div class="math notranslate nohighlight">
+\[X(t) = \frac{A^2}{2} - \left(\frac{A^2}{\pi}\right) \sum_{k=1}^{N} \frac{1}{k}\sin(k\Omega_0 t)\]</div>
+<p>Solution as MATLAB Live Script file <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/blob/main/fourier_series/matlab/ex17_5.mlx?raw=true">ex17_5.mlx</a>.</p>
+</section>
 </section>
 </section>
 <section id="summary">
@@ -1886,12 +1984,12 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
-<div class="docutils container" id="id7">
+<div class="docutils container" id="id9">
 <dl class="citation">
-<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id2">Hsu20</a></span></dt>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id2">Hsu20</a></span></dt>
 <dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
 </dd>
-<dt class="label" id="id13"><span class="brackets">Kar12</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id5">2</a>)</span></dt>
+<dt class="label" id="id15"><span class="brackets">Kar12</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id5">2</a>)</span></dt>
 <dd><p>Steven T. Karris. <em>Signals and systems with MATLAB computing and Simulink modeling</em>. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197">https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197</a>.</p>
 </dd>
 </dl>
