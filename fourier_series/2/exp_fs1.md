@@ -678,7 +678,7 @@ Solution as MATLAB Live Script file [ex17_2.mlx](https://github.com/cpjobling/eg
 
 (ex:17.2)=
 
-### Example 17.3
+## Example 17.3
 
 Consider the square wave shown in {numref}`fig:ex:17.3`.
 
@@ -692,7 +692,7 @@ b) Give an expression for the trig. Fourier series for this signal.
 Periodic Waveform for Example 17.3
 :::
 
-#### Answers
+### Answers
 
 a). 
 
@@ -716,7 +716,7 @@ Solution as MATLAB Live Script file [ex17_3.mlx](https://github.com/cpjobling/eg
 
 (ex:17.4)=
 
-### Example 17.4
+## Example 17.4
 
 Consider the pulsed periodic waveform with fundamental period $T_0$ shown in {numref}`fig:ex:17.4`.
 
@@ -730,7 +730,7 @@ b) Give an expression for the trig. Fourier series for this signal.
 Periodic Waveform for Example 17.4
 :::
 
-#### Answers
+### Answers
 
 a) 
 
@@ -756,7 +756,7 @@ Solution as MATLAB Live Script file [ex17_4.mlx](https://github.com/cpjobling/eg
 
 (ex:17.5)=
 
-### Example 17.5
+## Example 17.5
 
 Consider the sawtooth periodic waveform with fundamental period $T_0$ shown in {numref}`fig:ex:17.5`.
 
@@ -770,7 +770,7 @@ b) Give an expression for the trig. Fourier series for this signal.
 Periodic Waveform for Example 17.5
 :::
 
-#### Answers
+### Answers
 
 a). 
 
