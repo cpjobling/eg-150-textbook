@@ -672,11 +672,13 @@ Solve the problem
 
 $${C_k \atop {k=\mathrm{even}}} = 0.$$
 
+Solution as MATLAB Live Script file [ex17_2.mlx](https://github.com/cpjobling/eg-150-textbook/blob/main/fourier_series/matlab/ex17_2.mlx?raw=true).
+
 +++
 
 (ex:17.2)=
 
-### Example 17.3
+## Example 17.3
 
 Consider the square wave shown in {numref}`fig:ex:17.3`.
 
@@ -690,11 +692,31 @@ b) Give an expression for the trig. Fourier series for this signal.
 Periodic Waveform for Example 17.3
 :::
 
+### Answers
+
+a). 
+
+$$C_0 = \frac{A^2}{2}$$
+
+$$C_k = (-1)^{(k+1)/2}A\left((-1)^{(2k + 1)/2}-j\right)^2 = \left[\cdots -\frac{2A}{7\pi}, 0, + \frac{2A}{5\pi}, 0, -\frac{2A}{3\pi}, 0, +\frac{2A}{\pi}, 0, +\frac{2A}{\pi}, 0. -\frac{2A}{3\pi}, 0,  +\frac{2A}{5\pi},0, - \frac{2A}{5\pi}\cdots \right]$$
+
+b).
+
+$$a_0 = 0$$
+
+$$a_k = 0$$
+
+$$b_k = \left[\frac{4A}{\pi},0, - \frac{4A}{3\pi}, 0, \frac{4A}{5\pi}, 0, -\frac{4A}{7\pi}, \cdots\right]$$
+
+$$X(t) = \left(\frac{4A}{\pi}\right)\left(\sin(\Omega_0 t) - \frac{1}{3}\sin(3\Omega_0 t)+ \frac{1}{5}\sin(5\Omega_0 t) -\frac{1}{7}\sin(7\Omega_0 t) \cdots\right)$$
+
+Solution as MATLAB Live Script file [ex17_3.mlx](https://github.com/cpjobling/eg-150-textbook/blob/main/fourier_series/matlab/ex17_3.mlx?raw=true).
+
 +++
 
 (ex:17.4)=
 
-### Example 17.4
+## Example 17.4
 
 Consider the pulsed periodic waveform with fundamental period $T_0$ shown in {numref}`fig:ex:17.4`.
 
@@ -708,11 +730,33 @@ b) Give an expression for the trig. Fourier series for this signal.
 Periodic Waveform for Example 17.4
 :::
 
+### Answers
+
+a) 
+
+$$C_0 = A/2$$
+
+$$C_k = 0 \qquad k\ \mathrm{even}$$
+
+$$C_k = \frac{A}{jk\pi}\qquad k\ \mathrm{odd}$$
+
+b) 
+
+$$a_0 = A$$
+
+$x(t)$ has half-wave symmetry so $a_k = 0\quad \forall k$.
+
+$$b_k = \frac{2A}{k\pi}$$
+
+$$X(t) = \frac{A}{2} + \left(\frac{2A}{\pi}\right) \sum_{k\,\mathrm{odd}} \frac{1}{k}\sin(k\Omega_0 t)$$
+
+Solution as MATLAB Live Script file [ex17_4.mlx](https://github.com/cpjobling/eg-150-textbook/blob/main/fourier_series/matlab/ex17_4.mlx?raw=true).
+
 +++
 
 (ex:17.5)=
 
-### Example 17.5
+## Example 17.5
 
 Consider the sawtooth periodic waveform with fundamental period $T_0$ shown in {numref}`fig:ex:17.5`.
 
@@ -725,6 +769,26 @@ b) Give an expression for the trig. Fourier series for this signal.
 
 Periodic Waveform for Example 17.5
 :::
+
+### Answers
+
+a). 
+
+$$C_0 = \frac{A^2}{2}$$
+
+$$C_k = -\frac{A^2}{j2k\pi}$$
+
+b).
+
+$$a_0 = A^2$$
+
+$$a_k = 0$$
+
+$$b_k = -\frac{A^2}{k\pi}$$
+
+$$X(t) = \frac{A^2}{2} - \left(\frac{A^2}{\pi}\right) \sum_{k=1}^{N} \frac{1}{k}\sin(k\Omega_0 t)$$
+
+Solution as MATLAB Live Script file [ex17_5.mlx](https://github.com/cpjobling/eg-150-textbook/blob/main/fourier_series/matlab/ex17_5.mlx?raw=true).
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -874,7 +938,3 @@ For $k$ odd*, $e^{-jk\pi} = -1$.
 Therefore
 
 $${C_k \atop {k=\mathrm{odd}}} = \frac{A}{2j\pi k}\left(e^{-jk\pi}-1\right)^2 = \frac{A}{2j\pi k}\left(-1-1\right)^2 = \frac{A}{2j\pi k}\left(-2\right)^2 = \frac{2A}{j\pi k} = \frac{1}{k}\left(\frac{2A}{j\pi}\right)$$
-
-```{code-cell}
-
-```
