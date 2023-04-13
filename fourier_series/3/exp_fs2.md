@@ -59,6 +59,7 @@ The **fundamental frequency** is $\omega = \Omega_0 = 2 \pi f_0$ or, equivalentl
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(fs3:harmonics)=
 ## Harmonic frequencies
 
 *Harmonic frquencies* (or *Harmonics*) are simply integer multiples of the fundamental frequency $\Omega_0$.
@@ -105,7 +106,7 @@ This is the spectrum of the Exponential Fourier Series calculated in {ref}`fs2:m
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 :::{figure-md} fig:5.3.1.
-<img src="pictures/efs_sqw.png" alt="Exponential Fourier Series spectrum for a square wave." width="60%">
+<img src="pictures/efs_sqw.png" alt="Exponential Fourier Series spectrum for a square wave." width="80%">
 
 Exponential Fourier Series spectrum for the square wave calculated in {numref}`fs2:eg`.
 :::
@@ -127,7 +128,7 @@ $$b_k = j(C_k - C_{-k})$$
 Applying this to the previous result we get the spectrum shown in {numref}`fig:tfs`
 
 :::{figure-md} fig:tfs
-<img src="pictures/line-spec.png" alt="Trigonometric Fourier series for a square wave" width="60%">
+<img src="pictures/line-spec.png" alt="Trigonometric Fourier series for a square wave" width="80%">
 
 Trigonometric Fourier series for a square wave
 :::

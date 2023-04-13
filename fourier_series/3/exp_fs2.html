@@ -1048,7 +1048,7 @@ title="Print to PDF"
 <span id="unit5-3"></span><h1>Unit 5.3: Computing Line Spectra<a class="headerlink" href="#unit-5-3-computing-line-spectra" title="Permalink to this headline">#</a></h1>
 <p>The preparatory reading for this section is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=247">Chapter 7.10</a> of  <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/fourier_series/3/exp_fs2">cpjobling.github.io/eg-150-textbook/fourier_series/3/exp_fs2</a></p>
-<p><img alt="QR Code for this lecture" src="fourier_series/3/pictures/qrcode_unit5_3.png" /></p>
+<p><img alt="QR Code for this lecture" src="../../_images/qrcode_unit5_3.png" /></p>
 <p>This section continues our introduction to Fourier Series.</p>
 <p>In the <a class="reference internal" href="../2/exp_fs1.html#unit5-2"><span class="std std-ref">Unit 5.2: Exponential Fourier Series</span></a> we saw that we could exploit the complex exponential <span class="math notranslate nohighlight">\(e^{j\omega t}\)</span> to redefine trigonometric Fourier Series into the Exponential Fourier Series and in so doing we eliminate one integration and at the same time simplify the calculation of the coefficients of the Fourier series.</p>
 <p>In this section we show how the Exponential form of the Fourier Series leads us to the ability to present waveforms as line spectra which simplifies the calculation of power for systems with harmonics and leads in the limit as <span class="math notranslate nohighlight">\(𝑇\)</span> approaches infinity to the Fourier Transform.</p>
@@ -1056,7 +1056,7 @@ title="Print to PDF"
 <h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#fs3-fundamental"><span class="std std-ref">Fundamental frequency</span></a></p></li>
-<li><p><span class="xref std std-ref">fs3:harmonics</span></p></li>
+<li><p><a class="reference internal" href="#fs3-harmonics"><span class="std std-ref">Harmonic frequencies</span></a></p></li>
 <li><p><a class="reference internal" href="#fs3-line-spectra"><span class="std std-ref">Line Spectra</span></a></p></li>
 <li><p><a class="reference internal" href="#examples18"><span class="std std-ref">Examples 18</span></a></p></li>
 </ul>
@@ -1068,7 +1068,7 @@ title="Print to PDF"
 <p>The <strong>fundamental frequency</strong> is <span class="math notranslate nohighlight">\(\omega = \Omega_0 = 2 \pi f_0\)</span> or, equivalently, <span class="math notranslate nohighlight">\(\Omega_0 = 2 \pi /T\)</span> rad/s.</p>
 </section>
 <section id="harmonic-frequencies">
-<h2>Harmonic frequencies<a class="headerlink" href="#harmonic-frequencies" title="Permalink to this headline">#</a></h2>
+<span id="fs3-harmonics"></span><h2>Harmonic frequencies<a class="headerlink" href="#harmonic-frequencies" title="Permalink to this headline">#</a></h2>
 <p><em>Harmonic frquencies</em> (or <em>Harmonics</em>) are simply integer multiples of the fundamental frequency <span class="math notranslate nohighlight">\(\Omega_0\)</span>.</p>
 <ul class="simple">
 <li><p>So the zero-th harmonic is <span class="math notranslate nohighlight">\(\Omega_0 = 0\)</span> rad/s or DC.</p></li>
@@ -1093,7 +1093,7 @@ title="Print to PDF"
 <p>When the Exponential Fourier series are known it is useful to plot the amplitude and phase of the harmonics on a frequency scale.</p>
 <p>This is the spectrum of the Exponential Fourier Series calculated in <a class="reference internal" href="../2/exp_fs1.html#fs2-matlab"><span class="std std-ref">Computing coefficients of Exponential Fourier Series in MATLAB</span></a> is reproduced in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:5.3.1</span></code></p>
 <figure class="align-default" id="fig-5-3-1">
-<a class="reference internal image-reference" href="../../_images/efs_sqw1.png"><img alt="Exponential Fourier Series spectrum for a square wave." src="../../_images/efs_sqw1.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../../_images/efs_sqw1.png"><img alt="Exponential Fourier Series spectrum for a square wave." src="../../_images/efs_sqw1.png" style="width: 80%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 78 </span><span class="caption-text">Exponential Fourier Series spectrum for the square wave calculated in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fs2:eg</span></code>.</span><a class="headerlink" href="#fig-5-3-1" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -1110,7 +1110,7 @@ title="Print to PDF"
 \[b_k = j(C_k - C_{-k})\]</div>
 <p>Applying this to the previous result we get the spectrum shown in <a class="reference internal" href="#fig-tfs"><span class="std std-numref">Fig. 79</span></a></p>
 <figure class="align-default" id="fig-tfs">
-<a class="reference internal image-reference" href="../../_images/line-spec1.png"><img alt="Trigonometric Fourier series for a square wave" src="../../_images/line-spec1.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../../_images/line-spec1.png"><img alt="Trigonometric Fourier series for a square wave" src="../../_images/line-spec1.png" style="width: 80%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 79 </span><span class="caption-text">Trigonometric Fourier series for a square wave</span><a class="headerlink" href="#fig-tfs" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -1453,7 +1453,7 @@ title="Print to PDF"
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#fs3-fundamental"><span class="std std-ref">Fundamental frequency</span></a></p></li>
-<li><p><span class="xref std std-ref">fs3:harmonics</span></p></li>
+<li><p><a class="reference internal" href="#fs3-harmonics"><span class="std std-ref">Harmonic frequencies</span></a></p></li>
 <li><p><a class="reference internal" href="#fs3-line-spectra"><span class="std std-ref">Line Spectra</span></a></p></li>
 <li><p><a class="reference internal" href="#examples18"><span class="std std-ref">Examples 18</span></a></p></li>
 </ul>
