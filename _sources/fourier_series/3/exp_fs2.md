@@ -545,7 +545,7 @@ This result is the basis of the *Fourier Transform* which is coming in **EG-247:
 * {ref}`examples18`
 
 (unit5.3:takeaways)=
-### Takeways
+### Unit 5.3: Takeways
 
 The exponential and trigonometric Fourier series coefficients can be plotted as lines on the frequency axis.
 
