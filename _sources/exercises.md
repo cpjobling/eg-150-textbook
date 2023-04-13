@@ -18,7 +18,7 @@ There are no exercises in this unit.
 * {ref}`worked_examples_1` covers {ref}`ex1.1`, {ref}`ex1.2` and *odd and even signals*: {ref}`ex1.3`, {ref}`ex1.4`, {ref}`ex1.5` and {ref}`ex1.6`.
 
 
-### {red}`unit2.2`
+### {ref}`unit2.2`
 
 {ref}`worked_examples_2` covers 
 * {ref}`ex2.1`
