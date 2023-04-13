@@ -14,6 +14,7 @@ kernelspec:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(unit2.2)=
 # Unit 2.2: Periodic, Energy and Power Signals
 
 We continue with our survey of [Signals and Classification of Signals](index.md) by looking at {ref}`p_n_np` and {ref}`e_n_p`.
@@ -410,7 +411,7 @@ For the answers, refer to the lecture recording or see solved problem 1.16 in {c
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex2.3)=
-### Example 2.3
+### Example 2.3: Integral properties of periodic signals
 
 Show that if $x(t + T) = x(t)$, then
 
@@ -427,7 +428,7 @@ For the answer, refer to the lecture recording or see solved problem 1.17 in {ci
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex2.4)=
-### Example 2.4
+### Example 2.4: Power in a periodic signal
 
 Show that if $x(t)$ is periodic with fundamental period $T_0$, then the normalized average power $P$ of $x(t)$ defined by
 
@@ -474,7 +475,7 @@ Note $u_0(t)$ is the unit step (or Heaviside) function formally introduced in th
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex2.6)=
-### Example 2.6
+### Example 2.6: Power in domestic mains electricty
 
 Domestic mains power in the UK is delivered as a sinusoidal signal $x(t)=A\cos(\omega_0 t + \theta)$ with frequency of $50\mathrm{Hz}$ and RMS value of $240\mathrm{V}$. 
 
