@@ -399,7 +399,7 @@ We will solve these examples by hand and then give the solution in the MATLAB la
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-(ex1.2)=
+(ex1.3)=
 
 1.2). Given the continuous-time signal specified by
 
