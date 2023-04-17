@@ -531,7 +531,7 @@ What happens when the pulses to the left and right of the centre pulse become le
 * As $T\to \infty$ the fundamental frequency $\Omega_0 \to 0$
 * We are then left with just one pulse centred around $t=0$.
 * The frequency difference between harmonics also becomes smaller.
-* Line spectrum becomes a continous function.
+* The line spectrum becomes a continous function in frequency.
 
 This result is the basis of the *Fourier Transform* which is coming in **EG-247: Digital Signal Processing** next year.
 
@@ -553,7 +553,7 @@ These line-spectra are useful for reasoning about the frequency components that 
 
 This is useful for e.g. computing the bandwidth needed on a medium that is to transmit a signal without loss.
 
-We will see next, that we can also use these line spectra to compute power in a signal, the total harmonic distortion present in a signal, and in the desigb of filters.
+We will see next, that we can also use these line spectra to compute power in a signal, the total harmonic distortion present in a signal, and in the design of filters.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
