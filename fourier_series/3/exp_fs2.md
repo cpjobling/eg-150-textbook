@@ -496,7 +496,7 @@ $$C_k = \frac{1}{2\pi}$$
 
 That is all coefficients have the same amplitude and thus
 
-$$f(t) = \frac{1}{2\pi}\sum_{n=-\infty}^{\infty} \delta(k\Omega_0)$$
+$$f(t) = \frac{1}{2\pi}\sum_{k=-\infty}^{\infty} e^{jk\Omega_0}$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
