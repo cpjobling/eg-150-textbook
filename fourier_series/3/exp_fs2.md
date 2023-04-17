@@ -293,7 +293,7 @@ Recall pulse width = $T/w$ and plot the complex line spectra for pulse with widt
 slideshow:
   slide_type: fragment
 ---
-clear all
+clearvars
 cd ../matlab
 format compact
 ```
@@ -496,7 +496,7 @@ $$C_k = \frac{1}{2\pi}$$
 
 That is all coefficients have the same amplitude and thus
 
-$$f(t) = \frac{1}{2\pi}\sum_{n=-\infty}^{\infty} \delta(k\Omega_0)$$
+$$f(t) = \frac{1}{2\pi}\sum_{k=-\infty}^{\infty} e^{jk\Omega_0}$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
