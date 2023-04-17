@@ -293,7 +293,7 @@ Recall pulse width = $T/w$ and plot the complex line spectra for pulse with widt
 slideshow:
   slide_type: fragment
 ---
-clear all
+clearvars
 cd ../matlab
 format compact
 ```

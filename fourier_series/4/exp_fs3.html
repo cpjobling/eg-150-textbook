@@ -702,35 +702,6 @@ title="Print to PDF"
      Filter attenuation
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-5">
-     Example 5
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#well">
-       Well?
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Power in Periodic Signals
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Parseval’s Theorem
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     RMS Power
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -739,8 +710,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-19-1-power-spectrum">
-     Example 19.1: Power Spectrum
+    <a class="reference internal nav-link" href="#example-19-1-average-power">
+     Example 19.1: Average Power
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -749,7 +720,7 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id4">
+      <a class="reference internal nav-link" href="#id1">
        Power spectrum
       </a>
      </li>
@@ -907,35 +878,6 @@ title="Print to PDF"
      Filter attenuation
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-5">
-     Example 5
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#well">
-       Well?
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Power in Periodic Signals
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Parseval’s Theorem
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     RMS Power
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -944,8 +886,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-19-1-power-spectrum">
-     Example 19.1: Power Spectrum
+    <a class="reference internal nav-link" href="#example-19-1-average-power">
+     Example 19.1: Average Power
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -954,7 +896,7 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id4">
+      <a class="reference internal nav-link" href="#id1">
        Power spectrum
       </a>
      </li>
@@ -1055,28 +997,28 @@ title="Print to PDF"
 <span id="fse4-power"></span><h2>Power in Periodic Signals<a class="headerlink" href="#power-in-periodic-signals" title="Permalink to this headline">#</a></h2>
 <p>In <a class="reference internal" href="../../signals_and_systems/signals/pep_signals.html#unit2-2"><span class="std std-ref">Unit 2.2: Periodic, Energy and Power Signals</span></a> we defined <em>Signal Energy</em>, <em>Average Signal Power</em> and <em>Root Mean Square Power</em> which for periodic signals will be defined as shown below:</p>
 <div class="math notranslate nohighlight" id="equation-eq-fs3-1">
-<span class="eqno">(69)<a class="headerlink" href="#equation-eq-fs3-1" title="Permalink to this equation">#</a></span>\[E = \int_0^T |x(t)|^2 dt\]</div>
-<div class="math notranslate nohighlight" id="equation-eq-fs3-1">
-<span class="eqno">(69)<a class="headerlink" href="#equation-eq-fs3-1" title="Permalink to this equation">#</a></span>\[P_{\mathrm{av}} = \frac{1}{T}\int_0^T |x(t)|^2 dt\]</div>
-<div class="math notranslate nohighlight" id="equation-eq-fs3-1">
-<span class="eqno">(69)<a class="headerlink" href="#equation-eq-fs3-1" title="Permalink to this equation">#</a></span>\[P_{\mathrm{RMS}} = \sqrt{\frac{1}{T}\int_0^T |x(t)|^2 dt}\]</div>
+<span class="eqno">(67)<a class="headerlink" href="#equation-eq-fs3-1" title="Permalink to this equation">#</a></span>\[E = \int_0^T |x(t)|^2 dt\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-fs3-2">
+<span class="eqno">(68)<a class="headerlink" href="#equation-eq-fs3-2" title="Permalink to this equation">#</a></span>\[P_{\mathrm{av}} = \frac{1}{T}\int_0^T |x(t)|^2 dt\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-fs3-3">
+<span class="eqno">(69)<a class="headerlink" href="#equation-eq-fs3-3" title="Permalink to this equation">#</a></span>\[P_{\mathrm{RMS}} = \sqrt{\frac{1}{T}\int_0^T |x(t)|^2 dt}\]</div>
 <section id="parseval-s-theorem">
 <h3>Parseval’s Theorem<a class="headerlink" href="#parseval-s-theorem" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Parseval%27s_theorem">Parseval’s Theorem</a> states that the total average power of a periodic signal <span class="math notranslate nohighlight">\(f(t)\)</span> is equal to the sum of the average powers of all its harmonic components.</p>
 <p>The power in the <span class="math notranslate nohighlight">\(k\)</span>th harmonic <span class="math notranslate nohighlight">\(C_ke^{jk\Omega_0 t}\)</span> is given by</p>
-<div class="math notranslate nohighlight">
-\[P_k = \frac{1}{T}\int_0^T\left|C_ke^{jk\Omega_0 t}\right|^2\,dt = \frac{1}{T}\int_0^T\left|C_k\right|^2\,dt=\left|C_k\right|^2\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-fs3-4">
+<span class="eqno">(70)<a class="headerlink" href="#equation-eq-fs3-4" title="Permalink to this equation">#</a></span>\[P_k = \frac{1}{T}\int_0^T\left|C_ke^{jk\Omega_0 t}\right|^2\,dt = \frac{1}{T}\int_0^T\left|C_k\right|^2\,dt=\left|C_k\right|^2\]</div>
 <p>Since <span class="math notranslate nohighlight">\(P_k = P_{-k}\)</span>, the total power of the <span class="math notranslate nohighlight">\(k\)</span>th harmomic is <span class="math notranslate nohighlight">\(2P_k\)</span>.</p>
 <p>You should note that <span class="math notranslate nohighlight">\(|C_k| = \sqrt{C_k C_k^*}\)</span> so <span class="math notranslate nohighlight">\(|C_k|^2 = C_k C_k^*\)</span>.</p>
 <p>Parseval’s theorem states that</p>
-<div class="math notranslate nohighlight">
-\[P = \frac{1}{T}\int_0^T \left|f(t)\right|^2\,dt = \sum_{k=-\infty}^{\infty}\left|C_k\right|^2.\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-fs3-5">
+<span class="eqno">(71)<a class="headerlink" href="#equation-eq-fs3-5" title="Permalink to this equation">#</a></span>\[P = \frac{1}{T}\int_0^T \left|x(t)\right|^2\,dt = \sum_{k=-\infty}^{\infty}\left|C_k\right|^2.\]</div>
 </section>
 <section id="rms-power">
 <h3>RMS Power<a class="headerlink" href="#rms-power" title="Permalink to this headline">#</a></h3>
 <p>By a similar argument:</p>
-<div class="math notranslate nohighlight">
-\[P_{\mathrm{RMS}} = \sqrt{\frac{1}{T}\int_0^T \left|f(t)\right|^2\,dt} = \sqrt{\sum_{k=-\infty}^{\infty}\left|C_k\right|^2}.\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-fs3-6">
+<span class="eqno">(72)<a class="headerlink" href="#equation-eq-fs3-6" title="Permalink to this equation">#</a></span>\[P_{\mathrm{RMS}} = \sqrt{\frac{1}{T}\int_0^T \left|f(t)\right|^2\,dt} = \sqrt{\sum_{k=-\infty}^{\infty}\left|C_k\right|^2}.\]</div>
 </section>
 </section>
 <section id="power-spectrum">
@@ -1102,13 +1044,13 @@ title="Print to PDF"
 <h3>THD Defined<a class="headerlink" href="#thd-defined" title="Permalink to this headline">#</a></h3>
 <p>Clearly, some of the harmonics for <span class="math notranslate nohighlight">\(k\ne \pm 1\)</span> are nonzero. One way to characterize the distortion is to compute the ratio of average power in all the harmonics that “should not be present”, that is for <span class="math notranslate nohighlight">\(k &gt; 1\)</span>, to the total average power of the distorted sine wave. The square-root of this ratio is called the <em>total harmonic distortion</em> (THD) of the signal.</p>
 <p>If the signal is real and based on a sine wave (that is <em>odd</em>), then <span class="math notranslate nohighlight">\(C_0=0\)</span> and</p>
-<div class="math notranslate nohighlight">
-\[f_{\mathrm{RMS}}=\sqrt{\sum_{k=1}^{\infty}2|C_k|^2}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-fs3-7">
+<span class="eqno">(73)<a class="headerlink" href="#equation-eq-fs3-7" title="Permalink to this equation">#</a></span>\[x_{\mathrm{RMS}}=\sqrt{\sum_{k=1}^{\infty}2|C_k|^2}\]</div>
 <p>and we can define the THD as the ratio of the RMS value for all the harmonics for <span class="math notranslate nohighlight">\(K&gt;1\)</span> (the distortion) to the RMS of the fundamental which is</p>
-<div class="math notranslate nohighlight">
-\[\sqrt{2\left|C_1\right|^2}:\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-fs3-8">
+<span class="eqno">(74)<a class="headerlink" href="#equation-eq-fs3-8" title="Permalink to this equation">#</a></span>\[\sqrt{2\left|C_1\right|^2}\]</div>
 <div class="math notranslate nohighlight" id="equation-fse4-thd">
-<span class="eqno">(70)<a class="headerlink" href="#equation-fse4-thd" title="Permalink to this equation">#</a></span>\[{\rm{THD}} = 100\sqrt {\frac{\sum\limits_{k = 2}^\infty  {\left| C_k \right|^2}} {\left| C_1 \right|^2}} \% \]</div>
+<span class="eqno">(75)<a class="headerlink" href="#equation-fse4-thd" title="Permalink to this equation">#</a></span>\[{\rm{THD}} = 100\sqrt {\frac{\sum\limits_{k = 2}^\infty  {\left| C_k \right|^2}} {\left| C_1 \right|^2}} \% \]</div>
 </section>
 <section id="computation-of-thd">
 <h3>Computation of THD<a class="headerlink" href="#computation-of-thd" title="Permalink to this headline">#</a></h3>
@@ -1124,18 +1066,18 @@ title="Print to PDF"
 <span id="fse4-ss-resp"></span><h2>Steady-State Response of a Continuous-Time LTI System to a Periodic Signal<a class="headerlink" href="#steady-state-response-of-a-continuous-time-lti-system-to-a-periodic-signal" title="Permalink to this headline">#</a></h2>
 <p>As shown in <a class="reference internal" href="../../lti_systems/lti2.html#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a>, the response of a continuous-time LTI system with impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> to a complex exponential signal <span class="math notranslate nohighlight">\(e^{st}\)</span> is the same complex exponential multiplied by a complex gain: <span class="math notranslate nohighlight">\(y(t) = H(s)e^{st}\)</span>, where:</p>
 <div class="math notranslate nohighlight" id="equation-fse4-h-s">
-<span class="eqno">(71)<a class="headerlink" href="#equation-fse4-h-s" title="Permalink to this equation">#</a></span>\[H(s)=\int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau.\]</div>
+<span class="eqno">(76)<a class="headerlink" href="#equation-fse4-h-s" title="Permalink to this equation">#</a></span>\[H(s)=\int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau.\]</div>
 <p>In particular, for <span class="math notranslate nohighlight">\(s = j\omega\)</span>, the output is simply <span class="math notranslate nohighlight">\(y(t)=H(j\omega)e^{j\omega t}\)</span>.</p>
 <p>The complex functions <span class="math notranslate nohighlight">\(H(s)\)</span> and <span class="math notranslate nohighlight">\(H(j\omega)\)</span> are called the system’s <em>transfer function</em> and <em>frequency response</em>, respectively.</p>
 <section id="by-superposition">
 <h3>By superposition<a class="headerlink" href="#by-superposition" title="Permalink to this headline">#</a></h3>
 <p>The output of a continuous-time LTI system to a periodic function with period <span class="math notranslate nohighlight">\(T\)</span> represented by a Fourier series is given by:</p>
-<div class="math notranslate nohighlight">
-\[y(t)=\sum_{k=-\infty}^{\infty} C_kH(jk\Omega_0)e^{jk\Omega_0 t}\]</div>
+<div class="math notranslate nohighlight" id="equation-fs4-y-t">
+<span class="eqno">(77)<a class="headerlink" href="#equation-fs4-y-t" title="Permalink to this equation">#</a></span>\[y(t)=\sum_{k=-\infty}^{\infty} C_kH(jk\Omega_0)e^{jk\Omega_0 t}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Omega_0 = 2\pi/T\)</span> is the fundamental frequency.</p>
 <p>Thus <span class="math notranslate nohighlight">\(y(t)\)</span> is a Fourier series itself with coefficients <span class="math notranslate nohighlight">\(D_k\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[D_k = C_kH(jk\Omega_0)\]</div>
+<div class="math notranslate nohighlight" id="equation-fs4-d-k">
+<span class="eqno">(78)<a class="headerlink" href="#equation-fs4-d-k" title="Permalink to this equation">#</a></span>\[D_k = C_kH(jk\Omega_0)\]</div>
 </section>
 <section id="illustration">
 <h3>Illustration<a class="headerlink" href="#illustration" title="Permalink to this headline">#</a></h3>
@@ -1179,109 +1121,11 @@ H(jk\Omega_0) &amp;=&amp; \frac{\omega_c^2}{(k\Omega_0)^2 + \omega_c^2} - j\frac
 $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\)</span>$</p>
 <p>By doing such analysis, we can examine the effect of a filter on a periodic signal, just by considering how the coefficients of the harmonic terms are changed (attenuated in magnitude and shifted in phase) by the filter.</p>
 </section>
-<section id="example-5">
-<h3>Example 5<a class="headerlink" href="#example-5" title="Permalink to this headline">#</a></h3>
-<p>Compute the average power of a pulse train for which the pulse width is <span class="math notranslate nohighlight">\(T/2\)</span> (duty cycle 50%). Use the previous result:</p>
-<div class="math notranslate nohighlight">
-\[C_n = \frac{A}{w}.\frac{\sin(k\pi/w)}{k\pi/w}\]</div>
-<p>as your starting point.</p>
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre><div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="p">[</span><span class="n">f</span><span class="p">,</span><span class="n">omega</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">pulse_fs</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="mi">15</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">&#39;pulse_fs&#39; is not found in the current folder or on the MATLAB path, but exists in:</span>
-<span class=" -Color -Color-Red">    /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/fourier_series/matlab</span>
-
-<span class=" -Color -Color-Red">Change the MATLAB current folder or add its folder to the MATLAB path.</span>
-
-
-</pre></div>
-</div>
-</div>
-</div>
-<p>Power spectrum</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">stem</span><span class="p">(</span><span class="n">omega</span><span class="p">,</span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.^</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Power Spectrum for pulse width T/8&#39;</span><span class="p">)</span>
-<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;|C_k|^2&#39;</span><span class="p">)</span>
-<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;\Omega_0 [rad/s]&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Error using eval</span>
-<span class=" -Color -Color-Red">Unrecognized function or variable &#39;omega&#39;.</span>
-
-
-</pre></div>
-</div>
-</div>
-</div>
-<p>Note that most of the power is concentrated at DC and in the first seven harmonic components. That is in the frequency range <span class="math notranslate nohighlight">\([-14\pi/T,+14\pi/T]\)</span> rad/s.</p>
-<section id="well">
-<h4>Well?<a class="headerlink" href="#well" title="Permalink to this headline">#</a></h4>
-<ul class="simple">
-<li><p>As <span class="math notranslate nohighlight">\(T\to \infty\)</span> the fundamental frequency <span class="math notranslate nohighlight">\(\Omega_0 \to 0\)</span></p></li>
-<li><p>We are then left with just one pulse centred around <span class="math notranslate nohighlight">\(t=0\)</span>.</p></li>
-<li><p>The frequency difference between harmonics also becomes smaller.</p></li>
-<li><p>Line spectrum becomes a continous function.</p></li>
-</ul>
-<p>This result is the basis of the <em>Fourier Transform</em> which is coming next.</p>
-</section>
-</section>
-</section>
-<section id="id1">
-<h2>Power in Periodic Signals<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<p>In your previous courses you may have come across the definitions of Signal Energy, Average Signal Power and Root Mean Square Power:</p>
-<div class="math notranslate nohighlight">
-\[E = \int_0^T |f(t)|^2 dt\]</div>
-<div class="math notranslate nohighlight">
-\[P_{\mathrm{av}} = \frac{1}{T}\int_0^T |f(t)|^2 dt\]</div>
-<div class="math notranslate nohighlight">
-\[P_{\mathrm{RMS}} = \sqrt{\frac{1}{T}\int_0^T |f(t)|^2 dt}\]</div>
-<section id="id2">
-<h3>Parseval’s Theorem<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/Parseval%27s_theorem">Parseval’s Theorem</a> states that the total average power of a periodic signal <span class="math notranslate nohighlight">\(f(t)\)</span> is equal to the sum of the average powers of all its harmonic components.</p>
-<p>The power in the <span class="math notranslate nohighlight">\(k\)</span>th harmonic <span class="math notranslate nohighlight">\(C_ke^{jk\Omega_0 t}\)</span> is given by</p>
-<div class="math notranslate nohighlight">
-\[P_k = \frac{1}{T}\int_0^T\left|C_ke^{jk\Omega_0 t}\right|^2\,dt = \frac{1}{T}\int_0^T\left|C_k\right|^2\,dt=\left|C_k\right|^2\]</div>
-<p>Since <span class="math notranslate nohighlight">\(P_k = P_{-k}\)</span>, the total power of the <span class="math notranslate nohighlight">\(k\)</span>th harmomic is <span class="math notranslate nohighlight">\(2P_k\)</span>.</p>
-<p>You should note that <span class="math notranslate nohighlight">\(|C_k| = \sqrt{C_k C_k^*}\)</span> so <span class="math notranslate nohighlight">\(|C_k|^2 = C_k C_k^*\)</span>.</p>
-<p>Parseval’s theorem states that</p>
-<div class="math notranslate nohighlight">
-\[P = \frac{1}{T}\int_0^T \left|f(t)\right|^2\,dt = \sum_{k=-\infty}^{\infty}\left|C_k\right|^2.\]</div>
-</section>
-<section id="id3">
-<h3>RMS Power<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
-<p>By a similar argument:</p>
-<div class="math notranslate nohighlight">
-\[P_{\mathrm{RMS}} = \sqrt{\frac{1}{T}\int_0^T \left|f(t)\right|^2\,dt} = \sqrt{\sum_{k=-\infty}^{\infty}\left|C_k\right|^2}.\]</div>
-</section>
 </section>
 <section id="examples-19">
 <span id="examples19"></span><h2>Examples 19<a class="headerlink" href="#examples-19" title="Permalink to this headline">#</a></h2>
-<section id="example-19-1-power-spectrum">
-<span id="ex-19-1"></span><h3>Example 19.1: Power Spectrum<a class="headerlink" href="#example-19-1-power-spectrum" title="Permalink to this headline">#</a></h3>
+<section id="example-19-1-average-power">
+<span id="ex-19-1"></span><h3>Example 19.1: Average Power<a class="headerlink" href="#example-19-1-average-power" title="Permalink to this headline">#</a></h3>
 <p>Compute the average power of a pulse train for which the pulse width is <span class="math notranslate nohighlight">\(T/2\)</span> (duty cycle 50%). Use the result:</p>
 <div class="math notranslate nohighlight">
 \[C_k = \frac{A}{w}.\frac{\sin(k\pi/w)}{k\pi/w}\]</div>
@@ -1322,8 +1166,8 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 </div>
 </div>
 </div>
-<section id="id4">
-<h4>Power spectrum<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
+<section id="id1">
+<h4>Power spectrum<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">ps</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.^</span><span class="mi">2</span><span class="p">;</span>
@@ -1345,9 +1189,7 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-13		0.000512
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-12		0.000704
+-12		0.000704
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-11		0.000715
@@ -1357,15 +1199,11 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-9		0.000183
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-8		0.000000
+-8		0.000000
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-7		0.000303
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-6		0.001407
+-6		0.001407
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-5		0.003459
@@ -1387,22 +1225,26 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1		0.014838
-2		0.012665
-3		0.009609
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4		0.006333
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2		0.012665
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3		0.009609
+4		0.006333
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5		0.003459
+6		0.001407
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6		0.001407
-7		0.000303
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7		0.000303
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8		0.000000
-9		0.000183
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9		0.000183
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10		0.000507
@@ -1415,7 +1257,9 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13		0.000512
-14		0.000258
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14		0.000258
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15		0.000066
@@ -1436,7 +1280,7 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/exp_fs3_52_0.png" src="../../_images/exp_fs3_52_0.png" />
+<img alt="../../_images/exp_fs3_39_0.png" src="../../_images/exp_fs3_39_0.png" />
 </div>
 </div>
 <p>Note that most of the power is concentrated at DC and in the first seven harmonic components. That is in the frequency range <span class="math notranslate nohighlight">\([-14\pi/T,+14\pi/T]\)</span> rad/s.</p>
@@ -1453,6 +1297,80 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 <section id="example-19-5-low-pass-filter">
 <span id="ex19-5"></span><h3>Example 19.5 Low pass filter<a class="headerlink" href="#example-19-5-low-pass-filter" title="Permalink to this headline">#</a></h3>
 <p>This example represents the low-pass filter used in the signal generator project for <strong>EG-152: Analogue Design</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use MATLAB to complete this example.</p>
+</div>
+<p>a) A triangle waveform <span class="math notranslate nohighlight">\(x(t)\)</span> with frequency <span class="math notranslate nohighlight">\(\Omega_0 = 2\pi/T\)</span> is shown in <a class="reference internal" href="#fig-ex19-1a"><span class="std std-numref">Fig. 87</span></a>.</p>
+<figure class="align-default" id="fig-ex19-1a">
+<a class="reference internal image-reference" href="../../_images/ex19_5.png"><img alt="A triangle waveform" src="../../_images/ex19_5.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 87 </span><span class="caption-text">A triangle waveform</span><a class="headerlink" href="#fig-ex19-1a" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Determine the exponential Fourier series coefficients <span class="math notranslate nohighlight">\(C_k\)</span> for this waveform and use this result to show that the trigonomentric Fourier series for a triangle waveform is</p>
+<div class="math notranslate nohighlight">
+\[\frac{8A}{\pi^2}\left(\sin \Omega_0 t + \frac{1}{9} \sin 3\Omega_0 t + \frac{1}{25} \sin 5\omega_0 t + \cdots + \frac{1}{k^2}\sin k \Omega_0 t\right)\]</div>
+<p>b) In the signal generator, the block diagram for which is given in <a class="reference internal" href="#fig19-5a-bd"><span class="std std-numref">Fig. 88</span></a>, a triangle wave with <span class="math notranslate nohighlight">\(A = 10\)</span> and frequency <span class="math notranslate nohighlight">\(f = 1/T = 2.5\)</span> kHz, is filtered by the low-pass filter with transfer function</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \frac{a^2}{s^2 + 3as + a^2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(a = 1/(RC)\)</span> and <span class="math notranslate nohighlight">\(RC\)</span> is the time constant of an RC circuit with <span class="math notranslate nohighlight">\(R = 8.2\)</span> kΩ and <span class="math notranslate nohighlight">\(C  = 10\)</span> nF.</p>
+<figure class="align-default" id="fig19-5a-bd">
+<a class="reference internal image-reference" href="../../_images/ex19_5_bd.png"><img alt="A signal generator" src="../../_images/ex19_5_bd.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 88 </span><span class="caption-text">A signal generator</span><a class="headerlink" href="#fig19-5a-bd" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>i) Determine the frequency response <span class="math notranslate nohighlight">\(H(j\omega)\)</span> of the filter.</p>
+<p>ii) Compute the cut-off frequency <span class="math notranslate nohighlight">\(\omega_c\)</span> of the filter. Note the value of the cut-off frequency this is the frequency for which the filter transmits half-the power or</p>
+<div class="math notranslate nohighlight">
+\[|H(j\omega_c)| = \frac{1}{\sqrt{2}}\]</div>
+<p>iii) Use equation <a class="reference internal" href="#equation-fs4-d-k">(78)</a> and the result of a) to determine the attenuation in the first 7 harmonics of the triangle wave.</p>
+<p>iv) The filter is intended to generate a sinewave from the triangle wave. Determine the value of the recovery gain <span class="math notranslate nohighlight">\(K\)</span> to ensure that the attenuation is 0 dB at 2.5 kHz. Recompute the harmonic attenuation given the presence of <span class="math notranslate nohighlight">\(K\)</span>.</p>
+<p>v) Use these results to determine the THD (in DB) of the filtered waveform.</p>
+<p>vi) Use the attached Simulink model of the the filter to validate the results. Comment on the quality of the design.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% For Simulink model</span>
+<span class="n">R</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">8.2e3</span><span class="p">;</span><span class="w"> </span><span class="c">% 8.2 kOhm</span>
+<span class="n">C</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">10e-9</span><span class="p">;</span><span class="w"> </span><span class="c">% 10 nF</span>
+<span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">R</span><span class="o">*</span><span class="n">C</span><span class="p">));</span><span class="w"> </span><span class="c">% filter coefficient</span>
+<span class="n">K</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span>^<span class="mf">0.67</span><span class="w"> </span><span class="c">% replace wthis value with the value computed in Ex 19.5(b)(iv)</span>
+<span class="n">Hs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="n">a</span>^<span class="mi">2</span><span class="p">,[</span><span class="mi">1</span><span class="w"> </span><span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="n">a</span>^<span class="mi">2</span><span class="p">])</span>
+<span class="n">bode</span><span class="p">(</span><span class="n">Hs</span><span class="p">),</span><span class="nb">grid</span>
+<span class="n">ex19_5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>K =
+    4.6774
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hs =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>           1.487e08
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  ---------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + 3.659e04 s + 1.487e08
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<img alt="../../_images/exp_fs3_44_8.png" src="../../_images/exp_fs3_44_8.png" />
+</div>
+</div>
 </section>
 </section>
 <section id="summary">

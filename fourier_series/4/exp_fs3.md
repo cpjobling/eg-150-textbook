@@ -56,11 +56,11 @@ $$E = \int_0^T |x(t)|^2 dt$$ (eq:fs3:1)
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-$$P_{\mathrm{av}} = \frac{1}{T}\int_0^T |x(t)|^2 dt$$ (eq:fs3:1)
+$$P_{\mathrm{av}} = \frac{1}{T}\int_0^T |x(t)|^2 dt$$ (eq:fs3:2)
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-$$P_{\mathrm{RMS}} = \sqrt{\frac{1}{T}\int_0^T |x(t)|^2 dt}$$ (eq:fs3:1)
+$$P_{\mathrm{RMS}} = \sqrt{\frac{1}{T}\int_0^T |x(t)|^2 dt}$$ (eq:fs3:3)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -72,7 +72,7 @@ $$P_{\mathrm{RMS}} = \sqrt{\frac{1}{T}\int_0^T |x(t)|^2 dt}$$ (eq:fs3:1)
 
 The power in the $k$th harmonic $C_ke^{jk\Omega_0 t}$ is given by
 
-$$P_k = \frac{1}{T}\int_0^T\left|C_ke^{jk\Omega_0 t}\right|^2\,dt = \frac{1}{T}\int_0^T\left|C_k\right|^2\,dt=\left|C_k\right|^2$$
+$$P_k = \frac{1}{T}\int_0^T\left|C_ke^{jk\Omega_0 t}\right|^2\,dt = \frac{1}{T}\int_0^T\left|C_k\right|^2\,dt=\left|C_k\right|^2$$ (eq:fs3:4)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -86,7 +86,7 @@ You should note that $|C_k| = \sqrt{C_k C_k^*}$ so $|C_k|^2 = C_k C_k^*$.
 
 Parseval's theorem states that
 
-$$P = \frac{1}{T}\int_0^T \left|f(t)\right|^2\,dt = \sum_{k=-\infty}^{\infty}\left|C_k\right|^2.$$
+$$P = \frac{1}{T}\int_0^T \left|x(t)\right|^2\,dt = \sum_{k=-\infty}^{\infty}\left|C_k\right|^2.$$ (eq:fs3:5)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -94,7 +94,7 @@ $$P = \frac{1}{T}\int_0^T \left|f(t)\right|^2\,dt = \sum_{k=-\infty}^{\infty}\le
 
 By a similar argument:
 
-$$P_{\mathrm{RMS}} = \sqrt{\frac{1}{T}\int_0^T \left|f(t)\right|^2\,dt} = \sqrt{\sum_{k=-\infty}^{\infty}\left|C_k\right|^2}.$$
+$$P_{\mathrm{RMS}} = \sqrt{\frac{1}{T}\int_0^T \left|f(t)\right|^2\,dt} = \sqrt{\sum_{k=-\infty}^{\infty}\left|C_k\right|^2}.$$ (eq:fs3:6)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -136,13 +136,13 @@ Clearly, some of the harmonics for $k\ne \pm 1$ are nonzero. One way to characte
 
 If the signal is real and based on a sine wave (that is *odd*), then $C_0=0$ and
 
-$$f_{\mathrm{RMS}}=\sqrt{\sum_{k=1}^{\infty}2|C_k|^2}$$
+$$x_{\mathrm{RMS}}=\sqrt{\sum_{k=1}^{\infty}2|C_k|^2}$$ (eq:fs3:7)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 and we can define the THD as the ratio of the RMS value for all the harmonics for $K>1$ (the distortion) to the RMS of the fundamental which is 
 
-$$\sqrt{2\left|C_1\right|^2}:$$
+$$\sqrt{2\left|C_1\right|^2}$$ (eq:fs3:8)
 
 $${\rm{THD}} = 100\sqrt {\frac{\sum\limits_{k = 2}^\infty  {\left| C_k \right|^2}} {\left| C_1 \right|^2}} \% $$ (fse4:thd)
 
@@ -179,7 +179,7 @@ The complex functions $H(s)$ and $H(j\omega)$ are called the system's *transfer 
 
 The output of a continuous-time LTI system to a periodic function with period $T$ represented by a Fourier series is given by:
 
-$$y(t)=\sum_{k=-\infty}^{\infty} C_kH(jk\Omega_0)e^{jk\Omega_0 t}$$
+$$y(t)=\sum_{k=-\infty}^{\infty} C_kH(jk\Omega_0)e^{jk\Omega_0 t}$$ (fs4:y_t)
 
 where $\Omega_0 = 2\pi/T$ is the fundamental frequency.
 
@@ -187,7 +187,7 @@ where $\Omega_0 = 2\pi/T$ is the fundamental frequency.
 
 Thus $y(t)$ is a Fourier series itself with coefficients $D_k$:
 
-$$D_k = C_kH(jk\Omega_0)$$
+$$D_k = C_kH(jk\Omega_0)$$ (fs4:d_k)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -203,7 +203,7 @@ This picture below shows the effect of an LTI system on a periodic input in the 
 
 A consequence of the previous result is that we can design a system that has a desirable frequency spectrum $H(jk\Omega_0)$ that retains certain frequencies and cuts off others.
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
 ### Filter attenuation
 
@@ -248,118 +248,6 @@ $$\angle D_k = \angle C_k + \phi_k.$$
 
 By doing such analysis, we can examine the effect of a filter on a periodic signal, just by considering how the coefficients of the harmonic terms are changed (attenuated in magnitude and shifted in phase) by the filter.
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### Example 5
-
-Compute the average power of a pulse train for which the pulse width is $T/2$ (duty cycle 50%). Use the previous result: 
-
-$$C_n = \frac{A}{w}.\frac{\sin(k\pi/w)}{k\pi/w}$$
-
-as your starting point.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
-```{code-cell}
----
-slideshow:
-  slide_type: notes
----
-A = 1; w = 8; [f,omega] = pulse_fs(A,w,15);
-```
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-Power spectrum
-
-```{code-cell}
----
-slideshow:
-  slide_type: notes
----
-stem(omega,abs(f).^2)
-title('Power Spectrum for pulse width T/8')
-ylabel('|C_k|^2')
-xlabel('\Omega_0 [rad/s]')
-```
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-Note that most of the power is concentrated at DC and in the first seven harmonic components. That is in the frequency range $[-14\pi/T,+14\pi/T]$ rad/s.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-#### Well?
-
-* As $T\to \infty$ the fundamental frequency $\Omega_0 \to 0$
-* We are then left with just one pulse centred around $t=0$.
-* The frequency difference between harmonics also becomes smaller.
-* Line spectrum becomes a continous function.
-
-This result is the basis of the *Fourier Transform* which is coming next.
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Power in Periodic Signals
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-In your previous courses you may have come across the definitions of Signal Energy, Average Signal Power and Root Mean Square Power:
-
-$$E = \int_0^T |f(t)|^2 dt$$
-
-$$P_{\mathrm{av}} = \frac{1}{T}\int_0^T |f(t)|^2 dt$$
-
-$$P_{\mathrm{RMS}} = \sqrt{\frac{1}{T}\int_0^T |f(t)|^2 dt}$$
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### Parseval's Theorem
-
-[Parseval's Theorem](https://en.wikipedia.org/wiki/Parseval's_theorem) states that the total average power of a periodic signal $f(t)$ is equal to the sum of the average powers of all its harmonic components.
-
-The power in the $k$th harmonic $C_ke^{jk\Omega_0 t}$ is given by
-
-$$P_k = \frac{1}{T}\int_0^T\left|C_ke^{jk\Omega_0 t}\right|^2\,dt = \frac{1}{T}\int_0^T\left|C_k\right|^2\,dt=\left|C_k\right|^2$$
-
-Since $P_k = P_{-k}$, the total power of the $k$th harmomic is $2P_k$.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-You should note that $|C_k| = \sqrt{C_k C_k^*}$ so $|C_k|^2 = C_k C_k^*$.
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-Parseval's theorem states that
-
-$$P = \frac{1}{T}\int_0^T \left|f(t)\right|^2\,dt = \sum_{k=-\infty}^{\infty}\left|C_k\right|^2.$$
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### RMS Power
-
-By a similar argument:
-
-$$P_{\mathrm{RMS}} = \sqrt{\frac{1}{T}\int_0^T \left|f(t)\right|^2\,dt} = \sqrt{\sum_{k=-\infty}^{\infty}\left|C_k\right|^2}.$$
-
 +++
 
 (examples19)=
@@ -368,7 +256,7 @@ $$P_{\mathrm{RMS}} = \sqrt{\frac{1}{T}\int_0^T \left|f(t)\right|^2\,dt} = \sqrt{
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (ex:19.1)=
-### Example 19.1: Power Spectrum
+### Example 19.1: Average Power
 
 Compute the average power of a pulse train for which the pulse width is $T/2$ (duty cycle 50%). Use the result: 
 
@@ -468,13 +356,74 @@ Given that the exponential fourier series coefficients for a square wave are , c
 ### Example 19.4: THD in a triangle wave
 Given that the exponential fourier series coefficients for a triangle wave are , compute the total harmonic distortion represented by the first 7 harmonics of triangle-wave.
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
 (ex19.5)=
 ### Example 19.5 Low pass filter
 This example represents the low-pass filter used in the signal generator project for **EG-152: Analogue Design**.
 
-+++ {"slideshow": {"slide_type": "slide"}}
+:::{note}
+Use MATLAB to complete this example.
+:::
+
+
+
+a) A triangle waveform $x(t)$ with frequency $\Omega_0 = 2\pi/T$ is shown in {numref}`fig_ex19.1a`. 
+
+:::{figure-md} fig_ex19.1a
+<img src="pictures/ex19_5.png" alt="A triangle waveform" width="60%">
+
+A triangle waveform
+:::
+
+Determine the exponential Fourier series coefficients $C_k$ for this waveform and use this result to show that the trigonomentric Fourier series for a triangle waveform is 
+
+$$\frac{8A}{\pi^2}\left(\sin \Omega_0 t + \frac{1}{9} \sin 3\Omega_0 t + \frac{1}{25} \sin 5\omega_0 t + \cdots + \frac{1}{k^2}\sin k \Omega_0 t\right)$$
+
+b) In the signal generator, the block diagram for which is given in {numref}`fig19_5a_bd`, a triangle wave with $A = 10$ and frequency $f = 1/T = 2.5$ kHz, is filtered by the low-pass filter with transfer function
+
+$$H(s) = \frac{a^2}{s^2 + 3as + a^2}$$
+
+where $a = 1/(RC)$ and $RC$ is the time constant of an RC circuit with $R = 8.2$ k&Omega; and $C  = 10$ nF.
+
+:::{figure-md} fig19_5a_bd
+<img src="pictures/ex19_5_bd.png" alt="A signal generator" width="60%">
+
+A signal generator
+:::
+
+
+
+i) Determine the frequency response $H(j\omega)$ of the filter.
+
+ii) Compute the cut-off frequency $\omega_c$ of the filter. Note the value of the cut-off frequency this is the frequency for which the filter transmits half-the power or 
+
+$$|H(j\omega_c)| = \frac{1}{\sqrt{2}}$$
+
+iii) Use equation {eq}`fs4:d_k` and the result of a) to determine the attenuation in the first 7 harmonics of the triangle wave.
+
+iv) The filter is intended to generate a sinewave from the triangle wave. Determine the value of the recovery gain $K$ to ensure that the attenuation is 0 dB at 2.5 kHz. Recompute the harmonic attenuation given the presence of $K$.
+
+v) Use these results to determine the THD (in DB) of the filtered waveform.
+
+vi) Use the attached Simulink model of the the filter to validate the results. Comment on the quality of the design.
+
+```{code-cell}
+---
+slideshow:
+  slide_type: notes
+---
+% For Simulink model
+R = 8.2e3; % 8.2 kOhm
+C = 10e-9; % 10 nF
+a = (1/(R*C)); % filter coefficient
+K = 10^0.67 % replace wthis value with the value computed in Ex 19.5(b)(iv)
+Hs = tf(a^2,[1 3*a a^2])
+bode(Hs),grid
+ex19_5
+```
+
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Summary
 
