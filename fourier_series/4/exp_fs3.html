@@ -720,7 +720,7 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
+      <a class="reference internal nav-link" href="#id2">
        Power spectrum
       </a>
      </li>
@@ -896,7 +896,7 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
+      <a class="reference internal nav-link" href="#id2">
        Power spectrum
       </a>
      </li>
@@ -978,11 +978,12 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="unit-5-4-applications-of-line-spectra">
 <span id="unit5-4"></span><h1>Unit 5.4: Applications of Line Spectra<a class="headerlink" href="#unit-5-4-applications-of-line-spectra" title="Permalink to this headline">#</a></h1>
+<p>The preparatory reading for this section is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=247">Chapter 7.10</a> of  <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/fourier_series/4/exp_fs3">cpjobling.github.io/eg-150-textbook/fourier_series/4/exp_fs3</a></p>
 <p><img alt="QR Code for this lecture" src="../../_images/qrcode_fs3.png" /></p>
 <p>This section concludes our introduction to Fourier Series.</p>
 <p>In <a class="reference internal" href="../3/exp_fs2.html#unit5-3"><span class="std std-ref">Unit 5.3: Computing Line Spectra</span></a> we saw that we could represent continuous-time periodic waveforms as line spectra in the frequency domain.</p>
-<p>In thhis section we discuss how we can use these line spectra for the calculation of power for signals with harmonics, computation of total harmanic distortion and we conclude with an introduction to filters.</p>
+<p>In this section we discuss how we can use these line spectra for the calculation of power for signals with harmonics, computation of total harmanic distortion and we conclude with an introduction to filters.</p>
 <section id="agenda">
 <h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
@@ -1166,8 +1167,8 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 </div>
 </div>
 </div>
-<section id="id1">
-<h4>Power spectrum<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
+<section id="id2">
+<h4>Power spectrum<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">ps</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.^</span><span class="mi">2</span><span class="p">;</span>
@@ -1189,7 +1190,9 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-13		0.000512
--12		0.000704
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-12		0.000704
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-11		0.000715
@@ -1199,11 +1202,15 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-9		0.000183
--8		0.000000
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-8		0.000000
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-7		0.000303
--6		0.001407
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-6		0.001407
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-5		0.003459
@@ -1222,16 +1229,14 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0		0.015625
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1		0.014838
+1		0.014838
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2		0.012665
+3		0.009609
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3		0.009609
-4		0.006333
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4		0.006333
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5		0.003459
@@ -1242,12 +1247,8 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8		0.000000
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9		0.000183
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10		0.000507
+9		0.000183
+10		0.000507
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11		0.000715
@@ -1309,9 +1310,12 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 </figcaption>
 </figure>
 <p>Determine the exponential Fourier series coefficients <span class="math notranslate nohighlight">\(C_k\)</span> for this waveform and use this result to show that the trigonomentric Fourier series for a triangle waveform is</p>
+<div class="math notranslate nohighlight" id="equation-fse4-fs4tri">
+<span class="eqno">(79)<a class="headerlink" href="#equation-fse4-fs4tri" title="Permalink to this equation">#</a></span>\[x(t) = \frac{8A}{\pi^2}\left(\sum_{k\ \mathrm{odd}}(-1)^{\left(\frac{k-1}{2}\right)}\frac{1}{k^2}\sin k \Omega_0 t \right)\]</div>
+<p>which, for the first seven harmonic frequencies, is given as</p>
 <div class="math notranslate nohighlight">
-\[\frac{8A}{\pi^2}\left(\sin \Omega_0 t + \frac{1}{9} \sin 3\Omega_0 t + \frac{1}{25} \sin 5\omega_0 t + \cdots + \frac{1}{k^2}\sin k \Omega_0 t\right)\]</div>
-<p>b) In the signal generator, the block diagram for which is given in <a class="reference internal" href="#fig19-5a-bd"><span class="std std-numref">Fig. 88</span></a>, a triangle wave with <span class="math notranslate nohighlight">\(A = 10\)</span> and frequency <span class="math notranslate nohighlight">\(f = 1/T = 2.5\)</span> kHz, is filtered by the low-pass filter with transfer function</p>
+\[x(t) \approx \frac{8A}{\pi^2}\left(\sin \Omega_0 t - \frac{1}{9} \sin 3\Omega_0 t + \frac{1}{25} \sin 5\Omega_0 t - \frac{1}{49} \sin 7\Omega_0 t \cdots \right) \]</div>
+<p>b) In the signal generator, the block diagram for which is given in <a class="reference internal" href="#fig19-5a-bd"><span class="std std-numref">Fig. 88</span></a>, a triangle wavefome with <span class="math notranslate nohighlight">\(A = 10\)</span> and frequency <span class="math notranslate nohighlight">\(f = 1/T = 2.5\)</span> kHz, is filtered by the low-pass filter with transfer function</p>
 <div class="math notranslate nohighlight">
 \[H(s) = \frac{a^2}{s^2 + 3as + a^2}\]</div>
 <p>where <span class="math notranslate nohighlight">\(a = 1/(RC)\)</span> and <span class="math notranslate nohighlight">\(RC\)</span> is the time constant of an RC circuit with <span class="math notranslate nohighlight">\(R = 8.2\)</span> kΩ and <span class="math notranslate nohighlight">\(C  = 10\)</span> nF.</p>
@@ -1325,17 +1329,17 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 <p>ii) Compute the cut-off frequency <span class="math notranslate nohighlight">\(\omega_c\)</span> of the filter. Note the value of the cut-off frequency this is the frequency for which the filter transmits half-the power or</p>
 <div class="math notranslate nohighlight">
 \[|H(j\omega_c)| = \frac{1}{\sqrt{2}}\]</div>
-<p>iii) Use equation <a class="reference internal" href="#equation-fs4-d-k">(78)</a> and the result of a) to determine the attenuation in the first 7 harmonics of the triangle wave.</p>
+<p>iii) Use equation <a class="reference internal" href="#equation-fs4-d-k">(78)</a> and the result of a) to determine the attenuation in the first 7 harmonics of the triangle waveform.</p>
 <p>iv) The filter is intended to generate a sinewave from the triangle wave. Determine the value of the recovery gain <span class="math notranslate nohighlight">\(K\)</span> to ensure that the attenuation is 0 dB at 2.5 kHz. Recompute the harmonic attenuation given the presence of <span class="math notranslate nohighlight">\(K\)</span>.</p>
-<p>v) Use these results to determine the THD (in DB) of the filtered waveform.</p>
-<p>vi) Use the attached Simulink model of the the filter to validate the results. Comment on the quality of the design.</p>
+<p>v) Use these results to determine the THD (in dB) of the filtered waveform.</p>
+<p>vi) Use the attached Simulink model (<span class="xref myst">ex19_5.slx</span>) of the the filter to validate the results. Comment on the quality of the design.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% For Simulink model</span>
 <span class="n">R</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">8.2e3</span><span class="p">;</span><span class="w"> </span><span class="c">% 8.2 kOhm</span>
 <span class="n">C</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">10e-9</span><span class="p">;</span><span class="w"> </span><span class="c">% 10 nF</span>
 <span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">R</span><span class="o">*</span><span class="n">C</span><span class="p">));</span><span class="w"> </span><span class="c">% filter coefficient</span>
-<span class="n">K</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span>^<span class="mf">0.67</span><span class="w"> </span><span class="c">% replace wthis value with the value computed in Ex 19.5(b)(iv)</span>
+<span class="n">K</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="c">% replace wthis value with the value computed in Ex 19.5(b)(iv)</span>
 <span class="n">Hs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="n">a</span>^<span class="mi">2</span><span class="p">,[</span><span class="mi">1</span><span class="w"> </span><span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="n">a</span>^<span class="mi">2</span><span class="p">])</span>
 <span class="n">bode</span><span class="p">(</span><span class="n">Hs</span><span class="p">),</span><span class="nb">grid</span>
 <span class="n">ex19_5</span>
@@ -1344,7 +1348,7 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>K =
-    4.6774
+     1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hs =
@@ -1368,7 +1372,7 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
 </pre></div>
 </div>
-<img alt="../../_images/exp_fs3_44_8.png" src="../../_images/exp_fs3_44_8.png" />
+<img alt="../../_images/exp_fs3_48_8.png" src="../../_images/exp_fs3_48_8.png" />
 </div>
 </div>
 </section>
@@ -1386,10 +1390,11 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 <section id="unit-5-4-takeaways">
 <span id="unit5-4-takeaways"></span><h3>Unit 5.4 Takeaways<a class="headerlink" href="#unit-5-4-takeaways" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li><p>Parseval’s theorem</p></li>
-<li><p>Power spectrum</p></li>
-<li><p>Total harmonic distortion</p></li>
-<li><p>Steady-state response</p></li>
+<li><p>Parseval’s theorem allows us to compute the average power of of periodic signal <span class="math notranslate nohighlight">\(x(t) = x(t + nT)\)</span> from its eponential Fourier series coefficients. The average Paower in a signale <span class="math notranslate nohighlight">\(x(t)\)</span> is given by Eq. <a class="reference internal" href="#equation-eq-fs3-4">(70)</a> and RMS power is given by Eq. <a class="reference internal" href="#equation-eq-fs3-6">(72)</a>.</p></li>
+<li><p>The <em>power spectrum</em> of signal is the sequence of average powers in each complex harmonic: <span class="math notranslate nohighlight">\(|C_k|^2.\)</span> which for real periodic signals is a <em>real even</em> sequence.</p></li>
+<li><p>Total harmonic distortion is a measure of how much a periodic signal is different from a sine wave. It is defined in Eq. <code class="xref eq docutils literal notranslate"><span class="pre">fse4:thd)</span></code>.</p></li>
+<li><p>The steady-state frequency response of a continuous-time LTI system with impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> to a periodic signal <span class="math notranslate nohighlight">\(x(t) = xTt + nT)\)</span> with exponential Fourier series components <span class="math notranslate nohighlight">\(C_k\)</span> is a Fourier series <span class="math notranslate nohighlight">\(y(t)\)</span> with coefficients <span class="math notranslate nohighlight">\(D_k = C_k H(jk\Omega_0)\)</span>. (Where <span class="math notranslate nohighlight">\(H(s)\)</span> is the Laplace transform of <span class="math notranslate nohighlight">\(h(t)\)</span>). This
+result can be used to determine the filtering affect of any continuous-time LTI system on any periodic signal. As an example of this you should review the theory for the <em>harmonic filter</em> studied in Session 4 of <strong>EG-152 Analogue Design</strong> and which is reviewed in <span class="xref std std-ref">ex19_5</span>.</p></li>
 </ul>
 </section>
 <section id="coming-next">

@@ -17,6 +17,8 @@ kernelspec:
 (unit5.4)=
 # Unit 5.4: Applications of Line Spectra
 
+The preparatory reading for this section is [Chapter 7.10](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=247) of  {cite}`karris`.
+
 +++
 
 Follow along at [cpjobling.github.io/eg-150-textbook/fourier_series/4/exp_fs3](https://cpjobling.github.io/eg-150-textbook/fourier_series/4/exp_fs3)
@@ -29,7 +31,7 @@ This section concludes our introduction to Fourier Series.
 
 In {ref}`unit5.3` we saw that we could represent continuous-time periodic waveforms as line spectra in the frequency domain.
 
-In thhis section we discuss how we can use these line spectra for the calculation of power for signals with harmonics, computation of total harmanic distortion and we conclude with an introduction to filters.
+In this section we discuss how we can use these line spectra for the calculation of power for signals with harmonics, computation of total harmanic distortion and we conclude with an introduction to filters.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -378,9 +380,21 @@ A triangle waveform
 
 Determine the exponential Fourier series coefficients $C_k$ for this waveform and use this result to show that the trigonomentric Fourier series for a triangle waveform is 
 
-$$\frac{8A}{\pi^2}\left(\sin \Omega_0 t + \frac{1}{9} \sin 3\Omega_0 t + \frac{1}{25} \sin 5\omega_0 t + \cdots + \frac{1}{k^2}\sin k \Omega_0 t\right)$$
++++ {"slideshow": {"slide_type": "notes"}}
 
-b) In the signal generator, the block diagram for which is given in {numref}`fig19_5a_bd`, a triangle wave with $A = 10$ and frequency $f = 1/T = 2.5$ kHz, is filtered by the low-pass filter with transfer function
+$$x(t) = \frac{8A}{\pi^2}\left(\sum_{k\ \mathrm{odd}}(-1)^{\left(\frac{k-1}{2}\right)}\frac{1}{k^2}\sin k \Omega_0 t \right)$$ (fse4:fs4tri)
+
++++
+
+which, for the first seven harmonic frequencies, is given as
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+$$x(t) \approx \frac{8A}{\pi^2}\left(\sin \Omega_0 t - \frac{1}{9} \sin 3\Omega_0 t + \frac{1}{25} \sin 5\Omega_0 t - \frac{1}{49} \sin 7\Omega_0 t \cdots \right) $$
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+b) In the signal generator, the block diagram for which is given in {numref}`fig19_5a_bd`, a triangle wavefome with $A = 10$ and frequency $f = 1/T = 2.5$ kHz, is filtered by the low-pass filter with transfer function
 
 $$H(s) = \frac{a^2}{s^2 + 3as + a^2}$$
 
@@ -400,13 +414,13 @@ ii) Compute the cut-off frequency $\omega_c$ of the filter. Note the value of th
 
 $$|H(j\omega_c)| = \frac{1}{\sqrt{2}}$$
 
-iii) Use equation {eq}`fs4:d_k` and the result of a) to determine the attenuation in the first 7 harmonics of the triangle wave.
+iii) Use equation {eq}`fs4:d_k` and the result of a) to determine the attenuation in the first 7 harmonics of the triangle waveform.
 
 iv) The filter is intended to generate a sinewave from the triangle wave. Determine the value of the recovery gain $K$ to ensure that the attenuation is 0 dB at 2.5 kHz. Recompute the harmonic attenuation given the presence of $K$.
 
-v) Use these results to determine the THD (in DB) of the filtered waveform.
+v) Use these results to determine the THD (in dB) of the filtered waveform.
 
-vi) Use the attached Simulink model of the the filter to validate the results. Comment on the quality of the design.
+vi) Use the attached Simulink model ([ex19_5.slx](../matlab/ex19_5.slx)) of the the filter to validate the results. Comment on the quality of the design.
 
 ```{code-cell}
 ---
@@ -417,7 +431,7 @@ slideshow:
 R = 8.2e3; % 8.2 kOhm
 C = 10e-9; % 10 nF
 a = (1/(R*C)); % filter coefficient
-K = 10^0.67 % replace wthis value with the value computed in Ex 19.5(b)(iv)
+K = 1 % replace wthis value with the value computed in Ex 19.5(b)(iv)
 Hs = tf(a^2,[1 3*a a^2])
 bode(Hs),grid
 ex19_5
@@ -439,10 +453,11 @@ We concluded our study of Fourier series by reviewing the following topics
 (unit5.4:takeaways)=
 ### Unit 5.4 Takeaways
 
-* Parseval's theorem
-* Power spectrum
-* Total harmonic distortion
-* Steady-state response 
+* Parseval's theorem allows us to compute the average power of of periodic signal $x(t) = x(t + nT)$ from its eponential Fourier series coefficients. The average Paower in a signale $x(t)$ is given by Eq. {eq}`eq:fs3:4` and RMS power is given by Eq. {eq}`eq:fs3:6`.
+* The *power spectrum* of signal is the sequence of average powers in each complex harmonic: $|C_k|^2.$ which for real periodic signals is a *real even* sequence. 
+* Total harmonic distortion is a measure of how much a periodic signal is different from a sine wave. It is defined in Eq. {eq}`fse4:thd)`.
+* The steady-state frequency response of a continuous-time LTI system with impulse response $h(t)$ to a periodic signal $x(t) = xTt + nT)$ with exponential Fourier series components $C_k$ is a Fourier series $y(t)$ with coefficients $D_k = C_k H(jk\Omega_0)$. (Where $H(s)$ is the Laplace transform of $h(t)$). This
+result can be used to determine the filtering affect of any continuous-time LTI system on any periodic signal. As an example of this you should review the theory for the *harmonic filter* studied in Session 4 of **EG-152 Analogue Design** and which is reviewed in {ref}`ex19_5`.
 
 
 ### Coming next
