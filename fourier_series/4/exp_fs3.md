@@ -378,7 +378,7 @@ a) A triangle waveform $x(t)$ with frequency $\Omega_0 = 2\pi/T$ is shown in {nu
 A triangle waveform
 :::
 
-Determine the exponential Fourier series coefficients $C_k$ for this waveform and use this result to show that the trigonomentric Fourier series for a triangle waveform is 
+Determine the exponential Fourier series coefficients $C_k$ for this waveform and use this result to show that the trigonomentric Fourier series for a triangle waveform is
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -455,9 +455,9 @@ We concluded our study of Fourier series by reviewing the following topics
 
 * Parseval's theorem allows us to compute the average power of of periodic signal $x(t) = x(t + nT)$ from its eponential Fourier series coefficients. The average Paower in a signale $x(t)$ is given by Eq. {eq}`eq:fs3:4` and RMS power is given by Eq. {eq}`eq:fs3:6`.
 * The *power spectrum* of signal is the sequence of average powers in each complex harmonic: $|C_k|^2.$ which for real periodic signals is a *real even* sequence. 
-* Total harmonic distortion is a measure of how much a periodic signal is different from a sine wave. It is defined in Eq. {eq}`fse4:thd)`.
+* Total harmonic distortion is a measure of how much a periodic signal is different from a sine wave. It is defined in Eq. {eq}`fse4:thd`.
 * The steady-state frequency response of a continuous-time LTI system with impulse response $h(t)$ to a periodic signal $x(t) = xTt + nT)$ with exponential Fourier series components $C_k$ is a Fourier series $y(t)$ with coefficients $D_k = C_k H(jk\Omega_0)$. (Where $H(s)$ is the Laplace transform of $h(t)$). This
-result can be used to determine the filtering affect of any continuous-time LTI system on any periodic signal. As an example of this you should review the theory for the *harmonic filter* studied in Session 4 of **EG-152 Analogue Design** and which is reviewed in {ref}`ex19_5`.
+result can be used to determine the filtering affect of any continuous-time LTI system on any periodic signal. As an example of this you should review the theory for the *harmonic filter* studied in Session 4 of **EG-152 Analogue Design** and which is reviewed in {ref}`ex19.5`.
 
 
 ### Coming next
