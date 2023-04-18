@@ -171,7 +171,15 @@ $$G(s) = \frac{V_\mathrm{out}(s)}{V_s(s)} = \frac{R_L + sL + 1/sC}{R_g + R_L + s
 
 ### Example 14.2
 
+::::{admonition} MATLAB Example
+:class: tip
+This is based on Example 4.7 from {cite}`karris`.
+
+This is the basis for the mini project in MATLAB LAb 5.
+::::
+
 Compute the transfer function for the op-amp circuit shown in {numref}`fig:ex14.2` in terms of the circuit constants $R_1$, $R_2$, $R_3$, $C_1$ and $C_2$.
+
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 

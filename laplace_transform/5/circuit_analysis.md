@@ -1163,6 +1163,8 @@ pretty(y10)
 
 ````{admonition} MATLAB Example
 :class: tip
+This is Exercise 4 from [4.7 Exercises](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=121) from {cite}`karris`
+
 This example will be solved as part of in MATLAB Lab 5.3.
 ````
 
@@ -1172,7 +1174,7 @@ For the s-domain circuit shown in {numref}`fig:12.7`
 * Compute the time domain value of $i_1(t)$ when $v_1(t)=u_0(t)$ and all intial conditions are zero.
 
 :::{figure-md} Fig:12.7
-<img src="pictures/fig12_7.png" alt="Circuit for Example 12.7" width="60%">
+<img src="pictures/figure12_7.png" alt="Circuit for Example 12.7" width="80%">
 
 Circuit for Example 12.7
 :::
