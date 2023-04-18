@@ -173,7 +173,7 @@ $$G(s) = \frac{V_\mathrm{out}(s)}{V_s(s)} = \frac{R_L + sL + 1/sC}{R_g + R_L + s
 
 ::::{admonition} MATLAB Example
 :class: tip
-This is based on Example 4.7 from {cite}`karris`.
+This is based on [Example 4.7](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=115) from {cite}`karris`.
 
 This is the basis for the mini project in MATLAB LAb 5.
 ::::
@@ -336,7 +336,7 @@ C2 = 10*10^(-9);
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Define the transfer function derived from analysis (Eq. {eq}`eg:ex14.2`)
+Define the transfer function derived from analysis (Eq. {eq}`ex:14.2`)
 
 ```{code-cell}
 ---
@@ -356,7 +356,7 @@ slideshow:
   slide_type: subslide
 ---
 format long
-denG = sym2poly(den)
+denH = sym2poly(den)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -368,7 +368,7 @@ Now define the denominator
 slideshow:
   slide_type: fragment
 ---
-numG = -1;
+numH = -1;
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -384,8 +384,8 @@ For convenience, define coefficients $a$ and $b$:
 slideshow:
   slide_type: fragment
 ---
-a = denG(1);
-b = denG(2);
+a = denH(1);
+b = denH(2);
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -398,19 +398,19 @@ slideshow:
   slide_type: fragment
 ---
 w = 1:10:10000;
-Gw = -1./(a*w.^2 - j.*b.*w + denG(3));
+Hw = -1./(a*w.^2 - j.*b.*w + denH(3));
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Plot $|G(j\omega)|$ against $\omega$ on log-lin "graph paper".
+Plot $|H(j\omega)|$ against $\omega$ on log-lin "graph paper".
 
 ```{code-cell}
 ---
 slideshow:
   slide_type: fragment
 ---
-semilogx(w, abs(Gw))
+semilogx(w, abs(Hw))
 xlabel('Radian frequency w (rad/s')
 ylabel('|Vout/Vin|')
 title('Magnitude Vout/Vin vs. Radian Frequency')
@@ -421,7 +421,7 @@ grid
 
 For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab) folder.
 
-* {ref}`ex:14.2` [[example_14.2.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_14.2.mlx)]
+* {ref}`ex:14.2` [[example_14.2.mlx](https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/example_14_2.mlx)]
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
