@@ -40,7 +40,7 @@ In this unit, we will continue our introduction to the Laplace transform by pres
 
 * {ref}`lap2:exp`
 
-* {ref}`lap2:xform_table`
+* {ref}`lap:xform_table`
 
 * {ref}`lap2:matlab`
 
@@ -432,7 +432,7 @@ In this unit, we continued our introduction to the Laplace transform by presenti
 
 * {ref}`lap2:exp`
 
-* {ref}`lap2:xform_table`
+* {ref}`lap:xform_table`
 
 * {ref}`lap2:matlab`
 

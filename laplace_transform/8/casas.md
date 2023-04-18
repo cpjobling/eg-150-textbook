@@ -774,11 +774,11 @@ step(G),grid
 
 #### Live Script Solution
 
-A standalone script version of this solution is available as [example15_1.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example15_1.mlx)
+A standalone script version of this solution is available as [example15_1.mlx](hhttps://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/solution15_1.mlx)
 
 #### Simulink model
 
-See [example_15_1.slx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example_15_1.slx)
+See [example_15_1.slx](https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/example_15_1.slx)
 
 ```{code-cell}
 ---
@@ -949,15 +949,11 @@ We will complete this course with an introduction to Frequency response analysis
 :filter: docname in docnames
 ```
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Matlab Solutions
 
 For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab) folder.
 
-* {ref}`ex:15.1` [example15.1.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example15_1.mlx)
-* {ref}`ex:15.2` [example15.2.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/example15_2.mlx)
-
-```{code-cell}
-
-```
+* {ref}`ex:15.1` [example15.1.mlx](https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/solution15_1.mlx)
+* {ref}`ex:15.2` [example15.2.mlx](https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/solution15_2.mlx)
