@@ -21,6 +21,12 @@ kernelspec:
 
 The preparatory reading for this section is [Chapter 4](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=101) {cite}`karris` which presents examples of the applications of the Laplace transform for electrical solving circuit problems. Much of the same material is covered in [Section 3.7 D](https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section36) of {cite}`schaum`.
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/5/circuit_analysis](https://cpjobling.github.io/eg-150-textbook/laplace_transform/5/circuit_analysis)
+
+![QR Code for this lecture](pictures/qrcode_laplace5.png)
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## Agenda
@@ -34,12 +40,6 @@ We look at applications of the Laplace Transform for circuit analysis. In partic
 * {ref}`complex_admittance`
 
 * {ref}`examples12`
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/5/circuit_analysis](https://cpjobling.github.io/eg-150-textbook/laplace_transform/5/circuit_analysis)
-
-![QR Code for this lecture](pictures/qrcode_laplace5.png)
 
 ```{code-cell}
 ---
