@@ -515,6 +515,10 @@ We will work through these in class.
 (ex:12.1)=
 ### Example 12.1
 
+::::{note}
+This is based on [Example 4.1](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=102) from {cite}`karris`.
+::::
+
 Use the Laplace transform method and apply Kirchoff's Current Law (KCL) to find the voltage $v_c(t)$ across the capacitor for the circuit in {numref}`fig:12.1` given that $v_c(0^-) = 6$ V.
 
 :::{figure-md} fig:12.1
@@ -576,6 +580,10 @@ Circuit for Example 12.1
 
 (ex:12.2)=
 ### Example 12.2
+
+::::{note}
+This is based on [Example 4.2](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=104) from {cite}`karris`.
+::::
 
 Use the Laplace transform method and apply Kirchoff's Voltage Law (KVL) to find the voltage $v_c(t)$ across the capacitor for the circuit shown in {numref}`fig:12.2` given that $v_c(0^-) = 6$ V.
 
@@ -641,6 +649,8 @@ Circuit for Example 12.2
 
 `````{admonition} MATLAB Example
 :class: tip
+This is based on [Example 4.3](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=104) in {cite}`karris`.
+
 We will solve this examples by hand and then review the solution in MATLAB lab 5.
 `````
 
@@ -654,7 +664,7 @@ Circuit for Example 12.3
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-We can show how with the assistance of MATLAB (See [solution12_3.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m)) that the solution is
+We can show how with the assistance of MATLAB (See [solution12_3.mlx](https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/solution12_3.mlx)) that the solution is
 
 $$V_{\mathrm{out}}=\left(1.36e^{-6.57t}+0.64e^{-0.715t}\cos 0.316t - 1.84e^{-0.715t}\sin 0.316t\right)u_0(t)$$ (sol:12.3)
 
@@ -960,6 +970,8 @@ Consider {numref}`fig:complex_imp` and give an expression for $V_c(s)$.
 
 `````{admonition} MATLAB Example
 :class: tip
+This is based on [Example 4.4](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=109) from {cite}`karris`.
+
 We will solve this examples by hand and then review the solution in MATLAB lab 5.
 `````
 
@@ -1029,12 +1041,14 @@ Find $Z(s)$ using:
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:12.6)=
-### Example 12.6 - Do It Yourself
+### Example 12.6
 
-`````{admonition} MATLAB Example
+````{admonition} MATLAB Example
 :class: tip
-We will solve this examples by hand and then review the solution in MATLAB lab 5.
-`````
+This is [Example 4.5](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=112) from {cite}`karris`
+
+We will solve this examples by hand and then review the solution in MATLAB Lab 5.3.
+````
 
 Compute $Z(s)$ and $Y(s)$ for the circuit shown in {numref}`fig:ex12.6`. All impedence values are in $\Omega$ (ohms). Verify your answers with MATLAB.
 
@@ -1043,6 +1057,7 @@ Compute $Z(s)$ and $Y(s)$ for the circuit shown in {numref}`fig:ex12.6`. All imp
 
 Circuit for Example 12.6
 :::
+
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -1084,7 +1099,7 @@ $$Z(s) = \frac{65s^4 + 490s^3 + 528s^2 + 400s + 128}{s(5s^2 + 30s + 16)}$$
 
 $$Y(s) = \frac{1}{Z(s)} = \frac{s(5s^2 + 30s + 16)}{65s^4 + 490s^3 + 528s^2 + 400s + 128}$$
 
-Matlab verification: [solution12_6.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_6.m)
+Matlab verification: [solution12_6.m](https://raw.githubusercontent.com/cpjobling/eg-150-textbook/main/laplace_transform/matlab/solution12_6.m)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -1142,6 +1157,26 @@ tags: [remove-output]
 y10 = 1/z10;
 pretty(y10)
 ```
+
+(ex12.7)=
+### Example 12.7
+
+````{admonition} MATLAB Example
+:class: tip
+This example will be solved as part of in MATLAB Lab 5.3.
+````
+
+For the s-domain circuit shown in {numref}`fig:12.7`
+
+* Compute the admittance $Y(s) = I_1(s)/V_1(s)$
+* Compute the time domain value of $i_1(t)$ when $v_1(t)=u_0(t)$ and all intial conditions are zero.
+
+:::{figure-md} Fig:12.7
+<img src="pictures/fig12_7.png" alt="Circuit for Example 12.7" width="60%">
+
+Circuit for Example 12.7
+:::
+
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

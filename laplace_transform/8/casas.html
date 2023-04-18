@@ -1960,11 +1960,11 @@ symbolically.</p>
 </section>
 <section id="using-transfer-functions-in-simulink-for-system-simulation">
 <span id="simulink-tf"></span><h2>Using Transfer Functions in Simulink for System Simulation<a class="headerlink" href="#using-transfer-functions-in-simulink-for-system-simulation" title="Permalink to this headline">#</a></h2>
-<p>The Simulink transfer function (<strong><code class="docutils literal notranslate"><span class="pre">Transfer</span> <span class="pre">Fcn</span></code></strong>) block (see <a class="reference internal" href="#fig-sim-tf"><span class="std std-numref">Fig. 69</span></a>) implements a transfer function</p>
+<p>The Simulink transfer function (<strong><code class="docutils literal notranslate"><span class="pre">Transfer</span> <span class="pre">Fcn</span></code></strong>) block (see <a class="reference internal" href="#fig-sim-tf"><span class="std std-numref">Fig. 70</span></a>) implements a transfer function</p>
 <figure class="align-default" id="fig-sim-tf">
 <img alt="The LTI Block in Simulink" src="../../_images/sim_tf.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 69 </span><span class="caption-text">The LTI Block in Simulink</span><a class="headerlink" href="#fig-sim-tf" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 70 </span><span class="caption-text">The LTI Block in Simulink</span><a class="headerlink" href="#fig-sim-tf" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The transfer function block represents a general input output function</p>
@@ -2079,11 +2079,11 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </section>
 <section id="example-15-2-periodic-excitation">
 <span id="ex15-2"></span><h3>Example 15.2: Periodic Excitation<a class="headerlink" href="#example-15-2-periodic-excitation" title="Permalink to this headline">#</a></h3>
-<p>Consider the RC circuit shown in <a class="reference internal" href="#fig-ex15-2"><span class="std std-numref">Fig. 70</span></a>(b). The circuit is subjected to the periodic signal <span class="math notranslate nohighlight">\(x(t) = v_1(t)\)</span> shown in <a class="reference internal" href="#fig-ex15-2"><span class="std std-numref">Fig. 70</span></a>(a).</p>
+<p>Consider the RC circuit shown in <a class="reference internal" href="#fig-ex15-2"><span class="std std-numref">Fig. 71</span></a>(b). The circuit is subjected to the periodic signal <span class="math notranslate nohighlight">\(x(t) = v_1(t)\)</span> shown in <a class="reference internal" href="#fig-ex15-2"><span class="std std-numref">Fig. 71</span></a>(a).</p>
 <figure class="align-default" id="fig-ex15-2">
 <a class="reference internal image-reference" href="../../_images/eg-152-3.1.png"><img alt="Circuit for Investigating Recurrent Boundary Conditions." src="../../_images/eg-152-3.1.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 70 </span><span class="caption-text">Circuit for Investigating Recurrent Boundary Conditions (Figure 3.0 of <span id="id2">[<a class="reference internal" href="../../zbib.html#id16" title="Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. EG-152 Analogue Design Laboratory. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.">Evans <em>et al.</em>, 2016</a>]</span>)</span><a class="headerlink" href="#fig-ex15-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 71 </span><span class="caption-text">Circuit for Investigating Recurrent Boundary Conditions (Figure 3.0 of <span id="id2">[<a class="reference internal" href="../../zbib.html#id16" title="Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. EG-152 Analogue Design Laboratory. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.">Evans <em>et al.</em>, 2016</a>]</span>)</span><a class="headerlink" href="#fig-ex15-2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>a) Use the Laplace transform to determine the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> and the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the RC circuit.</p>
@@ -2094,13 +2094,13 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </section>
 <section id="example-15-3-operational-differentiator">
 <span id="id3"></span><h3>Example 15.3: Operational Differentiator<a class="headerlink" href="#example-15-3-operational-differentiator" title="Permalink to this headline">#</a></h3>
-<p>In Section 3.3 of <span id="id4">[<a class="reference internal" href="../../zbib.html#id16" title="Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. EG-152 Analogue Design Laboratory. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.">Evans <em>et al.</em>, 2016</a>]</span> it is given that the differential equation of the <em>operational differentiator</em> illustrated in <a class="reference internal" href="#fig-15-3"><span class="std std-numref">Fig. 71</span></a> is</p>
+<p>In Section 3.3 of <span id="id4">[<a class="reference internal" href="../../zbib.html#id16" title="Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. EG-152 Analogue Design Laboratory. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.">Evans <em>et al.</em>, 2016</a>]</span> it is given that the differential equation of the <em>operational differentiator</em> illustrated in <a class="reference internal" href="#fig-15-3"><span class="std std-numref">Fig. 72</span></a> is</p>
 <div class="math notranslate nohighlight">
 \[v_2(t) = -R i(t) = -RC \frac{d}{dt}v_1(t)\]</div>
 <figure class="align-default" id="fig-15-3">
 <a class="reference internal image-reference" href="../../_images/eg-152-3.4.png"><img alt="Schematic of Operational Differentiator." src="../../_images/eg-152-3.4.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 71 </span><span class="caption-text">Schematic of Operational Differentiator (Figure 3.4 of <span id="id5">[<a class="reference internal" href="../../zbib.html#id16" title="Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. EG-152 Analogue Design Laboratory. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.">Evans <em>et al.</em>, 2016</a>]</span>)</span><a class="headerlink" href="#fig-15-3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 72 </span><span class="caption-text">Schematic of Operational Differentiator (Figure 3.4 of <span id="id5">[<a class="reference internal" href="../../zbib.html#id16" title="Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. EG-152 Analogue Design Laboratory. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.">Evans <em>et al.</em>, 2016</a>]</span>)</span><a class="headerlink" href="#fig-15-3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>a) Give the transfer function <span class="math notranslate nohighlight">\(H(s) = V_2(s)/V_1(s)\)</span> of the operational differentiator.</p>
@@ -2109,13 +2109,13 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </section>
 <section id="example-15-4-operational-integrator">
 <span id="id6"></span><h3>Example 15.4: Operational Integrator<a class="headerlink" href="#example-15-4-operational-integrator" title="Permalink to this headline">#</a></h3>
-<p>In Section 3.5 of <span id="id7">[<a class="reference internal" href="../../zbib.html#id16" title="Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. EG-152 Analogue Design Laboratory. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.">Evans <em>et al.</em>, 2016</a>]</span> it is given that the differential equation of the <em>operational inetgrator</em> illustrated in <a class="reference internal" href="#fig-15-4"><span class="std std-numref">Fig. 72</span></a> is</p>
+<p>In Section 3.5 of <span id="id7">[<a class="reference internal" href="../../zbib.html#id16" title="Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. EG-152 Analogue Design Laboratory. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.">Evans <em>et al.</em>, 2016</a>]</span> it is given that the differential equation of the <em>operational inetgrator</em> illustrated in <a class="reference internal" href="#fig-15-4"><span class="std std-numref">Fig. 73</span></a> is</p>
 <div class="math notranslate nohighlight">
 \[v_2(t) = -\frac{1}{RC} \int_0^t v_1(\tau)\, d\tau.\]</div>
 <figure class="align-default" id="fig-15-4">
 <a class="reference internal image-reference" href="../../_images/eg-152-3.7.png"><img alt="Schematic of Operational Integrator." src="../../_images/eg-152-3.7.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 72 </span><span class="caption-text">Schematic of Operational Integrator (Figure 3.7 of <span id="id8">[<a class="reference internal" href="../../zbib.html#id16" title="Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. EG-152 Analogue Design Laboratory. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.">Evans <em>et al.</em>, 2016</a>]</span>)</span><a class="headerlink" href="#fig-15-4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 73 </span><span class="caption-text">Schematic of Operational Integrator (Figure 3.7 of <span id="id8">[<a class="reference internal" href="../../zbib.html#id16" title="Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. EG-152 Analogue Design Laboratory. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.">Evans <em>et al.</em>, 2016</a>]</span>)</span><a class="headerlink" href="#fig-15-4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>a) Give the transfer function <span class="math notranslate nohighlight">\(H(s) = V_2(s)/V_1(s)\)</span> of the operational interator.</p>

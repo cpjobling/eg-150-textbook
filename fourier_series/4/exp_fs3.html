@@ -1033,11 +1033,11 @@ title="Print to PDF"
 </section>
 <section id="total-harmonic-distortion">
 <span id="fse4-thd"></span><h2>Total Harmonic Distortion<a class="headerlink" href="#total-harmonic-distortion" title="Permalink to this headline">#</a></h2>
-<p>Suppose that a signal that is supposed to be a pure sine wave of amplitude A is distorted as shown in <a class="reference internal" href="#fse-thd1"><span class="std std-numref">Fig. 85</span></a> below</p>
+<p>Suppose that a signal that is supposed to be a pure sine wave of amplitude A is distorted as shown in <a class="reference internal" href="#fse-thd1"><span class="std std-numref">Fig. 86</span></a> below</p>
 <figure class="align-default" id="fse-thd1">
 <a class="reference internal image-reference" href="../../_images/thd.png"><img alt="A sinusoid with harmomic distortion" src="../../_images/thd.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 85 </span><span class="caption-text">A sinusoid with harmomic distortion</span><a class="headerlink" href="#fse-thd1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 86 </span><span class="caption-text">A sinusoid with harmomic distortion</span><a class="headerlink" href="#fse-thd1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>This can occur in the line voltages of an industrial plant that makes heavy use of nonlineear loads such as electric arc furnaces, solid state relays, motor drives, etc (E.g. Tata Steel!)</p>
@@ -1058,7 +1058,7 @@ title="Print to PDF"
 <figure class="align-default" id="fse4-compute-thd">
 <a class="reference internal image-reference" href="../../_images/thd_ps.png"><img alt="Computation of THD from the signal power spectrum" src="../../_images/thd_ps.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 86 </span><span class="caption-text">Computation of THD from the signal power spectrum</span><a class="headerlink" href="#fse4-compute-thd" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 87 </span><span class="caption-text">Computation of THD from the signal power spectrum</span><a class="headerlink" href="#fse4-compute-thd" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1302,11 +1302,11 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 <p class="admonition-title">Note</p>
 <p>Use MATLAB to complete this example.</p>
 </div>
-<p>a) A triangle waveform <span class="math notranslate nohighlight">\(x(t)\)</span> with frequency <span class="math notranslate nohighlight">\(\Omega_0 = 2\pi/T\)</span> is shown in <a class="reference internal" href="#fig-ex19-1a"><span class="std std-numref">Fig. 87</span></a>.</p>
+<p>a) A triangle waveform <span class="math notranslate nohighlight">\(x(t)\)</span> with frequency <span class="math notranslate nohighlight">\(\Omega_0 = 2\pi/T\)</span> is shown in <a class="reference internal" href="#fig-ex19-1a"><span class="std std-numref">Fig. 88</span></a>.</p>
 <figure class="align-default" id="fig-ex19-1a">
 <a class="reference internal image-reference" href="../../_images/ex19_5.png"><img alt="A triangle waveform" src="../../_images/ex19_5.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 87 </span><span class="caption-text">A triangle waveform</span><a class="headerlink" href="#fig-ex19-1a" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 88 </span><span class="caption-text">A triangle waveform</span><a class="headerlink" href="#fig-ex19-1a" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Determine the exponential Fourier series coefficients <span class="math notranslate nohighlight">\(C_k\)</span> for this waveform and use this result to show that the trigonomentric Fourier series for a triangle waveform is</p>
@@ -1315,14 +1315,14 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 <p>which, for the first seven harmonic frequencies, is given as</p>
 <div class="math notranslate nohighlight">
 \[x(t) \approx \frac{8A}{\pi^2}\left(\sin \Omega_0 t - \frac{1}{9} \sin 3\Omega_0 t + \frac{1}{25} \sin 5\Omega_0 t - \frac{1}{49} \sin 7\Omega_0 t \cdots \right) \]</div>
-<p>b) In the signal generator, the block diagram for which is given in <a class="reference internal" href="#fig19-5a-bd"><span class="std std-numref">Fig. 88</span></a>, a triangle wavefome with <span class="math notranslate nohighlight">\(A = 10\)</span> and frequency <span class="math notranslate nohighlight">\(f = 1/T = 2.5\)</span> kHz, is filtered by the low-pass filter with transfer function</p>
+<p>b) In the signal generator, the block diagram for which is given in <a class="reference internal" href="#fig19-5a-bd"><span class="std std-numref">Fig. 89</span></a>, a triangle wavefome with <span class="math notranslate nohighlight">\(A = 10\)</span> and frequency <span class="math notranslate nohighlight">\(f = 1/T = 2.5\)</span> kHz, is filtered by the low-pass filter with transfer function</p>
 <div class="math notranslate nohighlight">
 \[H(s) = \frac{a^2}{s^2 + 3as + a^2}\]</div>
 <p>where <span class="math notranslate nohighlight">\(a = 1/(RC)\)</span> and <span class="math notranslate nohighlight">\(RC\)</span> is the time constant of an RC circuit with <span class="math notranslate nohighlight">\(R = 8.2\)</span> kΩ and <span class="math notranslate nohighlight">\(C  = 10\)</span> nF.</p>
 <figure class="align-default" id="fig19-5a-bd">
 <a class="reference internal image-reference" href="../../_images/ex19_5_bd.png"><img alt="A signal generator" src="../../_images/ex19_5_bd.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 88 </span><span class="caption-text">A signal generator</span><a class="headerlink" href="#fig19-5a-bd" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 89 </span><span class="caption-text">A signal generator</span><a class="headerlink" href="#fig19-5a-bd" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>i) Determine the frequency response <span class="math notranslate nohighlight">\(H(j\omega)\)</span> of the filter.</p>

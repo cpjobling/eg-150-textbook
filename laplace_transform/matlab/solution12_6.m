@@ -1,4 +1,4 @@
-% + magic_args="Example 12.6: Verification of Solution"
+%% solution5 - Verification of Solution for Example 12.6 from notes.
 syms s;
 % -
 
