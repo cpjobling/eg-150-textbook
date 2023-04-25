@@ -19,7 +19,7 @@ kernelspec:
 
 The preparatory reading for this section is [Chapter 7.10](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=247) of  {cite}`karris`.
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/fourier_series/4/exp_fs3](https://cpjobling.github.io/eg-150-textbook/fourier_series/4/exp_fs3)
 
@@ -33,7 +33,7 @@ In {ref}`unit5.3` we saw that we could represent continuous-time periodic wavefo
 
 In this section we discuss how we can use these line spectra for the calculation of power for signals with harmonics, computation of total harmanic distortion and we conclude with an introduction to filters.
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Agenda
 
@@ -350,13 +350,29 @@ Note that most of the power is concentrated at DC and in the first seven harmoni
 
 (ex19.3)=
 ### Example 19.3: THD in a square-wave
-Given that the exponential fourier series coefficients for a square wave are , compute the total harmonic distortion represented by the first 7 harmonics of square-wave.
+Given that the exponential fourier series coefficients for a square wave are 
+
+$$C_0 = 0$$
+
+$$C_k = 0\quad k\,\mathrm{even}$$
+
+$$C_k = \frac{2A}{jk\pi}\quad k\,\mathrm{odd}$$
+
+compute the total harmonic distortion represented by the first 7 harmonics of square-wave.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (ex19.4)=
 ### Example 19.4: THD in a triangle wave
-Given that the exponential fourier series coefficients for a triangle wave are , compute the total harmonic distortion represented by the first 7 harmonics of triangle-wave.
+Given that the exponential fourier series coefficients for a triangle wave with even symmetry is
+
+$$C_0 = 0$$
+
+$$C_k = 0\quad k\,\mathrm{even}$$
+
+$$C_k = -\frac{4A}{jk^2\pi^2}\quad k\,\mathrm{odd}$$
+
+compute the total harmonic distortion represented by the first 7 harmonics of triangle-wave.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
