@@ -19,7 +19,7 @@ kernelspec:
 
 The preparatory reading for this section is [Chapter 7.10](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=247) of  {cite}`karris`.
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/fourier_series/3/exp_fs2](https://cpjobling.github.io/eg-150-textbook/fourier_series/3/exp_fs2)
 
@@ -33,7 +33,7 @@ In the {ref}`unit5.2` we saw that we could exploit the complex exponential $e^{j
 
 In this section we show how the Exponential form of the Fourier Series leads us to the ability to present waveforms as line spectra which simplifies the calculation of power for systems with harmonics and leads in the limit as $𝑇$ approaches infinity to the Fourier Transform.
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Agenda
 
