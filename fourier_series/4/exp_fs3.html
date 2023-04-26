@@ -1153,16 +1153,23 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 <p>Compute and display the power spectrum for the signal of <span class="xref std std-ref">ex19.1</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span>
-<span class="nb">cd</span><span class="w"> </span><span class="p">.</span><span class="o">./</span><span class="n">matlab</span>
-<span class="nb">format</span><span class="w"> </span><span class="n">compact</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clear</span> <span class="nb">all</span>
+<span class="n">cd</span> <span class="o">../</span><span class="n">matlab</span>
+<span class="nb">format</span> <span class="n">compact</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="p">[</span><span class="n">f</span><span class="p">,</span><span class="n">omega</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">pulse_fs</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="mi">15</span><span class="p">);</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">w</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span> <span class="p">[</span><span class="n">f</span><span class="p">,</span><span class="n">omega</span><span class="p">]</span> <span class="o">=</span> <span class="n">pulse_fs</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="mi">15</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -1171,99 +1178,11 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 <h4>Power spectrum<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">ps</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.^</span><span class="mi">2</span><span class="p">;</span>
-<span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;Omega (rad/s)\tPower (W)\n&#39;</span><span class="p">)</span>
-<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">ps</span><span class="p">)</span>
-<span class="w">    </span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;%d\t\t%f\n&#39;</span><span class="p">,</span><span class="n">omega</span><span class="p">(</span><span class="nb">i</span><span class="p">),</span><span class="n">ps</span><span class="p">(</span><span class="nb">i</span><span class="p">))</span>
-<span class="k">end</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Omega (rad/s)	Power (W)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-15		0.000066
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-14		0.000258
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-13		0.000512
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-12		0.000704
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-11		0.000715
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-10		0.000507
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-9		0.000183
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-8		0.000000
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-7		0.000303
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-6		0.001407
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-5		0.003459
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-4		0.006333
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-3		0.009609
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2		0.012665
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1		0.014838
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0		0.015625
-1		0.014838
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2		0.012665
-3		0.009609
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4		0.006333
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5		0.003459
-6		0.001407
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7		0.000303
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8		0.000000
-9		0.000183
-10		0.000507
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11		0.000715
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12		0.000704
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13		0.000512
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14		0.000258
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15		0.000066
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ps</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.^</span><span class="mi">2</span><span class="p">;</span>
+<span class="n">fprintf</span><span class="p">(</span><span class="s1">&#39;Omega (rad/s)</span><span class="se">\t</span><span class="s1">Power (W)</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">length</span><span class="p">(</span><span class="n">ps</span><span class="p">)</span>
+    <span class="n">fprintf</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="se">\t\t</span><span class="si">%f</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">omega</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="n">ps</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<span class="n">end</span>
 </pre></div>
 </div>
 </div>
@@ -1273,15 +1192,12 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 <h4>Plot<a class="headerlink" href="#plot" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">stem</span><span class="p">(</span><span class="n">omega</span><span class="p">,</span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.^</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Power Spectrum for pulse width T/8&#39;</span><span class="p">)</span>
-<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;|C_k|^2&#39;</span><span class="p">)</span>
-<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;\Omega_0 [rad/s]&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stem</span><span class="p">(</span><span class="n">omega</span><span class="p">,</span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">title</span><span class="p">(</span><span class="s1">&#39;Power Spectrum for pulse width T/8&#39;</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;|C_k|^2&#39;</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;\Omega_0 [rad/s]&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/exp_fs3_39_0.png" src="../../_images/exp_fs3_39_0.png" />
 </div>
 </div>
 <p>Note that most of the power is concentrated at DC and in the first seven harmonic components. That is in the frequency range <span class="math notranslate nohighlight">\([-14\pi/T,+14\pi/T]\)</span> rad/s.</p>
@@ -1324,6 +1240,13 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 </figcaption>
 </figure>
 <p>Determine the exponential Fourier series coefficients <span class="math notranslate nohighlight">\(C_k\)</span> for this waveform and use this result to show that the trigonomentric Fourier series for a triangle waveform is</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">edit</span> <span class="n">ex19_5</span><span class="o">.</span><span class="n">mlx</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="math notranslate nohighlight" id="equation-fse4-fs4tri">
 <span class="eqno">(79)<a class="headerlink" href="#equation-fse4-fs4tri" title="Permalink to this equation">#</a></span>\[x(t) = \frac{8A}{\pi^2}\left(\sum_{k\ \mathrm{odd}}(-1)^{\left(\frac{k-1}{2}\right)}\frac{1}{k^2}\sin k \Omega_0 t \right)\]</div>
 <p>which, for the first seven harmonic frequencies, is given as</p>
@@ -1349,44 +1272,16 @@ $<span class="math notranslate nohighlight">\(\angle D_k = \angle C_k + \phi_k.\
 <p>vi) Use the attached Simulink model (<span class="xref myst">ex19_5.slx</span>) of the the filter to validate the results. Comment on the quality of the design.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% For Simulink model</span>
-<span class="n">R</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">8.2e3</span><span class="p">;</span><span class="w"> </span><span class="c">% 8.2 kOhm</span>
-<span class="n">C</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">10e-9</span><span class="p">;</span><span class="w"> </span><span class="c">% 10 nF</span>
-<span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">R</span><span class="o">*</span><span class="n">C</span><span class="p">));</span><span class="w"> </span><span class="c">% filter coefficient</span>
-<span class="n">K</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="c">% replace wthis value with the value computed in Ex 19.5(b)(iv)</span>
-<span class="n">Hs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="n">a</span>^<span class="mi">2</span><span class="p">,[</span><span class="mi">1</span><span class="w"> </span><span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="n">a</span>^<span class="mi">2</span><span class="p">])</span>
-<span class="n">bode</span><span class="p">(</span><span class="n">Hs</span><span class="p">),</span><span class="nb">grid</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">For</span> <span class="n">Simulink</span> <span class="n">model</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">8.2e3</span><span class="p">;</span> <span class="o">%</span> <span class="mf">8.2</span> <span class="n">kOhm</span>
+<span class="n">C</span> <span class="o">=</span> <span class="mf">10e-9</span><span class="p">;</span> <span class="o">%</span> <span class="mi">10</span> <span class="n">nF</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">R</span><span class="o">*</span><span class="n">C</span><span class="p">));</span> <span class="o">%</span> <span class="nb">filter</span> <span class="n">coefficient</span>
+<span class="n">K</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">%</span> <span class="n">replace</span> <span class="n">wthis</span> <span class="n">value</span> <span class="k">with</span> <span class="n">the</span> <span class="n">value</span> <span class="n">computed</span> <span class="ow">in</span> <span class="n">Ex</span> <span class="mf">19.5</span><span class="p">(</span><span class="n">b</span><span class="p">)(</span><span class="n">iv</span><span class="p">)</span>
+<span class="n">Hs</span> <span class="o">=</span> <span class="n">tf</span><span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">,[</span><span class="mi">1</span> <span class="mi">3</span><span class="o">*</span><span class="n">a</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">bode</span><span class="p">(</span><span class="n">Hs</span><span class="p">),</span><span class="n">grid</span>
 <span class="n">ex19_5</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>K =
-     1
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hs =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>           1.487e08
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  ---------------------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + 3.659e04 s + 1.487e08
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
-</pre></div>
-</div>
-<img alt="../../_images/exp_fs3_48_8.png" src="../../_images/exp_fs3_48_8.png" />
 </div>
 </div>
 </section>

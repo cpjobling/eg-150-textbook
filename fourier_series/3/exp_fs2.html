@@ -1143,7 +1143,7 @@ title="Print to PDF"
 <h5>Coefficients of the Exponential Fourier Series?<a class="headerlink" href="#coefficients-of-the-exponential-fourier-series" title="Permalink to this headline">#</a></h5>
 <p>Given</p>
 <div class="math notranslate nohighlight">
-\[C_k = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(\Omega_0 t)e^{-jk(\Omega_0 t)}\,d(\Omega_0 t)\]</div>
+\[C_k = \frac{1}{2\pi}\int_{-\pi/w}^{\pi/w} f(\Omega_0 t)e^{-jk(\Omega_0 t)}\,d(\Omega_0 t)\]</div>
 <ul class="simple">
 <li><p>Is the function <strong>even</strong> or <strong>odd</strong>?</p></li>
 <li><p>Does the signal have <strong>half-wave symmetry</strong>?</p></li>
@@ -1307,7 +1307,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="p">[</span><span class="n">f</span><span class="p">,</span><span class="n">omega</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">pulse_fs</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="mi">15</span><span class="p">);</span>
 <span class="nb">stem</span><span class="p">(</span><span class="n">omega</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
-<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Line Spectra for pulse with w=2&#39;</span><span class="p">)</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Line Spectra for pulse with w=5&#39;</span><span class="p">)</span>
 <span class="nb">hold</span><span class="w"> </span><span class="n">on</span>
 <span class="n">om</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">1000</span><span class="p">);</span>
 <span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;\Omega_0 [rad/s]&#39;</span><span class="p">)</span>

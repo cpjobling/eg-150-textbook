@@ -308,6 +308,14 @@ format compact
 slideshow:
   slide_type: subslide
 ---
+dir
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
 A = 1; w = 8; [f,omega] = pulse_fs(A,w,15);
 ```
 
@@ -395,6 +403,10 @@ A triangle waveform
 :::
 
 Determine the exponential Fourier series coefficients $C_k$ for this waveform and use this result to show that the trigonomentric Fourier series for a triangle waveform is
+
+```{code-cell}
+edit ex19_5.mlx
+```
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
