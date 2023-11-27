@@ -10,6 +10,8 @@ Follow along at [cpjobling.github.io/eg-150-textbook/introduction/intro](https:/
 
 ## Pingo
 
+(change this to Slido?)
+
 We will be using a web-based audience response system called Pingo for in-class quizzes and informal surveys.
 
 <!-- #region -->

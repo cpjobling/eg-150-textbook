@@ -9,7 +9,7 @@ jupytext:
 kernelspec:
   display_name: MATLAB
   language: matlab
-  name: imatlab
+  name: matlab
 ---
 
 +++ {"nbpresent": {"id": "90f3c07d-3646-44b0-a549-7020fc10d16f"}, "slideshow": {"slide_type": "slide"}}

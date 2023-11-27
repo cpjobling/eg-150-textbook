@@ -172,7 +172,7 @@ The recurrent rectangular pulse is used extensively in digital communication sys
 
 Given
 
-$$C_k = \frac{1}{2\pi}\int_{-\pi/w}^{\pi/w} f(\Omega_0 t)e^{-jk(\Omega_0 t)}\,d(\Omega_0 t)$$
+$$C_k = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(\Omega_0 t)e^{-jk(\Omega_0 t)}\,d(\Omega_0 t)$$
 
 * Is the function **even** or **odd**?
 * Does the signal have **half-wave symmetry**?
@@ -299,10 +299,6 @@ format compact
 ```
 
 ```{code-cell}
----
-slideshow:
-  slide_type: subslide
----
 %%file ../matlab/pulse_fs.m
 function [f,omega] = pulse_fs(A,w,range)
 % PULSE_FS compute fourier series spectrum in range
@@ -368,7 +364,7 @@ $\Omega_0 = 1$ rad/s; $w = 5$; $T = 2\pi$ s; $T/w = \pi$ s.
 ```{code-cell}
 A = 1; w = 5; [f,omega] = pulse_fs(A,w,15);
 stem(omega,f)
-title('Line Spectra for pulse with w=5')
+title('Line Spectra for pulse with w=2')
 hold on
 om = linspace(-15,15,1000);
 xlabel('\Omega_0 [rad/s]')

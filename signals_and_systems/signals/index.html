@@ -1,49 +1,61 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Unit 2.1: Signals and Classification of Signals &#8212; EG-150 Signals and Systems</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -53,57 +65,99 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'signals_and_systems/signals/index';</script>
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/signals_and_systems/signals/index.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Unit 2.2: Periodic, Energy and Power Signals" href="pep_signals.html" />
     <link rel="prev" title="Unit 2: Signals and Systems" href="../index.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">EG-150 Signals and Systems</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EG-150 Signals and Systems</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -112,838 +166,332 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Online notes
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Online notes</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../introduction/index.html">
-   Unit 1 Introduction
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/intro.html">
-     Unit 1.1 Setting the Scene
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/thecourse.html">
-     Unit 1.2 About this Course
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/concepts.html">
-     Unit 1.3 Introduction to the Concepts to be Studied
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../index.html">
-   Unit 2 Signals and Systems
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Unit 2.1 Signals and Classification of Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="pep_signals.html">
-     Unit 2.2 Periodic, Energy and Power Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../elementary_signals/index.html">
-     Unit 2.3 Elementary Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../elementary_signals/examples3.html">
-     Examples 3 - Elementary Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../systems/index.html">
-     Unit 2.4 Systems and Classification of Systems
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../lti_systems/index.html">
-   Unit 3 Linear Time-Invariant Systems
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti1.html">
-     Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti2.html">
-     Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti3.html">
-     Unit 3.3 Systems Described by Differential Equations
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../laplace_transform/index.html">
-   Unit 4 Laplace Transforms and their Applications
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/1/laplace.html">
-     Unit 4.1 The Laplace Transformation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/2/laplace_of_common_signals.html">
-     Unit 4.2 Laplace Transform of Some Common Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/3/laplace_properties.html">
-     Unit 4.3 Properties of Laplace Transforms
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/4/inverse_laplace.html">
-     Unit 4.4 The Inverse Laplace Transform
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/5/circuit_analysis.html">
-     Unit 4.5 Using Laplace Transforms for Circuit Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/6/transfer_functions.html">
-     Unit 4.6 Transfer Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/7/tf_for_circuits.html">
-     Unit 4.7 Transfer Functions for Circuit Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/8/casas.html">
-     Unit 4.8 Computer-Aided Systems Analysis and Simulation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../fourier_series/index.html">
-   Unit 5 Fourier Series
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../fourier_series/1/trig_fseries.html">
-     Unit 5.1: Fourier Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../fourier_series/2/exp_fs1.html">
-     Unit 5.2: Exponential Fourier Series
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../fourier_series/3/exp_fs2.html">
-     Unit 5.3 Computing Line Spectra
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../fourier_series/4/exp_fs3.html">
-     Unit 5.4 Applications of Line Spectra
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../zbib.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../introduction/index.html">Unit 1 Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/intro.html">Unit 1.1 Setting the Scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/thecourse.html">Unit 1.2 About this Course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/concepts.html">Unit 1.3 Introduction to the Concepts to be Studied</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  FAQs
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../FAQS/faq.html">
-   Answers to Frequently Asked Questions
-  </a>
- </li>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Unit 2 Signals and Systems</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit 2.1 Signals and Classification of Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pep_signals.html">Unit 2.2 Periodic, Energy and Power Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../elementary_signals/index.html">Unit 2.3 Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../elementary_signals/examples3.html">Examples 3 - Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../systems/index.html">Unit 2.4 Systems and Classification of Systems</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendices
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../lti_systems/index.html">Unit 3 Linear Time-Invariant Systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti1.html">Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti2.html">Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti3.html">Unit 3.3 Systems Described by Differential Equations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../laplace_transform/index.html">Unit 4 Laplace Transforms and their Applications</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/1/laplace.html">Unit 4.1 The Laplace Transformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/2/laplace_of_common_signals.html">Unit 4.2 Laplace Transform of Some Common Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/3/laplace_properties.html">Unit 4.3 Properties of Laplace Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/4/inverse_laplace.html">Unit 4.4 The Inverse Laplace Transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/5/circuit_analysis.html">Unit 4.5 Using Laplace Transforms for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/6/transfer_functions.html">Unit 4.6 Transfer Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/7/tf_for_circuits.html">Unit 4.7 Transfer Functions for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/8/casas.html">Unit 4.8 Computer-Aided Systems Analysis and Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../fourier_series/index.html">Unit 5 Fourier Series</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../fourier_series/1/trig_fseries.html">Unit 5.1: Fourier Analysis</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../fourier_series/2/exp_fs1.html">Unit 5.2: Exponential Fourier Series</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../fourier_series/3/exp_fs2.html">Unit 5.3 Computing Line Spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fourier_series/4/exp_fs3.html">Unit 5.4 Applications of Line Spectra</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../zbib.html">Bibliography</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FAQs</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../takeaways.html">
-   Unit takeaways
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../exercises.html">
-   List of Unit Exercises
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../homework.html">
-   List of Homework Problems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../laplace_transform/1/lt_props.html">
-   Properties of the Laplace Transform
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../laplace_transform/1/lt_table.html">
-   Common Laplace Transform Pairs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../setup/polling_setup.html">
-   Set Up In-Class Polling
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../setup/index.html">
-   Setting up your own version of this book
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/jupyter.html">
-     About Jupyter notebooks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/python.html">
-     Installing Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/setup.html">
-     Setting up your Own Jupyter-MATLAB Computing Environment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/matlab_kernel.html">
-     Testing the Jupyter Matlab Kernel
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/advanced-setup.html">
-     Quick Start - For Experienced Users
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/jupyter-book.html">
-     Setting up jupyter-book
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../FAQS/faq.html">Answers to Frequently Asked Questions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../takeaways.html">Unit takeaways</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises.html">List of Unit Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework.html">List of Homework Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../laplace_transform/1/lt_props.html">Properties of the Laplace Transform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../laplace_transform/1/lt_table.html">Common Laplace Transform Pairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/polling_setup.html">Set Up In-Class Polling</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter.html">About Jupyter notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/python.html">Installing Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/matlab_kernel.html">Testing the Jupyter Matlab Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter-book.html">Setting up jupyter-book</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by 
- <a href="https://jupyterbook.org">
-  Jupyter Book
-</a>
-
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/signals_and_systems/signals/index.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/signals_and_systems/signals/index.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Fsignals_and_systems/signals/index.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/signals_and_systems/signals/index.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Fsignals_and_systems/signals/index.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/signals_and_systems/signals/index.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/signals_and_systems/signals/index.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download notebook file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="../../_sources/signals_and_systems/signals/index.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#subjects-to-be-covered">
-   Subjects to be covered
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#continuous-time-signals">
-   Continuous-Time Signals
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#discrete-time-signals">
-   Discrete-Time Signals
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#more-on-discrete-time-signals">
-     More on discrete-time signals
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sampled-data">
-     Sampled data
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#uniform-sampling">
-     Uniform sampling
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#analogue-and-digital-signals">
-   Analogue and Digital Signals
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#real-and-complex-signals">
-   Real and Complex Signals
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#deterministic-and-random-signals">
-   Deterministic and Random Signals
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Deterministic and Random Signals
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#random-signals">
-     Random signals
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#even-and-odd-signals">
-   Even and Odd Signals
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#an-even-signal">
-     An even signal
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#an-odd-signal">
-     An odd signal
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#decomposing-signals-into-even-and-odd-parts">
-     Decomposing signals into even and odd parts
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-1">
-   Examples 1
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-1-1-signals">
-     Example 1.1: Signals
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-1-2-uniform-sampling">
-     Example 1.2: Uniform sampling
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-1-3-odd-and-even-signals">
-     Example 1.3: Odd and even signals
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-1-4">
-     Example 1.4
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-1-5">
-     Example 1.5
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-1-6">
-     Example 1.6
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unit-2-1-take-aways">
-     Unit 2.1: Take aways
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   Next Time
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Unit 2.1: Signals and Classification of Signals</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#subjects-to-be-covered">
-   Subjects to be covered
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#continuous-time-signals">
-   Continuous-Time Signals
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#discrete-time-signals">
-   Discrete-Time Signals
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#more-on-discrete-time-signals">
-     More on discrete-time signals
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sampled-data">
-     Sampled data
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#uniform-sampling">
-     Uniform sampling
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#analogue-and-digital-signals">
-   Analogue and Digital Signals
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#real-and-complex-signals">
-   Real and Complex Signals
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#deterministic-and-random-signals">
-   Deterministic and Random Signals
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Deterministic and Random Signals
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#random-signals">
-     Random signals
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#even-and-odd-signals">
-   Even and Odd Signals
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#an-even-signal">
-     An even signal
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#an-odd-signal">
-     An odd signal
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#decomposing-signals-into-even-and-odd-parts">
-     Decomposing signals into even and odd parts
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-1">
-   Examples 1
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-1-1-signals">
-     Example 1.1: Signals
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-1-2-uniform-sampling">
-     Example 1.2: Uniform sampling
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-1-3-odd-and-even-signals">
-     Example 1.3: Odd and even signals
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-1-4">
-     Example 1.4
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-1-5">
-     Example 1.5
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-1-6">
-     Example 1.6
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unit-2-1-take-aways">
-     Unit 2.1: Take aways
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   Next Time
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Unit 2.1: Signals and Classification of Signals</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subjects-to-be-covered">Subjects to be covered</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-time-signals">Continuous-Time Signals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-time-signals">Discrete-Time Signals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-discrete-time-signals">More on discrete-time signals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sampled-data">Sampled data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-sampling">Uniform sampling</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analogue-and-digital-signals">Analogue and Digital Signals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-and-complex-signals">Real and Complex Signals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deterministic-and-random-signals">Deterministic and Random Signals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Deterministic and Random Signals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-signals">Random signals</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#even-and-odd-signals">Even and Odd Signals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-even-signal">An even signal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-odd-signal">An odd signal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decomposing-signals-into-even-and-odd-parts">Decomposing signals into even and odd parts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-1">Examples 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-1-signals">Example 1.1: Signals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-2-uniform-sampling">Example 1.2: Uniform sampling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-3-odd-and-even-signals">Example 1.3: Odd and even signals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-4">Example 1.4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-5">Example 1.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-6">Example 1.6</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-2-1-take-aways">Unit 2.1: Take aways</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="unit-2-1-signals-and-classification-of-signals">
-<span id="signals1"></span><h1>Unit 2.1: Signals and Classification of Signals<a class="headerlink" href="#unit-2-1-signals-and-classification-of-signals" title="Permalink to this headline">#</a></h1>
+<span id="signals1"></span><h1>Unit 2.1: Signals and Classification of Signals<a class="headerlink" href="#unit-2-1-signals-and-classification-of-signals" title="Permalink to this heading">#</a></h1>
 <p>This section is based on Section 1.2 of <span id="id1">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/signals_and_systems/signals">cpjobling.github.io/eg-150-textbook/signals_and_systems/signals</a></p>
 <p><img alt="QR Code" src="../../_images/qrcode_unit2.1.png" /></p>
@@ -959,7 +507,7 @@ title="Print to PDF"
 <li><p>Thus a signal is denoted by <span class="math notranslate nohighlight">\(x(t)\)</span>.</p></li>
 </ul>
 <section id="subjects-to-be-covered">
-<h2>Subjects to be covered<a class="headerlink" href="#subjects-to-be-covered" title="Permalink to this headline">#</a></h2>
+<h2>Subjects to be covered<a class="headerlink" href="#subjects-to-be-covered" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#ct-signals"><span class="std std-ref">Continuous-Time Signals</span></a></p></li>
 <li><p><a class="reference internal" href="#dt-signals"><span class="std std-ref">Discrete-Time Signals</span></a></p></li>
@@ -971,7 +519,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="continuous-time-signals">
-<span id="ct-signals"></span><h2>Continuous-Time Signals<a class="headerlink" href="#continuous-time-signals" title="Permalink to this headline">#</a></h2>
+<span id="ct-signals"></span><h2>Continuous-Time Signals<a class="headerlink" href="#continuous-time-signals" title="Permalink to this heading">#</a></h2>
 <p>A signal <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>continuous-time</em> (CT) signal if <span class="math notranslate nohighlight">\(t\)</span> is a continuous variable. For an example of a continuous-time signal, please see <a class="reference internal" href="#ct-signal"><span class="std std-numref">Fig. 10</span></a>.</p>
 <figure class="align-default" id="ct-signal">
 <a class="reference internal image-reference" href="../../_images/ct-signal.png"><img alt="Graphical representation of a continuous-time signal." src="../../_images/ct-signal.png" style="width: 60%;" /></a>
@@ -981,7 +529,7 @@ title="Print to PDF"
 </figure>
 </section>
 <section id="discrete-time-signals">
-<span id="dt-signals"></span><h2>Discrete-Time Signals<a class="headerlink" href="#discrete-time-signals" title="Permalink to this headline">#</a></h2>
+<span id="dt-signals"></span><h2>Discrete-Time Signals<a class="headerlink" href="#discrete-time-signals" title="Permalink to this heading">#</a></h2>
 <p>If <span class="math notranslate nohighlight">\(t\)</span> is a discrete variable—that is, <span class="math notranslate nohighlight">\(x(t)\)</span> is defined at discrete times—then <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>discrete-time</em> (DT) signal. For an example of a discrete-time signal, please see <a class="reference internal" href="#dt-signal"><span class="std std-numref">Fig. 11</span></a>.</p>
 <figure class="align-default" id="dt-signal">
 <a class="reference internal image-reference" href="../../_images/dt-signal.png"><img alt="Graphical representation of a discrete-time signal." src="../../_images/dt-signal.png" style="width: 60%;" /></a>
@@ -1000,11 +548,11 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/index_16_0.png" src="../../_images/index_16_0.png" />
+<img alt="../../_images/8b4f4273d09557b34b2f96ace54cec1e1d80bb0aa00c7a50cd2a03b9a70530af.png" src="../../_images/8b4f4273d09557b34b2f96ace54cec1e1d80bb0aa00c7a50cd2a03b9a70530af.png" />
 </div>
 </div>
 <section id="more-on-discrete-time-signals">
-<span id="more-on-dt-signals"></span><h3>More on discrete-time signals<a class="headerlink" href="#more-on-discrete-time-signals" title="Permalink to this headline">#</a></h3>
+<span id="more-on-dt-signals"></span><h3>More on discrete-time signals<a class="headerlink" href="#more-on-discrete-time-signals" title="Permalink to this heading">#</a></h3>
 <p>A discrete-time signal <span class="math notranslate nohighlight">\(x[n]\)</span> may represent a phenomenon for which the independent variable is inherently discrete: e.g. daily stock market average prices.</p>
 <p>E.g. <a class="reference external" href="https://www.londonstockexchange.com/indices/ftse-100">FTSE 100</a> (<a class="reference internal" href="#ftse-100"><span class="std std-numref">Fig. 12</span></a>)</p>
 <figure class="align-default" id="ftse-100">
@@ -1015,7 +563,7 @@ title="Print to PDF"
 </figure>
 </section>
 <section id="sampled-data">
-<h3>Sampled data<a class="headerlink" href="#sampled-data" title="Permalink to this headline">#</a></h3>
+<h3>Sampled data<a class="headerlink" href="#sampled-data" title="Permalink to this heading">#</a></h3>
 <p>In electronic engineering, we mostly use discrete-time signals to represent the <em>sampling</em> of continuous-time signals.</p>
 <p>For example, a discrete-time signal <span class="math notranslate nohighlight">\(x[n]\)</span> may be obtained by <em>sampling</em> a continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span> such as</p>
 <div class="math notranslate nohighlight">
@@ -1035,7 +583,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="uniform-sampling">
-<h3>Uniform sampling<a class="headerlink" href="#uniform-sampling" title="Permalink to this headline">#</a></h3>
+<h3>Uniform sampling<a class="headerlink" href="#uniform-sampling" title="Permalink to this heading">#</a></h3>
 <p>When the sampling intervals are equal (uniform sampling), then</p>
 <div class="math notranslate nohighlight">
 \[x_n = x[n] = x(nT_s)\]</div>
@@ -1045,7 +593,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="analogue-and-digital-signals">
-<span id="a-n-d"></span><h2>Analogue and Digital Signals<a class="headerlink" href="#analogue-and-digital-signals" title="Permalink to this headline">#</a></h2>
+<span id="a-n-d"></span><h2>Analogue and Digital Signals<a class="headerlink" href="#analogue-and-digital-signals" title="Permalink to this heading">#</a></h2>
 <p>If a continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span> can take on any value in the continuous interval <span class="math notranslate nohighlight">\((a,b)\)</span>, where <span class="math notranslate nohighlight">\(a\)</span> may be <span class="math notranslate nohighlight">\(-\infty\)</span> and <span class="math notranslate nohighlight">\(b\)</span> may be <span class="math notranslate nohighlight">\(+\infty\)</span>, then the continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span> is called an <em>analogue</em> signal.</p>
 <p>If a discrete-time signal <span class="math notranslate nohighlight">\(x[n]\)</span> can take on only a finite number of distinct values, then we call this signal a <em>digital signal</em>.</p>
 <p>In modern electronics, most physical phenomena which we wish to deal are represented by analogue signals. But more often than not these days, we will process such data by sampling the signals and converting them into digital signals.</p>
@@ -1055,7 +603,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="real-and-complex-signals">
-<span id="r-n-c"></span><h2>Real and Complex Signals<a class="headerlink" href="#real-and-complex-signals" title="Permalink to this headline">#</a></h2>
+<span id="r-n-c"></span><h2>Real and Complex Signals<a class="headerlink" href="#real-and-complex-signals" title="Permalink to this heading">#</a></h2>
 <p>A signal <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>real</em> signal if its value if a real number, and a signal <span class="math notranslate nohighlight">\(x(t)\)</span> is a <em>complex</em> signal if its value is a complex number.</p>
 <p>A general complex signal is a signal <span class="math notranslate nohighlight">\(x(t)\)</span> is a function of the form</p>
 <div class="math notranslate nohighlight">
@@ -1065,9 +613,9 @@ title="Print to PDF"
 <p>We won’t see any examples of complex signals in this course.</p>
 </section>
 <section id="deterministic-and-random-signals">
-<span id="det-n-rand"></span><h2>Deterministic and Random Signals<a class="headerlink" href="#deterministic-and-random-signals" title="Permalink to this headline">#</a></h2>
+<span id="det-n-rand"></span><h2>Deterministic and Random Signals<a class="headerlink" href="#deterministic-and-random-signals" title="Permalink to this heading">#</a></h2>
 <section id="id3">
-<h3>Deterministic and Random Signals<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<h3>Deterministic and Random Signals<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <p><em>Deterministic signals</em> are those signals whose values are completely specified for any given time. Thus a deterministic signal can be modelled by a known function of time <span class="math notranslate nohighlight">\(t\)</span>.</p>
 <p>For example consider <span class="math notranslate nohighlight">\(x(t) = 5 \sin(10 t + \pi/4)\)</span></p>
 <div class="cell docutils container">
@@ -1079,12 +627,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/index_39_0.png" src="../../_images/index_39_0.png" />
+<img alt="../../_images/1aca6ed118ea8b2af4c9511bfce1751507362fcdee4bc4a3552fec139cadeb28.png" src="../../_images/1aca6ed118ea8b2af4c9511bfce1751507362fcdee4bc4a3552fec139cadeb28.png" />
 </div>
 </div>
 </section>
 <section id="random-signals">
-<h3>Random signals<a class="headerlink" href="#random-signals" title="Permalink to this headline">#</a></h3>
+<h3>Random signals<a class="headerlink" href="#random-signals" title="Permalink to this heading">#</a></h3>
 <p><em>Random signals</em> are those signals that take random values at any given time and must be characterised statistically.</p>
 <p>Random signals are often used to simulate noise on a signal.</p>
 <div class="cell docutils container">
@@ -1096,16 +644,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/index_42_0.png" src="../../_images/index_42_0.png" />
+<img alt="../../_images/e58f3af7d8d5bfeb6a941f425f9128043bdbef860c15735aa938e696ddce03df.png" src="../../_images/e58f3af7d8d5bfeb6a941f425f9128043bdbef860c15735aa938e696ddce03df.png" />
 </div>
 </div>
 <p>We will not discuss random signals in this module or the next, but if you are interested, they are covered in detail in Chapters 8 and 9 of <span id="id4">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 </section>
 <section id="even-and-odd-signals">
-<span id="even-n-odd"></span><h2>Even and Odd Signals<a class="headerlink" href="#even-and-odd-signals" title="Permalink to this headline">#</a></h2>
+<span id="even-n-odd"></span><h2>Even and Odd Signals<a class="headerlink" href="#even-and-odd-signals" title="Permalink to this heading">#</a></h2>
 <section id="an-even-signal">
-<h3>An even signal<a class="headerlink" href="#an-even-signal" title="Permalink to this headline">#</a></h3>
+<h3>An even signal<a class="headerlink" href="#an-even-signal" title="Permalink to this heading">#</a></h3>
 <p>A signal <span class="math notranslate nohighlight">\(x(t)\)</span> is referred to as an <em>even</em> signal if</p>
 <div class="math notranslate nohighlight">
 \[x(t) = x(-t)\]</div>
@@ -1118,7 +666,7 @@ title="Print to PDF"
 </figure>
 </section>
 <section id="an-odd-signal">
-<h3>An odd signal<a class="headerlink" href="#an-odd-signal" title="Permalink to this headline">#</a></h3>
+<h3>An odd signal<a class="headerlink" href="#an-odd-signal" title="Permalink to this heading">#</a></h3>
 <p>A signal <span class="math notranslate nohighlight">\(x(t)\)</span> is referred to as an <em>odd</em> signal if</p>
 <div class="math notranslate nohighlight">
 \[x(-t) = -x(t)\]</div>
@@ -1134,7 +682,7 @@ title="Print to PDF"
 \[x(t) = x(-t)\]</div>
 </section>
 <section id="decomposing-signals-into-even-and-odd-parts">
-<h3>Decomposing signals into even and odd parts<a class="headerlink" href="#decomposing-signals-into-even-and-odd-parts" title="Permalink to this headline">#</a></h3>
+<h3>Decomposing signals into even and odd parts<a class="headerlink" href="#decomposing-signals-into-even-and-odd-parts" title="Permalink to this heading">#</a></h3>
 <p>Any signal <span class="math notranslate nohighlight">\(x(t)\)</span> can be expressed as the sum of two signals, one of which is even and one of which is odd. That is:</p>
 <div class="math notranslate nohighlight">
 \[x(t) = x_e(t) + x_o(t)\]</div>
@@ -1147,9 +695,9 @@ title="Print to PDF"
 </section>
 </section>
 <section id="examples-1">
-<span id="worked-examples-1"></span><h2>Examples 1<a class="headerlink" href="#examples-1" title="Permalink to this headline">#</a></h2>
+<span id="worked-examples-1"></span><h2>Examples 1<a class="headerlink" href="#examples-1" title="Permalink to this heading">#</a></h2>
 <section id="example-1-1-signals">
-<span id="ex1-1"></span><h3>Example 1.1: Signals<a class="headerlink" href="#example-1-1-signals" title="Permalink to this headline">#</a></h3>
+<span id="ex1-1"></span><h3>Example 1.1: Signals<a class="headerlink" href="#example-1-1-signals" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve these examples by hand and then give the solution in the MATLAB lab.</p>
@@ -1169,7 +717,7 @@ title="Print to PDF"
 <p>For the answer, refer to the lecture recording or see solved problem 1.1 in <span id="id5">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span></p>
 </section>
 <section id="example-1-2-uniform-sampling">
-<span id="ex1-2"></span><h3>Example 1.2: Uniform sampling<a class="headerlink" href="#example-1-2-uniform-sampling" title="Permalink to this headline">#</a></h3>
+<span id="ex1-2"></span><h3>Example 1.2: Uniform sampling<a class="headerlink" href="#example-1-2-uniform-sampling" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve these examples by hand and then give the solution in the MATLAB lab.</p>
@@ -1187,7 +735,7 @@ title="Print to PDF"
 <p>For the answer, refer to the lecture recording or see solved problem 1.3 in <span id="id6">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-1-3-odd-and-even-signals">
-<span id="id7"></span><h3>Example 1.3: Odd and even signals<a class="headerlink" href="#example-1-3-odd-and-even-signals" title="Permalink to this headline">#</a></h3>
+<span id="id7"></span><h3>Example 1.3: Odd and even signals<a class="headerlink" href="#example-1-3-odd-and-even-signals" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve these examples by hand and then give the solution in the MATLAB lab.</p>
@@ -1202,17 +750,17 @@ title="Print to PDF"
 <p>For the answer, refer to the lecture recording or see solved problem 1.5 in <span id="id8">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-1-4">
-<span id="ex1-4"></span><h3>Example 1.4<a class="headerlink" href="#example-1-4" title="Permalink to this headline">#</a></h3>
+<span id="ex1-4"></span><h3>Example 1.4<a class="headerlink" href="#example-1-4" title="Permalink to this heading">#</a></h3>
 <p>Find the odd and even components of <span class="math notranslate nohighlight">\(x(t) = e^{jt}\)</span>.</p>
 <p>For the answer, refer to the lecture recording or see solved problem 1.6 in <span id="id9">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-1-5">
-<span id="ex1-5"></span><h3>Example 1.5<a class="headerlink" href="#example-1-5" title="Permalink to this headline">#</a></h3>
+<span id="ex1-5"></span><h3>Example 1.5<a class="headerlink" href="#example-1-5" title="Permalink to this heading">#</a></h3>
 <p>Show that the product of two even signals or of two odd signals is an even signal and that the product of an even signal and an odd signal is an odd signal.</p>
 <p>For the answer, refer to the lecture recording or see solved problem 1.7 in <span id="id10">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-1-6">
-<span id="ex1-6"></span><h3>Example 1.6<a class="headerlink" href="#example-1-6" title="Permalink to this headline">#</a></h3>
+<span id="ex1-6"></span><h3>Example 1.6<a class="headerlink" href="#example-1-6" title="Permalink to this heading">#</a></h3>
 <p>Show that</p>
 <p>a). If <span class="math notranslate nohighlight">\(x(t)\)</span> is even</p>
 <div class="math notranslate nohighlight">
@@ -1226,7 +774,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="summary">
-<span id="unit1-1-summary"></span><h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<span id="unit1-1-summary"></span><h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p>In this lecture we have started our look at signals and the classification of signals.</p>
 <p>In particular we have looked at</p>
 <ul class="simple">
@@ -1239,7 +787,7 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="#even-n-odd"><span class="std std-ref">Even and Odd Signals</span></a></p></li>
 </ul>
 <section id="unit-2-1-take-aways">
-<h3>Unit 2.1: Take aways<a class="headerlink" href="#unit-2-1-take-aways" title="Permalink to this headline">#</a></h3>
+<h3>Unit 2.1: Take aways<a class="headerlink" href="#unit-2-1-take-aways" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>*Continuous-time signal: <span class="math notranslate nohighlight">\(x(t)\)</span></p></li>
 <li><p>*Discrete-time dignal: <span class="math notranslate nohighlight">\(x[n]\)</span></p></li>
@@ -1256,14 +804,14 @@ title="Print to PDF"
 </section>
 </section>
 <section id="next-time">
-<h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
+<h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="pep_signals.html#p-n-np"><span class="std std-ref">Periodic and Nonperiodic Signals</span></a></p></li>
 <li><p><a class="reference internal" href="pep_signals.html#e-n-p"><span class="std std-ref">Energy and Power Signals</span></a></p></li>
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id12">
 <dl class="citation">
 <dt class="label" id="id22"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id4">3</a>,<a href="#id5">4</a>,<a href="#id6">5</a>,<a href="#id8">6</a>,<a href="#id9">7</a>,<a href="#id10">8</a>,<a href="#id11">9</a>)</span></dt>
@@ -1286,7 +834,7 @@ title="Print to PDF"
             mode: "matlab"
         },
         kernelOptions: {
-            kernelName: "matlab",
+            name: "matlab",
             path: "./signals_and_systems/signals"
         },
         predefinedOutput: true
@@ -1294,39 +842,124 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'matlab'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Unit 2: Signals and Systems</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Unit 2: Signals and Systems</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="pep_signals.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="pep_signals.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Unit 2.2: Periodic, Energy and Power Signals</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subjects-to-be-covered">Subjects to be covered</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-time-signals">Continuous-Time Signals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-time-signals">Discrete-Time Signals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-discrete-time-signals">More on discrete-time signals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sampled-data">Sampled data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-sampling">Uniform sampling</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analogue-and-digital-signals">Analogue and Digital Signals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-and-complex-signals">Real and Complex Signals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deterministic-and-random-signals">Deterministic and Random Signals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Deterministic and Random Signals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-signals">Random signals</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#even-and-odd-signals">Even and Odd Signals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-even-signal">An even signal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-odd-signal">An odd signal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decomposing-signals-into-even-and-odd-parts">Decomposing signals into even and odd parts</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-1">Examples 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-1-signals">Example 1.1: Signals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-2-uniform-sampling">Example 1.2: Uniform sampling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-3-odd-and-even-signals">Example 1.3: Odd and even signals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-4">Example 1.4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-5">Example 1.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-6">Example 1.6</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-2-1-take-aways">Unit 2.1: Take aways</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Dr Chris P. Jobling<br/>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Chris P. Jobling
+</p>
+
+  </div>
   
-      &copy; Copyright Swansea University (2023).<br/>
-    <div class="extra_footer">
-      This page was created by 
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Swansea University (2023).
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  This page was created by 
 <a href="https://www.swansea.ac.uk/staff/c.p.jobling/" />
   Dr Chris P. Jobling
 </a> 
@@ -1335,20 +968,22 @@ for
   Swansea University
 </a>.
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
 </div>
+  </div>
+  
+</div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

@@ -1,49 +1,61 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Unit 5.2: Exponential Fourier Series &#8212; EG-150 Signals and Systems</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -53,57 +65,99 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'fourier_series/2/exp_fs1';</script>
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/fourier_series/2/exp_fs1.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Unit 5.3: Computing Line Spectra" href="../3/exp_fs2.html" />
     <link rel="prev" title="Unit 5.1: Fourier Analysis" href="../1/trig_fseries.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">EG-150 Signals and Systems</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EG-150 Signals and Systems</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -112,1218 +166,379 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Online notes
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Online notes</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../introduction/index.html">
-   Unit 1 Introduction
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/intro.html">
-     Unit 1.1 Setting the Scene
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/thecourse.html">
-     Unit 1.2 About this Course
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/concepts.html">
-     Unit 1.3 Introduction to the Concepts to be Studied
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../signals_and_systems/index.html">
-   Unit 2 Signals and Systems
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/signals/index.html">
-     Unit 2.1 Signals and Classification of Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/signals/pep_signals.html">
-     Unit 2.2 Periodic, Energy and Power Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/elementary_signals/index.html">
-     Unit 2.3 Elementary Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/elementary_signals/examples3.html">
-     Examples 3 - Elementary Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/systems/index.html">
-     Unit 2.4 Systems and Classification of Systems
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../lti_systems/index.html">
-   Unit 3 Linear Time-Invariant Systems
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti1.html">
-     Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti2.html">
-     Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti3.html">
-     Unit 3.3 Systems Described by Differential Equations
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../laplace_transform/index.html">
-   Unit 4 Laplace Transforms and their Applications
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/1/laplace.html">
-     Unit 4.1 The Laplace Transformation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/2/laplace_of_common_signals.html">
-     Unit 4.2 Laplace Transform of Some Common Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/3/laplace_properties.html">
-     Unit 4.3 Properties of Laplace Transforms
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/4/inverse_laplace.html">
-     Unit 4.4 The Inverse Laplace Transform
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/5/circuit_analysis.html">
-     Unit 4.5 Using Laplace Transforms for Circuit Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/6/transfer_functions.html">
-     Unit 4.6 Transfer Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/7/tf_for_circuits.html">
-     Unit 4.7 Transfer Functions for Circuit Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/8/casas.html">
-     Unit 4.8 Computer-Aided Systems Analysis and Simulation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../index.html">
-   Unit 5 Fourier Series
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../1/trig_fseries.html">
-     Unit 5.1: Fourier Analysis
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Unit 5.2: Exponential Fourier Series
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../3/exp_fs2.html">
-     Unit 5.3 Computing Line Spectra
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../4/exp_fs3.html">
-     Unit 5.4 Applications of Line Spectra
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../zbib.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../introduction/index.html">Unit 1 Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/intro.html">Unit 1.1 Setting the Scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/thecourse.html">Unit 1.2 About this Course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/concepts.html">Unit 1.3 Introduction to the Concepts to be Studied</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  FAQs
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../FAQS/faq.html">
-   Answers to Frequently Asked Questions
-  </a>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../signals_and_systems/index.html">Unit 2 Signals and Systems</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/signals/index.html">Unit 2.1 Signals and Classification of Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/signals/pep_signals.html">Unit 2.2 Periodic, Energy and Power Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/elementary_signals/index.html">Unit 2.3 Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/elementary_signals/examples3.html">Examples 3 - Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/systems/index.html">Unit 2.4 Systems and Classification of Systems</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendices
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../lti_systems/index.html">Unit 3 Linear Time-Invariant Systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti1.html">Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti2.html">Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti3.html">Unit 3.3 Systems Described by Differential Equations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../laplace_transform/index.html">Unit 4 Laplace Transforms and their Applications</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/1/laplace.html">Unit 4.1 The Laplace Transformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/2/laplace_of_common_signals.html">Unit 4.2 Laplace Transform of Some Common Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/3/laplace_properties.html">Unit 4.3 Properties of Laplace Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/4/inverse_laplace.html">Unit 4.4 The Inverse Laplace Transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/5/circuit_analysis.html">Unit 4.5 Using Laplace Transforms for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/6/transfer_functions.html">Unit 4.6 Transfer Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/7/tf_for_circuits.html">Unit 4.7 Transfer Functions for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/8/casas.html">Unit 4.8 Computer-Aided Systems Analysis and Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Unit 5 Fourier Series</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../1/trig_fseries.html">Unit 5.1: Fourier Analysis</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit 5.2: Exponential Fourier Series</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../3/exp_fs2.html">Unit 5.3 Computing Line Spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4/exp_fs3.html">Unit 5.4 Applications of Line Spectra</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../zbib.html">Bibliography</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FAQs</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../takeaways.html">
-   Unit takeaways
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../exercises.html">
-   List of Unit Exercises
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../homework.html">
-   List of Homework Problems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../laplace_transform/1/lt_props.html">
-   Properties of the Laplace Transform
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../laplace_transform/1/lt_table.html">
-   Common Laplace Transform Pairs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../setup/polling_setup.html">
-   Set Up In-Class Polling
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../setup/index.html">
-   Setting up your own version of this book
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/jupyter.html">
-     About Jupyter notebooks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/python.html">
-     Installing Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/setup.html">
-     Setting up your Own Jupyter-MATLAB Computing Environment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/matlab_kernel.html">
-     Testing the Jupyter Matlab Kernel
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/advanced-setup.html">
-     Quick Start - For Experienced Users
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/jupyter-book.html">
-     Setting up jupyter-book
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../FAQS/faq.html">Answers to Frequently Asked Questions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../takeaways.html">Unit takeaways</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises.html">List of Unit Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework.html">List of Homework Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../laplace_transform/1/lt_props.html">Properties of the Laplace Transform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../laplace_transform/1/lt_table.html">Common Laplace Transform Pairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/polling_setup.html">Set Up In-Class Polling</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter.html">About Jupyter notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/python.html">Installing Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/matlab_kernel.html">Testing the Jupyter Matlab Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter-book.html">Setting up jupyter-book</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by 
- <a href="https://jupyterbook.org">
-  Jupyter Book
-</a>
-
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/fourier_series/2/exp_fs1.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/fourier_series/2/exp_fs1.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Ffourier_series/2/exp_fs1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/fourier_series/2/exp_fs1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Ffourier_series/2/exp_fs1.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/fourier_series/2/exp_fs1.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/fourier_series/2/exp_fs1.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download notebook file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="../../_sources/fourier_series/2/exp_fs1.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Unit 5.2: Exponential Fourier Series
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#agenda">
-     Agenda
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exponential-signals-x-t-e-at">
-     Exponential Signals
-     <span class="math notranslate nohighlight">
-      \(x(t) = e^{at}\)
-     </span>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#case-when-a-is-real">
-       Case when
-       <span class="math notranslate nohighlight">
-        \(a\)
-       </span>
-       is real.
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#case-when-a-is-imaginary">
-       Case when
-       <span class="math notranslate nohighlight">
-        \(a\)
-       </span>
-       is imaginary
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#case-where-a-is-complex">
-       Case where
-       <span class="math notranslate nohighlight">
-        \(a\)
-       </span>
-       is complex
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#case-where-sigma-0">
-         Case where
-         <span class="math notranslate nohighlight">
-          \(\sigma &lt; 0\)
-         </span>
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id3">
-         Case where
-         <span class="math notranslate nohighlight">
-          \(\sigma &gt; 0\)
-         </span>
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id4">
-         Case where
-         <span class="math notranslate nohighlight">
-          \(\sigma = 0\)
-         </span>
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#a-note-on-poles-and-stability">
-       A note on poles and stability
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#two-other-important-properties">
-       Two Other Important Properties
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-exponential-fourier-series">
-     The Exponential Fourier Series
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#grouping-terms-with-same-exponents">
-       Grouping terms with same exponents
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#new-coefficients">
-       New coefficients
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#evaluation-of-the-complex-coefficients">
-       Evaluation of the complex coefficients
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#trigonometric-fourier-series-from-exponential-fourier-series">
-       Trigonometric Fourier Series from Exponential Fourier Series
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#symmetry-in-exponential-fourier-series">
-     Symmetry in Exponential Fourier Series
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#even-functions">
-       Even Functions
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#odd-functions">
-       Odd Functions
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#half-wave-symmetry">
-       Half-wave symmetry
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#no-symmetry">
-       No symmetry
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#relation-of-c-k-to-c-k">
-       Relation of
-       <span class="math notranslate nohighlight">
-        \(C_{-k}\)
-       </span>
-       to
-       <span class="math notranslate nohighlight">
-        \(C_{k}\)
-       </span>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#computing-the-exponential-fourier-series">
-     Computing the Exponential Fourier Series
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#will-be-solved-in-in-class">
-       Will be Solved in in Class
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exponential-fourier-series-for-the-square-wave-with-odd-symmetry">
-       Exponential Fourier series for the square wave with odd symmetry
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#trig-fourier-series-from-exponential-fourier-series">
-       Trig. Fourier Series from Exponential Fourier Series
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#computing-coefficients-of-exponential-fourier-series-in-matlab">
-     Computing coefficients of Exponential Fourier Series in MATLAB
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution">
-       Solution
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-17">
-   Examples 17
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-17-1-some-important-values-of-omega-t">
-     Example 17.1: Some important values of
-     <span class="math notranslate nohighlight">
-      \(\omega t\)
-     </span>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-17-2">
-     Example 17.2
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#some-questions-for-you">
-       Some questions for you
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-17-3">
-     Example 17.3
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#answers">
-       Answers
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-17-4">
-     Example 17.4
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id7">
-       Answers
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-17-5">
-     Example 17.5
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id8">
-       Answers
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#summary">
-     Summary
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#unit-5-2-take-aways">
-       Unit 5.2: Take Aways
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#exponential-signals-and-stabilty">
-         Exponential signals and stabilty
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#euler-identities">
-         Euler identities
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#exponential-fourier-series">
-         Exponential Fourier series
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#properties-of-the-exponential-fourier-series-coefficients">
-         Properties of the exponential Fourier series coefficients
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#symmetry">
-         Symmetry
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#next-time">
-     Next Time
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#references">
-     References
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#homework">
-     Homework
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#solutions-to-examples-17">
-     Solutions to examples 17
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-to-example-17-1-some-important-values-of-omega-t">
-       Solution to Example 17.1: Some important values of
-       <span class="math notranslate nohighlight">
-        \(\omega t\)
-       </span>
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-to-example-17-2">
-       Solution to Example 17.2
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#computation-of-c-k">
-       Computation of
-       <span class="math notranslate nohighlight">
-        \(C_k\)
-       </span>
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Unit 5.2: Exponential Fourier Series</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Unit 5.2: Exponential Fourier Series
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#agenda">
-     Agenda
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exponential-signals-x-t-e-at">
-     Exponential Signals
-     <span class="math notranslate nohighlight">
-      \(x(t) = e^{at}\)
-     </span>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#case-when-a-is-real">
-       Case when
-       <span class="math notranslate nohighlight">
-        \(a\)
-       </span>
-       is real.
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#case-when-a-is-imaginary">
-       Case when
-       <span class="math notranslate nohighlight">
-        \(a\)
-       </span>
-       is imaginary
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#case-where-a-is-complex">
-       Case where
-       <span class="math notranslate nohighlight">
-        \(a\)
-       </span>
-       is complex
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#case-where-sigma-0">
-         Case where
-         <span class="math notranslate nohighlight">
-          \(\sigma &lt; 0\)
-         </span>
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id3">
-         Case where
-         <span class="math notranslate nohighlight">
-          \(\sigma &gt; 0\)
-         </span>
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id4">
-         Case where
-         <span class="math notranslate nohighlight">
-          \(\sigma = 0\)
-         </span>
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#a-note-on-poles-and-stability">
-       A note on poles and stability
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#two-other-important-properties">
-       Two Other Important Properties
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-exponential-fourier-series">
-     The Exponential Fourier Series
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#grouping-terms-with-same-exponents">
-       Grouping terms with same exponents
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#new-coefficients">
-       New coefficients
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#evaluation-of-the-complex-coefficients">
-       Evaluation of the complex coefficients
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#trigonometric-fourier-series-from-exponential-fourier-series">
-       Trigonometric Fourier Series from Exponential Fourier Series
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#symmetry-in-exponential-fourier-series">
-     Symmetry in Exponential Fourier Series
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#even-functions">
-       Even Functions
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#odd-functions">
-       Odd Functions
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#half-wave-symmetry">
-       Half-wave symmetry
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#no-symmetry">
-       No symmetry
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#relation-of-c-k-to-c-k">
-       Relation of
-       <span class="math notranslate nohighlight">
-        \(C_{-k}\)
-       </span>
-       to
-       <span class="math notranslate nohighlight">
-        \(C_{k}\)
-       </span>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#computing-the-exponential-fourier-series">
-     Computing the Exponential Fourier Series
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#will-be-solved-in-in-class">
-       Will be Solved in in Class
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exponential-fourier-series-for-the-square-wave-with-odd-symmetry">
-       Exponential Fourier series for the square wave with odd symmetry
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#trig-fourier-series-from-exponential-fourier-series">
-       Trig. Fourier Series from Exponential Fourier Series
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#computing-coefficients-of-exponential-fourier-series-in-matlab">
-     Computing coefficients of Exponential Fourier Series in MATLAB
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution">
-       Solution
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-17">
-   Examples 17
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-17-1-some-important-values-of-omega-t">
-     Example 17.1: Some important values of
-     <span class="math notranslate nohighlight">
-      \(\omega t\)
-     </span>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-17-2">
-     Example 17.2
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#some-questions-for-you">
-       Some questions for you
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-17-3">
-     Example 17.3
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#answers">
-       Answers
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-17-4">
-     Example 17.4
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id7">
-       Answers
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-17-5">
-     Example 17.5
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id8">
-       Answers
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#summary">
-     Summary
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#unit-5-2-take-aways">
-       Unit 5.2: Take Aways
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#exponential-signals-and-stabilty">
-         Exponential signals and stabilty
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#euler-identities">
-         Euler identities
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#exponential-fourier-series">
-         Exponential Fourier series
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#properties-of-the-exponential-fourier-series-coefficients">
-         Properties of the exponential Fourier series coefficients
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#symmetry">
-         Symmetry
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#next-time">
-     Next Time
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#references">
-     References
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#homework">
-     Homework
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#solutions-to-examples-17">
-     Solutions to examples 17
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-to-example-17-1-some-important-values-of-omega-t">
-       Solution to Example 17.1: Some important values of
-       <span class="math notranslate nohighlight">
-        \(\omega t\)
-       </span>
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-to-example-17-2">
-       Solution to Example 17.2
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#computation-of-c-k">
-       Computation of
-       <span class="math notranslate nohighlight">
-        \(C_k\)
-       </span>
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Unit 5.2: Exponential Fourier Series</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Unit 5.2: Exponential Fourier Series</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-signals-x-t-e-at">Exponential Signals <span class="math notranslate nohighlight">\(x(t) = e^{at}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#case-when-a-is-real">Case when <span class="math notranslate nohighlight">\(a\)</span> is real.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#case-when-a-is-imaginary">Case when <span class="math notranslate nohighlight">\(a\)</span> is imaginary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#case-where-a-is-complex">Case where <span class="math notranslate nohighlight">\(a\)</span> is complex</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#case-where-sigma-0">Case where <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Case where <span class="math notranslate nohighlight">\(\sigma &gt; 0\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Case where <span class="math notranslate nohighlight">\(\sigma = 0\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-poles-and-stability">A note on poles and stability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-other-important-properties">Two Other Important Properties</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-exponential-fourier-series">The Exponential Fourier Series</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-terms-with-same-exponents">Grouping terms with same exponents</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#new-coefficients">New coefficients</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-of-the-complex-coefficients">Evaluation of the complex coefficients</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-fourier-series-from-exponential-fourier-series">Trigonometric Fourier Series from Exponential Fourier Series</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetry-in-exponential-fourier-series">Symmetry in Exponential Fourier Series</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#even-functions">Even Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#odd-functions">Odd Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#half-wave-symmetry">Half-wave symmetry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#no-symmetry">No symmetry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relation-of-c-k-to-c-k">Relation of <span class="math notranslate nohighlight">\(C_{-k}\)</span> to <span class="math notranslate nohighlight">\(C_{k}\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-the-exponential-fourier-series">Computing the Exponential Fourier Series</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#will-be-solved-in-in-class">Will be Solved in in Class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-fourier-series-for-the-square-wave-with-odd-symmetry">Exponential Fourier series for the square wave with odd symmetry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trig-fourier-series-from-exponential-fourier-series">Trig. Fourier Series from Exponential Fourier Series</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-coefficients-of-exponential-fourier-series-in-matlab">Computing coefficients of Exponential Fourier Series in MATLAB</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-17">Examples 17</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-17-1-some-important-values-of-omega-t">Example 17.1: Some important values of <span class="math notranslate nohighlight">\(\omega t\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-17-2">Example 17.2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-questions-for-you">Some questions for you</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-17-3">Example 17.3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answers">Answers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-17-4">Example 17.4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Answers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-17-5">Example 17.5</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Answers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-5-2-take-aways">Unit 5.2: Take Aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-signals-and-stabilty">Exponential signals and stabilty</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-identities">Euler identities</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-fourier-series">Exponential Fourier series</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-the-exponential-fourier-series-coefficients">Properties of the exponential Fourier series coefficients</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetry">Symmetry</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions-to-examples-17">Solutions to examples 17</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-17-1-some-important-values-of-omega-t">Solution to Example 17.1: Some important values of <span class="math notranslate nohighlight">\(\omega t\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-17-2">Solution to Example 17.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computation-of-c-k">Computation of <span class="math notranslate nohighlight">\(C_k\)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="unit-5-2-exponential-fourier-series">
-<span id="unit5-2"></span><h1>Unit 5.2: Exponential Fourier Series<a class="headerlink" href="#unit-5-2-exponential-fourier-series" title="Permalink to this headline">#</a></h1>
+<span id="unit5-2"></span><h1>Unit 5.2: Exponential Fourier Series<a class="headerlink" href="#unit-5-2-exponential-fourier-series" title="Permalink to this heading">#</a></h1>
 <p>The preparatory reading for this section is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=213">Chapter 7</a> of  <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> and <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter5/section/section1">Chapter 5</a> of <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/fourier_series/2/exp_fs1">cpjobling.github.io/eg-150-textbook/fourier_series/2/exp_fs1</a></p>
 <p><img alt="QR Code for this lecture" src="../../_images/qrcode_fs2.png" /></p>
@@ -1331,7 +546,7 @@ title="Print to PDF"
 <p>However, by exploiting the exponential function <span class="math notranslate nohighlight">\(e^{at}\)</span>, we can derive a method for calculating the coefficients of the harmonics that is much easier to calculate by hand and convert into an algorithm that can be executed by computer.</p>
 <p>The result is called the <em>Exponential Fourier Series</em>.</p>
 <section id="agenda">
-<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
+<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#fs2-expsignals"><span class="std std-ref">Exponential Signals x(t) = e^{at}</span></a></p></li>
 <li><p><a class="reference internal" href="#fs2-exp-fs"><span class="std std-ref">The Exponential Fourier Series</span></a></p></li>
@@ -1342,7 +557,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="exponential-signals-x-t-e-at">
-<span id="fs2-expsignals"></span><h2>Exponential Signals <span class="math notranslate nohighlight">\(x(t) = e^{at}\)</span><a class="headerlink" href="#exponential-signals-x-t-e-at" title="Permalink to this headline">#</a></h2>
+<span id="fs2-expsignals"></span><h2>Exponential Signals <span class="math notranslate nohighlight">\(x(t) = e^{at}\)</span><a class="headerlink" href="#exponential-signals-x-t-e-at" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>You should already be familiar with the exponential function <span class="math notranslate nohighlight">\(e^{at}\)</span> because it appears in the solution of differential equations.</p></li>
 </ul>
@@ -1353,7 +568,7 @@ title="Print to PDF"
 <li><p>It pops up again and again in tables and properies of the Laplace transform.</p></li>
 </ul>
 <section id="case-when-a-is-real">
-<span id="fs2-a-real"></span><h3>Case when <span class="math notranslate nohighlight">\(a\)</span> is real.<a class="headerlink" href="#case-when-a-is-real" title="Permalink to this headline">#</a></h3>
+<span id="fs2-a-real"></span><h3>Case when <span class="math notranslate nohighlight">\(a\)</span> is real.<a class="headerlink" href="#case-when-a-is-real" title="Permalink to this heading">#</a></h3>
 <p>When <span class="math notranslate nohighlight">\(a\)</span> is real the signal <span class="math notranslate nohighlight">\(x(t) = e^{at}\)</span> will take one of the three forms illustrated below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1370,7 +585,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/exp_fs1_8_0.png" src="../../_images/exp_fs1_8_0.png" />
+<img alt="../../_images/ceff084f41eabcaa33ce136c35af32f55e68028c6794accf10f6dfd8c706fe07.png" src="../../_images/ceff084f41eabcaa33ce136c35af32f55e68028c6794accf10f6dfd8c706fe07.png" />
 </div>
 </div>
 <p>You can regenerate this image generated with this MATLAB script: <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/fourier_series/matlab/expon.m">expon.m</a>.</p>
@@ -1385,7 +600,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="case-when-a-is-imaginary">
-<span id="fs2-a-imag"></span><h3>Case when <span class="math notranslate nohighlight">\(a\)</span> is imaginary<a class="headerlink" href="#case-when-a-is-imaginary" title="Permalink to this headline">#</a></h3>
+<span id="fs2-a-imag"></span><h3>Case when <span class="math notranslate nohighlight">\(a\)</span> is imaginary<a class="headerlink" href="#case-when-a-is-imaginary" title="Permalink to this heading">#</a></h3>
 <p>When <span class="math notranslate nohighlight">\(a = j\omega\)</span> we have the periodic signal <span class="math notranslate nohighlight">\(x(t) = e^{j\omega t} = \cos\omega t + j\sin\omega t\)</span> visualised in <a class="reference internal" href="#fig-fs2-1"><span class="std std-numref">Fig. 74</span></a></p>
 <figure class="align-default" id="fig-fs2-1">
 <a class="reference internal image-reference" href="../../_images/euler.png"><img alt="The periodic signal exp(jomega t)" src="../../_images/euler.png" style="width: 80%;" /></a>
@@ -1397,7 +612,7 @@ title="Print to PDF"
 <p>It was <a class="reference external" href="https://en.wikipedia.org/wiki/Leonhard_Euler">Leonhard Euler</a> who discovered the <a class="reference external" href="https://en.wikipedia.org/wiki/Euler%27s_formula">formula</a> visualized above.</p>
 </section>
 <section id="case-where-a-is-complex">
-<span id="fs2-a-complex"></span><h3>Case where <span class="math notranslate nohighlight">\(a\)</span> is complex<a class="headerlink" href="#case-where-a-is-complex" title="Permalink to this headline">#</a></h3>
+<span id="fs2-a-complex"></span><h3>Case where <span class="math notranslate nohighlight">\(a\)</span> is complex<a class="headerlink" href="#case-where-a-is-complex" title="Permalink to this heading">#</a></h3>
 <p>In this case <span class="math notranslate nohighlight">\(a = \sigma + j\omega\)</span> and</p>
 <div class="math notranslate nohighlight">
 \[x(t) = e^{\left(\sigma + j\omega\right)t}\]</div>
@@ -1406,7 +621,7 @@ title="Print to PDF"
 <span class="eqno">(52)<a class="headerlink" href="#equation-eq-fs2-1" title="Permalink to this equation">#</a></span>\[x(t) = e^{\sigma t}e^{j\omega t} = e^{\sigma t}\left(\cos\omega t+j\sin\omega t\right)\]</div>
 <p>This will be a periodic signal, the shape of which depends on the sign of <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
 <section id="case-where-sigma-0">
-<h4>Case where <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span><a class="headerlink" href="#case-where-sigma-0" title="Permalink to this headline">#</a></h4>
+<h4>Case where <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span><a class="headerlink" href="#case-where-sigma-0" title="Permalink to this heading">#</a></h4>
 <p>Let us visualize this with the help of MATLAB</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1429,12 +644,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/exp_fs1_18_0.png" src="../../_images/exp_fs1_18_0.png" />
+<img alt="../../_images/8f7059d4ecfa3fef4419577e1577482fbcd74729e5f1d9795002d457f7a964b9.png" src="../../_images/8f7059d4ecfa3fef4419577e1577482fbcd74729e5f1d9795002d457f7a964b9.png" />
 </div>
 </div>
 </section>
 <section id="id3">
-<h4>Case where <span class="math notranslate nohighlight">\(\sigma &gt; 0\)</span><a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
+<h4>Case where <span class="math notranslate nohighlight">\(\sigma &gt; 0\)</span><a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">sigma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"> </span><span class="n">omega</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
@@ -1455,18 +670,18 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/exp_fs1_20_0.png" src="../../_images/exp_fs1_20_0.png" />
+<img alt="../../_images/1d2737a538da4ade99ec29072db721afa71c093cffc65a0d1d0f8fa4fed3cdab.png" src="../../_images/1d2737a538da4ade99ec29072db721afa71c093cffc65a0d1d0f8fa4fed3cdab.png" />
 </div>
 </div>
 <p>Then signal <span class="math notranslate nohighlight">\(x(t)\)</span> in Eq. <a class="reference internal" href="#equation-eq-fs2-1">(52)</a> is known as a general complex exponential signal whose real part <span class="math notranslate nohighlight">\(e^{\sigma t}\sin\omega t\)</span> and imaginary part <span class="math notranslate nohighlight">\(e^{\sigma t}\sin \omega t\)</span> are exponentially increasing (<span class="math notranslate nohighlight">\(σ &gt; 0\)</span>) or decreasing (<span class="math notranslate nohighlight">\(σ &lt; 0\)</span>) sinusoidal signals.</p>
 </section>
 <section id="id4">
-<h4>Case where <span class="math notranslate nohighlight">\(\sigma = 0\)</span><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
+<h4>Case where <span class="math notranslate nohighlight">\(\sigma = 0\)</span><a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
 <p>When <span class="math notranslate nohighlight">\(\sigma = 0\)</span>, <span class="math notranslate nohighlight">\(e^{\sigma t} = 1\)</span> and the the signal is the <a class="reference internal" href="#fs2-a-imag"><span class="std std-ref">Case when a is imaginary</span></a> already discussed.</p>
 </section>
 </section>
 <section id="a-note-on-poles-and-stability">
-<h3>A note on poles and stability<a class="headerlink" href="#a-note-on-poles-and-stability" title="Permalink to this headline">#</a></h3>
+<h3>A note on poles and stability<a class="headerlink" href="#a-note-on-poles-and-stability" title="Permalink to this heading">#</a></h3>
 <p>The variable <span class="math notranslate nohighlight">\(s\)</span> in the Laplace Transform</p>
 <div class="math notranslate nohighlight">
 \[\int_{0}^{\infty} f(t)e^{-st} dt\]</div>
@@ -1477,7 +692,7 @@ title="Print to PDF"
 <p>The combined behaviour of the poles have particular significance in the development of system stability theories and in control systems analysis and design. Look out for them in <strong>EG-243 Control Systems</strong></p>
 </section>
 <section id="two-other-important-properties">
-<h3>Two Other Important Properties<a class="headerlink" href="#two-other-important-properties" title="Permalink to this headline">#</a></h3>
+<h3>Two Other Important Properties<a class="headerlink" href="#two-other-important-properties" title="Permalink to this heading">#</a></h3>
 <p>By use of trig. identities, it is relatively straight forward to show that:</p>
 <div class="math notranslate nohighlight" id="equation-eq-fs2-2">
 <span class="eqno">(53)<a class="headerlink" href="#equation-eq-fs2-2" title="Permalink to this equation">#</a></span>\[\cos \omega t = \frac{e^{j\omega t} + e^{-j\omega t}}{2}\]</div>
@@ -1488,7 +703,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="the-exponential-fourier-series">
-<span id="fs2-exp-fs"></span><h2>The Exponential Fourier Series<a class="headerlink" href="#the-exponential-fourier-series" title="Permalink to this headline">#</a></h2>
+<span id="fs2-exp-fs"></span><h2>The Exponential Fourier Series<a class="headerlink" href="#the-exponential-fourier-series" title="Permalink to this heading">#</a></h2>
 <p>As <a class="reference internal" href="../1/trig_fseries.html"><span class="doc std std-doc">as stated in the notes on the Trigonometric Fourier Series</span></a> any periodic waveform <span class="math notranslate nohighlight">\(f(t)\)</span> can be represented as</p>
 <div class="math notranslate nohighlight" id="equation-ex-fs2-4">
 <span class="eqno">(55)<a class="headerlink" href="#equation-ex-fs2-4" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{gathered}
@@ -1502,12 +717,12 @@ title="Print to PDF"
    + {b_1}\left(\frac{e^{j\Omega_0 t} - e^{-j\Omega_0 t}}{j2}\right) + {b_2}\left(\frac{e^{j2\Omega_0 t} - e^{-j2\Omega_0 t}}{j2}\right) +  \cdots  \\ 
 \end{gathered} \end{split}\]</div>
 <section id="grouping-terms-with-same-exponents">
-<h3>Grouping terms with same exponents<a class="headerlink" href="#grouping-terms-with-same-exponents" title="Permalink to this headline">#</a></h3>
+<h3>Grouping terms with same exponents<a class="headerlink" href="#grouping-terms-with-same-exponents" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight" id="equation-ex-fs2-5">
 <span class="eqno">(57)<a class="headerlink" href="#equation-ex-fs2-5" title="Permalink to this equation">#</a></span>\[f(t) = \cdots + \left(\frac{a_2}{2}-\frac{b_2}{j2}\right)e^{-j2\Omega_0 t} + \left(\frac{a_1}{2}-\frac{b_1}{j2}\right)e^{-j\Omega_0 t} + \frac{1}{2}{a_0} + \left(\frac{a_1}{2}+\frac{b_1}{j2}\right)e^{j\Omega_0 t} + \left(\frac{a_2}{2}+\frac{b_2}{j2}\right)e^{j2\Omega_0 t} +\cdots \]</div>
 </section>
 <section id="new-coefficients">
-<h3>New coefficients<a class="headerlink" href="#new-coefficients" title="Permalink to this headline">#</a></h3>
+<h3>New coefficients<a class="headerlink" href="#new-coefficients" title="Permalink to this heading">#</a></h3>
 <p>The terms in parentheses are usually denoted as</p>
 <div class="math notranslate nohighlight" id="equation-ex-fs2-6">
 <span class="eqno">(58)<a class="headerlink" href="#equation-ex-fs2-6" title="Permalink to this equation">#</a></span>\[C_{-k} = \frac{1}{2}\left(a_k-\frac{b_k}{j}\right) = \frac{1}{2}\left(a_k+j b_k\right)\]</div>
@@ -1527,7 +742,7 @@ title="Print to PDF"
 <span class="eqno">(62)<a class="headerlink" href="#equation-ex-fs2-10" title="Permalink to this equation">#</a></span>\[C_{-k} = C_k^*\]</div>
 </section>
 <section id="evaluation-of-the-complex-coefficients">
-<h3>Evaluation of the complex coefficients<a class="headerlink" href="#evaluation-of-the-complex-coefficients" title="Permalink to this headline">#</a></h3>
+<h3>Evaluation of the complex coefficients<a class="headerlink" href="#evaluation-of-the-complex-coefficients" title="Permalink to this heading">#</a></h3>
 <p>The coefficients are obtained from the following expressions<sup>*</sup>:</p>
 <div class="math notranslate nohighlight" id="equation-ex-fs2-11">
 <span class="eqno">(63)<a class="headerlink" href="#equation-ex-fs2-11" title="Permalink to this equation">#</a></span>\[C_k = \frac{1}{2\pi}\int_{0}^{2\pi}f(\Omega_0 t)e^{-jk(\Omega_0 t)}\,d(\Omega_0 t)\]</div>
@@ -1538,7 +753,7 @@ title="Print to PDF"
 <p><sup>*</sup> The analysis that leads to this result is provided between pages <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?ppg=243&amp;docID=3384197&amp;tm=1518704101461">7-31 and 7-32</a> of the text book <span id="id5">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>. It is not a difficult proof, but we are more interested in the result.</p>
 </section>
 <section id="trigonometric-fourier-series-from-exponential-fourier-series">
-<h3>Trigonometric Fourier Series from Exponential Fourier Series<a class="headerlink" href="#trigonometric-fourier-series-from-exponential-fourier-series" title="Permalink to this headline">#</a></h3>
+<h3>Trigonometric Fourier Series from Exponential Fourier Series<a class="headerlink" href="#trigonometric-fourier-series-from-exponential-fourier-series" title="Permalink to this heading">#</a></h3>
 <p>By substituting <span class="math notranslate nohighlight">\(C_{-k}\)</span> and <span class="math notranslate nohighlight">\(C_{k}\)</span> back into the original expansion</p>
 <div class="math notranslate nohighlight">
 \[C_k+C_{-k} = \frac{1}{2}\left(a_k-jb_k + a_k+jb_k\right)\]</div>
@@ -1555,10 +770,10 @@ title="Print to PDF"
 </section>
 </section>
 <section id="symmetry-in-exponential-fourier-series">
-<span id="fs2-symmetry"></span><h2>Symmetry in Exponential Fourier Series<a class="headerlink" href="#symmetry-in-exponential-fourier-series" title="Permalink to this headline">#</a></h2>
+<span id="fs2-symmetry"></span><h2>Symmetry in Exponential Fourier Series<a class="headerlink" href="#symmetry-in-exponential-fourier-series" title="Permalink to this heading">#</a></h2>
 <p>Since the coefficients of the exponential Fourier series are complex numbers, we can use symmetry to determine the form of the coefficients and thereby simplify the computation of the series for wave forms that have symmetry.</p>
 <section id="even-functions">
-<h3>Even Functions<a class="headerlink" href="#even-functions" title="Permalink to this headline">#</a></h3>
+<h3>Even Functions<a class="headerlink" href="#even-functions" title="Permalink to this heading">#</a></h3>
 <p>For even functions, all coefficients <span class="math notranslate nohighlight">\(C_k\)</span> are real.</p>
 <p><strong>Proof</strong></p>
 <p>Recall</p>
@@ -1570,28 +785,28 @@ title="Print to PDF"
 <p>From knowledge of the trig. Fourier series, even functions have no sine terms so the <span class="math notranslate nohighlight">\(b_k\)</span> coefficients are 0. Therefore both <span class="math notranslate nohighlight">\(C_{-k}\)</span> and <span class="math notranslate nohighlight">\(C_k\)</span> are real.</p>
 </section>
 <section id="odd-functions">
-<h3>Odd Functions<a class="headerlink" href="#odd-functions" title="Permalink to this headline">#</a></h3>
+<h3>Odd Functions<a class="headerlink" href="#odd-functions" title="Permalink to this heading">#</a></h3>
 <p>For odd functions, all coefficients <span class="math notranslate nohighlight">\(C_k\)</span> are imaginary.</p>
 <p><strong>Proof</strong></p>
 <p>By a similar argument, all odd functions have no cosine terms so the <span class="math notranslate nohighlight">\(a_k\)</span> coefficients are 0. Therefore both <span class="math notranslate nohighlight">\(C_{-k}\)</span> and <span class="math notranslate nohighlight">\(C_k\)</span> are imaginary.</p>
 </section>
 <section id="half-wave-symmetry">
-<h3>Half-wave symmetry<a class="headerlink" href="#half-wave-symmetry" title="Permalink to this headline">#</a></h3>
+<h3>Half-wave symmetry<a class="headerlink" href="#half-wave-symmetry" title="Permalink to this heading">#</a></h3>
 <p>If there is <em>half-wave symmetry</em>, <span class="math notranslate nohighlight">\(C_k = 0\)</span> for <span class="math notranslate nohighlight">\(k\)</span> even.</p>
 <p><strong>Proof</strong></p>
 <p>From trig. Fourier series, if there is half-wave symmetry, all even harnonics are zero, thus both <span class="math notranslate nohighlight">\(a_k\)</span> and <span class="math notranslate nohighlight">\(b_k\)</span> are zero for <span class="math notranslate nohighlight">\(k\)</span> even. Hence <span class="math notranslate nohighlight">\(C_{-k}\)</span> and <span class="math notranslate nohighlight">\(C_k\)</span> are also zero when <span class="math notranslate nohighlight">\(k\)</span> is even.</p>
 </section>
 <section id="no-symmetry">
-<h3>No symmetry<a class="headerlink" href="#no-symmetry" title="Permalink to this headline">#</a></h3>
+<h3>No symmetry<a class="headerlink" href="#no-symmetry" title="Permalink to this heading">#</a></h3>
 <p>If there is no symmetry the exponential Fourier series of <span class="math notranslate nohighlight">\(f(t)\)</span> is complex.</p>
 </section>
 <section id="relation-of-c-k-to-c-k">
-<h3>Relation of <span class="math notranslate nohighlight">\(C_{-k}\)</span> to <span class="math notranslate nohighlight">\(C_{k}\)</span><a class="headerlink" href="#relation-of-c-k-to-c-k" title="Permalink to this headline">#</a></h3>
+<h3>Relation of <span class="math notranslate nohighlight">\(C_{-k}\)</span> to <span class="math notranslate nohighlight">\(C_{k}\)</span><a class="headerlink" href="#relation-of-c-k-to-c-k" title="Permalink to this heading">#</a></h3>
 <p><span class="math notranslate nohighlight">\(C_{-k} = C_{k}^*\)</span> <strong>always</strong></p>
 </section>
 </section>
 <section id="computing-the-exponential-fourier-series">
-<span id="fs2-eg"></span><h2>Computing the Exponential Fourier Series<a class="headerlink" href="#computing-the-exponential-fourier-series" title="Permalink to this headline">#</a></h2>
+<span id="fs2-eg"></span><h2>Computing the Exponential Fourier Series<a class="headerlink" href="#computing-the-exponential-fourier-series" title="Permalink to this heading">#</a></h2>
 <p>Compute the exponential Fourier series (EFS) for the square wave shown in <a class="reference internal" href="#fig-ex-17-1"><span class="std std-numref">Fig. 75</span></a> assuming that <span class="math notranslate nohighlight">\(\Omega_0 = 1\)</span> rad/s.</p>
 <figure class="align-default" id="fig-ex-17-1">
 <a class="reference internal image-reference" href="../../_images/sqw.png"><img alt="Squarewave with odd-symmetry" src="../../_images/sqw.png" style="width: 60%;" /></a>
@@ -1600,7 +815,7 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <section id="will-be-solved-in-in-class">
-<h3>Will be Solved in in Class<a class="headerlink" href="#will-be-solved-in-in-class" title="Permalink to this headline">#</a></h3>
+<h3>Will be Solved in in Class<a class="headerlink" href="#will-be-solved-in-in-class" title="Permalink to this heading">#</a></h3>
 <p>It will be shown that</p>
 <div class="math notranslate nohighlight">
 \[{C_k \atop {k=\mathrm{even}}} =  0\]</div>
@@ -1609,7 +824,7 @@ title="Print to PDF"
 <p>See <span class="xref std std-ref">ex:17.2</span> and solution in <a class="reference internal" href="#sol-17-2"><span class="std std-ref">Solution to Example 17.2</span></a>.</p>
 </section>
 <section id="exponential-fourier-series-for-the-square-wave-with-odd-symmetry">
-<h3>Exponential Fourier series for the square wave with odd symmetry<a class="headerlink" href="#exponential-fourier-series-for-the-square-wave-with-odd-symmetry" title="Permalink to this headline">#</a></h3>
+<h3>Exponential Fourier series for the square wave with odd symmetry<a class="headerlink" href="#exponential-fourier-series-for-the-square-wave-with-odd-symmetry" title="Permalink to this heading">#</a></h3>
 <p>From the definition of the exponential Fourier series</p>
 <div class="math notranslate nohighlight">
 \[f(t) = \cdots + C_{-2}e^{-j2\Omega_0 t} + C_{-1}e^{-j\Omega_0 t} + C_{0} + C_{1}e^{j\Omega_0 t} + C_{2}e^{j2\Omega_0 t} + \cdots\]</div>
@@ -1620,7 +835,7 @@ title="Print to PDF"
 <p>E.g. since <span class="math notranslate nohighlight">\(C_3 = 2A/j3\pi\)</span>, <span class="math notranslate nohighlight">\(C_{-3} = C_3^* = -2A/j3\pi\)</span></p>
 </section>
 <section id="trig-fourier-series-from-exponential-fourier-series">
-<h3>Trig. Fourier Series from Exponential Fourier Series<a class="headerlink" href="#trig-fourier-series-from-exponential-fourier-series" title="Permalink to this headline">#</a></h3>
+<h3>Trig. Fourier Series from Exponential Fourier Series<a class="headerlink" href="#trig-fourier-series-from-exponential-fourier-series" title="Permalink to this heading">#</a></h3>
 <p>Since</p>
 <div class="math notranslate nohighlight">
 \[f(t) = \frac{2A}{j\pi}\left(\cdots - \frac{1}{3}e^{-j3\Omega_0 t} - e^{-j\Omega_0 t} + e^{j\Omega_0 t} + \frac{1}{3}e^{j3\Omega_0 t} + \cdots\right) \]</div>
@@ -1633,10 +848,10 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 </section>
 </section>
 <section id="computing-coefficients-of-exponential-fourier-series-in-matlab">
-<span id="fs2-matlab"></span><h2>Computing coefficients of Exponential Fourier Series in MATLAB<a class="headerlink" href="#computing-coefficients-of-exponential-fourier-series-in-matlab" title="Permalink to this headline">#</a></h2>
+<span id="fs2-matlab"></span><h2>Computing coefficients of Exponential Fourier Series in MATLAB<a class="headerlink" href="#computing-coefficients-of-exponential-fourier-series-in-matlab" title="Permalink to this heading">#</a></h2>
 <p>Verify the result of the Example using MATLAB.</p>
 <section id="solution">
-<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h3>
+<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h3>
 <p>Solution calculates the Exponential Fourier for a Square Wave with Odd Symmetry.: See <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/fourier_series/matlab/efs_sqw.m">efs_sqw.m</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1713,16 +928,16 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/exp_fs1_66_0.png" src="../../_images/exp_fs1_66_0.png" />
+<img alt="../../_images/d3395bd2e8cf2ba21e7921d63aa19ef4ae13853698aca0ddbc7a2c0efa3f04e8.png" src="../../_images/d3395bd2e8cf2ba21e7921d63aa19ef4ae13853698aca0ddbc7a2c0efa3f04e8.png" />
 </div>
 </div>
 </section>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="examples-17">
-<span id="examples17"></span><h1>Examples 17<a class="headerlink" href="#examples-17" title="Permalink to this headline">#</a></h1>
+<span id="examples17"></span><h1>Examples 17<a class="headerlink" href="#examples-17" title="Permalink to this heading">#</a></h1>
 <section id="example-17-1-some-important-values-of-omega-t">
-<h2>Example 17.1: Some important values of <span class="math notranslate nohighlight">\(\omega t\)</span><a class="headerlink" href="#example-17-1-some-important-values-of-omega-t" title="Permalink to this headline">#</a></h2>
+<h2>Example 17.1: Some important values of <span class="math notranslate nohighlight">\(\omega t\)</span><a class="headerlink" href="#example-17-1-some-important-values-of-omega-t" title="Permalink to this heading">#</a></h2>
 <p>Give the following:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(e^{j\omega t}\)</span> when <span class="math notranslate nohighlight">\(\omega t = 0\)</span></p></li>
@@ -1750,10 +965,10 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 
 </pre></section>
 <section id="example-17-2">
-<span id="ex-17-2"></span><h2>Example 17.2<a class="headerlink" href="#example-17-2" title="Permalink to this headline">#</a></h2>
+<span id="ex-17-2"></span><h2>Example 17.2<a class="headerlink" href="#example-17-2" title="Permalink to this heading">#</a></h2>
 <p>Compute the Exponential Fourier Series for the square wave shown in <a class="reference internal" href="#fig-ex-17-1"><span class="std std-numref">Fig. 75</span></a> assuming that <span class="math notranslate nohighlight">\(\Omega_0 = 1\)</span> rad/s.</p>
 <section id="some-questions-for-you">
-<h3>Some questions for you<a class="headerlink" href="#some-questions-for-you" title="Permalink to this headline">#</a></h3>
+<h3>Some questions for you<a class="headerlink" href="#some-questions-for-you" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Square wave is an [<strong>odd/even/neither</strong>] function?</p></li>
 <li><p>DC component is [<strong>zero/non-zero</strong>]?</p></li>
@@ -1815,7 +1030,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 </section>
 </section>
 <section id="example-17-3">
-<span id="id6"></span><h2>Example 17.3<a class="headerlink" href="#example-17-3" title="Permalink to this headline">#</a></h2>
+<span id="id6"></span><h2>Example 17.3<a class="headerlink" href="#example-17-3" title="Permalink to this heading">#</a></h2>
 <p>Consider the square wave shown in <a class="reference internal" href="#fig-ex-17-3"><span class="std std-numref">Fig. 76</span></a>.</p>
 <p>a) Compute the Fourier series coefficients <span class="math notranslate nohighlight">\(C_k\)</span> for this signal.</p>
 <p>b) Give an expression for the trig. Fourier series for this signal.</p>
@@ -1826,7 +1041,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 </figcaption>
 </figure>
 <section id="answers">
-<h3>Answers<a class="headerlink" href="#answers" title="Permalink to this headline">#</a></h3>
+<h3>Answers<a class="headerlink" href="#answers" title="Permalink to this heading">#</a></h3>
 <p>a).</p>
 <div class="math notranslate nohighlight">
 \[C_0 = \frac{A^2}{2}\]</div>
@@ -1845,7 +1060,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 </section>
 </section>
 <section id="example-17-4">
-<span id="ex-17-4"></span><h2>Example 17.4<a class="headerlink" href="#example-17-4" title="Permalink to this headline">#</a></h2>
+<span id="ex-17-4"></span><h2>Example 17.4<a class="headerlink" href="#example-17-4" title="Permalink to this heading">#</a></h2>
 <p>Consider the pulsed periodic waveform with fundamental period <span class="math notranslate nohighlight">\(T_0\)</span> shown in <a class="reference internal" href="#fig-ex-17-4"><span class="std std-numref">Fig. 77</span></a>.</p>
 <p>a) Compute the Fourier series coefficients <span class="math notranslate nohighlight">\(C_k\)</span> for this signal.</p>
 <p>b) Give an expression for the trig. Fourier series for this signal.</p>
@@ -1856,7 +1071,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 </figcaption>
 </figure>
 <section id="id7">
-<h3>Answers<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
+<h3>Answers<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
 <p>a)</p>
 <div class="math notranslate nohighlight">
 \[C_0 = A/2\]</div>
@@ -1876,7 +1091,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 </section>
 </section>
 <section id="example-17-5">
-<span id="ex-17-5"></span><h2>Example 17.5<a class="headerlink" href="#example-17-5" title="Permalink to this headline">#</a></h2>
+<span id="ex-17-5"></span><h2>Example 17.5<a class="headerlink" href="#example-17-5" title="Permalink to this heading">#</a></h2>
 <p>Consider the sawtooth periodic waveform with fundamental period <span class="math notranslate nohighlight">\(T_0\)</span> shown in <a class="reference internal" href="#fig-ex-17-5"><span class="std std-numref">Fig. 78</span></a>.</p>
 <p>a) Compute the Fourier series coefficients <span class="math notranslate nohighlight">\(C_k\)</span> for this signal.</p>
 <p>b) Give an expression for the trig. Fourier series for this signal.</p>
@@ -1887,7 +1102,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 </figcaption>
 </figure>
 <section id="id8">
-<h3>Answers<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h3>
+<h3>Answers<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
 <p>a).</p>
 <div class="math notranslate nohighlight">
 \[C_0 = \frac{A^2}{2}\]</div>
@@ -1906,7 +1121,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 </section>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p>In this unit we have extended our exploration of Fourier analysis by examining the properties of the exponential signal <span class="math notranslate nohighlight">\(x(t) = e^{at}\)</span> which is used to simplify the compution of the Fourier series coefficients.</p>
 <p>We covered:</p>
 <ul class="simple">
@@ -1918,9 +1133,9 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 <li><p><a class="reference internal" href="#examples17"><span class="std std-ref">Examples 17</span></a></p></li>
 </ul>
 <section id="unit-5-2-take-aways">
-<span id="unit5-2-takeaways"></span><h3>Unit 5.2: Take Aways<a class="headerlink" href="#unit-5-2-take-aways" title="Permalink to this headline">#</a></h3>
+<span id="unit5-2-takeaways"></span><h3>Unit 5.2: Take Aways<a class="headerlink" href="#unit-5-2-take-aways" title="Permalink to this heading">#</a></h3>
 <section id="exponential-signals-and-stabilty">
-<h4>Exponential signals and stabilty<a class="headerlink" href="#exponential-signals-and-stabilty" title="Permalink to this headline">#</a></h4>
+<h4>Exponential signals and stabilty<a class="headerlink" href="#exponential-signals-and-stabilty" title="Permalink to this heading">#</a></h4>
 <p>The exponential signal <span class="math notranslate nohighlight">\(x(t) = e^{at}\)</span>  is one of the most important functions in signals and systems analysis.</p>
 <ul class="simple">
 <li><p>For continuous-time LTI systems, <span class="math notranslate nohighlight">\(x(t)=e^{st}\)</span> is an eigenfunction of a system with impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> (see <a class="reference internal" href="../../lti_systems/lti2.html#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a>).</p></li>
@@ -1929,7 +1144,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 <p>In this unit, we examined the form of the signal <span class="math notranslate nohighlight">\(x(t)=e^{at}\)</span> for <span class="math notranslate nohighlight">\(a\)</span> is real (<a class="reference internal" href="#fs2-a-real"><span class="std std-ref">Case when a is real.</span></a>), <span class="math notranslate nohighlight">\(a\)</span> is imaginary <span class="math notranslate nohighlight">\(a = j\omega\)</span> (see <a class="reference internal" href="#fs2-a-imag"><span class="std std-ref">Case when a is imaginary</span></a>) and <span class="math notranslate nohighlight">\(a\)</span> is complex <span class="math notranslate nohighlight">\(a = \sigma + j\sigma\)</span> (see <a class="reference internal" href="#fs2-a-complex"><span class="std std-ref">Case where a is complex</span></a>). It is also worth noting that a signal <span class="math notranslate nohighlight">\(x(t)\)</span> is only bounded if <span class="math notranslate nohighlight">\(\mathrm{Re}\left\{a\right\} &lt; 0\)</span> and a continuous-time LTI system is BIBO stable only if all its poles have negative real part.</p>
 </section>
 <section id="euler-identities">
-<h4>Euler identities<a class="headerlink" href="#euler-identities" title="Permalink to this headline">#</a></h4>
+<h4>Euler identities<a class="headerlink" href="#euler-identities" title="Permalink to this heading">#</a></h4>
 <p>It is important to learn how to use the following identities which are named after mathematician <a class="reference external" href="https://en.wikipedia.org/wiki/Leonhard_Euler">Leonhard Euler</a>:</p>
 <div class="math notranslate nohighlight">
 \[e^{j\omega t} = \cos \omega t + j\sin \omega t\]</div>
@@ -1941,7 +1156,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 \[\sin \omega t = \frac{e^{j\omega t} - e^{-j\omega t}}{j2}\]</div>
 </section>
 <section id="exponential-fourier-series">
-<h4>Exponential Fourier series<a class="headerlink" href="#exponential-fourier-series" title="Permalink to this headline">#</a></h4>
+<h4>Exponential Fourier series<a class="headerlink" href="#exponential-fourier-series" title="Permalink to this heading">#</a></h4>
 <p>The exponential Fourier series is defined as:</p>
 <div class="math notranslate nohighlight">
 \[f(t) = \sum_{k=-N}^{N} C_k e^{jk\Omega_t}\]</div>
@@ -1952,7 +1167,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 <p>where <span class="math notranslate nohighlight">\(T_0\)</span> is the fundamental period of the periodic signal <span class="math notranslate nohighlight">\(f(t)\)</span> and <span class="math notranslate nohighlight">\(\theta = \Omega_0 t\)</span> where <span class="math notranslate nohighlight">\(\Omega_0\)</span> is the angular frequency of the fundamental term (<span class="math notranslate nohighlight">\(k = 1\)</span>), and <span class="math notranslate nohighlight">\(\Omega_0 = 2\pi/T_0\)</span>.</p>
 </section>
 <section id="properties-of-the-exponential-fourier-series-coefficients">
-<h4>Properties of the exponential Fourier series coefficients<a class="headerlink" href="#properties-of-the-exponential-fourier-series-coefficients" title="Permalink to this headline">#</a></h4>
+<h4>Properties of the exponential Fourier series coefficients<a class="headerlink" href="#properties-of-the-exponential-fourier-series-coefficients" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(C_k = C_{-k}^*\)</span> - i.e. the coeffients of the negative harmonic frequencies are the complex conjugates of the positive harmomic frequencies.</p></li>
 <li><p>Exponential Fourier series coefficients from the trig. Fourier series coefficents:</p></li>
@@ -1965,7 +1180,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 </ul>
 </section>
 <section id="symmetry">
-<h4>Symmetry<a class="headerlink" href="#symmetry" title="Permalink to this headline">#</a></h4>
+<h4>Symmetry<a class="headerlink" href="#symmetry" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>If <span class="math notranslate nohighlight">\(x(t)\)</span> is odd, all coefficients <span class="math notranslate nohighlight">\(C_k\)</span> are imaginary.</p></li>
 <li><p>If <span class="math notranslate nohighlight">\(x(t)\)</span> is real, all coefficients <span class="math notranslate nohighlight">\(C_k\)</span> are real.</p></li>
@@ -1976,14 +1191,14 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 </section>
 </section>
 <section id="next-time">
-<h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
+<h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this heading">#</a></h2>
 <p>We move on to consider</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../3/exp_fs2.html#unit5-3"><span class="std std-ref">Unit 5.3: Computing Line Spectra</span></a></p></li>
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id9">
 <dl class="citation">
 <dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id2">Hsu20</a></span></dt>
@@ -1996,13 +1211,13 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 </div>
 </section>
 <section id="homework">
-<h2>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">#</a></h2>
+<h2>Homework<a class="headerlink" href="#homework" title="Permalink to this heading">#</a></h2>
 <p>To practice the computation of the expontial Fourier series, you should attempt the examples given below. To simplify the results you should take advantage of symmetry. Further simplifications will be found if you pay attention to the values of <span class="math notranslate nohighlight">\(e^{-jk\Omega_0 t}\)</span> for particular angles <span class="math notranslate nohighlight">\(\theta = k\Omega_0 t\)</span>.</p>
 </section>
 <section id="solutions-to-examples-17">
-<span id="solutions17"></span><h2>Solutions to examples 17<a class="headerlink" href="#solutions-to-examples-17" title="Permalink to this headline">#</a></h2>
+<span id="solutions17"></span><h2>Solutions to examples 17<a class="headerlink" href="#solutions-to-examples-17" title="Permalink to this heading">#</a></h2>
 <section id="solution-to-example-17-1-some-important-values-of-omega-t">
-<span id="sol-17-1"></span><h3>Solution to Example 17.1: Some important values of <span class="math notranslate nohighlight">\(\omega t\)</span><a class="headerlink" href="#solution-to-example-17-1-some-important-values-of-omega-t" title="Permalink to this headline">#</a></h3>
+<span id="sol-17-1"></span><h3>Solution to Example 17.1: Some important values of <span class="math notranslate nohighlight">\(\omega t\)</span><a class="headerlink" href="#solution-to-example-17-1-some-important-values-of-omega-t" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>When <span class="math notranslate nohighlight">\(\omega t = 0\)</span>: <span class="math notranslate nohighlight">\(e^{j\omega t} = e^{j0} = 1\)</span></p></li>
 <li><p>When <span class="math notranslate nohighlight">\(\omega t = \pi/2\)</span>: <span class="math notranslate nohighlight">\(e^{j\omega t} = e^{j\pi/2} = j\)</span></p></li>
@@ -2013,7 +1228,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 <p>It is also worth being aware that <span class="math notranslate nohighlight">\(n\omega t\)</span>, when <span class="math notranslate nohighlight">\(n\)</span> is an integer, produces rotations that often map back to the simpler cases given above. For example see <span class="math notranslate nohighlight">\(e^{j2\pi}\)</span> above.</p>
 </section>
 <section id="solution-to-example-17-2">
-<span id="sol-17-2"></span><h3>Solution to Example 17.2<a class="headerlink" href="#solution-to-example-17-2" title="Permalink to this headline">#</a></h3>
+<span id="sol-17-2"></span><h3>Solution to Example 17.2<a class="headerlink" href="#solution-to-example-17-2" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Square wave is an <strong>odd</strong> function!</p></li>
 <li><p>DC component is <strong>zero</strong>!</p></li>
@@ -2031,7 +1246,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
 <p>where <span class="math notranslate nohighlight">\(\theta = \Omega_0 t\)</span> rad.</p>
 </section>
 <section id="computation-of-c-k">
-<h3>Computation of <span class="math notranslate nohighlight">\(C_k\)</span><a class="headerlink" href="#computation-of-c-k" title="Permalink to this headline">#</a></h3>
+<h3>Computation of <span class="math notranslate nohighlight">\(C_k\)</span><a class="headerlink" href="#computation-of-c-k" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\frac{1}{2\pi}\left[\int_{0}^{\pi} Ae^{-jk\theta}\, d\theta + \int_{\pi}^{2\pi} (-A)e^{-jk\theta}\, d\theta\right] = \frac{1}{2\pi}\left[\left.\frac{A}{-jk}e^{-jk\theta}\right|_0^\pi+\left.\frac{-A}{-jk}e^{-jk\theta}\right|_\pi^{2\pi}\right]\]</div>
 <div class="math notranslate nohighlight">
@@ -2062,7 +1277,7 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
             mode: "matlab"
         },
         kernelOptions: {
-            kernelName: "matlab",
+            name: "matlab",
             path: "./fourier_series/2"
         },
         predefinedOutput: true
@@ -2070,39 +1285,171 @@ f(t) &amp;=&amp; \frac{4A}{\pi}\left(\cdots + \left(\frac{e^{j\Omega_0 t} - e^{-
     </script>
     <script>kernelName = 'matlab'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../1/trig_fseries.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Unit 5.1: Fourier Analysis</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../1/trig_fseries.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Unit 5.1: Fourier Analysis</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../3/exp_fs2.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../3/exp_fs2.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Unit 5.3: Computing Line Spectra</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Unit 5.2: Exponential Fourier Series</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-signals-x-t-e-at">Exponential Signals <span class="math notranslate nohighlight">\(x(t) = e^{at}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#case-when-a-is-real">Case when <span class="math notranslate nohighlight">\(a\)</span> is real.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#case-when-a-is-imaginary">Case when <span class="math notranslate nohighlight">\(a\)</span> is imaginary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#case-where-a-is-complex">Case where <span class="math notranslate nohighlight">\(a\)</span> is complex</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#case-where-sigma-0">Case where <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Case where <span class="math notranslate nohighlight">\(\sigma &gt; 0\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Case where <span class="math notranslate nohighlight">\(\sigma = 0\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-poles-and-stability">A note on poles and stability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-other-important-properties">Two Other Important Properties</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-exponential-fourier-series">The Exponential Fourier Series</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-terms-with-same-exponents">Grouping terms with same exponents</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#new-coefficients">New coefficients</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-of-the-complex-coefficients">Evaluation of the complex coefficients</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigonometric-fourier-series-from-exponential-fourier-series">Trigonometric Fourier Series from Exponential Fourier Series</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetry-in-exponential-fourier-series">Symmetry in Exponential Fourier Series</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#even-functions">Even Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#odd-functions">Odd Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#half-wave-symmetry">Half-wave symmetry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#no-symmetry">No symmetry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relation-of-c-k-to-c-k">Relation of <span class="math notranslate nohighlight">\(C_{-k}\)</span> to <span class="math notranslate nohighlight">\(C_{k}\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-the-exponential-fourier-series">Computing the Exponential Fourier Series</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#will-be-solved-in-in-class">Will be Solved in in Class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-fourier-series-for-the-square-wave-with-odd-symmetry">Exponential Fourier series for the square wave with odd symmetry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trig-fourier-series-from-exponential-fourier-series">Trig. Fourier Series from Exponential Fourier Series</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-coefficients-of-exponential-fourier-series-in-matlab">Computing coefficients of Exponential Fourier Series in MATLAB</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-17">Examples 17</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-17-1-some-important-values-of-omega-t">Example 17.1: Some important values of <span class="math notranslate nohighlight">\(\omega t\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-17-2">Example 17.2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-questions-for-you">Some questions for you</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-17-3">Example 17.3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#answers">Answers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-17-4">Example 17.4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Answers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-17-5">Example 17.5</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Answers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-5-2-take-aways">Unit 5.2: Take Aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-signals-and-stabilty">Exponential signals and stabilty</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#euler-identities">Euler identities</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-fourier-series">Exponential Fourier series</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-the-exponential-fourier-series-coefficients">Properties of the exponential Fourier series coefficients</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetry">Symmetry</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions-to-examples-17">Solutions to examples 17</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-17-1-some-important-values-of-omega-t">Solution to Example 17.1: Some important values of <span class="math notranslate nohighlight">\(\omega t\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-17-2">Solution to Example 17.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computation-of-c-k">Computation of <span class="math notranslate nohighlight">\(C_k\)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Dr Chris P. Jobling<br/>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Chris P. Jobling
+</p>
+
+  </div>
   
-      &copy; Copyright Swansea University (2023).<br/>
-    <div class="extra_footer">
-      This page was created by 
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Swansea University (2023).
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  This page was created by 
 <a href="https://www.swansea.ac.uk/staff/c.p.jobling/" />
   Dr Chris P. Jobling
 </a> 
@@ -2111,20 +1458,22 @@ for
   Swansea University
 </a>.
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
 </div>
+  </div>
+  
+</div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

@@ -1,49 +1,61 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Unit 4.4 The Inverse Laplace Transform &#8212; EG-150 Signals and Systems</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -53,57 +65,99 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'laplace_transform/4/inverse_laplace';</script>
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/4/inverse_laplace.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Unit 4.5: Using Laplace Transforms for Circuit Analysis" href="../5/circuit_analysis.html" />
     <link rel="prev" title="Unit 4.3 Properties of the Laplace Transform" href="../3/laplace_properties.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">EG-150 Signals and Systems</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EG-150 Signals and Systems</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -112,968 +166,355 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Online notes
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Online notes</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../introduction/index.html">
-   Unit 1 Introduction
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/intro.html">
-     Unit 1.1 Setting the Scene
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/thecourse.html">
-     Unit 1.2 About this Course
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/concepts.html">
-     Unit 1.3 Introduction to the Concepts to be Studied
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../signals_and_systems/index.html">
-   Unit 2 Signals and Systems
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/signals/index.html">
-     Unit 2.1 Signals and Classification of Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/signals/pep_signals.html">
-     Unit 2.2 Periodic, Energy and Power Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/elementary_signals/index.html">
-     Unit 2.3 Elementary Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/elementary_signals/examples3.html">
-     Examples 3 - Elementary Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/systems/index.html">
-     Unit 2.4 Systems and Classification of Systems
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../lti_systems/index.html">
-   Unit 3 Linear Time-Invariant Systems
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti1.html">
-     Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti2.html">
-     Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti3.html">
-     Unit 3.3 Systems Described by Differential Equations
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../index.html">
-   Unit 4 Laplace Transforms and their Applications
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../1/laplace.html">
-     Unit 4.1 The Laplace Transformation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2/laplace_of_common_signals.html">
-     Unit 4.2 Laplace Transform of Some Common Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../3/laplace_properties.html">
-     Unit 4.3 Properties of Laplace Transforms
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Unit 4.4 The Inverse Laplace Transform
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../5/circuit_analysis.html">
-     Unit 4.5 Using Laplace Transforms for Circuit Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../6/transfer_functions.html">
-     Unit 4.6 Transfer Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../7/tf_for_circuits.html">
-     Unit 4.7 Transfer Functions for Circuit Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../8/casas.html">
-     Unit 4.8 Computer-Aided Systems Analysis and Simulation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../fourier_series/index.html">
-   Unit 5 Fourier Series
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../fourier_series/1/trig_fseries.html">
-     Unit 5.1: Fourier Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../fourier_series/2/exp_fs1.html">
-     Unit 5.2: Exponential Fourier Series
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../fourier_series/3/exp_fs2.html">
-     Unit 5.3 Computing Line Spectra
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../fourier_series/4/exp_fs3.html">
-     Unit 5.4 Applications of Line Spectra
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../zbib.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../introduction/index.html">Unit 1 Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/intro.html">Unit 1.1 Setting the Scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/thecourse.html">Unit 1.2 About this Course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/concepts.html">Unit 1.3 Introduction to the Concepts to be Studied</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  FAQs
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../FAQS/faq.html">
-   Answers to Frequently Asked Questions
-  </a>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../signals_and_systems/index.html">Unit 2 Signals and Systems</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/signals/index.html">Unit 2.1 Signals and Classification of Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/signals/pep_signals.html">Unit 2.2 Periodic, Energy and Power Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/elementary_signals/index.html">Unit 2.3 Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/elementary_signals/examples3.html">Examples 3 - Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/systems/index.html">Unit 2.4 Systems and Classification of Systems</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendices
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../lti_systems/index.html">Unit 3 Linear Time-Invariant Systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti1.html">Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti2.html">Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti3.html">Unit 3.3 Systems Described by Differential Equations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Unit 4 Laplace Transforms and their Applications</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../1/laplace.html">Unit 4.1 The Laplace Transformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2/laplace_of_common_signals.html">Unit 4.2 Laplace Transform of Some Common Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3/laplace_properties.html">Unit 4.3 Properties of Laplace Transforms</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit 4.4 The Inverse Laplace Transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5/circuit_analysis.html">Unit 4.5 Using Laplace Transforms for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6/transfer_functions.html">Unit 4.6 Transfer Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../7/tf_for_circuits.html">Unit 4.7 Transfer Functions for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8/casas.html">Unit 4.8 Computer-Aided Systems Analysis and Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../fourier_series/index.html">Unit 5 Fourier Series</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../fourier_series/1/trig_fseries.html">Unit 5.1: Fourier Analysis</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../fourier_series/2/exp_fs1.html">Unit 5.2: Exponential Fourier Series</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../fourier_series/3/exp_fs2.html">Unit 5.3 Computing Line Spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fourier_series/4/exp_fs3.html">Unit 5.4 Applications of Line Spectra</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../zbib.html">Bibliography</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FAQs</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../takeaways.html">
-   Unit takeaways
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../exercises.html">
-   List of Unit Exercises
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../homework.html">
-   List of Homework Problems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../1/lt_props.html">
-   Properties of the Laplace Transform
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../1/lt_table.html">
-   Common Laplace Transform Pairs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../setup/polling_setup.html">
-   Set Up In-Class Polling
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../setup/index.html">
-   Setting up your own version of this book
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/jupyter.html">
-     About Jupyter notebooks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/python.html">
-     Installing Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/setup.html">
-     Setting up your Own Jupyter-MATLAB Computing Environment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/matlab_kernel.html">
-     Testing the Jupyter Matlab Kernel
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/advanced-setup.html">
-     Quick Start - For Experienced Users
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/jupyter-book.html">
-     Setting up jupyter-book
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../FAQS/faq.html">Answers to Frequently Asked Questions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../takeaways.html">Unit takeaways</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises.html">List of Unit Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework.html">List of Homework Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1/lt_props.html">Properties of the Laplace Transform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1/lt_table.html">Common Laplace Transform Pairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/polling_setup.html">Set Up In-Class Polling</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter.html">About Jupyter notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/python.html">Installing Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/matlab_kernel.html">Testing the Jupyter Matlab Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter-book.html">Setting up jupyter-book</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by 
- <a href="https://jupyterbook.org">
-  Jupyter Book
-</a>
-
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/laplace_transform/4/inverse_laplace.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/laplace_transform/4/inverse_laplace.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Flaplace_transform/4/inverse_laplace.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/laplace_transform/4/inverse_laplace.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Flaplace_transform/4/inverse_laplace.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/laplace_transform/4/inverse_laplace.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/laplace_transform/4/inverse_laplace.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download notebook file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="../../_sources/laplace_transform/4/inverse_laplace.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#agenda">
-   Agenda
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition">
-   Definition
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#partial-fraction-expansion">
-   Partial Fraction Expansion
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#proper-and-improper-rational-functions">
-     Proper and Improper Rational Functions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#zeros">
-     Zeros
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#poles">
-     Poles
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-further-simplifying-assumption">
-     A Further Simplifying Assumption
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#inverse-laplace-transform-by-partial-fraction-expansion-pfe">
-   Inverse Laplace Transform by Partial Fraction Expansion (PFE)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#defining-the-problem">
-     Defining the problem
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-case-of-the-distinct-real-poles">
-   The case of the distinct real poles
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-case-of-the-complex-poles">
-   The case of the complex poles
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-case-of-the-repeated-poles">
-   The case of the repeated poles
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-case-of-the-improper-rational-polynomial">
-   The case of the improper rational polynomial
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-11-inverse-laplace-transforms">
-   Examples 11: Inverse Laplace Transforms
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-11-1">
-     Example 11.1
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#matlab-solution-numerical">
-       MATLAB Solution - Numerical
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#matlab-solution-symbolic">
-       MATLAB solution - symbolic
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-11-2">
-     Example 11.2
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-11-2">
-       Solution 11.2
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-11-3">
-     Example 11.3
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-11-3">
-       Solution 11.3
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-11-4">
-     Example 11.4
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-11-4">
-       Solution 11.4
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-11-5-and-some-new-transform-pairs">
-     Example 11.5 - and some new transform pairs.
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-11-5">
-       Solution 11.5
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#what-function-of-t-has-laplace-transform-s">
-       What function of t has Laplace transform s?
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#new-transform-pairs">
-       New Transform Pairs
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#matlab-verification">
-       Matlab verification
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lab-work">
-   Lab Work
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#homework">
-   Homework
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#take-aways">
-   Take Aways
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#matlab">
-     MATLAB
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   Next time
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matlab-solutions">
-   Matlab Solutions
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Unit 4.4 The Inverse Laplace Transform</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#agenda">
-   Agenda
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definition">
-   Definition
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#partial-fraction-expansion">
-   Partial Fraction Expansion
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#proper-and-improper-rational-functions">
-     Proper and Improper Rational Functions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#zeros">
-     Zeros
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#poles">
-     Poles
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-further-simplifying-assumption">
-     A Further Simplifying Assumption
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#inverse-laplace-transform-by-partial-fraction-expansion-pfe">
-   Inverse Laplace Transform by Partial Fraction Expansion (PFE)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#defining-the-problem">
-     Defining the problem
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-case-of-the-distinct-real-poles">
-   The case of the distinct real poles
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-case-of-the-complex-poles">
-   The case of the complex poles
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-case-of-the-repeated-poles">
-   The case of the repeated poles
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-case-of-the-improper-rational-polynomial">
-   The case of the improper rational polynomial
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-11-inverse-laplace-transforms">
-   Examples 11: Inverse Laplace Transforms
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-11-1">
-     Example 11.1
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#matlab-solution-numerical">
-       MATLAB Solution - Numerical
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#matlab-solution-symbolic">
-       MATLAB solution - symbolic
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-11-2">
-     Example 11.2
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-11-2">
-       Solution 11.2
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-11-3">
-     Example 11.3
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-11-3">
-       Solution 11.3
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-11-4">
-     Example 11.4
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-11-4">
-       Solution 11.4
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-11-5-and-some-new-transform-pairs">
-     Example 11.5 - and some new transform pairs.
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-11-5">
-       Solution 11.5
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#what-function-of-t-has-laplace-transform-s">
-       What function of t has Laplace transform s?
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#new-transform-pairs">
-       New Transform Pairs
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#matlab-verification">
-       Matlab verification
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lab-work">
-   Lab Work
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#homework">
-   Homework
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#take-aways">
-   Take Aways
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#matlab">
-     MATLAB
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   Next time
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matlab-solutions">
-   Matlab Solutions
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Unit 4.4 The Inverse Laplace Transform</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-fraction-expansion">Partial Fraction Expansion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proper-and-improper-rational-functions">Proper and Improper Rational Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zeros">Zeros</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poles">Poles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-further-simplifying-assumption">A Further Simplifying Assumption</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-laplace-transform-by-partial-fraction-expansion-pfe">Inverse Laplace Transform by Partial Fraction Expansion (PFE)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-problem">Defining the problem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-of-the-distinct-real-poles">The case of the distinct real poles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-of-the-complex-poles">The case of the complex poles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-of-the-repeated-poles">The case of the repeated poles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-of-the-improper-rational-polynomial">The case of the improper rational polynomial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-11-inverse-laplace-transforms">Examples 11: Inverse Laplace Transforms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-1">Example 11.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solution-numerical">MATLAB Solution - Numerical</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solution-symbolic">MATLAB solution - symbolic</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-2">Example 11.2</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-11-2">Solution 11.2</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-3">Example 11.3</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-11-3">Solution 11.3</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-4">Example 11.4</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-11-4">Solution 11.4</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-5-and-some-new-transform-pairs">Example 11.5 - and some new transform pairs.</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-11-5">Solution 11.5</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-function-of-t-has-laplace-transform-s">What function of t has Laplace transform s?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#new-transform-pairs">New Transform Pairs</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-verification">Matlab verification</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-work">Lab Work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab">MATLAB</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solutions">Matlab Solutions</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="unit-4-4-the-inverse-laplace-transform">
-<span id="unit4-4"></span><h1>Unit 4.4 The Inverse Laplace Transform<a class="headerlink" href="#unit-4-4-the-inverse-laplace-transform" title="Permalink to this headline">#</a></h1>
+<span id="unit4-4"></span><h1>Unit 4.4 The Inverse Laplace Transform<a class="headerlink" href="#unit-4-4-the-inverse-laplace-transform" title="Permalink to this heading">#</a></h1>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/4/inverse_laplace">cpjobling.github.io/eg-150-textbook/laplace_transform/4/inverse_laplace</a></p>
 <p><img alt="QR Code for this lecture" src="../../_images/qrcode_laplace4.png" /></p>
 <section id="introduction">
-<span id="ilap-into"></span><h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<span id="ilap-into"></span><h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>The preparatory reading for this section is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=75#ppg=79">Chapter 3</a> of <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> which</p>
 <ul class="simple">
 <li><p>defines the Inverse Laplace transformation</p></li>
@@ -1085,7 +526,7 @@ title="Print to PDF"
 <p>We will explore the use of MATLAB to solve inverse Laplace tranforms in MATLAB Lab 4.</p>
 </section>
 <section id="agenda">
-<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
+<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#ilap-defn"><span class="std std-ref">Definition</span></a></p></li>
 <li><p><a class="reference internal" href="#ilap-pfe"><span class="std std-ref">Partial Fraction Expansion</span></a></p></li>
@@ -1094,7 +535,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="definition">
-<span id="ilap-defn"></span><h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
+<span id="ilap-defn"></span><h2>Definition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h2>
 <p>The formal definition of the inverse Laplace transform is</p>
 <div class="math notranslate nohighlight" id="equation-eq-4-4-1">
 <span class="eqno">(2)<a class="headerlink" href="#equation-eq-4-4-1" title="Permalink to this equation">#</a></span>\[\mathcal{L}^{-1}\left\{ F(s) \right\} = \frac{1}{2\pi j}\int_{\sigma-j\omega}^{\sigma+j\omega} F(s)e^{st}ds\]</div>
@@ -1103,13 +544,13 @@ title="Print to PDF"
 <p>(Or, if we are not taking an exam, we can use a computer or mobile device.)</p>
 </section>
 <section id="partial-fraction-expansion">
-<span id="ilap-pfe"></span><h2>Partial Fraction Expansion<a class="headerlink" href="#partial-fraction-expansion" title="Permalink to this headline">#</a></h2>
+<span id="ilap-pfe"></span><h2>Partial Fraction Expansion<a class="headerlink" href="#partial-fraction-expansion" title="Permalink to this heading">#</a></h2>
 <p>Quite often the Laplace Transform we start off with is a <em>rational polynomial</em> in <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-4-4-2">
 <span class="eqno">(3)<a class="headerlink" href="#equation-eq-4-4-2" title="Permalink to this equation">#</a></span>\[F(s) = \frac{N(s)}{D(s)} = \frac{b_ms^m + b_{m-1}s^{m-1}+b_{m-2}s^{m-2}+ \cdots +b_{1}s+b_{0}}{a_ns^n + a_{n-1}s^{n-1}+a_{n-2}s^{n-2}+ \cdots +a_{1}s+a_{0}}\]</div>
 <p>The coefficients <span class="math notranslate nohighlight">\(a_k\)</span> and <span class="math notranslate nohighlight">\(b_k\)</span> are real for <span class="math notranslate nohighlight">\(k = 1, 2, 3, \ldots\)</span></p>
 <section id="proper-and-improper-rational-functions">
-<h3>Proper and Improper Rational Functions<a class="headerlink" href="#proper-and-improper-rational-functions" title="Permalink to this headline">#</a></h3>
+<h3>Proper and Improper Rational Functions<a class="headerlink" href="#proper-and-improper-rational-functions" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>If <span class="math notranslate nohighlight">\(m &lt; n\)</span> <span class="math notranslate nohighlight">\(F(s)\)</span> is said to be a <em>proper rational function</em>.</p></li>
 <li><p>If <span class="math notranslate nohighlight">\(m \ge n\)</span> <span class="math notranslate nohighlight">\(F(s)\)</span> is said to be an <em>improper rational function</em></p></li>
@@ -1117,7 +558,7 @@ title="Print to PDF"
 <p>(Think <a class="reference external" href="https://www.mathsisfun.com/proper-fractions.html">proper fractions</a> and <a class="reference external" href="https://www.mathsisfun.com/improper-fractions.html">improper fractions</a>.)</p>
 </section>
 <section id="zeros">
-<h3>Zeros<a class="headerlink" href="#zeros" title="Permalink to this headline">#</a></h3>
+<h3>Zeros<a class="headerlink" href="#zeros" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The <em>roots</em> of the numerator polymonial <span class="math notranslate nohighlight">\(N(s)\)</span> are found by setting <span class="math notranslate nohighlight">\(N(s)=0\)</span></p></li>
 <li><p>When <span class="math notranslate nohighlight">\(s\)</span> equals one of the <span class="math notranslate nohighlight">\(m\)</span> roots of <span class="math notranslate nohighlight">\(N(s)\)</span> then <span class="math notranslate nohighlight">\(F(s)\)</span> will be zero.</p></li>
@@ -1125,7 +566,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="poles">
-<h3>Poles<a class="headerlink" href="#poles" title="Permalink to this headline">#</a></h3>
+<h3>Poles<a class="headerlink" href="#poles" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The <em>roots</em> (<em>zeros</em>) of the denominator polynomial are found by setting <span class="math notranslate nohighlight">\(D(s) = 0\)</span>.</p></li>
 <li><p>When <span class="math notranslate nohighlight">\(s\)</span> equals one of the <span class="math notranslate nohighlight">\(n\)</span> roots of <span class="math notranslate nohighlight">\(D(s)\)</span> then <span class="math notranslate nohighlight">\(F(s)\)</span> will be infinite <span class="math notranslate nohighlight">\(F(s_r) = N(s_r)/0=\infty\)</span>).</p></li>
@@ -1134,7 +575,7 @@ title="Print to PDF"
 <p>(Imagine telegraph poles planted at the points on the <span class="math notranslate nohighlight">\(s\)</span>-plane where <span class="math notranslate nohighlight">\(D(s)\)</span> is zero.)</p>
 </section>
 <section id="a-further-simplifying-assumption">
-<h3>A Further Simplifying Assumption<a class="headerlink" href="#a-further-simplifying-assumption" title="Permalink to this headline">#</a></h3>
+<h3>A Further Simplifying Assumption<a class="headerlink" href="#a-further-simplifying-assumption" title="Permalink to this heading">#</a></h3>
 <p>If <span class="math notranslate nohighlight">\(F(s)\)</span> is proper then it is conventional to make the coefficient <span class="math notranslate nohighlight">\(s_n\)</span> unity thus:</p>
 <div class="math notranslate nohighlight" id="equation-eq-4-4-3">
 <span class="eqno">(4)<a class="headerlink" href="#equation-eq-4-4-3" title="Permalink to this equation">#</a></span>\[F(s) = \frac{N(s)}{D(s)} = \frac{1/{a_n}\left({ {b_m}{s^m} + {b_{m - 1}}{s^{m - 1}} + {b_{m - 2}}{s^{m - 2}} +  \cdots  + {b_1}s + {b_0}} \right)}{s^n + \frac{a_{n - 1}}{a_n}{s^{n - 1}} + \frac{a_{n - 2}}{a_n}{s^{n - 2}} +  \cdots  + \frac{a_1}{a_n}s + \frac{a_0}{a_n}}\]</div>
@@ -1142,10 +583,10 @@ title="Print to PDF"
 </section>
 </section>
 <section id="inverse-laplace-transform-by-partial-fraction-expansion-pfe">
-<span id="ilap-by-pfe"></span><h2>Inverse Laplace Transform by Partial Fraction Expansion (PFE)<a class="headerlink" href="#inverse-laplace-transform-by-partial-fraction-expansion-pfe" title="Permalink to this headline">#</a></h2>
+<span id="ilap-by-pfe"></span><h2>Inverse Laplace Transform by Partial Fraction Expansion (PFE)<a class="headerlink" href="#inverse-laplace-transform-by-partial-fraction-expansion-pfe" title="Permalink to this heading">#</a></h2>
 <p>The poles of <span class="math notranslate nohighlight">\(F(s)\)</span> can be real and distinct, real and repeated, complex conjugate pairs, or a combination.</p>
 <section id="defining-the-problem">
-<h3>Defining the problem<a class="headerlink" href="#defining-the-problem" title="Permalink to this headline">#</a></h3>
+<h3>Defining the problem<a class="headerlink" href="#defining-the-problem" title="Permalink to this heading">#</a></h3>
 <p>The nature of the poles governs the best way to tackle the PFE that leads to the solution of the Inverse Laplace Transform. Thus, we need to structure our presentation to cover one of the following cases:</p>
 <ul class="simple">
 <li><p>The case where <span class="math notranslate nohighlight">\(F(s)\)</span> has distinct real poles</p></li>
@@ -1157,7 +598,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="the-case-of-the-distinct-real-poles">
-<span id="ilap-distinct-real-poles"></span><h2>The case of the distinct real poles<a class="headerlink" href="#the-case-of-the-distinct-real-poles" title="Permalink to this headline">#</a></h2>
+<span id="ilap-distinct-real-poles"></span><h2>The case of the distinct real poles<a class="headerlink" href="#the-case-of-the-distinct-real-poles" title="Permalink to this heading">#</a></h2>
 <p>If the poles <span class="math notranslate nohighlight">\(p_1,\,p_2,\,p_3,\,\ldots,\, p_n\)</span> are <em>distinct</em> we can factor the denominator of <span class="math notranslate nohighlight">\(F(s)\)</span> in the form</p>
 <div class="math notranslate nohighlight" id="equation-eq-4-4-4">
 <span class="eqno">(5)<a class="headerlink" href="#equation-eq-4-4-4" title="Permalink to this equation">#</a></span>\[F(s) = \frac{N(s)}{(s-p_1)(s-p_2)(s-p_3)\ldots(s-p_n)}\]</div>
@@ -1169,7 +610,7 @@ title="Print to PDF"
 <span class="eqno">(7)<a class="headerlink" href="#equation-eq-4-4-6" title="Permalink to this equation">#</a></span>\[r_k = \lim_{s\to p_k}(s-p_k)F(s) = \left.(s-p_k)F(s)\right|_{s=p_k}\]</div>
 </section>
 <section id="the-case-of-the-complex-poles">
-<span id="case-complex-poles"></span><h2>The case of the complex poles<a class="headerlink" href="#the-case-of-the-complex-poles" title="Permalink to this headline">#</a></h2>
+<span id="case-complex-poles"></span><h2>The case of the complex poles<a class="headerlink" href="#the-case-of-the-complex-poles" title="Permalink to this heading">#</a></h2>
 <p>Quite often the poles of <span class="math notranslate nohighlight">\(F(s)\)</span> are complex and because the complex poles occur as complex conjugate pairs, the number of complex poles is even. Thus if <span class="math notranslate nohighlight">\(p_k\)</span> is a complex root of <span class="math notranslate nohighlight">\(D(s)\)</span> then its complex conjugate <span class="math notranslate nohighlight">\(p_k^*\)</span> is also a root of <span class="math notranslate nohighlight">\(D(s)\)</span>.</p>
 <p>You can still use the PFE with complex poles, as demonstrated in Pages 3-5—3-7 in the textbook. However it is easier to use the fact that complex poles will appear as quadratic factors of the form <span class="math notranslate nohighlight">\(s^2 + as + b\)</span> and then call on the two transforms in the PFE</p>
 <div class="math notranslate nohighlight" id="equation-eq-4-4-7">
@@ -1178,7 +619,7 @@ title="Print to PDF"
 <span class="eqno">(9)<a class="headerlink" href="#equation-eq-4-4-8" title="Permalink to this equation">#</a></span>\[\frac{s + a}{(s - a)^2 + \omega^2} \Leftrightarrow e^{at}\cos\;\omega t\]</div>
 </section>
 <section id="the-case-of-the-repeated-poles">
-<span id="ilap-repeated-poles"></span><h2>The case of the repeated poles<a class="headerlink" href="#the-case-of-the-repeated-poles" title="Permalink to this headline">#</a></h2>
+<span id="ilap-repeated-poles"></span><h2>The case of the repeated poles<a class="headerlink" href="#the-case-of-the-repeated-poles" title="Permalink to this heading">#</a></h2>
 <p>When a rational polynomial has repeated poles</p>
 <div class="math notranslate nohighlight" id="equation-eq-4-4-9">
 <span class="eqno">(10)<a class="headerlink" href="#equation-eq-4-4-9" title="Permalink to this equation">#</a></span>\[F(s) = \frac{N(s)}{(s - p_1)^m(s - p_2)\cdots(s - p_{n-1})(s-p_0)}\]</div>
@@ -1195,14 +636,14 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 <p>which in the age of computers is rarely needed.</p>
 </section>
 <section id="the-case-of-the-improper-rational-polynomial">
-<span id="ilap-improper"></span><h2>The case of the improper rational polynomial<a class="headerlink" href="#the-case-of-the-improper-rational-polynomial" title="Permalink to this headline">#</a></h2>
+<span id="ilap-improper"></span><h2>The case of the improper rational polynomial<a class="headerlink" href="#the-case-of-the-improper-rational-polynomial" title="Permalink to this heading">#</a></h2>
 <p>If <span class="math notranslate nohighlight">\(F(s)\)</span> is an improper rational polynomial, that is <span class="math notranslate nohighlight">\(m \ge n\)</span>, we must first divide the numerator <span class="math notranslate nohighlight">\(N(s)\)</span> by the denomonator <span class="math notranslate nohighlight">\(D(s)\)</span> to derive an expression of the form</p>
 <div class="math notranslate nohighlight" id="equation-eq-4-4-11">
 <span class="eqno">(12)<a class="headerlink" href="#equation-eq-4-4-11" title="Permalink to this equation">#</a></span>\[F(s) = k_0 + k_1s + k_2s^2 + \cdots + k_{m-n}s^{m-n} + \frac{N(s)}{D(s)}\]</div>
 <p>and then <span class="math notranslate nohighlight">\(N(s)/D(s)\)</span> will be a proper rational polynomial.</p>
 </section>
 <section id="examples-11-inverse-laplace-transforms">
-<span id="examples11"></span><h2>Examples 11: Inverse Laplace Transforms<a class="headerlink" href="#examples-11-inverse-laplace-transforms" title="Permalink to this headline">#</a></h2>
+<span id="examples11"></span><h2>Examples 11: Inverse Laplace Transforms<a class="headerlink" href="#examples-11-inverse-laplace-transforms" title="Permalink to this heading">#</a></h2>
 <p>Lecturer clear all cells and set up MATLAB</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1213,7 +654,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 </div>
 </div>
 <section id="example-11-1">
-<span id="ex11-1"></span><h3>Example 11.1<a class="headerlink" href="#example-11-1" title="Permalink to this headline">#</a></h3>
+<span id="ex11-1"></span><h3>Example 11.1<a class="headerlink" href="#example-11-1" title="Permalink to this heading">#</a></h3>
 <p>Use the PFE method to simplify <span class="math notranslate nohighlight">\(F_1(s)\)</span> below and find the time domain function <span class="math notranslate nohighlight">\(f_1(t)\)</span> corresponding to <span class="math notranslate nohighlight">\(F_1(s)\)</span></p>
 <div class="math notranslate nohighlight">
 \[F_1(s) = \frac{2s+5}{s^2 + 5s + 6}\]</div>
@@ -1248,7 +689,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 
 
 </pre><section id="matlab-solution-numerical">
-<span id="mat-num-11-1"></span><h4>MATLAB Solution - Numerical<a class="headerlink" href="#matlab-solution-numerical" title="Permalink to this headline">#</a></h4>
+<span id="mat-num-11-1"></span><h4>MATLAB Solution - Numerical<a class="headerlink" href="#matlab-solution-numerical" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Ns</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">];</span><span class="w"> </span><span class="n">Ds</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">];</span>
@@ -1281,7 +722,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 \[f_1(t) = e^{-3t}u_0(t) + e^{-2t}u_0(t)\]</div>
 </section>
 <section id="matlab-solution-symbolic">
-<span id="mat-sym-11-1"></span><h4>MATLAB solution - symbolic<a class="headerlink" href="#matlab-solution-symbolic" title="Permalink to this headline">#</a></h4>
+<span id="mat-sym-11-1"></span><h4>MATLAB solution - symbolic<a class="headerlink" href="#matlab-solution-symbolic" title="Permalink to this heading">#</a></h4>
 <p>Recall that in MATLAB the <code class="docutils literal notranslate"><span class="pre">laplace</span></code> operator is the single sided Laplace transform, so the presence of <span class="math notranslate nohighlight">\(u_0(t)\)</span> in the answers given by <code class="docutils literal notranslate"><span class="pre">ilaplace</span></code> is implied.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1299,19 +740,19 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>exp(-2*t) + exp(-3*t)
 </pre></div>
 </div>
-<img alt="../../_images/inverse_laplace_32_2.png" src="../../_images/inverse_laplace_32_2.png" />
+<img alt="../../_images/9d551c59f7df25b2f3ec567647620812da38ee30258d4381dcbed98991891f35.png" src="../../_images/9d551c59f7df25b2f3ec567647620812da38ee30258d4381dcbed98991891f35.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="example-11-2">
-<span id="ex-11-2"></span><h3>Example 11.2<a class="headerlink" href="#example-11-2" title="Permalink to this headline">#</a></h3>
+<span id="ex-11-2"></span><h3>Example 11.2<a class="headerlink" href="#example-11-2" title="Permalink to this heading">#</a></h3>
 <p>Determine the Inverse Laplace Transform of</p>
 <div class="math notranslate nohighlight">
 \[F_2(s) = \frac{3s^2+2s+5}{s^3 + 9s^2 + 23s + 15}\]</div>
 <p>(Quick solution: <a class="reference external" href="https://www.wolframalpha.com/input/?i=inverse+laplace+transform+%283s%5E2+%2B+2s+%2B+5%29%2F%28s%5E3+%2B+9s%5E2+%2B+23s+%2B+15%29">Wolfram Alpha</a>)</p>
 <section id="solution-11-2">
-<span id="id3"></span><h4>Solution 11.2<a class="headerlink" href="#solution-11-2" title="Permalink to this headline">#</a></h4>
+<span id="id3"></span><h4>Solution 11.2<a class="headerlink" href="#solution-11-2" title="Permalink to this heading">#</a></h4>
 <p>Because the denominator of <span class="math notranslate nohighlight">\(F_2(s)\)</span> is a cubic, it will be difficult to factorise without computer assistance so we use MATLAB to factorise <span class="math notranslate nohighlight">\(D(s)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1367,14 +808,14 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 </pre></section>
 </section>
 <section id="example-11-3">
-<span id="ex-11-3"></span><h3>Example 11.3<a class="headerlink" href="#example-11-3" title="Permalink to this headline">#</a></h3>
+<span id="ex-11-3"></span><h3>Example 11.3<a class="headerlink" href="#example-11-3" title="Permalink to this heading">#</a></h3>
 <p>Rework Example 3-2 from the <span id="id4">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> using quadratic factors.</p>
 <p>Find the Inverse Laplace Transform of</p>
 <div class="math notranslate nohighlight" id="equation-pfe1">
 <span class="eqno">(13)<a class="headerlink" href="#equation-pfe1" title="Permalink to this equation">#</a></span>\[F_3(s) = \frac{s + 3}{(s+1)(s^2 + 4s + 8)}\]</div>
 <p>(Quick solution: <a class="reference external" href="https://www.wolframalpha.com/input/?i=inverse+laplace+transform+%28s%2B3%29%2F%28%28s+%2B+1%29%28s%5E2+%2B+4s+%2B+8%29%29">Wolfram Alpha</a> – Shows that the computer is not always best!)</p>
 <section id="solution-11-3">
-<h4>Solution 11.3<a class="headerlink" href="#solution-11-3" title="Permalink to this headline">#</a></h4>
+<h4>Solution 11.3<a class="headerlink" href="#solution-11-3" title="Permalink to this heading">#</a></h4>
 <p>We know that one pole is real at <span class="math notranslate nohighlight">\(s=-1\)</span>. We can use the PFE in the usual way to find the residue <span class="math notranslate nohighlight">\(r_1\)</span> that corresponds to that pole.</p>
 <p><strong>OneNote Class Notebook Scratch Pad</strong></p>
 <p>Find residue <span class="math notranslate nohighlight">\(r_1\)</span></p>
@@ -1454,7 +895,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 </section>
 </section>
 <section id="example-11-4">
-<span id="ex11-4"></span><h3>Example 11.4<a class="headerlink" href="#example-11-4" title="Permalink to this headline">#</a></h3>
+<span id="ex11-4"></span><h3>Example 11.4<a class="headerlink" href="#example-11-4" title="Permalink to this heading">#</a></h3>
 <p>Find the inverse Laplace Transform of</p>
 <div class="math notranslate nohighlight">
 \[F_4(s) = \frac{s+3}{(s+2)(s+1)^2}\]</div>
@@ -1467,7 +908,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 <p>will be useful.</p>
 <p>(Quick solution: <a class="reference external" href="https://www.wolframalpha.com/input/?i=inverse+laplace+transform+%28s%2B3%29%2F%28%28s%2B2%29%28s+%2B+1%29%5E2%29">Wolfram Alpha</a>)</p>
 <section id="solution-11-4">
-<span id="sol-11-4"></span><h4>Solution 11.4<a class="headerlink" href="#solution-11-4" title="Permalink to this headline">#</a></h4>
+<span id="sol-11-4"></span><h4>Solution 11.4<a class="headerlink" href="#solution-11-4" title="Permalink to this heading">#</a></h4>
 <p>We will leave the solution that makes use of the residude of repeated poles formula for you to study from the text book (example 3.2.3 <span id="id6">[]</span>.</p>
 <p>In class we will illustrate the slightly simpler approach also presented in the text.</p>
 <p>For exam preparation, I would recommend that you use whatever method you find most comfortable.</p>
@@ -1505,12 +946,12 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 </pre></section>
 </section>
 <section id="example-11-5-and-some-new-transform-pairs">
-<span id="ex11-5"></span><h3>Example 11.5 - and some new transform pairs.<a class="headerlink" href="#example-11-5-and-some-new-transform-pairs" title="Permalink to this headline">#</a></h3>
+<span id="ex11-5"></span><h3>Example 11.5 - and some new transform pairs.<a class="headerlink" href="#example-11-5-and-some-new-transform-pairs" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[F_6(s)= \frac{s^2 + 2s + 2}{s+1}\]</div>
 <p>(Quick solution: <a class="reference external" href="https://www.wolframalpha.com/input/?i=inverse+laplace+transform+%28s%5E2+%2B+2s+%2B+2%29%2F%28s+%2B+1%29">Wolfram Alpha</a>)</p>
 <section id="solution-11-5">
-<span id="sol-11-5"></span><h4>Solution 11.5<a class="headerlink" href="#solution-11-5" title="Permalink to this headline">#</a></h4>
+<span id="sol-11-5"></span><h4>Solution 11.5<a class="headerlink" href="#solution-11-5" title="Permalink to this heading">#</a></h4>
 <p>Dividing <span class="math notranslate nohighlight">\(s^2 + 2s + 2\)</span> by <span class="math notranslate nohighlight">\(s + 1\)</span> gives</p>
 <div class="math notranslate nohighlight">
 \[F_6(s) = s + 1 + \frac{1}{s+1}\]</div>
@@ -1522,7 +963,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 \[s \Leftrightarrow ?\]</div>
 </section>
 <section id="what-function-of-t-has-laplace-transform-s">
-<h4>What function of t has Laplace transform s?<a class="headerlink" href="#what-function-of-t-has-laplace-transform-s" title="Permalink to this headline">#</a></h4>
+<h4>What function of t has Laplace transform s?<a class="headerlink" href="#what-function-of-t-has-laplace-transform-s" title="Permalink to this heading">#</a></h4>
 <p>Recall from Session 2:</p>
 <div class="math notranslate nohighlight">
 \[\frac{d}{dt}u_0(t)=u_0'(t)=\delta(t)\]</div>
@@ -1534,7 +975,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 \[u_0''(t)=\delta'(t)\Leftrightarrow s^2\mathcal{L}u_0(t) - su_0(0^-) - \left.\frac{d}{dt}u_0(t)\right|_{t=0^-} =  s^2\frac{1}{s} = s\]</div>
 </section>
 <section id="new-transform-pairs">
-<h4>New Transform Pairs<a class="headerlink" href="#new-transform-pairs" title="Permalink to this headline">#</a></h4>
+<h4>New Transform Pairs<a class="headerlink" href="#new-transform-pairs" title="Permalink to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
 \[s\Leftrightarrow \delta'(t)\]</div>
 <div class="math notranslate nohighlight">
@@ -1543,7 +984,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 \[f_6(t) = e^{-t}+\delta(t)+\delta'(t)\]</div>
 </section>
 <section id="matlab-verification">
-<span id="mat-11-5"></span><h4>Matlab verification<a class="headerlink" href="#matlab-verification" title="Permalink to this headline">#</a></h4>
+<span id="mat-11-5"></span><h4>Matlab verification<a class="headerlink" href="#matlab-verification" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Ns</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">];</span><span class="w"> </span><span class="n">Ds</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
@@ -1587,15 +1028,15 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 </section>
 </section>
 <section id="lab-work">
-<h2>Lab Work<a class="headerlink" href="#lab-work" title="Permalink to this headline">#</a></h2>
+<h2>Lab Work<a class="headerlink" href="#lab-work" title="Permalink to this heading">#</a></h2>
 <p>In MATLAB Lab 4, we will explore the tools provided by MATLAB for taking Laplace transforms, representing polynomials, finding roots and factorizing polynomials and solution of inverse Laplace transform problems.</p>
 </section>
 <section id="homework">
-<h2>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">#</a></h2>
+<h2>Homework<a class="headerlink" href="#homework" title="Permalink to this heading">#</a></h2>
 <p>Complete <a class="reference internal" href="#ex-11-3"><span class="std std-ref">Example 11.3</span></a> to confirm the result <a class="reference internal" href="#equation-pfe4">(16)</a>. Then do the end of the chapter exercises (Section 3.67) from the <span id="id7">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>. Don’t look at the answers until you have attempted the problems.</p>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p>In this section we have looked at the inverse Laplace transform. In particular, how to solve continuous-time LTI system problems that take the form of rational polynomials in <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#ilap-defn"><span class="std std-ref">Definition</span></a></p></li>
@@ -1605,7 +1046,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 </ul>
 </section>
 <section id="take-aways">
-<h2>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this headline">#</a></h2>
+<h2>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h2>
 <p>For causal signals and continuous-time LTI systems, the Laplace transform usually takes the form of a rational polynomial with general form <span class="math notranslate nohighlight">\(F(s)\)</span> as shown in equation <a class="reference internal" href="#equation-eq-4-4-2">(3)</a>. The denominator of <span class="math notranslate nohighlight">\(F(s)\)</span>, <span class="math notranslate nohighlight">\(D(s)\)</span>, can always be factorised, and the factors (zeros of D(s), poles of F(s)) will be real <span class="math notranslate nohighlight">\((s - p_k)\)</span>, real and repeated, such as <span class="math notranslate nohighlight">\((s - p_k)^n\)</span> or complex conjugate pairs <span class="math notranslate nohighlight">\((s - \sigma_k - j\omega_k)(s - \sigma_k + j\omega_k)^1\)</span>, or a combination of these.</p>
 <p>Each such rational polynomial can then be represented as a <em>partial fraction</em> with <em>residues</em> <span class="math notranslate nohighlight">\(r_k\)</span> whose values are determined by using one of the <em>partial fraction expansion</em> methods presented in this unit:</p>
 <ul class="simple">
@@ -1616,7 +1057,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 </ul>
 <p>The factored polynomial which represents <span class="math notranslate nohighlight">\(F(s)\)</span> can then be converted into the equivalent <span class="math notranslate nohighlight">\(f(t)\)</span> by use of the <em>linearity property</em> (<a class="reference internal" href="../3/laplace_properties.html#lprops-linearity"><span class="std std-ref">Linearity</span></a>) and tables of Laplace transforms (e.g. <span class="xref std std-ref">ap:xform_table</span>).</p>
 <section id="matlab">
-<h3>MATLAB<a class="headerlink" href="#matlab" title="Permalink to this headline">#</a></h3>
+<h3>MATLAB<a class="headerlink" href="#matlab" title="Permalink to this heading">#</a></h3>
 <p>The inverse Laplace transform is given by the Symbolic math toolbox function <code class="docutils literal notranslate"><span class="pre">ilaplace</span></code>. We can determine the partial fraction of a rational polynomial with constant coefficients using the function <code class="docutils literal notranslate"><span class="pre">residue</span></code> we can factorise a symbolic polynomial using <code class="docutils literal notranslate"><span class="pre">factor</span></code> and expand a product of rational terms using <code class="docutils literal notranslate"><span class="pre">expand</span></code>. A symbolic polynomial with numerical coeffients can be converted into a numerial polynomial using <code class="docutils literal notranslate"><span class="pre">sym2poly</span></code> and you can go the other way using <code class="docutils literal notranslate"><span class="pre">poly2sym</span></code>. For more information and examples on how to use these functions please consult the <a class="reference external" href="https://uk.mathworks.com/help/index.html">MATLAB help centre</a>.</p>
 <hr/>
 <p><em>Footnote</em></p>
@@ -1637,14 +1078,14 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 </section>
 </section>
 <section id="next-time">
-<h2>Next time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
+<h2>Next time<a class="headerlink" href="#next-time" title="Permalink to this heading">#</a></h2>
 <p>We move on to consider</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../5/circuit_analysis.html#unit4-5"><span class="std std-ref">Unit 4.5: Using Laplace Transforms for Circuit Analysis</span></a></p></li>
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id8">
 <dl class="citation">
 <dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id2">Hsu20</a></span></dt>
@@ -1657,7 +1098,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 </div>
 </section>
 <section id="matlab-solutions">
-<span id="matlab-solutions11"></span><h2>Matlab Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this headline">#</a></h2>
+<span id="matlab-solutions11"></span><h2>Matlab Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this heading">#</a></h2>
 <p>For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab">MATLAB</a> folder.</p>
 <ul class="simple">
 <li><p>Example 1 - Real poles [<a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/ex11_1.m">ex11_1.m</a>]</p></li>
@@ -1681,7 +1122,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
             mode: "matlab"
         },
         kernelOptions: {
-            kernelName: "matlab",
+            name: "matlab",
             path: "./laplace_transform/4"
         },
         predefinedOutput: true
@@ -1689,39 +1130,143 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
     </script>
     <script>kernelName = 'matlab'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../3/laplace_properties.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Unit 4.3 Properties of the Laplace Transform</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../3/laplace_properties.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Unit 4.3 Properties of the Laplace Transform</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../5/circuit_analysis.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../5/circuit_analysis.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Unit 4.5: Using Laplace Transforms for Circuit Analysis</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-fraction-expansion">Partial Fraction Expansion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proper-and-improper-rational-functions">Proper and Improper Rational Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zeros">Zeros</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poles">Poles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-further-simplifying-assumption">A Further Simplifying Assumption</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-laplace-transform-by-partial-fraction-expansion-pfe">Inverse Laplace Transform by Partial Fraction Expansion (PFE)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-problem">Defining the problem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-of-the-distinct-real-poles">The case of the distinct real poles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-of-the-complex-poles">The case of the complex poles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-of-the-repeated-poles">The case of the repeated poles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-of-the-improper-rational-polynomial">The case of the improper rational polynomial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-11-inverse-laplace-transforms">Examples 11: Inverse Laplace Transforms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-1">Example 11.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solution-numerical">MATLAB Solution - Numerical</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solution-symbolic">MATLAB solution - symbolic</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-2">Example 11.2</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-11-2">Solution 11.2</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-3">Example 11.3</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-11-3">Solution 11.3</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-4">Example 11.4</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-11-4">Solution 11.4</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-5-and-some-new-transform-pairs">Example 11.5 - and some new transform pairs.</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-11-5">Solution 11.5</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-function-of-t-has-laplace-transform-s">What function of t has Laplace transform s?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#new-transform-pairs">New Transform Pairs</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-verification">Matlab verification</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-work">Lab Work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab">MATLAB</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solutions">Matlab Solutions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Dr Chris P. Jobling<br/>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Chris P. Jobling
+</p>
+
+  </div>
   
-      &copy; Copyright Swansea University (2023).<br/>
-    <div class="extra_footer">
-      This page was created by 
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Swansea University (2023).
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  This page was created by 
 <a href="https://www.swansea.ac.uk/staff/c.p.jobling/" />
   Dr Chris P. Jobling
 </a> 
@@ -1730,20 +1275,22 @@ for
   Swansea University
 </a>.
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
 </div>
+  </div>
+  
+</div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

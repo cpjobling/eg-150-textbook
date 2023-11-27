@@ -1,49 +1,61 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Unit 2.4: Systems and Classification of Systems &#8212; EG-150 Signals and Systems</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -53,57 +65,99 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'signals_and_systems/systems/index';</script>
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/signals_and_systems/systems/index.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Unit 3: Linear Time-Invariant Systems" href="../../lti_systems/index.html" />
     <link rel="prev" title="Examples 3 - Elementary Signals" href="../elementary_signals/examples3.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">EG-150 Signals and Systems</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EG-150 Signals and Systems</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -112,959 +166,351 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Online notes
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Online notes</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../introduction/index.html">
-   Unit 1 Introduction
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/intro.html">
-     Unit 1.1 Setting the Scene
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/thecourse.html">
-     Unit 1.2 About this Course
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/concepts.html">
-     Unit 1.3 Introduction to the Concepts to be Studied
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../index.html">
-   Unit 2 Signals and Systems
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../signals/index.html">
-     Unit 2.1 Signals and Classification of Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../signals/pep_signals.html">
-     Unit 2.2 Periodic, Energy and Power Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../elementary_signals/index.html">
-     Unit 2.3 Elementary Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../elementary_signals/examples3.html">
-     Examples 3 - Elementary Signals
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Unit 2.4 Systems and Classification of Systems
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../lti_systems/index.html">
-   Unit 3 Linear Time-Invariant Systems
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti1.html">
-     Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti2.html">
-     Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti3.html">
-     Unit 3.3 Systems Described by Differential Equations
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../laplace_transform/index.html">
-   Unit 4 Laplace Transforms and their Applications
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/1/laplace.html">
-     Unit 4.1 The Laplace Transformation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/2/laplace_of_common_signals.html">
-     Unit 4.2 Laplace Transform of Some Common Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/3/laplace_properties.html">
-     Unit 4.3 Properties of Laplace Transforms
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/4/inverse_laplace.html">
-     Unit 4.4 The Inverse Laplace Transform
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/5/circuit_analysis.html">
-     Unit 4.5 Using Laplace Transforms for Circuit Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/6/transfer_functions.html">
-     Unit 4.6 Transfer Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/7/tf_for_circuits.html">
-     Unit 4.7 Transfer Functions for Circuit Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/8/casas.html">
-     Unit 4.8 Computer-Aided Systems Analysis and Simulation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../fourier_series/index.html">
-   Unit 5 Fourier Series
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../fourier_series/1/trig_fseries.html">
-     Unit 5.1: Fourier Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../fourier_series/2/exp_fs1.html">
-     Unit 5.2: Exponential Fourier Series
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../fourier_series/3/exp_fs2.html">
-     Unit 5.3 Computing Line Spectra
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../fourier_series/4/exp_fs3.html">
-     Unit 5.4 Applications of Line Spectra
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../zbib.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../introduction/index.html">Unit 1 Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/intro.html">Unit 1.1 Setting the Scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/thecourse.html">Unit 1.2 About this Course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/concepts.html">Unit 1.3 Introduction to the Concepts to be Studied</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  FAQs
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../FAQS/faq.html">
-   Answers to Frequently Asked Questions
-  </a>
- </li>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Unit 2 Signals and Systems</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../signals/index.html">Unit 2.1 Signals and Classification of Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../signals/pep_signals.html">Unit 2.2 Periodic, Energy and Power Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../elementary_signals/index.html">Unit 2.3 Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../elementary_signals/examples3.html">Examples 3 - Elementary Signals</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit 2.4 Systems and Classification of Systems</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendices
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../lti_systems/index.html">Unit 3 Linear Time-Invariant Systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti1.html">Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti2.html">Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti3.html">Unit 3.3 Systems Described by Differential Equations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../laplace_transform/index.html">Unit 4 Laplace Transforms and their Applications</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/1/laplace.html">Unit 4.1 The Laplace Transformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/2/laplace_of_common_signals.html">Unit 4.2 Laplace Transform of Some Common Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/3/laplace_properties.html">Unit 4.3 Properties of Laplace Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/4/inverse_laplace.html">Unit 4.4 The Inverse Laplace Transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/5/circuit_analysis.html">Unit 4.5 Using Laplace Transforms for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/6/transfer_functions.html">Unit 4.6 Transfer Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/7/tf_for_circuits.html">Unit 4.7 Transfer Functions for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/8/casas.html">Unit 4.8 Computer-Aided Systems Analysis and Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../fourier_series/index.html">Unit 5 Fourier Series</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../fourier_series/1/trig_fseries.html">Unit 5.1: Fourier Analysis</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../fourier_series/2/exp_fs1.html">Unit 5.2: Exponential Fourier Series</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../fourier_series/3/exp_fs2.html">Unit 5.3 Computing Line Spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fourier_series/4/exp_fs3.html">Unit 5.4 Applications of Line Spectra</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../zbib.html">Bibliography</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FAQs</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../takeaways.html">
-   Unit takeaways
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../exercises.html">
-   List of Unit Exercises
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../homework.html">
-   List of Homework Problems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../laplace_transform/1/lt_props.html">
-   Properties of the Laplace Transform
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../laplace_transform/1/lt_table.html">
-   Common Laplace Transform Pairs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../setup/polling_setup.html">
-   Set Up In-Class Polling
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../setup/index.html">
-   Setting up your own version of this book
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/jupyter.html">
-     About Jupyter notebooks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/python.html">
-     Installing Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/setup.html">
-     Setting up your Own Jupyter-MATLAB Computing Environment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/matlab_kernel.html">
-     Testing the Jupyter Matlab Kernel
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/advanced-setup.html">
-     Quick Start - For Experienced Users
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/jupyter-book.html">
-     Setting up jupyter-book
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../FAQS/faq.html">Answers to Frequently Asked Questions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../takeaways.html">Unit takeaways</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises.html">List of Unit Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework.html">List of Homework Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../laplace_transform/1/lt_props.html">Properties of the Laplace Transform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../laplace_transform/1/lt_table.html">Common Laplace Transform Pairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/polling_setup.html">Set Up In-Class Polling</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter.html">About Jupyter notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/python.html">Installing Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/matlab_kernel.html">Testing the Jupyter Matlab Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter-book.html">Setting up jupyter-book</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by 
- <a href="https://jupyterbook.org">
-  Jupyter Book
-</a>
-
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/signals_and_systems/systems/index.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/signals_and_systems/systems/index.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Fsignals_and_systems/systems/index.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/signals_and_systems/systems/index.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Fsignals_and_systems/systems/index.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/signals_and_systems/systems/index.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/signals_and_systems/systems/index.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download notebook file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="../../_sources/signals_and_systems/systems/index.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#subjects-to-be-covered">
-   Subjects to be covered
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#system-representation">
-   System Representation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#deterministic-and-stochastic-systems">
-   Deterministic and Stochastic Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#continuous-time-and-discrete-time-systems">
-   Continuous-Time and Discrete-Time Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#systems-with-memory-and-without-memory">
-   Systems with Memory and without Memory
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-memoryless-system">
-     A memoryless system
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-system-with-memory">
-     A system with memory
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#causal-and-non-causal-systems">
-   Causal and Non-Causal Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linear-systems-and-nonlinear-systems">
-   Linear Systems and Nonlinear Systems
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#properties-of-linear-systems">
-     Properties of Linear Systems
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#additivity">
-       1. Additivity
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#homogeneity-or-scaling">
-       2. Homogeneity (or
-       <em>
-        Scaling
-       </em>
-       )
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#nonlinear-systems">
-       Nonlinear systems
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#superposition-property">
-     Superposition property
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-linear-systems">
-     Example linear systems
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-nonlinear-systems">
-     Example nonlinear systems
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#zero-input-property">
-     Zero input property
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#time-invariant-and-time-varying-systems">
-   Time-Invariant and Time-Varying Systems
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-varying-system">
-     Time-varying system
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#testing-for-time-invariance">
-     Testing for time-invariance
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linear-time-invariant-systems">
-   Linear Time-Invariant Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#stable-systems">
-   Stable Systems
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unstable-systems">
-     Unstable systems
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#feedback-systems">
-   Feedback Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-4">
-   Examples 4
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-4-1-rc-circuit">
-     Example 4.1: RC Circuit
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-4-2-capacitor-circuit">
-     Example 4.2: Capacitor circuit
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-4-3-signal-modulator">
-     Example 4.3: Signal modulator
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-4-4">
-     Example 4.4
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-4-5">
-     Example 4.5
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-4-6">
-     Example 4.6
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-4-7">
-     Example 4.7
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution">
-       Solution
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   Next time
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Unit 2.4: Systems and Classification of Systems</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#subjects-to-be-covered">
-   Subjects to be covered
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#system-representation">
-   System Representation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#deterministic-and-stochastic-systems">
-   Deterministic and Stochastic Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#continuous-time-and-discrete-time-systems">
-   Continuous-Time and Discrete-Time Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#systems-with-memory-and-without-memory">
-   Systems with Memory and without Memory
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-memoryless-system">
-     A memoryless system
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-system-with-memory">
-     A system with memory
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#causal-and-non-causal-systems">
-   Causal and Non-Causal Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linear-systems-and-nonlinear-systems">
-   Linear Systems and Nonlinear Systems
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#properties-of-linear-systems">
-     Properties of Linear Systems
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#additivity">
-       1. Additivity
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#homogeneity-or-scaling">
-       2. Homogeneity (or
-       <em>
-        Scaling
-       </em>
-       )
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#nonlinear-systems">
-       Nonlinear systems
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#superposition-property">
-     Superposition property
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-linear-systems">
-     Example linear systems
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-nonlinear-systems">
-     Example nonlinear systems
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#zero-input-property">
-     Zero input property
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#time-invariant-and-time-varying-systems">
-   Time-Invariant and Time-Varying Systems
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-varying-system">
-     Time-varying system
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#testing-for-time-invariance">
-     Testing for time-invariance
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linear-time-invariant-systems">
-   Linear Time-Invariant Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#stable-systems">
-   Stable Systems
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unstable-systems">
-     Unstable systems
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#feedback-systems">
-   Feedback Systems
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-4">
-   Examples 4
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-4-1-rc-circuit">
-     Example 4.1: RC Circuit
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-4-2-capacitor-circuit">
-     Example 4.2: Capacitor circuit
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-4-3-signal-modulator">
-     Example 4.3: Signal modulator
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-4-4">
-     Example 4.4
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-4-5">
-     Example 4.5
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-4-6">
-     Example 4.6
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-4-7">
-     Example 4.7
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution">
-       Solution
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   Next time
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Unit 2.4: Systems and Classification of Systems</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subjects-to-be-covered">Subjects to be covered</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-representation">System Representation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deterministic-and-stochastic-systems">Deterministic and Stochastic Systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-time-and-discrete-time-systems">Continuous-Time and Discrete-Time Systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#systems-with-memory-and-without-memory">Systems with Memory and without Memory</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-memoryless-system">A memoryless system</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-system-with-memory">A system with memory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#causal-and-non-causal-systems">Causal and Non-Causal Systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-systems-and-nonlinear-systems">Linear Systems and Nonlinear Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-linear-systems">Properties of Linear Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#additivity">1. Additivity</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#homogeneity-or-scaling">2. Homogeneity (or <em>Scaling</em>)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nonlinear-systems">Nonlinear systems</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#superposition-property">Superposition property</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-linear-systems">Example linear systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-nonlinear-systems">Example nonlinear systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-input-property">Zero input property</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-invariant-and-time-varying-systems">Time-Invariant and Time-Varying Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-varying-system">Time-varying system</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-for-time-invariance">Testing for time-invariance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-time-invariant-systems">Linear Time-Invariant Systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stable-systems">Stable Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unstable-systems">Unstable systems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback-systems">Feedback Systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-4">Examples 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-1-rc-circuit">Example 4.1: RC Circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-2-capacitor-circuit">Example 4.2: Capacitor circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-3-signal-modulator">Example 4.3: Signal modulator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-4">Example 4.4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-5">Example 4.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-6">Example 4.6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-7">Example 4.7</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="unit-2-4-systems-and-classification-of-systems">
-<h1>Unit 2.4: Systems and Classification of Systems<a class="headerlink" href="#unit-2-4-systems-and-classification-of-systems" title="Permalink to this headline">#</a></h1>
+<h1>Unit 2.4: Systems and Classification of Systems<a class="headerlink" href="#unit-2-4-systems-and-classification-of-systems" title="Permalink to this heading">#</a></h1>
 <p>This section is based on Section 1.5 of <span id="id1">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/signals_and_systems/systems">cpjobling.github.io/eg-150-textbook/signals_and_systems/systems</a></p>
 <p><img alt="QR Code" src="../../_images/qrcode_unit2.4.png" /></p>
 <section id="subjects-to-be-covered">
-<h2>Subjects to be covered<a class="headerlink" href="#subjects-to-be-covered" title="Permalink to this headline">#</a></h2>
+<h2>Subjects to be covered<a class="headerlink" href="#subjects-to-be-covered" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#system-representation"><span class="std std-ref">System Representation</span></a></p></li>
 <li><p><a class="reference internal" href="#deterministic-and-stochastic-systems"><span class="std std-ref">Deterministic and Stochastic Systems</span></a></p></li>
@@ -1080,7 +526,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="system-representation">
-<span id="id2"></span><h2>System Representation<a class="headerlink" href="#system-representation" title="Permalink to this headline">#</a></h2>
+<span id="id2"></span><h2>System Representation<a class="headerlink" href="#system-representation" title="Permalink to this heading">#</a></h2>
 <p>A <em>system</em> is a mathematical model of a physical process that relates the <em>input</em> (or <em>excitation</em>) signal to the <em>output</em> (or <em>response</em>) signal.</p>
 <p>Let <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> be the input and output signals, respectively, of a system. Then the system is viewed as a <em>transformation</em> (or <em>mapping</em>) of <span class="math notranslate nohighlight">\(x\)</span> into <span class="math notranslate nohighlight">\(y\)</span>. The transformation is represented by the mathematical notation</p>
 <div class="math notranslate nohighlight">
@@ -1096,12 +542,12 @@ title="Print to PDF"
 </figure>
 </section>
 <section id="deterministic-and-stochastic-systems">
-<span id="id3"></span><h2>Deterministic and Stochastic Systems<a class="headerlink" href="#deterministic-and-stochastic-systems" title="Permalink to this headline">#</a></h2>
+<span id="id3"></span><h2>Deterministic and Stochastic Systems<a class="headerlink" href="#deterministic-and-stochastic-systems" title="Permalink to this heading">#</a></h2>
 <p>If the input and output signals <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are deterministic signals, then the system is called a <em>deterministic</em> system.</p>
 <p>If the input and output signals <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are random signals, then the system is called a <em>stochastic</em> system.</p>
 </section>
 <section id="continuous-time-and-discrete-time-systems">
-<span id="id4"></span><h2>Continuous-Time and Discrete-Time Systems<a class="headerlink" href="#continuous-time-and-discrete-time-systems" title="Permalink to this headline">#</a></h2>
+<span id="id4"></span><h2>Continuous-Time and Discrete-Time Systems<a class="headerlink" href="#continuous-time-and-discrete-time-systems" title="Permalink to this heading">#</a></h2>
 <p>If the input and output signals  𝑥  and  𝑦  are continuous-time signals, then the system is called a <em>continuous-time system</em> (<a class="reference internal" href="#fig-ct-n-dt-system"><span class="std std-numref">Fig. 26</span></a>(a)).</p>
 <p>If the input and output signals  𝑥  and  𝑦  are discrete-time signals or sequences, then the system is called a <em>discrete-time system</em> (<a class="reference internal" href="#fig-ct-n-dt-system"><span class="std std-numref">Fig. 26</span></a>(b)).</p>
 <figure class="align-default" id="fig-ct-n-dt-system">
@@ -1113,11 +559,11 @@ title="Print to PDF"
 <p>Note that in a continuous-time system the input <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(y(t)\)</span> are often expressed as a <em>differential equation</em> (see <a class="reference internal" href="#worked-examples-4"><span class="std std-ref">Examples 4</span></a>) and in a discrete-time system <span class="math notranslate nohighlight">\(x[n]\)</span> and <span class="math notranslate nohighlight">\(y[n]\)</span> are often expressed by a <em>difference equation</em>.</p>
 </section>
 <section id="systems-with-memory-and-without-memory">
-<span id="id5"></span><h2>Systems with Memory and without Memory<a class="headerlink" href="#systems-with-memory-and-without-memory" title="Permalink to this headline">#</a></h2>
+<span id="id5"></span><h2>Systems with Memory and without Memory<a class="headerlink" href="#systems-with-memory-and-without-memory" title="Permalink to this heading">#</a></h2>
 <p>A system is said to be <em>memoryless</em> if the output at any time only depends on the input at the same time.</p>
 <p>Otherwise the system is said to have <em>memory</em>.</p>
 <section id="a-memoryless-system">
-<h3>A memoryless system<a class="headerlink" href="#a-memoryless-system" title="Permalink to this headline">#</a></h3>
+<h3>A memoryless system<a class="headerlink" href="#a-memoryless-system" title="Permalink to this heading">#</a></h3>
 <p>An example of a memoryless system is a resistor <span class="math notranslate nohighlight">\(R\)</span> with and the input <span class="math notranslate nohighlight">\(x(t)\)</span> taken as the current and the voltage taken as the output <span class="math notranslate nohighlight">\(y(t)\)</span>.</p>
 <figure class="align-default" id="fig-resistor">
 <a class="reference internal image-reference" href="../../_images/resistor.png"><img alt="A resistor is an example of a memoryless system" src="../../_images/resistor.png" style="width: 50%;" /></a>
@@ -1130,7 +576,7 @@ title="Print to PDF"
 \[y(t) = Rx(t)\]</div>
 </section>
 <section id="a-system-with-memory">
-<h3>A system with memory<a class="headerlink" href="#a-system-with-memory" title="Permalink to this headline">#</a></h3>
+<h3>A system with memory<a class="headerlink" href="#a-system-with-memory" title="Permalink to this heading">#</a></h3>
 <p>An example of a system with memory is a capacitor <span class="math notranslate nohighlight">\(C\)</span> with and the current as the input <span class="math notranslate nohighlight">\(x(t)\)</span> taken as the current and the voltage as the output <span class="math notranslate nohighlight">\(y(t)\)</span>.</p>
 <figure class="align-default" id="fig-capacitor">
 <a class="reference internal image-reference" href="../../_images/capacitor.png"><img alt="A capacitor is an example of a system with memory" src="../../_images/capacitor.png" style="width: 50%;" /></a>
@@ -1144,7 +590,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="causal-and-non-causal-systems">
-<span id="id6"></span><h2>Causal and Non-Causal Systems<a class="headerlink" href="#causal-and-non-causal-systems" title="Permalink to this headline">#</a></h2>
+<span id="id6"></span><h2>Causal and Non-Causal Systems<a class="headerlink" href="#causal-and-non-causal-systems" title="Permalink to this heading">#</a></h2>
 <p>A system is called <em>causal</em> if its output at the present time depends only on the present and/or past values of the input.</p>
 <p>Thus, in a causal system, it is not possible to obtain an output before an input is applied to the system.</p>
 <p>A system is called <em>noncausal</em> (or <em>anticipative</em>) if its output at the present time depends on future values of the input.</p>
@@ -1154,12 +600,12 @@ title="Print to PDF"
 <p>Note that all memoryless systems are causal but not all <em>vice versa</em>.</p>
 </section>
 <section id="linear-systems-and-nonlinear-systems">
-<span id="id7"></span><h2>Linear Systems and Nonlinear Systems<a class="headerlink" href="#linear-systems-and-nonlinear-systems" title="Permalink to this headline">#</a></h2>
+<span id="id7"></span><h2>Linear Systems and Nonlinear Systems<a class="headerlink" href="#linear-systems-and-nonlinear-systems" title="Permalink to this heading">#</a></h2>
 <p>If an operator <span class="math notranslate nohighlight">\(\mathbf{T}\)</span> satisfies the following two conditions, then <span class="math notranslate nohighlight">\(\mathbf{T}\)</span> is called a <em>linear operator</em> and the system represented by the linear operator <span class="math notranslate nohighlight">\(\mathbf{T}\)</span> is called a <em>linear system</em>:</p>
 <section id="properties-of-linear-systems">
-<h3>Properties of Linear Systems<a class="headerlink" href="#properties-of-linear-systems" title="Permalink to this headline">#</a></h3>
+<h3>Properties of Linear Systems<a class="headerlink" href="#properties-of-linear-systems" title="Permalink to this heading">#</a></h3>
 <section id="additivity">
-<h4>1. Additivity<a class="headerlink" href="#additivity" title="Permalink to this headline">#</a></h4>
+<h4>1. Additivity<a class="headerlink" href="#additivity" title="Permalink to this heading">#</a></h4>
 <p>Given that <span class="math notranslate nohighlight">\(\mathbf{T}\left\{x_1\right\} = y_1\)</span> and  <span class="math notranslate nohighlight">\(\mathbf{T}\left\{x_2\right\} = y_2\)</span>,</p>
 <p>then</p>
 <div class="math notranslate nohighlight">
@@ -1167,29 +613,29 @@ title="Print to PDF"
 <p>for any signals <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span>.</p>
 </section>
 <section id="homogeneity-or-scaling">
-<h4>2. Homogeneity (or <em>Scaling</em>)<a class="headerlink" href="#homogeneity-or-scaling" title="Permalink to this headline">#</a></h4>
+<h4>2. Homogeneity (or <em>Scaling</em>)<a class="headerlink" href="#homogeneity-or-scaling" title="Permalink to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
 \[\mathbf{T}\left\{\alpha x\right\} = \alpha y\]</div>
 <p>for any signals <span class="math notranslate nohighlight">\(x\)</span> and any scalar <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
 </section>
 <section id="nonlinear-systems">
-<h4>Nonlinear systems<a class="headerlink" href="#nonlinear-systems" title="Permalink to this headline">#</a></h4>
+<h4>Nonlinear systems<a class="headerlink" href="#nonlinear-systems" title="Permalink to this heading">#</a></h4>
 <p>Any system that does not satisfy the additivity and homogeneity conditions is classified as a <em>nonlinear system</em>.</p>
 </section>
 </section>
 <section id="superposition-property">
-<h3>Superposition property<a class="headerlink" href="#superposition-property" title="Permalink to this headline">#</a></h3>
+<h3>Superposition property<a class="headerlink" href="#superposition-property" title="Permalink to this heading">#</a></h3>
 <p>The additivity and homogeneity conditions can combined in a single condition (known as the <em>superposition property</em>) as</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{T}\left\{\alpha_1 x_1 + \alpha_2 x_2 \right\} = \alpha_1 y_1 + \alpha_2 y_2\]</div>
 <p>where <span class="math notranslate nohighlight">\(\alpha_1\)</span> and <span class="math notranslate nohighlight">\(\alpha_2\)</span> are arbitrary scalars.</p>
 </section>
 <section id="example-linear-systems">
-<h3>Example linear systems<a class="headerlink" href="#example-linear-systems" title="Permalink to this headline">#</a></h3>
+<h3>Example linear systems<a class="headerlink" href="#example-linear-systems" title="Permalink to this heading">#</a></h3>
 <p>Examples of linear systems are the resistor and capacitor discussed earlier.</p>
 </section>
 <section id="example-nonlinear-systems">
-<h3>Example nonlinear systems<a class="headerlink" href="#example-nonlinear-systems" title="Permalink to this headline">#</a></h3>
+<h3>Example nonlinear systems<a class="headerlink" href="#example-nonlinear-systems" title="Permalink to this heading">#</a></h3>
 <p>Examples of nonlinear systems are</p>
 <div class="math notranslate nohighlight">
 \[y = x^2\]</div>
@@ -1197,33 +643,33 @@ title="Print to PDF"
 \[y = \cos x\]</div>
 </section>
 <section id="zero-input-property">
-<h3>Zero input property<a class="headerlink" href="#zero-input-property" title="Permalink to this headline">#</a></h3>
+<h3>Zero input property<a class="headerlink" href="#zero-input-property" title="Permalink to this heading">#</a></h3>
 <p>Note that a consequence of the homegenity (or scaling) property of linear systems is that a <em>zero input yields a zero output</em>. This follows readilty by setting <span class="math notranslate nohighlight">\(\alpha = 0\)</span> in the equation <span class="math notranslate nohighlight">\(\mathbf{T}\left\{\alpha x\right\} = \alpha y\)</span>. This is another important property of linear systems.</p>
 </section>
 </section>
 <section id="time-invariant-and-time-varying-systems">
-<span id="id8"></span><h2>Time-Invariant and Time-Varying Systems<a class="headerlink" href="#time-invariant-and-time-varying-systems" title="Permalink to this headline">#</a></h2>
+<span id="id8"></span><h2>Time-Invariant and Time-Varying Systems<a class="headerlink" href="#time-invariant-and-time-varying-systems" title="Permalink to this heading">#</a></h2>
 <p>A system is called <em>time-invariant</em> if a time-shift (delay or advance) in the input signal causes the same time-shift in the output signal.</p>
 <p>Thus for a continuous-time system, the system is time-invariant if</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{T}\left\{x(t - \tau)\right\}=y(t - \tau)\]</div>
 <p>for any real value of <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
 <section id="time-varying-system">
-<h3>Time-varying system<a class="headerlink" href="#time-varying-system" title="Permalink to this headline">#</a></h3>
+<h3>Time-varying system<a class="headerlink" href="#time-varying-system" title="Permalink to this heading">#</a></h3>
 <p>A system that does not satisfy the equation <span class="math notranslate nohighlight">\(\mathbf{T}\left\{x(t - \tau)\right\}=y(t - \tau)\)</span> is called a <em>time-varying system</em>.</p>
 </section>
 <section id="testing-for-time-invariance">
-<h3>Testing for time-invariance<a class="headerlink" href="#testing-for-time-invariance" title="Permalink to this headline">#</a></h3>
+<h3>Testing for time-invariance<a class="headerlink" href="#testing-for-time-invariance" title="Permalink to this heading">#</a></h3>
 <p>To check for time invariance, we can compare the time-shifted output with the output produced by the time-shifted input (See <a class="reference internal" href="#ex4-2"><span class="std std-ref">Example 4.2: Capacitor circuit</span></a> and <a class="reference internal" href="#ex4-3"><span class="std std-ref">Example 4.3: Signal modulator</span></a>).</p>
 </section>
 </section>
 <section id="linear-time-invariant-systems">
-<span id="id9"></span><h2>Linear Time-Invariant Systems<a class="headerlink" href="#linear-time-invariant-systems" title="Permalink to this headline">#</a></h2>
+<span id="id9"></span><h2>Linear Time-Invariant Systems<a class="headerlink" href="#linear-time-invariant-systems" title="Permalink to this heading">#</a></h2>
 <p>If a system is linear and also time-invariant it is called a <em>linear time-invariant</em> (LTI) system.</p>
 <p>All ths systems analysed in in the rest of the module and in <strong>EG-247 Digital Signal Processing</strong> and <strong>EG-243 Control Systems</strong> next year will be LTI systems.</p>
 </section>
 <section id="stable-systems">
-<span id="id10"></span><h2>Stable Systems<a class="headerlink" href="#stable-systems" title="Permalink to this headline">#</a></h2>
+<span id="id10"></span><h2>Stable Systems<a class="headerlink" href="#stable-systems" title="Permalink to this heading">#</a></h2>
 <p>A system is <em>bounded-input/bounded-output</em> (BIBO) <em>stable</em> if for any bounded input signal <span class="math notranslate nohighlight">\(x\)</span> defined by</p>
 <div class="math notranslate nohighlight">
 \[|x|\le k_1\]</div>
@@ -1232,7 +678,7 @@ title="Print to PDF"
 \[|y|\le k_2\]</div>
 <p>where <span class="math notranslate nohighlight">\(k_1\)</span> and <span class="math notranslate nohighlight">\(k_2\)</span> are finite real constants.</p>
 <section id="unstable-systems">
-<h3>Unstable systems<a class="headerlink" href="#unstable-systems" title="Permalink to this headline">#</a></h3>
+<h3>Unstable systems<a class="headerlink" href="#unstable-systems" title="Permalink to this heading">#</a></h3>
 <p>An <em>unstable</em> system is one in which not all bounded inputs lead to a bounded output.</p>
 <p>For example, consider the system where output</p>
 <div class="math notranslate nohighlight">
@@ -1242,7 +688,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="feedback-systems">
-<span id="id11"></span><h2>Feedback Systems<a class="headerlink" href="#feedback-systems" title="Permalink to this headline">#</a></h2>
+<span id="id11"></span><h2>Feedback Systems<a class="headerlink" href="#feedback-systems" title="Permalink to this heading">#</a></h2>
 <p>A special class of systems of great importance consists of systems having <em>feedback</em>.</p>
 <p>In a <em>feedback system</em>, a portion of the output signal is fed back and added to the input as shown in <a class="reference internal" href="#fig-feedback"><span class="std std-numref">Fig. 29</span></a>.</p>
 <figure class="align-default" id="fig-feedback">
@@ -1254,13 +700,13 @@ title="Print to PDF"
 <p>You will see examples of systems with feedback when you study op-amp circuits in <strong>EG-152 Practical Electronics</strong>, the simple closed-loop systems to be studied in <strong>EG-142 Instrumentation and Control</strong>.  Feedback, and its impact on system stability, is also the basis of control theory to be studied next year in <strong>EG-243 Control Systems</strong>.</p>
 </section>
 <section id="examples-4">
-<span id="worked-examples-4"></span><h2>Examples 4<a class="headerlink" href="#examples-4" title="Permalink to this headline">#</a></h2>
+<span id="worked-examples-4"></span><h2>Examples 4<a class="headerlink" href="#examples-4" title="Permalink to this heading">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
 </div>
 <section id="example-4-1-rc-circuit">
-<span id="ex4-1"></span><h3>Example 4.1: RC Circuit<a class="headerlink" href="#example-4-1-rc-circuit" title="Permalink to this headline">#</a></h3>
+<span id="ex4-1"></span><h3>Example 4.1: RC Circuit<a class="headerlink" href="#example-4-1-rc-circuit" title="Permalink to this heading">#</a></h3>
 <p>Consider the RC circuit shown in <a class="reference internal" href="#fig-rc-circuit"><span class="std std-numref">Fig. 30</span></a>. Find the relationship between the input <span class="math notranslate nohighlight">\(x(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t)\)</span></p>
 <p>(a) If <span class="math notranslate nohighlight">\(x(t) = v_s(t)\)</span> and <span class="math notranslate nohighlight">\(y(t) = v_c(t)\)</span>.</p>
 <p>(b) If <span class="math notranslate nohighlight">\(x(t) = v_s(t)\)</span> and <span class="math notranslate nohighlight">\(y(t) = i(t)\)</span>.</p>
@@ -1273,7 +719,7 @@ title="Print to PDF"
 <p>For the answer, refer to the lecture recording or see solved problem 1.32 in <span id="id12">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-4-2-capacitor-circuit">
-<span id="ex4-2"></span><h3>Example 4.2: Capacitor circuit<a class="headerlink" href="#example-4-2-capacitor-circuit" title="Permalink to this headline">#</a></h3>
+<span id="ex4-2"></span><h3>Example 4.2: Capacitor circuit<a class="headerlink" href="#example-4-2-capacitor-circuit" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
@@ -1290,7 +736,7 @@ title="Print to PDF"
 <p>For the answer, refer to the lecture recording or see solved problem 1.33 in <span id="id13">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-4-3-signal-modulator">
-<span id="ex4-3"></span><h3>Example 4.3: Signal modulator<a class="headerlink" href="#example-4-3-signal-modulator" title="Permalink to this headline">#</a></h3>
+<span id="ex4-3"></span><h3>Example 4.3: Signal modulator<a class="headerlink" href="#example-4-3-signal-modulator" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
@@ -1305,7 +751,7 @@ title="Print to PDF"
 <p>For the answer, refer to the lecture recording or see solved problem 1.34 in <span id="id14">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-4-4">
-<span id="ex4-4"></span><h3>Example 4.4<a class="headerlink" href="#example-4-4" title="Permalink to this headline">#</a></h3>
+<span id="ex4-4"></span><h3>Example 4.4<a class="headerlink" href="#example-4-4" title="Permalink to this heading">#</a></h3>
 <p>A system has the input-output relationship given by</p>
 <div class="math notranslate nohighlight">
 \[y = \mathbf{T}\left\{x\right\} = x^2\]</div>
@@ -1313,7 +759,7 @@ title="Print to PDF"
 <p>For the answer, refer to the lecture recording or see solved problem 1.35 in <span id="id15">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-4-5">
-<span id="ex4-5"></span><h3>Example 4.5<a class="headerlink" href="#example-4-5" title="Permalink to this headline">#</a></h3>
+<span id="ex4-5"></span><h3>Example 4.5<a class="headerlink" href="#example-4-5" title="Permalink to this heading">#</a></h3>
 <p>Consider the system whose input-output relationship is given by the linear equation</p>
 <div class="math notranslate nohighlight">
 \[y = ax + b\]</div>
@@ -1321,14 +767,14 @@ title="Print to PDF"
 <p>For the answer, refer to the lecture recording or see solved problem 1.40 in <span id="id16">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-4-6">
-<span id="ex4-6"></span><h3>Example 4.6<a class="headerlink" href="#example-4-6" title="Permalink to this headline">#</a></h3>
+<span id="ex4-6"></span><h3>Example 4.6<a class="headerlink" href="#example-4-6" title="Permalink to this heading">#</a></h3>
 <p>(a) Show that the causality for a continuous-time linear system is equivalent to the following statement: For any time <span class="math notranslate nohighlight">\(t_0\)</span> and any input <span class="math notranslate nohighlight">\(x(t)\)</span> with <span class="math notranslate nohighlight">\(x(t) = 0\)</span> for <span class="math notranslate nohighlight">\(t \le t_0\)</span>, the output <span class="math notranslate nohighlight">\(y(t)\)</span> is zero for <span class="math notranslate nohighlight">\(t \le t_0\)</span>.</p>
 <p>(b) Find a nonlinear system that is causal but does not satisfy this condition.</p>
 <p>(c) Find a nonlinear system that satisfies this condition but is not causal.</p>
 <p>For the answer, refer to the lecture recording or see solved problem 1.43 in <span id="id17">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-4-7">
-<span id="ex4-7"></span><h3>Example 4.7<a class="headerlink" href="#example-4-7" title="Permalink to this headline">#</a></h3>
+<span id="ex4-7"></span><h3>Example 4.7<a class="headerlink" href="#example-4-7" title="Permalink to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(\mathbf{T}\)</span> represent a continuous-time LTI system. Then show that</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{T}\left\{e^{st}\right\}= \lambda e^{st}\]</div>
@@ -1338,7 +784,7 @@ title="Print to PDF"
 <p>The solution to this problem is part of a journey that leads us from continuous-time LTI systems to the Laplace transform. I have therefore included the solution in full.</p>
 </div>
 <section id="solution">
-<h4>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h4>
+<h4>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h4>
 <p>Let <span class="math notranslate nohighlight">\(y(t)\)</span> be the output of the system with input <span class="math notranslate nohighlight">\(x(t)=e^{st}\)</span>. Then</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{T}\left\{e^{st}\right\} = y(t)\]</div>
@@ -1365,7 +811,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p>In this lecture we have started our look at systems and the classification of systems.</p>
 <p>In particular we have looked at</p>
 <ul class="simple">
@@ -1413,13 +859,13 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="next-time">
-<h2>Next time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
+<h2>Next time<a class="headerlink" href="#next-time" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../lti_systems/lti2.html#lti-systems"><span class="std std-ref">Unit 3.2: Properties and Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id18">
 <dl class="citation">
 <dt class="label" id="id28"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id12">2</a>,<a href="#id13">3</a>,<a href="#id14">4</a>,<a href="#id15">5</a>,<a href="#id16">6</a>,<a href="#id17">7</a>)</span></dt>
@@ -1442,7 +888,7 @@ title="Print to PDF"
             mode: "matlab"
         },
         kernelOptions: {
-            kernelName: "matlab",
+            name: "matlab",
             path: "./signals_and_systems/systems"
         },
         predefinedOutput: true
@@ -1450,39 +896,138 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'matlab'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../elementary_signals/examples3.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Examples 3 - Elementary Signals</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../elementary_signals/examples3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Examples 3 - Elementary Signals</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../../lti_systems/index.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../../lti_systems/index.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Unit 3: Linear Time-Invariant Systems</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subjects-to-be-covered">Subjects to be covered</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-representation">System Representation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deterministic-and-stochastic-systems">Deterministic and Stochastic Systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-time-and-discrete-time-systems">Continuous-Time and Discrete-Time Systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#systems-with-memory-and-without-memory">Systems with Memory and without Memory</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-memoryless-system">A memoryless system</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-system-with-memory">A system with memory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#causal-and-non-causal-systems">Causal and Non-Causal Systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-systems-and-nonlinear-systems">Linear Systems and Nonlinear Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-linear-systems">Properties of Linear Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#additivity">1. Additivity</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#homogeneity-or-scaling">2. Homogeneity (or <em>Scaling</em>)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nonlinear-systems">Nonlinear systems</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#superposition-property">Superposition property</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-linear-systems">Example linear systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-nonlinear-systems">Example nonlinear systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-input-property">Zero input property</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-invariant-and-time-varying-systems">Time-Invariant and Time-Varying Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-varying-system">Time-varying system</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-for-time-invariance">Testing for time-invariance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-time-invariant-systems">Linear Time-Invariant Systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stable-systems">Stable Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unstable-systems">Unstable systems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback-systems">Feedback Systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-4">Examples 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-1-rc-circuit">Example 4.1: RC Circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-2-capacitor-circuit">Example 4.2: Capacitor circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-3-signal-modulator">Example 4.3: Signal modulator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-4">Example 4.4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-5">Example 4.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-6">Example 4.6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4-7">Example 4.7</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Dr Chris P. Jobling<br/>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Chris P. Jobling
+</p>
+
+  </div>
   
-      &copy; Copyright Swansea University (2023).<br/>
-    <div class="extra_footer">
-      This page was created by 
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Swansea University (2023).
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  This page was created by 
 <a href="https://www.swansea.ac.uk/staff/c.p.jobling/" />
   Dr Chris P. Jobling
 </a> 
@@ -1491,20 +1036,22 @@ for
   Swansea University
 </a>.
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
 </div>
+  </div>
+  
+</div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

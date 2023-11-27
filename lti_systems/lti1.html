@@ -1,49 +1,61 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Unit 3.1: Response of a Continuous-Time LTI System and the Convolution Integral &#8212; EG-150 Signals and Systems</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -53,57 +65,99 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lti_systems/lti1';</script>
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/lti_systems/lti1.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Unit 3.2: Properties and Eigenfunctions of Continuous-Time LTI Systems" href="lti2.html" />
     <link rel="prev" title="Unit 3: Linear Time-Invariant Systems" href="index.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">EG-150 Signals and Systems</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EG-150 Signals and Systems</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -112,987 +166,361 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Online notes
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Online notes</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../introduction/index.html">
-   Unit 1 Introduction
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/intro.html">
-     Unit 1.1 Setting the Scene
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/thecourse.html">
-     Unit 1.2 About this Course
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../introduction/concepts.html">
-     Unit 1.3 Introduction to the Concepts to be Studied
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../signals_and_systems/index.html">
-   Unit 2 Signals and Systems
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../signals_and_systems/signals/index.html">
-     Unit 2.1 Signals and Classification of Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../signals_and_systems/signals/pep_signals.html">
-     Unit 2.2 Periodic, Energy and Power Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../signals_and_systems/elementary_signals/index.html">
-     Unit 2.3 Elementary Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../signals_and_systems/elementary_signals/examples3.html">
-     Examples 3 - Elementary Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../signals_and_systems/systems/index.html">
-     Unit 2.4 Systems and Classification of Systems
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
-   Unit 3 Linear Time-Invariant Systems
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="lti2.html">
-     Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="lti3.html">
-     Unit 3.3 Systems Described by Differential Equations
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../laplace_transform/index.html">
-   Unit 4 Laplace Transforms and their Applications
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../laplace_transform/1/laplace.html">
-     Unit 4.1 The Laplace Transformation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../laplace_transform/2/laplace_of_common_signals.html">
-     Unit 4.2 Laplace Transform of Some Common Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../laplace_transform/3/laplace_properties.html">
-     Unit 4.3 Properties of Laplace Transforms
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../laplace_transform/4/inverse_laplace.html">
-     Unit 4.4 The Inverse Laplace Transform
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../laplace_transform/5/circuit_analysis.html">
-     Unit 4.5 Using Laplace Transforms for Circuit Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../laplace_transform/6/transfer_functions.html">
-     Unit 4.6 Transfer Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../laplace_transform/7/tf_for_circuits.html">
-     Unit 4.7 Transfer Functions for Circuit Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../laplace_transform/8/casas.html">
-     Unit 4.8 Computer-Aided Systems Analysis and Simulation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../fourier_series/index.html">
-   Unit 5 Fourier Series
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fourier_series/1/trig_fseries.html">
-     Unit 5.1: Fourier Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fourier_series/2/exp_fs1.html">
-     Unit 5.2: Exponential Fourier Series
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fourier_series/3/exp_fs2.html">
-     Unit 5.3 Computing Line Spectra
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fourier_series/4/exp_fs3.html">
-     Unit 5.4 Applications of Line Spectra
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../zbib.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Unit 1 Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/intro.html">Unit 1.1 Setting the Scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/thecourse.html">Unit 1.2 About this Course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/concepts.html">Unit 1.3 Introduction to the Concepts to be Studied</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  FAQs
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../FAQS/faq.html">
-   Answers to Frequently Asked Questions
-  </a>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../signals_and_systems/index.html">Unit 2 Signals and Systems</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/signals/index.html">Unit 2.1 Signals and Classification of Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/signals/pep_signals.html">Unit 2.2 Periodic, Energy and Power Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/elementary_signals/index.html">Unit 2.3 Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/elementary_signals/examples3.html">Examples 3 - Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/systems/index.html">Unit 2.4 Systems and Classification of Systems</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendices
- </span>
-</p>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Unit 3 Linear Time-Invariant Systems</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lti2.html">Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lti3.html">Unit 3.3 Systems Described by Differential Equations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../laplace_transform/index.html">Unit 4 Laplace Transforms and their Applications</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../laplace_transform/1/laplace.html">Unit 4.1 The Laplace Transformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../laplace_transform/2/laplace_of_common_signals.html">Unit 4.2 Laplace Transform of Some Common Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../laplace_transform/3/laplace_properties.html">Unit 4.3 Properties of Laplace Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../laplace_transform/4/inverse_laplace.html">Unit 4.4 The Inverse Laplace Transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../laplace_transform/5/circuit_analysis.html">Unit 4.5 Using Laplace Transforms for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../laplace_transform/6/transfer_functions.html">Unit 4.6 Transfer Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../laplace_transform/7/tf_for_circuits.html">Unit 4.7 Transfer Functions for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../laplace_transform/8/casas.html">Unit 4.8 Computer-Aided Systems Analysis and Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../fourier_series/index.html">Unit 5 Fourier Series</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../fourier_series/1/trig_fseries.html">Unit 5.1: Fourier Analysis</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../fourier_series/2/exp_fs1.html">Unit 5.2: Exponential Fourier Series</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../fourier_series/3/exp_fs2.html">Unit 5.3 Computing Line Spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fourier_series/4/exp_fs3.html">Unit 5.4 Applications of Line Spectra</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../zbib.html">Bibliography</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FAQs</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../takeaways.html">
-   Unit takeaways
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../exercises.html">
-   List of Unit Exercises
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../homework.html">
-   List of Homework Problems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../laplace_transform/1/lt_props.html">
-   Properties of the Laplace Transform
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../laplace_transform/1/lt_table.html">
-   Common Laplace Transform Pairs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../setup/polling_setup.html">
-   Set Up In-Class Polling
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../setup/index.html">
-   Setting up your own version of this book
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../setup/jupyter.html">
-     About Jupyter notebooks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../setup/python.html">
-     Installing Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../setup/setup.html">
-     Setting up your Own Jupyter-MATLAB Computing Environment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../setup/matlab_kernel.html">
-     Testing the Jupyter Matlab Kernel
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../setup/advanced-setup.html">
-     Quick Start - For Experienced Users
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../setup/jupyter-book.html">
-     Setting up jupyter-book
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQS/faq.html">Answers to Frequently Asked Questions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../takeaways.html">Unit takeaways</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises.html">List of Unit Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework.html">List of Homework Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../laplace_transform/1/lt_props.html">Properties of the Laplace Transform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../laplace_transform/1/lt_table.html">Common Laplace Transform Pairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup/polling_setup.html">Set Up In-Class Polling</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setup/jupyter.html">About Jupyter notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/python.html">Installing Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/matlab_kernel.html">Testing the Jupyter Matlab Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/jupyter-book.html">Setting up jupyter-book</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by 
- <a href="https://jupyterbook.org">
-  Jupyter Book
-</a>
-
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/lti_systems/lti1.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/lti_systems/lti1.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Flti_systems/lti1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lti_systems/lti1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Flti_systems/lti1.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/lti_systems/lti1.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/lti_systems/lti1.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download notebook file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="../_sources/lti_systems/lti1.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#subjects-to-be-covered">
-   Subjects to be Covered
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-impulse-response">
-   A. Impulse Response
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#b-response-to-an-arbitrary-input">
-   B. Response to an Arbitrary Input
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#c-convolution-integral">
-   C. Convolution Integral
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#d-properties-of-the-convolution-integral">
-   D. Properties of the Convolution Integral
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#commutative">
-     1. Commutative:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#associative">
-     2. Associative:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#distributive">
-     3. Distributive:
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#e-convolution-integral-operation">
-   E. Convolution Integral Operation
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#graphical-evaluation-of-the-convolution-integral">
-     Graphical Evaluation of the Convolution Integral
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#summary-of-steps">
-     Summary of Steps
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example">
-     Example
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#f-step-response">
-   F. Step Response
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#impulse-response-from-step-response">
-     Impulse response from step response
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution">
-   Examples 5: Responses of a Continuous-Time LTI System and Convolution
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-5-1">
-     Example 5.1
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-5-2">
-     Example 5.2
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-5-3">
-     Example 5.3
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-5-4">
-     Example 5.4
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solutions">
-       Solutions
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#a-graphical">
-         (a) Graphical
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#manual-solution">
-         Manual solution
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#matlab-solution">
-         MATLAB Solution
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#b-graphical">
-         (b) Graphical
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id7">
-         Manual solution
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id9">
-         MATLAB Solution
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-5-5">
-     Example 5.5
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id10">
-       Solutions
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id11">
-         Manual solution
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id13">
-         MATLAB Solution
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-5-6">
-     Example 5.6
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id14">
-       Solutions
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#a-analytical">
-         (a) Analytical
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id15">
-         (b) Graphical
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unit-3-1-take-aways">
-     Unit 3.1: Take Aways
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   Next Time
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Unit 3.1: Response of a Continuous-Time LTI System and the Convolution Integral</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#subjects-to-be-covered">
-   Subjects to be Covered
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-impulse-response">
-   A. Impulse Response
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#b-response-to-an-arbitrary-input">
-   B. Response to an Arbitrary Input
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#c-convolution-integral">
-   C. Convolution Integral
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#d-properties-of-the-convolution-integral">
-   D. Properties of the Convolution Integral
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#commutative">
-     1. Commutative:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#associative">
-     2. Associative:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#distributive">
-     3. Distributive:
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#e-convolution-integral-operation">
-   E. Convolution Integral Operation
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#graphical-evaluation-of-the-convolution-integral">
-     Graphical Evaluation of the Convolution Integral
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#summary-of-steps">
-     Summary of Steps
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example">
-     Example
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#f-step-response">
-   F. Step Response
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#impulse-response-from-step-response">
-     Impulse response from step response
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution">
-   Examples 5: Responses of a Continuous-Time LTI System and Convolution
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-5-1">
-     Example 5.1
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-5-2">
-     Example 5.2
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-5-3">
-     Example 5.3
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-5-4">
-     Example 5.4
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solutions">
-       Solutions
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#a-graphical">
-         (a) Graphical
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#manual-solution">
-         Manual solution
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#matlab-solution">
-         MATLAB Solution
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#b-graphical">
-         (b) Graphical
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id7">
-         Manual solution
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id9">
-         MATLAB Solution
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-5-5">
-     Example 5.5
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id10">
-       Solutions
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id11">
-         Manual solution
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id13">
-         MATLAB Solution
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-5-6">
-     Example 5.6
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id14">
-       Solutions
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#a-analytical">
-         (a) Analytical
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id15">
-         (b) Graphical
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unit-3-1-take-aways">
-     Unit 3.1: Take Aways
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   Next Time
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Unit 3.1: Response of a Continuous-Time LTI System and the Convolution Integral</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subjects-to-be-covered">Subjects to be Covered</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-impulse-response">A. Impulse Response</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-response-to-an-arbitrary-input">B. Response to an Arbitrary Input</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-convolution-integral">C. Convolution Integral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-properties-of-the-convolution-integral">D. Properties of the Convolution Integral</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commutative">1. Commutative:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#associative">2. Associative:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distributive">3. Distributive:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#e-convolution-integral-operation">E. Convolution Integral Operation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#graphical-evaluation-of-the-convolution-integral">Graphical Evaluation of the Convolution Integral</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-steps">Summary of Steps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-step-response">F. Step Response</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#impulse-response-from-step-response">Impulse response from step response</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution">Examples 5: Responses of a Continuous-Time LTI System and Convolution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-1">Example 5.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-2">Example 5.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-3">Example 5.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-4">Example 5.4</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">Solutions</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#a-graphical">(a) Graphical</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-solution">Manual solution</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solution">MATLAB Solution</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#b-graphical">(b) Graphical</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Manual solution</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">MATLAB Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-5">Example 5.5</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Solutions</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Manual solution</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">MATLAB Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-6">Example 5.6</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Solutions</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#a-analytical">(a) Analytical</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">(b) Graphical</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-3-1-take-aways">Unit 3.1: Take Aways</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="unit-3-1-response-of-a-continuous-time-lti-system-and-the-convolution-integral">
-<span id="response-of-a-continuous-time-lti-system-and-the-convolution-integral"></span><h1>Unit 3.1: Response of a Continuous-Time LTI System and the Convolution Integral<a class="headerlink" href="#unit-3-1-response-of-a-continuous-time-lti-system-and-the-convolution-integral" title="Permalink to this headline">#</a></h1>
+<span id="response-of-a-continuous-time-lti-system-and-the-convolution-integral"></span><h1>Unit 3.1: Response of a Continuous-Time LTI System and the Convolution Integral<a class="headerlink" href="#unit-3-1-response-of-a-continuous-time-lti-system-and-the-convolution-integral" title="Permalink to this heading">#</a></h1>
 <p>This section is based on Section 2.1 of <span id="id1">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/lti_systems/lti1">cpjobling.github.io/eg-150-textbook/lti_systems/lti1</a></p>
 <p><img alt="QR Code for this lecture" src="../_images/qrcode_lti1.png" /></p>
 <section id="subjects-to-be-covered">
-<h2>Subjects to be Covered<a class="headerlink" href="#subjects-to-be-covered" title="Permalink to this headline">#</a></h2>
+<h2>Subjects to be Covered<a class="headerlink" href="#subjects-to-be-covered" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#impulse-reponse"><span class="std std-ref">A. Impulse Response</span></a></p></li>
 <li><p><a class="reference internal" href="#abitrary-signal-response"><span class="std std-ref">B. Response to an Arbitrary Input</span></a></p></li>
@@ -1104,13 +532,13 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="a-impulse-response">
-<span id="impulse-reponse"></span><h2>A. Impulse Response<a class="headerlink" href="#a-impulse-response" title="Permalink to this headline">#</a></h2>
+<span id="impulse-reponse"></span><h2>A. Impulse Response<a class="headerlink" href="#a-impulse-response" title="Permalink to this heading">#</a></h2>
 <p>The <em>impulse response</em> <span class="math notranslate nohighlight">\(h(t)\)</span> of a continuous-time LTI system (represented by <span class="math notranslate nohighlight">\(\mathbf{T}\)</span>) is defined as the response of the system when the input is <span class="math notranslate nohighlight">\(\delta(t)\)</span>, that is,</p>
 <div class="math notranslate nohighlight">
 \[h(t) = \mathbf{T}\left\{\delta(t)\right\}\]</div>
 </section>
 <section id="b-response-to-an-arbitrary-input">
-<span id="abitrary-signal-response"></span><h2>B. Response to an Arbitrary Input<a class="headerlink" href="#b-response-to-an-arbitrary-input" title="Permalink to this headline">#</a></h2>
+<span id="abitrary-signal-response"></span><h2>B. Response to an Arbitrary Input<a class="headerlink" href="#b-response-to-an-arbitrary-input" title="Permalink to this heading">#</a></h2>
 <p>From the <a class="reference internal" href="../signals_and_systems/elementary_signals/index.html#sifting-property"><span class="std std-ref">Sifting Property</span></a></p>
 <div class="math notranslate nohighlight">
 \[\int_{-\infty}^{\infty}f(t)\delta(t-\alpha)dt=f(\alpha)\]</div>
@@ -1131,7 +559,7 @@ title="Print to PDF"
 <p>This equation indicates that a continuous-time LTI system is completely characterised by its impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>.</p>
 </section>
 <section id="c-convolution-integral">
-<span id="convolution-integral"></span><h2>C. Convolution Integral<a class="headerlink" href="#c-convolution-integral" title="Permalink to this headline">#</a></h2>
+<span id="convolution-integral"></span><h2>C. Convolution Integral<a class="headerlink" href="#c-convolution-integral" title="Permalink to this heading">#</a></h2>
 <p>The equation</p>
 <div class="math notranslate nohighlight">
 \[y(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau\]</div>
@@ -1153,26 +581,26 @@ title="Print to PDF"
 </figure>
 </section>
 <section id="d-properties-of-the-convolution-integral">
-<span id="props-of-con-integral"></span><h2>D. Properties of the Convolution Integral<a class="headerlink" href="#d-properties-of-the-convolution-integral" title="Permalink to this headline">#</a></h2>
+<span id="props-of-con-integral"></span><h2>D. Properties of the Convolution Integral<a class="headerlink" href="#d-properties-of-the-convolution-integral" title="Permalink to this heading">#</a></h2>
 <p>The convolution integral has the following properties.</p>
 <section id="commutative">
-<h3>1. Commutative:<a class="headerlink" href="#commutative" title="Permalink to this headline">#</a></h3>
+<h3>1. Commutative:<a class="headerlink" href="#commutative" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[x(t) * h(t) = h(t) * x(t)\]</div>
 </section>
 <section id="associative">
-<h3>2. Associative:<a class="headerlink" href="#associative" title="Permalink to this headline">#</a></h3>
+<h3>2. Associative:<a class="headerlink" href="#associative" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\left\{x(t) * h_1(t)\right\} * h_2(t) = x(t) * \left\{h_1(t) * h_2(t)\right\}\]</div>
 </section>
 <section id="distributive">
-<h3>3. Distributive:<a class="headerlink" href="#distributive" title="Permalink to this headline">#</a></h3>
+<h3>3. Distributive:<a class="headerlink" href="#distributive" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[x(t)*\left\{h_1(t) + h_2(t)\right\} = x(t)*h_1(t) + x(t)*h_2(t)\]</div>
 </section>
 </section>
 <section id="e-convolution-integral-operation">
-<span id="convolution-operation"></span><h2>E. Convolution Integral Operation<a class="headerlink" href="#e-convolution-integral-operation" title="Permalink to this headline">#</a></h2>
+<span id="convolution-operation"></span><h2>E. Convolution Integral Operation<a class="headerlink" href="#e-convolution-integral-operation" title="Permalink to this heading">#</a></h2>
 <p>Applying the communitative propery of convolution to the convolution integral, we obtain</p>
 <div class="math notranslate nohighlight">
 \[y(t) = h(t) * x(t) = \int_{-\infty}^{\infty}h(\tau)x(t-\tau)\,d\tau\]</div>
@@ -1180,7 +608,7 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau\]</div>
 <section id="graphical-evaluation-of-the-convolution-integral">
-<h3>Graphical Evaluation of the Convolution Integral<a class="headerlink" href="#graphical-evaluation-of-the-convolution-integral" title="Permalink to this headline">#</a></h3>
+<h3>Graphical Evaluation of the Convolution Integral<a class="headerlink" href="#graphical-evaluation-of-the-convolution-integral" title="Permalink to this heading">#</a></h3>
 <p>The convolution integral is most conveniently evaluated by a graphical evaluation. We give three examples (5.4—5.6) which we will demonstrate in class using a <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/25199-graphical-demonstration-of-convolution">graphical visualization tool</a> developed by Teja Muppirala of the Mathworks and updated by Rory Adams.</p>
 <p>The tool: <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/convolution_demo/convolutiondemo.m">convolutiondemo.m</a> (see <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/convolution_demo/license.txt">license.txt</a>).</p>
 <p>We will then work through the examples again in the examples class.</p>
@@ -1219,28 +647,28 @@ In convolutiondemo (line 44)
 </div>
 </section>
 <section id="summary-of-steps">
-<h3>Summary of Steps<a class="headerlink" href="#summary-of-steps" title="Permalink to this headline">#</a></h3>
-<ol class="simple">
+<h3>Summary of Steps<a class="headerlink" href="#summary-of-steps" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
 <li><p>The inpulse response <span class="math notranslate nohighlight">\(h(\tau)\)</span> is time reversed (that is, reflected about the origin) to obtain <span class="math notranslate nohighlight">\(h(-\tau)\)</span> and then shifted by <span class="math notranslate nohighlight">\(t\)</span> to form <span class="math notranslate nohighlight">\(h(t-\tau) = h\left[-(\tau - t)\right]\)</span>, which is a function of <span class="math notranslate nohighlight">\(\tau\)</span> with parameter <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
 </ol>
-<ol class="simple">
+<ol class="arabic simple" start="2">
 <li><p>The signal <span class="math notranslate nohighlight">\(x(\tau)\)</span> and <span class="math notranslate nohighlight">\(h(t-\tau)\)</span> are multiplied together for all values of <span class="math notranslate nohighlight">\(\tau\)</span> with <span class="math notranslate nohighlight">\(t\)</span> fixed at some value.</p></li>
 </ol>
-<ol class="simple">
+<ol class="arabic simple" start="3">
 <li><p>The product <span class="math notranslate nohighlight">\(x(\tau)h(t-\tau)\)</span> is integrated over all <span class="math notranslate nohighlight">\(\tau\)</span> to produce a single output value <span class="math notranslate nohighlight">\(y(t)\)</span>.</p></li>
 </ol>
-<ol class="simple">
+<ol class="arabic simple" start="4">
 <li><p>Steps 1 to 3 are repeated as <span class="math notranslate nohighlight">\(t\)</span> varies over <span class="math notranslate nohighlight">\(-\infty\)</span> to <span class="math notranslate nohighlight">\(\infty\)</span> to produce the entire output <span class="math notranslate nohighlight">\(y(t)\)</span>.</p></li>
 </ol>
 <p>Examples of the above convolution integral operation are given in Examples 5.4 to 5.6.</p>
 </section>
 <section id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h3>
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
 <p>We will do <a class="reference internal" href="#ex5-4"><span class="std std-ref">Example 5.4</span></a> in class</p>
 </section>
 </section>
 <section id="f-step-response">
-<span id="step-response"></span><h2>F. Step Response<a class="headerlink" href="#f-step-response" title="Permalink to this headline">#</a></h2>
+<span id="step-response"></span><h2>F. Step Response<a class="headerlink" href="#f-step-response" title="Permalink to this heading">#</a></h2>
 <p>The <em>step response</em> <span class="math notranslate nohighlight">\(s(t)\)</span> of a continuous-time LTI system (represented by <span class="math notranslate nohighlight">\(\mathbf{T}\)</span>) is defined by the response of the system when the input is <span class="math notranslate nohighlight">\(u_0(t)\)</span>; that is,</p>
 <div class="math notranslate nohighlight">
 \[s(t) = \mathbf{T}\left\{u_0(t)\right\}\]</div>
@@ -1249,7 +677,7 @@ In convolutiondemo (line 44)
 \[s(t) = h(t)*u_0(t) = \int_{-\infty}^{\infty} h(\tau)u_0(t-\tau)\,d\tau = \int_{0}^{t} h(\tau)\,d\tau\]</div>
 <p>Thus the step response <span class="math notranslate nohighlight">\(s(t)\)</span> can be obtained by integrating the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>.</p>
 <section id="impulse-response-from-step-response">
-<h3>Impulse response from step response<a class="headerlink" href="#impulse-response-from-step-response" title="Permalink to this headline">#</a></h3>
+<h3>Impulse response from step response<a class="headerlink" href="#impulse-response-from-step-response" title="Permalink to this heading">#</a></h3>
 <p>Differentiating the step response with respect to <span class="math notranslate nohighlight">\(t\)</span>, we get</p>
 <div class="math notranslate nohighlight">
 \[h(t) = s'(t) = \frac{ds(t)}{dt}\]</div>
@@ -1257,16 +685,16 @@ In convolutiondemo (line 44)
 </section>
 </section>
 <section id="examples-5-responses-of-a-continuous-time-lti-system-and-convolution">
-<span id="id2"></span><h2>Examples 5: Responses of a Continuous-Time LTI System and Convolution<a class="headerlink" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution" title="Permalink to this headline">#</a></h2>
+<span id="id2"></span><h2>Examples 5: Responses of a Continuous-Time LTI System and Convolution<a class="headerlink" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution" title="Permalink to this heading">#</a></h2>
 <section id="example-5-1">
-<span id="ex5-1"></span><h3>Example 5.1<a class="headerlink" href="#example-5-1" title="Permalink to this headline">#</a></h3>
+<span id="ex5-1"></span><h3>Example 5.1<a class="headerlink" href="#example-5-1" title="Permalink to this heading">#</a></h3>
 <p>Verify the following properties of the convolution integral; that is,</p>
 <p>(a) <span class="math notranslate nohighlight">\(x(t)*h(t) = h(t)*x(t)\)</span></p>
 <p>(b) <span class="math notranslate nohighlight">\(\left\{x(t) * h_1(t)\right\} * h_2(t) = x(t)*\left\{h_1(t) * h_2(t)\right\}\)</span></p>
 <p>For the answer, refer to the lecture recording or see solved problem 2.1 in in <span id="id3">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-5-2">
-<span id="ex5-2"></span><h3>Example 5.2<a class="headerlink" href="#example-5-2" title="Permalink to this headline">#</a></h3>
+<span id="ex5-2"></span><h3>Example 5.2<a class="headerlink" href="#example-5-2" title="Permalink to this heading">#</a></h3>
 <p>Show that</p>
 <p>(a) <span class="math notranslate nohighlight">\(x(t) * \delta(t) = x(t)\)</span></p>
 <p>(b) <span class="math notranslate nohighlight">\(x(t) * \delta(t-t_0) = x(t - t_0)\)</span></p>
@@ -1275,14 +703,14 @@ In convolutiondemo (line 44)
 <p>For the answer, refer to the lecture recording or see solved problem 2.2 in in <span id="id4">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-5-3">
-<span id="ex5-3"></span><h3>Example 5.3<a class="headerlink" href="#example-5-3" title="Permalink to this headline">#</a></h3>
+<span id="ex5-3"></span><h3>Example 5.3<a class="headerlink" href="#example-5-3" title="Permalink to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(y(t) = x(t) * h(t)\)</span>. Then show that</p>
 <div class="math notranslate nohighlight">
 \[x(t-t_1)*h(t-t_2) = y(t - t_1 - t_2)\]</div>
 <p>For the answer, refer to the lecture recording or see solved problem 2.3 in in <span id="id5">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-5-4">
-<span id="ex5-4"></span><h3>Example 5.4<a class="headerlink" href="#example-5-4" title="Permalink to this headline">#</a></h3>
+<span id="ex5-4"></span><h3>Example 5.4<a class="headerlink" href="#example-5-4" title="Permalink to this heading">#</a></h3>
 <p>The input <span class="math notranslate nohighlight">\(x(t)\)</span> and the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of a continuous-time LTI system are given by</p>
 <div class="math notranslate nohighlight">
 \[x(t) = u_0(t)\]</div>
@@ -1295,18 +723,18 @@ In convolutiondemo (line 44)
 <div class="math notranslate nohighlight">
 \[y(t) = h(t) * x(t) = \int_{-\infty}^{\infty}h(\tau)x(t-\tau)\,d\tau\]</div>
 <section id="solutions">
-<h4>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h4>
+<h4>Solutions<a class="headerlink" href="#solutions" title="Permalink to this heading">#</a></h4>
 <section id="a-graphical">
-<h5>(a) Graphical<a class="headerlink" href="#a-graphical" title="Permalink to this headline">#</a></h5>
+<h5>(a) Graphical<a class="headerlink" href="#a-graphical" title="Permalink to this heading">#</a></h5>
 <p>Using the <em>convolutiondemo</em> tool chose a value for <span class="math notranslate nohighlight">\(\alpha\)</span>. I will use <span class="math notranslate nohighlight">\(\alpha = 1\)</span>.</p>
 <p>Then set <code class="docutils literal notranslate"><span class="pre">f(t)</span></code>, which represents <span class="math notranslate nohighlight">\(x(t)\)</span>, to <code class="docutils literal notranslate"><span class="pre">heaviside(t)</span></code> and <code class="docutils literal notranslate"><span class="pre">g(t)</span></code>. which represents <span class="math notranslate nohighlight">\(h(t)\)</span> to <code class="docutils literal notranslate"><span class="pre">exp(-1*t)</span></code></p>
 </section>
 <section id="manual-solution">
-<h5>Manual solution<a class="headerlink" href="#manual-solution" title="Permalink to this headline">#</a></h5>
+<h5>Manual solution<a class="headerlink" href="#manual-solution" title="Permalink to this heading">#</a></h5>
 <p>For the manual solution, refer to the lecture recording or see solved problem 2.3 in in <span id="id6">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="matlab-solution">
-<h5>MATLAB Solution<a class="headerlink" href="#matlab-solution" title="Permalink to this headline">#</a></h5>
+<h5>MATLAB Solution<a class="headerlink" href="#matlab-solution" title="Permalink to this heading">#</a></h5>
 <p>We can also use the Symbolic Math Toolbox to solve the problem directly:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1323,7 +751,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_51_0.png" src="../_images/lti1_51_0.png" />
+<img alt="../_images/22f5fe8efe851a468963ad4c07fa07ef12a8c5ba407f836247540093257db1a2.png" src="../_images/22f5fe8efe851a468963ad4c07fa07ef12a8c5ba407f836247540093257db1a2.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the MATLAB function <code class="docutils literal notranslate"><span class="pre">int</span></code> to compute the convolution integral symbolically.</p>
@@ -1362,7 +790,9 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ya(t) =
- 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
@@ -1371,20 +801,20 @@ In convolutiondemo (line 44)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
-<img alt="../_images/lti1_55_4.png" src="../_images/lti1_55_4.png" />
+<img alt="../_images/ad2b39fb894e909ddecd535e90c03b1bc445b9ed84d5de3367b757d32029f44b.png" src="../_images/ad2b39fb894e909ddecd535e90c03b1bc445b9ed84d5de3367b757d32029f44b.png" />
 </div>
 </div>
 </section>
 <section id="b-graphical">
-<h5>(b) Graphical<a class="headerlink" href="#b-graphical" title="Permalink to this headline">#</a></h5>
+<h5>(b) Graphical<a class="headerlink" href="#b-graphical" title="Permalink to this heading">#</a></h5>
 <p>Reverse the settings for <code class="docutils literal notranslate"><span class="pre">f(t)</span></code>and <code class="docutils literal notranslate"><span class="pre">g(t)</span></code> in the <em>convolutiondemo</em> tool.</p>
 </section>
 <section id="id7">
-<h5>Manual solution<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h5>
+<h5>Manual solution<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h5>
 <p>For the manual solution, refer to the lecture recording or see solved problem 2.3 in in <span id="id8">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="id9">
-<h5>MATLAB Solution<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h5>
+<h5>MATLAB Solution<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h5>
 <p>Reverse the arguments to the <code class="docutils literal notranslate"><span class="pre">fplot</span></code> and <code class="docutils literal notranslate"><span class="pre">int</span></code> functions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1396,7 +826,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_59_0.png" src="../_images/lti1_59_0.png" />
+<img alt="../_images/8f5c83e8a825a6c4fddbfae5ebc71464fefb794ec023a288cb86455be0497398.png" src="../_images/8f5c83e8a825a6c4fddbfae5ebc71464fefb794ec023a288cb86455be0497398.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1434,9 +864,7 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>yb(t) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
@@ -1445,7 +873,7 @@ In convolutiondemo (line 44)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
-<img alt="../_images/lti1_62_5.png" src="../_images/lti1_62_5.png" />
+<img alt="../_images/7c5b6a38f242a831a1333a00d382c414772383c6f6dd9d350cb4d8fbb9f2f035.png" src="../_images/7c5b6a38f242a831a1333a00d382c414772383c6f6dd9d350cb4d8fbb9f2f035.png" />
 </div>
 </div>
 <p>Go back to <a class="reference internal" href="#step-response"><span class="std std-ref">F. Step Response</span></a></p>
@@ -1453,7 +881,7 @@ In convolutiondemo (line 44)
 </section>
 </section>
 <section id="example-5-5">
-<span id="ex5-5"></span><h3>Example 5.5<a class="headerlink" href="#example-5-5" title="Permalink to this headline">#</a></h3>
+<span id="ex5-5"></span><h3>Example 5.5<a class="headerlink" href="#example-5-5" title="Permalink to this heading">#</a></h3>
 <p>Compute the output <span class="math notranslate nohighlight">\(y(t)\)</span> for a continuous-time LTI system whose impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> and the input <span class="math notranslate nohighlight">\(x(t)\)</span> are given by</p>
 <div class="math notranslate nohighlight">
 \[h(t) = e^{-\alpha t}u_0(t)\]</div>
@@ -1462,13 +890,13 @@ In convolutiondemo (line 44)
 <div class="math notranslate nohighlight">
 \[\alpha &gt; 0.\]</div>
 <section id="id10">
-<h4>Solutions<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h4>
+<h4>Solutions<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h4>
 <section id="id11">
-<h5>Manual solution<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h5>
+<h5>Manual solution<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h5>
 <p>For the manual solution, refer to the lecture recording or see solved problem 2.3 in in <span id="id12">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="id13">
-<h5>MATLAB Solution<a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h5>
+<h5>MATLAB Solution<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h5>
 <p>We can also use the Symbolic Math Toolbox to solve the problem directly:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1482,7 +910,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_67_0.png" src="../_images/lti1_67_0.png" />
+<img alt="../_images/0ed099d4cf953530564d629c7495063a223e2bfa9e6c30ffd34cc313fe19137e.png" src="../_images/0ed099d4cf953530564d629c7495063a223e2bfa9e6c30ffd34cc313fe19137e.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the convolution integral</p>
@@ -1497,9 +925,7 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>piecewise(0 &lt;= t, exp(-t)/2, t &lt;= 0, exp(t)/2)
@@ -1518,14 +944,14 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_71_0.png" src="../_images/lti1_71_0.png" />
+<img alt="../_images/2bca926e5ae6720849268b052a75d6f1e283be9176fcd975c9c9ad2b68e7cb3c.png" src="../_images/2bca926e5ae6720849268b052a75d6f1e283be9176fcd975c9c9ad2b68e7cb3c.png" />
 </div>
 </div>
 </section>
 </section>
 </section>
 <section id="example-5-6">
-<span id="ex5-6"></span><h3>Example 5.6<a class="headerlink" href="#example-5-6" title="Permalink to this headline">#</a></h3>
+<span id="ex5-6"></span><h3>Example 5.6<a class="headerlink" href="#example-5-6" title="Permalink to this heading">#</a></h3>
 <p>Evaluate <span class="math notranslate nohighlight">\(y(t) = x(t) * h(t)\)</span>, where <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(h(t)\)</span> are shown in <a class="reference internal" href="#fig-ex-5-6"><span class="std std-numref">Fig. 34</span></a>, by an alalytical technique, and (b) by a graphical method.</p>
 <figure class="align-default" id="fig-ex-5-6">
 <a class="reference internal image-reference" href="../_images/ex5_6.png"><img alt="Signal and system for example 5.6" src="../_images/ex5_6.png" style="width: 60%;" /></a>
@@ -1534,9 +960,9 @@ In convolutiondemo (line 44)
 </figcaption>
 </figure>
 <section id="id14">
-<h4>Solutions<a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h4>
+<h4>Solutions<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h4>
 <section id="a-analytical">
-<h5>(a) Analytical<a class="headerlink" href="#a-analytical" title="Permalink to this headline">#</a></h5>
+<h5>(a) Analytical<a class="headerlink" href="#a-analytical" title="Permalink to this heading">#</a></h5>
 <p>We first express <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(h(t)\)</span> in functional form using the unit step (or <em>Heaviside</em> function)</p>
 <div class="math notranslate nohighlight">
 \[x(t) = u_0(t) - u_0(t-3)\]</div>
@@ -1555,7 +981,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_75_0.png" src="../_images/lti1_75_0.png" />
+<img alt="../_images/dc572bb11cc6b368e7d0043f3ae2ca34b6a78851e4cb32f6d67a621a9e29d1cb.png" src="../_images/dc572bb11cc6b368e7d0043f3ae2ca34b6a78851e4cb32f6d67a621a9e29d1cb.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span></p>
@@ -1589,12 +1015,12 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lti1_79_0.png" src="../_images/lti1_79_0.png" />
+<img alt="../_images/347e6a2c7f97382035c532bcdd3500e0a1a456ae085cc06bacc1f4cf566bb86f.png" src="../_images/347e6a2c7f97382035c532bcdd3500e0a1a456ae085cc06bacc1f4cf566bb86f.png" />
 </div>
 </div>
 </section>
 <section id="id15">
-<h5>(b) Graphical<a class="headerlink" href="#id15" title="Permalink to this headline">#</a></h5>
+<h5>(b) Graphical<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h5>
 <p>Since both functions are unity between the limits set by the Heaviside function, graphical solution requires multiple applications of the definate integral</p>
 <div class="math notranslate nohighlight">
 \[\int_{t_0}^{t_1}1\times 1\,d\tau = \int_{t_0}^{t_1}1\,d\tau\]</div>
@@ -1605,7 +1031,7 @@ In convolutiondemo (line 44)
 </section>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p>In this lecture we have looked at</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#abitrary-signal-response"><span class="std std-ref">B. Response to an Arbitrary Input</span></a></p></li>
@@ -1615,7 +1041,7 @@ In convolutiondemo (line 44)
 <li><p><a class="reference internal" href="#step-response"><span class="std std-ref">F. Step Response</span></a></p></li>
 </ul>
 <section id="unit-3-1-take-aways">
-<h3>Unit 3.1: Take Aways<a class="headerlink" href="#unit-3-1-take-aways" title="Permalink to this headline">#</a></h3>
+<h3>Unit 3.1: Take Aways<a class="headerlink" href="#unit-3-1-take-aways" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><em>Impulse response</em>: <span class="math notranslate nohighlight">\(h(t) = \mathbf{T}\left\{\delta(t)\right\}\)</span></p></li>
 <li><p><em>Arbitrary system response</em>: <span class="math notranslate nohighlight">\(y(t) = \int_{-\infty}^{\infty} x(t)h(t-\tau)\,d\tau\)</span></p></li>
@@ -1632,7 +1058,7 @@ In convolutiondemo (line 44)
 </section>
 </section>
 <section id="next-time">
-<h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
+<h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this heading">#</a></h2>
 <p>We continue our introduction to continuous-time LTI system by considering</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="lti2.html#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
@@ -1640,7 +1066,7 @@ In convolutiondemo (line 44)
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id17">
 <dl class="citation">
 <dt class="label" id="id27"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id4">3</a>,<a href="#id5">4</a>,<a href="#id6">5</a>,<a href="#id8">6</a>,<a href="#id12">7</a>,<a href="#id16">8</a>)</span></dt>
@@ -1663,7 +1089,7 @@ In convolutiondemo (line 44)
             mode: "matlab"
         },
         kernelOptions: {
-            kernelName: "matlab",
+            name: "matlab",
             path: "./lti_systems"
         },
         predefinedOutput: true
@@ -1671,39 +1097,148 @@ In convolutiondemo (line 44)
     </script>
     <script>kernelName = 'matlab'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Unit 3: Linear Time-Invariant Systems</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Unit 3: Linear Time-Invariant Systems</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="lti2.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="lti2.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Unit 3.2: Properties and Eigenfunctions of Continuous-Time LTI Systems</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subjects-to-be-covered">Subjects to be Covered</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-impulse-response">A. Impulse Response</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-response-to-an-arbitrary-input">B. Response to an Arbitrary Input</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-convolution-integral">C. Convolution Integral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-properties-of-the-convolution-integral">D. Properties of the Convolution Integral</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commutative">1. Commutative:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#associative">2. Associative:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distributive">3. Distributive:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#e-convolution-integral-operation">E. Convolution Integral Operation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#graphical-evaluation-of-the-convolution-integral">Graphical Evaluation of the Convolution Integral</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-steps">Summary of Steps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-step-response">F. Step Response</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#impulse-response-from-step-response">Impulse response from step response</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution">Examples 5: Responses of a Continuous-Time LTI System and Convolution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-1">Example 5.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-2">Example 5.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-3">Example 5.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-4">Example 5.4</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">Solutions</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#a-graphical">(a) Graphical</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-solution">Manual solution</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solution">MATLAB Solution</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#b-graphical">(b) Graphical</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Manual solution</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">MATLAB Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-5">Example 5.5</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Solutions</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Manual solution</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">MATLAB Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-6">Example 5.6</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Solutions</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#a-analytical">(a) Analytical</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">(b) Graphical</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-3-1-take-aways">Unit 3.1: Take Aways</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Dr Chris P. Jobling<br/>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Chris P. Jobling
+</p>
+
+  </div>
   
-      &copy; Copyright Swansea University (2023).<br/>
-    <div class="extra_footer">
-      This page was created by 
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Swansea University (2023).
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  This page was created by 
 <a href="https://www.swansea.ac.uk/staff/c.p.jobling/" />
   Dr Chris P. Jobling
 </a> 
@@ -1712,20 +1247,22 @@ for
   Swansea University
 </a>.
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
 </div>
+  </div>
+  
+</div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

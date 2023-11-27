@@ -1,49 +1,61 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Unit 5.3: Computing Line Spectra &#8212; EG-150 Signals and Systems</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -53,57 +65,99 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'fourier_series/3/exp_fs2';</script>
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/fourier_series/3/exp_fs2.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Unit 5.4: Applications of Line Spectra" href="../4/exp_fs3.html" />
     <link rel="prev" title="Unit 5.2: Exponential Fourier Series" href="../2/exp_fs1.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">EG-150 Signals and Systems</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EG-150 Signals and Systems</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -112,940 +166,347 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Online notes
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Online notes</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../introduction/index.html">
-   Unit 1 Introduction
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/intro.html">
-     Unit 1.1 Setting the Scene
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/thecourse.html">
-     Unit 1.2 About this Course
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/concepts.html">
-     Unit 1.3 Introduction to the Concepts to be Studied
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../signals_and_systems/index.html">
-   Unit 2 Signals and Systems
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/signals/index.html">
-     Unit 2.1 Signals and Classification of Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/signals/pep_signals.html">
-     Unit 2.2 Periodic, Energy and Power Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/elementary_signals/index.html">
-     Unit 2.3 Elementary Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/elementary_signals/examples3.html">
-     Examples 3 - Elementary Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/systems/index.html">
-     Unit 2.4 Systems and Classification of Systems
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../lti_systems/index.html">
-   Unit 3 Linear Time-Invariant Systems
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti1.html">
-     Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti2.html">
-     Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti3.html">
-     Unit 3.3 Systems Described by Differential Equations
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../laplace_transform/index.html">
-   Unit 4 Laplace Transforms and their Applications
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/1/laplace.html">
-     Unit 4.1 The Laplace Transformation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/2/laplace_of_common_signals.html">
-     Unit 4.2 Laplace Transform of Some Common Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/3/laplace_properties.html">
-     Unit 4.3 Properties of Laplace Transforms
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/4/inverse_laplace.html">
-     Unit 4.4 The Inverse Laplace Transform
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/5/circuit_analysis.html">
-     Unit 4.5 Using Laplace Transforms for Circuit Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/6/transfer_functions.html">
-     Unit 4.6 Transfer Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/7/tf_for_circuits.html">
-     Unit 4.7 Transfer Functions for Circuit Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../laplace_transform/8/casas.html">
-     Unit 4.8 Computer-Aided Systems Analysis and Simulation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../index.html">
-   Unit 5 Fourier Series
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../1/trig_fseries.html">
-     Unit 5.1: Fourier Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2/exp_fs1.html">
-     Unit 5.2: Exponential Fourier Series
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Unit 5.3 Computing Line Spectra
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../4/exp_fs3.html">
-     Unit 5.4 Applications of Line Spectra
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../zbib.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../introduction/index.html">Unit 1 Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/intro.html">Unit 1.1 Setting the Scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/thecourse.html">Unit 1.2 About this Course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/concepts.html">Unit 1.3 Introduction to the Concepts to be Studied</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  FAQs
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../FAQS/faq.html">
-   Answers to Frequently Asked Questions
-  </a>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../signals_and_systems/index.html">Unit 2 Signals and Systems</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/signals/index.html">Unit 2.1 Signals and Classification of Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/signals/pep_signals.html">Unit 2.2 Periodic, Energy and Power Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/elementary_signals/index.html">Unit 2.3 Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/elementary_signals/examples3.html">Examples 3 - Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/systems/index.html">Unit 2.4 Systems and Classification of Systems</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendices
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../lti_systems/index.html">Unit 3 Linear Time-Invariant Systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti1.html">Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti2.html">Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti3.html">Unit 3.3 Systems Described by Differential Equations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../laplace_transform/index.html">Unit 4 Laplace Transforms and their Applications</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/1/laplace.html">Unit 4.1 The Laplace Transformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/2/laplace_of_common_signals.html">Unit 4.2 Laplace Transform of Some Common Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/3/laplace_properties.html">Unit 4.3 Properties of Laplace Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/4/inverse_laplace.html">Unit 4.4 The Inverse Laplace Transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/5/circuit_analysis.html">Unit 4.5 Using Laplace Transforms for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/6/transfer_functions.html">Unit 4.6 Transfer Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/7/tf_for_circuits.html">Unit 4.7 Transfer Functions for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../laplace_transform/8/casas.html">Unit 4.8 Computer-Aided Systems Analysis and Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Unit 5 Fourier Series</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../1/trig_fseries.html">Unit 5.1: Fourier Analysis</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../2/exp_fs1.html">Unit 5.2: Exponential Fourier Series</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit 5.3 Computing Line Spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4/exp_fs3.html">Unit 5.4 Applications of Line Spectra</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../zbib.html">Bibliography</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FAQs</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../takeaways.html">
-   Unit takeaways
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../exercises.html">
-   List of Unit Exercises
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../homework.html">
-   List of Homework Problems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../laplace_transform/1/lt_props.html">
-   Properties of the Laplace Transform
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../laplace_transform/1/lt_table.html">
-   Common Laplace Transform Pairs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../setup/polling_setup.html">
-   Set Up In-Class Polling
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../setup/index.html">
-   Setting up your own version of this book
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/jupyter.html">
-     About Jupyter notebooks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/python.html">
-     Installing Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/setup.html">
-     Setting up your Own Jupyter-MATLAB Computing Environment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/matlab_kernel.html">
-     Testing the Jupyter Matlab Kernel
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/advanced-setup.html">
-     Quick Start - For Experienced Users
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/jupyter-book.html">
-     Setting up jupyter-book
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../FAQS/faq.html">Answers to Frequently Asked Questions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../takeaways.html">Unit takeaways</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises.html">List of Unit Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework.html">List of Homework Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../laplace_transform/1/lt_props.html">Properties of the Laplace Transform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../laplace_transform/1/lt_table.html">Common Laplace Transform Pairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/polling_setup.html">Set Up In-Class Polling</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter.html">About Jupyter notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/python.html">Installing Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/matlab_kernel.html">Testing the Jupyter Matlab Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter-book.html">Setting up jupyter-book</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by 
- <a href="https://jupyterbook.org">
-  Jupyter Book
-</a>
-
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/fourier_series/3/exp_fs2.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/fourier_series/3/exp_fs2.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Ffourier_series/3/exp_fs2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/fourier_series/3/exp_fs2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Ffourier_series/3/exp_fs2.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/fourier_series/3/exp_fs2.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/fourier_series/3/exp_fs2.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download notebook file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="../../_sources/fourier_series/3/exp_fs2.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#agenda">
-   Agenda
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fundamental-frequency">
-   Fundamental frequency
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#harmonic-frequencies">
-   Harmonic frequencies
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#line-spectra">
-   Line Spectra
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#line-spectra-for-exp-fs">
-     Line Spectra for Exp. FS
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#line-spectra-for-trig-fs">
-     Line Spectra for Trig. FS
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-18">
-   Examples 18
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-18-1">
-     Example 18.1
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution">
-       Solution
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#what-do-we-know">
-         What do we know?
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#coefficients-of-the-exponential-fourier-series">
-         Coefficients of the Exponential Fourier Series?
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dc-component">
-       DC Component?
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#harmonic-coefficients">
-       Harmonic coefficients?
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exponential-fourier-series">
-       Exponential Fourier Series?
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-18-2-effect-of-pulse-width-on-frequency-spectra">
-     Example 18.2:  Effect of pulse width on frequency spectra
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#w-2">
-       w = 2
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#w-5">
-       w = 5
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#w-10">
-       w = 10
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#implications">
-       Implications
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-18-3">
-     Example 18.3
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
-       Solution
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#proof">
-       Proof!
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#pulse-with-unit-area">
-       Pulse with unit area
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#new-coefficents">
-       New coefficents
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#spectrum-of-unit-impulse-train">
-       Spectrum of Unit Impulse Train
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#another-interesting-result">
-       Another Interesting Result
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#well">
-       Well?
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unit-5-3-takeways">
-     Unit 5.3: Takeways
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   Next Time
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solution-to-example-18-1">
-   Solution to Example 18.1
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#solution-dc-component">
-     Solution: DC component!
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id20">
-     Harmonic coefficients!
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id21">
-     Exponential Fourier Series!
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Unit 5.3: Computing Line Spectra</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#agenda">
-   Agenda
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fundamental-frequency">
-   Fundamental frequency
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#harmonic-frequencies">
-   Harmonic frequencies
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#line-spectra">
-   Line Spectra
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#line-spectra-for-exp-fs">
-     Line Spectra for Exp. FS
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#line-spectra-for-trig-fs">
-     Line Spectra for Trig. FS
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-18">
-   Examples 18
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-18-1">
-     Example 18.1
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution">
-       Solution
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#what-do-we-know">
-         What do we know?
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#coefficients-of-the-exponential-fourier-series">
-         Coefficients of the Exponential Fourier Series?
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dc-component">
-       DC Component?
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#harmonic-coefficients">
-       Harmonic coefficients?
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exponential-fourier-series">
-       Exponential Fourier Series?
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-18-2-effect-of-pulse-width-on-frequency-spectra">
-     Example 18.2:  Effect of pulse width on frequency spectra
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#w-2">
-       w = 2
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#w-5">
-       w = 5
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#w-10">
-       w = 10
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#implications">
-       Implications
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-18-3">
-     Example 18.3
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
-       Solution
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#proof">
-       Proof!
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#pulse-with-unit-area">
-       Pulse with unit area
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#new-coefficents">
-       New coefficents
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#spectrum-of-unit-impulse-train">
-       Spectrum of Unit Impulse Train
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#another-interesting-result">
-       Another Interesting Result
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#well">
-       Well?
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#unit-5-3-takeways">
-     Unit 5.3: Takeways
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   Next Time
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solution-to-example-18-1">
-   Solution to Example 18.1
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#solution-dc-component">
-     Solution: DC component!
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id20">
-     Harmonic coefficients!
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id21">
-     Exponential Fourier Series!
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Unit 5.3: Computing Line Spectra</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamental-frequency">Fundamental frequency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonic-frequencies">Harmonic frequencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#line-spectra">Line Spectra</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#line-spectra-for-exp-fs">Line Spectra for Exp. FS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#line-spectra-for-trig-fs">Line Spectra for Trig. FS</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-18">Examples 18</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-18-1">Example 18.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#what-do-we-know">What do we know?</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#coefficients-of-the-exponential-fourier-series">Coefficients of the Exponential Fourier Series?</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dc-component">DC Component?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonic-coefficients">Harmonic coefficients?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-fourier-series">Exponential Fourier Series?</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-18-2-effect-of-pulse-width-on-frequency-spectra">Example 18.2:  Effect of pulse width on frequency spectra</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#w-2">w = 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#w-5">w = 5</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#w-10">w = 10</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#implications">Implications</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-18-3">Example 18.3</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Solution</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#proof">Proof!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pulse-with-unit-area">Pulse with unit area</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#new-coefficents">New coefficents</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#spectrum-of-unit-impulse-train">Spectrum of Unit Impulse Train</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#another-interesting-result">Another Interesting Result</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#well">Well?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-5-3-takeways">Unit 5.3: Takeways</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-18-1">Solution to Example 18.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-dc-component">Solution: DC component!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Harmonic coefficients!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Exponential Fourier Series!</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="unit-5-3-computing-line-spectra">
-<span id="unit5-3"></span><h1>Unit 5.3: Computing Line Spectra<a class="headerlink" href="#unit-5-3-computing-line-spectra" title="Permalink to this headline">#</a></h1>
+<span id="unit5-3"></span><h1>Unit 5.3: Computing Line Spectra<a class="headerlink" href="#unit-5-3-computing-line-spectra" title="Permalink to this heading">#</a></h1>
 <p>The preparatory reading for this section is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=247">Chapter 7.10</a> of  <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/fourier_series/3/exp_fs2">cpjobling.github.io/eg-150-textbook/fourier_series/3/exp_fs2</a></p>
 <p><img alt="QR Code for this lecture" src="../../_images/qrcode_unit5_3.png" /></p>
@@ -1053,7 +514,7 @@ title="Print to PDF"
 <p>In the <a class="reference internal" href="../2/exp_fs1.html#unit5-2"><span class="std std-ref">Unit 5.2: Exponential Fourier Series</span></a> we saw that we could exploit the complex exponential <span class="math notranslate nohighlight">\(e^{j\omega t}\)</span> to redefine trigonometric Fourier Series into the Exponential Fourier Series and in so doing we eliminate one integration and at the same time simplify the calculation of the coefficients of the Fourier series.</p>
 <p>In this section we show how the Exponential form of the Fourier Series leads us to the ability to present waveforms as line spectra which simplifies the calculation of power for systems with harmonics and leads in the limit as <span class="math notranslate nohighlight">\(𝑇\)</span> approaches infinity to the Fourier Transform.</p>
 <section id="agenda">
-<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
+<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#fs3-fundamental"><span class="std std-ref">Fundamental frequency</span></a></p></li>
 <li><p><a class="reference internal" href="#fs3-harmonics"><span class="std std-ref">Harmonic frequencies</span></a></p></li>
@@ -1062,13 +523,13 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="fundamental-frequency">
-<span id="fs3-fundamental"></span><h2>Fundamental frequency<a class="headerlink" href="#fundamental-frequency" title="Permalink to this headline">#</a></h2>
+<span id="fs3-fundamental"></span><h2>Fundamental frequency<a class="headerlink" href="#fundamental-frequency" title="Permalink to this heading">#</a></h2>
 <p><em>Fundamental frequency</em> – A periodic signal <span class="math notranslate nohighlight">\(f(t) = f(t + nT),\; n\in \mathbb{Z}\)</span> has period <span class="math notranslate nohighlight">\(T\)</span> s and a fundamental frequency <span class="math notranslate nohighlight">\(f_0 = 1/T\)</span> Hz.</p>
 <p>When used in Fourier series and Fourier transforms, frequencies are expressed as <span class="math notranslate nohighlight">\(\omega\)</span> in radians/second.</p>
 <p>The <strong>fundamental frequency</strong> is <span class="math notranslate nohighlight">\(\omega = \Omega_0 = 2 \pi f_0\)</span> or, equivalently, <span class="math notranslate nohighlight">\(\Omega_0 = 2 \pi /T\)</span> rad/s.</p>
 </section>
 <section id="harmonic-frequencies">
-<span id="fs3-harmonics"></span><h2>Harmonic frequencies<a class="headerlink" href="#harmonic-frequencies" title="Permalink to this headline">#</a></h2>
+<span id="fs3-harmonics"></span><h2>Harmonic frequencies<a class="headerlink" href="#harmonic-frequencies" title="Permalink to this heading">#</a></h2>
 <p><em>Harmonic frquencies</em> (or <em>Harmonics</em>) are simply integer multiples of the fundamental frequency <span class="math notranslate nohighlight">\(\Omega_0\)</span>.</p>
 <ul class="simple">
 <li><p>So the zero-th harmonic is <span class="math notranslate nohighlight">\(\Omega_0 = 0\)</span> rad/s or DC.</p></li>
@@ -1085,11 +546,11 @@ title="Print to PDF"
 <p>In general, we can express the <span class="math notranslate nohighlight">\(k\)</span>-th harmonic as <span class="math notranslate nohighlight">\(k\Omega_0,\; k\in \mathbb{Z}\)</span>.</p>
 </section>
 <section id="line-spectra">
-<span id="fs3-line-spectra"></span><h2>Line Spectra<a class="headerlink" href="#line-spectra" title="Permalink to this headline">#</a></h2>
+<span id="fs3-line-spectra"></span><h2>Line Spectra<a class="headerlink" href="#line-spectra" title="Permalink to this heading">#</a></h2>
 <p>The use of line spectra diagrams is a useful way to visualize the harmonic frequency components of a peiodic signal.</p>
 <p>In MATLAB, the easiest way to plot this is using a <em>stem plot</em> of the lines, representing the Fourier series (FS) coefficients, plotted against <span class="math notranslate nohighlight">\(k\)</span>.</p>
 <section id="line-spectra-for-exp-fs">
-<h3>Line Spectra for Exp. FS<a class="headerlink" href="#line-spectra-for-exp-fs" title="Permalink to this headline">#</a></h3>
+<h3>Line Spectra for Exp. FS<a class="headerlink" href="#line-spectra-for-exp-fs" title="Permalink to this heading">#</a></h3>
 <p>When the Exponential Fourier series are known it is useful to plot the amplitude and phase of the harmonics on a frequency scale.</p>
 <p>This is the spectrum of the Exponential Fourier Series calculated in <a class="reference internal" href="../2/exp_fs1.html#fs2-matlab"><span class="std std-ref">Computing coefficients of Exponential Fourier Series in MATLAB</span></a> is reproduced in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:5.3.1</span></code></p>
 <figure class="align-default" id="fig-5-3-1">
@@ -1100,7 +561,7 @@ title="Print to PDF"
 </figure>
 </section>
 <section id="line-spectra-for-trig-fs">
-<h3>Line Spectra for Trig. FS<a class="headerlink" href="#line-spectra-for-trig-fs" title="Permalink to this headline">#</a></h3>
+<h3>Line Spectra for Trig. FS<a class="headerlink" href="#line-spectra-for-trig-fs" title="Permalink to this heading">#</a></h3>
 <p>If we take the results for the Exponential Fourier Series and gather terms, the amplitudes for the Trig. Fourier Series are given by:</p>
 <div class="math notranslate nohighlight">
 \[a_0 = 2C_0\]</div>
@@ -1118,9 +579,9 @@ title="Print to PDF"
 </section>
 </section>
 <section id="examples-18">
-<span id="examples18"></span><h2>Examples 18<a class="headerlink" href="#examples-18" title="Permalink to this headline">#</a></h2>
+<span id="examples18"></span><h2>Examples 18<a class="headerlink" href="#examples-18" title="Permalink to this heading">#</a></h2>
 <section id="example-18-1">
-<span id="ex-18-1"></span><h3>Example 18.1<a class="headerlink" href="#example-18-1" title="Permalink to this headline">#</a></h3>
+<span id="ex-18-1"></span><h3>Example 18.1<a class="headerlink" href="#example-18-1" title="Permalink to this heading">#</a></h3>
 <p>Compute the exponential Fourier series for the waveform shown below and plot its line spectra.</p>
 <figure class="align-default" id="fig-ex-18-1">
 <a class="reference internal image-reference" href="../../_images/pulse_train.png"><img alt="" src="../../_images/pulse_train.png" style="width: 80%;" /></a>
@@ -1129,10 +590,10 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <section id="solution">
-<h4>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h4>
+<h4>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h4>
 <p>The recurrent rectangular pulse is used extensively in digital communication systems. To determine how faithfully such pulses will be transmitted, it is necessary to know the frequency components.</p>
 <section id="what-do-we-know">
-<h5>What do we know?<a class="headerlink" href="#what-do-we-know" title="Permalink to this headline">#</a></h5>
+<h5>What do we know?<a class="headerlink" href="#what-do-we-know" title="Permalink to this heading">#</a></h5>
 <ul class="simple">
 <li><p>The pulse duration is <span class="math notranslate nohighlight">\(T/w\)</span>.</p></li>
 <li><p>The recurrence interval <span class="math notranslate nohighlight">\(T\)</span> is <span class="math notranslate nohighlight">\(w\)</span> times the pulse duration.</p></li>
@@ -1140,10 +601,10 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="coefficients-of-the-exponential-fourier-series">
-<h5>Coefficients of the Exponential Fourier Series?<a class="headerlink" href="#coefficients-of-the-exponential-fourier-series" title="Permalink to this headline">#</a></h5>
+<h5>Coefficients of the Exponential Fourier Series?<a class="headerlink" href="#coefficients-of-the-exponential-fourier-series" title="Permalink to this heading">#</a></h5>
 <p>Given</p>
 <div class="math notranslate nohighlight">
-\[C_k = \frac{1}{2\pi}\int_{-\pi/w}^{\pi/w} f(\Omega_0 t)e^{-jk(\Omega_0 t)}\,d(\Omega_0 t)\]</div>
+\[C_k = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(\Omega_0 t)e^{-jk(\Omega_0 t)}\,d(\Omega_0 t)\]</div>
 <ul class="simple">
 <li><p>Is the function <strong>even</strong> or <strong>odd</strong>?</p></li>
 <li><p>Does the signal have <strong>half-wave symmetry</strong>?</p></li>
@@ -1170,7 +631,7 @@ title="Print to PDF"
 </pre></section>
 </section>
 <section id="dc-component">
-<h4>DC Component?<a class="headerlink" href="#dc-component" title="Permalink to this headline">#</a></h4>
+<h4>DC Component?<a class="headerlink" href="#dc-component" title="Permalink to this heading">#</a></h4>
 <p>Let <span class="math notranslate nohighlight">\(k = 0\)</span> then perform the integral</p>
 <pre style="border: 2px solid blue">
 
@@ -1190,7 +651,7 @@ title="Print to PDF"
 
 </pre></section>
 <section id="harmonic-coefficients">
-<h4>Harmonic coefficients?<a class="headerlink" href="#harmonic-coefficients" title="Permalink to this headline">#</a></h4>
+<h4>Harmonic coefficients?<a class="headerlink" href="#harmonic-coefficients" title="Permalink to this heading">#</a></h4>
 <p>Integrate for <span class="math notranslate nohighlight">\(k\ne 0\)</span></p>
 <pre style="border: 2px solid blue">
 
@@ -1210,7 +671,7 @@ title="Print to PDF"
 
 </pre></section>
 <section id="exponential-fourier-series">
-<h4>Exponential Fourier Series?<a class="headerlink" href="#exponential-fourier-series" title="Permalink to this headline">#</a></h4>
+<h4>Exponential Fourier Series?<a class="headerlink" href="#exponential-fourier-series" title="Permalink to this heading">#</a></h4>
 <pre style="border: 2px solid blue">
 
 
@@ -1230,7 +691,7 @@ title="Print to PDF"
 </pre></section>
 </section>
 <section id="example-18-2-effect-of-pulse-width-on-frequency-spectra">
-<span id="ex-18-2"></span><h3>Example 18.2:  Effect of pulse width on frequency spectra<a class="headerlink" href="#example-18-2-effect-of-pulse-width-on-frequency-spectra" title="Permalink to this headline">#</a></h3>
+<span id="ex-18-2"></span><h3>Example 18.2:  Effect of pulse width on frequency spectra<a class="headerlink" href="#example-18-2-effect-of-pulse-width-on-frequency-spectra" title="Permalink to this heading">#</a></h3>
 <p>let’s see what effect the duty cycle <span class="math notranslate nohighlight">\(w\)</span> has on the spectra.</p>
 <p>Recall pulse width = <span class="math notranslate nohighlight">\(T/w\)</span> and plot the complex line spectra for pulse with width <span class="math notranslate nohighlight">\(w\)</span> which repeats every <span class="math notranslate nohighlight">\(T\)</span> seconds. We will write a MATLAB function <code class="docutils literal notranslate"><span class="pre">pulse_fs</span></code> to simplify the computation.</p>
 <div class="cell docutils container">
@@ -1269,7 +730,7 @@ title="Print to PDF"
 </div>
 </div>
 <section id="w-2">
-<h4>w = 2<a class="headerlink" href="#w-2" title="Permalink to this headline">#</a></h4>
+<h4>w = 2<a class="headerlink" href="#w-2" title="Permalink to this heading">#</a></h4>
 <p><span class="math notranslate nohighlight">\(\Omega_0 = 1\)</span> rad/s; <span class="math notranslate nohighlight">\(w = 2\)</span>; <span class="math notranslate nohighlight">\(T = 2\pi\)</span> s; <span class="math notranslate nohighlight">\(T/w = \pi\)</span> s.</p>
 <p>Compute Fourier Series</p>
 <div class="cell docutils container">
@@ -1296,18 +757,18 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/exp_fs2_39_0.png" src="../../_images/exp_fs2_39_0.png" />
+<img alt="../../_images/c7a98730bd9c97dcdb0da66d85267f47dcd24e69fddc052bbf33a7846715f0d2.png" src="../../_images/c7a98730bd9c97dcdb0da66d85267f47dcd24e69fddc052bbf33a7846715f0d2.png" />
 </div>
 </div>
 </section>
 <section id="w-5">
-<h4>w = 5<a class="headerlink" href="#w-5" title="Permalink to this headline">#</a></h4>
+<h4>w = 5<a class="headerlink" href="#w-5" title="Permalink to this heading">#</a></h4>
 <p><span class="math notranslate nohighlight">\(\Omega_0 = 1\)</span> rad/s; <span class="math notranslate nohighlight">\(w = 5\)</span>; <span class="math notranslate nohighlight">\(T = 2\pi\)</span> s; <span class="math notranslate nohighlight">\(T/w = \pi\)</span> s.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="p">[</span><span class="n">f</span><span class="p">,</span><span class="n">omega</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">pulse_fs</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="mi">15</span><span class="p">);</span>
 <span class="nb">stem</span><span class="p">(</span><span class="n">omega</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
-<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Line Spectra for pulse with w=5&#39;</span><span class="p">)</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Line Spectra for pulse with w=2&#39;</span><span class="p">)</span>
 <span class="nb">hold</span><span class="w"> </span><span class="n">on</span>
 <span class="n">om</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">1000</span><span class="p">);</span>
 <span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;\Omega_0 [rad/s]&#39;</span><span class="p">)</span>
@@ -1318,12 +779,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/exp_fs2_41_0.png" src="../../_images/exp_fs2_41_0.png" />
+<img alt="../../_images/2c4311c28efffe8260f68c2aa88d573ad9aef82b27b142f620e86b1bac634044.png" src="../../_images/2c4311c28efffe8260f68c2aa88d573ad9aef82b27b142f620e86b1bac634044.png" />
 </div>
 </div>
 </section>
 <section id="w-10">
-<h4>w = 10<a class="headerlink" href="#w-10" title="Permalink to this headline">#</a></h4>
+<h4>w = 10<a class="headerlink" href="#w-10" title="Permalink to this heading">#</a></h4>
 <p><span class="math notranslate nohighlight">\(\Omega_0 = 1\)</span> rad/s; <span class="math notranslate nohighlight">\(w = 10\)</span>; <span class="math notranslate nohighlight">\(T = 2\pi\)</span> s; <span class="math notranslate nohighlight">\(T/w = \pi\)</span> s.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1340,12 +801,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/exp_fs2_43_0.png" src="../../_images/exp_fs2_43_0.png" />
+<img alt="../../_images/a9d95d88bc47ef680032a04e4ecf971a0c5e71aba0d48c5cbd80ea31461fc383.png" src="../../_images/a9d95d88bc47ef680032a04e4ecf971a0c5e71aba0d48c5cbd80ea31461fc383.png" />
 </div>
 </div>
 </section>
 <section id="implications">
-<h4>Implications<a class="headerlink" href="#implications" title="Permalink to this headline">#</a></h4>
+<h4>Implications<a class="headerlink" href="#implications" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>As the width of the pulse <strong>reduces</strong> the width of the freqency spectra needed to fully describe the signal <strong>increases</strong></p></li>
 <li><p>more bandwidth is needed to transmit the pulse.</p></li>
@@ -1357,7 +818,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="example-18-3">
-<h3>Example 18.3<a class="headerlink" href="#example-18-3" title="Permalink to this headline">#</a></h3>
+<h3>Example 18.3<a class="headerlink" href="#example-18-3" title="Permalink to this heading">#</a></h3>
 <p>Use the result of <a class="reference internal" href="#ex-18-1"><span class="std std-ref">Example 18.1</span></a> to compute the exponential Fourier series of the impulse train <span class="math notranslate nohighlight">\(\delta(t\pm 2\pi k)\)</span> shown in {numref}`</p>
 <figure class="align-default" id="fig-ex-18-3">
 <a class="reference internal image-reference" href="../../_images/impulse_train.png"><img alt="An impulse train" src="../../_images/impulse_train.png" style="width: 80%;" /></a>
@@ -1366,7 +827,7 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <section id="id3">
-<h4>Solution<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
+<h4>Solution<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
 <p>To solve this we take the previous result and choose amplitude (height) <span class="math notranslate nohighlight">\(A\)</span> so that area of pulse is unity. Then we let width go to zero while maintaining the area of unity. This creates a train of impulses <span class="math notranslate nohighlight">\(\delta(t\pm 2\pi k)\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[C_k  = \frac{1}{2\pi}\]</div>
@@ -1376,7 +837,7 @@ title="Print to PDF"
 <p>Try it!</p>
 </section>
 <section id="proof">
-<h4>Proof!<a class="headerlink" href="#proof" title="Permalink to this headline">#</a></h4>
+<h4>Proof!<a class="headerlink" href="#proof" title="Permalink to this heading">#</a></h4>
 <p>From the previous result,</p>
 <div class="math notranslate nohighlight">
 \[C_n = \frac{A}{w}.\frac{\sin(k\pi/w)}{k\pi/w}\]</div>
@@ -1388,7 +849,7 @@ title="Print to PDF"
 \[A = \frac{1}{T/w} = \frac{1}{2\pi/w} = \frac{w}{2\pi}.\]</div>
 </section>
 <section id="pulse-with-unit-area">
-<h4>Pulse with unit area<a class="headerlink" href="#pulse-with-unit-area" title="Permalink to this headline">#</a></h4>
+<h4>Pulse with unit area<a class="headerlink" href="#pulse-with-unit-area" title="Permalink to this heading">#</a></h4>
 <p>The area of each pulse is then</p>
 <div class="math notranslate nohighlight">
 \[\frac{2\pi}{w}\times\frac{w}{2\pi} = 1\]</div>
@@ -1401,7 +862,7 @@ title="Print to PDF"
 </figure>
 </section>
 <section id="new-coefficents">
-<h4>New coefficents<a class="headerlink" href="#new-coefficents" title="Permalink to this headline">#</a></h4>
+<h4>New coefficents<a class="headerlink" href="#new-coefficents" title="Permalink to this heading">#</a></h4>
 <p>The coefficients of the Exponential Fourier Series are now:</p>
 <div class="math notranslate nohighlight">
 \[C_k = \frac{w/2\pi}{w}\frac{\sin(k\pi/w)}{k\pi/w} = \frac{1}{2\pi}\frac{\sin(k\pi/w)}{k\pi/w}\]</div>
@@ -1417,7 +878,7 @@ title="Print to PDF"
 \[f(t) = \frac{1}{2\pi}\sum_{k=-\infty}^{\infty} e^{jk\Omega_0}\]</div>
 </section>
 <section id="spectrum-of-unit-impulse-train">
-<h4>Spectrum of Unit Impulse Train<a class="headerlink" href="#spectrum-of-unit-impulse-train" title="Permalink to this headline">#</a></h4>
+<h4>Spectrum of Unit Impulse Train<a class="headerlink" href="#spectrum-of-unit-impulse-train" title="Permalink to this heading">#</a></h4>
 <p>The line spectrum of a sequence of unit impulses <span class="math notranslate nohighlight">\(\delta(t \pm kT)\)</span> is shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:ex18.3.2</span></code> below:</p>
 <figure class="align-default" id="fig-ex-18-3-2">
 <a class="reference internal image-reference" href="../../_images/impulse_spectrum.png"><img alt="Spectrum of the unit pulse train" src="../../_images/impulse_spectrum.png" style="width: 80%;" /></a>
@@ -1427,7 +888,7 @@ title="Print to PDF"
 </figure>
 </section>
 <section id="another-interesting-result">
-<h4>Another Interesting Result<a class="headerlink" href="#another-interesting-result" title="Permalink to this headline">#</a></h4>
+<h4>Another Interesting Result<a class="headerlink" href="#another-interesting-result" title="Permalink to this heading">#</a></h4>
 <p>Consider the pulse train again:</p>
 <figure class="align-default" id="fig-ex-18-3-3">
 <a class="reference internal image-reference" href="../../_images/pulse_train.png"><img alt="Pulse train signal" src="../../_images/pulse_train.png" style="width: 80%;" /></a>
@@ -1438,7 +899,7 @@ title="Print to PDF"
 <p>What happens when the pulses to the left and right of the centre pulse become less and less frequent? That is what happens when <span class="math notranslate nohighlight">\(T \to \infty\)</span>?</p>
 </section>
 <section id="well">
-<h4>Well?<a class="headerlink" href="#well" title="Permalink to this headline">#</a></h4>
+<h4>Well?<a class="headerlink" href="#well" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>As <span class="math notranslate nohighlight">\(T\to \infty\)</span> the fundamental frequency <span class="math notranslate nohighlight">\(\Omega_0 \to 0\)</span></p></li>
 <li><p>We are then left with just one pulse centred around <span class="math notranslate nohighlight">\(t=0\)</span>.</p></li>
@@ -1450,7 +911,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#fs3-fundamental"><span class="std std-ref">Fundamental frequency</span></a></p></li>
 <li><p><a class="reference internal" href="#fs3-harmonics"><span class="std std-ref">Harmonic frequencies</span></a></p></li>
@@ -1458,7 +919,7 @@ title="Print to PDF"
 <li><p><a class="reference internal" href="#examples18"><span class="std std-ref">Examples 18</span></a></p></li>
 </ul>
 <section id="unit-5-3-takeways">
-<span id="unit5-3-takeaways"></span><h3>Unit 5.3: Takeways<a class="headerlink" href="#unit-5-3-takeways" title="Permalink to this headline">#</a></h3>
+<span id="unit5-3-takeaways"></span><h3>Unit 5.3: Takeways<a class="headerlink" href="#unit-5-3-takeways" title="Permalink to this heading">#</a></h3>
 <p>The exponential and trigonometric Fourier series coefficients can be plotted as lines on the frequency axis.</p>
 <p>These line-spectra are useful for reasoning about the frequency components that are present in a periodic signal.</p>
 <p>This is useful for e.g. computing the bandwidth needed on a medium that is to transmit a signal without loss.</p>
@@ -1466,14 +927,14 @@ title="Print to PDF"
 </section>
 </section>
 <section id="next-time">
-<h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
+<h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this heading">#</a></h2>
 <p>We move on to consider</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../4/exp_fs3.html#unit5-4"><span class="std std-ref">Unit 5.4: Applications of Line Spectra</span></a></p></li>
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id4">
 <dl class="citation">
 <dt class="label" id="id10"><span class="brackets">Kar12</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>)</span></dt>
@@ -1483,7 +944,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="solution-to-example-18-1">
-<span id="sol-ex-18-1"></span><h2>Solution to Example 18.1<a class="headerlink" href="#solution-to-example-18-1" title="Permalink to this headline">#</a></h2>
+<span id="sol-ex-18-1"></span><h2>Solution to Example 18.1<a class="headerlink" href="#solution-to-example-18-1" title="Permalink to this heading">#</a></h2>
 <p>Given</p>
 <div class="math notranslate nohighlight">
 \[C_k = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(t)e^{-jk(\Omega_0 t)}\,d(\Omega_0 t)\]</div>
@@ -1496,7 +957,7 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[C_k = \frac{1}{2\pi}\int_{-\pi/w}^{\pi/w} Ae^{-jk(\Omega_0 t)}\,d(\Omega_0 t) = \frac{A}{2\pi}\int_{-\pi/w}^{\pi/w} e^{-jk(\Omega_0 t)}\,d(\Omega_0 t) \]</div>
 <section id="solution-dc-component">
-<h3>Solution: DC component!<a class="headerlink" href="#solution-dc-component" title="Permalink to this headline">#</a></h3>
+<h3>Solution: DC component!<a class="headerlink" href="#solution-dc-component" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[C_0 = \left.\frac{A}{2\pi}\,\Omega_0 t\,\right|_{-\pi/w}^{\pi/w} = \frac{A}{2\pi}\left(\frac{\pi}{w}+\frac{\pi}{w}\right)\]</div>
 <p>or</p>
@@ -1504,14 +965,14 @@ title="Print to PDF"
 \[C_0 = \frac{A}{w}\]</div>
 </section>
 <section id="id20">
-<h3>Harmonic coefficients!<a class="headerlink" href="#id20" title="Permalink to this headline">#</a></h3>
+<h3>Harmonic coefficients!<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[C_k = \left.\frac{A}{-jk2\pi}\,e^{-jk(\omega t)}\,\right|_{-\pi/w}^{\pi/w} = \frac{A}{k\pi}\left(\frac{e^{jk\pi/w}-e^{-jk\pi/w}}{j2}\right) = \frac{A}{k\pi}\sin\left(\frac{k\pi}{w}\right)\]</div>
 <div class="math notranslate nohighlight">
 \[C_k = \frac{A}{w}\frac{sin\left(k\pi/w\right)}{k\pi/w}\]</div>
 </section>
 <section id="id21">
-<h3>Exponential Fourier Series!<a class="headerlink" href="#id21" title="Permalink to this headline">#</a></h3>
+<h3>Exponential Fourier Series!<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[f(t)=\sum_{k=-\infty}^{\infty}\;\frac{A}{w}\,\frac{\sin\left(k\pi/w\right)}{k\pi/w} e^{-k\Omega_0 t}\]</div>
 </section>
@@ -1530,7 +991,7 @@ title="Print to PDF"
             mode: "matlab"
         },
         kernelOptions: {
-            kernelName: "matlab",
+            name: "matlab",
             path: "./fourier_series/3"
         },
         predefinedOutput: true
@@ -1538,39 +999,139 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'matlab'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../2/exp_fs1.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Unit 5.2: Exponential Fourier Series</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../2/exp_fs1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Unit 5.2: Exponential Fourier Series</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../4/exp_fs3.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../4/exp_fs3.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Unit 5.4: Applications of Line Spectra</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamental-frequency">Fundamental frequency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonic-frequencies">Harmonic frequencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#line-spectra">Line Spectra</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#line-spectra-for-exp-fs">Line Spectra for Exp. FS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#line-spectra-for-trig-fs">Line Spectra for Trig. FS</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-18">Examples 18</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-18-1">Example 18.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#what-do-we-know">What do we know?</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#coefficients-of-the-exponential-fourier-series">Coefficients of the Exponential Fourier Series?</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dc-component">DC Component?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonic-coefficients">Harmonic coefficients?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-fourier-series">Exponential Fourier Series?</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-18-2-effect-of-pulse-width-on-frequency-spectra">Example 18.2:  Effect of pulse width on frequency spectra</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#w-2">w = 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#w-5">w = 5</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#w-10">w = 10</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#implications">Implications</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-18-3">Example 18.3</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Solution</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#proof">Proof!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pulse-with-unit-area">Pulse with unit area</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#new-coefficents">New coefficents</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#spectrum-of-unit-impulse-train">Spectrum of Unit Impulse Train</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#another-interesting-result">Another Interesting Result</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#well">Well?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-5-3-takeways">Unit 5.3: Takeways</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-18-1">Solution to Example 18.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-dc-component">Solution: DC component!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Harmonic coefficients!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Exponential Fourier Series!</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Dr Chris P. Jobling<br/>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Chris P. Jobling
+</p>
+
+  </div>
   
-      &copy; Copyright Swansea University (2023).<br/>
-    <div class="extra_footer">
-      This page was created by 
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Swansea University (2023).
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  This page was created by 
 <a href="https://www.swansea.ac.uk/staff/c.p.jobling/" />
   Dr Chris P. Jobling
 </a> 
@@ -1579,20 +1140,22 @@ for
   Swansea University
 </a>.
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
 </div>
+  </div>
+  
+</div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

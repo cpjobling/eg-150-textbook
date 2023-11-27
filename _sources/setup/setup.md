@@ -1,15 +1,15 @@
 ---
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.14.4
-  kernelspec:
-    display_name: Python 3 (ipykernel)
-    language: python
-    name: python3
+jupytext:
+  formats: ipynb,md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.15.2
+kernelspec:
+  display_name: MATLAB Kernel
+  language: matlab
+  name: matlab
 ---
 
 # Setup
@@ -33,13 +33,15 @@ jupyter notebook setup.ibynb
 
 Alternatively, you can use the **Anaconda Navigator** to launch a Jupyter Notebook and then navigate to the `setup.ipynb` file.
 
-**Note** for Windows users, you need to start jupyter as an Administrator.  
+**Note** for Windows users, you need to start jupyter as an Administrator.
 
++++
 
 ## Advanced users
 
 You may prefer to use the python environments and the command line, in which case, refer to [Advanced Settings](https://github.com/cpjobling/eg-247-textbook/blob/master/setup/advanced-setup.md).
 
++++
 
 ## About this notebook
 
@@ -49,9 +51,11 @@ You should be able to run each code cell in turn without errors. To execute code
 
 Alternatively you can simply run the whole notebook by selecting the `Cell->Run All` command from the menu.
 
++++
 
 ## Set up anaconda environment
 
++++
 
 ## Test Base Setup
 
@@ -59,7 +63,7 @@ The following Python code (adapted from the script [soton-test-python-installati
 
 First we define some tests.
 
-```python
+```{code-cell} ipython3
 import math
 import os
 import sys
@@ -163,7 +167,7 @@ def test_pytest():
 
 The we run the tests to test that we have all the packages we need. If we have installed Anaconda 3 correctly, there should be no errors.
 
-```python
+```{code-cell} ipython3
 print("Running using Python {}".format(sys.version))
 test_is_python_35()
 test_numpy()
@@ -175,6 +179,7 @@ test_pytest()
 
 The remaining installation instructions are adapted from [2].
 
++++
 
 ## Python-MATLAB Bridge
 
@@ -186,30 +191,31 @@ Here we've adapted the instructions given in the official Matlab documentation [
 
 I ran this on my Mac. The equivalent Windows and Linux commands are given in the comments.
 
++++
 
-### Mac OS: 
+### Mac OS:
 
-```python
-matlabroot='/Applications/MATLAB_R2022b.app'
+```{code-cell} ipython3
+matlabroot='/Applications/MATLAB_R2023b.app'
 ```
 
 ### Unix
 
-```python
+```{code-cell} ipython3
 %cd {matlabroot}/extern/engines/python
 ```
 
 ### Ubuntu running in Windows using WSL
 
-```python
-matlabroot='/mnt/c/Program\ Files/MATLAB/R2022b'
+```{code-cell} ipython3
+matlabroot='/mnt/c/Program\ Files/MATLAB/R2023a'
 %cd {matlabroot}/extern/engines/python
 ```
 
 ### Windows
 
-```python
-matlabroot='C:\Program Files\MATLAB\R2022b'
+```{code-cell} ipython3
+matlabroot='C:\Program Files\MATLAB\R202a'
 %cd {matlabroot}\extern\engines\python
 ```
 
@@ -224,51 +230,53 @@ matlabroot='C:\Program Files\MATLAB\R2022b'
   * Now copy `python setup.py install`, paste and type `Enter`
 * If your MATLAB is 2016b, or older, you may need to install an earlier version of Python and repeat the steps above.
 
-```python
+```{code-cell} ipython3
 !python --version
 #%shell
-!python setup.py install
+!python -m pip install . 
 ```
 
 ## Test Python can now communicate with MATLAB
 
 First start a MATLAB session. You will have to restart your Python kernel first!
 
-```python
+```{code-cell} ipython3
 import matlab.engine
 eng = matlab.engine.start_matlab()
 ```
 
 Then connect to the session
 
-```python
+```{code-cell} ipython3
 eng = matlab.engine.connect_matlab()
 ```
 
 Now compute something. Here's a 10x10 magic square
 
-```python
+```{code-cell} ipython3
 m = eng.magic(10);
 ```
 
-```python
+```{code-cell} ipython3
 print(m)
 ```
 
 Close the session
 
-```python
+```{code-cell} ipython3
 eng.quit()
 ```
 
 ## MATLAB Kernel for Jupyter
 
-Finally we install the `matlab_kernel` using the instructions given here: [github.com/imatlab/imatlab](https://github.com/imatlab/imatlab).
+Finally we install the `matlab_kernel` using the instructions given here: [gthub.com/mathworks/jupyter-matlab-proxy](https://github.com/mathworks/jupyter-matlab-proxy#install).
 
-```python
-!pip install matlab_kernel
-!python -m matlab_kernel install --user
-!jupyter kernelspec list
+```{code-cell} ipython3
+!python3 -m pip install jupyter-matlab-proxy
+```
+
+```{code-cell} ipython3
+!python3 -m pip install 'jupyterlab>=3.0.0,<4.0.0a0'
 ```
 
 To check that the MATLAB kernel is properly installed do the following.
@@ -283,6 +291,7 @@ jupyter notebook setup.ipynb --debug
 
 ```
 
++++
 
 ## Test MATLAB Kernel
 
@@ -300,7 +309,8 @@ If all is well, you should see the Kernel indicator (top right) change to 'Matla
 
 Figure 2: The MATLAB kernel indicator
 
-<!-- #region -->
++++
+
 You should now be able to execute the MATLAB `magic(10)` function again and get the result shown:
 
 ```matlab
@@ -322,9 +332,8 @@ ans =
 ```
 
 Go ahead and execute the next code cell.
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 magic(10)
 ```
 
@@ -338,7 +347,8 @@ To learn more about Jupyter notebooks, the key resource is the [Jupyter Project 
 
 For a quick introduction, I particularly recommend Corey Schafer's YouTube tutorial: https://youtu.be/HW29067qVWk.
 
-```html
+```{code-cell} ipython3
+%%html
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HW29067qVWk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
@@ -352,6 +362,7 @@ For me, the main advantage of Jupyter notebooks is that it is language independe
 
 That said, we will be using MATLAB throughout this course and MATLAB Live Scripts in the Labs for this module.
 
++++
 
 ## References
 

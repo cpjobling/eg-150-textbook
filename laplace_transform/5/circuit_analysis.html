@@ -1,49 +1,61 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Unit 4.5: Using Laplace Transforms for Circuit Analysis &#8212; EG-150 Signals and Systems</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -53,57 +65,99 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'laplace_transform/5/circuit_analysis';</script>
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/5/circuit_analysis.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Unit 4.6: Transfer Functions" href="../6/transfer_functions.html" />
     <link rel="prev" title="Unit 4.4 The Inverse Laplace Transform" href="../4/inverse_laplace.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">EG-150 Signals and Systems</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EG-150 Signals and Systems</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -112,1147 +166,380 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Online notes
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Online notes</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../introduction/index.html">
-   Unit 1 Introduction
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/intro.html">
-     Unit 1.1 Setting the Scene
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/thecourse.html">
-     Unit 1.2 About this Course
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../introduction/concepts.html">
-     Unit 1.3 Introduction to the Concepts to be Studied
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../signals_and_systems/index.html">
-   Unit 2 Signals and Systems
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/signals/index.html">
-     Unit 2.1 Signals and Classification of Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/signals/pep_signals.html">
-     Unit 2.2 Periodic, Energy and Power Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/elementary_signals/index.html">
-     Unit 2.3 Elementary Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/elementary_signals/examples3.html">
-     Examples 3 - Elementary Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../signals_and_systems/systems/index.html">
-     Unit 2.4 Systems and Classification of Systems
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../lti_systems/index.html">
-   Unit 3 Linear Time-Invariant Systems
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti1.html">
-     Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti2.html">
-     Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../lti_systems/lti3.html">
-     Unit 3.3 Systems Described by Differential Equations
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../index.html">
-   Unit 4 Laplace Transforms and their Applications
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../1/laplace.html">
-     Unit 4.1 The Laplace Transformation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../2/laplace_of_common_signals.html">
-     Unit 4.2 Laplace Transform of Some Common Signals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../3/laplace_properties.html">
-     Unit 4.3 Properties of Laplace Transforms
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../4/inverse_laplace.html">
-     Unit 4.4 The Inverse Laplace Transform
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Unit 4.5 Using Laplace Transforms for Circuit Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../6/transfer_functions.html">
-     Unit 4.6 Transfer Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../7/tf_for_circuits.html">
-     Unit 4.7 Transfer Functions for Circuit Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../8/casas.html">
-     Unit 4.8 Computer-Aided Systems Analysis and Simulation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../fourier_series/index.html">
-   Unit 5 Fourier Series
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../fourier_series/1/trig_fseries.html">
-     Unit 5.1: Fourier Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../fourier_series/2/exp_fs1.html">
-     Unit 5.2: Exponential Fourier Series
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../fourier_series/3/exp_fs2.html">
-     Unit 5.3 Computing Line Spectra
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../fourier_series/4/exp_fs3.html">
-     Unit 5.4 Applications of Line Spectra
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../zbib.html">
-   Bibliography
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../introduction/index.html">Unit 1 Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/intro.html">Unit 1.1 Setting the Scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/thecourse.html">Unit 1.2 About this Course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../introduction/concepts.html">Unit 1.3 Introduction to the Concepts to be Studied</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  FAQs
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../FAQS/faq.html">
-   Answers to Frequently Asked Questions
-  </a>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../signals_and_systems/index.html">Unit 2 Signals and Systems</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/signals/index.html">Unit 2.1 Signals and Classification of Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/signals/pep_signals.html">Unit 2.2 Periodic, Energy and Power Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/elementary_signals/index.html">Unit 2.3 Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/elementary_signals/examples3.html">Examples 3 - Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/systems/index.html">Unit 2.4 Systems and Classification of Systems</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendices
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../lti_systems/index.html">Unit 3 Linear Time-Invariant Systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti1.html">Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti2.html">Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti3.html">Unit 3.3 Systems Described by Differential Equations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Unit 4 Laplace Transforms and their Applications</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../1/laplace.html">Unit 4.1 The Laplace Transformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2/laplace_of_common_signals.html">Unit 4.2 Laplace Transform of Some Common Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3/laplace_properties.html">Unit 4.3 Properties of Laplace Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4/inverse_laplace.html">Unit 4.4 The Inverse Laplace Transform</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit 4.5 Using Laplace Transforms for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6/transfer_functions.html">Unit 4.6 Transfer Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../7/tf_for_circuits.html">Unit 4.7 Transfer Functions for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../8/casas.html">Unit 4.8 Computer-Aided Systems Analysis and Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../fourier_series/index.html">Unit 5 Fourier Series</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../fourier_series/1/trig_fseries.html">Unit 5.1: Fourier Analysis</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../fourier_series/2/exp_fs1.html">Unit 5.2: Exponential Fourier Series</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../fourier_series/3/exp_fs2.html">Unit 5.3 Computing Line Spectra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fourier_series/4/exp_fs3.html">Unit 5.4 Applications of Line Spectra</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../zbib.html">Bibliography</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FAQs</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../takeaways.html">
-   Unit takeaways
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../exercises.html">
-   List of Unit Exercises
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../homework.html">
-   List of Homework Problems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../1/lt_props.html">
-   Properties of the Laplace Transform
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../1/lt_table.html">
-   Common Laplace Transform Pairs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../setup/polling_setup.html">
-   Set Up In-Class Polling
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../setup/index.html">
-   Setting up your own version of this book
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/jupyter.html">
-     About Jupyter notebooks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/python.html">
-     Installing Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/setup.html">
-     Setting up your Own Jupyter-MATLAB Computing Environment
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/matlab_kernel.html">
-     Testing the Jupyter Matlab Kernel
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/advanced-setup.html">
-     Quick Start - For Experienced Users
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../setup/jupyter-book.html">
-     Setting up jupyter-book
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../FAQS/faq.html">Answers to Frequently Asked Questions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../takeaways.html">Unit takeaways</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises.html">List of Unit Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../homework.html">List of Homework Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1/lt_props.html">Properties of the Laplace Transform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1/lt_table.html">Common Laplace Transform Pairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup/polling_setup.html">Set Up In-Class Polling</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter.html">About Jupyter notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/python.html">Installing Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/matlab_kernel.html">Testing the Jupyter Matlab Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter-book.html">Setting up jupyter-book</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by 
- <a href="https://jupyterbook.org">
-  Jupyter Book
-</a>
-
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/cpjobling/eg-150-textbook/master?urlpath=tree/laplace_transform/5/circuit_analysis.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/laplace_transform/5/circuit_analysis.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Flaplace_transform/5/circuit_analysis.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/laplace_transform/5/circuit_analysis.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Flaplace_transform/5/circuit_analysis.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/cpjobling/eg-150-textbook/edit/master/laplace_transform/5/circuit_analysis.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/laplace_transform/5/circuit_analysis.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download notebook file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="../../_sources/laplace_transform/5/circuit_analysis.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#agenda">
-   Agenda
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#circuit-transformation-from-time-to-complex-frequency">
-   Circuit Transformation from Time to Complex Frequency
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-domain-model-of-a-resistive-network">
-     Time Domain Model of a Resistive Network
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#in-the-time-domain">
-       In the time domain
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#in-the-complex-frequency-domain">
-       In the complex frequency domain
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complex-frequency-domain-model-of-a-resistive-circuit">
-     Complex Frequency Domain Model of a Resistive Circuit
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-domain-model-of-an-inductive-network">
-     Time Domain Model of an Inductive Network
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
-       In the time domain
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complex-frequency-domain-model-of-an-inductive-network">
-     Complex Frequency Domain Model of an Inductive Network
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id4">
-       In the complex frequency domain
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-domain-model-of-a-capacitive-network">
-     Time Domain Model of a Capacitive Network
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id5">
-       In the time domain
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
-       In the complex frequency domain
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complex-frequency-domain-of-a-capacitive-network">
-     Complex Frequency Domain of a Capacitive Network
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complex-impedance-z-s">
-   Complex Impedance
-   <span class="math notranslate nohighlight">
-    \(Z(s)\)
-   </span>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complex-impedance-of-components">
-     Complex impedance of components
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complex-admittance-y-s">
-   Complex Admittance
-   <span class="math notranslate nohighlight">
-    \(Y(s)\)
-   </span>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complex-admittance-of-components">
-     Complex admittance of components
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-12">
-   Examples 12
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-12-1">
-     Example 12.1
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-12-2">
-     Example 12.2
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-12-3">
-     Example 12.3
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#worked-solution-ex-12-3">
-       Worked Solution:
-       <span class="xref std std-ref">
-        ex:12.3
-       </span>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-to-example-12-3">
-       Solution to Example 12.3
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#equivalent-circuit">
-         1. Equivalent Circuit
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#transform-model">
-         2. Transform model
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#determine-equation">
-         3. Determine equation
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#complete-solution-in-matlab">
-       4. Complete solution in MATLAB
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#find-roots-of-denominator-d-s">
-         Find roots of Denominator D(s)
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#find-quadratic-form">
-         Find quadratic form
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#simplify-coefficients-of-s">
-         Simplify coefficients of s
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#complete-the-square">
-         Complete the Square
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#plot-result">
-         Plot result
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#alternative-solution-using-transfer-functions">
-         Alternative solution using transfer functions
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-12-4">
-     Example 12.4
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-12-5">
-     Example 12.5
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-by-nodal-analysis">
-       1. Solution by nodal analysis
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-by-by-successive-application-of-parallel-and-series-combination-of-impedences">
-       2. Solution by by successive application of parallel and series combination of impedences
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-12-6">
-     Example 12.6
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-12-6">
-       Solution 12.6
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#answer-12-6">
-       Answer 12.6
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-12-6-verification-of-solution">
-       Example 12.6: Verification of Solution
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#admittance">
-         Admittance
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-12-7">
-     Example 12.7
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lab-work">
-   Lab Work
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#homework">
-   Homework
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#take-aways">
-   Take Aways
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   Next time
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matlab-solutions">
-   Matlab Solutions
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Unit 4.5: Using Laplace Transforms for Circuit Analysis</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#agenda">
-   Agenda
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#circuit-transformation-from-time-to-complex-frequency">
-   Circuit Transformation from Time to Complex Frequency
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-domain-model-of-a-resistive-network">
-     Time Domain Model of a Resistive Network
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#in-the-time-domain">
-       In the time domain
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#in-the-complex-frequency-domain">
-       In the complex frequency domain
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complex-frequency-domain-model-of-a-resistive-circuit">
-     Complex Frequency Domain Model of a Resistive Circuit
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-domain-model-of-an-inductive-network">
-     Time Domain Model of an Inductive Network
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
-       In the time domain
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complex-frequency-domain-model-of-an-inductive-network">
-     Complex Frequency Domain Model of an Inductive Network
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id4">
-       In the complex frequency domain
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-domain-model-of-a-capacitive-network">
-     Time Domain Model of a Capacitive Network
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id5">
-       In the time domain
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
-       In the complex frequency domain
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complex-frequency-domain-of-a-capacitive-network">
-     Complex Frequency Domain of a Capacitive Network
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complex-impedance-z-s">
-   Complex Impedance
-   <span class="math notranslate nohighlight">
-    \(Z(s)\)
-   </span>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complex-impedance-of-components">
-     Complex impedance of components
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#complex-admittance-y-s">
-   Complex Admittance
-   <span class="math notranslate nohighlight">
-    \(Y(s)\)
-   </span>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#complex-admittance-of-components">
-     Complex admittance of components
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#examples-12">
-   Examples 12
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-12-1">
-     Example 12.1
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-12-2">
-     Example 12.2
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-12-3">
-     Example 12.3
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#worked-solution-ex-12-3">
-       Worked Solution:
-       <span class="xref std std-ref">
-        ex:12.3
-       </span>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-to-example-12-3">
-       Solution to Example 12.3
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#equivalent-circuit">
-         1. Equivalent Circuit
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#transform-model">
-         2. Transform model
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#determine-equation">
-         3. Determine equation
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#complete-solution-in-matlab">
-       4. Complete solution in MATLAB
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#find-roots-of-denominator-d-s">
-         Find roots of Denominator D(s)
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#find-quadratic-form">
-         Find quadratic form
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#simplify-coefficients-of-s">
-         Simplify coefficients of s
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#complete-the-square">
-         Complete the Square
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#plot-result">
-         Plot result
-        </a>
-       </li>
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#alternative-solution-using-transfer-functions">
-         Alternative solution using transfer functions
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-12-4">
-     Example 12.4
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-12-5">
-     Example 12.5
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-by-nodal-analysis">
-       1. Solution by nodal analysis
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-by-by-successive-application-of-parallel-and-series-combination-of-impedences">
-       2. Solution by by successive application of parallel and series combination of impedences
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-12-6">
-     Example 12.6
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-12-6">
-       Solution 12.6
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#answer-12-6">
-       Answer 12.6
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#example-12-6-verification-of-solution">
-       Example 12.6: Verification of Solution
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#admittance">
-         Admittance
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-12-7">
-     Example 12.7
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lab-work">
-   Lab Work
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#homework">
-   Homework
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#take-aways">
-   Take Aways
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-time">
-   Next time
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#matlab-solutions">
-   Matlab Solutions
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Unit 4.5: Using Laplace Transforms for Circuit Analysis</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuit-transformation-from-time-to-complex-frequency">Circuit Transformation from Time to Complex Frequency</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-domain-model-of-a-resistive-network">Time Domain Model of a Resistive Network</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-time-domain">In the time domain</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-complex-frequency-domain">In the complex frequency domain</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-frequency-domain-model-of-a-resistive-circuit">Complex Frequency Domain Model of a Resistive Circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-domain-model-of-an-inductive-network">Time Domain Model of an Inductive Network</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">In the time domain</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-frequency-domain-model-of-an-inductive-network">Complex Frequency Domain Model of an Inductive Network</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">In the complex frequency domain</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-domain-model-of-a-capacitive-network">Time Domain Model of a Capacitive Network</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">In the time domain</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">In the complex frequency domain</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-frequency-domain-of-a-capacitive-network">Complex Frequency Domain of a Capacitive Network</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-impedance-z-s">Complex Impedance <span class="math notranslate nohighlight">\(Z(s)\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-impedance-of-components">Complex impedance of components</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-admittance-y-s">Complex Admittance <span class="math notranslate nohighlight">\(Y(s)\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-admittance-of-components">Complex admittance of components</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-12">Examples 12</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-1">Example 12.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-2">Example 12.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-3">Example 12.3</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-solution-ex-12-3">Worked Solution: <span class="xref std std-ref">ex:12.3</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-12-3">Solution to Example 12.3</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalent-circuit">1. Equivalent Circuit</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#transform-model">2. Transform model</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#determine-equation">3. Determine equation</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-solution-in-matlab">4. Complete solution in MATLAB</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#find-roots-of-denominator-d-s">Find roots of Denominator D(s)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#find-quadratic-form">Find quadratic form</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#simplify-coefficients-of-s">Simplify coefficients of s</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-the-square">Complete the Square</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-result">Plot result</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-solution-using-transfer-functions">Alternative solution using transfer functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-4">Example 12.4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-5">Example 12.5</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-by-nodal-analysis">1. Solution by nodal analysis</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-by-by-successive-application-of-parallel-and-series-combination-of-impedences">2. Solution by by successive application of parallel and series combination of impedences</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-6">Example 12.6</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-12-6">Solution 12.6</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#answer-12-6">Answer 12.6</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-6-verification-of-solution">Example 12.6: Verification of Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#admittance">Admittance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-7">Example 12.7</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-work">Lab Work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solutions">Matlab Solutions</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="unit-4-5-using-laplace-transforms-for-circuit-analysis">
-<span id="unit4-5"></span><h1>Unit 4.5: Using Laplace Transforms for Circuit Analysis<a class="headerlink" href="#unit-4-5-using-laplace-transforms-for-circuit-analysis" title="Permalink to this headline">#</a></h1>
+<span id="unit4-5"></span><h1>Unit 4.5: Using Laplace Transforms for Circuit Analysis<a class="headerlink" href="#unit-4-5-using-laplace-transforms-for-circuit-analysis" title="Permalink to this heading">#</a></h1>
 <p>The preparatory reading for this section is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=101">Chapter 4</a> <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> which presents examples of the applications of the Laplace transform for electrical solving circuit problems. Much of the same material is covered in <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section36">Section 3.7 D</a> of <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/5/circuit_analysis">cpjobling.github.io/eg-150-textbook/laplace_transform/5/circuit_analysis</a></p>
 <p><img alt="QR Code for this lecture" src="../../_images/qrcode_laplace5.png" /></p>
 <section id="agenda">
-<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">#</a></h2>
+<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this heading">#</a></h2>
 <p>We look at applications of the Laplace Transform for circuit analysis. In particular we will consider</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#circuit-transforms"><span class="std std-ref">Circuit Transformation from Time to Complex Frequency</span></a></p></li>
@@ -1271,10 +558,10 @@ title="Print to PDF"
 </div>
 </section>
 <section id="circuit-transformation-from-time-to-complex-frequency">
-<span id="circuit-transforms"></span><h2>Circuit Transformation from Time to Complex Frequency<a class="headerlink" href="#circuit-transformation-from-time-to-complex-frequency" title="Permalink to this headline">#</a></h2>
+<span id="circuit-transforms"></span><h2>Circuit Transformation from Time to Complex Frequency<a class="headerlink" href="#circuit-transformation-from-time-to-complex-frequency" title="Permalink to this heading">#</a></h2>
 <p>(resistive_network}=</p>
 <section id="time-domain-model-of-a-resistive-network">
-<h3>Time Domain Model of a Resistive Network<a class="headerlink" href="#time-domain-model-of-a-resistive-network" title="Permalink to this headline">#</a></h3>
+<h3>Time Domain Model of a Resistive Network<a class="headerlink" href="#time-domain-model-of-a-resistive-network" title="Permalink to this heading">#</a></h3>
 <p>Consider <a class="reference internal" href="#fig-res-circ-t"><span class="std std-numref">Fig. 50</span></a></p>
 <figure class="align-default" id="fig-res-circ-t">
 <a class="reference internal image-reference" href="../../_images/resistive_time.png"><img alt="Time Domain Model of a Resistive Network." src="../../_images/resistive_time.png" style="width: 60%;" /></a>
@@ -1283,7 +570,7 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <section id="in-the-time-domain">
-<h4>In the time domain<a class="headerlink" href="#in-the-time-domain" title="Permalink to this headline">#</a></h4>
+<h4>In the time domain<a class="headerlink" href="#in-the-time-domain" title="Permalink to this heading">#</a></h4>
 <p>In <a class="reference internal" href="#fig-res-circ-t"><span class="std std-numref">Fig. 50</span></a> the voltage across the resistor <span class="math notranslate nohighlight">\(v_R(t)\)</span> is proportional to the current flowing through the resistor <span class="math notranslate nohighlight">\(i_R(t)\)</span></p>
 <div class="math notranslate nohighlight" id="equation-eq-vrt">
 <span class="eqno">(18)<a class="headerlink" href="#equation-eq-vrt" title="Permalink to this equation">#</a></span>\[v_R(t) = R i_R(t)\]</div>
@@ -1349,7 +636,7 @@ title="Print to PDF"
 <p><strong>-&gt; Open poll</strong></p>
 </section>
 <section id="in-the-complex-frequency-domain">
-<h4>In the complex frequency domain<a class="headerlink" href="#in-the-complex-frequency-domain" title="Permalink to this headline">#</a></h4>
+<h4>In the complex frequency domain<a class="headerlink" href="#in-the-complex-frequency-domain" title="Permalink to this heading">#</a></h4>
 <p>We take the Laplace transforms of <a class="reference internal" href="#equation-eq-vrt">(18)</a> and <a class="reference internal" href="#equation-eq-irt">(19)</a> to obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-vrs">
 <span class="eqno">(20)<a class="headerlink" href="#equation-eq-vrs" title="Permalink to this equation">#</a></span>\[V_R(s) = R I_R(s)\]</div>
@@ -1363,7 +650,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="complex-frequency-domain-model-of-a-resistive-circuit">
-<span id="complex-resistive-network"></span><h3>Complex Frequency Domain Model of a Resistive Circuit<a class="headerlink" href="#complex-frequency-domain-model-of-a-resistive-circuit" title="Permalink to this headline">#</a></h3>
+<span id="complex-resistive-network"></span><h3>Complex Frequency Domain Model of a Resistive Circuit<a class="headerlink" href="#complex-frequency-domain-model-of-a-resistive-circuit" title="Permalink to this heading">#</a></h3>
 <figure class="align-default" id="fig-res-circ-s">
 <a class="reference internal image-reference" href="../../_images/resistive_freq.png"><img alt="Complex Frequency Domain Model of a Resistive Circuit" src="../../_images/resistive_freq.png" style="width: 60%;" /></a>
 <figcaption>
@@ -1372,7 +659,7 @@ title="Print to PDF"
 </figure>
 </section>
 <section id="time-domain-model-of-an-inductive-network">
-<span id="inductive-network"></span><h3>Time Domain Model of an Inductive Network<a class="headerlink" href="#time-domain-model-of-an-inductive-network" title="Permalink to this headline">#</a></h3>
+<span id="inductive-network"></span><h3>Time Domain Model of an Inductive Network<a class="headerlink" href="#time-domain-model-of-an-inductive-network" title="Permalink to this heading">#</a></h3>
 <p>Consider <a class="reference internal" href="#fig-ind-circ-t"><span class="std std-numref">Fig. 52</span></a></p>
 <figure class="align-default" id="fig-ind-circ-t">
 <a class="reference internal image-reference" href="../../_images/inductive_time.png"><img alt="Time Domain Model of a Resistive Network." src="../../_images/inductive_time.png" style="width: 60%;" /></a>
@@ -1381,7 +668,7 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <section id="id3">
-<h4>In the time domain<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
+<h4>In the time domain<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
 <p>The voltage across the inductor <span class="math notranslate nohighlight">\(i_L(t)\)</span> is proportional to the rate of change of the current <span class="math notranslate nohighlight">\(i_L(t)\)</span> flowing through the inductor</p>
 <div class="math notranslate nohighlight" id="equation-eq-vlt">
 <span class="eqno">(22)<a class="headerlink" href="#equation-eq-vlt" title="Permalink to this equation">#</a></span>\[v_L(t) = L \frac{d}{dt} i_L(t) \]</div>
@@ -1396,9 +683,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqvlt =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>v_L(t) == L*diff(i_L(t), t)
@@ -1449,7 +734,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="complex-frequency-domain-model-of-an-inductive-network">
-<span id="complex-inductive-network"></span><h3>Complex Frequency Domain Model of an Inductive Network<a class="headerlink" href="#complex-frequency-domain-model-of-an-inductive-network" title="Permalink to this headline">#</a></h3>
+<span id="complex-inductive-network"></span><h3>Complex Frequency Domain Model of an Inductive Network<a class="headerlink" href="#complex-frequency-domain-model-of-an-inductive-network" title="Permalink to this heading">#</a></h3>
 <p>Consider <a class="reference internal" href="#fig-ind-circ-s"><span class="std std-numref">Fig. 53</span></a></p>
 <figure class="align-default" id="fig-ind-circ-s">
 <a class="reference internal image-reference" href="../../_images/inductive_freq.png"><img alt="Time Domain Model of a Resistive Network." src="../../_images/inductive_freq.png" style="width: 60%;" /></a>
@@ -1458,7 +743,7 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <section id="id4">
-<h4>In the complex frequency domain<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
+<h4>In the complex frequency domain<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
 <p>We take the Laplace transforms of <a class="reference internal" href="#equation-eq-vlt">(22)</a> and <a class="reference internal" href="#equation-eq-ilt">(23)</a> to obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-vls">
 <span class="eqno">(24)<a class="headerlink" href="#equation-eq-vls" title="Permalink to this equation">#</a></span>\[V_L(s) = s L I_L(s) - i_L(0^-)\]</div>
@@ -1471,7 +756,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="time-domain-model-of-a-capacitive-network">
-<span id="capacitive-network"></span><h3>Time Domain Model of a Capacitive Network<a class="headerlink" href="#time-domain-model-of-a-capacitive-network" title="Permalink to this headline">#</a></h3>
+<span id="capacitive-network"></span><h3>Time Domain Model of a Capacitive Network<a class="headerlink" href="#time-domain-model-of-a-capacitive-network" title="Permalink to this heading">#</a></h3>
 <p>Consider <a class="reference internal" href="#fig-cap-circ-t"><span class="std std-numref">Fig. 54</span></a></p>
 <figure class="align-default" id="fig-cap-circ-t">
 <a class="reference internal image-reference" href="../../_images/capacitive_time.png"><img alt="Time Domain Model of a Resistive Network." src="../../_images/capacitive_time.png" style="width: 60%;" /></a>
@@ -1480,7 +765,7 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <section id="id5">
-<h4>In the time domain<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h4>
+<h4>In the time domain<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
 <p>The current flowing into the capacitor is proportional to the change in voltage across the capacitor</p>
 <div class="math notranslate nohighlight" id="equation-eq-ict">
 <span class="eqno">(26)<a class="headerlink" href="#equation-eq-ict" title="Permalink to this equation">#</a></span>\[i_C(t) = C \frac{d}{dt} v_C(t) \]</div>
@@ -1492,9 +777,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqict =
+eqict =
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
@@ -1521,9 +804,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqvct =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>v_C(t) == int(i_C(t), t)/C
@@ -1549,7 +830,7 @@ title="Print to PDF"
 <p><strong>-&gt; Open poll</strong></p>
 </section>
 <section id="id6">
-<h4>In the complex frequency domain<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h4>
+<h4>In the complex frequency domain<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
 <p>We take the Laplace transforms of <a class="reference internal" href="#equation-eq-ict">(26)</a> and <a class="reference internal" href="#equation-eq-vct">(27)</a> to obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-ics">
 <span class="eqno">(28)<a class="headerlink" href="#equation-eq-ics" title="Permalink to this equation">#</a></span>\[I_C(s) = s C V_C(s) - v_C(0^-)\]</div>
@@ -1562,7 +843,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="complex-frequency-domain-of-a-capacitive-network">
-<h3>Complex Frequency Domain of a Capacitive Network<a class="headerlink" href="#complex-frequency-domain-of-a-capacitive-network" title="Permalink to this headline">#</a></h3>
+<h3>Complex Frequency Domain of a Capacitive Network<a class="headerlink" href="#complex-frequency-domain-of-a-capacitive-network" title="Permalink to this heading">#</a></h3>
 <p>Consider <a class="reference internal" href="#fig-cap-circ-s"><span class="std std-numref">Fig. 55</span></a></p>
 <figure class="align-default" id="fig-cap-circ-s">
 <a class="reference internal image-reference" href="../../_images/capacitive_freq.png"><img alt="Time Domain Model of a Resistive Network." src="../../_images/capacitive_freq.png" style="width: 60%;" /></a>
@@ -1573,7 +854,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="complex-impedance-z-s">
-<span id="complex-impedance"></span><h2>Complex Impedance <span class="math notranslate nohighlight">\(Z(s)\)</span><a class="headerlink" href="#complex-impedance-z-s" title="Permalink to this headline">#</a></h2>
+<span id="complex-impedance"></span><h2>Complex Impedance <span class="math notranslate nohighlight">\(Z(s)\)</span><a class="headerlink" href="#complex-impedance-z-s" title="Permalink to this heading">#</a></h2>
 <p>By analogy with the <em>resistance</em> of a resistor <span class="math notranslate nohighlight">\(R\)</span>, a component with complex impedance <span class="math notranslate nohighlight">\(Z(s)\)</span> satisfies Ohm’s law:</p>
 <div class="math notranslate nohighlight">
 \[V(s) = I(s) Z(s)\]</div>
@@ -1581,7 +862,7 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[Z(s) = \frac{V(s)}{I(s)}\]</div>
 <section id="complex-impedance-of-components">
-<span id="complex-impedance-comps"></span><h3>Complex impedance of components<a class="headerlink" href="#complex-impedance-of-components" title="Permalink to this headline">#</a></h3>
+<span id="complex-impedance-comps"></span><h3>Complex impedance of components<a class="headerlink" href="#complex-impedance-of-components" title="Permalink to this heading">#</a></h3>
 <p>For the resistance <span class="math notranslate nohighlight">\(R\)</span><span class="math notranslate nohighlight">\(\Omega\)</span>, inductance <span class="math notranslate nohighlight">\(L\)</span>H and capacitance <span class="math notranslate nohighlight">\(C\)</span>F, which of the following represent the complex impedance, <span class="math notranslate nohighlight">\(Z(s) = V(s)/I(s)\)</span> of the components?</p>
 <div class="math notranslate nohighlight">
 \[sL\]</div>
@@ -1623,7 +904,7 @@ title="Print to PDF"
 </section>
 </section>
 <section id="complex-admittance-y-s">
-<span id="complex-admittance"></span><h2>Complex Admittance <span class="math notranslate nohighlight">\(Y(s)\)</span><a class="headerlink" href="#complex-admittance-y-s" title="Permalink to this headline">#</a></h2>
+<span id="complex-admittance"></span><h2>Complex Admittance <span class="math notranslate nohighlight">\(Y(s)\)</span><a class="headerlink" href="#complex-admittance-y-s" title="Permalink to this heading">#</a></h2>
 <p>By analogy with the <em>admittance</em> of a resistor <span class="math notranslate nohighlight">\(G\)</span>, a component with complex admittance <span class="math notranslate nohighlight">\(Y(s)\)</span> satisfies Ohm’s law:</p>
 <div class="math notranslate nohighlight">
 \[I(s) = V(s) Y(s)\]</div>
@@ -1631,7 +912,7 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[Y(s) = \frac{I(s)}{V(s)}\]</div>
 <section id="complex-admittance-of-components">
-<span id="complex-component-admittance"></span><h3>Complex admittance of components<a class="headerlink" href="#complex-admittance-of-components" title="Permalink to this headline">#</a></h3>
+<span id="complex-component-admittance"></span><h3>Complex admittance of components<a class="headerlink" href="#complex-admittance-of-components" title="Permalink to this heading">#</a></h3>
 <p>For the resistance <span class="math notranslate nohighlight">\(R\)</span><span class="math notranslate nohighlight">\(\Omega\)</span>, inductance <span class="math notranslate nohighlight">\(L\)</span>H and capacitance <span class="math notranslate nohighlight">\(C\)</span>F, which of the following represent the complex admittance, <span class="math notranslate nohighlight">\(Y(s) = I(s)/V(s)\)</span> of the components?</p>
 <p>For the resistor <span class="math notranslate nohighlight">\(R\)</span>Ω, inductor <span class="math notranslate nohighlight">\(L\)</span>H and capacitance <span class="math notranslate nohighlight">\(C\)</span>F, which of the following represent the complex admittance of the components?</p>
 <div class="math notranslate nohighlight">
@@ -1672,10 +953,10 @@ title="Print to PDF"
 </section>
 </section>
 <section id="examples-12">
-<span id="examples12"></span><h2>Examples 12<a class="headerlink" href="#examples-12" title="Permalink to this headline">#</a></h2>
+<span id="examples12"></span><h2>Examples 12<a class="headerlink" href="#examples-12" title="Permalink to this heading">#</a></h2>
 <p>We will work through these in class.</p>
 <section id="example-12-1">
-<span id="ex-12-1"></span><h3>Example 12.1<a class="headerlink" href="#example-12-1" title="Permalink to this headline">#</a></h3>
+<span id="ex-12-1"></span><h3>Example 12.1<a class="headerlink" href="#example-12-1" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is based on <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=102">Example 4.1</a> from <span id="id7">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
@@ -1733,7 +1014,7 @@ title="Print to PDF"
 
 </pre></section>
 <section id="example-12-2">
-<span id="ex-12-2"></span><h3>Example 12.2<a class="headerlink" href="#example-12-2" title="Permalink to this headline">#</a></h3>
+<span id="ex-12-2"></span><h3>Example 12.2<a class="headerlink" href="#example-12-2" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is based on <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=104">Example 4.2</a> from <span id="id8">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
@@ -1791,7 +1072,7 @@ title="Print to PDF"
 
 </pre></section>
 <section id="example-12-3">
-<span id="ex-12-3"></span><h3>Example 12.3<a class="headerlink" href="#example-12-3" title="Permalink to this headline">#</a></h3>
+<span id="ex-12-3"></span><h3>Example 12.3<a class="headerlink" href="#example-12-3" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>This is based on <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=104">Example 4.3</a> in <span id="id9">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
@@ -1809,15 +1090,15 @@ title="Print to PDF"
 <span class="eqno">(30)<a class="headerlink" href="#equation-sol-12-3" title="Permalink to this equation">#</a></span>\[V_{\mathrm{out}}=\left(1.36e^{-6.57t}+0.64e^{-0.715t}\cos 0.316t - 1.84e^{-0.715t}\sin 0.316t\right)u_0(t)\]</div>
 <p>and we can plot the result (see <a class="reference internal" href="#sol-mat12-3"><span class="std std-ref">4. Complete solution in MATLAB</span></a>)</p>
 <section id="worked-solution-ex-12-3">
-<h4>Worked Solution: <a class="reference internal" href="#ex-12-3"><span class="std std-ref">Example 12.3</span></a><a class="headerlink" href="#worked-solution-ex-12-3" title="Permalink to this headline">#</a></h4>
+<h4>Worked Solution: <a class="reference internal" href="#ex-12-3"><span class="std std-ref">Example 12.3</span></a><a class="headerlink" href="#worked-solution-ex-12-3" title="Permalink to this heading">#</a></h4>
 <p>File Pencast: <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/example3.pdf">example12_3.pdf</a> - Download and open in Adobe Acrobat Reader.</p>
 <p>The attached PDF gives the solution to <a class="reference internal" href="#ex-12-3"><span class="std std-ref">Example 12.3</span></a> by hand. It’s quite a complex, error-prone (as you can see by the crosssings out!) calculation that needs careful attention to detail. This in itself gives justification to my belief that you should use computers wherever possible.</p>
 </section>
 <section id="solution-to-example-12-3">
-<span id="sol-12-3"></span><h4>Solution to Example 12.3<a class="headerlink" href="#solution-to-example-12-3" title="Permalink to this headline">#</a></h4>
+<span id="sol-12-3"></span><h4>Solution to Example 12.3<a class="headerlink" href="#solution-to-example-12-3" title="Permalink to this heading">#</a></h4>
 <p>We will use a combination of pen-and-paper and MATLAB to solve this.</p>
 <section id="equivalent-circuit">
-<h5>1. Equivalent Circuit<a class="headerlink" href="#equivalent-circuit" title="Permalink to this headline">#</a></h5>
+<h5>1. Equivalent Circuit<a class="headerlink" href="#equivalent-circuit" title="Permalink to this heading">#</a></h5>
 <p>Draw equivalent circuit at <span class="math notranslate nohighlight">\(t=0\)</span></p>
 <p><strong>OneNote Class Notebook Scratch Pad</strong></p>
 <pre style="border: 2px solid blue">
@@ -1851,7 +1132,7 @@ title="Print to PDF"
 
 </pre></section>
 <section id="transform-model">
-<h5>2. Transform model<a class="headerlink" href="#transform-model" title="Permalink to this headline">#</a></h5>
+<h5>2. Transform model<a class="headerlink" href="#transform-model" title="Permalink to this heading">#</a></h5>
 <p>Convert to transforms</p>
 <p><strong>OneNote Class Notebook Scratch Pad</strong></p>
 <pre style="border: 2px solid blue">
@@ -1885,7 +1166,7 @@ title="Print to PDF"
 
 </pre></section>
 <section id="determine-equation">
-<h5>3. Determine equation<a class="headerlink" href="#determine-equation" title="Permalink to this headline">#</a></h5>
+<h5>3. Determine equation<a class="headerlink" href="#determine-equation" title="Permalink to this heading">#</a></h5>
 <p>Determine equation for <span class="math notranslate nohighlight">\(V_{\rm out}(s)\)</span>.</p>
 <p><strong>OneNote Class Notebook Scratch Pad</strong></p>
 <pre style="border: 2px solid blue">
@@ -1915,14 +1196,14 @@ title="Print to PDF"
 </pre></section>
 </section>
 <section id="complete-solution-in-matlab">
-<span id="sol-mat12-3"></span><h4>4. Complete solution in MATLAB<a class="headerlink" href="#complete-solution-in-matlab" title="Permalink to this headline">#</a></h4>
+<span id="sol-mat12-3"></span><h4>4. Complete solution in MATLAB<a class="headerlink" href="#complete-solution-in-matlab" title="Permalink to this heading">#</a></h4>
 <p>In the lecture we showed that after simplification for <a class="reference internal" href="#ex-12-3"><span class="std std-ref">Example 12.3</span></a></p>
 <div class="math notranslate nohighlight">
 \[V_{\mathrm{out}}(s)=\frac{2s(s+3)}{s^3 + 8s^2 + 10s + 4}\]</div>
 <p>We will use MATLAB to factorize the denominator <span class="math notranslate nohighlight">\(D(s)\)</span> of the equation
 into a linear and a quadratic factor.</p>
 <section id="find-roots-of-denominator-d-s">
-<h5>Find roots of Denominator D(s)<a class="headerlink" href="#find-roots-of-denominator-d-s" title="Permalink to this headline">#</a></h5>
+<h5>Find roots of Denominator D(s)<a class="headerlink" href="#find-roots-of-denominator-d-s" title="Permalink to this heading">#</a></h5>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">roots</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">])</span>
@@ -1932,7 +1213,7 @@ into a linear and a quadratic factor.</p>
 </div>
 </section>
 <section id="find-quadratic-form">
-<h5>Find quadratic form<a class="headerlink" href="#find-quadratic-form" title="Permalink to this headline">#</a></h5>
+<h5>Find quadratic form<a class="headerlink" href="#find-quadratic-form" title="Permalink to this heading">#</a></h5>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="w"> </span><span class="s">t</span>
@@ -1943,7 +1224,7 @@ into a linear and a quadratic factor.</p>
 </div>
 </section>
 <section id="simplify-coefficients-of-s">
-<h5>Simplify coefficients of s<a class="headerlink" href="#simplify-coefficients-of-s" title="Permalink to this headline">#</a></h5>
+<h5>Simplify coefficients of s<a class="headerlink" href="#simplify-coefficients-of-s" title="Permalink to this heading">#</a></h5>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sym2poly</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
@@ -1953,7 +1234,7 @@ into a linear and a quadratic factor.</p>
 </div>
 </section>
 <section id="complete-the-square">
-<h5>Complete the Square<a class="headerlink" href="#complete-the-square" title="Permalink to this headline">#</a></h5>
+<h5>Complete the Square<a class="headerlink" href="#complete-the-square" title="Permalink to this heading">#</a></h5>
 <p><strong>OneNote Class Notebook Scratch Pad</strong></p>
 <pre style="border: 2px solid blue">
 
@@ -1981,7 +1262,7 @@ into a linear and a quadratic factor.</p>
 
 </pre></section>
 <section id="plot-result">
-<h5>Plot result<a class="headerlink" href="#plot-result" title="Permalink to this headline">#</a></h5>
+<h5>Plot result<a class="headerlink" href="#plot-result" title="Permalink to this heading">#</a></h5>
 <p>From equation <a class="reference internal" href="#equation-sol-12-3">(30)</a></p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -1998,7 +1279,7 @@ into a linear and a quadratic factor.</p>
 </div>
 </section>
 <section id="alternative-solution-using-transfer-functions">
-<h5>Alternative solution using transfer functions<a class="headerlink" href="#alternative-solution-using-transfer-functions" title="Permalink to this headline">#</a></h5>
+<h5>Alternative solution using transfer functions<a class="headerlink" href="#alternative-solution-using-transfer-functions" title="Permalink to this heading">#</a></h5>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Vout</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">conv</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]),[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">])</span>
@@ -2017,7 +1298,7 @@ into a linear and a quadratic factor.</p>
 </section>
 </section>
 <section id="example-12-4">
-<h3>Example 12.4<a class="headerlink" href="#example-12-4" title="Permalink to this headline">#</a></h3>
+<h3>Example 12.4<a class="headerlink" href="#example-12-4" title="Permalink to this heading">#</a></h3>
 <p>Consider <a class="reference internal" href="#fig-complex-imp"><span class="std std-numref">Fig. 56</span></a> and give an expression for <span class="math notranslate nohighlight">\(V_c(s)\)</span>.</p>
 <p><strong>OneNote Class Notebook Scratch Pad</strong></p>
 <pre style="border: 2px solid blue">
@@ -2038,7 +1319,7 @@ into a linear and a quadratic factor.</p>
 
 </pre></section>
 <section id="example-12-5">
-<span id="ex-12-5"></span><h3>Example 12.5<a class="headerlink" href="#example-12-5" title="Permalink to this headline">#</a></h3>
+<span id="ex-12-5"></span><h3>Example 12.5<a class="headerlink" href="#example-12-5" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>This is based on <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=109">Example 4.4</a> from <span id="id10">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
@@ -2052,12 +1333,12 @@ into a linear and a quadratic factor.</p>
 </figcaption>
 </figure>
 <p>Find <span class="math notranslate nohighlight">\(Z(s)\)</span> using:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>nodal analysis</p></li>
 <li><p>by successive application of parallel and series combination of impedences</p></li>
 </ol>
 <section id="solution-by-nodal-analysis">
-<h4>1. Solution by nodal analysis<a class="headerlink" href="#solution-by-nodal-analysis" title="Permalink to this headline">#</a></h4>
+<h4>1. Solution by nodal analysis<a class="headerlink" href="#solution-by-nodal-analysis" title="Permalink to this heading">#</a></h4>
 <p><strong>OneNote Class Notebook Scratch Pad</strong></p>
 <pre style="border: 2px solid blue">
 
@@ -2077,7 +1358,7 @@ into a linear and a quadratic factor.</p>
 
 </pre></section>
 <section id="solution-by-by-successive-application-of-parallel-and-series-combination-of-impedences">
-<h4>2. Solution by by successive application of parallel and series combination of impedences<a class="headerlink" href="#solution-by-by-successive-application-of-parallel-and-series-combination-of-impedences" title="Permalink to this headline">#</a></h4>
+<h4>2. Solution by by successive application of parallel and series combination of impedences<a class="headerlink" href="#solution-by-by-successive-application-of-parallel-and-series-combination-of-impedences" title="Permalink to this heading">#</a></h4>
 <p><strong>OneNote Class Notebook Scratch Pad</strong></p>
 <pre style="border: 2px solid blue">
 
@@ -2100,7 +1381,7 @@ into a linear and a quadratic factor.</p>
 </section>
 </section>
 <section id="example-12-6">
-<span id="ex-12-6"></span><h3>Example 12.6<a class="headerlink" href="#example-12-6" title="Permalink to this headline">#</a></h3>
+<span id="ex-12-6"></span><h3>Example 12.6<a class="headerlink" href="#example-12-6" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>This is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=112">Example 4.5</a> from <span id="id11">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span></p>
@@ -2114,7 +1395,7 @@ into a linear and a quadratic factor.</p>
 </figcaption>
 </figure>
 <section id="solution-12-6">
-<h4>Solution 12.6<a class="headerlink" href="#solution-12-6" title="Permalink to this headline">#</a></h4>
+<h4>Solution 12.6<a class="headerlink" href="#solution-12-6" title="Permalink to this heading">#</a></h4>
 <p><strong>OneNote Class Notebook Scratch Pad</strong></p>
 <pre style="border: 2px solid blue">
 
@@ -2143,7 +1424,7 @@ into a linear and a quadratic factor.</p>
 
 </pre></section>
 <section id="answer-12-6">
-<h4>Answer 12.6<a class="headerlink" href="#answer-12-6" title="Permalink to this headline">#</a></h4>
+<h4>Answer 12.6<a class="headerlink" href="#answer-12-6" title="Permalink to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
 \[Z(s) = \frac{65s^4 + 490s^3 + 528s^2 + 400s + 128}{s(5s^2 + 30s + 16)}\]</div>
 <div class="math notranslate nohighlight">
@@ -2151,7 +1432,7 @@ into a linear and a quadratic factor.</p>
 <p>Matlab verification: <a class="reference external" href="https://raw.githubusercontent.com/cpjobling/eg-150-textbook/main/laplace_transform/matlab/solution12_6.m">solution12_6.m</a></p>
 </section>
 <section id="example-12-6-verification-of-solution">
-<span id="mat-12-6"></span><h4>Example 12.6: Verification of Solution<a class="headerlink" href="#example-12-6-verification-of-solution" title="Permalink to this headline">#</a></h4>
+<span id="mat-12-6"></span><h4>Example 12.6: Verification of Solution<a class="headerlink" href="#example-12-6-verification-of-solution" title="Permalink to this heading">#</a></h4>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="p">;</span>
@@ -2185,7 +1466,7 @@ into a linear and a quadratic factor.</p>
 </div>
 </div>
 <section id="admittance">
-<h5>Admittance<a class="headerlink" href="#admittance" title="Permalink to this headline">#</a></h5>
+<h5>Admittance<a class="headerlink" href="#admittance" title="Permalink to this heading">#</a></h5>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y10</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">z10</span><span class="p">;</span>
@@ -2198,7 +1479,7 @@ into a linear and a quadratic factor.</p>
 </section>
 </section>
 <section id="example-12-7">
-<span id="ex12-7"></span><h3>Example 12.7<a class="headerlink" href="#example-12-7" title="Permalink to this headline">#</a></h3>
+<span id="ex12-7"></span><h3>Example 12.7<a class="headerlink" href="#example-12-7" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>This is Exercise 4 from <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=121">4.7 Exercises</a> from <span id="id12">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span></p>
@@ -2218,16 +1499,16 @@ into a linear and a quadratic factor.</p>
 </section>
 </section>
 <section id="lab-work">
-<h2>Lab Work<a class="headerlink" href="#lab-work" title="Permalink to this headline">#</a></h2>
+<h2>Lab Work<a class="headerlink" href="#lab-work" title="Permalink to this heading">#</a></h2>
 <p>In MATLAB Lab 5, we will explore the tools provided by MATLAB for solving circuit analysis problems.</p>
 </section>
 <section id="homework">
-<h2>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">#</a></h2>
+<h2>Homework<a class="headerlink" href="#homework" title="Permalink to this heading">#</a></h2>
 <p>Complete any exercises that were not covered in the class or follow-up examples class. There are a number of related problems in <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section47#ch03fig14">Solved Problems 3.39</a>—3.41 in <span id="id13">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span> and in section <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=121">4.7 Exercises</a> in <span id="id14">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
 <p>Supplementary problems <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section48">3.52 and following</a> (<span id="id15">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>) provide opportunities for extra practice.</p>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p>In this section we have looked at the application of the Laplace transform to circuit analysis.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#circuit-transforms"><span class="std std-ref">Circuit Transformation from Time to Complex Frequency</span></a></p></li>
@@ -2237,7 +1518,7 @@ into a linear and a quadratic factor.</p>
 </ul>
 </section>
 <section id="take-aways">
-<h2>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this headline">#</a></h2>
+<h2>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h2>
 <p>Circuit analysis can be performed using Laplace transforms by using the Laplace transform equivalents of the component impedence or admittance. In particular, for impedence, we use <span class="math notranslate nohighlight">\(R\)</span>, <span class="math notranslate nohighlight">\(sL\)</span> and <span class="math notranslate nohighlight">\(1/sC\)</span>; for admittance we use <span class="math notranslate nohighlight">\(G = 1/R\)</span>, <span class="math notranslate nohighlight">\(1/sL\)</span>, <span class="math notranslate nohighlight">\(sC\)</span>. Once the circuit has been reduced to a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span>, the inverse laplace transform can be used to determine the time response of the circuit.</p>
 <p>When dealing with components using their complex component equivalents, the usual circuit analysis rules, KVL, KCL, voltage-divider rule, etc, can all be used.</p>
 <p>Complex impedence of a circuit is the resistance to current flow and is given by the general law <span class="math notranslate nohighlight">\(V(s) = Z(s) I(s)\)</span> from which the impendence is given by <span class="math notranslate nohighlight">\(Z(s) = V(s)/I(s)\)</span>. Similarly, the complex admittance of a circuit is given by <span class="math notranslate nohighlight">\(Y(s) = I(s)/V(s)\)</span>.</p>
@@ -2245,14 +1526,14 @@ into a linear and a quadratic factor.</p>
 <p>Though not a consequence of the Laplace transform, it is worth noting that the use impedence facilitates the analysis of circuits for which the compoents are commected in series; for circuits with parallel connection of components, the use of admittance facilitates the analsysis.</p>
 </section>
 <section id="next-time">
-<h2>Next time<a class="headerlink" href="#next-time" title="Permalink to this headline">#</a></h2>
+<h2>Next time<a class="headerlink" href="#next-time" title="Permalink to this heading">#</a></h2>
 <p>We move on to consider</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../6/transfer_functions.html#unit4-6"><span class="std std-ref">Unit 4.6: Transfer Functions</span></a></p></li>
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id16">
 <dl class="citation">
 <dt class="label" id="id26"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id13">2</a>,<a href="#id15">3</a>)</span></dt>
@@ -2265,7 +1546,7 @@ into a linear and a quadratic factor.</p>
 </div>
 </section>
 <section id="matlab-solutions">
-<span id="matlab-solutions12"></span><h2>Matlab Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this headline">#</a></h2>
+<span id="matlab-solutions12"></span><h2>Matlab Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this heading">#</a></h2>
 <p>For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying <a class="reference external" href="https://github.com/cpjobling/eg-247-textbook/tree/master/laplace_transform/matlab">MATLAB</a> folder in the <a class="reference external" href="https://github.com/cpjobling/eg-247-textbook">GitHub repository</a>.</p>
 <ul class="simple">
 <li><p>Solution 12.3 [<a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m">solution12_3.m</a>]</p></li>
@@ -2286,7 +1567,7 @@ into a linear and a quadratic factor.</p>
             mode: "matlab"
         },
         kernelOptions: {
-            kernelName: "matlab",
+            name: "matlab",
             path: "./laplace_transform/5"
         },
         predefinedOutput: true
@@ -2294,39 +1575,167 @@ into a linear and a quadratic factor.</p>
     </script>
     <script>kernelName = 'matlab'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../4/inverse_laplace.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Unit 4.4 The Inverse Laplace Transform</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../4/inverse_laplace.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Unit 4.4 The Inverse Laplace Transform</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../6/transfer_functions.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../6/transfer_functions.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Unit 4.6: Transfer Functions</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuit-transformation-from-time-to-complex-frequency">Circuit Transformation from Time to Complex Frequency</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-domain-model-of-a-resistive-network">Time Domain Model of a Resistive Network</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-time-domain">In the time domain</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-complex-frequency-domain">In the complex frequency domain</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-frequency-domain-model-of-a-resistive-circuit">Complex Frequency Domain Model of a Resistive Circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-domain-model-of-an-inductive-network">Time Domain Model of an Inductive Network</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">In the time domain</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-frequency-domain-model-of-an-inductive-network">Complex Frequency Domain Model of an Inductive Network</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">In the complex frequency domain</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-domain-model-of-a-capacitive-network">Time Domain Model of a Capacitive Network</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">In the time domain</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">In the complex frequency domain</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-frequency-domain-of-a-capacitive-network">Complex Frequency Domain of a Capacitive Network</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-impedance-z-s">Complex Impedance <span class="math notranslate nohighlight">\(Z(s)\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-impedance-of-components">Complex impedance of components</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-admittance-y-s">Complex Admittance <span class="math notranslate nohighlight">\(Y(s)\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-admittance-of-components">Complex admittance of components</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-12">Examples 12</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-1">Example 12.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-2">Example 12.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-3">Example 12.3</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-solution-ex-12-3">Worked Solution: <span class="xref std std-ref">ex:12.3</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-12-3">Solution to Example 12.3</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalent-circuit">1. Equivalent Circuit</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#transform-model">2. Transform model</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#determine-equation">3. Determine equation</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-solution-in-matlab">4. Complete solution in MATLAB</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#find-roots-of-denominator-d-s">Find roots of Denominator D(s)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#find-quadratic-form">Find quadratic form</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#simplify-coefficients-of-s">Simplify coefficients of s</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-the-square">Complete the Square</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-result">Plot result</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-solution-using-transfer-functions">Alternative solution using transfer functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-4">Example 12.4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-5">Example 12.5</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-by-nodal-analysis">1. Solution by nodal analysis</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-by-by-successive-application-of-parallel-and-series-combination-of-impedences">2. Solution by by successive application of parallel and series combination of impedences</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-6">Example 12.6</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-12-6">Solution 12.6</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#answer-12-6">Answer 12.6</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-6-verification-of-solution">Example 12.6: Verification of Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#admittance">Admittance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-7">Example 12.7</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-work">Lab Work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solutions">Matlab Solutions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Dr Chris P. Jobling<br/>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Chris P. Jobling
+</p>
+
+  </div>
   
-      &copy; Copyright Swansea University (2023).<br/>
-    <div class="extra_footer">
-      This page was created by 
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Swansea University (2023).
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  This page was created by 
 <a href="https://www.swansea.ac.uk/staff/c.p.jobling/" />
   Dr Chris P. Jobling
 </a> 
@@ -2335,20 +1744,22 @@ for
   Swansea University
 </a>.
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
 </div>
+  </div>
+  
+</div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
