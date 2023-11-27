@@ -9,7 +9,7 @@ jupytext:
 kernelspec:
   display_name: Matlab (Connection)
   language: matlab
-  name: matlab_connect
+  name: matlab
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
