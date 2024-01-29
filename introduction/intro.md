@@ -20,7 +20,10 @@ We will be using a web-based audience response system called Pingo for in-class 
 Browse to: [pingo.coactum.de](https://pingo.coactum.de).
 
 
-![QR Code](pictures/qr-code.png)
+:::{figure-md} pingo-qr
+<img alt="QR Code for Pingo" src="pictures/qr-code.png" width="75%" />
+
+:::
 
 When prompted: enter the session ID
 
