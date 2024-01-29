@@ -7,7 +7,7 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.15.2
 kernelspec:
-  display_name: MATLAB Kernel
+  display_name: Matlab
   language: matlab
   name: matlab
 ---
@@ -93,7 +93,7 @@ Graphical representation of a discrete-time signal
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Since a discrete-time signal is defined at discrete times, a discrete-time is often defined as a *sequence* of numbers, donated by $x[n]$, where $n$ is an integer (mathematically: $n \in \mathbb{Z}$).
+Since a discrete-time signal is defined at discrete times, a discrete-time signal is often defined as a *sequence* of numbers, donated by $x[n]$, where $n$ is an integer (mathematically: $n \in \mathbb{Z}$).
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -518,8 +518,8 @@ In particular we have looked at
 
 ### Unit 2.1: Take aways
 
-* *Continuous-time signal: $x(t)$
-* *Discrete-time dignal: $x[n]$
+* *Continuous-time signal*: $x(t)$
+* *Discrete-time signal*: $x[n]$
 * *Sampled data*: $x_n = x[n] = x(t_n)$
 * *Uniform sampling*: $x_n = x[n] = x(nT_s)$ where $T_s$ is the sampling period.
 * *Even signal*: $x(t) = x(-t)$
