@@ -230,15 +230,45 @@ Some example systems
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-* We are ‘digitalizing the world’ (Big Data, Internet of Things,$ldots$)
+* We are ‘digitalizing the world’ (Big Data, Internet of Things,$\ldots$)
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 ### Can you recognize these systems?
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### System 1
+
+![System 1](pictures/music-player.png)
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Block diagram of an MP3 music player
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### System 2
+
+![System 2](pictures/smart-phone.png)
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Block diagram of a smart phone
+
 +++
 
-**Add pictures and poll**
+#### System 3
+
+![System 3](pictures/cruise-control.png)
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Block diagram of an automobile cruise control system
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+**-> Poll**
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -340,7 +370,7 @@ But	the	implementation	is	(almost	always) complicated:
 
 * Negative feedback: a change is neutralized (noise is suppressed), e.g. useful to stabilize a system.
 
-+++
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Summary
 
