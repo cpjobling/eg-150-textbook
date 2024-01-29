@@ -104,7 +104,7 @@ On/off switch state (continuous time, discrete values)
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-{numref}`microphone` shows the output of a switched device. The signal has only two discrete values but time is continuous. That is the switching can happen at any time instant.
+{numref}`on-off` shows the output of a switched device. The signal has only two discrete values but time is continuous. That is the switching can happen at any time instant.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -132,7 +132,7 @@ Stock market prices (discrete time, continuous values)
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-{numref}`temp-diff` shows the value of a particular stock sold on a stock market on particular dates. This is an example of a discrete-time signal with continuous values.
+{numref}`stocks` shows the value of a particular stock sold on a stock market on particular dates. This is an example of a discrete-time signal with continuous values.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
