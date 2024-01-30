@@ -27,7 +27,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/signals
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-A *signal* is a function representing a physical quality of variable, and typically it contains information about the behaviour or nature of the phenomenon.
+A *signal* is a function representing a physical quatity or variable, and typically it contains information about the behaviour or nature of the phenomenon.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -176,7 +176,7 @@ where the constant $T_s$ is the sampling interval.
 
 There is much more about discrete-time signals in Chapter 1 of {cite}`schaum` but we will leave it here for now. 
 
-We will return to the study of discrete-time signals and discrete-time systems in **EG-247 Signals and Systems** next year.
+We will return to the study of discrete-time signals and discrete-time systems in **EG-247 Digital Signal Processing** next year.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
