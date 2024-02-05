@@ -7,7 +7,7 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.15.2
 kernelspec:
-  display_name: MATLAB Kernel
+  display_name: Matlab
   language: matlab
   name: matlab
 ---
@@ -21,7 +21,7 @@ We continue with our survey of [Signals and Classification of Signals](index.md)
 
 This section is based on Section 1.2 of {cite}`schaum`.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/signals/pep_signals](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/signals/pep_signals)
 
@@ -61,26 +61,63 @@ Let's first define the signal over one period. We will use MATLAB and the *symbo
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Let one period of periodic signal be defined by
+Let one period of the periodic signal be defined by
 
 $$x\left(t\right)=\left\lbrace \begin{array}{ll}
 t & 0\le t\le 1\\
 0 & \mathrm{otherwise}
 \end{array}\right.$$
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 We can use the Heaviside function (unit step) (MATLAB function `heaviside`: see {ref}`heaviside`) to sythesise this signal.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Define a $t$ as a *symbolic variable* `t`
 
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
 syms t
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Define the period $T$ of the periodic signal (you might want to play with this value)
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
 T = 1; % period of periodic signal
-x(t) = t*(heaviside(t)-heaviside(t-T));
-fplot(x(t)),ylim([0 2]),grid,title('A Single period of x(t)'),xlabel('t')
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Now define the signal using the *Heaviside* function to limit the range of the signal.
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+x(t) = t * (heaviside(t) - heaviside(t-T));
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Now plot one period of the signal $x(t)$
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+fplot(x(t)),ylim([0 1.2]),grid,title('A Single period of x(t)'),xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -95,7 +132,14 @@ slideshow:
   slide_type: fragment
 ---
 signal1 = x(t + T)
-fplot(signal1),ylim([0 2]),grid,title('A Single period of x(t+T)')
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+fplot(signal1),ylim([0 1.2]),grid,title('A Single period of x(t+T)')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -107,13 +151,20 @@ $$x(t - 2T)$$
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
 signal2 = x(t-2*T)
-fplot(signal2),ylim([0 2]),grid,title('A Single period of x(t)')
 ```
 
-+++ {"slideshow": {"slide_type": "fragment"}}
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+fplot(signal2),ylim([0 1.2]),grid,title('A Single period of x(t)')
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 It follows that
 
@@ -149,7 +200,7 @@ slideshow:
 fplot(periodic_signal,'g-',"LineWidth",2),...
     grid,ylabel('x(t)'),xlabel('t'),title('T = 1')
 xlim([-3.00 3.00])
-ylim([0.00 2.00])
+ylim([0 1.2])
 ```
 
 +++ {"slideshow": {"slide_type": "fragment"}}
@@ -183,9 +234,7 @@ A DC signal
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-```{eval-rst}
-.. note::
-ex
+```{note}
    Note that the sum of two continuous time signals may not be periodic (Example {ref}`ex2.1`)
 ```
 
@@ -275,9 +324,9 @@ Based on the previous definitions, the following classes of signals can be defin
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-* Signals that satisfy neither property are referred to as neither energy signals nor power signals.
+* Signals that satisfy neither property are referred to as *neither* energy signals *nor* power signals.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Note that a periodic signal is a power signal if its energy content per period is finite, and then the average power of this signal need only be calulated over a period ({ref}`ex:1.18`).
 
@@ -302,7 +351,7 @@ $$M_x = \frac{1}{T_0}\int_{-T_0/2}^{T_0/2}x(t)\,dt$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-The mean value is also known as the dc value.
+The mean value is also known as the *dc value*.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
