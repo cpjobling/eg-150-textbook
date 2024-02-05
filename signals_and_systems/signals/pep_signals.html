@@ -515,24 +515,46 @@ document.write(`
 </figure>
 <p>We can use the periodicity to synthesize a periodic signal such as that shown in <a class="reference internal" href="#periodic-signal"><span class="std std-numref">Fig. 17</span></a>.</p>
 <p>Let’s first define the signal over one period. We will use MATLAB and the <em>symbolic math toolbox</em> for this example:</p>
-<p>Let one period of periodic signal be defined by</p>
+<p>Let one period of the periodic signal be defined by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}x\left(t\right)=\left\lbrace \begin{array}{ll}
 t &amp; 0\le t\le 1\\
 0 &amp; \mathrm{otherwise}
 \end{array}\right.\end{split}\]</div>
 <p>We can use the Heaviside function (unit step) (MATLAB function <code class="docutils literal notranslate"><span class="pre">heaviside</span></code>: see <a class="reference internal" href="../elementary_signals/index.html#heaviside"><span class="std std-ref">The Unit Step Function</span></a>) to sythesise this signal.</p>
+<p>Define a <span class="math notranslate nohighlight">\(t\)</span> as a <em>symbolic variable</em> <code class="docutils literal notranslate"><span class="pre">t</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">t</span>
-<span class="n">T</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c">% period of periodic signal</span>
-<span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">t</span><span class="o">*</span><span class="p">(</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">T</span><span class="p">));</span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;A Single period of x(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Define the period <span class="math notranslate nohighlight">\(T\)</span> of the periodic signal (you might want to play with this value)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">T</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c">% period of periodic signal</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now define the signal using the <em>Heaviside</em> function to limit the range of the signal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="n">T</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now plot one period of the signal <span class="math notranslate nohighlight">\(x(t)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="w"> </span><span class="mf">1.2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;A Single period of x(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/05f69aaf5912d18bca4487fc81d452dbf8134cbbbe0a9b726da909ecea29a606.png" src="../../_images/05f69aaf5912d18bca4487fc81d452dbf8134cbbbe0a9b726da909ecea29a606.png" />
+<img alt="../../_images/d6ec634c769e07f2a65da3047687fbbe5e0422f375198ee65ec0c1c129b92221.png" src="../../_images/d6ec634c769e07f2a65da3047687fbbe5e0422f375198ee65ec0c1c129b92221.png" />
 </div>
 </div>
 <p>One period earlier:</p>
@@ -541,7 +563,6 @@ t &amp; 0\le t\le 1\\
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">signal1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">T</span><span class="p">)</span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">signal1</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;A Single period of x(t+T)&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -550,9 +571,7 @@ t &amp; 0\le t\le 1\\
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>signal1 =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(t + 1)*(heaviside(t + 1) - heaviside(t))
@@ -561,7 +580,16 @@ t &amp; 0\le t\le 1\\
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
-<img alt="../../_images/6385ff6a99913b2b32ea7c538372b7ca6157acfe7c2cc92f7b445f3aee9916e4.png" src="../../_images/6385ff6a99913b2b32ea7c538372b7ca6157acfe7c2cc92f7b445f3aee9916e4.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">signal1</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="w"> </span><span class="mf">1.2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;A Single period of x(t+T)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/d93f449a77c19e5b7db7c927c46a4390ac415a08340769d42d582923ca13388f.png" src="../../_images/d93f449a77c19e5b7db7c927c46a4390ac415a08340769d42d582923ca13388f.png" />
 </div>
 </div>
 <p>Two periods later:</p>
@@ -570,7 +598,6 @@ t &amp; 0\le t\le 1\\
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">signal2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">T</span><span class="p">)</span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">signal2</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;A Single period of x(t)&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -588,7 +615,16 @@ t &amp; 0\le t\le 1\\
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
-<img alt="../../_images/dedbcfd9c5e02e75fcf88ba7c5ab207863d1c6498aacc7cfe70afaed097dc93f.png" src="../../_images/dedbcfd9c5e02e75fcf88ba7c5ab207863d1c6498aacc7cfe70afaed097dc93f.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">signal2</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="w"> </span><span class="mf">1.2</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;A Single period of x(t)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/8abd4a2aadc9090bd40ee6860648f23a7d919b8e23cb4d359e9d836d12ca3840.png" src="../../_images/8abd4a2aadc9090bd40ee6860648f23a7d919b8e23cb4d359e9d836d12ca3840.png" />
 </div>
 </div>
 <p>It follows that</p>
@@ -628,12 +664,12 @@ t &amp; 0\le t\le 1\\
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">periodic_signal</span><span class="p">,</span><span class="s">&#39;g-&#39;</span><span class="p">,</span><span class="s">&quot;LineWidth&quot;</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="k">...</span>
 <span class="w">    </span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;T = 1&#39;</span><span class="p">)</span>
 <span class="nb">xlim</span><span class="p">([</span><span class="o">-</span><span class="mf">3.00</span><span class="w"> </span><span class="mf">3.00</span><span class="p">])</span>
-<span class="nb">ylim</span><span class="p">([</span><span class="mf">0.00</span><span class="w"> </span><span class="mf">2.00</span><span class="p">])</span>
+<span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="w"> </span><span class="mf">1.2</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/76d39abde571ae428e4624d8734e374f77054f563d0edf769fcdc07ce757e423.png" src="../../_images/76d39abde571ae428e4624d8734e374f77054f563d0edf769fcdc07ce757e423.png" />
+<img alt="../../_images/aa8fe22736c7cdcb4d398a82622343ba6f6f7dbeeff0074dbb658879ac53e9ca.png" src="../../_images/aa8fe22736c7cdcb4d398a82622343ba6f6f7dbeeff0074dbb658879ac53e9ca.png" />
 </div>
 </div>
 </section>
@@ -652,10 +688,10 @@ t &amp; 0\le t\le 1\\
 <p><span class="caption-number">Fig. 18 </span><span class="caption-text">A DC signal</span><a class="headerlink" href="#fig-dc-signal" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<dl class="simple">
-<dt>ex</dt><dd><p>Note that the sum of two continuous time signals may not be periodic (Example {ref}`ex2.1`)</p>
-</dd>
-</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that the sum of two continuous time signals may not be periodic (Example <a class="reference internal" href="#ex2-1"><span class="std std-ref">Example 2.1: Sum of two periodic signals</span></a>)</p>
+</div>
 </section>
 <section id="nonperiodic-signals">
 <span id="id3"></span><h3>Nonperiodic signals<a class="headerlink" href="#nonperiodic-signals" title="Permalink to this heading">#</a></h3>
@@ -707,7 +743,7 @@ t &amp; 0\le t\le 1\\
 <li><p><span class="math notranslate nohighlight">\(x(t)\)</span> is said to be an <em>power signal</em> if and only if <span class="math notranslate nohighlight">\(0 &lt; P &lt; \infty\)</span>, thus implying that <span class="math notranslate nohighlight">\(E = \infty\)</span>.</p></li>
 </ul>
 <ul class="simple">
-<li><p>Signals that satisfy neither property are referred to as neither energy signals nor power signals.</p></li>
+<li><p>Signals that satisfy neither property are referred to as <em>neither</em> energy signals <em>nor</em> power signals.</p></li>
 </ul>
 <p>Note that a periodic signal is a power signal if its energy content per period is finite, and then the average power of this signal need only be calulated over a period (<span class="xref std std-ref">ex:1.18</span>).</p>
 </section>
@@ -722,7 +758,7 @@ t &amp; 0\le t\le 1\\
 <p>For periodic signals with fundamental period <span class="math notranslate nohighlight">\(T_0\)</span></p>
 <div class="math notranslate nohighlight">
 \[M_x = \frac{1}{T_0}\int_{-T_0/2}^{T_0/2}x(t)\,dt\]</div>
-<p>The mean value is also known as the dc value.</p>
+<p>The mean value is also known as the <em>dc value</em>.</p>
 <p><strong>Observations</strong></p>
 <ul class="simple">
 <li><p>the mean value corresponds to the arithmetic average</p></li>
