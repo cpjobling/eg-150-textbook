@@ -96,6 +96,10 @@ heaviside(0)
 ```
 
 ```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
 plot_heaviside
 ```
 
@@ -220,7 +224,7 @@ Unit step functions can be used to represent other time-varying functions such a
 
 In the circuit shown above $i_s$ is a constant current source and the switch is closed at time $t=0$.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 When the current through the capacitor $i_c(t) = i_s$ is a constant and the voltage across the capacitor is
 
@@ -228,7 +232,7 @@ $$v_c(t) = \frac{1}{C}\int_{-\infty}^{t} i_c(\tau)\;d\tau$$
 
 where $\tau$ is a dummy variable.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Since the switch closes at $t=0$, we can express the current $i_c(t)$ as
 
@@ -238,7 +242,7 @@ and if $v_c(t) = 0$ for $t < 0$ we have
 
 $$v_c(t) = \frac{i_s}{C}\int_{-\infty}^{t} u_0(\tau)\;d\tau = \underbrace { \frac{i_s}{C}\int_{ - \infty }^0 0\;{\kern 1pt} d\tau }_0 + \frac{i_s}{C}\int_{0}^{t} 1\;d\tau$$
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 So, the voltage across the capacitor can be represented as
 
@@ -304,7 +308,7 @@ Details are given in equations 1.26&mdash;1.29 in Karris.
 
 In the circuit shown above, the switch is closed at time $t=0$ and $i_L(t)=0$ for $t<0$. Express the inductor current $i_L(t)$ in terms of the unit step function and hence derive an expression for $v_L(t)$.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 **Solution** 
 

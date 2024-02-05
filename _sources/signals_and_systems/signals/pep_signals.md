@@ -203,7 +203,7 @@ xlim([-3.00 3.00])
 ylim([0 1.2])
 ```
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "slide"}}
 
 (fundemental_period)=
 ### Fundamental period
@@ -243,7 +243,7 @@ A DC signal
 (nonperiodic_signals)=
 ### Nonperiodic signals
 
-Any continuous-time signal which is not periodic is called a *nonperiodic* (or *aperiodic*) sigmal. For example see {numref}`aperiodic_signal`
+Any continuous-time signal which is not periodic is called a *nonperiodic* (or *aperiodic*) signal. For example see {numref}`aperiodic_signal`
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
