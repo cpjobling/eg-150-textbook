@@ -644,7 +644,7 @@ document.write(`
 </section>
 <section id="zero-input-property">
 <h3>Zero input property<a class="headerlink" href="#zero-input-property" title="Permalink to this heading">#</a></h3>
-<p>Note that a consequence of the homegenity (or scaling) property of linear systems is that a <em>zero input yields a zero output</em>. This follows readilty by setting <span class="math notranslate nohighlight">\(\alpha = 0\)</span> in the equation <span class="math notranslate nohighlight">\(\mathbf{T}\left\{\alpha x\right\} = \alpha y\)</span>. This is another important property of linear systems.</p>
+<p>Note that a consequence of the homegenity (or scaling) property of linear systems is that a <em>zero input yields a zero output</em>. This follows readily by setting <span class="math notranslate nohighlight">\(\alpha = 0\)</span> in the equation <span class="math notranslate nohighlight">\(\mathbf{T}\left\{\alpha x\right\} = \alpha y\)</span>. This is another important property of linear systems.</p>
 </section>
 </section>
 <section id="time-invariant-and-time-varying-systems">
@@ -701,21 +701,21 @@ document.write(`
 </section>
 <section id="examples-4">
 <span id="worked-examples-4"></span><h2>Examples 4<a class="headerlink" href="#examples-4" title="Permalink to this heading">#</a></h2>
+<section id="example-4-1-rc-circuit">
+<span id="ex4-1"></span><h3>Example 4.1: RC Circuit<a class="headerlink" href="#example-4-1-rc-circuit" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
 </div>
-<section id="example-4-1-rc-circuit">
-<span id="ex4-1"></span><h3>Example 4.1: RC Circuit<a class="headerlink" href="#example-4-1-rc-circuit" title="Permalink to this heading">#</a></h3>
-<p>Consider the RC circuit shown in <a class="reference internal" href="#fig-rc-circuit"><span class="std std-numref">Fig. 30</span></a>. Find the relationship between the input <span class="math notranslate nohighlight">\(x(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t)\)</span></p>
-<p>(a) If <span class="math notranslate nohighlight">\(x(t) = v_s(t)\)</span> and <span class="math notranslate nohighlight">\(y(t) = v_c(t)\)</span>.</p>
-<p>(b) If <span class="math notranslate nohighlight">\(x(t) = v_s(t)\)</span> and <span class="math notranslate nohighlight">\(y(t) = i(t)\)</span>.</p>
 <figure class="align-default" id="fig-rc-circuit">
 <a class="reference internal image-reference" href="../../_images/RC_circuit1.png"><img alt="RC circuit" src="../../_images/RC_circuit1.png" style="width: 60%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 30 </span><span class="caption-text">RC circuit</span><a class="headerlink" href="#fig-rc-circuit" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<p>Consider the RC circuit shown in <a class="reference internal" href="#fig-rc-circuit"><span class="std std-numref">Fig. 30</span></a>. Find the relationship between the input <span class="math notranslate nohighlight">\(x(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t)\)</span></p>
+<p>(a) If <span class="math notranslate nohighlight">\(x(t) = v_s(t)\)</span> and <span class="math notranslate nohighlight">\(y(t) = v_c(t)\)</span>.</p>
+<p>(b) If <span class="math notranslate nohighlight">\(x(t) = v_s(t)\)</span> and <span class="math notranslate nohighlight">\(y(t) = i(t)\)</span>.</p>
 <p>For the answer, refer to the lecture recording or see solved problem 1.32 in <span id="id12">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-4-2-capacitor-circuit">
@@ -724,15 +724,15 @@ document.write(`
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
 </div>
-<p>Consider the capacitor shown in <a class="reference internal" href="#fig-cap-circuit"><span class="std std-numref">Fig. 31</span></a>. Let the input <span class="math notranslate nohighlight">\(x(t) = i(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t) = v_c(t)\)</span>.</p>
-<p>(a) Find the input-output relationship.</p>
-<p>(b) Determine whether the system is (i) memoryless, (ii) causal, (iii) linear, (iv) time invariant, or (v) stable.</p>
 <figure class="align-default" id="fig-cap-circuit">
 <a class="reference internal image-reference" href="../../_images/cap_circuit.png"><img alt="A capacitor citcuit." src="../../_images/cap_circuit.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 31 </span><span class="caption-text">A capacitor citcuit.</span><a class="headerlink" href="#fig-cap-circuit" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">A capacitor circuit.</span><a class="headerlink" href="#fig-cap-circuit" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<p>Consider the capacitor shown in <a class="reference internal" href="#fig-cap-circuit"><span class="std std-numref">Fig. 31</span></a>. Let the input <span class="math notranslate nohighlight">\(x(t) = i(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t) = v_c(t)\)</span>.</p>
+<p>(a) Find the input-output relationship.</p>
+<p>(b) Determine whether the system is (i) memoryless, (ii) causal, (iii) linear, (iv) time invariant, or (v) stable.</p>
 <p>For the answer, refer to the lecture recording or see solved problem 1.33 in <span id="id13">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-4-3-signal-modulator">
@@ -756,7 +756,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[y = \mathbf{T}\left\{x\right\} = x^2\]</div>
 <p>Show that this system is nonlinear.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 1.35 in <span id="id15">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, see the solved problem 1.35 in <span id="id15">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-4-5">
 <span id="ex4-5"></span><h3>Example 4.5<a class="headerlink" href="#example-4-5" title="Permalink to this heading">#</a></h3>
@@ -764,14 +764,14 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[y = ax + b\]</div>
 <p>where <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are the input and output respectively and <span class="math notranslate nohighlight">\(s\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are constant. Is this system linear?</p>
-<p>For the answer, refer to the lecture recording or see solved problem 1.40 in <span id="id16">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, see the solved problem 1.40 in <span id="id16">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-4-6">
 <span id="ex4-6"></span><h3>Example 4.6<a class="headerlink" href="#example-4-6" title="Permalink to this heading">#</a></h3>
 <p>(a) Show that the causality for a continuous-time linear system is equivalent to the following statement: For any time <span class="math notranslate nohighlight">\(t_0\)</span> and any input <span class="math notranslate nohighlight">\(x(t)\)</span> with <span class="math notranslate nohighlight">\(x(t) = 0\)</span> for <span class="math notranslate nohighlight">\(t \le t_0\)</span>, the output <span class="math notranslate nohighlight">\(y(t)\)</span> is zero for <span class="math notranslate nohighlight">\(t \le t_0\)</span>.</p>
 <p>(b) Find a nonlinear system that is causal but does not satisfy this condition.</p>
 <p>(c) Find a nonlinear system that satisfies this condition but is not causal.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 1.43 in <span id="id17">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, see the solved problem 1.43 in <span id="id17">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-4-7">
 <span id="ex4-7"></span><h3>Example 4.7<a class="headerlink" href="#example-4-7" title="Permalink to this heading">#</a></h3>
