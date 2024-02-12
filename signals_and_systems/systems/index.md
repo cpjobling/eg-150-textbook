@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.4
+    jupytext_version: 1.15.2
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -18,7 +18,7 @@ kernelspec:
 
 This section is based on Section 1.5 of {cite}`schaum`.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "skip"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/systems](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/systems)
 
@@ -98,7 +98,7 @@ If the input and output signals  𝑥  and  𝑦  are continuous-time signals, t
 
 If the input and output signals  𝑥  and  𝑦  are discrete-time signals or sequences, then the system is called a *discrete-time system* ({numref}`fig:ct_n_dt_system`(b)).
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 :::{figure-md} fig:ct_n_dt_system
 <img src="pictures/ct_n_dt_system.png" alt="Continuous-time and discrete-time systems" width="60%">
@@ -178,7 +178,7 @@ Thus, in a causal system, it is not possible to obtain an output before an input
 
 A system is called *noncausal* (or *anticipative*) if its output at the present time depends on future values of the input.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 An example of a noncausal system is
 
@@ -257,7 +257,7 @@ $$y = \cos x$$
 
 ### Zero input property
 
-Note that a consequence of the homegenity (or scaling) property of linear systems is that a *zero input yields a zero output*. This follows readilty by setting $\alpha = 0$ in the equation $\mathbf{T}\left\{\alpha x\right\} = \alpha y$. This is another important property of linear systems.
+Note that a consequence of the homegenity (or scaling) property of linear systems is that a *zero input yields a zero output*. This follows readily by setting $\alpha = 0$ in the equation $\mathbf{T}\left\{\alpha x\right\} = \alpha y$. This is another important property of linear systems.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -345,7 +345,7 @@ A special class of systems of great importance consists of systems having *feedb
 
 In a *feedback system*, a portion of the output signal is fed back and added to the input as shown in {numref}`fig:feedback`.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 :::{figure-md} fig:feedback
 <img src="pictures/feedback.png" alt="A feedback system with negative feedback" width="60%">
@@ -362,28 +362,31 @@ You will see examples of systems with feedback when you study op-amp circuits in
 (worked_examples_4)=
 ## Examples 4
 
-```{admonition} MATLAB Example
-:class: tip
-We will solve this example by hand and then give the solution in the MATLAB lab.
-```
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex4.1)=
 
 ### Example 4.1: RC Circuit 
 
-Consider the RC circuit shown in {numref}`fig:rc_circuit`. Find the relationship between the input $x(t)$ and the output $y(t)$
 
-(a) If $x(t) = v_s(t)$ and $y(t) = v_c(t)$.
-
-(b) If $x(t) = v_s(t)$ and $y(t) = i(t)$.
+```{admonition} MATLAB Example
+:class: tip
+We will solve this example by hand and then give the solution in the MATLAB lab.
+```
 
 :::{figure-md} fig:rc_circuit
 <img src="pictures/RC_circuit.png" alt="RC circuit" width="60%">
 
 RC circuit
 :::
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Consider the RC circuit shown in {numref}`fig:rc_circuit`. Find the relationship between the input $x(t)$ and the output $y(t)$
+
+(a) If $x(t) = v_s(t)$ and $y(t) = v_c(t)$.
+
+(b) If $x(t) = v_s(t)$ and $y(t) = i(t)$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -399,17 +402,19 @@ For the answer, refer to the lecture recording or see solved problem 1.32 in {ci
 We will solve this example by hand and then give the solution in the MATLAB lab.
 ```
 
+:::{figure-md} fig:cap_circuit
+<img src="pictures/cap_circuit.png" alt="A capacitor citcuit." width="60%">
+
+A capacitor circuit.
+:::
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
 Consider the capacitor shown in {numref}`fig:cap_circuit`. Let the input $x(t) = i(t)$ and the output $y(t) = v_c(t)$.
 
 (a) Find the input-output relationship.
 
 (b) Determine whether the system is (i) memoryless, (ii) causal, (iii) linear, (iv) time invariant, or (v) stable.
-
-:::{figure-md} fig:cap_circuit
-<img src="pictures/cap_circuit.png" alt="A capacitor citcuit." width="60%">
-
-A capacitor citcuit.
-:::
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -453,7 +458,7 @@ Show that this system is nonlinear.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.35 in {cite}`schaum`.
+For the answer, see the solved problem 1.35 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -468,7 +473,7 @@ where $x$ and $y$ are the input and output respectively and $s$ and $b$ are cons
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.40 in {cite}`schaum`.
+For the answer, see the solved problem 1.40 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -483,7 +488,7 @@ For the answer, refer to the lecture recording or see solved problem 1.40 in {ci
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-For the answer, refer to the lecture recording or see solved problem 1.43 in {cite}`schaum`.
+For the answer, see the solved problem 1.43 in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
