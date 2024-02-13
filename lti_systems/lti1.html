@@ -552,10 +552,10 @@ document.write(`
 \[ = \int_{-\infty}^{\infty}x(t)\mathbf{T}\left\{\delta(t - \tau)\right\}\]</div>
 <p>Since the system is time-invariant, we have</p>
 <div class="math notranslate nohighlight">
-\[h(t-\tau)=\mathbf{T}\left\{\delta(t-\tau)\right\}\,d\tau\]</div>
+\[h(t-\tau)=\mathbf{T}\left\{\delta(t-\tau)\right\}\]</div>
 <p>Substituting <span class="math notranslate nohighlight">\(h(t-\tau)\)</span> into the equation for <span class="math notranslate nohighlight">\(y(t)\)</span> gives</p>
 <div class="math notranslate nohighlight">
-\[y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau\]</div>
+\[y(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau\]</div>
 <p>This equation indicates that a continuous-time LTI system is completely characterised by its impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>.</p>
 </section>
 <section id="c-convolution-integral">
@@ -606,7 +606,7 @@ document.write(`
 \[y(t) = h(t) * x(t) = \int_{-\infty}^{\infty}h(\tau)x(t-\tau)\,d\tau\]</div>
 <p>which may at times be easier to evaluate than</p>
 <div class="math notranslate nohighlight">
-\[y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau\]</div>
+\[y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau\]</div>
 <section id="graphical-evaluation-of-the-convolution-integral">
 <h3>Graphical Evaluation of the Convolution Integral<a class="headerlink" href="#graphical-evaluation-of-the-convolution-integral" title="Permalink to this heading">#</a></h3>
 <p>The convolution integral is most conveniently evaluated by a graphical evaluation. We give three examples (5.4—5.6) which we will demonstrate in class using a <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/25199-graphical-demonstration-of-convolution">graphical visualization tool</a> developed by Teja Muppirala of the Mathworks and updated by Rory Adams.</p>
@@ -614,16 +614,23 @@ document.write(`
 <p>We will then work through the examples again in the examples class.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span>
-<span class="nb">cd</span><span class="w"> </span><span class="n">matlab</span><span class="o">/</span><span class="n">convolution_demo</span>
-<span class="nb">pwd</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="n">matlab</span><span class="o">/</span><span class="n">convolution_demo</span>
+<span class="nb">dir</span>
+<span class="n">convolutiondemo</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-
-    &#39;/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/lti_systems/matlab/convolution_demo&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.                  README.md          license.txt        
+..                 convolutiondemo.m  
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 398)
+In convolutiondemo&gt;gui_mainfcn (line 1181)
+In convolutiondemo (line 44)
 </pre></div>
 </div>
 </div>
@@ -631,16 +638,6 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">convolutiondemo</span><span class="w"> </span><span class="s">%</span><span class="w"> </span><span class="s">ignore</span><span class="w"> </span><span class="s">warnings</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 398)
-In convolutiondemo&gt;gui_mainfcn (line 1181)
-In convolutiondemo (line 44)
 </pre></div>
 </div>
 </div>
@@ -718,7 +715,7 @@ In convolutiondemo (line 44)
 \[h(t) = e^{-\alpha t}u_0(t),\;\alpha &gt; 0\]</div>
 <p>(a) Compute the output <span class="math notranslate nohighlight">\(y(t)\)</span> by using the convolution integral</p>
 <div class="math notranslate nohighlight">
-\[y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau\]</div>
+\[y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau\]</div>
 <p>(b) Compute the output <span class="math notranslate nohighlight">\(y(t)\)</span> by using the convolution integral</p>
 <div class="math notranslate nohighlight">
 \[y(t) = h(t) * x(t) = \int_{-\infty}^{\infty}h(\tau)x(t-\tau)\,d\tau\]</div>
@@ -751,13 +748,13 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/22f5fe8efe851a468963ad4c07fa07ef12a8c5ba407f836247540093257db1a2.png" src="../_images/22f5fe8efe851a468963ad4c07fa07ef12a8c5ba407f836247540093257db1a2.png" />
+<img alt="../_images/da402715809c28d291b52e8ef2475fa3b807bf6a65d1045f588cd44294108171.png" src="../_images/da402715809c28d291b52e8ef2475fa3b807bf6a65d1045f588cd44294108171.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the MATLAB function <code class="docutils literal notranslate"><span class="pre">int</span></code> to compute the convolution integral symbolically.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="nb">Inf</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -790,9 +787,7 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ya(t) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
@@ -801,7 +796,7 @@ In convolutiondemo (line 44)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
-<img alt="../_images/ad2b39fb894e909ddecd535e90c03b1bc445b9ed84d5de3367b757d32029f44b.png" src="../_images/ad2b39fb894e909ddecd535e90c03b1bc445b9ed84d5de3367b757d32029f44b.png" />
+<img alt="../_images/858cd3708697777a038e7b5ecf362b16b65e435bfa82dcb997ef3ffa0f3d068d.png" src="../_images/858cd3708697777a038e7b5ecf362b16b65e435bfa82dcb997ef3ffa0f3d068d.png" />
 </div>
 </div>
 </section>
@@ -826,7 +821,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8f5c83e8a825a6c4fddbfae5ebc71464fefb794ec023a288cb86455be0497398.png" src="../_images/8f5c83e8a825a6c4fddbfae5ebc71464fefb794ec023a288cb86455be0497398.png" />
+<img alt="../_images/3aa66b0b648dc42969f9ce7c10bb64136f9253433f5dde692f5b181646b944fc.png" src="../_images/3aa66b0b648dc42969f9ce7c10bb64136f9253433f5dde692f5b181646b944fc.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -840,7 +835,9 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
- 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-(2*exp(-(alpha*t)/2)*(exp(-(alpha*t)/2)/2 - exp((alpha*t)/2)/2)*(sign(t)/2 + 1/2))/alpha
@@ -864,7 +861,9 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>yb(t) =
- 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
@@ -873,7 +872,7 @@ In convolutiondemo (line 44)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
-<img alt="../_images/7c5b6a38f242a831a1333a00d382c414772383c6f6dd9d350cb4d8fbb9f2f035.png" src="../_images/7c5b6a38f242a831a1333a00d382c414772383c6f6dd9d350cb4d8fbb9f2f035.png" />
+<img alt="../_images/22bee0e033e6f3974de6a11965c961eaa9b6276644623045952f06b32a2dbb86.png" src="../_images/22bee0e033e6f3974de6a11965c961eaa9b6276644623045952f06b32a2dbb86.png" />
 </div>
 </div>
 <p>Go back to <a class="reference internal" href="#step-response"><span class="std std-ref">F. Step Response</span></a></p>
@@ -910,7 +909,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0ed099d4cf953530564d629c7495063a223e2bfa9e6c30ffd34cc313fe19137e.png" src="../_images/0ed099d4cf953530564d629c7495063a223e2bfa9e6c30ffd34cc313fe19137e.png" />
+<img alt="../_images/1f4f79afacbf8ee6158724cd3cf23dc815b3642a98d8418eaf899ff1ccccffa4.png" src="../_images/1f4f79afacbf8ee6158724cd3cf23dc815b3642a98d8418eaf899ff1ccccffa4.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the convolution integral</p>
@@ -925,7 +924,9 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
- 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>piecewise(0 &lt;= t, exp(-t)/2, t &lt;= 0, exp(t)/2)
@@ -944,7 +945,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2bca926e5ae6720849268b052a75d6f1e283be9176fcd975c9c9ad2b68e7cb3c.png" src="../_images/2bca926e5ae6720849268b052a75d6f1e283be9176fcd975c9c9ad2b68e7cb3c.png" />
+<img alt="../_images/c0393a8890d59e5f87fd48b22e4b1acbf95381ebad40f21463948aa60df723c3.png" src="../_images/c0393a8890d59e5f87fd48b22e4b1acbf95381ebad40f21463948aa60df723c3.png" />
 </div>
 </div>
 </section>
@@ -981,7 +982,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/dc572bb11cc6b368e7d0043f3ae2ca34b6a78851e4cb32f6d67a621a9e29d1cb.png" src="../_images/dc572bb11cc6b368e7d0043f3ae2ca34b6a78851e4cb32f6d67a621a9e29d1cb.png" />
+<img alt="../_images/20724c1e91db32f4464007eb256c41f4d3fded057da932d8481540163db0ee38.png" src="../_images/20724c1e91db32f4464007eb256c41f4d3fded057da932d8481540163db0ee38.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span></p>
@@ -1015,7 +1016,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/347e6a2c7f97382035c532bcdd3500e0a1a456ae085cc06bacc1f4cf566bb86f.png" src="../_images/347e6a2c7f97382035c532bcdd3500e0a1a456ae085cc06bacc1f4cf566bb86f.png" />
+<img alt="../_images/2beda1129682c1fb141d6becbc2c529f768976780b8ae1d69373d4f9a2380dae.png" src="../_images/2beda1129682c1fb141d6becbc2c529f768976780b8ae1d69373d4f9a2380dae.png" />
 </div>
 </div>
 </section>
@@ -1044,9 +1045,10 @@ In convolutiondemo (line 44)
 <h3>Unit 3.1: Take Aways<a class="headerlink" href="#unit-3-1-take-aways" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><em>Impulse response</em>: <span class="math notranslate nohighlight">\(h(t) = \mathbf{T}\left\{\delta(t)\right\}\)</span></p></li>
+<li><p><em>Step response</em>: <span class="math notranslate nohighlight">\(s(t) = \mathbf{T}\left\{u_0(t)\right\} = \int_0^t h(\tau)\,d\tau\)</span></p></li>
 <li><p><em>Arbitrary system response</em>: <span class="math notranslate nohighlight">\(y(t) = \int_{-\infty}^{\infty} x(t)h(t-\tau)\,d\tau\)</span></p></li>
-<li><p><em>Convolution itegral</em>: <span class="math notranslate nohighlight">\(y(t) = x(t)*h(t) = \int_{-\infty}^{\infty} x(t)h(t-\tau)\,d\tau = \int_{-\infty}^{\infty} x(t=\tau)h(t)\,d\tau\)</span></p></li>
-<li><p>*Properties of the convolution integral:</p>
+<li><p><em>Convolution itegral</em>: <span class="math notranslate nohighlight">\(y(t) = x(t)*h(t) = \int_{-\infty}^{\infty} x(t)h(t-\tau)\,d\tau = \int_{-\infty}^{\infty} x(t-\tau)h(\tau)\,d\tau\)</span></p></li>
+<li><p><em>Properties of the convolution integra</em>l:</p>
 <ul>
 <li><p><em>Communitative</em>: <span class="math notranslate nohighlight">\(x(t) * h(t) = h(t) * x(t)\)</span></p></li>
 <li><p><em>Associative</em>: <span class="math notranslate nohighlight">\(\left\{x(t) * h_1(t) \right\} * h_2(t) = x(t)*\left\{h_1(t) * h_2(t) \right\}\)</span></p></li>

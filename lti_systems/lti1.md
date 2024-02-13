@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.4
+    jupytext_version: 1.15.2
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -19,7 +19,7 @@ kernelspec:
 
 This section is based on Section 2.1 of {cite}`schaum`.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "skip"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/lti_systems/lti1](https://cpjobling.github.io/eg-150-textbook/lti_systems/lti1)
 
@@ -75,13 +75,13 @@ $$ = \int_{-\infty}^{\infty}x(t)\mathbf{T}\left\{\delta(t - \tau)\right\}$$
 
 Since the system is time-invariant, we have
 
-$$h(t-\tau)=\mathbf{T}\left\{\delta(t-\tau)\right\}\,d\tau$$
+$$h(t-\tau)=\mathbf{T}\left\{\delta(t-\tau)\right\}$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 Substituting $h(t-\tau)$ into the equation for $y(t)$ gives
 
-$$y(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$
+$$y(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -166,7 +166,7 @@ $$y(t) = h(t) * x(t) = \int_{-\infty}^{\infty}h(\tau)x(t-\tau)\,d\tau$$
 
 which may at times be easier to evaluate than
 
-$$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$
+$$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -183,9 +183,9 @@ We will then work through the examples again in the examples class.
 slideshow:
   slide_type: fragment
 ---
-clear all
 cd matlab/convolution_demo
-pwd
+dir
+convolutiondemo
 ```
 
 ```{code-cell}
@@ -324,7 +324,7 @@ $$h(t) = e^{-\alpha t}u_0(t),\;\alpha > 0$$
 
 (a) Compute the output $y(t)$ by using the convolution integral
 
-$$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(t)h(t-\tau)\,d\tau$$
+$$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau$$
 
 (b) Compute the output $y(t)$ by using the convolution integral
 
@@ -379,7 +379,7 @@ Compute $y(t)$ using the MATLAB function `int` to compute the convolution integr
 slideshow:
   slide_type: fragment
 ---
-y(t) = int(x(tau)*h(t - tau),tau,-Inf,Inf)
+y(t) = int(x(tau)*h(t - tau),tau,0,t)
 ```
 
 Plot the result for $\alpha = 1$
@@ -603,9 +603,10 @@ In this lecture we have looked at
 ### Unit 3.1: Take Aways
 
 * *Impulse response*: $h(t) = \mathbf{T}\left\{\delta(t)\right\}$
+* *Step response*: $s(t) = \mathbf{T}\left\{u_0(t)\right\} = \int_0^t h(\tau)\,d\tau$
 * *Arbitrary system response*: $y(t) = \int_{-\infty}^{\infty} x(t)h(t-\tau)\,d\tau$
-* *Convolution itegral*: $y(t) = x(t)*h(t) = \int_{-\infty}^{\infty} x(t)h(t-\tau)\,d\tau = \int_{-\infty}^{\infty} x(t=\tau)h(t)\,d\tau$
-* *Properties of the convolution integral:
+* *Convolution itegral*: $y(t) = x(t)*h(t) = \int_{-\infty}^{\infty} x(t)h(t-\tau)\,d\tau = \int_{-\infty}^{\infty} x(t-\tau)h(\tau)\,d\tau$
+* *Properties of the convolution integra*l:
   * *Communitative*: $x(t) * h(t) = h(t) * x(t)$
   * *Associative*: $\left\{x(t) * h_1(t) \right\} * h_2(t) = x(t)*\left\{h_1(t) * h_2(t) \right\}$
   * *Distributive*: $x(t)*\left\{h_1(t) + h_2(t)\right\} = x(t)*h_1(t) + x(t) * h_2(t)$
