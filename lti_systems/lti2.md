@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.4
+    jupytext_version: 1.15.2
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -19,7 +19,7 @@ kernelspec:
 
 This section is based on Sections 2.3 and 2.4 of {cite}`schaum`
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/lti_systems/lti2](https://cpjobling.github.io/eg-150-textbook/lti_systems/lti2)
 
@@ -72,6 +72,8 @@ Therefore, if $h(t_0) \neq 0$ for $t_0 \neq 0$, then the continuous-time LTI sys
 
 (b_causality)=
 ### B. Causality
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (causal_systems)=
 #### Causal continuous-time LTI systems
@@ -137,8 +139,8 @@ $$\int_{-\infty}^{\infty}\left|h(\tau)\right|\,d\tau \lt \infty$$ (eq:221)
 (eigenfunctions_of_continuous_time_LTI_systems)=
 ## Eigenfunctions of Continuous-Time LTI Systems
 
-In Chapter [Systems and Classification of Systems
-](/systems_and_signals/signals_and_systems/systems/index) (Example {ref}`ex4_7`) we saw that the eigenfunctions of continuous-time LTI system represented by the complex exponentials $e^{st}$, with $s$ a complex variable.
+In Unit 2.4 [UnSystems and Classification of Systems
+](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/systems/index.html#ex4-7) (Example {ref}`ex4_7`) we saw that the eigenfunctions of continuous-time LTI system represented by the complex exponentials $e^{st}$, with $s$ a complex variable.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -244,6 +246,17 @@ Signal for Exercise 6.2
 +++ {"slideshow": {"slide_type": "notes"}}
 
 For the answer, refer to the lecture recording or see solved problem 2.2 in in {cite}schaum.
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+syms t y(t) 
+u_0(t) = heaviside(t);
+y(t) = exp(-(t-1))*u_0(t-1) - exp(-(t-3))*u_0(t-3);
+fplot(y(t),[0, 6]),ylim([-1,1.25]),grid,xlabel('t'),ylabel('y(t)')
+```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 

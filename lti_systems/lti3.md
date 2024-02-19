@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.4
+    jupytext_version: 1.15.2
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -19,7 +19,7 @@ kernelspec:
 
 This section is based on Section 2.5 of {cite}`schaum`
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/lti_systems/lti3](https://cpjobling.github.io/eg-150-textbook/lti_systems/lti3)
 
@@ -301,7 +301,7 @@ where $a$ is a constant.
 
 (a) Find $y(t)$ with the auxilliary condition $y(0) = y_0$ and
 
-$$x(t) = Ke^{bt}u_0(t)$$
+$$x(t) = Ke^{-bt}u_0(t)$$
 
 (b) Express $y(t)$ in terms of the zero-input and zero-state responses.
 
