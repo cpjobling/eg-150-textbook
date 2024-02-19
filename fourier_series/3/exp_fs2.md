@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.4
+    jupytext_version: 1.15.2
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -97,7 +97,7 @@ In MATLAB, the easiest way to plot this is using a *stem plot* of the lines, rep
 
 ### Line Spectra for Exp. FS
 
-When the Exponential Fourier series are known it is useful to plot the amplitude and phase of the harmonics on a frequency scale.
+When the exponential Fourier series are known it is useful to plot the amplitude and phase of the harmonics on a frequency scale.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

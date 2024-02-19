@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.4
+    jupytext_version: 1.15.2
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -19,7 +19,7 @@ kernelspec:
 
 This section is based on Sections 2.3 and 2.4 of {cite}`schaum`
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/lti_systems/lti2](https://cpjobling.github.io/eg-150-textbook/lti_systems/lti2)
 
@@ -244,6 +244,17 @@ Signal for Exercise 6.2
 +++ {"slideshow": {"slide_type": "notes"}}
 
 For the answer, refer to the lecture recording or see solved problem 2.2 in in {cite}schaum.
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+syms t y(t) 
+u_0(t) = heaviside(t);
+y(t) = exp(-(t-1))*u_0(t-1) - exp(-(t-3))*u_0(t-3);
+fplot(y(t),[0, 6]),ylim([-1,1.25]),grid,xlabel('t'),ylabel('y(t)')
+```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
