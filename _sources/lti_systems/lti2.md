@@ -73,6 +73,8 @@ Therefore, if $h(t_0) \neq 0$ for $t_0 \neq 0$, then the continuous-time LTI sys
 (b_causality)=
 ### B. Causality
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
 (causal_systems)=
 #### Causal continuous-time LTI systems
 
@@ -137,8 +139,8 @@ $$\int_{-\infty}^{\infty}\left|h(\tau)\right|\,d\tau \lt \infty$$ (eq:221)
 (eigenfunctions_of_continuous_time_LTI_systems)=
 ## Eigenfunctions of Continuous-Time LTI Systems
 
-In Chapter [Systems and Classification of Systems
-](/systems_and_signals/signals_and_systems/systems/index) (Example {ref}`ex4_7`) we saw that the eigenfunctions of continuous-time LTI system represented by the complex exponentials $e^{st}$, with $s$ a complex variable.
+In Unit 2.4 [UnSystems and Classification of Systems
+](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/systems/index.html#ex4-7) (Example {ref}`ex4_7`) we saw that the eigenfunctions of continuous-time LTI system represented by the complex exponentials $e^{st}$, with $s$ a complex variable.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
