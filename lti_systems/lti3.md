@@ -321,7 +321,7 @@ Substituting for $y_p(t)$ in the differential equation we have
 
 $$-bAe^{-bt}+aAe^{-bt} = Ke^{-bt}$$
 
-from which, after cancelling the constant term $e^{-bt}$, gives
+from which, after cancelling the common term $e^{-bt}$, gives
 
 $$A = K(a -b)$$
 
@@ -343,7 +343,7 @@ $$y_h(t) = Be^{-at}$$
 
 Combining $y_p(t)$ and $y_h(t)$ we have
 
-$$y(t) = y_p(t) + y_h(t) = Be^{-at} + \frac{K}{a-b}e^{bt}\quad t> 0$$
+$$y(t) = y_p(t) + y_h(t) = Be^{-at} + \frac{K}{a-b}e^{-bt}\quad t> 0$$
 
 Using the auxilary equation $y(0) = y_0$
 
@@ -351,7 +351,7 @@ $$B = y_0 - \frac{K}{a - b}$$
 
 then
 
-$$y(t) = \left(y_0 - \frac{K}{a - b}\right) + \frac{K}{a-b}e^{bt}\quad t> 0$$
+$$y(t) = \left(y_0 - \frac{K}{a - b}\right) + \frac{K}{a-b}e^{-bt}\quad t> 0$$
 
 For $t < 0$ we have $x(t) = 0$ and the differential equation becomes equal to the homogeneous equation $y_h(t)$ so
 

@@ -693,7 +693,7 @@ document.write(`
 <p>Substituting for <span class="math notranslate nohighlight">\(y_p(t)\)</span> in the differential equation we have</p>
 <div class="math notranslate nohighlight">
 \[-bAe^{-bt}+aAe^{-bt} = Ke^{-bt}\]</div>
-<p>from which, after cancelling the constant term <span class="math notranslate nohighlight">\(e^{-bt}\)</span>, gives</p>
+<p>from which, after cancelling the common term <span class="math notranslate nohighlight">\(e^{-bt}\)</span>, gives</p>
 <div class="math notranslate nohighlight">
 \[A = K(a -b)\]</div>
 <p>and</p>
@@ -710,13 +710,13 @@ document.write(`
 \[y_h(t) = Be^{-at}\]</div>
 <p>Combining <span class="math notranslate nohighlight">\(y_p(t)\)</span> and <span class="math notranslate nohighlight">\(y_h(t)\)</span> we have</p>
 <div class="math notranslate nohighlight">
-\[y(t) = y_p(t) + y_h(t) = Be^{-at} + \frac{K}{a-b}e^{bt}\quad t&gt; 0\]</div>
+\[y(t) = y_p(t) + y_h(t) = Be^{-at} + \frac{K}{a-b}e^{-bt}\quad t&gt; 0\]</div>
 <p>Using the auxilary equation <span class="math notranslate nohighlight">\(y(0) = y_0\)</span></p>
 <div class="math notranslate nohighlight">
 \[B = y_0 - \frac{K}{a - b}\]</div>
 <p>then</p>
 <div class="math notranslate nohighlight">
-\[y(t) = \left(y_0 - \frac{K}{a - b}\right) + \frac{K}{a-b}e^{bt}\quad t&gt; 0\]</div>
+\[y(t) = \left(y_0 - \frac{K}{a - b}\right) + \frac{K}{a-b}e^{-bt}\quad t&gt; 0\]</div>
 <p>For <span class="math notranslate nohighlight">\(t &lt; 0\)</span> we have <span class="math notranslate nohighlight">\(x(t) = 0\)</span> and the differential equation becomes equal to the homogeneous equation <span class="math notranslate nohighlight">\(y_h(t)\)</span> so</p>
 <div class="math notranslate nohighlight">
 \[y(t) = Be^{-at}\quad t &lt; 0\]</div>
