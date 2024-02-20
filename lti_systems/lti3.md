@@ -25,7 +25,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook/lti_systems/lti3](https://c
 
 ![QR Code for this lecture](pictures/qrcode_lti3.png)
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Subjects to be covered
 
@@ -34,7 +34,7 @@ We conclude our introduction to continuous-time LTI system by considering
 * {ref}`Continuous_Time_LTI_Systems_Described_by_Differential_Equations`
 * {ref}`examples_8`
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 (Continuous_Time_LTI_Systems_Described_by_Differential_Equations)=
 ## Continuous-time LTI systems described by differential equations
@@ -96,11 +96,7 @@ $$y(t)=y_p(t)+y_h(t)$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-where $y_p(t)$ is a *particular solution* satisfying the linear constant-coefficient differential equation
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-and $y_h(t)$ is a *homegeneous solution* (or *complementary solution*) satisfying the homegeneous differential equation
+where $y_p(t)$ is a *particular solution* satisfying the linear constant-coefficient differential equation and $y_h(t)$ is a *homegeneous solution* (or *complementary solution*) satisfying the homegeneous differential equation
 
 $$\sum_{k=0}^N a_k \frac{d^k}{dt^k}y(t)=0$$
 
