@@ -25,7 +25,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook/lti_systems/lti3](https://c
 
 ![QR Code for this lecture](pictures/qrcode_lti3.png)
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Subjects to be covered
 
@@ -34,7 +34,7 @@ We conclude our introduction to continuous-time LTI system by considering
 * {ref}`Continuous_Time_LTI_Systems_Described_by_Differential_Equations`
 * {ref}`examples_8`
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 (Continuous_Time_LTI_Systems_Described_by_Differential_Equations)=
 ## Continuous-time LTI systems described by differential equations
@@ -96,11 +96,7 @@ $$y(t)=y_p(t)+y_h(t)$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-where $y_p(t)$ is a *particular solution* satisfying the linear constant-coefficient differential equation
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-and $y_h(t)$ is a *homegeneous solution* (or *complementary solution*) satisfying the homegeneous differential equation
+where $y_p(t)$ is a *particular solution* satisfying the linear constant-coefficient differential equation and $y_h(t)$ is a *homegeneous solution* (or *complementary solution*) satisfying the homegeneous differential equation
 
 $$\sum_{k=0}^N a_k \frac{d^k}{dt^k}y(t)=0$$
 
@@ -321,7 +317,7 @@ Substituting for $y_p(t)$ in the differential equation we have
 
 $$-bAe^{-bt}+aAe^{-bt} = Ke^{-bt}$$
 
-from which, after cancelling the constant term $e^{-bt}$, gives
+from which, after cancelling the common term $e^{-bt}$, gives
 
 $$A = K(a -b)$$
 
@@ -343,7 +339,7 @@ $$y_h(t) = Be^{-at}$$
 
 Combining $y_p(t)$ and $y_h(t)$ we have
 
-$$y(t) = y_p(t) + y_h(t) = Be^{-at} + \frac{K}{a-b}e^{bt}\quad t> 0$$
+$$y(t) = y_p(t) + y_h(t) = Be^{-at} + \frac{K}{a-b}e^{-bt}\quad t> 0$$
 
 Using the auxilary equation $y(0) = y_0$
 
@@ -351,7 +347,7 @@ $$B = y_0 - \frac{K}{a - b}$$
 
 then
 
-$$y(t) = \left(y_0 - \frac{K}{a - b}\right) + \frac{K}{a-b}e^{bt}\quad t> 0$$
+$$y(t) = \left(y_0 - \frac{K}{a - b}\right) + \frac{K}{a-b}e^{-bt}\quad t> 0$$
 
 For $t < 0$ we have $x(t) = 0$ and the differential equation becomes equal to the homogeneous equation $y_h(t)$ so
 
