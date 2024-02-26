@@ -1,4 +1,5 @@
 <!-- #region -->
+(lt_table)=
 # Common Laplace Transform Pairs
 
 ## Transforms of Elementary Signals

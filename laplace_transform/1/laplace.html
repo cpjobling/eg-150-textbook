@@ -542,7 +542,7 @@ document.write(`
 <p>and the signal <span class="math notranslate nohighlight">\(x(t)\)</span> and its Laplace transform <span class="math notranslate nohighlight">\(X(s)\)</span> are said to form a Laplace transform pair denoted as</p>
 <div class="math notranslate nohighlight">
 \[x(t)\Leftrightarrow X(s)\]</div>
-<p>Laplace transform pairs are tabulated (<span class="xref std std-doc">lt_table.md</span>) for ease of reference.</p>
+<p>Laplace transform pairs are tabulated (<a class="reference internal" href="lt_table.html#lt-table"><span class="std std-ref">Common Laplace Transform Pairs</span></a>) for ease of reference.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>By convention, lower-case symbols are used for continuous-time signals and uppercase symbols for their Laplace tranforms.</p>
@@ -686,7 +686,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </figcaption>
 </figure>
 <p>because <span class="math notranslate nohighlight">\(\lim_{t\to \infty}e^{-(s+a)t} = 0\)</span> only if <span class="math notranslate nohighlight">\(\mathrm{Re}(s + a)\gt 0\)</span> or <span class="math notranslate nohighlight">\(\mathrm{Re}(s)\gt -a\)</span>.</p>
-<p>Thus, the ROC for <a class="reference internal" href="#laplace-ex1"><span class="std std-ref">Solved Problem 1</span></a> is specified as <span class="math notranslate nohighlight">\(\mathrm{Re}(s)\gt -a\)</span> and is illustrated in the complex plane as showm in <a class="reference internal" href="#roc2"><span class="std std-numref">Fig. 43</span></a> by the shaded area to the right of the line $\mathrm{Re}(s)=-a.</p>
+<p>Thus, the ROC for <a class="reference internal" href="#laplace-ex1"><span class="std std-ref">Solved Problem 1</span></a> is specified as <span class="math notranslate nohighlight">\(\mathrm{Re}(s)\gt -a\)</span> and is illustrated in the complex plane as showm in <a class="reference internal" href="#roc2"><span class="std std-numref">Fig. 43</span></a> by the shaded area to the right of the line <span class="math notranslate nohighlight">\(\mathrm{Re}(s)=-a\)</span>.</p>
 <p>In Laplace transform applications, the complex plane is commonly referred to as the s-plane. The horizontal and vertical axes are sometimes referred to as the <span class="math notranslate nohighlight">\(\sigma\)</span>-axis (<span class="math notranslate nohighlight">\(\mathrm{Re}(s)\)</span>) and the <span class="math notranslate nohighlight">\(j\omega\)</span>-axis (<span class="math notranslate nohighlight">\(\mathrm{Im}(s)\)</span>), respectively.</p>
 </section>
 </section>
@@ -871,7 +871,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <h3>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h3>
 <p>a)</p>
 <div class="math notranslate nohighlight">
-\[X(s) = -\int_{-\infty}^{\infty}e^{-at}u_o(-t)e^{-st}\,dt=-\int_{-\infty}^{0^{-}}e^{-(s+a)t}\]</div>
+\[X(s) = -\int_{-\infty}^{\infty}e^{-at}u_o(-t)e^{-st}\,dt=-\int_{-\infty}^{0^{-}}e^{-(s+a)t}\,dt\]</div>
 <div class="math notranslate nohighlight">
 \[X(s) = \left.\frac{1}{s+a}e^{-(s+a)t}\right|_{-\infty}^{0^{-}}=\frac{1}{s+a}\quad\mathrm{Re}(s)\lt-a\]</div>
 <p>Thus we obtain</p>
@@ -879,7 +879,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 \[-e^{-at}u_0(-t) \Leftrightarrow\frac{1}{s+a}\quad\mathrm{Re}(s)\lt-a\]</div>
 <p>b). Similarly</p>
 <div class="math notranslate nohighlight">
-\[X(s) = \int_{-\infty}^{\infty}e^{at}u_o(-t)e^{-st}\,dt=-\int_{-\infty}^{0^{-}}e^{-(s-a)t}\]</div>
+\[X(s) = \int_{-\infty}^{\infty}e^{at}u_o(-t)e^{-st}\,dt=-\int_{-\infty}^{0^{-}}e^{-(s-a)t}\,dt\]</div>
 <div class="math notranslate nohighlight">
 \[X(s) = -\left.\frac{1}{s-a}\right|_{-\infty}^{0^{-}}e^{-(s-a)t}=\frac{1}{s-a}\quad\mathrm{Re}(s)\lt a\]</div>
 <p>Thus we obtain</p>

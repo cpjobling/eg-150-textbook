@@ -5,9 +5,9 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.4
+    jupytext_version: 1.15.2
 kernelspec:
-  display_name: MATLAB
+  display_name: Matlab
   language: matlab
   name: matlab
 ---
@@ -19,7 +19,7 @@ kernelspec:
 
 The preparatory reading for this section is Chapter 2.2 of {cite}`karris` and Chapter 3.4 of {cite}`schaum`.
 
-+++ {"nbpresent": {"id": "90f3c07d-3646-44b0-a549-7020fc10d16f"}, "slideshow": {"slide_type": "subslide"}}
++++ {"nbpresent": {"id": "90f3c07d-3646-44b0-a549-7020fc10d16f"}, "slideshow": {"slide_type": "notes"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/2/laplace_of_common_signals](https://cpjobling.github.io/eg-150-textbook/laplace_transform/2/laplace_of_common_signals)
 
@@ -147,13 +147,13 @@ $$\mathcal{L}\left\{t u_0(t)\right\} = \int_0^\infty t e^{-st}\,dt$$
 
 From tables of integrals:
 
-$$\int te^{-at}\ dt = -\left(\frac{-at + 1}{a^2}\right)e^{-at} + C$$
+$$\int te^{-at}\ dt = -\left(\frac{at + 1}{a^2}\right)e^{-at} + C$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 Or MATLAB
 
-```{code-cell} matlab
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -166,11 +166,11 @@ int(t * exp(-a*t))
 
 so
 
-$$\int_0^\infty t e^{-st}\,dt = -\left.\left(\frac{-st + 1}{(-s)^2}\right)e^{-st}\right|_0^\infty$$
+$$\int_0^\infty t e^{-st}\,dt = -\left.\left(\frac{st + 1}{s^2}\right)e^{-st}\right|_0^\infty$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-$$F(s) = -\frac{1}{s^2}\left(\left(-st + 1)\right)e^{-\infty} -\left( -0t + 1)\right)e^0\right) = \frac{1}{s^2}$$
+$$F(s) = -\frac{1}{s^2}\left(\left(st + 1\right)e^{-\infty} -\left( 0t + 1)\right)e^0\right) = \frac{1}{s^2}$$
 
 +++
 
@@ -237,7 +237,7 @@ Tables of Laplace transform properties and transforms will be included with the 
 
 Let's use the MATLAB Symbolic Math Toolbox to prove some of these transforms.
 
-```{code-cell} matlab
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -253,7 +253,7 @@ u0(t) = heaviside(t);
 
 ### Impulse $\delta(t)$
 
-```{code-cell} matlab
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -265,7 +265,7 @@ laplace(dirac(t))
 
 ### Delayed impulse $\delta(t-a)$
 
-```{code-cell} matlab
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -277,7 +277,7 @@ laplace(dirac(t-a))
 
 ### Unit step $u_0(t)$
 
-```{code-cell} matlab
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -289,7 +289,7 @@ laplace(u0(t))
 
 For some functions we need to define the ROC and use the integral directly
 
-```{code-cell} matlab
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -297,7 +297,7 @@ slideshow:
 laplace(-u0(-t))
 ```
 
-```{code-cell} matlab
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -310,7 +310,7 @@ int(-u0(-t)*exp(-s*t),t,-inf,0)
 
 ### Unit ramp $u_1(t)=tu_0(t)$
 
-```{code-cell} matlab
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -322,7 +322,7 @@ laplace(t*u0(t))
 
 ### Powers of $t$
 
-```{code-cell} matlab
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -336,7 +336,7 @@ laplace(t^n*u0(t))
 
 ### Exponentials
 
-```{code-cell} matlab
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -344,7 +344,7 @@ slideshow:
 laplace(exp(-a*t)*u0(t))
 ```
 
-```{code-cell} matlab
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -356,7 +356,7 @@ laplace(-exp(-a*t)*u0(-t))
 
 Defining the ROC and using `int`
 
-```{code-cell} matlab
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -365,7 +365,7 @@ assume(s + a < 0)
 int(-exp(-a*t)*u0(-t)*exp(-s*t),t,-inf,0)
 ```
 
-```{code-cell} matlab
+```{code-cell}
 ---
 slideshow:
   slide_type: subslide
@@ -373,7 +373,7 @@ slideshow:
 laplace(t*exp(-a*t)*u0(t))
 ```
 
-```{code-cell} matlab
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -386,7 +386,7 @@ laplace(t^n*exp(-a*t)*u0(t))
 
 ### Sinusoids
 
-```{code-cell} matlab
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment
@@ -399,7 +399,7 @@ laplace(sin(omega*t)*u0(t))
 
 ### Decaying sinusoids
 
-```{code-cell} matlab
+```{code-cell}
 ---
 slideshow:
   slide_type: fragment

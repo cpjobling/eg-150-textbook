@@ -552,7 +552,7 @@ document.write(`
 \[\mathcal{L}\left\{t u_0(t)\right\} = \int_0^\infty t e^{-st}\,dt\]</div>
 <p>From tables of integrals:</p>
 <div class="math notranslate nohighlight">
-\[\int te^{-at}\ dt = -\left(\frac{-at + 1}{a^2}\right)e^{-at} + C\]</div>
+\[\int te^{-at}\ dt = -\left(\frac{at + 1}{a^2}\right)e^{-at} + C\]</div>
 <p>Or MATLAB</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -579,9 +579,9 @@ document.write(`
 </div>
 <p>so</p>
 <div class="math notranslate nohighlight">
-\[\int_0^\infty t e^{-st}\,dt = -\left.\left(\frac{-st + 1}{(-s)^2}\right)e^{-st}\right|_0^\infty\]</div>
+\[\int_0^\infty t e^{-st}\,dt = -\left.\left(\frac{st + 1}{s^2}\right)e^{-st}\right|_0^\infty\]</div>
 <div class="math notranslate nohighlight">
-\[F(s) = -\frac{1}{s^2}\left(\left(-st + 1)\right)e^{-\infty} -\left( -0t + 1)\right)e^0\right) = \frac{1}{s^2}\]</div>
+\[F(s) = -\frac{1}{s^2}\left(\left(st + 1\right)e^{-\infty} -\left( 0t + 1)\right)e^0\right) = \frac{1}{s^2}\]</div>
 <p>Thus the Laplace transform pair is</p>
 <div class="math notranslate nohighlight">
 \[t u_0(t) \Leftrightarrow \frac{1}{s^2}\]</div>
