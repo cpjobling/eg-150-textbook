@@ -5,9 +5,9 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.4
+    jupytext_version: 1.15.2
 kernelspec:
-  display_name: Matlab (Connection)
+  display_name: Matlab
   language: matlab
   name: matlab
 ---
@@ -19,7 +19,7 @@ kernelspec:
 
 The preparatory reading for this section is [Chapter 2](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=43) of  {cite}`karris` and [Chapter 3](https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section1) of {cite}`schaum`.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook//laplace_transform/1/laplace](https://cpjobling.github.io/eg-150-textbook/laplace_transform/1/laplace)
 
@@ -110,7 +110,7 @@ $$x(t)\Leftrightarrow X(s)$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Laplace transform pairs are tabulated ({doc}`lt_table.md`) for ease of reference.
+Laplace transform pairs are tabulated ({ref}`lt_table`) for ease of reference.
 
 +++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "notes"}}
 
@@ -174,6 +174,7 @@ slideshow:
   slide_type: fragment
 ---
 % set up
+format compact
 syms s t a
 assume(a,'real')
 u0(t) = heaviside(t);
@@ -251,7 +252,7 @@ because $\lim_{t\to \infty}e^{-(s+a)t} = 0$ only if $\mathrm{Re}(s + a)\gt 0$ or
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Thus, the ROC for {ref}`laplace:ex1` for {ref}`laplace:ex1` is specified as $\mathrm{Re}(s)\gt -a$ and is illustrated in the complex plane as showm in {numref}`ROC2` by the shaded area to the right of the line $\mathrm{Re}(s)=-a.
+Thus, the ROC for {ref}`laplace:ex1` is specified as $\mathrm{Re}(s)\gt -a$ and is illustrated in the complex plane as showm in {numref}`ROC2` by the shaded area to the right of the line $\mathrm{Re}(s)=-a$.
 
 In Laplace transform applications, the complex plane is commonly referred to as the s-plane. The horizontal and vertical axes are sometimes referred to as the $\sigma$-axis ($\mathrm{Re}(s)$) and the $j\omega$-axis ($\mathrm{Im}(s)$), respectively.
 
@@ -315,7 +316,7 @@ int(x(t)*exp(-s*t),t,-inf,0)
 
 #### By hand analysis
 
-See {ref}`ex9.`
+See {ref}`ex9.1`.
 
 +++ {"nbpresent": {"id": "4ad52fcd-e2e8-4d41-8827-511753bd1148"}, "slideshow": {"slide_type": "notes"}}
 
@@ -477,7 +478,7 @@ b). $x(t)= e^{at}u_0(-t)$
 
 a) 
 
-$$X(s) = -\int_{-\infty}^{\infty}e^{-at}u_o(-t)e^{-st}\,dt=-\int_{-\infty}^{0^{-}}e^{-(s+a)t}$$
+$$X(s) = -\int_{-\infty}^{\infty}e^{-at}u_o(-t)e^{-st}\,dt=-\int_{-\infty}^{0^{-}}e^{-(s+a)t}\,dt$$
 
 $$X(s) = \left.\frac{1}{s+a}e^{-(s+a)t}\right|_{-\infty}^{0^{-}}=\frac{1}{s+a}\quad\mathrm{Re}(s)\lt-a$$
 
@@ -487,9 +488,9 @@ $$-e^{-at}u_0(-t) \Leftrightarrow\frac{1}{s+a}\quad\mathrm{Re}(s)\lt-a$$
 
 b). Similarly
 
-$$X(s) = \int_{-\infty}^{\infty}e^{at}u_o(-t)e^{-st}\,dt=-\int_{-\infty}^{0^{-}}e^{-(s-a)t}$$
+$$X(s) = \int_{-\infty}^{\infty}e^{at}u_o(-t)e^{-st}\,dt=-\int_{-\infty}^{0^{-}}e^{-(s-a)t}\,dt$$
 
-$$X(s) = -\left.\frac{1}{s+a}\right|_{-\infty}^{0^{-}}e^{-(s-a)t}=\frac{1}{s-a}\quad\mathrm{Re}(s)\lt a$$
+$$X(s) = -\left.\frac{1}{s-a}\right|_{-\infty}^{0^{-}}e^{-(s-a)t}=\frac{1}{s-a}\quad\mathrm{Re}(s)\lt a$$
 
 Thus we obtain
 
