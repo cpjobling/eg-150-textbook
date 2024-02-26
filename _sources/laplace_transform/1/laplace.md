@@ -490,7 +490,7 @@ b). Similarly
 
 $$X(s) = \int_{-\infty}^{\infty}e^{at}u_o(-t)e^{-st}\,dt=-\int_{-\infty}^{0^{-}}e^{-(s-a)t}$$
 
-$$X(s) = -\left.\frac{1}{s+a}\right|_{-\infty}^{0^{-}}e^{-(s-a)t}=\frac{1}{s-a}\quad\mathrm{Re}(s)\lt a$$
+$$X(s) = -\left.\frac{1}{s-a}\right|_{-\infty}^{0^{-}}e^{-(s-a)t}=\frac{1}{s-a}\quad\mathrm{Re}(s)\lt a$$
 
 Thus we obtain
 
