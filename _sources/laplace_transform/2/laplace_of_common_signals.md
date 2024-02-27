@@ -380,6 +380,7 @@ slideshow:
 ---
 syms n integer
 laplace(t^n*exp(-a*t)*u0(t))
+help sym/gamma
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}

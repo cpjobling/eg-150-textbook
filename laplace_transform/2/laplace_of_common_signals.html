@@ -894,6 +894,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">n</span><span class="w"> </span><span class="s">integer</span>
 <span class="n">laplace</span><span class="p">(</span><span class="n">t</span>^<span class="n">n</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="nb">help</span><span class="w"> </span><span class="n">sym</span><span class="o">/</span><span class="nb">gamma</span>
 </pre></div>
 </div>
 </div>
@@ -902,6 +903,9 @@ document.write(`
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>piecewise(0 &lt;= n, gamma(n + 1)/(a + s)^(n + 1))
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> GAMMA  Symbolic gamma function.
 </pre></div>
 </div>
 </div>
