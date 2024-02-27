@@ -104,7 +104,7 @@ $$X(s) = \left.-\frac{1}{s}e^{-st}\right|_{0^{+}}^{\infty}=\frac{1}{s}\quad\math
 
 +++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "fragment"}}
 
-where $0^{+}=\lim_\epsilon\to 0(0+\epsilon)$.
+where $0^{+}=\lim_{\epsilon\to 0}(0+\epsilon)$.
 
 +++ {"nbpresent": {"id": "b8f02dd9-8876-4679-89fd-038772c205b9"}, "slideshow": {"slide_type": "subslide"}}
 
@@ -380,6 +380,7 @@ slideshow:
 ---
 syms n integer
 laplace(t^n*exp(-a*t)*u0(t))
+help sym/gamma
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
