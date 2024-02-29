@@ -349,7 +349,7 @@ For the answer, refer to the lecture recording or see solved problem 2.14 in {ci
 This is a foretaste of the Laplace Transform.
 ```
 
-Consider a continuous-time LTI system with the input-output reltion given by
+Consider a continuous-time LTI system with the input-output relation given by
 
 $$y(t)=\int_{-\infty}^{t}e^{-(t-\tau)}x(\tau)\,d\tau$$
 
