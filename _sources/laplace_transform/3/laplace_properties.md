@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.4
+    jupytext_version: 1.15.2
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -19,7 +19,7 @@ kernelspec:
 
 The preparatory reading for this section is Chapter 2.3 of {cite}`karris` and Chapter 3.3 of {cite}`schaum`.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/3/laplace_properties](https://cpjobling.github.io/eg-150-textbook/laplace_transform/3/laplace_properties)
 
@@ -82,7 +82,7 @@ $$f'(t) = \frac{d}{dt} f(t) \Leftrightarrow sF(s) - f(0^-)$$
 
 This property facilitates the solution of differential equations
 
-+++ {"nbpresent": {"id": "94a596bc-4117-4098-8b78-5776baa85cd2"}, "slideshow": {"slide_type": "notes"}}
++++ {"nbpresent": {"id": "94a596bc-4117-4098-8b78-5776baa85cd2"}, "slideshow": {"slide_type": "subslide"}}
 
 The differentiation property can be extended to higher-orders as follows
 
