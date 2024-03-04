@@ -210,7 +210,7 @@ We will work through a few of the following on the board in class
 (ex10.1)=
 ### Example 10.1: Pulse
 
-Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the pulse shown in {numref}`ig:ex10.1`.
+Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the pulse shown in {numref}`fig:ex10.1`.
 
 :::{figure-md} fig:ex10.1
 <img src="pictures/pulse.png" alt="A rectangular pulse." width="50%">
