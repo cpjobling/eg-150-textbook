@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.4
+    jupytext_version: 1.15.2
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -19,7 +19,7 @@ kernelspec:
 
 The preparatory reading for this section is Chapter 2.3 of {cite}`karris` and Chapter 3.3 of {cite}`schaum`.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/3/laplace_properties](https://cpjobling.github.io/eg-150-textbook/laplace_transform/3/laplace_properties)
 
@@ -82,7 +82,7 @@ $$f'(t) = \frac{d}{dt} f(t) \Leftrightarrow sF(s) - f(0^-)$$
 
 This property facilitates the solution of differential equations
 
-+++ {"nbpresent": {"id": "94a596bc-4117-4098-8b78-5776baa85cd2"}, "slideshow": {"slide_type": "notes"}}
++++ {"nbpresent": {"id": "94a596bc-4117-4098-8b78-5776baa85cd2"}, "slideshow": {"slide_type": "subslide"}}
 
 The differentiation property can be extended to higher-orders as follows
 
@@ -210,7 +210,7 @@ We will work through a few of the following on the board in class
 (ex10.1)=
 ### Example 10.1: Pulse
 
-Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the pulse shown in {numref}`ig:ex10.1`.
+Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the pulse shown in {numref}`fig:ex10.1`.
 
 :::{figure-md} fig:ex10.1
 <img src="pictures/pulse.png" alt="A rectangular pulse." width="50%">
@@ -222,37 +222,12 @@ A rectangular pulse.
 
 For full solution see [Example 2.4.1](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=63) in Karris.
 
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
 (ex10.2)=
 ### Example 10.2: Line segment
 
-Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the line segment shown in {numref}`ig:ex10.2`.
+Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the line segment shown in {numref}`fig:ex10.2`.
 
 :::{figure-md} fig:ex10.2
 <img src="pictures/line.png" alt="A line segment." width="50%">
@@ -264,38 +239,12 @@ A line segment.
 
 For full solution see [Example 2.4.2](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=64) in Karris.
 
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
 (ex10.3)=
 ### Example 10.3: Triangular Pulse
 
-Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the triangular pulse shown in {numref}`ig:ex10.3`.
+Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the triangular pulse shown in {numref}`fig:ex10.3`.
 
 :::{figure-md} fig:ex10.3
 <img src="pictures/triangle.png" alt="A triangular pulse." width="50%">
@@ -305,39 +254,14 @@ A triangular pulse.
 
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "notes"}}
 
-For full solution see [Examples in 2.4.3](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=65) in Karris.
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
+For full solution see [Example 2.4.3](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=65) in Karris.
 
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
 (ex10.4)=
 ### Example 10.4: Square Wave
 
-Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the of the periodic function shown in {numref}`ig:ex10.4`.
+Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the of the periodic function shown in {numref}`fig:ex10.4`.
 
 :::{figure-md} fig:ex10.4
 <img src="pictures/sqare.png" alt="A square wave." width="50%">
@@ -349,37 +273,12 @@ A square wave.
 
 For full solution see [Example 2.4.4](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=66) in Karris.
 
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
 (ex10.5)=
 ### Example 10.5: Half-rectified Sinewave
 
-Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the half-rectified sine wave shown in {numref}`ig:ex10.5`.
+Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the half-rectified sine wave shown in {numref}`fig:ex10.5`.
 
 :::{figure-md} fig:ex10.5
 <img src="pictures/rectsine.png" alt="Half-rectified sine wave." width="50%">
@@ -390,31 +289,6 @@ Half-rectified sine wave.
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "notes"}}
 
 For full solution see [Example 2.4.5](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=67) in Karris.
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
 
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "notes"}}
 
