@@ -222,31 +222,6 @@ A rectangular pulse.
 
 For full solution see [Example 2.4.1](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=63) in Karris.
 
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
 (ex10.2)=
@@ -264,32 +239,6 @@ A line segment.
 
 For full solution see [Example 2.4.2](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=64) in Karris.
 
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
 (ex10.3)=
@@ -305,32 +254,7 @@ A triangular pulse.
 
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "notes"}}
 
-For full solution see [Examples in 2.4.3](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=65) in Karris.
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
+For full solution see [Example 2.4.3](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=65) in Karris.
 
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
@@ -349,31 +273,6 @@ A square wave.
 
 For full solution see [Example 2.4.4](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=66) in Karris.
 
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
 (ex10.5)=
@@ -390,31 +289,6 @@ Half-rectified sine wave.
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "notes"}}
 
 For full solution see [Example 2.4.5](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=67) in Karris.
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
 
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "notes"}}
 
