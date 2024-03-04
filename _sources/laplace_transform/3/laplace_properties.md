@@ -227,7 +227,7 @@ For full solution see [Example 2.4.1](https://ebookcentral.proquest.com/lib/swan
 (ex10.2)=
 ### Example 10.2: Line segment
 
-Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the line segment shown in {numref}`ig:ex10.2`.
+Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the line segment shown in {numref}`fig:ex10.2`.
 
 :::{figure-md} fig:ex10.2
 <img src="pictures/line.png" alt="A line segment." width="50%">
@@ -244,7 +244,7 @@ For full solution see [Example 2.4.2](https://ebookcentral.proquest.com/lib/swan
 (ex10.3)=
 ### Example 10.3: Triangular Pulse
 
-Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the triangular pulse shown in {numref}`ig:ex10.3`.
+Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the triangular pulse shown in {numref}`fig:ex10.3`.
 
 :::{figure-md} fig:ex10.3
 <img src="pictures/triangle.png" alt="A triangular pulse." width="50%">
@@ -261,7 +261,7 @@ For full solution see [Example 2.4.3](https://ebookcentral.proquest.com/lib/swan
 (ex10.4)=
 ### Example 10.4: Square Wave
 
-Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the of the periodic function shown in {numref}`ig:ex10.4`.
+Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the of the periodic function shown in {numref}`fig:ex10.4`.
 
 :::{figure-md} fig:ex10.4
 <img src="pictures/sqare.png" alt="A square wave." width="50%">
@@ -278,7 +278,7 @@ For full solution see [Example 2.4.4](https://ebookcentral.proquest.com/lib/swan
 (ex10.5)=
 ### Example 10.5: Half-rectified Sinewave
 
-Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the half-rectified sine wave shown in {numref}`ig:ex10.5`.
+Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the half-rectified sine wave shown in {numref}`fig:ex10.5`.
 
 :::{figure-md} fig:ex10.5
 <img src="pictures/rectsine.png" alt="Half-rectified sine wave." width="50%">
