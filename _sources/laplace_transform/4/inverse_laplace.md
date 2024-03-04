@@ -443,7 +443,7 @@ will be useful.
 (sol:11.4)=
 #### Solution 11.4
 
-We will leave the solution that makes use of the residude of repeated poles formula for you to study from the text book (example 3.2.3 {cite}`nise`. 
+We will leave the solution that makes use of the residude of repeated poles formula for you to study from the text book ([Example 3.4](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=87) {cite}`nise`). 
 
 In class we will illustrate the slightly simpler approach also presented in the text. 
 
