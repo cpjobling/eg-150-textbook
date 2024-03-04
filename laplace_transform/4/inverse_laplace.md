@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.4
+    jupytext_version: 1.15.2
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -17,7 +17,7 @@ kernelspec:
 (unit4.4)=
 # Unit 4.4 The Inverse Laplace Transform
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/4/inverse_laplace](https://cpjobling.github.io/eg-150-textbook/laplace_transform/4/inverse_laplace)
 
@@ -238,40 +238,6 @@ $$F_1(s) = \frac{2s+5}{s^2 + 5s + 6}$$
 
 (Quick solution: [Wolfram Alpha](https://www.wolframalpha.com/input/?i=inverse+laplace+transform+%7B(2s+%2B+5)%2F(s%5E2+%2B+5s+%2B+6)%7D))
 
-+++ {"slideshow": {"slide_type": "notes"}}
-
-**OneNote Class Notebook Scratch Pad**
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (mat_num:11.1)=
@@ -353,43 +319,13 @@ We can now use the previous technique to find the solution which according to MA
 
 $$f_1(t) = \frac{3}{4}e^{-t} - \frac{13}{2}e^{-3t} + \frac{35}{4}e^{-5t}$$
 
-+++ {"slideshow": {"slide_type": "notes"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 The problem becomes: determine the Inverse Laplace Transform of
 
 $$F_2(s) = \frac{3s^2+2s+5}{(s+1)(s+3)(s+5)}$$
 
 which we will solve in class
-
-**OneNote Class Notebook Scratch Pad**
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -409,30 +345,6 @@ $$F_3(s) = \frac{s + 3}{(s+1)(s^2 + 4s + 8)}$$ (pfe1)
 #### Solution 11.3
 
 We know that one pole is real at $s=-1$. We can use the PFE in the usual way to find the residue $r_1$ that corresponds to that pole.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-**OneNote Class Notebook Scratch Pad**
-
-Find residue $r_1$
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
-Should be $r_1 = 2/5$.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -542,37 +454,6 @@ For exam preparation, I would recommend that you use whatever method you find mo
 Find the inverse Laplace Transform of 
 
 $$F_4(s) = \frac{s+3}{(s+2)(s+1)^2}$$
-
-**OneNote Class Notebook Scratch Pad**
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
