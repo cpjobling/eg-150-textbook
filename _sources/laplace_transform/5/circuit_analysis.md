@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.4
+    jupytext_version: 1.15.2
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -21,7 +21,7 @@ kernelspec:
 
 The preparatory reading for this section is [Chapter 4](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=101) {cite}`karris` which presents examples of the applications of the Laplace transform for electrical solving circuit problems. Much of the same material is covered in [Section 3.7 D](https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section36) of {cite}`schaum`.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/5/circuit_analysis](https://cpjobling.github.io/eg-150-textbook/laplace_transform/5/circuit_analysis)
 
@@ -527,55 +527,6 @@ Use the Laplace transform method and apply Kirchoff's Current Law (KCL) to find 
 Circuit for Example 12.1
 :::
 
-+++ {"slideshow": {"slide_type": "notes"}}
-
-**OneNote Class Notebook Scratch Pad**
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:12.2)=
@@ -592,55 +543,6 @@ Use the Laplace transform method and apply Kirchoff's Voltage Law (KVL) to find 
 
 Circuit for Example 12.2
 :::
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-**OneNote Class Notebook Scratch Pad**
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -692,118 +594,17 @@ We will use a combination of pen-and-paper and MATLAB to solve this.
 
 Draw equivalent circuit at $t=0$
 
-+++ {"slideshow": {"slide_type": "notes"}}
-
-**OneNote Class Notebook Scratch Pad**
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ##### 2. Transform model
 
 Convert to transforms
 
-+++ {"slideshow": {"slide_type": "notes"}}
-
-**OneNote Class Notebook Scratch Pad**
-
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ##### 3. Determine equation
 
 Determine equation for $V_{\rm out}(s)$.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-**OneNote Class Notebook Scratch Pad**
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -861,36 +662,6 @@ y = sym2poly(y)
 
 ##### Complete the Square
 
-**OneNote Class Notebook Scratch Pad**
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ##### Plot result
@@ -940,28 +711,6 @@ impulse(Vout)
 
 Consider {numref}`fig:complex_imp` and give an expression for $V_c(s)$.
 
-+++ {"slideshow": {"slide_type": "notes"}}
-
-**OneNote Class Notebook Scratch Pad**
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:12.5)=
@@ -992,49 +741,9 @@ Find $Z(s)$ using:
 
 #### 1. Solution by nodal analysis
 
-**OneNote Class Notebook Scratch Pad**
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
 +++ {"slideshow": {"slide_type": "notes"}}
 
 #### 2. Solution by by successive application of parallel and series combination of impedences
-
-**OneNote Class Notebook Scratch Pad**
-
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
 
 **Solutions**: Pencasts [ex4_1.pdf](https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/ex4_1.pdf) and [ex4_2.pdf](https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/ex4_2.pdf) &ndash; open in Adobe Acrobat.
 
@@ -1058,38 +767,9 @@ Compute $Z(s)$ and $Y(s)$ for the circuit shown in {numref}`fig:ex12.6`. All imp
 Circuit for Example 12.6
 :::
 
++++ {"slideshow": {"slide_type": "subslide"}}
 
-+++ {"slideshow": {"slide_type": "notes"}}
-
-####  Solution 12.6 
-
-**OneNote Class Notebook Scratch Pad**
-<pre style="border: 2px solid blue">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
+#### Solution to Example 12.6
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -1178,7 +858,6 @@ For the s-domain circuit shown in {numref}`fig:12.7`
 
 Circuit for Example 12.7
 :::
-
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
