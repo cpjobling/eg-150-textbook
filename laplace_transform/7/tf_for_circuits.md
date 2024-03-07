@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.4
+    jupytext_version: 1.15.2
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -21,7 +21,7 @@ kernelspec:
 
 The preparatory reading for this section is [Chapter 4.4](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=75#ppg=113) {cite}`karris` which discusses transfer function models of electrical circuits. We have also adapted content from [3.6 The System Function](https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section28) from {cite}`schaum`.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/laplace_transform/7/tf_for_circuits](https://cpjobling.github.io/eg-150-textbook/laplace_transform/7/tf_for_circuits)
 
@@ -179,7 +179,6 @@ This is the basis for the mini project in MATLAB LAb 5.
 ::::
 
 Compute the transfer function for the op-amp circuit shown in {numref}`fig:ex14.2` in terms of the circuit constants $R_1$, $R_2$, $R_3$, $C_1$ and $C_2$.
-
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -460,4 +459,4 @@ but in practice this is rarely used.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Note that this is a low-pass filter. Sinusoids at low frequencies are passed with a gain of 0.2. For frequencies above around 100 ra/s, the filter starts to reduce the attenuation of the passed signal. At 10,000 rad/s, the attenuation is 1/10 of the attenuation at 1 rad/s.
+Note that this is a low-pass filter. Sinusoids at low frequencies are passed with a gain of 0.2. For frequencies above around 100 rad/s, the filter starts to increase the attenuation of the passed signal. At 10,000 rad/s, the attenuation is 1/10 of the attenuation at 1 rad/s.
