@@ -554,7 +554,7 @@ Circuit for Example 12.2
 :class: tip
 This is based on [Example 4.3](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=104) in {cite}`karris`.
 
-We will solve this examples by hand and then review the solution in MATLAB lab 5.
+We will solve this example by hand and then review the solution in MATLAB lab 5.
 `````
 
 In the circuit shown in {numref}`fig:ex12.3`, switch $S_1$ closes at $t=0$, while at the same time, switch $S_2$ opens. Use the Laplace transform method to find $v_{\mathrm{out}}(t)$ for $t > 0$.
@@ -770,17 +770,13 @@ Circuit for Example 12.6
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### Solution to Example 12.6
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
 #### Answer 12.6
 
 $$Z(s) = \frac{65s^4 + 490s^3 + 528s^2 + 400s + 128}{s(5s^2 + 30s + 16)}$$
 
 $$Y(s) = \frac{1}{Z(s)} = \frac{s(5s^2 + 30s + 16)}{65s^4 + 490s^3 + 528s^2 + 400s + 128}$$
 
-Matlab verification: [solution12_6.m](https://raw.githubusercontent.com/cpjobling/eg-150-textbook/main/laplace_transform/matlab/solution12_6.m)
+Matlab verification: [solution12_6.mlx](https://raw.githubusercontent.com/cpjobling/eg-150-textbook/main/laplace_transform/matlab/solution12_6.mlx)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -921,5 +917,5 @@ We move on to consider
 
 For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-247-textbook/tree/master/laplace_transform/matlab) folder in the [GitHub repository](https://github.com/cpjobling/eg-247-textbook).
 
-* Solution 12.3 [[solution12_3.m](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m)]
-* Solution 12.6 [[solution12_6](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_6.m)]
+* Solution 12.3 [[solution12_3.mlx](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.mlx)]
+* Solution 12.6 [[solution12_6.mlx](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_6.mlx)]

@@ -504,7 +504,6 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-6">Example 12.6</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-12-6">Solution to Example 12.6</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#answer-12-6">Answer 12.6</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-6-verification-of-solution">Example 12.6: Verification of Solution</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#admittance">Admittance</a></li>
@@ -581,11 +580,27 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqvrt =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>v_R(t) == R*i_R(t)
+</pre></div>
+</div>
+</div>
 </div>
 <p>The current flowing through the resistor is inversely proportional to the voltage across the resistor. This is easily confirmed by rewriting <a class="reference internal" href="#equation-eq-vrt">(18)</a> to isolate <span class="math notranslate nohighlight">\(i_R(t)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">eqirt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">isolate</span><span class="p">(</span><span class="n">eqvrt</span><span class="p">,</span><span class="n">i_R</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqirt =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i_R(t) == v_R(t)/R
 </pre></div>
 </div>
 </div>
@@ -647,12 +662,28 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqvlt =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>v_L(t) == L*diff(i_L(t), t)
+</pre></div>
+</div>
+</div>
 </div>
 <p>The current flowing through the inductor is inversely proportional to the integral of the voltage across the inductor which is easily confirmed by taking the integral of both sides of <a class="reference internal" href="#equation-eq-vlt">(22)</a> and rewriting the equation to isolate <span class="math notranslate nohighlight">\(i_L(t)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">int</span><span class="p">(</span><span class="n">lhs</span><span class="p">(</span><span class="n">eqvlt</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">rhs</span><span class="p">(</span><span class="n">eqvlt</span><span class="p">));</span>
 <span class="n">eqilt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">isolate</span><span class="p">(</span><span class="nb">ans</span><span class="p">,</span><span class="n">i_L</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqilt =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i_L(t) == int(v_L(t), t)/L
 </pre></div>
 </div>
 </div>
@@ -714,12 +745,28 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqict =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i_C(t) == C*diff(v_C(t), t)
+</pre></div>
+</div>
+</div>
 </div>
 <p>The voltage across the capacitor is inversely proportional to the integral of the current flowing into the capacitor which is easily confirmed by taking the integral of both sides of <a class="reference internal" href="#equation-eq-ict">(26)</a> and rewriting the equation to isolate <span class="math notranslate nohighlight">\(v_C(t)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">int</span><span class="p">(</span><span class="n">lhs</span><span class="p">(</span><span class="n">eqict</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">rhs</span><span class="p">(</span><span class="n">eqict</span><span class="p">));</span>
 <span class="n">eqvct</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">isolate</span><span class="p">(</span><span class="nb">ans</span><span class="p">,</span><span class="n">v_C</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqvct =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>v_C(t) == int(i_C(t), t)/C
 </pre></div>
 </div>
 </div>
@@ -897,7 +944,7 @@ document.write(`
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>This is based on <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=104">Example 4.3</a> in <span id="id9">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
-<p>We will solve this examples by hand and then review the solution in MATLAB lab 5.</p>
+<p>We will solve this example by hand and then review the solution in MATLAB lab 5.</p>
 </div>
 <p>In the circuit shown in <a class="reference internal" href="#fig-ex12-3"><span class="std std-numref">Fig. 60</span></a>, switch <span class="math notranslate nohighlight">\(S_1\)</span> closes at <span class="math notranslate nohighlight">\(t=0\)</span>, while at the same time, switch <span class="math notranslate nohighlight">\(S_2\)</span> opens. Use the Laplace transform method to find <span class="math notranslate nohighlight">\(v_{\mathrm{out}}(t)\)</span> for <span class="math notranslate nohighlight">\(t &gt; 0\)</span>.</p>
 <figure class="align-default" id="fig-ex12-3">
@@ -1053,16 +1100,13 @@ into a linear and a quadratic factor.</p>
 <p><span class="caption-number">Fig. 62 </span><span class="caption-text">Circuit for Example 12.6</span><a class="headerlink" href="#fig-ex12-6" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<section id="solution-to-example-12-6">
-<h4>Solution to Example 12.6<a class="headerlink" href="#solution-to-example-12-6" title="Permalink to this heading">#</a></h4>
-</section>
 <section id="answer-12-6">
 <h4>Answer 12.6<a class="headerlink" href="#answer-12-6" title="Permalink to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
 \[Z(s) = \frac{65s^4 + 490s^3 + 528s^2 + 400s + 128}{s(5s^2 + 30s + 16)}\]</div>
 <div class="math notranslate nohighlight">
 \[Y(s) = \frac{1}{Z(s)} = \frac{s(5s^2 + 30s + 16)}{65s^4 + 490s^3 + 528s^2 + 400s + 128}\]</div>
-<p>Matlab verification: <a class="reference external" href="https://raw.githubusercontent.com/cpjobling/eg-150-textbook/main/laplace_transform/matlab/solution12_6.m">solution12_6.m</a></p>
+<p>Matlab verification: <a class="reference external" href="https://raw.githubusercontent.com/cpjobling/eg-150-textbook/main/laplace_transform/matlab/solution12_6.mlx">solution12_6.mlx</a></p>
 </section>
 <section id="example-12-6-verification-of-solution">
 <span id="mat-12-6"></span><h4>Example 12.6: Verification of Solution<a class="headerlink" href="#example-12-6-verification-of-solution" title="Permalink to this heading">#</a></h4>
@@ -1182,8 +1226,8 @@ into a linear and a quadratic factor.</p>
 <span id="matlab-solutions12"></span><h2>Matlab Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this heading">#</a></h2>
 <p>For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying <a class="reference external" href="https://github.com/cpjobling/eg-247-textbook/tree/master/laplace_transform/matlab">MATLAB</a> folder in the <a class="reference external" href="https://github.com/cpjobling/eg-247-textbook">GitHub repository</a>.</p>
 <ul class="simple">
-<li><p>Solution 12.3 [<a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.m">solution12_3.m</a>]</p></li>
-<li><p>Solution 12.6 [<a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_6.m">solution12_6</a>]</p></li>
+<li><p>Solution 12.3 [<a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.mlx">solution12_3.mlx</a>]</p></li>
+<li><p>Solution 12.6 [<a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_6.mlx">solution12_6.mlx</a>]</p></li>
 </ul>
 </section>
 </section>
@@ -1312,7 +1356,6 @@ into a linear and a quadratic factor.</p>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-6">Example 12.6</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-12-6">Solution to Example 12.6</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#answer-12-6">Answer 12.6</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-6-verification-of-solution">Example 12.6: Verification of Solution</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#admittance">Admittance</a></li>
