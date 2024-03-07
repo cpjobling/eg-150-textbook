@@ -48,6 +48,7 @@ slideshow:
 ---
 % initialize MATLAB
 clearvars
+format compact
 syms t L R C i_R(t) v_R(t) i_L(t) v_L(t) v_C(t) i_C(t)
 ```
 
