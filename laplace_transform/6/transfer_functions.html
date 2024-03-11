@@ -582,7 +582,7 @@ document.write(`
 <span class="eqno">(36)<a class="headerlink" href="#equation-eq-340" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)} = \frac{\displaystyle \sum_{k=0}^M b_k s^k}{\displaystyle\sum_{k=0}^N a_k s^k}\]</div>
 <p>Expanding <a class="reference internal" href="#equation-eq-340">(36)</a>, <span class="math notranslate nohighlight">\(H(s)\)</span> can be written in the more familiar form</p>
 <div class="math notranslate nohighlight" id="equation-eq-341">
-<span class="eqno">(38)<a class="headerlink" href="#equation-eq-341" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}\]</div>
+<span class="eqno">(37)<a class="headerlink" href="#equation-eq-341" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}\]</div>
 <p>Hence, <span class="math notranslate nohighlight">\(H(s)\)</span> is always a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <p>Note the ROC of <span class="math notranslate nohighlight">\(H(s)\)</span> is not specified by <a class="reference internal" href="#equation-eq-340">(36)</a> but must be inferred with additional requirements on the system such as causality and stability.</p>
 </section>
@@ -592,8 +592,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[h(t) = h_1(t) * h_2(t)\]</div>
 <p>Thus, the corresponding transfer functions are related by the product</p>
-<div class="math notranslate nohighlight" id="equation-eq-341">
-<span class="eqno">(38)<a class="headerlink" href="#equation-eq-341" title="Permalink to this equation">#</a></span>\[H(s) = H_1(s)H_2(s)\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-3412">
+<span class="eqno">(38)<a class="headerlink" href="#equation-eq-3412" title="Permalink to this equation">#</a></span>\[H(s) = H_1(s)H_2(s)\]</div>
 <p>This relationship is illustrated in <a class="reference internal" href="#fig-3-8"><span class="std std-numref">Fig. 65</span></a>(b)</p>
 <figure class="align-default" id="fig-3-8">
 <a class="reference internal image-reference" href="../../_images/bd1.png"><img alt="Two systems in cascade (a) Time-domain representation; (b) s-domain presentation." src="../../_images/bd1.png" style="width: 70%;" /></a>
@@ -723,7 +723,7 @@ document.write(`
 </section>
 <section id="still-to-come">
 <h3>Still to come<a class="headerlink" href="#still-to-come" title="Permalink to this heading">#</a></h3>
-<p>We will use transfer functions to solve circuit problems in <a class="reference internal" href="../7/tf_for_circuits.html#unit4-7"><span class="std std-ref">Unit 4.7: Transfer Functions for Circuit Analysis</span></a> and conclude our study of Laplace transforms in <a class="reference internal" href="../8/casas.html#unit4-8"><span class="std std-ref">Unit 4.8: Computer-Aided Systems Analysis and Simulation</span></a> with a look at the use of Transfer functions in the MATLAB control systems toolbox and the simulation tool Simulink. We will also look at some of the problems you have studied in <strong>EG-152 Analogue Design</strong> hopefully confirming some of the results you have obbserved in the lab.</p>
+<p>We will use transfer functions to solve circuit problems in <a class="reference internal" href="../7/tf_for_circuits.html#unit4-7"><span class="std std-ref">Unit 4.7: Transfer Functions for Circuit Analysis</span></a> and conclude our study of Laplace transforms in <a class="reference internal" href="../8/casas.html#unit4-8"><span class="std std-ref">Unit 4.8: Computer-Aided Systems Analysis and Simulation</span></a> with a look at the use of Transfer functions in the MATLAB control systems toolbox and the simulation tool Simulink. We will also look at some of the problems you have studied in <strong>EG-152 Analogue Design</strong> hopefully confirming some of the results you have observed in the lab.</p>
 <p>In <strong>EG-247 Digital Signal Processing</strong> we will start from the knowledge gained in <span class="xref std std-ref">Unit 4</span> developing transform ideas further via the Fourier Transform, Z-Transform and the design of systems for signal processing. In <strong>EG-243 Control Systems</strong> you will model feedback control signals using block diagrams and transfer functions. You will also study how knowledge of poles and zeros can be exploited in the design of systems with stable responses.</p>
 </section>
 </section>
