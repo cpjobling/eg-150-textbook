@@ -5,7 +5,7 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.14.4
+      jupytext_version: 1.15.2
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python
@@ -25,7 +25,7 @@ We will be using Pingo mobile response system polling in this session.
 
 Browse to: [pingo.coactum.de/804079](https://pingo.coactum.de/804079). 
 
-<img src="https://chart.googleapis.com/chart?cht=qr&chs=300x300&choe=UTF-8&chld=H&chl=https://pingo.coactum.de/804079" alt="QR Code" />
+<img src="https://chart.googleapis.com/chart?cht=qr&chs=500x500&choe=UTF-8&chld=H&chl=https://pingo.coactum.de/804079" alt="QR Code" />
 <!-- #endregion -->
 
 <!-- #region slideshow={"slide_type": "subslide"} -->

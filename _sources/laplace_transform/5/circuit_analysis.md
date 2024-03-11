@@ -342,6 +342,12 @@ Time Domain Model of a Capacitive Network.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+## Examples
+
+Do examples 12.1 and 12.2 Now
+
++++ {"slideshow": {"slide_type": "slide"}}
+
 (complex_impedance)=
 ## Complex Impedance $Z(s)$
 
@@ -520,6 +526,8 @@ We will work through these in class.
 This is based on [Example 4.1](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=102) from {cite}`karris`.
 ::::
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
 Use the Laplace transform method and apply Kirchoff's Current Law (KCL) to find the voltage $v_c(t)$ across the capacitor for the circuit in {numref}`fig:12.1` given that $v_c(0^-) = 6$ V.
 
 :::{figure-md} fig:12.1
@@ -554,7 +562,7 @@ Circuit for Example 12.2
 :class: tip
 This is based on [Example 4.3](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=104) in {cite}`karris`.
 
-We will solve this example by hand and then review the solution in MATLAB lab 5.
+We will solve this example by hand in **Examples class 4** and then review the solution in MATLAB lab 5.
 `````
 
 In the circuit shown in {numref}`fig:ex12.3`, switch $S_1$ closes at $t=0$, while at the same time, switch $S_2$ opens. Use the Laplace transform method to find $v_{\mathrm{out}}(t)$ for $t > 0$.
@@ -842,7 +850,7 @@ pretty(y10)
 :class: tip
 This is Exercise 4 from [4.7 Exercises](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=121) from {cite}`karris`
 
-This example will be solved as part of in MATLAB Lab 5.3.
+This example will be solved in MATLAB Lab 5.3.
 ````
 
 For the s-domain circuit shown in {numref}`fig:12.7`
@@ -890,11 +898,11 @@ Circuit analysis can be performed using Laplace transforms by using the Laplace 
 
 When dealing with components using their complex component equivalents, the usual circuit analysis rules, KVL, KCL, voltage-divider rule, etc, can all be used.
 
-Complex impedence of a circuit is the resistance to current flow and is given by the general law $V(s) = Z(s) I(s)$ from which the impendence is given by $Z(s) = V(s)/I(s)$. Similarly, the complex admittance of a circuit is given by $Y(s) = I(s)/V(s)$.
+The complex impedence of a circuit is the resistance to current flow and is given by the general law $V(s) = Z(s) I(s)$ from which the impendence is given by $Z(s) = V(s)/I(s)$. Similarly, the complex admittance of a circuit is given by $Y(s) = I(s)/V(s)$.
 
-Complex admittance is the reciprocal of complex impedence $Y(s) = 1/Z(s)$.
+The complex admittance is the reciprocal of the complex impedence $Y(s) = 1/Z(s)$.
 
-Though not a consequence of the Laplace transform, it is worth noting that the use impedence facilitates the analysis of circuits for which the compoents are commected in series; for circuits with parallel connection of components, the use of admittance facilitates the analsysis.
+Though not a consequence of the Laplace transform, it is worth noting that the use of impedence facilitates the analysis of circuits for which the components are commected in series; for circuits with parallel connection of components, the use of admittance facilitates the analsysis.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 

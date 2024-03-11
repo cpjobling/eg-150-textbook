@@ -467,6 +467,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-frequency-domain-of-a-capacitive-network">Complex Frequency Domain of a Capacitive Network</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-impedance-z-s">Complex Impedance <span class="math notranslate nohighlight">\(Z(s)\)</span></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-impedance-of-components">Complex impedance of components</a></li>
 </ul>
@@ -809,6 +810,10 @@ document.write(`
 </figure>
 </section>
 </section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
+<p>Do examples 12.1 and 12.2 Now</p>
+</section>
 <section id="complex-impedance-z-s">
 <span id="complex-impedance"></span><h2>Complex Impedance <span class="math notranslate nohighlight">\(Z(s)\)</span><a class="headerlink" href="#complex-impedance-z-s" title="Permalink to this heading">#</a></h2>
 <p>By analogy with the <em>resistance</em> of a resistor <span class="math notranslate nohighlight">\(R\)</span>, a component with complex impedance <span class="math notranslate nohighlight">\(Z(s)\)</span> satisfies Ohm’s law:</p>
@@ -944,7 +949,7 @@ document.write(`
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>This is based on <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=104">Example 4.3</a> in <span id="id9">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
-<p>We will solve this example by hand and then review the solution in MATLAB lab 5.</p>
+<p>We will solve this example by hand in <strong>Examples class 4</strong> and then review the solution in MATLAB lab 5.</p>
 </div>
 <p>In the circuit shown in <a class="reference internal" href="#fig-ex12-3"><span class="std std-numref">Fig. 60</span></a>, switch <span class="math notranslate nohighlight">\(S_1\)</span> closes at <span class="math notranslate nohighlight">\(t=0\)</span>, while at the same time, switch <span class="math notranslate nohighlight">\(S_2\)</span> opens. Use the Laplace transform method to find <span class="math notranslate nohighlight">\(v_{\mathrm{out}}(t)\)</span> for <span class="math notranslate nohighlight">\(t &gt; 0\)</span>.</p>
 <figure class="align-default" id="fig-ex12-3">
@@ -1160,7 +1165,7 @@ into a linear and a quadratic factor.</p>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>This is Exercise 4 from <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=121">4.7 Exercises</a> from <span id="id12">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span></p>
-<p>This example will be solved as part of in MATLAB Lab 5.3.</p>
+<p>This example will be solved in MATLAB Lab 5.3.</p>
 </div>
 <p>For the s-domain circuit shown in <a class="reference internal" href="#fig-12-7"><span class="std std-numref">Fig. 63</span></a></p>
 <ul class="simple">
@@ -1198,9 +1203,9 @@ into a linear and a quadratic factor.</p>
 <h2>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h2>
 <p>Circuit analysis can be performed using Laplace transforms by using the Laplace transform equivalents of the component impedence or admittance. In particular, for impedence, we use <span class="math notranslate nohighlight">\(R\)</span>, <span class="math notranslate nohighlight">\(sL\)</span> and <span class="math notranslate nohighlight">\(1/sC\)</span>; for admittance we use <span class="math notranslate nohighlight">\(G = 1/R\)</span>, <span class="math notranslate nohighlight">\(1/sL\)</span>, <span class="math notranslate nohighlight">\(sC\)</span>. Once the circuit has been reduced to a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span>, the inverse laplace transform can be used to determine the time response of the circuit.</p>
 <p>When dealing with components using their complex component equivalents, the usual circuit analysis rules, KVL, KCL, voltage-divider rule, etc, can all be used.</p>
-<p>Complex impedence of a circuit is the resistance to current flow and is given by the general law <span class="math notranslate nohighlight">\(V(s) = Z(s) I(s)\)</span> from which the impendence is given by <span class="math notranslate nohighlight">\(Z(s) = V(s)/I(s)\)</span>. Similarly, the complex admittance of a circuit is given by <span class="math notranslate nohighlight">\(Y(s) = I(s)/V(s)\)</span>.</p>
-<p>Complex admittance is the reciprocal of complex impedence <span class="math notranslate nohighlight">\(Y(s) = 1/Z(s)\)</span>.</p>
-<p>Though not a consequence of the Laplace transform, it is worth noting that the use impedence facilitates the analysis of circuits for which the compoents are commected in series; for circuits with parallel connection of components, the use of admittance facilitates the analsysis.</p>
+<p>The complex impedence of a circuit is the resistance to current flow and is given by the general law <span class="math notranslate nohighlight">\(V(s) = Z(s) I(s)\)</span> from which the impendence is given by <span class="math notranslate nohighlight">\(Z(s) = V(s)/I(s)\)</span>. Similarly, the complex admittance of a circuit is given by <span class="math notranslate nohighlight">\(Y(s) = I(s)/V(s)\)</span>.</p>
+<p>The complex admittance is the reciprocal of the complex impedence <span class="math notranslate nohighlight">\(Y(s) = 1/Z(s)\)</span>.</p>
+<p>Though not a consequence of the Laplace transform, it is worth noting that the use of impedence facilitates the analysis of circuits for which the components are commected in series; for circuits with parallel connection of components, the use of admittance facilitates the analsysis.</p>
 </section>
 <section id="next-time">
 <h2>Next time<a class="headerlink" href="#next-time" title="Permalink to this heading">#</a></h2>
@@ -1319,6 +1324,7 @@ into a linear and a quadratic factor.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-frequency-domain-of-a-capacitive-network">Complex Frequency Domain of a Capacitive Network</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-impedance-z-s">Complex Impedance <span class="math notranslate nohighlight">\(Z(s)\)</span></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-impedance-of-components">Complex impedance of components</a></li>
 </ul>
