@@ -925,5 +925,5 @@ We move on to consider
 
 For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-247-textbook/tree/master/laplace_transform/matlab) folder in the [GitHub repository](https://github.com/cpjobling/eg-247-textbook).
 
-* Solution 12.3 [[solution12_3.mlx](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_3.mlx)]
-* Solution 12.6 [[solution12_6.mlx](https://cpjobling.github.io/eg-247-textbook/laplace_transform/matlab/solution12_6.mlx)]
+* Solution 12.3 [[solution12_3.mlx](https://raw.githubusercontent.com/cpjobling/eg-150-textbook/main/laplace_transform/matlab/solution12_3.mlx)]
+* Solution 12.6 [[solution12_6.mlx](https://raw.githubusercontent.com/cpjobling/eg-150-textbook/main/laplace_transform/matlab/solution12_6.mlx)]
