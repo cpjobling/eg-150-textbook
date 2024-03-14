@@ -556,14 +556,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>unknown error
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="circuit-transformation-from-time-to-complex-frequency">
@@ -589,11 +581,27 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqvrt =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>v_R(t) == R*i_R(t)
+</pre></div>
+</div>
+</div>
 </div>
 <p>The current flowing through the resistor is inversely proportional to the voltage across the resistor. This is easily confirmed by rewriting <a class="reference internal" href="#equation-eq-vrt">(18)</a> to isolate <span class="math notranslate nohighlight">\(i_R(t)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">eqirt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">isolate</span><span class="p">(</span><span class="n">eqvrt</span><span class="p">,</span><span class="n">i_R</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqirt =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i_R(t) == v_R(t)/R
 </pre></div>
 </div>
 </div>
@@ -655,12 +663,28 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqvlt =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>v_L(t) == L*diff(i_L(t), t)
+</pre></div>
+</div>
+</div>
 </div>
 <p>The current flowing through the inductor is inversely proportional to the integral of the voltage across the inductor which is easily confirmed by taking the integral of both sides of <a class="reference internal" href="#equation-eq-vlt">(22)</a> and rewriting the equation to isolate <span class="math notranslate nohighlight">\(i_L(t)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">int</span><span class="p">(</span><span class="n">lhs</span><span class="p">(</span><span class="n">eqvlt</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">rhs</span><span class="p">(</span><span class="n">eqvlt</span><span class="p">));</span>
 <span class="n">eqilt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">isolate</span><span class="p">(</span><span class="nb">ans</span><span class="p">,</span><span class="n">i_L</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqilt =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i_L(t) == int(v_L(t), t)/L
 </pre></div>
 </div>
 </div>
@@ -722,12 +746,28 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqict =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i_C(t) == C*diff(v_C(t), t)
+</pre></div>
+</div>
+</div>
 </div>
 <p>The voltage across the capacitor is inversely proportional to the integral of the current flowing into the capacitor which is easily confirmed by taking the integral of both sides of <a class="reference internal" href="#equation-eq-ict">(26)</a> and rewriting the equation to isolate <span class="math notranslate nohighlight">\(v_C(t)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">int</span><span class="p">(</span><span class="n">lhs</span><span class="p">(</span><span class="n">eqict</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">rhs</span><span class="p">(</span><span class="n">eqict</span><span class="p">));</span>
 <span class="n">eqvct</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">isolate</span><span class="p">(</span><span class="nb">ans</span><span class="p">,</span><span class="n">v_C</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqvct =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>v_C(t) == int(i_C(t), t)/C
 </pre></div>
 </div>
 </div>
