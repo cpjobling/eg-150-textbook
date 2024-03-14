@@ -927,3 +927,7 @@ For convenience, single script MATLAB solutions to the examples are provided and
 
 * Solution 12.3 [[solution12_3.mlx](https://raw.githubusercontent.com/cpjobling/eg-150-textbook/main/laplace_transform/matlab/solution12_3.mlx)]
 * Solution 12.6 [[solution12_6.mlx](https://raw.githubusercontent.com/cpjobling/eg-150-textbook/main/laplace_transform/matlab/solution12_6.mlx)]
+
+```{code-cell}
+
+```
