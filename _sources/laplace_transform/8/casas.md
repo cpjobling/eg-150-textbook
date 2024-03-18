@@ -774,7 +774,7 @@ step(G),grid
 
 #### Live Script Solution
 
-A standalone script version of this solution is available as [example15_1.mlx](hhttps://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/solution15_1.mlx)
+A standalone script version of this solution is available as [example15_1.mlx](https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/solution15_1.mlx)
 
 #### Simulink model
 
@@ -918,7 +918,7 @@ The MATLAB commands discussed in this section are summarized in the table given 
 | `sym2poly` | Converts a symbolic polynomial to a numerical polynomial | `p = sym2poly(x^2 + 2*x + 4)` | [sym2poly](https://uk.mathworks.com/help/symbolic/sym.sym2poly.html) |Coefficents of the symbolic polynomial must be numbers |
 | `poly2sym` | Converts a numerical polynomial to a symbolic polynomial | `ps = poly2sym([1,2,4],'s')` | [poly2sym](https://uk.mathworks.com/help/symbolic/sym.poly2sym.html) | - |
 | `numden` | Extracts numerator and denominator from a rational polynomial expressed in symbolic form |  `[n,d] = numden((s + 1)/(s^2 + 2*s * 3'))` | [numden](https://uk.mathworks.com/help/symbolic/sym.numden.html) | - |
-| | Numerical LTI object which represents a continuous-time or discrete-time LTI system |  | [Numeric Linear Time Invariant (LTI) Models](https://uk.mathworks.com/help/control/ug/numeric-models.html) | - |
+| `tf` | Numerical LTI object which represents a continuous-time or discrete-time LTI system |  | [Numeric Linear Time Invariant (LTI) Models](https://uk.mathworks.com/help/control/ug/numeric-models.html) | - |
 | `zpk` | Numerical LTI object representing a transfer function model in zero-pole-gain (factorized) form | `G = zpk(z,p,k)` | [zpk](https://uk.mathworks.com/help/control/ref/zpk.html) | - |
 | `tf` | Numerical LTI object representing a transfer function model in polynomial form | `G = tf(num,den)` | [tf](https://uk.mathworks.com/help/control/ref/tf.html) | - |
 | `tfdata` | Data extraction function that returns the numerator and denominator polynomials from an LTI model | `[num,den] = tfdata(H,'v')` | [tfdata](https://uk.mathworks.com/help/ident/ref/dynamicsystem.tfdata.html) | - |

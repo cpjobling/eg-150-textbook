@@ -119,42 +119,6 @@ Circuit for Example 14.1
 
 Have a go for the next five minutes.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-Switch to virtual whiteboard in OneNote.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-<pre style="border: 2px solid blue">
-Solve in OneNote
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-
 +++ {"slideshow": {"slide_type": "notes"}}
 
 #### Worked solution for Example 14.1
@@ -175,7 +139,7 @@ $$G(s) = \frac{V_\mathrm{out}(s)}{V_s(s)} = \frac{R_L + sL + 1/sC}{R_g + R_L + s
 :class: tip
 This is based on [Example 4.7](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=115) from {cite}`karris`.
 
-This is the basis for the mini project in MATLAB LAb 5.
+This is the basis for the mini project in MATLAB Lab 5.
 ::::
 
 Compute the transfer function for the op-amp circuit shown in {numref}`fig:ex14.2` in terms of the circuit constants $R_1$, $R_2$, $R_3$, $C_1$ and $C_2$.
@@ -227,54 +191,6 @@ versus radian frequency $\omega$ rad/s.
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 Have a go for the next five minutes
-
-+++ {"slideshow": {"slide_type": "fragment"}}
-
-Switch to virtual whiteboard in OneNote.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-<pre style="border: 2px solid blue">
-Solve in OneNote
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
