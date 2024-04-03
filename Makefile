@@ -56,7 +56,7 @@ assets: FORCE
 	rsync -av --delete --exclude='*.ipynb' --exclude='*.pptx' --exclude='.*' --delete-excluded \
 	signals_and_systems \
 	lti_systems \
-	fourier_series \
+	poles_and_zeros \
 	introduction \
 	laplace_transform \
 	worksheets \
