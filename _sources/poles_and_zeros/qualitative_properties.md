@@ -163,12 +163,16 @@ Quantifying the response for $f(t) = e^{\sigma t}\cos\left(\omega t\right)$: row
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-MATLAB code to reproduce this figure [example1.mlx]()
+MATLAB code to reproduce this figure [example1.mlx](matlab/example1.mlx)
 
 ```{code-cell}
+---
+slideshow:
+  slide_type: notes
+---
 format compact
 cd matlab
-example1
+open example1
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
