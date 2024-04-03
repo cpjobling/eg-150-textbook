@@ -37,7 +37,7 @@ We conclude our introduction to the applications of the Laplace transform by dem
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: notes
 ---
 % Initialize MATLAB
 clearvars
@@ -138,7 +138,7 @@ nNum = sym2poly(Num), nDen = sym2poly(Den)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Convert from numerical polynomial to symbolic. Second argument is polynomial variable. The default is x.
+Convert from numerical polynomial to symbolic. The second argument is the polynomial variable. The default is x.
 
 ```{code-cell}
 ---
@@ -587,7 +587,7 @@ $$G(s)= \frac{s^m +b_{m-1}s^{m-1} + \cdots + b_1s+b_0}{s^n +a_{n-1}s^{n-1} + \cd
 
 it returns
 
-$$\frac{r_1}{s + p_1} + \frac{r_2}{s + p_2} + \cdots + \frac{R_n}{s + p_n} + K(s)$$
+$$\frac{r_1}{s + p_1} + \frac{r_2}{s + p_2} + \cdots + \frac{r_n}{s + p_n} + K(s)$$
 
 where $p_k$ are the poles of the transfer function, $r_k$ are the coefficients of the partial fraction terms (called the **residues of the poles**) and $K(s)$ is a remainder polynomial which empty unless the rational polynomial is *non-proper*.
 
@@ -627,9 +627,13 @@ which we interpret to mean
 
 $$C(s) = \frac{0.3333}{s} + \frac{0.2381}{s + 3} - \frac{0.5714}{s + 5}.$$
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
 If $C(s)$ represents the step response of the system
 
 $$G(s) = \frac{5(s + 2)}{(s + 3)(s + 10)}$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 then the step response is, by inverse Laplace Transform:
 
@@ -715,9 +719,7 @@ Recast {ref}`ex:14.2` as a MATLAB problem using the LTI Transfer Function block.
 
 For simplicity use parameters $R_1 = R_2 = R_3 = 1\; \Omega$, and $C_1 = C_2 = 1$ F.
 
-Calculate the step response using the LTI functions and 
-
-Verify the result with Simulink.
+Calculate the step response using the LTI functions and verify the result with Simulink.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
