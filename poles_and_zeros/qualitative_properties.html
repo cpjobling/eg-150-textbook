@@ -452,9 +452,43 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#damping-and-quality-factor">Damping and quality factor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-poles-damping-ratio-zeta-and-quality-factor-q">Complex poles: Damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> and quality factor <span class="math notranslate nohighlight">\(Q\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-parallel-rlc-circuit">Example 2: parallel RLC circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intepretation">Intepretation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-4">Solution to example 4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dominant-poles">Dominant Poles</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4">Example 4</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stability-of-autonomous-lccodes">Stability of autonomous LCCODEs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-value-and-final-value-theorems">Initial value and final value theorems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-value-theorem">Initial value theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-5">Examples 5</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions-to-examples-5">Solutions to examples 5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-value-theorem">Final value theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-6">Examples 6</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions-to-examples-6">Solutions to examples 6</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#transfer-function">Transfer function</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#characterization-of-lti-systems">Characterization of LTI Systems</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#laplace-transforms-of-lccodes">Laplace transforms of LCCODEs</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#block-diagrams">Block diagrams</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#still-to-come">Still to come</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
@@ -478,9 +512,12 @@ document.write(`
 <ul class="simple">
 <li><p><a class="reference internal" href="#unit5-1-1"><span class="std std-ref">Inverse Laplace transform of a rational F(s)</span></a></p></li>
 <li><p><a class="reference internal" href="#unit5-1-2"><span class="std std-ref">Qualitative properties of terms</span></a></p></li>
-<li><p><a class="reference internal" href="#unit5-1-3"><span class="std std-ref">Damping and quality factor</span></a></p></li>
-<li><p><a class="reference internal" href="#unit5-1-4"><span class="std std-ref">Stability of autonomous LCCODEs</span></a></p></li>
-<li><p><a class="reference internal" href="#unit5-1-5"><span class="std std-ref">Initial value and final value theorems</span></a></p></li>
+<li><p><span class="xref std std-ref">unit5.1.3</span></p></li>
+<li><p><a class="reference internal" href="#unit5-1-4"><span class="std std-ref">Complex poles: Damping ratio \zeta and quality factor Q</span></a></p></li>
+<li><p><a class="reference internal" href="#unit5-1-5"><span class="std std-ref">Dominant Poles</span></a></p></li>
+<li><p><a class="reference internal" href="#unit5-1-6"><span class="std std-ref">Stability of autonomous LCCODEs</span></a></p></li>
+<li><p><a class="reference internal" href="#unit5-1-7"><span class="std std-ref">Initial value theorem</span></a></p></li>
+<li><p><a class="reference internal" href="#unit5-1-8"><span class="std std-ref">Final value theorem</span></a></p></li>
 </ul>
 </section>
 <section id="inverse-laplace-transform-of-a-rational-f-s">
@@ -540,7 +577,7 @@ document.write(`
 </section>
 </section>
 <section id="quantitative-properties-of-terms">
-<h2>Quantitative properties of terms<a class="headerlink" href="#quantitative-properties-of-terms" title="Permalink to this heading">#</a></h2>
+<span id="unit5-3-3"></span><h2>Quantitative properties of terms<a class="headerlink" href="#quantitative-properties-of-terms" title="Permalink to this heading">#</a></h2>
 <p>The pole <span class="math notranslate nohighlight">\(\lambda_1 = \sigma + j\omega\)</span> and its conjugate pair <span class="math notranslate nohighlight">\(\lambda_2 = \sigma - j\omega\)</span> will yield a time domain term</p>
 <div class="math notranslate nohighlight" id="equation-eq-pz-3">
 <span class="eqno">(48)<a class="headerlink" href="#equation-eq-pz-3" title="Permalink to this equation">#</a></span>\[ae^{\sigma t}\cos\left(\omega t + \phi\right)\]</div>
@@ -559,13 +596,7 @@ document.write(`
 </figure>
 <section id="example-1">
 <h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this heading">#</a></h3>
-<div class="highlight-figure-md notranslate"><div class="highlight"><pre><span></span>&lt;img src=&quot;pictures/example1.png&quot; width=&quot;50%&quot;
-     alt=&quot;A figure quantifying the response for exp(sigma t)cos(omega t): rows for omega = 30, 15, 0; columns for \sigma = -1.5, 0.75, 0, 0.75, 1.5.&quot; /&gt;
-
-Quantifying the response for $f(t) = e^{\sigma t}\cos\left(\omega t\right)$: rows $\omega = 30, 15, 0$; columns: $\sigma = -1.5, 0.75, 0, 0.75, 1.5$
-</pre></div>
-</div>
-<p>MATLAB code to reproduce this figure <span class="xref myst">example1.mlx</span></p>
+<p>Quantifying the response for <span class="math notranslate nohighlight">\(f(t) = e^{\sigma t}\cos\left(\omega t\right)\)</span>: rows <span class="math notranslate nohighlight">\(\omega = 30, 15, 0\)</span>; columns: <span class="math notranslate nohighlight">\(\sigma = -1.5, 0.75, 0, 0.75, 1.5\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="w"> </span><span class="n">compact</span>
@@ -575,28 +606,320 @@ Quantifying the response for $f(t) = e^{\sigma t}\cos\left(\omega t\right)$: row
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a016a67231cbf5d3d1944fa0e0d46f201c11cac8803b36896bda2c95e0f8fae4.png" src="../_images/a016a67231cbf5d3d1944fa0e0d46f201c11cac8803b36896bda2c95e0f8fae4.png" />
+<img alt="../_images/bd86c3facfc3b196ee162b5da2c6cd6d84bd5b61bbfd36541c5451a856057715.png" src="../_images/bd86c3facfc3b196ee162b5da2c6cd6d84bd5b61bbfd36541c5451a856057715.png" />
+</div>
+</div>
+<p>The MATLAB code to reproduce this figure is given in <a class="reference download internal" download="" href="../_downloads/556b332fedd14b129e4b084e6cc38943/example1.mlx"><span class="xref download myst">example1.mlx</span></a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="w"> </span><span class="n">example1</span>
+</pre></div>
+</div>
 </div>
 </div>
 </section>
 </section>
-<section id="damping-and-quality-factor">
-<span id="unit5-1-3"></span><h2>Damping and quality factor<a class="headerlink" href="#damping-and-quality-factor" title="Permalink to this heading">#</a></h2>
+<section id="complex-poles-damping-ratio-zeta-and-quality-factor-q">
+<span id="unit5-1-4"></span><h2>Complex poles: Damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> and quality factor <span class="math notranslate nohighlight">\(Q\)</span><a class="headerlink" href="#complex-poles-damping-ratio-zeta-and-quality-factor-q" title="Permalink to this heading">#</a></h2>
+<p>For a pole at <span class="math notranslate nohighlight">\(s = \lambda = \sigma + j\omega\)</span> (hence also at <span class="math notranslate nohighlight">\(\bar{\lambda}\)</span><a class="footnote-reference brackets" href="#pz-note3" id="id7">3</a>) with <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[F(s) = \frac{r}{s-\lambda} + \frac{\bar{r}}{s-\lambda},\;f(t) = ae^{\sigma t}\cos\left(\omega t + \phi\right)\]</div>
+<p>There are two measures of the decay rate per cycle of oscillation:</p>
+<ul class="simple">
+<li><p><strong>damping ratio</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-pz-4">
+<span class="eqno">(49)<a class="headerlink" href="#equation-eq-pz-4" title="Permalink to this equation">#</a></span>\[\zeta = \frac{-\sigma}{\sqrt{\sigma^2 + \omega^2}}\]</div>
+<ul class="simple">
+<li><p><strong>quality factor</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-pz-5">
+<span class="eqno">(50)<a class="headerlink" href="#equation-eq-pz-5" title="Permalink to this equation">#</a></span>\[Q = \frac{1}{2} \sqrt{\frac{\sigma^2 + \omega^2}{\sigma^2}} = \frac{1}{2\zeta} \]</div>
+<p>The damping ratio (or <span class="math notranslate nohighlight">\(Q\)</span>) is related to the <span class="math notranslate nohighlight">\(angle\)</span> of the pole in the complex plane as shown in <a class="reference internal" href="#fig-pz-3"><span class="std std-numref">Fig. 75</span></a>:</p>
+<figure class="align-default" id="fig-pz-3">
+<a class="reference internal image-reference" href="../_images/fig3.png"><img alt="The damping ratio is related the the angle of the pole in the complex plane" src="../_images/fig3.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 75 </span><span class="caption-text">The damping ratio is related the the angle of the pole in the complex plane</span><a class="headerlink" href="#fig-pz-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The oscillation is</p>
+<ul class="simple">
+<li><p>underdamped: <span class="math notranslate nohighlight">\(\zeta &lt; 1\)</span> (<span class="math notranslate nohighlight">\(Q &gt; 1/2\)</span>)</p></li>
+</ul>
+<ul class="simple">
+<li><p>critically damped: <span class="math notranslate nohighlight">\(\zeta = 1\)</span> (<span class="math notranslate nohighlight">\(Q = 1/2\)</span>)</p></li>
+</ul>
+<section id="example-2-parallel-rlc-circuit">
+<h3>Example 2: parallel RLC circuit<a class="headerlink" href="#example-2-parallel-rlc-circuit" title="Permalink to this heading">#</a></h3>
+<p>Consider the parallel RLC citcuit shown in <a class="reference internal" href="#fig-pz-4"><span class="std std-numref">Fig. 76</span></a></p>
+<p>Taking Laplace transforms we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-pz-6">
+<span class="eqno">(51)<a class="headerlink" href="#equation-eq-pz-6" title="Permalink to this equation">#</a></span>\[V(s) = -sL I(s)\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-eq-pz-7">
+<span class="eqno">(52)<a class="headerlink" href="#equation-eq-pz-7" title="Permalink to this equation">#</a></span>\[sCV(s) = I(s) - \frac{V(s)}{R} \]</div>
+<p>So</p>
+<div class="math notranslate nohighlight" id="equation-eq-pz-8">
+<span class="eqno">(53)<a class="headerlink" href="#equation-eq-pz-8" title="Permalink to this equation">#</a></span>\[\left(s^2 + \frac{1}{RC} s + \frac{1}{LC}\right) = 0\]</div>
+<p>The roots of the quadratic on the left-hand-side of (<a class="reference internal" href="#equation-eq-pz-7">(52)</a>) are given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\lambda &amp;= \frac{-\frac{1}{RC}  \pm \sqrt{\frac{1}{RC}^2 - \frac{4}{LC}}}{2}\\
+&amp;= -\frac{1}{2RC}  \pm \sqrt{\frac{1}{4R^2C^2} - \frac{1}{LC}}\\
+\end{align}\end{split}\]</div>
+<p>If we assume that the system is underdamped then</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{LC} &gt; \frac{1}{4R^2C^2}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\lambda = -\frac{1}{2RC} \pm j \sqrt{\frac{1}{LC} - \frac{1}{4R^2C^2}}\]</div>
+<p>giving</p>
+<div class="math notranslate nohighlight">
+\[\sigma =  -\frac{1}{2RC}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\omega = \sqrt{\frac{1}{LC} - \frac{1}{4R^2C^2}}\]</div>
+<p>This means that</p>
+<div class="math notranslate nohighlight">
+\[Q = \frac{{R}}{\sqrt{L/C}}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\zeta = \frac{\sqrt{L/C}}{2R}\]</div>
+</section>
+<section id="intepretation">
+<h3>Intepretation<a class="headerlink" href="#intepretation" title="Permalink to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(Q\)</span> is a neasure of the number of cycles to decay</p>
+<ul class="simple">
+<li><p>Time to decay to 1% of amplitude us about <span class="math notranslate nohighlight">\(4.6/|\sigma|\)</span></p></li>
+<li><p>The period of oscilation is <span class="math notranslate nohighlight">\(2\pi/\omega\)</span></p></li>
+<li><p>The number of cycles to decay to 1% amplitude</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[N_{1\%}\approx \frac{4.6/|\sigma|}{2\pi/\omega} = 1.46 \frac{\omega}{2|\sigma|} \]</div>
+<p>A rule of thumb (accurate for <span class="math notranslate nohighlight">\(Q&gt;2\)</span> or so):</p>
+<div class="math notranslate nohighlight">
+\[N_{1\%}\approx 1.46 Q \]</div>
+<p>Another rule of thumb: <span class="math notranslate nohighlight">\(N_{4\%} \approx Q\)</span></p>
+</section>
+<section id="example-3">
+<h3>Example 3<a class="headerlink" href="#example-3" title="Permalink to this heading">#</a></h3>
+<p>Assume <span class="math notranslate nohighlight">\(\omega = 2\pi\)</span> rad/s (so period <span class="math notranslate nohighlight">\(T = 1\)</span> s). Plot the response <span class="math notranslate nohighlight">\(e^{-\sigma t}\cos\left(\omega t\right)\)</span> for <span class="math notranslate nohighlight">\(Q = 20\)</span> and <span class="math notranslate nohighlight">\(Q=10\)</span>.</p>
+</section>
+<section id="solution-to-example-4">
+<h3>Solution to example 4<a class="headerlink" href="#solution-to-example-4" title="Permalink to this heading">#</a></h3>
+<p>Given that</p>
+<div class="math notranslate nohighlight">
+\[Q = \frac{1}{2} \sqrt{\frac{\omega^2 + \sigma^2}{\sigma^2}}\]</div>
+<p>it is relatively easy to show that</p>
+<div class="math notranslate nohighlight">
+\[\sigma = \frac{\omega}{\sqrt{4Q^2 - 1}}\]</div>
+<p>So to plot this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">omega</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="nb">pi</span><span class="p">;</span>
+<span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">1000</span><span class="p">);</span>
+<span class="n">Q</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="n">sigma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">Q</span>^<span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">.*</span><span class="nb">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Q = 20&#39;</span><span class="p">)</span>
+<span class="n">Q</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="n">sigma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">Q</span>^<span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">.*</span><span class="nb">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Q = 10&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/4040a7e8961cf51bcb55108b5e65bc7c87d22aeb0ad672eeeb60e629e8a6d599.png" src="../_images/4040a7e8961cf51bcb55108b5e65bc7c87d22aeb0ad672eeeb60e629e8a6d599.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="dominant-poles">
+<span id="unit5-1-5"></span><h2>Dominant Poles<a class="headerlink" href="#dominant-poles" title="Permalink to this heading">#</a></h2>
+<p>Suppose the poles of <span class="math notranslate nohighlight">\(F(s)\)</span> are <span class="math notranslate nohighlight">\(p_1,\ldots,p_n\)</span>. The asymptotic growth (or decay if <span class="math notranslate nohighlight">\(&lt;0\)</span>) is determined by the <em>maximum real part</em>:</p>
+<div class="math notranslate nohighlight">
+\[\alpha = \left\{\Re p_1,\ldots\Re p_n\right\}\]</div>
+<ul class="simple">
+<li><p>The pole (pr poles) which achieve this maximum real part are called <strong>dominant</strong></p></li>
+</ul>
+<ul class="simple">
+<li><p>As <span class="math notranslate nohighlight">\(t \to \infty\)</span> these terms become larger and larger compared to the other terms, no matter what the residues.</p></li>
+</ul>
+<p>As an example, see <a class="reference internal" href="#fig-pz-4"><span class="std std-numref">Fig. 76</span></a>. Although this system has six poles, the pole closest to <span class="math notranslate nohighlight">\(s = 0\)</span> has the largest real part and so will be dominant.</p>
+<figure class="align-default" id="fig-pz-4">
+<a class="reference internal image-reference" href="../_images/fig4.png"><img alt="Illustration of a dominant pole" src="../_images/fig4.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 76 </span><span class="caption-text">Dominant poles in a transform <span class="math notranslate nohighlight">\(F(s)\)</span></span><a class="headerlink" href="#fig-pz-4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="example-4">
+<h3>Example 4<a class="headerlink" href="#example-4" title="Permalink to this heading">#</a></h3>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[F(s) = \frac{100}{s+2} + \frac{1}{s+1}\]</div>
+<p>From transform tables</p>
+<div class="math notranslate nohighlight">
+\[f(t) = 100e^{-2t} + e^{-t}\]</div>
+<ul class="simple">
+<li><p>The assymptic decay rate is determined by the pole at <span class="math notranslate nohighlight">\(s = -1\)</span></p></li>
+<li><p>Assymptotcally, <span class="math notranslate nohighlight">\(f(t)\)</span> decays like <span class="math notranslate nohighlight">\(e^{-t}\)</span></p></li>
+<li><p>Even though associated with the residue for the nondominant pole is 100 times larger, the term associated with the dominant pole is larger  for <span class="math notranslate nohighlight">\(t &gt; 4.6\)</span>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1000</span><span class="p">);</span>
+<span class="n">f1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">100</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="p">);</span>
+<span class="n">f2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">);</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">f1</span><span class="p">),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]),</span><span class="nb">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">f2</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]),</span><span class="nb">grid</span>
+<span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">f1</span><span class="o">+</span><span class="n">f2</span><span class="p">),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]),</span><span class="nb">grid</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/1e48b32a14281ddb1b7e9f64587d7c1f87cc31ef5ea29dd4fb498176e74dbe1d.png" src="../_images/1e48b32a14281ddb1b7e9f64587d7c1f87cc31ef5ea29dd4fb498176e74dbe1d.png" />
+</div>
+</div>
+</section>
 </section>
 <section id="stability-of-autonomous-lccodes">
-<span id="unit5-1-4"></span><h2>Stability of autonomous LCCODEs<a class="headerlink" href="#stability-of-autonomous-lccodes" title="Permalink to this heading">#</a></h2>
+<span id="unit5-1-6"></span><h2>Stability of autonomous LCCODEs<a class="headerlink" href="#stability-of-autonomous-lccodes" title="Permalink to this heading">#</a></h2>
+<p>The linear constant coefficient ordinary differential equation (LCCODE)</p>
+<div class="math notranslate nohighlight">
+\[a_n\frac{d^n y(t)}{dt^n} + a_{n-1}\frac{d^{n-1} y(t)}{dt^{n-1}}+\cdots+a_0 y(t) = 0\]</div>
+<p>is <em>stable</em> if all solutions converge to zero, regardless of initial condition.</p>
+<p>Take the Laplace transform</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{eqnarray*}
+a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
++ a_{n-1}\left(s^{n-1}Y(s) - s^{n-2}y(0) - \cdots - y^{(n-2)}y(0)\right)\\+\cdots+a_0 y(0) = 0
+\end{eqnarray*}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[Y(s) = \frac{b_{n-1}s^{n-1}+b_{n-2}s^{n-2}+\cdots+b_1 s + b_0}{a_ns^n + a_{n-1}s^{n-1} + \cdots + a_1 s + a_0} =\frac{b(s)}{a(s)}\]</div>
+<p>where <span class="math notranslate nohighlight">\(b(s)\)</span> depends on the initial conditions.</p>
+<p>The LCCODE is stable only when all poles of <span class="math notranslate nohighlight">\(Y(s)\)</span> have <em>negative real part</em>, i.e. the roots of <span class="math notranslate nohighlight">\(a(s)\)</span> are in the left half plane.</p>
 </section>
-<section id="initial-value-and-final-value-theorems">
-<span id="unit5-1-5"></span><h2>Initial value and final value theorems<a class="headerlink" href="#initial-value-and-final-value-theorems" title="Permalink to this heading">#</a></h2>
+<section id="initial-value-theorem">
+<span id="unit5-1-7"></span><h2>Initial value theorem<a class="headerlink" href="#initial-value-theorem" title="Permalink to this heading">#</a></h2>
+<p>A general property of Laplace transforms (not just for rational <span class="math notranslate nohighlight">\(F(s)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{s\to\infty}sF(s) = f(0^+)\]</div>
+<p>(We can take <span class="math notranslate nohighlight">\(s\)</span> to be real in the limit).</p>
+<p>This makes a connection between <span class="math notranslate nohighlight">\(f(t)\)</span> for small <span class="math notranslate nohighlight">\(t\)</span> and <span class="math notranslate nohighlight">\(F(s)\)</span> for large <span class="math notranslate nohighlight">\(s\)</span>.</p>
+<p>Reason: for large (real) <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(se^{-st}\)</span> is bunched up near <span class="math notranslate nohighlight">\(t=0\)</span>, so:</p>
+<div class="math notranslate nohighlight">
+\[F(s) = \int_0^\infty se^{-st}f(t)\,dt\approx f(0^+) \int_0^\infty se^{-st}\,dt=f(0^+)\]</div>
+<section id="examples-5">
+<h3>Examples 5<a class="headerlink" href="#examples-5" title="Permalink to this heading">#</a></h3>
+<p>a) Find the initial value of <span class="math notranslate nohighlight">\(f(t) = e^{at}\)</span></p>
+<p>b) Find the initial value of the unit step signal <span class="math notranslate nohighlight">\(u_0(t)\)</span></p>
+<section id="solutions-to-examples-5">
+<h4>Solutions to examples 5<a class="headerlink" href="#solutions-to-examples-5" title="Permalink to this heading">#</a></h4>
+<p>a) For <span class="math notranslate nohighlight">\(f(t) = e^{at}\)</span>, <span class="math notranslate nohighlight">\(F(s) = 1/(s - a)\)</span> so</p>
+<div class="math notranslate nohighlight">
+\[\lim_{s\to\infty}sF(s) = \lim_{s\to\infty}\frac{s}{s-a} = 1 = f(0^+)\]</div>
+<p>b) For <span class="math notranslate nohighlight">\(f(t) = u_0(t)\)</span>, <span class="math notranslate nohighlight">\(F(s) = 1/s\)</span></p>
+<div class="math notranslate nohighlight">
+\[\lim_{s\to\infty}sF(s) = 1 = f(0^+)\]</div>
+</section>
+</section>
+</section>
+<section id="final-value-theorem">
+<span id="unit5-1-8"></span><h2>Final value theorem<a class="headerlink" href="#final-value-theorem" title="Permalink to this heading">#</a></h2>
+<p>The final value theorem make the connection between <span class="math notranslate nohighlight">\(f(t)\)</span> for large <span class="math notranslate nohighlight">\(t\)</span> and <span class="math notranslate nohighlight">\(F(s)\)</span> for small <span class="math notranslate nohighlight">\(s\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\lim_{t\to\infty} f(t) = \left.sF(s)\right|_{s=0}\]</div>
+<p>if the limit exists.</p>
+<p>Reason: from the relation between Laplace transforms and derivatives,</p>
+<div class="math notranslate nohighlight">
+\[sF(s) - f(0) = \mathcal{L}\left\{\frac{df(t)}{dt} \right\}=\int_0^\infty \frac{df(t)}{dt}e^{-st}\,dt\]</div>
+<div class="math notranslate nohighlight">
+\[s\left.F(s)\right|_{s=0} - f(0) = \int_0^\infty \frac{df(t)}{dt}\,dt=\lim_{t\to\infty} f(t)-f(0)\]</div>
+<div class="math notranslate nohighlight">
+\[s\left.F(s)\right|_{s=0} = \lim_{t\to\infty} f(t)\]</div>
+<section id="examples-6">
+<h3>Examples 6<a class="headerlink" href="#examples-6" title="Permalink to this heading">#</a></h3>
+<p>a) Find the final value of <span class="math notranslate nohighlight">\(f(t) = 1 - e^{-t}\)</span></p>
+<p>b) Find the final value of <span class="math notranslate nohighlight">\(f(t) = \cos\left(\omega t\right)\)</span></p>
+<section id="solutions-to-examples-6">
+<h4>Solutions to examples 6<a class="headerlink" href="#solutions-to-examples-6" title="Permalink to this heading">#</a></h4>
+<p>a) If <span class="math notranslate nohighlight">\(f(t) = 1 - e^{-t}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[F(s) = \frac{1}{s} -\frac{1}{s+1},\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\lim_{t\to\infty}f(t) = \left.sF(s)\right|_{s=0} = \frac{s}{s} - \frac{s}{s+1} = 1 - \frac{0}{1} = 1\]</div>
+<p>b) <span class="math notranslate nohighlight">\(f(t) = \cos\left(\omega t\right)\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[F(s) = \frac{s}{s^2 + \omega^2}\]</div>
+<p>In this case <span class="math notranslate nohighlight">\(\lim_{t\to\infty} f(t)\)</span> does not exist; the final value theorem does not apply here.</p>
+</section>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<p>In this unit we have presented some properties of rational polynomials which apply to the Laplace transform of signals and systems represented by transfer functions. In particular, we have developed some tools that help us to reason about the behaviour of a signal or system providing we know the location of its poles and zeros.</p>
+<p>We covered the following topics</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#unit5-1-1"><span class="std std-ref">Inverse Laplace transform of a rational F(s)</span></a></p></li>
+<li><p><a class="reference internal" href="#unit5-1-2"><span class="std std-ref">Qualitative properties of terms</span></a></p></li>
+<li><p><span class="xref std std-ref">unit5.1.3</span></p></li>
+<li><p><a class="reference internal" href="#unit5-1-4"><span class="std std-ref">Complex poles: Damping ratio \zeta and quality factor Q</span></a></p></li>
+<li><p><a class="reference internal" href="#unit5-1-5"><span class="std std-ref">Dominant Poles</span></a></p></li>
+<li><p><a class="reference internal" href="#unit5-1-6"><span class="std std-ref">Stability of autonomous LCCODEs</span></a></p></li>
+<li><p><a class="reference internal" href="#unit5-1-7"><span class="std std-ref">Initial value theorem</span></a></p></li>
+<li><p><a class="reference internal" href="#unit5-1-8"><span class="std std-ref">Final value theorem</span></a></p></li>
+</ul>
+<section id="take-aways">
+<h3>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h3>
+<section id="transfer-function">
+<h4>Transfer function<a class="headerlink" href="#transfer-function" title="Permalink to this heading">#</a></h4>
+<p>The summary of the time-domain and s-domain transforms are illustrated in <a class="reference internal" href="../laplace_transform/6/transfer_functions.html#fig-3-7"><span class="std std-numref">Fig. 64</span></a>. The key result is <span class="math notranslate nohighlight">\(Y(s) = H(s)X(s)\)</span> which simplifies the computation of the system response <span class="math notranslate nohighlight">\(y(t) = h(t)*x(t)\)</span> which has to be done using time-convolution.</p>
+<p>If we know <span class="math notranslate nohighlight">\(Y(s)\)</span> and <span class="math notranslate nohighlight">\(X(s)\)</span> we can determine <span class="math notranslate nohighlight">\(H(s)\)</span> using</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \frac{Y(s)}{X(s)}\]</div>
+<p>and <span class="math notranslate nohighlight">\(h(t) = \mathcal{L}^{-1}\left\{H(s)\right\}\)</span></p>
+</section>
+<section id="characterization-of-lti-systems">
+<h4>Characterization of LTI Systems<a class="headerlink" href="#characterization-of-lti-systems" title="Permalink to this heading">#</a></h4>
+<p>For continuous-time LTI systems the causality and stabilty of a system is guaranteed if all the poles of the transfer function are in the left-half of the <span class="math notranslate nohighlight">\(s\)</span>-plane and the <span class="math notranslate nohighlight">\(j\omega\)</span> axis is included in the region of convergence. That is, if the poles of the system <span class="math notranslate nohighlight">\(H(s)\)</span>, <span class="math notranslate nohighlight">\(s_k\)</span> have real part <span class="math notranslate nohighlight">\(-\sigma_k\)</span>, the system will be causal and stable if <span class="math notranslate nohighlight">\(\sigma_k &lt; 0\)</span> for all <span class="math notranslate nohighlight">\(k\)</span>.</p>
+</section>
+<section id="laplace-transforms-of-lccodes">
+<h4>Laplace transforms of LCCODEs<a class="headerlink" href="#laplace-transforms-of-lccodes" title="Permalink to this heading">#</a></h4>
+<p>The linear constant coefficient ordinary differential equation (LLCODE) of a system involving input signal <span class="math notranslate nohighlight">\(x(t)\)</span> and output signal <span class="math notranslate nohighlight">\(y(t)\)</span> is given in <a class="reference internal" href="../laplace_transform/6/transfer_functions.html#equation-eq-338">(34)</a>. When we take Laplace transforms of this differential equation, ignoring initial conditions, we get the polynomial equation <a class="reference internal" href="../laplace_transform/6/transfer_functions.html#equation-eq-339">(35)</a> from which we can determine the transfer function:</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}\]</div>
+<p>This is a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span> and it can be solved for any input <span class="math notranslate nohighlight">\(x(t)\)</span> that has a Laplace transform <span class="math notranslate nohighlight">\(X(s)\)</span> by forming</p>
+<div class="math notranslate nohighlight">
+\[Y(s) = H(s)X(s)\]</div>
+<p>and taking inverse Laplace transforms using the Partial Fraction Expansion method discussed in <a class="reference internal" href="../laplace_transform/5/circuit_analysis.html#unit4-5"><span class="std std-ref">Unit 4.5: Using Laplace Transforms for Circuit Analysis</span></a>.</p>
+<p>Several examples are given in <a class="reference internal" href="../laplace_transform/5/circuit_analysis.html#examples12"><span class="std std-ref">Examples 12</span></a> in which the problems given in <span class="xref std std-ref">examples8</span> of <span class="xref std std-ref">unit3.3</span> are redone as Laplace transform problems.</p>
+</section>
+<section id="block-diagrams">
+<h4>Block diagrams<a class="headerlink" href="#block-diagrams" title="Permalink to this heading">#</a></h4>
+<p>Complex systems can be broken down into subsystems which may be represented by block diagrams which have either series or parallel connections (see <a class="reference internal" href="../laplace_transform/6/transfer_functions.html#fig-3-8"><span class="std std-numref">Fig. 65</span></a> and <a class="reference internal" href="../laplace_transform/6/transfer_functions.html#fig-3-9"><span class="std std-numref">Fig. 66</span></a> and feedback (See <a class="reference internal" href="../laplace_transform/6/transfer_functions.html#ex-13-8"><span class="std std-ref">Example 13.8</span></a>)</p>
+</section>
+</section>
+<section id="still-to-come">
+<h3>Still to come<a class="headerlink" href="#still-to-come" title="Permalink to this heading">#</a></h3>
+<p>In the next unit <a class="reference internal" href="examples16.html#examples16"><span class="std std-ref">Examples 16</span></a> we will do some examples to practice what we have learned in this section. We will the conclude this module by considering frequency response analysis of signals and systems defined by rational polynomials in <span class="math notranslate nohighlight">\(s\)</span>.</p>
+<p>We will build on these ideas in <strong>EG-247 Digital Signal Processing</strong> and you will be able to use what you have learned in <strong>EG-243 Control Systems</strong>.</p>
+</section>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id7">
+<div class="docutils container" id="id9">
 <dl class="citation">
-<dt class="label" id="id23"><span class="brackets">All24</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id4">2</a>)</span></dt>
+<dt class="label" id="id25"><span class="brackets">All24</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id4">2</a>)</span></dt>
 <dd><p>Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: <a class="github reference external" href="https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0">MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems</a>.</p>
 </dd>
-<dt class="label" id="id24"><span class="brackets">Boy93</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
+<dt class="label" id="id26"><span class="brackets">Boy93</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id8">3</a>)</span></dt>
 <dd><p>Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: <a class="reference external" href="https://web.stanford.edu/~boyd/ee102/">https://web.stanford.edu/~boyd/ee102/</a>.</p>
 </dd>
 </dl>
@@ -608,6 +931,9 @@ Quantifying the response for $f(t) = e^{\sigma t}\cos\left(\omega t\right)$: row
 </dd>
 <dt class="label" id="pz-note2"><span class="brackets"><a class="fn-backref" href="#id6">2</a></span></dt>
 <dd><p>The term <span class="math notranslate nohighlight">\(\lambda\)</span> may be complex, in which case there will be two complex poles <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> which form the complex conjugate pairs <span class="math notranslate nohighlight">\(\lambda_{1,2} = \sigma \pm j\omega\)</span>. In this case, the poles will be represented as the roots of the quadratic factor <span class="math notranslate nohighlight">\(\left(s - \sigma - j\omega\right)\left(s - \sigma + j\omega\right) = s^2 + 2\sigma s + \left(\sigma^2 + \omega^2\right)\)</span>. The inverse Laplace transform of a such a quadratic factor will be oscilliatory.</p>
+</dd>
+<dt class="label" id="pz-note3"><span class="brackets"><a class="fn-backref" href="#id7">3</a></span></dt>
+<dd><p>Here we are using the bar notation <span class="math notranslate nohighlight">\(\bar{x}\)</span> to represent the complex conjugate of complex number <span class="math notranslate nohighlight">\(x\)</span>.</p>
 </dd>
 </dl>
 </section>
@@ -689,9 +1015,43 @@ Quantifying the response for $f(t) = e^{\sigma t}\cos\left(\omega t\right)$: row
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#damping-and-quality-factor">Damping and quality factor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-poles-damping-ratio-zeta-and-quality-factor-q">Complex poles: Damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> and quality factor <span class="math notranslate nohighlight">\(Q\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-parallel-rlc-circuit">Example 2: parallel RLC circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intepretation">Intepretation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-4">Solution to example 4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dominant-poles">Dominant Poles</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-4">Example 4</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stability-of-autonomous-lccodes">Stability of autonomous LCCODEs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-value-and-final-value-theorems">Initial value and final value theorems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-value-theorem">Initial value theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-5">Examples 5</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions-to-examples-5">Solutions to examples 5</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-value-theorem">Final value theorem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-6">Examples 6</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions-to-examples-6">Solutions to examples 6</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#transfer-function">Transfer function</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#characterization-of-lti-systems">Characterization of LTI Systems</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#laplace-transforms-of-lccodes">Laplace transforms of LCCODEs</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#block-diagrams">Block diagrams</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#still-to-come">Still to come</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
