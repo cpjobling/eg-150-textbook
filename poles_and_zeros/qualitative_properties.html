@@ -63,6 +63,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'poles_and_zeros/qualitative_properties';</script>
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/poles_and_zeros/qualitative_properties.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -438,6 +440,21 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-laplace-transform-of-a-rational-f-s">Inverse Laplace transform of a rational <span class="math notranslate nohighlight">\(F(s)\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qualitative-properties-of-terms">Qualitative properties of terms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#real-poles">Real poles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-poles">Complex poles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imaginary-poles">Imaginary poles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repeated-poles">Repeated poles</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-properties-of-terms">Quantitative properties of terms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#damping-and-quality-factor">Damping and quality factor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stability-of-autonomous-lccodes">Stability of autonomous LCCODEs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-value-and-final-value-theorems">Initial value and final value theorems</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
@@ -455,21 +472,144 @@ document.write(`
 <p><span id="id1">[<a class="reference internal" href="../zbib.html#id18" title="Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: https://web.stanford.edu/~boyd/ee102/.">Boyd, 1993</a>]</span> <span id="id2">[<a class="reference internal" href="../zbib.html#id17" title="Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0.">Allie, 2024</a>]</span></p>
 <p>The notes for this section have been adapted from <a class="reference external" href="https://web.stanford.edu/~boyd/ee102/qualitative.pdf">Qualitative properties of signals &amp; Laplace transforms</a> <span id="id3">[<a class="reference internal" href="../zbib.html#id18" title="Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: https://web.stanford.edu/~boyd/ee102/.">Boyd, 1993</a>]</span> and was also partly influenced by the MATLAB LiveScript <strong>PoleZeroAnalysis.mlx</strong> from the MathWorks curriculum module <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems">Transfer Function Analysis of Dynamic Systems</a> ( <span id="id4">[<a class="reference internal" href="../zbib.html#id17" title="Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0.">Allie, 2024</a>]</span>).</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/poles_and_zeros/qualitative_properties">cpjobling.github.io/eg-150-textbook/poles_and_zeros/qualitative_properties</a></p>
+<p><img alt="QR Code for this lecture" src="../_images/qr_code_for_unit51.png" /></p>
 <section id="agenda">
 <h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#unit5-1-1"><span class="std std-ref">Inverse Laplace transform of a rational F(s)</span></a></p></li>
+<li><p><a class="reference internal" href="#unit5-1-2"><span class="std std-ref">Qualitative properties of terms</span></a></p></li>
+<li><p><a class="reference internal" href="#unit5-1-3"><span class="std std-ref">Damping and quality factor</span></a></p></li>
+<li><p><a class="reference internal" href="#unit5-1-4"><span class="std std-ref">Stability of autonomous LCCODEs</span></a></p></li>
+<li><p><a class="reference internal" href="#unit5-1-5"><span class="std std-ref">Initial value and final value theorems</span></a></p></li>
+</ul>
+</section>
+<section id="inverse-laplace-transform-of-a-rational-f-s">
+<span id="unit5-1-1"></span><h2>Inverse Laplace transform of a rational <span class="math notranslate nohighlight">\(F(s)\)</span><a class="headerlink" href="#inverse-laplace-transform-of-a-rational-f-s" title="Permalink to this heading">#</a></h2>
+<p>Suppose <span class="math notranslate nohighlight">\(F(s) = N(s)/D(s)\)</span> is rational and strictly proper<a class="footnote-reference brackets" href="#pz-note1" id="id5">1</a> with <span class="math notranslate nohighlight">\(\mathcal{L}^{-1}\left\{F(s)\right\} = f(t)\)</span> each term in the partial fraction expansion of <span class="math notranslate nohighlight">\(F(s)\)</span> gives a term in <span class="math notranslate nohighlight">\(f(t)\)</span>:</p>
+<ul class="simple">
+<li><p>For a single pole at <span class="math notranslate nohighlight">\(s = \lambda\)</span><a class="footnote-reference brackets" href="#pz-note2" id="id6">2</a>,</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-pz-1">
+<span class="eqno">(46)<a class="headerlink" href="#equation-eq-pz-1" title="Permalink to this equation">#</a></span>\[\mathcal{L}^{-1}\left\{\frac{1}{s-\lambda} \right\} = e^{\lambda t}\]</div>
+<ul class="simple">
+<li><p>For a pole at <span class="math notranslate nohighlight">\(s = \lambda\)</span> of multiplicity <span class="math notranslate nohighlight">\(k\)</span>,</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq-pz-2">
+<span class="eqno">(47)<a class="headerlink" href="#equation-eq-pz-2" title="Permalink to this equation">#</a></span>\[\mathcal{L}^{-1}\left\{\frac{1}{\left(s-\lambda\right)^k} \right\} = \frac{1}{\left(k-1\right)!}t^{k-1}e^{\lambda t} \]</div>
+<ul class="simple">
+<li><p>The <em>poles</em> of <span class="math notranslate nohighlight">\(F(s)\)</span> determine the types of terms that appear in <span class="math notranslate nohighlight">\(f(t)\)</span>.</p></li>
+</ul>
+<ul class="simple">
+<li><p>The <em>zeros</em> (or <em>residues</em>) of <span class="math notranslate nohighlight">\(F(s)\)</span> determine the coeficients multiplying each ter, or the amplitude and phase of oscillitory terms.</p></li>
+</ul>
+</section>
+<section id="qualitative-properties-of-terms">
+<span id="unit5-1-2"></span><h2>Qualitative properties of terms<a class="headerlink" href="#qualitative-properties-of-terms" title="Permalink to this heading">#</a></h2>
+<section id="real-poles">
+<h3>Real poles<a class="headerlink" href="#real-poles" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Real, positive poles correspond to growing exponential terms</p></li>
+</ul>
+<ul class="simple">
+<li><p>Real, negative poles correspond to decaying exponential terms</p></li>
+</ul>
+<ul class="simple">
+<li><p>A pole at <span class="math notranslate nohighlight">\(s = 0\)</span> corresponds to a constant (DC) term</p></li>
+</ul>
+</section>
+<section id="complex-poles">
+<h3>Complex poles<a class="headerlink" href="#complex-poles" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Complex pole pairs with positive real part correspond to exponentially growing sinusoidal terms</p></li>
+</ul>
+<ul class="simple">
+<li><p>Complex pole pairs with negative real part correspond to exponentially decaying sinusoidal terms</p></li>
+</ul>
+</section>
+<section id="imaginary-poles">
+<h3>Imaginary poles<a class="headerlink" href="#imaginary-poles" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Pure imaginary pole pairs correspond to sinusoidal terms</p></li>
+</ul>
+</section>
+<section id="repeated-poles">
+<h3>Repeated poles<a class="headerlink" href="#repeated-poles" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Repeated poles yield the same tyoes of terms, multiplied by powers of <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+</ul>
+</section>
+</section>
+<section id="quantitative-properties-of-terms">
+<h2>Quantitative properties of terms<a class="headerlink" href="#quantitative-properties-of-terms" title="Permalink to this heading">#</a></h2>
+<p>The pole <span class="math notranslate nohighlight">\(\lambda_1 = \sigma + j\omega\)</span> and its conjugate pair <span class="math notranslate nohighlight">\(\lambda_2 = \sigma - j\omega\)</span> will yield a time domain term</p>
+<div class="math notranslate nohighlight" id="equation-eq-pz-3">
+<span class="eqno">(48)<a class="headerlink" href="#equation-eq-pz-3" title="Permalink to this equation">#</a></span>\[ae^{\sigma t}\cos\left(\omega t + \phi\right)\]</div>
+<ul class="simple">
+<li><p>The real part of the pole gives the <em>growth rate</em> (if positive) or <em>decay rate</em> (if negative) of the corresponding term in <span class="math notranslate nohighlight">\(f(t)\)</span></p></li>
+</ul>
+<ul class="simple">
+<li><p>The imaginary part gives the oscillation <em>frequency</em></p></li>
+</ul>
+<p>This is summarized in <a class="reference internal" href="#fig-pz-1"><span class="std std-numref">Fig. 74</span></a></p>
+<figure class="align-default" id="fig-pz-1">
+<a class="reference internal image-reference" href="../_images/quant.png"><img alt="A figure illustrating the quantitive properties of terms f(t) resulting from the poles of F(s)." src="../_images/quant.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 74 </span><span class="caption-text">Illustrating the quantitive properties of the terms <span class="math notranslate nohighlight">\(f(t)\)</span> resulting from the poles of <span class="math notranslate nohighlight">\(F(s)\)</span></span><a class="headerlink" href="#fig-pz-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="example-1">
+<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this heading">#</a></h3>
+<div class="highlight-figure-md notranslate"><div class="highlight"><pre><span></span>&lt;img src=&quot;pictures/example1.png&quot; width=&quot;50%&quot;
+     alt=&quot;A figure quantifying the response for exp(sigma t)cos(omega t): rows for omega = 30, 15, 0; columns for \sigma = -1.5, 0.75, 0, 0.75, 1.5.&quot; /&gt;
+
+Quantifying the response for $f(t) = e^{\sigma t}\cos\left(\omega t\right)$: rows $\omega = 30, 15, 0$; columns: $\sigma = -1.5, 0.75, 0, 0.75, 1.5$
+</pre></div>
+</div>
+<p>MATLAB code to reproduce this figure <span class="xref myst">example1.mlx</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="w"> </span><span class="n">compact</span>
+<span class="nb">cd</span><span class="w"> </span><span class="n">matlab</span>
+<span class="n">example1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/a016a67231cbf5d3d1944fa0e0d46f201c11cac8803b36896bda2c95e0f8fae4.png" src="../_images/a016a67231cbf5d3d1944fa0e0d46f201c11cac8803b36896bda2c95e0f8fae4.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="damping-and-quality-factor">
+<span id="unit5-1-3"></span><h2>Damping and quality factor<a class="headerlink" href="#damping-and-quality-factor" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="stability-of-autonomous-lccodes">
+<span id="unit5-1-4"></span><h2>Stability of autonomous LCCODEs<a class="headerlink" href="#stability-of-autonomous-lccodes" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="initial-value-and-final-value-theorems">
+<span id="unit5-1-5"></span><h2>Initial value and final value theorems<a class="headerlink" href="#initial-value-and-final-value-theorems" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id5">
+<div class="docutils container" id="id7">
 <dl class="citation">
-<dt class="label" id="id21"><span class="brackets">All24</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id4">2</a>)</span></dt>
+<dt class="label" id="id23"><span class="brackets">All24</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id4">2</a>)</span></dt>
 <dd><p>Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: <a class="github reference external" href="https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0">MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems</a>.</p>
 </dd>
-<dt class="label" id="id22"><span class="brackets">Boy93</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
+<dt class="label" id="id24"><span class="brackets">Boy93</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
 <dd><p>Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: <a class="reference external" href="https://web.stanford.edu/~boyd/ee102/">https://web.stanford.edu/~boyd/ee102/</a>.</p>
 </dd>
 </dl>
 </div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="pz-note1"><span class="brackets"><a class="fn-backref" href="#id5">1</a></span></dt>
+<dd><p>If the numerator <span class="math notranslate nohighlight">\(N(s)\)</span> is a polynomial <span class="math notranslate nohighlight">\(b_ms^m + b_{m-1}s^{m-1} + \cdots b_1s + b_0\)</span> and the denominator <span class="math notranslate nohighlight">\(D(s)\)</span> is a polynomial <span class="math notranslate nohighlight">\(a_ns^n + a_{n-1}s^{n-1} + \cdots a_1s + a_0\)</span>, the rational polynomial <span class="math notranslate nohighlight">\(F(s) = N(s)/D(s)\)</span> is strictly proper if <span class="math notranslate nohighlight">\(n &gt; m\)</span>. We examined the case of improper rational polynomials in <a class="reference internal" href="../laplace_transform/4/inverse_laplace.html#ilap-improper"><span class="std std-ref">The case of the improper rational polynomial</span></a>.</p>
+</dd>
+<dt class="label" id="pz-note2"><span class="brackets"><a class="fn-backref" href="#id6">2</a></span></dt>
+<dd><p>The term <span class="math notranslate nohighlight">\(\lambda\)</span> may be complex, in which case there will be two complex poles <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> which form the complex conjugate pairs <span class="math notranslate nohighlight">\(\lambda_{1,2} = \sigma \pm j\omega\)</span>. In this case, the poles will be represented as the roots of the quadratic factor <span class="math notranslate nohighlight">\(\left(s - \sigma - j\omega\right)\left(s - \sigma + j\omega\right) = s^2 + 2\sigma s + \left(\sigma^2 + \omega^2\right)\)</span>. The inverse Laplace transform of a such a quadratic factor will be oscilliatory.</p>
+</dd>
+</dl>
 </section>
 </section>
 
@@ -482,16 +622,16 @@ document.write(`
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jupyter_matlab_kernel"
+            mode: "matlab"
         },
         kernelOptions: {
-            name: "jupyter_matlab_kernel",
+            name: "matlab",
             path: "./poles_and_zeros"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jupyter_matlab_kernel'</script>
+    <script>kernelName = 'matlab'</script>
 
                 </article>
               
@@ -537,6 +677,21 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-laplace-transform-of-a-rational-f-s">Inverse Laplace transform of a rational <span class="math notranslate nohighlight">\(F(s)\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qualitative-properties-of-terms">Qualitative properties of terms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#real-poles">Real poles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-poles">Complex poles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imaginary-poles">Imaginary poles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#repeated-poles">Repeated poles</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-properties-of-terms">Quantitative properties of terms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#damping-and-quality-factor">Damping and quality factor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stability-of-autonomous-lccodes">Stability of autonomous LCCODEs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-value-and-final-value-theorems">Initial value and final value theorems</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
