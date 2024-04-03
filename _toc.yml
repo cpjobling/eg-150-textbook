@@ -54,17 +54,13 @@ parts:
       title: Unit 4.7 Transfer Functions for Circuit Analysis
     - file: laplace_transform/8/casas
       title: Unit 4.8 Computer-Aided Systems Analysis and Simulation 
-  - file: fourier_series/index
-    title: Unit 5 Fourier Series
+  - file: poles_and_zeros/index
+    title: Unit 5 Pole-Zero Analysis
     sections:
-    - file: fourier_series/1/trig_fseries
-      title: Unit 5.1 Fourier Analysis
-    - file: fourier_series/2/exp_fs1
-      title: Unit 5.2 Exponential Fourier Series
-    - file: fourier_series/3/exp_fs2
-      title: Unit 5.3 Computing Line Spectra
-    - file: fourier_series/4/exp_fs3
-      title: Unit 5.4 Applications of Line Spectra
+    - file: poles_and_zeros/qualitative_properties
+      title: Unit 5.1 Qualitative Properties of Signals and Transfer functions
+    - file: poles_and_zeros/examples16
+      title: Examples 16
   - file: zbib
     title: Bibliography
 - caption: FAQs
