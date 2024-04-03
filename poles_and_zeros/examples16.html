@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Unit 5: Fourier Series &#8212; EG-150 Signals and Systems</title>
+    <title>Examples 16 &#8212; EG-150 Signals and Systems</title>
   
   
   
@@ -63,12 +63,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'fourier_series/index';</script>
-    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/fourier_series/index.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'poles_and_zeros/examples16';</script>
+    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/poles_and_zeros/examples16.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Unit 5.1: Fourier Analysis" href="1/trig_fseries.html" />
-    <link rel="prev" title="Unit 4.8: Computer-Aided Systems Analysis and Simulation" href="../laplace_transform/8/casas.html" />
+    <link rel="next" title="References" href="../zbib.html" />
+    <link rel="prev" title="Unit 5.1: Qualitative Properties of Signals and Transfer functions" href="qualitative_properties.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -197,13 +197,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/8/casas.html">Unit 4.8 Computer-Aided Systems Analysis and Simulation</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Unit 5 Fourier Series</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="1/trig_fseries.html">Unit 5.1: Fourier Analysis</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="2/exp_fs1.html">Unit 5.2: Exponential Fourier Series</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="3/exp_fs2.html">Unit 5.3 Computing Line Spectra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4/exp_fs3.html">Unit 5.4 Applications of Line Spectra</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Unit 5 Pole-Zero Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qualitative_properties.html">Unit 5.1 Qualitative Properties of Signals and Transfer functions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Examples 16</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../zbib.html">Bibliography</a></li>
@@ -300,7 +296,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/fourier_series/index.md" target="_blank"
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/poles_and_zeros/examples16.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -317,7 +313,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Ffourier_series/index.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Fpoles_and_zeros/examples16.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -347,7 +343,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/fourier_series/index.md" target="_blank"
+      <li><a href="../_sources/poles_and_zeros/examples16.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -418,9 +414,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -431,20 +425,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Unit 5: Fourier Series</h1>
+    <h1>Examples 16</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -454,37 +439,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <!-- #region -->
-<section class="tex2jax_ignore mathjax_ignore" id="unit-5-fourier-series">
-<span id="unit5"></span><h1>Unit 5: Fourier Series<a class="headerlink" href="#unit-5-fourier-series" title="Permalink to this heading">#</a></h1>
-<p>This chapter launches our Introduction to Fourier Transforms with a look at Wave Analysis and Trigonometric Fourier Series. We will then go on to consider the Exponential Fourier Series and its Applications.</p>
-<p>The material in this chapter is based on Chapter 7 (Starting at <a class="reference external" href="http://site.ebrary.com/lib/swansea/docDetail.action?docID=10547416">Section 7.8</a>) of <span id="id1">[<a class="reference internal" href="../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> from the Required Reading List. Some clarificattion was needed and I used <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?ppg=150&amp;docID=3135971&amp;tm=1518703383001">Chapter 4</a> of <span id="id2">[<a class="reference internal" href="../zbib.html#id9" title="Benoit Boulet. Fundamentals of signals and systems. Da Vinci Engineering Press, Hingham, Mass., 2006. ISBN 1584503815. Available as an eBook. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/detail.action?docID=3135971.">Boulet, 2006</a>]</span> fwhich unfortunately is not longer available from the library.</p>
-<section id="table-of-contents">
-<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">#</a></h2>
-<p>In this section of the course we will cover:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="1/trig_fseries.html#unit5-1"><span class="std std-ref">Unit 5.1: Fourier Analysis</span></a></p></li>
-<li><p><a class="reference internal" href="2/exp_fs1.html#unit5-2"><span class="std std-ref">Unit 5.2: Exponential Fourier Series</span></a></p></li>
-<li><p><a class="reference internal" href="3/exp_fs2.html#unit5-3"><span class="std std-ref">Unit 5.3: Computing Line Spectra</span></a></p></li>
-<li><p><a class="reference internal" href="4/exp_fs3.html#unit5-4"><span class="std std-ref">Unit 5.4: Applications of Line Spectra</span></a></p></li>
-</ul>
-</section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id3">
-<dl class="citation">
-<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id2">Bou06</a></span></dt>
-<dd><p>Benoit Boulet. <em>Fundamentals of signals and systems</em>. Da Vinci Engineering Press, Hingham, Mass., 2006. ISBN 1584503815. Available as an eBook. URL: <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/detail.action?docID=3135971">https://ebookcentral.proquest.com/lib/swansea-ebooks/detail.action?docID=3135971</a>.</p>
-</dd>
-<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id1">Kar12</a></span></dt>
-<dd><p>Steven T. Karris. <em>Signals and systems with MATLAB computing and Simulink modeling</em>. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197">https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197</a>.</p>
-</dd>
-</dl>
-</div>
-<!-- #endregion -->
-</section>
-<div class="toctree-wrapper compound">
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="examples-16">
+<span id="examples16"></span><h1>Examples 16<a class="headerlink" href="#examples-16" title="Permalink to this heading">#</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -496,16 +452,16 @@ document.write(`
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "jupyter_matlab_kernel"
         },
         kernelOptions: {
-            name: "python3",
-            path: "./fourier_series"
+            name: "jupyter_matlab_kernel",
+            path: "./poles_and_zeros"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'jupyter_matlab_kernel'</script>
 
                 </article>
               
@@ -518,20 +474,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../laplace_transform/8/casas.html"
+       href="qualitative_properties.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Unit 4.8: Computer-Aided Systems Analysis and Simulation</p>
+        <p class="prev-next-title">Unit 5.1: Qualitative Properties of Signals and Transfer functions</p>
       </div>
     </a>
     <a class="right-next"
-       href="1/trig_fseries.html"
+       href="../zbib.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Unit 5.1: Fourier Analysis</p>
+        <p class="prev-next-title">References</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -541,21 +497,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
