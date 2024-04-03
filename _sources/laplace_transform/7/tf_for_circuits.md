@@ -218,7 +218,7 @@ Pencast: [ex7.pdf](https://cpjobling.github.io/eg-247-textbook/laplace_transform
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-#### The Matlab Bit
+#### The MATLAB Bit
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -276,7 +276,7 @@ denH = sym2poly(den)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Now define the denominator
+Now define the numerator
 
 ```{code-cell}
 ---
@@ -331,6 +331,8 @@ ylabel('|Vout/Vin|')
 title('Magnitude Vout/Vin vs. Radian Frequency')
 grid
 ```
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ## MATLAB Solutions
 
