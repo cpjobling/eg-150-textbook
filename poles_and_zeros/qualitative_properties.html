@@ -453,10 +453,19 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-poles-damping-ratio-zeta-and-quality-factor-q">Complex poles: Damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> and quality factor <span class="math notranslate nohighlight">\(Q\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-parallel-rlc-circuit">Example 2: parallel RLC circuit</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intepretation">Intepretation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-parallel-rlc-circuit">Example 2: parallel RLC circuit</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-result">Interpretation of the result</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#overdamped-response">Overdamped response</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#critically-damped-response">Critically damped response</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#underdamped-response">Underdamped response</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#undamped-response">Undamped response</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intepretation-of-q">Intepretation of <span class="math notranslate nohighlight">\(Q\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-4">Solution to example 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-3">Solution to example 3</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dominant-poles">Dominant Poles</a><ul class="nav section-nav flex-column">
@@ -652,42 +661,94 @@ document.write(`
 <section id="example-2-parallel-rlc-circuit">
 <h3>Example 2: parallel RLC circuit<a class="headerlink" href="#example-2-parallel-rlc-circuit" title="Permalink to this heading">#</a></h3>
 <p>Consider the parallel RLC citcuit shown in <a class="reference internal" href="#fig-pz-4"><span class="std std-numref">Fig. 76</span></a></p>
-<p>Taking Laplace transforms we have</p>
-<div class="math notranslate nohighlight" id="equation-eq-pz-6">
-<span class="eqno">(51)<a class="headerlink" href="#equation-eq-pz-6" title="Permalink to this equation">#</a></span>\[V(s) = -sL I(s)\]</div>
+<p>We have</p>
+<div class="math notranslate nohighlight" id="equation-eq-pz-c1">
+<span class="eqno">(51)<a class="headerlink" href="#equation-eq-pz-c1" title="Permalink to this equation">#</a></span>\[v(t) = -L\frac{di(t)}{dt}\]</div>
 <p>and</p>
+<div class="math notranslate nohighlight" id="equation-eq-pz-c2">
+<span class="eqno">(52)<a class="headerlink" href="#equation-eq-pz-c2" title="Permalink to this equation">#</a></span>\[C\frac{dv(t)}{dt}= i(t) - \frac{v(t)}{R}\]</div>
+<p>Integrating both sides of (<a class="reference internal" href="#equation-eq-pz-c1">(51)</a>) we get</p>
+<div class="math notranslate nohighlight" id="equation-eq-pz-c3">
+<span class="eqno">(53)<a class="headerlink" href="#equation-eq-pz-c3" title="Permalink to this equation">#</a></span>\[\int_0^tv(\tau)\,d\tau = -Li(t)\]</div>
+<p>Rewritten as</p>
+<div class="math notranslate nohighlight" id="equation-eq-pz-c4">
+<span class="eqno">(54)<a class="headerlink" href="#equation-eq-pz-c4" title="Permalink to this equation">#</a></span>\[i(t) = - \frac{1}{L} \int_0^tv(\tau)\,d\tau\]</div>
+<p>Substituting (<a class="reference internal" href="#equation-eq-pz-c4">(54)</a>) into (<a class="reference internal" href="#equation-eq-pz-c2">(52)</a> we eliminate <span class="math notranslate nohighlight">\(i(t)\)</span> and obtain</p>
+<div class="math notranslate nohighlight" id="equation-eq-pz-c5">
+<span class="eqno">(55)<a class="headerlink" href="#equation-eq-pz-c5" title="Permalink to this equation">#</a></span>\[C\frac{dv(t)}{dt}= - \frac{1}{L} \int_0^tv(\tau)\,d\tau - \frac{v(t)}{R}\]</div>
+<p>Taking the derivative of both sides of (<a class="reference internal" href="#equation-eq-pz-c5">(55)</a>) and gathering terms yields the differential equation</p>
+<div class="math notranslate nohighlight" id="equation-eq-pz-c6">
+<span class="eqno">(56)<a class="headerlink" href="#equation-eq-pz-c6" title="Permalink to this equation">#</a></span>\[\frac{d^2v(t)}{dt^2} + \frac{1}{RC}\frac{dv(t)}{dt} + \frac{1}{LC} v(t) = 0\]</div>
+<p>Taking Laplace transforms of (<a class="reference internal" href="#equation-eq-pz-c6">(56)</a>) we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-pz-7">
-<span class="eqno">(52)<a class="headerlink" href="#equation-eq-pz-7" title="Permalink to this equation">#</a></span>\[sCV(s) = I(s) - \frac{V(s)}{R} \]</div>
-<p>So</p>
+<span class="eqno">(57)<a class="headerlink" href="#equation-eq-pz-7" title="Permalink to this equation">#</a></span>\[\left(s^2 V(s) - sv(0) - v'(0)\right) + \frac{1}{RC}\left(sV(s) - v(0)\right) + \frac{1}{LC}V(s)=0\]</div>
+<p>Assuming <span class="math notranslate nohighlight">\(v'(0) = 0\)</span> then ([eq}<code class="docutils literal notranslate"><span class="pre">eq:pz:7</span></code>) becomes</p>
 <div class="math notranslate nohighlight" id="equation-eq-pz-8">
-<span class="eqno">(53)<a class="headerlink" href="#equation-eq-pz-8" title="Permalink to this equation">#</a></span>\[\left(s^2 + \frac{1}{RC} s + \frac{1}{LC}\right) = 0\]</div>
-<p>The roots of the quadratic on the left-hand-side of (<a class="reference internal" href="#equation-eq-pz-7">(52)</a>) are given by</p>
+<span class="eqno">(58)<a class="headerlink" href="#equation-eq-pz-8" title="Permalink to this equation">#</a></span>\[\left(s^2 + \frac{1}{RC}s + \frac{1}{LC} \right)V(s) = \left(s + \frac{1}{RC}\right)v(0)\]</div>
+<p>Let <span class="math notranslate nohighlight">\(v(0) = k\)</span> (a constant), we can represent (<a class="reference internal" href="#equation-eq-pz-8">(58)</a>) as the rational function</p>
+<div class="math notranslate nohighlight" id="equation-eq-pz-9">
+<span class="eqno">(59)<a class="headerlink" href="#equation-eq-pz-9" title="Permalink to this equation">#</a></span>\[V(s) = \frac{k\left(s + \frac{1}{RC}\right)}{s^2 + \frac{1}{RC} s + \frac{1}{LC}}\]</div>
+<p>The roots of the denominator of (<a class="reference internal" href="#equation-eq-pz-9">(59)</a>) are given by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
 \lambda &amp;= \frac{-\frac{1}{RC}  \pm \sqrt{\frac{1}{RC}^2 - \frac{4}{LC}}}{2}\\
 &amp;= -\frac{1}{2RC}  \pm \sqrt{\frac{1}{4R^2C^2} - \frac{1}{LC}}\\
 \end{align}\end{split}\]</div>
-<p>If we assume that the system is underdamped then</p>
+<section id="interpretation-of-the-result">
+<h4>Interpretation of the result<a class="headerlink" href="#interpretation-of-the-result" title="Permalink to this heading">#</a></h4>
+<p>There are four possible types of response that would result from this quadratic. Which type occurs depends on the <em>discriminant</em></p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{4R^2C^2} - \frac{1}{LC}\]</div>
+<p>of the quadratic formula which itself depends on the relative values of <span class="math notranslate nohighlight">\(L\)</span>, <span class="math notranslate nohighlight">\(C\)</span> and <span class="math notranslate nohighlight">\(R\)</span>.</p>
+<section id="overdamped-response">
+<h5>Overdamped response<a class="headerlink" href="#overdamped-response" title="Permalink to this heading">#</a></h5>
+<p>If the discriminant is positive</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{LC} &lt; \frac{1}{4R^2C^2}\]</div>
+<p>and the roots <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> will be real and distinct. The voltage <span class="math notranslate nohighlight">\(v(t)\)</span> will be the sum of two exponential decays</p>
+<div class="math notranslate nohighlight">
+\[v(t) = r_1 e^{-\lambda_1 t} + r_2 e^{-\lambda_2 t}\]</div>
+<p>where <span class="math notranslate nohighlight">\(r_1\)</span> and <span class="math notranslate nohighlight">\(r_2\)</span> are the residues of the partial-fraction expansion of (<a class="reference internal" href="#equation-eq-pz-9">(59)</a>)</p>
+</section>
+<section id="critically-damped-response">
+<h5>Critically damped response<a class="headerlink" href="#critically-damped-response" title="Permalink to this heading">#</a></h5>
+<p>If the discriminant is zero</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{LC} = \frac{1}{4R^2C^2}\]</div>
+<p>the roots <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> will be real and equal to <span class="math notranslate nohighlight">\(\lambda = -1/(2RC)\)</span>. The voltage <span class="math notranslate nohighlight">\(v(t)\)</span> will be</p>
+<div class="math notranslate nohighlight">
+\[v(t) = r_1 t e^{-\lambda t} + r_2  e^{-\lambda t}\]</div>
+<p>Again, <span class="math notranslate nohighlight">\(r_1\)</span> and <span class="math notranslate nohighlight">\(r_2\)</span> are the residues of the partial-fraction expansion of (<a class="reference internal" href="#equation-eq-pz-9">(59)</a>).</p>
+</section>
+<section id="underdamped-response">
+<h5>Underdamped response<a class="headerlink" href="#underdamped-response" title="Permalink to this heading">#</a></h5>
+<p>If the discriminant is negative then</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{LC} &gt; \frac{1}{4R^2C^2}\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight">
-\[\lambda = -\frac{1}{2RC} \pm j \sqrt{\frac{1}{LC} - \frac{1}{4R^2C^2}}\]</div>
+\[\lambda_{1,2} = -\frac{1}{2RC} \pm j \sqrt{\frac{1}{LC} - \frac{1}{4R^2C^2}}\]</div>
 <p>giving</p>
 <div class="math notranslate nohighlight">
 \[\sigma =  -\frac{1}{2RC}\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight">
 \[\omega = \sqrt{\frac{1}{LC} - \frac{1}{4R^2C^2}}\]</div>
-<p>This means that</p>
+<p>This will be a decaying sinusoidal waveform and means that</p>
 <div class="math notranslate nohighlight">
 \[Q = \frac{{R}}{\sqrt{L/C}}\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight">
 \[\zeta = \frac{\sqrt{L/C}}{2R}\]</div>
 </section>
-<section id="intepretation">
-<h3>Intepretation<a class="headerlink" href="#intepretation" title="Permalink to this heading">#</a></h3>
+<section id="undamped-response">
+<h5>Undamped response<a class="headerlink" href="#undamped-response" title="Permalink to this heading">#</a></h5>
+<p>If the resistance <span class="math notranslate nohighlight">\(R\)</span> is infinite, the real part <span class="math notranslate nohighlight">\(\sigma = \)</span> and the poles <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> are imaginry. The energy in the circuit will continually flow backwards and forwards between the inductor and the capacitor. This will result in a sinusoidal response <span class="math notranslate nohighlight">\(v(t) = \alpha(\omega t + \phi)\)</span>. The actual values of amplitude <span class="math notranslate nohighlight">\(\alpha\)</span> and phase <span class="math notranslate nohighlight">\(\phi\)</span> again depend on the residues of the partial expansion of (<a class="reference internal" href="#equation-eq-pz-9">(59)</a>).</p>
+</section>
+</section>
+</section>
+<section id="intepretation-of-q">
+<h3>Intepretation of <span class="math notranslate nohighlight">\(Q\)</span><a class="headerlink" href="#intepretation-of-q" title="Permalink to this heading">#</a></h3>
 <p><span class="math notranslate nohighlight">\(Q\)</span> is a neasure of the number of cycles to decay</p>
 <ul class="simple">
 <li><p>Time to decay to 1% of amplitude us about <span class="math notranslate nohighlight">\(4.6/|\sigma|\)</span></p></li>
@@ -705,8 +766,8 @@ document.write(`
 <h3>Example 3<a class="headerlink" href="#example-3" title="Permalink to this heading">#</a></h3>
 <p>Assume <span class="math notranslate nohighlight">\(\omega = 2\pi\)</span> rad/s (so period <span class="math notranslate nohighlight">\(T = 1\)</span> s). Plot the response <span class="math notranslate nohighlight">\(e^{-\sigma t}\cos\left(\omega t\right)\)</span> for <span class="math notranslate nohighlight">\(Q = 20\)</span> and <span class="math notranslate nohighlight">\(Q=10\)</span>.</p>
 </section>
-<section id="solution-to-example-4">
-<h3>Solution to example 4<a class="headerlink" href="#solution-to-example-4" title="Permalink to this heading">#</a></h3>
+<section id="solution-to-example-3">
+<h3>Solution to example 3<a class="headerlink" href="#solution-to-example-3" title="Permalink to this heading">#</a></h3>
 <p>Given that</p>
 <div class="math notranslate nohighlight">
 \[Q = \frac{1}{2} \sqrt{\frac{\omega^2 + \sigma^2}{\sigma^2}}\]</div>
@@ -739,7 +800,7 @@ document.write(`
 <span id="unit5-1-5"></span><h2>Dominant Poles<a class="headerlink" href="#dominant-poles" title="Permalink to this heading">#</a></h2>
 <p>Suppose the poles of <span class="math notranslate nohighlight">\(F(s)\)</span> are <span class="math notranslate nohighlight">\(p_1,\ldots,p_n\)</span>. The asymptotic growth (or decay if <span class="math notranslate nohighlight">\(&lt;0\)</span>) is determined by the <em>maximum real part</em>:</p>
 <div class="math notranslate nohighlight">
-\[\alpha = \left\{\Re p_1,\ldots\Re p_n\right\}\]</div>
+\[\alpha = \max\left\{\Re p_1,\ldots,\Re p_n\right\}\]</div>
 <ul class="simple">
 <li><p>The pole (pr poles) which achieve this maximum real part are called <strong>dominant</strong></p></li>
 </ul>
@@ -762,9 +823,9 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[f(t) = 100e^{-2t} + e^{-t}\]</div>
 <ul class="simple">
-<li><p>The assymptic decay rate is determined by the pole at <span class="math notranslate nohighlight">\(s = -1\)</span></p></li>
-<li><p>Assymptotcally, <span class="math notranslate nohighlight">\(f(t)\)</span> decays like <span class="math notranslate nohighlight">\(e^{-t}\)</span></p></li>
-<li><p>Even though associated with the residue for the nondominant pole is 100 times larger, the term associated with the dominant pole is larger  for <span class="math notranslate nohighlight">\(t &gt; 4.6\)</span>.</p></li>
+<li><p>The assympotic decay rate is determined by the pole at <span class="math notranslate nohighlight">\(s = -1\)</span></p></li>
+<li><p>Assymptotically, <span class="math notranslate nohighlight">\(f(t)\)</span> decays like <span class="math notranslate nohighlight">\(e^{-t}\)</span></p></li>
+<li><p>Even though the residue associated with for the nondominant pole is 100 times larger, the term associated with the dominant pole is larger for <span class="math notranslate nohighlight">\(t &gt; 4.6\)</span>.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1016,10 +1077,19 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-poles-damping-ratio-zeta-and-quality-factor-q">Complex poles: Damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> and quality factor <span class="math notranslate nohighlight">\(Q\)</span></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-parallel-rlc-circuit">Example 2: parallel RLC circuit</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intepretation">Intepretation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-parallel-rlc-circuit">Example 2: parallel RLC circuit</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-result">Interpretation of the result</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#overdamped-response">Overdamped response</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#critically-damped-response">Critically damped response</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#underdamped-response">Underdamped response</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#undamped-response">Undamped response</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intepretation-of-q">Intepretation of <span class="math notranslate nohighlight">\(Q\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-4">Solution to example 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-3">Solution to example 3</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dominant-poles">Dominant Poles</a><ul class="nav section-nav flex-column">

@@ -246,36 +246,102 @@ Consider the parallel RLC citcuit shown in {numref}`fig:pz:4`
 Parallel RLC circuit (reproduced from page 6-8 of {cite}`boyd93`)
 :::
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++
 
-Taking Laplace transforms we have 
+We have 
 
-$$V(s) = -sL I(s)$$ (eq:pz:6)
-
-+++ {"slideshow": {"slide_type": "fragment"}}
+$$v(t) = -L\frac{di(t)}{dt}$$ (eq:pz:c1)
 
 and
 
-$$sCV(s) = I(s) - \frac{V(s)}{R} $$ (eq:pz:7)
+$$C\frac{dv(t)}{dt}= i(t) - \frac{v(t)}{R}$$ (eq:pz:c2)
 
-+++ {"slideshow": {"slide_type": "fragment"}}
+Integrating both sides of ({eq}`eq:pz:c1`) we get
 
-So
+$$\int_0^tv(\tau)\,d\tau = -Li(t)$$  (eq:pz:c3)
 
-$$\left(s^2 + \frac{1}{RC} s + \frac{1}{LC}\right) = 0$$ (eq:pz:8)
+Rewritten as
+
+$$i(t) = - \frac{1}{L} \int_0^tv(\tau)\,d\tau$$  (eq:pz:c4)
+
+Substituting ({eq}`eq:pz:c4`) into ({eq}`eq:pz:c2` we eliminate $i(t)$ and obtain
+
+$$C\frac{dv(t)}{dt}= - \frac{1}{L} \int_0^tv(\tau)\,d\tau - \frac{v(t)}{R}$$ (eq:pz:c5)
+
+Taking the derivative of both sides of ({eq}`eq:pz:c5`) and gathering terms yields the differential equation
+
+$$\frac{d^2v(t)}{dt^2} + \frac{1}{RC}\frac{dv(t)}{dt} + \frac{1}{LC} v(t) = 0$$ (eq:pz:c6)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-The roots of the quadratic on the left-hand-side of ({eq}`eq:pz:7`) are given by
+Taking Laplace transforms of ({eq}`eq:pz:c6`) we have 
+
+$$\left(s^2 V(s) - sv(0) - v'(0)\right) + \frac{1}{RC}\left(sV(s) - v(0)\right) + \frac{1}{LC}V(s)=0$$ (eq:pz:7)
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Assuming $v'(0) = 0$ then ([eq}`eq:pz:7`) becomes
+
+$$\left(s^2 + \frac{1}{RC}s + \frac{1}{LC} \right)V(s) = \left(s + \frac{1}{RC}\right)v(0)$$ (eq:pz:8)
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Let $v(0) = k$ (a constant), we can represent ({eq}`eq:pz:8`) as the rational function
+
+$$V(s) = \frac{k\left(s + \frac{1}{RC}\right)}{s^2 + \frac{1}{RC} s + \frac{1}{LC}}$$ (eq:pz:9)
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+The roots of the denominator of ({eq}`eq:pz:9`) are given by
 
 $$\begin{align}
 \lambda &= \frac{-\frac{1}{RC}  \pm \sqrt{\frac{1}{RC}^2 - \frac{4}{LC}}}{2}\\
 &= -\frac{1}{2RC}  \pm \sqrt{\frac{1}{4R^2C^2} - \frac{1}{LC}}\\
 \end{align}$$
 
++++
+
+#### Interpretation of the result
+
+There are four possible types of response that would result from this quadratic. Which type occurs depends on the *discriminant* 
+
+$$\frac{1}{4R^2C^2} - \frac{1}{LC}$$ 
+
+of the quadratic formula which itself depends on the relative values of $L$, $C$ and $R$.
+
++++
+
+##### Overdamped response
+
+If the discriminant is positive 
+
+$$\frac{1}{LC} < \frac{1}{4R^2C^2}$$
+
+and the roots $\lambda_1$ and $\lambda_2$ will be real and distinct. The voltage $v(t)$ will be the sum of two exponential decays
+
+$$v(t) = r_1 e^{-\lambda_1 t} + r_2 e^{-\lambda_2 t}$$
+
+where $r_1$ and $r_2$ are the residues of the partial-fraction expansion of ({eq}`eq:pz:9`)
+
++++
+
+##### Critically damped response
+
+If the discriminant is zero 
+
+$$\frac{1}{LC} = \frac{1}{4R^2C^2}$$
+
+the roots $\lambda_1$ and $\lambda_2$ will be real and equal to $\lambda = -1/(2RC)$. The voltage $v(t)$ will be
+
+$$v(t) = r_1 t e^{-\lambda t} + r_2  e^{-\lambda t}$$
+
+Again, $r_1$ and $r_2$ are the residues of the partial-fraction expansion of ({eq}`eq:pz:9`).
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-If we assume that the system is underdamped then
+##### Underdamped response
+
+If the discriminant is negative then
 
 $$\frac{1}{LC} > \frac{1}{4R^2C^2}$$
 
@@ -283,7 +349,7 @@ $$\frac{1}{LC} > \frac{1}{4R^2C^2}$$
 
 and
 
-$$\lambda = -\frac{1}{2RC} \pm j \sqrt{\frac{1}{LC} - \frac{1}{4R^2C^2}}$$
+$$\lambda_{1,2} = -\frac{1}{2RC} \pm j \sqrt{\frac{1}{LC} - \frac{1}{4R^2C^2}}$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -299,7 +365,7 @@ $$\omega = \sqrt{\frac{1}{LC} - \frac{1}{4R^2C^2}}$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-This means that
+This will be a decaying sinusoidal waveform and means that
 
 $$Q = \frac{{R}}{\sqrt{L/C}}$$
 
@@ -311,7 +377,13 @@ $$\zeta = \frac{\sqrt{L/C}}{2R}$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Intepretation
+##### Undamped response
+
+If the resistance $R$ is infinite, the real part $\sigma = $ and the poles $\lambda_1$ and $\lambda_2$ are imaginry. The energy in the circuit will continually flow backwards and forwards between the inductor and the capacitor. This will result in a sinusoidal response $v(t) = \alpha(\omega t + \phi)$. The actual values of amplitude $\alpha$ and phase $\phi$ again depend on the residues of the partial expansion of ({eq}`eq:pz:9`).
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Intepretation of $Q$
 
 $Q$ is a neasure of the number of cycles to decay
 
@@ -335,7 +407,7 @@ Assume $\omega = 2\pi$ rad/s (so period $T = 1$ s). Plot the response $e^{-\sigm
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Solution to example 4
+### Solution to example 3
 
 Given that
 
@@ -371,7 +443,7 @@ plot(t,exp(-sigma*t).*cos(omega*t)),title('Q = 10')
 
 Suppose the poles of $F(s)$ are $p_1,\ldots,p_n$. The asymptotic growth (or decay if $<0$) is determined by the *maximum real part*:
 
-$$\alpha = \left\{\Re p_1,\ldots\Re p_n\right\}$$
+$$\alpha = \max\left\{\Re p_1,\ldots,\Re p_n\right\}$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -406,9 +478,9 @@ From transform tables
 
 $$f(t) = 100e^{-2t} + e^{-t}$$
 
-* The assymptic decay rate is determined by the pole at $s = -1$
-* Assymptotcally, $f(t)$ decays like $e^{-t}$
-* Even though associated with the residue for the nondominant pole is 100 times larger, the term associated with the dominant pole is larger  for $t > 4.6$.
+* The assympotic decay rate is determined by the pole at $s = -1$
+* Assymptotically, $f(t)$ decays like $e^{-t}$
+* Even though the residue associated with for the nondominant pole is 100 times larger, the term associated with the dominant pole is larger for $t > 4.6$.
 
 ```{code-cell}
 ---
