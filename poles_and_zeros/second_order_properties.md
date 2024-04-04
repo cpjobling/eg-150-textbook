@@ -27,7 +27,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook/poles_and_zeros/second_orde
 
 ## Acknowledgements
 
-The notes for this unit have been influenced by the MATLAB LiveScript **PoleZeroAnalysis.mlx** from the MathWorks curriculum module [Transfer Function Analysis of Dynamic Systems](https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems) {cite}`tfads`.
+The notes for this unit have been influenced by the MATLAB LiveScript **PoleZeroAnalysis.mlx** from the MathWorks curriculum module [Transfer Function Analysis of Dynamic Systems](https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems) {cite}`tfads`. You will find some useful interactive applications with which you can explore the concepts presented here. Some of these will be deomostrated in the lecture.
 
 The examples have been inspired by the recording of the second half of the video recording of Stephen Boyd's 1999 lecture 10 (delivered at Stanford University) which itself is based on [Qualitative properties of signals & Laplace transforms](https://web.stanford.edu/~boyd/ee102/qualitative.pdf) {cite}`boyd93`.
 
@@ -168,17 +168,7 @@ $$
 \end{align}
 $$
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-(unit5.2.2)=
-## Damping ratio and natural frequency
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-(unit5.2.3)=
-## Step-response of a second-order system
-
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (unit5.2:ex7)=
 ### Example 8
@@ -252,7 +242,150 @@ ylabel('Current i(t) [A]'),xlabel('Time t [s]')
 hold off
 ```
 
++++ {"slideshow": {"slide_type": "notes"}}
+
 The MATLAB code to reproduce this result is given in [example8.mlx](matlab/example8.mlx)
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(unit5.2.2)=
+## Natural frequency
+
+The locations of the poles in the $s$-plane determine the natural oscillation frequencies present in the system.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Consider a pole in the complex plane illustrated in {numref}`fig:unit5.2:1`
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+:::{figure-md} 
+
+<img src="pictures/complex_pole.png" alt="Phase  and magnitude  of pole  shown in the complex plane" width="50%" />           
+Phase  and magnitude  of pole  shown in the complex plane
+:::
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+* The natural (undamped) frequency (in rad/s) contributed by a pole $p$ is the pole magnitude, $r=\left|p\right|$.
+* The phase, $\phi=\arg p$, determines the relative strength of the oscillatory component.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+## Analysis of a second-order system
+
+Second-order systems with a pair of conjugate poles and no zeros are useful for illustrating the natural frequency response analytically. It is helpful to write this type of system in the form:
+
+$$G(s) = \frac{K}{s^2 + 2\zeta\omega_n s + \omega_n^2 }$$ 
+
+where 
+
+* $K$ is the gain coefficient
+* $\zeta$ is the damping ratio already introduced in {ref}`unit5.1.4`
+* and $\omega_n$ is the (undamped) natural frequency.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+These parameters are helpful for drawing a connection between the natural response of the system and the properties of the poles. In this section, the poles of the second-order system will be analytically computed and related to the natural response of the system.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Pole analysis
+
+The poles of the system occur when the denominator is zero:
+
+$$p_{1,2} = -\zeta\omega_n \pm \omega_n \sqrt{\zeta^2 - 1}$$
+    
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+For simplicity, consider $\zeta \in [0,1)$. In this case, the poles are
+    
+$$p_{1,2} = -\zeta\omega_n \pm j \omega_n \sqrt{1 - \zeta^2}$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+As stated above, the natural frequency is defined as the magnitude of the pole. The magnitude is computed as :
+
+$$\sqrt{\mathbf{Re}^2 + \mathbf{Im}^2}$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Using the definitions illustrated in {numref}`fig:pz:3`, $\mathbf{Re} = -\sigma = -\zeta\omega_n$ and $\mathbf{Im} = \omega = \omega_n \sqrt{1 - \zeta^2}$, so :
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+\begin{array}{rl} |p|
+ &= \sqrt{\sigma^2 + \omega^2} \\
+ &= \sqrt{ (-\zeta \omega_n)^2 + ( \pm \omega_n \sqrt{1-\zeta^2})^2 } \\ 
+ &= \sqrt{ \zeta^2 \omega_n^2 + \omega_n^2 (1-\zeta^2) } \\ 
+ &= |\omega_n|\ 
+\end{array}
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+This illustrates why this form of the equation is used: the natural frequency is the parameter $\omega_n$.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+The damping ratio $\zeta$ determines the relative strength of the exponential part of the response. 
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+As $\zeta\to 1$, the complex part of the pole tends to zero, implying less oscillatory and stronger exponential behavior. 
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+For stable systems, that implies greater damping. 
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+The gain coefficient $K$ affects the magnitude of the response, not the time-dependent behavior.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Natural response
+
+The impulse response of a system $H(s)$ is also called the *natural response*. The natural response $y(t)$ is computed by taking the inverse Laplace transform of
+
+$$\frac{Y(s)}{X(s)} = \frac{Y(s)}{1} = \frac{ K }{s^2 + 2 \zeta \omega_n s  + \omega_n^2}$$
+        
+because the impulse $x(t)=\delta(t)$ has a Laplace transform $1$. You can find the response's analytic form by referring to a table or using the MATLAB [ilaplace](https://uk.mathworks.com/help/symbolic/sym.ilaplace.html) function.
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+syms s zeta omega_n K Y(s) y(t)
+Y(s) = K/(s^2 + 2*zeta*omega_n*s + omega_n^2)
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+y(t) = ilaplace(Y); % The impulse response in the time domain
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Gives the result
+
+$$x(t) = \frac{K\,{\mathrm{e}}^{-\zeta\, \omega_n \,t } \,\sin \left(\omega_n \,t\,\sqrt{1-\zeta^2 }\right)}{\omega_n \,\sqrt{1-\zeta^2 }}$$ (eq:unit5.1:1)
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Notice that the impulse response is a product of an exponential and sine function. From these functions observe that:
+* The sine function frequency (in rads/s) is $\omega_n \,\sqrt{1-\zeta^2 }$. If the damping $\zeta=0$, then the frequency is $\omega_n$. This is the reason $\omega_n$  is often referred to as the *undamped natural frequency*.
+* The rate of decay of the exponential damping function is $\zeta\omega_n$. 
+* The gain parameter $K$ only contributes as a constant multiplier to the magnitude of the response.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(unit5.2.3)=
+## Step-response of a second-order system
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
