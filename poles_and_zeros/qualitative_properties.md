@@ -17,17 +17,15 @@ kernelspec:
 (unit5.1)=
 # Unit 5.1: Qualitative Properties of Signals and Transfer functions
 
-{cite}`boyd93` {cite}`tfads`
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-The notes for this section have been adapted from [Qualitative properties of signals & Laplace transforms](https://web.stanford.edu/~boyd/ee102/qualitative.pdf) {cite}`boyd93` and was also partly influenced by the MATLAB LiveScript **PoleZeroAnalysis.mlx** from the MathWorks curriculum module [Transfer Function Analysis of Dynamic Systems](https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems) ( {cite}`tfads`).
-
 +++ {"slideshow": {"slide_type": "notes"}}
 
 Follow along at [cpjobling.github.io/eg-150-textbook/poles_and_zeros/qualitative_properties](https://cpjobling.github.io/eg-150-textbook/poles_and_zeros/qualitative_properties)
 
 ![QR Code for this lecture](pictures/qr_code_for_unit51.png)
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+The notes for this section have been adapted from [Qualitative properties of signals & Laplace transforms](https://web.stanford.edu/~boyd/ee102/qualitative.pdf) {cite}`boyd93` and was also partly influenced by the MATLAB LiveScript **PoleZeroAnalysis.mlx** from the MathWorks curriculum module [Transfer Function Analysis of Dynamic Systems](https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems) ( {cite}`tfads`).
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -67,7 +65,7 @@ $$\mathcal{L}^{-1}\left\{\frac{1}{\left(s-\lambda\right)^k} \right\} = \frac{1}{
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-* The *zeros* (or *residues*) of $F(s)$ determine the coeficients multiplying each ter, or the amplitude and phase of oscillitory terms.
+* The *zeros* (or *residues*) of $F(s)$ determine the coeficients multiplying each term, or the amplitude and phase of oscillitory terms.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -86,15 +84,15 @@ $$\mathcal{L}^{-1}\left\{\frac{1}{\left(s-\lambda\right)^k} \right\} = \frac{1}{
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-* Real, positive poles correspond to growing exponential terms
+* Real, positive poles correspond to growing exponential terms.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-* Real, negative poles correspond to decaying exponential terms
+* Real, negative poles correspond to decaying exponential terms.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-* A pole at $s = 0$ corresponds to a constant (DC) term
+* A pole at $s = 0$ corresponds to a constant (DC) term.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -102,46 +100,46 @@ $$\mathcal{L}^{-1}\left\{\frac{1}{\left(s-\lambda\right)^k} \right\} = \frac{1}{
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-* Complex pole pairs with positive real part correspond to exponentially growing sinusoidal terms
+* Complex pole pairs with positive real part correspond to exponentially growing sinusoidal terms.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-* Complex pole pairs with negative real part correspond to exponentially decaying sinusoidal terms
+* Complex pole pairs with negative real part correspond to exponentially decaying sinusoidal terms.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Imaginary poles
 
-* Pure imaginary pole pairs correspond to sinusoidal terms
+* Pure imaginary pole pairs correspond to sinusoidal terms.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Repeated poles
 
-* Repeated poles yield the same tyoes of terms, multiplied by powers of $t$.
+* Repeated poles yield the same types of terms, multiplied by powers of $t$.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(unit5.3.3)=
+(unit5.1.3)=
 ## Quantitative properties of terms
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 The pole $\lambda_1 = \sigma + j\omega$ and its conjugate pair $\lambda_2 = \sigma - j\omega$ will yield a time domain term 
 
-$$ae^{\sigma t}\cos\left(\omega t + \phi\right)$$ (eq:pz:3)
+$$ae^{\sigma t}\cos\left(\omega t + \phi\right).$$ (eq:pz:3)
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-* The real part of the pole gives the *growth rate* (if positive) or *decay rate* (if negative) of the corresponding term in $f(t)$
+* The real part of the pole gives the *growth rate* (if positive) or *decay rate* (if negative) of the corresponding term in $f(t)$.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-* The imaginary part gives the oscillation *frequency*
+* The imaginary part gives the oscillation *frequency*.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-This is summarized in {numref}`fig:pz:1`
+This is summarized in {numref}`fig:pz:1`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -235,9 +233,10 @@ The oscillation is
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(pz:example2)=
 ### Example 2: parallel RLC circuit
 
-Consider the parallel RLC citcuit shown in {numref}`fig:pz:4`
+Consider the parallel RLC citcuit shown in {numref}`fig:pz:4`.
 
 :::{figure-md} fig:pz:3
 
@@ -246,72 +245,102 @@ Consider the parallel RLC citcuit shown in {numref}`fig:pz:4`
 Parallel RLC circuit (reproduced from page 6-8 of {cite}`boyd93`)
 :::
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### Solution to example 2
 
 We have 
 
 $$v(t) = -L\frac{di(t)}{dt}$$ (eq:pz:c1)
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 and
 
 $$C\frac{dv(t)}{dt}= i(t) - \frac{v(t)}{R}$$ (eq:pz:c2)
 
-Integrating both sides of ({eq}`eq:pz:c1`) we get
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Integrating both sides of {eq}`eq:pz:c1` we get
 
 $$\int_0^tv(\tau)\,d\tau = -Li(t)$$  (eq:pz:c3)
 
-Rewritten as
++++ {"slideshow": {"slide_type": "subslide"}}
+
+We rewrite {eq}`eq:pz:c3` as
 
 $$i(t) = - \frac{1}{L} \int_0^tv(\tau)\,d\tau$$  (eq:pz:c4)
 
-Substituting ({eq}`eq:pz:c4`) into ({eq}`eq:pz:c2` we eliminate $i(t)$ and obtain
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Substituting {eq}`eq:pz:c4` into {eq}`eq:pz:c2` we eliminate $i(t)$ and obtain
 
 $$C\frac{dv(t)}{dt}= - \frac{1}{L} \int_0^tv(\tau)\,d\tau - \frac{v(t)}{R}$$ (eq:pz:c5)
 
-Taking the derivative of both sides of ({eq}`eq:pz:c5`) and gathering terms yields the differential equation
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Taking the derivative of both sides of {eq}`eq:pz:c5` and gathering terms yields the differential equation
 
 $$\frac{d^2v(t)}{dt^2} + \frac{1}{RC}\frac{dv(t)}{dt} + \frac{1}{LC} v(t) = 0$$ (eq:pz:c6)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+#### Laplace transforms
+
 Taking Laplace transforms of ({eq}`eq:pz:c6`) we have 
 
 $$\left(s^2 V(s) - sv(0) - v'(0)\right) + \frac{1}{RC}\left(sV(s) - v(0)\right) + \frac{1}{LC}V(s)=0$$ (eq:pz:7)
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
-Assuming $v'(0) = 0$ then ([eq}`eq:pz:7`) becomes
+Assuming $v'(0) = 0$, then {eq}`eq:pz:7` becomes
 
 $$\left(s^2 + \frac{1}{RC}s + \frac{1}{LC} \right)V(s) = \left(s + \frac{1}{RC}\right)v(0)$$ (eq:pz:8)
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-Let $v(0) = k$ (a constant), we can represent ({eq}`eq:pz:8`) as the rational function
+Let $v(0) = k$ (a constant), we can represent {eq}`eq:pz:8` as the rational function
 
 $$V(s) = \frac{k\left(s + \frac{1}{RC}\right)}{s^2 + \frac{1}{RC} s + \frac{1}{LC}}$$ (eq:pz:9)
 
++++ {"slideshow": {"slide_type": "notes"}}
+
+And we can now take the partial fraction expansion of $V(s)$ and take the inverse Laplace transform to arrive at a solution for $v(t)$.
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-The roots of the denominator of ({eq}`eq:pz:9`) are given by
+#### Types of response
+
+The roots of the denominator of {eq}`eq:pz:9` are given by
 
 $$\begin{align}
 \lambda &= \frac{-\frac{1}{RC}  \pm \sqrt{\frac{1}{RC}^2 - \frac{4}{LC}}}{2}\\
 &= -\frac{1}{2RC}  \pm \sqrt{\frac{1}{4R^2C^2} - \frac{1}{LC}}\\
 \end{align}$$
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
-#### Interpretation of the result
+There are four possible types of response that would result from this quadratic. 
 
-There are four possible types of response that would result from this quadratic. Which type occurs depends on the *discriminant* 
+Which type occurs depends on the *discriminant* of the quadratic formula:
 
 $$\frac{1}{4R^2C^2} - \frac{1}{LC}$$ 
 
-of the quadratic formula which itself depends on the relative values of $L$, $C$ and $R$.
+The discriminant depends on the relative values of $L$, $C$ and $R$.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+The four types are discussed below
+
+* {ref}`pz:overdamped`
+* {ref}`pz:criticallydamped`
+* {ref}`pz:underdamped`
+* {ref}`pz:undamped`
 
 +++
 
-##### Overdamped response
+(pz:overdamped)=
+##### Type 1: Overdamped response
 
 If the discriminant is positive 
 
@@ -321,11 +350,12 @@ and the roots $\lambda_1$ and $\lambda_2$ will be real and distinct. The voltage
 
 $$v(t) = r_1 e^{-\lambda_1 t} + r_2 e^{-\lambda_2 t}$$
 
-where $r_1$ and $r_2$ are the residues of the partial-fraction expansion of ({eq}`eq:pz:9`)
+where $r_1$ and $r_2$ are the residues of the partial-fraction expansion of {eq}`eq:pz:9`.
 
 +++
 
-##### Critically damped response
+(pz:criticallydamped)=
+##### Type 2: Critically damped response
 
 If the discriminant is zero 
 
@@ -335,11 +365,12 @@ the roots $\lambda_1$ and $\lambda_2$ will be real and equal to $\lambda = -1/(2
 
 $$v(t) = r_1 t e^{-\lambda t} + r_2  e^{-\lambda t}$$
 
-Again, $r_1$ and $r_2$ are the residues of the partial-fraction expansion of ({eq}`eq:pz:9`).
+Again, $r_1$ and $r_2$ are the residues of the partial-fraction expansion of {eq}`eq:pz:9`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-##### Underdamped response
+(pz:underdamped)=
+##### Type 3: Underdamped response
 
 If the discriminant is negative then
 
@@ -377,13 +408,15 @@ $$\zeta = \frac{\sqrt{L/C}}{2R}$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-##### Undamped response
+(pz:undamped)=
+##### Type 4: Undamped response
 
-If the resistance $R$ is infinite, the real part $\sigma = $ and the poles $\lambda_1$ and $\lambda_2$ are imaginry. The energy in the circuit will continually flow backwards and forwards between the inductor and the capacitor. This will result in a sinusoidal response $v(t) = \alpha(\omega t + \phi)$. The actual values of amplitude $\alpha$ and phase $\phi$ again depend on the residues of the partial expansion of ({eq}`eq:pz:9`).
+If the resistance $R$ is infinite, the real part $\sigma = $ and the poles $\lambda_1$ and $\lambda_2$ are imaginry. The energy in the circuit will continually flow backwards and forwards between the inductor and the capacitor. This will result in a sinusoidal response $v(t) = \alpha(\omega t + \phi)$. The actual values of amplitude $\alpha$ and phase $\phi$ again depend on the residues of the partial expansion of {eq}`eq:pz:9`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Intepretation of $Q$
+(pz:interpretation_of_q)=
+### Interpretation of $Q$
 
 $Q$ is a neasure of the number of cycles to decay
 
@@ -435,6 +468,10 @@ sigma = omega/sqrt(4*Q^2 - 1);
 subplot(212)
 plot(t,exp(-sigma*t).*cos(omega*t)),title('Q = 10')
 ```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+The MATLAB code to reproduce this figure is given in [example3.mlx](matlab/example3.mlx)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -497,6 +534,10 @@ plot(t,f2),ylim([0,0.5]),grid
 subplot(2,2,[3,4])
 plot(t,f1+f2),ylim([0,0.5]),grid
 ```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+The MATLAB code to reproduce this figure is given in [example4.mlx](matlab/example4.mlx)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -642,45 +683,80 @@ We covered the following topics
 * {ref}`unit5.1.7`
 * {ref}`unit5.1.8`
 
++++ {"slideshow": {"slide_type": "notes"}}
+
+(unit5.1:takeaways)=
 ### Take Aways
 
-#### Transfer function
+#### Inverse Laplace transform terms
+* The *poles* of $F(s)$ determine the types of terms that appear in $f(t)$
+* The *zeros* (or *residues*) of $F(s)$ determine the coeficients multiplying each term, or the amplitude and phase of oscillitory terms.
 
-The summary of the time-domain and s-domain transforms are illustrated in {numref}`fig:3-7`. The key result is $Y(s) = H(s)X(s)$ which simplifies the computation of the system response $y(t) = h(t)*x(t)$ which has to be done using time-convolution.
++++ {"slideshow": {"slide_type": "notes"}}
 
-If we know $Y(s)$ and $X(s)$ we can determine $H(s)$ using
+#### Qalitative properties of terms
+* Section {ref}`unit5.1.2` summarizes the types of responses that $f(t)$ (a signal or system whose Laplace transform is a rational polynomial $F(s)$[^zp:note4]) can exhibit.
+* The growth-rate and decay-rate of each system response term is governed by the real part of the pole $\sigma$.
+  * A response term will grow if $\sigma > 0$
+  * A response term will decay if $\sigma < 0$
+* If the poles are complex, the frequency of the sinusoidal response term will be the imaginary part of the pole $\omega$ rad/s
+* The response term will be a pure sinusoid if $\sigma = 0$ and the poles are imaginary.
 
-$$H(s) = \frac{Y(s)}{X(s)}$$
++++ {"slideshow": {"slide_type": "notes"}}
 
-and $h(t) = \mathcal{L}^{-1}\left\{H(s)\right\}$
+[^zp:note4]: In the case of a system, $F(s)$ is the impulse response of the system transform of $H(s)$. The rational polynomial is called a *transfer function* (see {ref}`unit4.6` for the definition).
 
-#### Characterization of LTI Systems
++++ {"slideshow": {"slide_type": "notes"}}
 
-For continuous-time LTI systems the causality and stabilty of a system is guaranteed if all the poles of the transfer function are in the left-half of the $s$-plane and the $j\omega$ axis is included in the region of convergence. That is, if the poles of the system $H(s)$, $s_k$ have real part $-\sigma_k$, the system will be causal and stable if $\sigma_k < 0$ for all $k$.
+#### Quantative properties of terms
 
-#### Laplace transforms of LCCODEs
+For complex poles, there are two measures of the decay rate per cycle of oscillation. These are defined in {ref}`unit5.1.4`.
 
-The linear constant coefficient ordinary differential equation (LLCODE) of a system involving input signal $x(t)$ and output signal $y(t)$ is given in {eq}`eq:338`. When we take Laplace transforms of this differential equation, ignoring initial conditions, we get the polynomial equation {eq}`eq:339` from which we can determine the transfer function:
+In {ref}`pz:example2` we introduced the concepts of *overdamped response*, *critically damped response**, *underdamped response* and *undamped* response. We also provided the definitions for $Q$ and $\zeta$ for this circuit.
 
-$$H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}$$
++++ {"slideshow": {"slide_type": "notes"}}
 
-This is a rational polynomial in $s$ and it can be solved for any input $x(t)$ that has a Laplace transform $X(s)$ by forming
+#### Interpretation of Q
 
-$$Y(s) = H(s)X(s)$$
+In {ref}`pz:interpretation_of_q` we declared that the time to decay to 1% of amplitude (called *settling time*) is about $4.6/|\sigma|$ and the number of cycles to decay to 1% amplitude is about $N_{1\%} = 1.46\omega/(2|\sigma|)$ s. $N_{1\%}\approx 1.46 Q$ s for $Q>2$. 
 
-and taking inverse Laplace transforms using the Partial Fraction Expansion method discussed in {ref}`unit4.5`.
+We also stated that $N_{4\%}\approx Q$ s.
 
-Several examples are given in {ref}`examples12` in which the problems given in {ref}`examples8` of {ref}`unit3.3` are redone as Laplace transform problems. 
++++ {"slideshow": {"slide_type": "notes"}}
 
+#### Dominant poles
 
-#### Block diagrams
+The dominant poles of a system are those which have the largest real part $\sigma$. The response term associated with this pole (or pole pair) will eventually come to dominate the overall response $f(t)$. 
 
-Complex systems can be broken down into subsystems which may be represented by block diagrams which have either series or parallel connections (see {numref}`Fig:3-8` and {numref}`Fig:3-9` and feedback (See {ref}`ex:13.8`)
++++ {"slideshow": {"slide_type": "notes"}}
 
+#### Stability of LTI systems
+
+An LTI system can be represented as an LCCODE.
+
+* Such systems will be *stable* if *all* the poles have negative real part. Such poles will lie in the left-hand-plane of the $s$-plane.
+* By the counter argument, a system which has *any* poles that have positive real part will be *unstable*.
+* If a complex pole and its conjugate is on the imaginary axis the response will be sinusoidal. We call systems with this property *marginally stable*.
+* If a pole is real and zero, it will lie at the origin $s=0$ of the $s$-plane. The corresponding term's response will be a constant value $f(t) = a$.
+* If there are two poles are the origin of the $s$-plane, the corresponding term's response would be $f(t) = a t$.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+#### Consequences of what we have learned
+
+Knowledge of the dominant poles, the quantative properties, damping ratio $\zeta$ and quality factor $Q$ enable us to evaluate the stability and possible response of a system without needing to compute the actual response.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+#### Initial value and final value theorem
+
+The initial value and final value properties of the Laplace transform allow us to compute the initial value and final value of $f(t)$ using knowledge of the transform $F(s)$.
+
++++ {"slideshow": {"slide_type": "notes"}}
 
 ### Still to come
 
-In the next unit {ref}`examples16` we will do some examples to practice what we have learned in this section. We will the conclude this module by considering frequency response analysis of signals and systems defined by rational polynomials in $s$.
+In the next unit {ref}`unit5.2` we will expand our knowledge of the response of a complex term by defining a *canonical model* of a quadratic pole. We will also do some examples to practice what we have learned in this unit. 
 
 We will build on these ideas in **EG-247 Digital Signal Processing** and you will be able to use what you have learned in **EG-243 Control Systems**.
 
@@ -691,3 +767,7 @@ We will build on these ideas in **EG-247 Digital Signal Processing** and you wil
 ```{bibliography}
 :filter: docname in docnames
 ```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Footnotes

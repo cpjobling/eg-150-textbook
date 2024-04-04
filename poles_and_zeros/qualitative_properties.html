@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/poles_and_zeros/qualitative_properties.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Examples 16" href="examples16.html" />
+    <link rel="next" title="Unit 5.2: Model Second Order Response" href="second_order_properties.html" />
     <link rel="prev" title="Unit 5: Pole-Zero Analysis" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -201,18 +201,14 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Unit 5 Pole-Zero Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit 5.1 Qualitative Properties of Signals and Transfer functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples16.html">Examples 16</a></li>
+<li class="toctree-l2"><a class="reference internal" href="second_order_properties.html">Unit 5.2 Model Second Order Response</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../zbib.html">Bibliography</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">FAQs</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../FAQS/faq.html">Answers to Frequently Asked Questions</a></li>
-</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../takeaways.html">Unit takeaways</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../takeaways.html">Unit take aways</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../exercises.html">List of Unit Exercises</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../homework.html">List of Homework Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../laplace_transform/1/lt_props.html">Properties of the Laplace Transform</a></li>
@@ -454,16 +450,18 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-poles-damping-ratio-zeta-and-quality-factor-q">Complex poles: Damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> and quality factor <span class="math notranslate nohighlight">\(Q\)</span></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-parallel-rlc-circuit">Example 2: parallel RLC circuit</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-result">Interpretation of the result</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#overdamped-response">Overdamped response</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#critically-damped-response">Critically damped response</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#underdamped-response">Underdamped response</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#undamped-response">Undamped response</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-2">Solution to example 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#laplace-transforms">Laplace transforms</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-response">Types of response</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#type-1-overdamped-response">Type 1: Overdamped response</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#type-2-critically-damped-response">Type 2: Critically damped response</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#type-3-underdamped-response">Type 3: Underdamped response</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#type-4-undamped-response">Type 4: Undamped response</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intepretation-of-q">Intepretation of <span class="math notranslate nohighlight">\(Q\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-q">Interpretation of <span class="math notranslate nohighlight">\(Q\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-3">Solution to example 3</a></li>
 </ul>
@@ -489,16 +487,21 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#transfer-function">Transfer function</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#characterization-of-lti-systems">Characterization of LTI Systems</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#laplace-transforms-of-lccodes">Laplace transforms of LCCODEs</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#block-diagrams">Block diagrams</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-laplace-transform-terms">Inverse Laplace transform terms</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qalitative-properties-of-terms">Qalitative properties of terms</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantative-properties-of-terms">Quantative properties of terms</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Interpretation of Q</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Dominant poles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stability-of-lti-systems">Stability of LTI systems</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#consequences-of-what-we-have-learned">Consequences of what we have learned</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-value-and-final-value-theorem">Initial value and final value theorem</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#still-to-come">Still to come</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
 </ul>
             </nav>
         </div>
@@ -512,16 +515,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="unit-5-1-qualitative-properties-of-signals-and-transfer-functions">
 <span id="unit5-1"></span><h1>Unit 5.1: Qualitative Properties of Signals and Transfer functions<a class="headerlink" href="#unit-5-1-qualitative-properties-of-signals-and-transfer-functions" title="Permalink to this heading">#</a></h1>
-<p><span id="id1">[<a class="reference internal" href="../zbib.html#id18" title="Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: https://web.stanford.edu/~boyd/ee102/.">Boyd, 1993</a>]</span> <span id="id2">[<a class="reference internal" href="../zbib.html#id17" title="Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0.">Allie, 2024</a>]</span></p>
-<p>The notes for this section have been adapted from <a class="reference external" href="https://web.stanford.edu/~boyd/ee102/qualitative.pdf">Qualitative properties of signals &amp; Laplace transforms</a> <span id="id3">[<a class="reference internal" href="../zbib.html#id18" title="Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: https://web.stanford.edu/~boyd/ee102/.">Boyd, 1993</a>]</span> and was also partly influenced by the MATLAB LiveScript <strong>PoleZeroAnalysis.mlx</strong> from the MathWorks curriculum module <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems">Transfer Function Analysis of Dynamic Systems</a> ( <span id="id4">[<a class="reference internal" href="../zbib.html#id17" title="Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0.">Allie, 2024</a>]</span>).</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/poles_and_zeros/qualitative_properties">cpjobling.github.io/eg-150-textbook/poles_and_zeros/qualitative_properties</a></p>
 <p><img alt="QR Code for this lecture" src="../_images/qr_code_for_unit51.png" /></p>
+<p>The notes for this section have been adapted from <a class="reference external" href="https://web.stanford.edu/~boyd/ee102/qualitative.pdf">Qualitative properties of signals &amp; Laplace transforms</a> <span id="id1">[<a class="reference internal" href="../zbib.html#id18" title="Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: https://web.stanford.edu/~boyd/ee102/.">Boyd, 1993</a>]</span> and was also partly influenced by the MATLAB LiveScript <strong>PoleZeroAnalysis.mlx</strong> from the MathWorks curriculum module <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems">Transfer Function Analysis of Dynamic Systems</a> ( <span id="id2">[<a class="reference internal" href="../zbib.html#id17" title="Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0.">Allie, 2024</a>]</span>).</p>
 <section id="agenda">
 <h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#unit5-1-1"><span class="std std-ref">Inverse Laplace transform of a rational F(s)</span></a></p></li>
 <li><p><a class="reference internal" href="#unit5-1-2"><span class="std std-ref">Qualitative properties of terms</span></a></p></li>
-<li><p><span class="xref std std-ref">unit5.1.3</span></p></li>
+<li><p><a class="reference internal" href="#unit5-1-3"><span class="std std-ref">Quantitative properties of terms</span></a></p></li>
 <li><p><a class="reference internal" href="#unit5-1-4"><span class="std std-ref">Complex poles: Damping ratio \zeta and quality factor Q</span></a></p></li>
 <li><p><a class="reference internal" href="#unit5-1-5"><span class="std std-ref">Dominant Poles</span></a></p></li>
 <li><p><a class="reference internal" href="#unit5-1-6"><span class="std std-ref">Stability of autonomous LCCODEs</span></a></p></li>
@@ -531,9 +533,9 @@ document.write(`
 </section>
 <section id="inverse-laplace-transform-of-a-rational-f-s">
 <span id="unit5-1-1"></span><h2>Inverse Laplace transform of a rational <span class="math notranslate nohighlight">\(F(s)\)</span><a class="headerlink" href="#inverse-laplace-transform-of-a-rational-f-s" title="Permalink to this heading">#</a></h2>
-<p>Suppose <span class="math notranslate nohighlight">\(F(s) = N(s)/D(s)\)</span> is rational and strictly proper<a class="footnote-reference brackets" href="#pz-note1" id="id5">1</a> with <span class="math notranslate nohighlight">\(\mathcal{L}^{-1}\left\{F(s)\right\} = f(t)\)</span> each term in the partial fraction expansion of <span class="math notranslate nohighlight">\(F(s)\)</span> gives a term in <span class="math notranslate nohighlight">\(f(t)\)</span>:</p>
+<p>Suppose <span class="math notranslate nohighlight">\(F(s) = N(s)/D(s)\)</span> is rational and strictly proper<a class="footnote-reference brackets" href="#pz-note1" id="id3">1</a> with <span class="math notranslate nohighlight">\(\mathcal{L}^{-1}\left\{F(s)\right\} = f(t)\)</span> each term in the partial fraction expansion of <span class="math notranslate nohighlight">\(F(s)\)</span> gives a term in <span class="math notranslate nohighlight">\(f(t)\)</span>:</p>
 <ul class="simple">
-<li><p>For a single pole at <span class="math notranslate nohighlight">\(s = \lambda\)</span><a class="footnote-reference brackets" href="#pz-note2" id="id6">2</a>,</p></li>
+<li><p>For a single pole at <span class="math notranslate nohighlight">\(s = \lambda\)</span><a class="footnote-reference brackets" href="#pz-note2" id="id4">2</a>,</p></li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-eq-pz-1">
 <span class="eqno">(46)<a class="headerlink" href="#equation-eq-pz-1" title="Permalink to this equation">#</a></span>\[\mathcal{L}^{-1}\left\{\frac{1}{s-\lambda} \right\} = e^{\lambda t}\]</div>
@@ -546,7 +548,7 @@ document.write(`
 <li><p>The <em>poles</em> of <span class="math notranslate nohighlight">\(F(s)\)</span> determine the types of terms that appear in <span class="math notranslate nohighlight">\(f(t)\)</span>.</p></li>
 </ul>
 <ul class="simple">
-<li><p>The <em>zeros</em> (or <em>residues</em>) of <span class="math notranslate nohighlight">\(F(s)\)</span> determine the coeficients multiplying each ter, or the amplitude and phase of oscillitory terms.</p></li>
+<li><p>The <em>zeros</em> (or <em>residues</em>) of <span class="math notranslate nohighlight">\(F(s)\)</span> determine the coeficients multiplying each term, or the amplitude and phase of oscillitory terms.</p></li>
 </ul>
 </section>
 <section id="qualitative-properties-of-terms">
@@ -554,49 +556,49 @@ document.write(`
 <section id="real-poles">
 <h3>Real poles<a class="headerlink" href="#real-poles" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Real, positive poles correspond to growing exponential terms</p></li>
+<li><p>Real, positive poles correspond to growing exponential terms.</p></li>
 </ul>
 <ul class="simple">
-<li><p>Real, negative poles correspond to decaying exponential terms</p></li>
+<li><p>Real, negative poles correspond to decaying exponential terms.</p></li>
 </ul>
 <ul class="simple">
-<li><p>A pole at <span class="math notranslate nohighlight">\(s = 0\)</span> corresponds to a constant (DC) term</p></li>
+<li><p>A pole at <span class="math notranslate nohighlight">\(s = 0\)</span> corresponds to a constant (DC) term.</p></li>
 </ul>
 </section>
 <section id="complex-poles">
 <h3>Complex poles<a class="headerlink" href="#complex-poles" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Complex pole pairs with positive real part correspond to exponentially growing sinusoidal terms</p></li>
+<li><p>Complex pole pairs with positive real part correspond to exponentially growing sinusoidal terms.</p></li>
 </ul>
 <ul class="simple">
-<li><p>Complex pole pairs with negative real part correspond to exponentially decaying sinusoidal terms</p></li>
+<li><p>Complex pole pairs with negative real part correspond to exponentially decaying sinusoidal terms.</p></li>
 </ul>
 </section>
 <section id="imaginary-poles">
 <h3>Imaginary poles<a class="headerlink" href="#imaginary-poles" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Pure imaginary pole pairs correspond to sinusoidal terms</p></li>
+<li><p>Pure imaginary pole pairs correspond to sinusoidal terms.</p></li>
 </ul>
 </section>
 <section id="repeated-poles">
 <h3>Repeated poles<a class="headerlink" href="#repeated-poles" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Repeated poles yield the same tyoes of terms, multiplied by powers of <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+<li><p>Repeated poles yield the same types of terms, multiplied by powers of <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
 </ul>
 </section>
 </section>
 <section id="quantitative-properties-of-terms">
-<span id="unit5-3-3"></span><h2>Quantitative properties of terms<a class="headerlink" href="#quantitative-properties-of-terms" title="Permalink to this heading">#</a></h2>
+<span id="unit5-1-3"></span><h2>Quantitative properties of terms<a class="headerlink" href="#quantitative-properties-of-terms" title="Permalink to this heading">#</a></h2>
 <p>The pole <span class="math notranslate nohighlight">\(\lambda_1 = \sigma + j\omega\)</span> and its conjugate pair <span class="math notranslate nohighlight">\(\lambda_2 = \sigma - j\omega\)</span> will yield a time domain term</p>
 <div class="math notranslate nohighlight" id="equation-eq-pz-3">
-<span class="eqno">(48)<a class="headerlink" href="#equation-eq-pz-3" title="Permalink to this equation">#</a></span>\[ae^{\sigma t}\cos\left(\omega t + \phi\right)\]</div>
+<span class="eqno">(48)<a class="headerlink" href="#equation-eq-pz-3" title="Permalink to this equation">#</a></span>\[ae^{\sigma t}\cos\left(\omega t + \phi\right).\]</div>
 <ul class="simple">
-<li><p>The real part of the pole gives the <em>growth rate</em> (if positive) or <em>decay rate</em> (if negative) of the corresponding term in <span class="math notranslate nohighlight">\(f(t)\)</span></p></li>
+<li><p>The real part of the pole gives the <em>growth rate</em> (if positive) or <em>decay rate</em> (if negative) of the corresponding term in <span class="math notranslate nohighlight">\(f(t)\)</span>.</p></li>
 </ul>
 <ul class="simple">
-<li><p>The imaginary part gives the oscillation <em>frequency</em></p></li>
+<li><p>The imaginary part gives the oscillation <em>frequency</em>.</p></li>
 </ul>
-<p>This is summarized in <a class="reference internal" href="#fig-pz-1"><span class="std std-numref">Fig. 74</span></a></p>
+<p>This is summarized in <a class="reference internal" href="#fig-pz-1"><span class="std std-numref">Fig. 74</span></a>.</p>
 <figure class="align-default" id="fig-pz-1">
 <a class="reference internal image-reference" href="../_images/quant.png"><img alt="A figure illustrating the quantitive properties of terms f(t) resulting from the poles of F(s)." src="../_images/quant.png" style="width: 50%;" /></a>
 <figcaption>
@@ -630,7 +632,7 @@ document.write(`
 </section>
 <section id="complex-poles-damping-ratio-zeta-and-quality-factor-q">
 <span id="unit5-1-4"></span><h2>Complex poles: Damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> and quality factor <span class="math notranslate nohighlight">\(Q\)</span><a class="headerlink" href="#complex-poles-damping-ratio-zeta-and-quality-factor-q" title="Permalink to this heading">#</a></h2>
-<p>For a pole at <span class="math notranslate nohighlight">\(s = \lambda = \sigma + j\omega\)</span> (hence also at <span class="math notranslate nohighlight">\(\bar{\lambda}\)</span><a class="footnote-reference brackets" href="#pz-note3" id="id7">3</a>) with <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span>:</p>
+<p>For a pole at <span class="math notranslate nohighlight">\(s = \lambda = \sigma + j\omega\)</span> (hence also at <span class="math notranslate nohighlight">\(\bar{\lambda}\)</span><a class="footnote-reference brackets" href="#pz-note3" id="id5">3</a>) with <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[F(s) = \frac{r}{s-\lambda} + \frac{\bar{r}}{s-\lambda},\;f(t) = ae^{\sigma t}\cos\left(\omega t + \phi\right)\]</div>
 <p>There are two measures of the decay rate per cycle of oscillation:</p>
@@ -659,69 +661,84 @@ document.write(`
 <li><p>critically damped: <span class="math notranslate nohighlight">\(\zeta = 1\)</span> (<span class="math notranslate nohighlight">\(Q = 1/2\)</span>)</p></li>
 </ul>
 <section id="example-2-parallel-rlc-circuit">
-<h3>Example 2: parallel RLC circuit<a class="headerlink" href="#example-2-parallel-rlc-circuit" title="Permalink to this heading">#</a></h3>
-<p>Consider the parallel RLC citcuit shown in <a class="reference internal" href="#fig-pz-4"><span class="std std-numref">Fig. 76</span></a></p>
+<span id="pz-example2"></span><h3>Example 2: parallel RLC circuit<a class="headerlink" href="#example-2-parallel-rlc-circuit" title="Permalink to this heading">#</a></h3>
+<p>Consider the parallel RLC citcuit shown in <a class="reference internal" href="#fig-pz-4"><span class="std std-numref">Fig. 76</span></a>.</p>
+<section id="solution-to-example-2">
+<h4>Solution to example 2<a class="headerlink" href="#solution-to-example-2" title="Permalink to this heading">#</a></h4>
 <p>We have</p>
 <div class="math notranslate nohighlight" id="equation-eq-pz-c1">
 <span class="eqno">(51)<a class="headerlink" href="#equation-eq-pz-c1" title="Permalink to this equation">#</a></span>\[v(t) = -L\frac{di(t)}{dt}\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-eq-pz-c2">
 <span class="eqno">(52)<a class="headerlink" href="#equation-eq-pz-c2" title="Permalink to this equation">#</a></span>\[C\frac{dv(t)}{dt}= i(t) - \frac{v(t)}{R}\]</div>
-<p>Integrating both sides of (<a class="reference internal" href="#equation-eq-pz-c1">(51)</a>) we get</p>
+<p>Integrating both sides of <a class="reference internal" href="#equation-eq-pz-c1">(51)</a> we get</p>
 <div class="math notranslate nohighlight" id="equation-eq-pz-c3">
 <span class="eqno">(53)<a class="headerlink" href="#equation-eq-pz-c3" title="Permalink to this equation">#</a></span>\[\int_0^tv(\tau)\,d\tau = -Li(t)\]</div>
-<p>Rewritten as</p>
+<p>We rewrite <a class="reference internal" href="#equation-eq-pz-c3">(53)</a> as</p>
 <div class="math notranslate nohighlight" id="equation-eq-pz-c4">
 <span class="eqno">(54)<a class="headerlink" href="#equation-eq-pz-c4" title="Permalink to this equation">#</a></span>\[i(t) = - \frac{1}{L} \int_0^tv(\tau)\,d\tau\]</div>
-<p>Substituting (<a class="reference internal" href="#equation-eq-pz-c4">(54)</a>) into (<a class="reference internal" href="#equation-eq-pz-c2">(52)</a> we eliminate <span class="math notranslate nohighlight">\(i(t)\)</span> and obtain</p>
+<p>Substituting <a class="reference internal" href="#equation-eq-pz-c4">(54)</a> into <a class="reference internal" href="#equation-eq-pz-c2">(52)</a> we eliminate <span class="math notranslate nohighlight">\(i(t)\)</span> and obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-pz-c5">
 <span class="eqno">(55)<a class="headerlink" href="#equation-eq-pz-c5" title="Permalink to this equation">#</a></span>\[C\frac{dv(t)}{dt}= - \frac{1}{L} \int_0^tv(\tau)\,d\tau - \frac{v(t)}{R}\]</div>
-<p>Taking the derivative of both sides of (<a class="reference internal" href="#equation-eq-pz-c5">(55)</a>) and gathering terms yields the differential equation</p>
+<p>Taking the derivative of both sides of <a class="reference internal" href="#equation-eq-pz-c5">(55)</a> and gathering terms yields the differential equation</p>
 <div class="math notranslate nohighlight" id="equation-eq-pz-c6">
 <span class="eqno">(56)<a class="headerlink" href="#equation-eq-pz-c6" title="Permalink to this equation">#</a></span>\[\frac{d^2v(t)}{dt^2} + \frac{1}{RC}\frac{dv(t)}{dt} + \frac{1}{LC} v(t) = 0\]</div>
+</section>
+<section id="laplace-transforms">
+<h4>Laplace transforms<a class="headerlink" href="#laplace-transforms" title="Permalink to this heading">#</a></h4>
 <p>Taking Laplace transforms of (<a class="reference internal" href="#equation-eq-pz-c6">(56)</a>) we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-pz-7">
 <span class="eqno">(57)<a class="headerlink" href="#equation-eq-pz-7" title="Permalink to this equation">#</a></span>\[\left(s^2 V(s) - sv(0) - v'(0)\right) + \frac{1}{RC}\left(sV(s) - v(0)\right) + \frac{1}{LC}V(s)=0\]</div>
-<p>Assuming <span class="math notranslate nohighlight">\(v'(0) = 0\)</span> then ([eq}<code class="docutils literal notranslate"><span class="pre">eq:pz:7</span></code>) becomes</p>
+<p>Assuming <span class="math notranslate nohighlight">\(v'(0) = 0\)</span>, then <a class="reference internal" href="#equation-eq-pz-7">(57)</a> becomes</p>
 <div class="math notranslate nohighlight" id="equation-eq-pz-8">
 <span class="eqno">(58)<a class="headerlink" href="#equation-eq-pz-8" title="Permalink to this equation">#</a></span>\[\left(s^2 + \frac{1}{RC}s + \frac{1}{LC} \right)V(s) = \left(s + \frac{1}{RC}\right)v(0)\]</div>
-<p>Let <span class="math notranslate nohighlight">\(v(0) = k\)</span> (a constant), we can represent (<a class="reference internal" href="#equation-eq-pz-8">(58)</a>) as the rational function</p>
+<p>Let <span class="math notranslate nohighlight">\(v(0) = k\)</span> (a constant), we can represent <a class="reference internal" href="#equation-eq-pz-8">(58)</a> as the rational function</p>
 <div class="math notranslate nohighlight" id="equation-eq-pz-9">
 <span class="eqno">(59)<a class="headerlink" href="#equation-eq-pz-9" title="Permalink to this equation">#</a></span>\[V(s) = \frac{k\left(s + \frac{1}{RC}\right)}{s^2 + \frac{1}{RC} s + \frac{1}{LC}}\]</div>
-<p>The roots of the denominator of (<a class="reference internal" href="#equation-eq-pz-9">(59)</a>) are given by</p>
+<p>And we can now take the partial fraction expansion of <span class="math notranslate nohighlight">\(V(s)\)</span> and take the inverse Laplace transform to arrive at a solution for <span class="math notranslate nohighlight">\(v(t)\)</span>.</p>
+</section>
+<section id="types-of-response">
+<h4>Types of response<a class="headerlink" href="#types-of-response" title="Permalink to this heading">#</a></h4>
+<p>The roots of the denominator of <a class="reference internal" href="#equation-eq-pz-9">(59)</a> are given by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
 \lambda &amp;= \frac{-\frac{1}{RC}  \pm \sqrt{\frac{1}{RC}^2 - \frac{4}{LC}}}{2}\\
 &amp;= -\frac{1}{2RC}  \pm \sqrt{\frac{1}{4R^2C^2} - \frac{1}{LC}}\\
 \end{align}\end{split}\]</div>
-<section id="interpretation-of-the-result">
-<h4>Interpretation of the result<a class="headerlink" href="#interpretation-of-the-result" title="Permalink to this heading">#</a></h4>
-<p>There are four possible types of response that would result from this quadratic. Which type occurs depends on the <em>discriminant</em></p>
+<p>There are four possible types of response that would result from this quadratic.</p>
+<p>Which type occurs depends on the <em>discriminant</em> of the quadratic formula:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{4R^2C^2} - \frac{1}{LC}\]</div>
-<p>of the quadratic formula which itself depends on the relative values of <span class="math notranslate nohighlight">\(L\)</span>, <span class="math notranslate nohighlight">\(C\)</span> and <span class="math notranslate nohighlight">\(R\)</span>.</p>
-<section id="overdamped-response">
-<h5>Overdamped response<a class="headerlink" href="#overdamped-response" title="Permalink to this heading">#</a></h5>
+<p>The discriminant depends on the relative values of <span class="math notranslate nohighlight">\(L\)</span>, <span class="math notranslate nohighlight">\(C\)</span> and <span class="math notranslate nohighlight">\(R\)</span>.</p>
+<p>The four types are discussed below</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#pz-overdamped"><span class="std std-ref">Type 1: Overdamped response</span></a></p></li>
+<li><p><a class="reference internal" href="#pz-criticallydamped"><span class="std std-ref">Type 2: Critically damped response</span></a></p></li>
+<li><p><a class="reference internal" href="#pz-underdamped"><span class="std std-ref">Type 3: Underdamped response</span></a></p></li>
+<li><p><a class="reference internal" href="#pz-undamped"><span class="std std-ref">Type 4: Undamped response</span></a></p></li>
+</ul>
+<section id="type-1-overdamped-response">
+<span id="pz-overdamped"></span><h5>Type 1: Overdamped response<a class="headerlink" href="#type-1-overdamped-response" title="Permalink to this heading">#</a></h5>
 <p>If the discriminant is positive</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{LC} &lt; \frac{1}{4R^2C^2}\]</div>
 <p>and the roots <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> will be real and distinct. The voltage <span class="math notranslate nohighlight">\(v(t)\)</span> will be the sum of two exponential decays</p>
 <div class="math notranslate nohighlight">
 \[v(t) = r_1 e^{-\lambda_1 t} + r_2 e^{-\lambda_2 t}\]</div>
-<p>where <span class="math notranslate nohighlight">\(r_1\)</span> and <span class="math notranslate nohighlight">\(r_2\)</span> are the residues of the partial-fraction expansion of (<a class="reference internal" href="#equation-eq-pz-9">(59)</a>)</p>
+<p>where <span class="math notranslate nohighlight">\(r_1\)</span> and <span class="math notranslate nohighlight">\(r_2\)</span> are the residues of the partial-fraction expansion of <a class="reference internal" href="#equation-eq-pz-9">(59)</a>.</p>
 </section>
-<section id="critically-damped-response">
-<h5>Critically damped response<a class="headerlink" href="#critically-damped-response" title="Permalink to this heading">#</a></h5>
+<section id="type-2-critically-damped-response">
+<span id="pz-criticallydamped"></span><h5>Type 2: Critically damped response<a class="headerlink" href="#type-2-critically-damped-response" title="Permalink to this heading">#</a></h5>
 <p>If the discriminant is zero</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{LC} = \frac{1}{4R^2C^2}\]</div>
 <p>the roots <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> will be real and equal to <span class="math notranslate nohighlight">\(\lambda = -1/(2RC)\)</span>. The voltage <span class="math notranslate nohighlight">\(v(t)\)</span> will be</p>
 <div class="math notranslate nohighlight">
 \[v(t) = r_1 t e^{-\lambda t} + r_2  e^{-\lambda t}\]</div>
-<p>Again, <span class="math notranslate nohighlight">\(r_1\)</span> and <span class="math notranslate nohighlight">\(r_2\)</span> are the residues of the partial-fraction expansion of (<a class="reference internal" href="#equation-eq-pz-9">(59)</a>).</p>
+<p>Again, <span class="math notranslate nohighlight">\(r_1\)</span> and <span class="math notranslate nohighlight">\(r_2\)</span> are the residues of the partial-fraction expansion of <a class="reference internal" href="#equation-eq-pz-9">(59)</a>.</p>
 </section>
-<section id="underdamped-response">
-<h5>Underdamped response<a class="headerlink" href="#underdamped-response" title="Permalink to this heading">#</a></h5>
+<section id="type-3-underdamped-response">
+<span id="pz-underdamped"></span><h5>Type 3: Underdamped response<a class="headerlink" href="#type-3-underdamped-response" title="Permalink to this heading">#</a></h5>
 <p>If the discriminant is negative then</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{LC} &gt; \frac{1}{4R^2C^2}\]</div>
@@ -741,14 +758,14 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\zeta = \frac{\sqrt{L/C}}{2R}\]</div>
 </section>
-<section id="undamped-response">
-<h5>Undamped response<a class="headerlink" href="#undamped-response" title="Permalink to this heading">#</a></h5>
-<p>If the resistance <span class="math notranslate nohighlight">\(R\)</span> is infinite, the real part <span class="math notranslate nohighlight">\(\sigma = \)</span> and the poles <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> are imaginry. The energy in the circuit will continually flow backwards and forwards between the inductor and the capacitor. This will result in a sinusoidal response <span class="math notranslate nohighlight">\(v(t) = \alpha(\omega t + \phi)\)</span>. The actual values of amplitude <span class="math notranslate nohighlight">\(\alpha\)</span> and phase <span class="math notranslate nohighlight">\(\phi\)</span> again depend on the residues of the partial expansion of (<a class="reference internal" href="#equation-eq-pz-9">(59)</a>).</p>
+<section id="type-4-undamped-response">
+<span id="pz-undamped"></span><h5>Type 4: Undamped response<a class="headerlink" href="#type-4-undamped-response" title="Permalink to this heading">#</a></h5>
+<p>If the resistance <span class="math notranslate nohighlight">\(R\)</span> is infinite, the real part <span class="math notranslate nohighlight">\(\sigma = \)</span> and the poles <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> are imaginry. The energy in the circuit will continually flow backwards and forwards between the inductor and the capacitor. This will result in a sinusoidal response <span class="math notranslate nohighlight">\(v(t) = \alpha(\omega t + \phi)\)</span>. The actual values of amplitude <span class="math notranslate nohighlight">\(\alpha\)</span> and phase <span class="math notranslate nohighlight">\(\phi\)</span> again depend on the residues of the partial expansion of <a class="reference internal" href="#equation-eq-pz-9">(59)</a>.</p>
 </section>
 </section>
 </section>
-<section id="intepretation-of-q">
-<h3>Intepretation of <span class="math notranslate nohighlight">\(Q\)</span><a class="headerlink" href="#intepretation-of-q" title="Permalink to this heading">#</a></h3>
+<section id="interpretation-of-q">
+<span id="pz-interpretation-of-q"></span><h3>Interpretation of <span class="math notranslate nohighlight">\(Q\)</span><a class="headerlink" href="#interpretation-of-q" title="Permalink to this heading">#</a></h3>
 <p><span class="math notranslate nohighlight">\(Q\)</span> is a neasure of the number of cycles to decay</p>
 <ul class="simple">
 <li><p>Time to decay to 1% of amplitude us about <span class="math notranslate nohighlight">\(4.6/|\sigma|\)</span></p></li>
@@ -794,6 +811,7 @@ document.write(`
 <img alt="../_images/4040a7e8961cf51bcb55108b5e65bc7c87d22aeb0ad672eeeb60e629e8a6d599.png" src="../_images/4040a7e8961cf51bcb55108b5e65bc7c87d22aeb0ad672eeeb60e629e8a6d599.png" />
 </div>
 </div>
+<p>The MATLAB code to reproduce this figure is given in <span class="xref myst">example3.mlx</span></p>
 </section>
 </section>
 <section id="dominant-poles">
@@ -845,6 +863,7 @@ document.write(`
 <img alt="../_images/1e48b32a14281ddb1b7e9f64587d7c1f87cc31ef5ea29dd4fb498176e74dbe1d.png" src="../_images/1e48b32a14281ddb1b7e9f64587d7c1f87cc31ef5ea29dd4fb498176e74dbe1d.png" />
 </div>
 </div>
+<p>The MATLAB code to reproduce this figure is given in <span class="xref myst">example4.mlx</span></p>
 </section>
 </section>
 <section id="stability-of-autonomous-lccodes">
@@ -930,7 +949,7 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
 <ul class="simple">
 <li><p><a class="reference internal" href="#unit5-1-1"><span class="std std-ref">Inverse Laplace transform of a rational F(s)</span></a></p></li>
 <li><p><a class="reference internal" href="#unit5-1-2"><span class="std std-ref">Qualitative properties of terms</span></a></p></li>
-<li><p><span class="xref std std-ref">unit5.1.3</span></p></li>
+<li><p><a class="reference internal" href="#unit5-1-3"><span class="std std-ref">Quantitative properties of terms</span></a></p></li>
 <li><p><a class="reference internal" href="#unit5-1-4"><span class="std std-ref">Complex poles: Damping ratio \zeta and quality factor Q</span></a></p></li>
 <li><p><a class="reference internal" href="#unit5-1-5"><span class="std std-ref">Dominant Poles</span></a></p></li>
 <li><p><a class="reference internal" href="#unit5-1-6"><span class="std std-ref">Stability of autonomous LCCODEs</span></a></p></li>
@@ -938,63 +957,96 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
 <li><p><a class="reference internal" href="#unit5-1-8"><span class="std std-ref">Final value theorem</span></a></p></li>
 </ul>
 <section id="take-aways">
-<h3>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h3>
-<section id="transfer-function">
-<h4>Transfer function<a class="headerlink" href="#transfer-function" title="Permalink to this heading">#</a></h4>
-<p>The summary of the time-domain and s-domain transforms are illustrated in <a class="reference internal" href="../laplace_transform/6/transfer_functions.html#fig-3-7"><span class="std std-numref">Fig. 64</span></a>. The key result is <span class="math notranslate nohighlight">\(Y(s) = H(s)X(s)\)</span> which simplifies the computation of the system response <span class="math notranslate nohighlight">\(y(t) = h(t)*x(t)\)</span> which has to be done using time-convolution.</p>
-<p>If we know <span class="math notranslate nohighlight">\(Y(s)\)</span> and <span class="math notranslate nohighlight">\(X(s)\)</span> we can determine <span class="math notranslate nohighlight">\(H(s)\)</span> using</p>
-<div class="math notranslate nohighlight">
-\[H(s) = \frac{Y(s)}{X(s)}\]</div>
-<p>and <span class="math notranslate nohighlight">\(h(t) = \mathcal{L}^{-1}\left\{H(s)\right\}\)</span></p>
+<span id="unit5-1-takeaways"></span><h3>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h3>
+<section id="inverse-laplace-transform-terms">
+<h4>Inverse Laplace transform terms<a class="headerlink" href="#inverse-laplace-transform-terms" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>The <em>poles</em> of <span class="math notranslate nohighlight">\(F(s)\)</span> determine the types of terms that appear in <span class="math notranslate nohighlight">\(f(t)\)</span></p></li>
+<li><p>The <em>zeros</em> (or <em>residues</em>) of <span class="math notranslate nohighlight">\(F(s)\)</span> determine the coeficients multiplying each term, or the amplitude and phase of oscillitory terms.</p></li>
+</ul>
 </section>
-<section id="characterization-of-lti-systems">
-<h4>Characterization of LTI Systems<a class="headerlink" href="#characterization-of-lti-systems" title="Permalink to this heading">#</a></h4>
-<p>For continuous-time LTI systems the causality and stabilty of a system is guaranteed if all the poles of the transfer function are in the left-half of the <span class="math notranslate nohighlight">\(s\)</span>-plane and the <span class="math notranslate nohighlight">\(j\omega\)</span> axis is included in the region of convergence. That is, if the poles of the system <span class="math notranslate nohighlight">\(H(s)\)</span>, <span class="math notranslate nohighlight">\(s_k\)</span> have real part <span class="math notranslate nohighlight">\(-\sigma_k\)</span>, the system will be causal and stable if <span class="math notranslate nohighlight">\(\sigma_k &lt; 0\)</span> for all <span class="math notranslate nohighlight">\(k\)</span>.</p>
+<section id="qalitative-properties-of-terms">
+<h4>Qalitative properties of terms<a class="headerlink" href="#qalitative-properties-of-terms" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Section <a class="reference internal" href="#unit5-1-2"><span class="std std-ref">Qualitative properties of terms</span></a> summarizes the types of responses that <span class="math notranslate nohighlight">\(f(t)\)</span> (a signal or system whose Laplace transform is a rational polynomial <span class="math notranslate nohighlight">\(F(s)\)</span><a class="footnote-reference brackets" href="#zp-note4" id="id7">4</a>) can exhibit.</p></li>
+<li><p>The growth-rate and decay-rate of each system response term is governed by the real part of the pole <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
+<ul>
+<li><p>A response term will grow if <span class="math notranslate nohighlight">\(\sigma &gt; 0\)</span></p></li>
+<li><p>A response term will decay if <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span></p></li>
+</ul>
+</li>
+<li><p>If the poles are complex, the frequency of the sinusoidal response term will be the imaginary part of the pole <span class="math notranslate nohighlight">\(\omega\)</span> rad/s</p></li>
+<li><p>The response term will be a pure sinusoid if <span class="math notranslate nohighlight">\(\sigma = 0\)</span> and the poles are imaginary.</p></li>
+</ul>
 </section>
-<section id="laplace-transforms-of-lccodes">
-<h4>Laplace transforms of LCCODEs<a class="headerlink" href="#laplace-transforms-of-lccodes" title="Permalink to this heading">#</a></h4>
-<p>The linear constant coefficient ordinary differential equation (LLCODE) of a system involving input signal <span class="math notranslate nohighlight">\(x(t)\)</span> and output signal <span class="math notranslate nohighlight">\(y(t)\)</span> is given in <a class="reference internal" href="../laplace_transform/6/transfer_functions.html#equation-eq-338">(34)</a>. When we take Laplace transforms of this differential equation, ignoring initial conditions, we get the polynomial equation <a class="reference internal" href="../laplace_transform/6/transfer_functions.html#equation-eq-339">(35)</a> from which we can determine the transfer function:</p>
-<div class="math notranslate nohighlight">
-\[H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}\]</div>
-<p>This is a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span> and it can be solved for any input <span class="math notranslate nohighlight">\(x(t)\)</span> that has a Laplace transform <span class="math notranslate nohighlight">\(X(s)\)</span> by forming</p>
-<div class="math notranslate nohighlight">
-\[Y(s) = H(s)X(s)\]</div>
-<p>and taking inverse Laplace transforms using the Partial Fraction Expansion method discussed in <a class="reference internal" href="../laplace_transform/5/circuit_analysis.html#unit4-5"><span class="std std-ref">Unit 4.5: Using Laplace Transforms for Circuit Analysis</span></a>.</p>
-<p>Several examples are given in <a class="reference internal" href="../laplace_transform/5/circuit_analysis.html#examples12"><span class="std std-ref">Examples 12</span></a> in which the problems given in <span class="xref std std-ref">examples8</span> of <span class="xref std std-ref">unit3.3</span> are redone as Laplace transform problems.</p>
+<section id="quantative-properties-of-terms">
+<h4>Quantative properties of terms<a class="headerlink" href="#quantative-properties-of-terms" title="Permalink to this heading">#</a></h4>
+<p>For complex poles, there are two measures of the decay rate per cycle of oscillation. These are defined in <a class="reference internal" href="#unit5-1-4"><span class="std std-ref">Complex poles: Damping ratio \zeta and quality factor Q</span></a>.</p>
+<p>In <a class="reference internal" href="#pz-example2"><span class="std std-ref">Example 2: parallel RLC circuit</span></a> we introduced the concepts of <em>overdamped response</em>, <em>critically damped response</em>*, <em>underdamped response</em> and <em>undamped</em> response. We also provided the definitions for <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(\zeta\)</span> for this circuit.</p>
 </section>
-<section id="block-diagrams">
-<h4>Block diagrams<a class="headerlink" href="#block-diagrams" title="Permalink to this heading">#</a></h4>
-<p>Complex systems can be broken down into subsystems which may be represented by block diagrams which have either series or parallel connections (see <a class="reference internal" href="../laplace_transform/6/transfer_functions.html#fig-3-8"><span class="std std-numref">Fig. 65</span></a> and <a class="reference internal" href="../laplace_transform/6/transfer_functions.html#fig-3-9"><span class="std std-numref">Fig. 66</span></a> and feedback (See <a class="reference internal" href="../laplace_transform/6/transfer_functions.html#ex-13-8"><span class="std std-ref">Example 13.8</span></a>)</p>
+<section id="id8">
+<h4>Interpretation of Q<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
+<p>In <a class="reference internal" href="#pz-interpretation-of-q"><span class="std std-ref">Interpretation of Q</span></a> we declared that the time to decay to 1% of amplitude (called <em>settling time</em>) is about <span class="math notranslate nohighlight">\(4.6/|\sigma|\)</span> and the number of cycles to decay to 1% amplitude is about <span class="math notranslate nohighlight">\(N_{1\%} = 1.46\omega/(2|\sigma|)\)</span> s. <span class="math notranslate nohighlight">\(N_{1\%}\approx 1.46 Q\)</span> s for <span class="math notranslate nohighlight">\(Q&gt;2\)</span>.</p>
+<p>We also stated that <span class="math notranslate nohighlight">\(N_{4\%}\approx Q\)</span> s.</p>
+</section>
+<section id="id9">
+<h4>Dominant poles<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
+<p>The dominant poles of a system are those which have the largest real part <span class="math notranslate nohighlight">\(\sigma\)</span>. The response term associated with this pole (or pole pair) will eventually come to dominate the overall response <span class="math notranslate nohighlight">\(f(t)\)</span>.</p>
+</section>
+<section id="stability-of-lti-systems">
+<h4>Stability of LTI systems<a class="headerlink" href="#stability-of-lti-systems" title="Permalink to this heading">#</a></h4>
+<p>An LTI system can be represented as an LCCODE.</p>
+<ul class="simple">
+<li><p>Such systems will be <em>stable</em> if <em>all</em> the poles have negative real part. Such poles will lie in the left-hand-plane of the <span class="math notranslate nohighlight">\(s\)</span>-plane.</p></li>
+<li><p>By the counter argument, a system which has <em>any</em> poles that have positive real part will be <em>unstable</em>.</p></li>
+<li><p>If a complex pole and its conjugate is on the imaginary axis the response will be sinusoidal. We call systems with this property <em>marginally stable</em>.</p></li>
+<li><p>If a pole is real and zero, it will lie at the origin <span class="math notranslate nohighlight">\(s=0\)</span> of the <span class="math notranslate nohighlight">\(s\)</span>-plane. The corresponding term’s response will be a constant value <span class="math notranslate nohighlight">\(f(t) = a\)</span>.</p></li>
+<li><p>If there are two poles are the origin of the <span class="math notranslate nohighlight">\(s\)</span>-plane, the corresponding term’s response would be <span class="math notranslate nohighlight">\(f(t) = a t\)</span>.</p></li>
+</ul>
+</section>
+<section id="consequences-of-what-we-have-learned">
+<h4>Consequences of what we have learned<a class="headerlink" href="#consequences-of-what-we-have-learned" title="Permalink to this heading">#</a></h4>
+<p>Knowledge of the dominant poles, the quantative properties, damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> and quality factor <span class="math notranslate nohighlight">\(Q\)</span> enable us to evaluate the stability and possible response of a system without needing to compute the actual response.</p>
+</section>
+<section id="initial-value-and-final-value-theorem">
+<h4>Initial value and final value theorem<a class="headerlink" href="#initial-value-and-final-value-theorem" title="Permalink to this heading">#</a></h4>
+<p>The initial value and final value properties of the Laplace transform allow us to compute the initial value and final value of <span class="math notranslate nohighlight">\(f(t)\)</span> using knowledge of the transform <span class="math notranslate nohighlight">\(F(s)\)</span>.</p>
 </section>
 </section>
 <section id="still-to-come">
 <h3>Still to come<a class="headerlink" href="#still-to-come" title="Permalink to this heading">#</a></h3>
-<p>In the next unit <a class="reference internal" href="examples16.html#examples16"><span class="std std-ref">Examples 16</span></a> we will do some examples to practice what we have learned in this section. We will the conclude this module by considering frequency response analysis of signals and systems defined by rational polynomials in <span class="math notranslate nohighlight">\(s\)</span>.</p>
+<p>In the next unit <a class="reference internal" href="second_order_properties.html#unit5-2"><span class="std std-ref">Unit 5.2: Model Second Order Response</span></a> we will expand our knowledge of the response of a complex term by defining a <em>canonical model</em> of a quadratic pole. We will also do some examples to practice what we have learned in this unit.</p>
 <p>We will build on these ideas in <strong>EG-247 Digital Signal Processing</strong> and you will be able to use what you have learned in <strong>EG-243 Control Systems</strong>.</p>
 </section>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id9">
+<div class="docutils container" id="id10">
 <dl class="citation">
-<dt class="label" id="id25"><span class="brackets">All24</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id4">2</a>)</span></dt>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id2">All24</a></span></dt>
 <dd><p>Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: <a class="github reference external" href="https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0">MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems</a>.</p>
 </dd>
-<dt class="label" id="id26"><span class="brackets">Boy93</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id8">3</a>)</span></dt>
+<dt class="label" id="id27"><span class="brackets">Boy93</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id6">2</a>)</span></dt>
 <dd><p>Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: <a class="reference external" href="https://web.stanford.edu/~boyd/ee102/">https://web.stanford.edu/~boyd/ee102/</a>.</p>
 </dd>
 </dl>
 </div>
+</section>
+<section id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this heading">#</a></h2>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
-<dt class="label" id="pz-note1"><span class="brackets"><a class="fn-backref" href="#id5">1</a></span></dt>
+<dt class="label" id="pz-note1"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
 <dd><p>If the numerator <span class="math notranslate nohighlight">\(N(s)\)</span> is a polynomial <span class="math notranslate nohighlight">\(b_ms^m + b_{m-1}s^{m-1} + \cdots b_1s + b_0\)</span> and the denominator <span class="math notranslate nohighlight">\(D(s)\)</span> is a polynomial <span class="math notranslate nohighlight">\(a_ns^n + a_{n-1}s^{n-1} + \cdots a_1s + a_0\)</span>, the rational polynomial <span class="math notranslate nohighlight">\(F(s) = N(s)/D(s)\)</span> is strictly proper if <span class="math notranslate nohighlight">\(n &gt; m\)</span>. We examined the case of improper rational polynomials in <a class="reference internal" href="../laplace_transform/4/inverse_laplace.html#ilap-improper"><span class="std std-ref">The case of the improper rational polynomial</span></a>.</p>
 </dd>
-<dt class="label" id="pz-note2"><span class="brackets"><a class="fn-backref" href="#id6">2</a></span></dt>
+<dt class="label" id="pz-note2"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
 <dd><p>The term <span class="math notranslate nohighlight">\(\lambda\)</span> may be complex, in which case there will be two complex poles <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> which form the complex conjugate pairs <span class="math notranslate nohighlight">\(\lambda_{1,2} = \sigma \pm j\omega\)</span>. In this case, the poles will be represented as the roots of the quadratic factor <span class="math notranslate nohighlight">\(\left(s - \sigma - j\omega\right)\left(s - \sigma + j\omega\right) = s^2 + 2\sigma s + \left(\sigma^2 + \omega^2\right)\)</span>. The inverse Laplace transform of a such a quadratic factor will be oscilliatory.</p>
 </dd>
-<dt class="label" id="pz-note3"><span class="brackets"><a class="fn-backref" href="#id7">3</a></span></dt>
+<dt class="label" id="pz-note3"><span class="brackets"><a class="fn-backref" href="#id5">3</a></span></dt>
 <dd><p>Here we are using the bar notation <span class="math notranslate nohighlight">\(\bar{x}\)</span> to represent the complex conjugate of complex number <span class="math notranslate nohighlight">\(x\)</span>.</p>
+</dd>
+<dt class="label" id="zp-note4"><span class="brackets"><a class="fn-backref" href="#id7">4</a></span></dt>
+<dd><p>In the case of a system, <span class="math notranslate nohighlight">\(F(s)\)</span> is the impulse response of the system transform of <span class="math notranslate nohighlight">\(H(s)\)</span>. The rational polynomial is called a <em>transfer function</em> (see <a class="reference internal" href="../laplace_transform/6/transfer_functions.html#unit4-6"><span class="std std-ref">Unit 4.6: Transfer Functions</span></a> for the definition).</p>
 </dd>
 </dl>
 </section>
@@ -1040,11 +1092,11 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
       </div>
     </a>
     <a class="right-next"
-       href="examples16.html"
+       href="second_order_properties.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Examples 16</p>
+        <p class="prev-next-title">Unit 5.2: Model Second Order Response</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1078,16 +1130,18 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-poles-damping-ratio-zeta-and-quality-factor-q">Complex poles: Damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> and quality factor <span class="math notranslate nohighlight">\(Q\)</span></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-parallel-rlc-circuit">Example 2: parallel RLC circuit</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-result">Interpretation of the result</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#overdamped-response">Overdamped response</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#critically-damped-response">Critically damped response</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#underdamped-response">Underdamped response</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#undamped-response">Undamped response</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-2">Solution to example 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#laplace-transforms">Laplace transforms</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-response">Types of response</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#type-1-overdamped-response">Type 1: Overdamped response</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#type-2-critically-damped-response">Type 2: Critically damped response</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#type-3-underdamped-response">Type 3: Underdamped response</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#type-4-undamped-response">Type 4: Undamped response</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intepretation-of-q">Intepretation of <span class="math notranslate nohighlight">\(Q\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-q">Interpretation of <span class="math notranslate nohighlight">\(Q\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3">Example 3</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-3">Solution to example 3</a></li>
 </ul>
@@ -1113,16 +1167,21 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#transfer-function">Transfer function</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#characterization-of-lti-systems">Characterization of LTI Systems</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#laplace-transforms-of-lccodes">Laplace transforms of LCCODEs</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#block-diagrams">Block diagrams</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-laplace-transform-terms">Inverse Laplace transform terms</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qalitative-properties-of-terms">Qalitative properties of terms</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantative-properties-of-terms">Quantative properties of terms</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Interpretation of Q</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Dominant poles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stability-of-lti-systems">Stability of LTI systems</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#consequences-of-what-we-have-learned">Consequences of what we have learned</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-value-and-final-value-theorem">Initial value and final value theorem</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#still-to-come">Still to come</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
 </ul>
   </nav></div>
 
@@ -1147,7 +1206,7 @@ By Dr Chris P. Jobling
 
   <p class="copyright">
     
-      © Copyright Swansea University (2023).
+      © Copyright Swansea University (2023-2024).
       <br/>
     
   </p>
