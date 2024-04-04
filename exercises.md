@@ -28,6 +28,11 @@ There are no exercises in this unit.
 * {ref}`ex2.6`
 
 
+### {ref}`unit5.2`
+{ref}`examples16` covers
+* {ref}`ex16.1`
+* {ref}`ex16.2`
+
 ```python
 
 ```

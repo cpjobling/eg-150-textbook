@@ -60,7 +60,7 @@ parts:
     - file: poles_and_zeros/qualitative_properties
       title: Unit 5.1 Qualitative Properties of Signals and Transfer functions
     - file: poles_and_zeros/second_order_properties
-      title: Unit 5.2 Model Second Order Response
+      title: Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles
   - file: zbib
     title: Bibliography
 #- caption: Lab Exercises
