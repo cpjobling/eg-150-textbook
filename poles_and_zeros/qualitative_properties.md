@@ -25,7 +25,9 @@ Follow along at [cpjobling.github.io/eg-150-textbook/poles_and_zeros/qualitative
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-The notes for this section have been adapted from [Qualitative properties of signals & Laplace transforms](https://web.stanford.edu/~boyd/ee102/qualitative.pdf) {cite}`boyd93` and was also partly influenced by the MATLAB LiveScript **PoleZeroAnalysis.mlx** from the MathWorks curriculum module [Transfer Function Analysis of Dynamic Systems](https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems) ( {cite}`tfads`).
+## Acknowledgements
+
+The notes for this section have been adapted from [Qualitative properties of signals & Laplace transforms](https://web.stanford.edu/~boyd/ee102/qualitative.pdf) {cite}`boyd93` and was also partly influenced by the MATLAB LiveScript **PoleZeroAnalysis.mlx** from the MathWorks curriculum module [Transfer Function Analysis of Dynamic Systems](https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems) {cite}`tfads`.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

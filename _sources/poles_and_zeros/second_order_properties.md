@@ -25,7 +25,9 @@ Follow along at [cpjobling.github.io/eg-150-textbook/poles_and_zeros/second_orde
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-The notes for this unit have been influenced by the MATLAB LiveScript **PoleZeroAnalysis.mlx** from the MathWorks curriculum module [Transfer Function Analysis of Dynamic Systems](https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems) ( {cite}`tfads`).
+## Acknowledgements
+
+The notes for this unit have been influenced by the MATLAB LiveScript **PoleZeroAnalysis.mlx** from the MathWorks curriculum module [Transfer Function Analysis of Dynamic Systems](https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems) {cite}`tfads`.
 
 The examples have been inspired by the recording of the second half of the video recording of Stephen Boyd's 1999 lecture 10 (delivered at Stanford University) which itself is based on [Qualitative properties of signals & Laplace transforms](https://web.stanford.edu/~boyd/ee102/qualitative.pdf) {cite}`boyd93`.
 
