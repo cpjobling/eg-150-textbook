@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Unit 5.2: Model Second Order Response &#8212; EG-150 Signals and Systems</title>
+    <title>Unit 5.2: More on the Qualitative and Quantitative Response of First- and Second-Order Poles &#8212; EG-150 Signals and Systems</title>
   
   
   
@@ -201,7 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Unit 5 Pole-Zero Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="qualitative_properties.html">Unit 5.1 Qualitative Properties of Signals and Transfer functions</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit 5.2 Model Second Order Response</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../zbib.html">Bibliography</a></li>
@@ -425,7 +425,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Unit 5.2: Model Second Order Response</h1>
+    <h1>Unit 5.2: More on the Qualitative and Quantitative Response of First- and Second-Order Poles</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -436,9 +436,38 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-16">Examples 16</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-behaviour-of-real-poles">Quantitative behaviour of real poles</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rate-of-exponential-growth">Rate of exponential growth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-7">Example 7</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-7">Solution to example 7</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rate-of-exponential-decay">Rate of exponential decay</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#damping-ratio-and-natural-frequency">Damping ratio and natural frequency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-response-of-a-second-order-system">Step-response of a second-order system</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8">Example 8</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-8">Solution to example 8</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-16">Exercises 16</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-16-1">Exercise 16.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-16-2">Exercise 16.2</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-solution-to-exercise-16-2">Partial solution to Exercise 16.2</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take aways</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#real-pole-s-sigma">Real pole <span class="math notranslate nohighlight">\(s=\sigma\)</span>:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-pole-pair-s-sigma-pm-j-omega">Complex pole pair <span class="math notranslate nohighlight">\(s = \sigma \pm j\omega\)</span>:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#still-to-come">Still to come</a></li>
@@ -455,8 +484,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="unit-5-2-model-second-order-response">
-<span id="unit5-2"></span><h1>Unit 5.2: Model Second Order Response<a class="headerlink" href="#unit-5-2-model-second-order-response" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="unit-5-2-more-on-the-qualitative-and-quantitative-response-of-first-and-second-order-poles">
+<span id="unit5-2"></span><h1>Unit 5.2: More on the Qualitative and Quantitative Response of First- and Second-Order Poles<a class="headerlink" href="#unit-5-2-more-on-the-qualitative-and-quantitative-response-of-first-and-second-order-poles" title="Permalink to this heading">#</a></h1>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/poles_and_zeros/second_order_properties">cpjobling.github.io/eg-150-textbook/poles_and_zeros/second_order_properties</a></p>
 <p><img alt="QR Code for this lecture" src="../_images/qr_code_for_unit52.png" /></p>
 <section id="acknowledgements">
@@ -465,13 +494,290 @@ document.write(`
 <p>The examples have been inspired by the recording of the second half of the video recording of Stephen Boyd’s 1999 lecture 10 (delivered at Stanford University) which itself is based on <a class="reference external" href="https://web.stanford.edu/~boyd/ee102/qualitative.pdf">Qualitative properties of signals &amp; Laplace transforms</a> <span id="id2">[<a class="reference internal" href="../zbib.html#id18" title="Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: https://web.stanford.edu/~boyd/ee102/.">Boyd, 1993</a>]</span>.</p>
 <p>You can watch the video on YouTube here:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/I3DZM0rarTA?si=hSVhhDofHEw1y-rV&amp;start=1407" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
-<section id="examples-16">
-<span id="examples16"></span><h2>Examples 16<a class="headerlink" href="#examples-16" title="Permalink to this heading">#</a></h2>
+<section id="agenda">
+<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#unit-5-2-1"><span class="std std-ref">Quantitative behaviour of real poles</span></a></p></li>
+<li><p><span class="xref std std-ref">unit.5.2.2</span></p></li>
+<li><p><span class="xref std std-ref">unit.5.2.3</span></p></li>
+<li><p><a class="reference internal" href="#examples16"><span class="std std-ref">Exercises 16</span></a></p></li>
+</ul>
+</section>
+<section id="quantitative-behaviour-of-real-poles">
+<span id="unit-5-2-1"></span><h2>Quantitative behaviour of real poles<a class="headerlink" href="#quantitative-behaviour-of-real-poles" title="Permalink to this heading">#</a></h2>
+<p>In <a class="reference internal" href="qualitative_properties.html#unit5-1-2"><span class="std std-ref">Qualitative properties of terms</span></a> we stated that a response term that corresponds to a real pole <span class="math notranslate nohighlight">\(s = \sigma\)</span> will result in a growing expontial if <span class="math notranslate nohighlight">\(\sigma &gt; 0\)</span> and a decaying exponential if <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span>.</p>
+<p>We didn’t quantify these effects, so it is useful to do so here.</p>
+<section id="rate-of-exponential-growth">
+<h3>Rate of exponential growth<a class="headerlink" href="#rate-of-exponential-growth" title="Permalink to this heading">#</a></h3>
+<p>Given that the rational polynomial <span class="math notranslate nohighlight">\(F(s)\)</span> representing the Laplace transfer of a signal or system has a pole <span class="math notranslate nohighlight">\(s = \sigma\)</span>, one of the terms in the partial fraction expansion will be</p>
+<div class="math notranslate nohighlight">
+\[\frac{r_\sigma}{s-\sigma}\]</div>
+<p>where <span class="math notranslate nohighlight">\(r_\sigma\)</span> is the residue of the pole.</p>
+<p>The corresponding term in <span class="math notranslate nohighlight">\(f(t)\)</span> will be <span class="math notranslate nohighlight">\(r_\sigma e^{\sigma t}\)</span>.</p>
+<p>This will be a growing exponential for which the <em>doubling time</em> is a useful measure of the growth rate.</p>
+<p>Given that at time <span class="math notranslate nohighlight">\(t=0\)</span>, <span class="math notranslate nohighlight">\(r_\sigma e^{0} = r_\sigma\)</span>, the doubling time <span class="math notranslate nohighlight">\(T\)</span> is the time for which</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+r_\sigma e^{\sigma T} &amp;= 2r_\sigma\\
+e^{\sigma T} &amp;= 2\\
+\sigma T &amp;= \log_e 2\\
+T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \frac{0.7}{\sigma}.
+\end{align}
+\end{split}\]</div>
+</section>
+<section id="example-7">
+<span id="unit5-2-ex7"></span><h3>Example 7<a class="headerlink" href="#example-7" title="Permalink to this heading">#</a></h3>
+<p>Plot the response of the pole</p>
+<div class="math notranslate nohighlight">
+\[\frac{10}{s - 0.1}\]</div>
+<p>and confirm that the doubling time is around 7 seconds.</p>
+<section id="solution-to-example-7">
+<h4>Solution to example 7<a class="headerlink" href="#solution-to-example-7" title="Permalink to this heading">#</a></h4>
+<p>Done in MATLAB</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+<span class="n">sigma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span>
+<span class="c">% Doubling time</span>
+<span class="n">T</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">log</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">sigma</span><span class="p">;</span>
+<span class="c">% Plot</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mi">10</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">)),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">]),</span><span class="nb">grid</span>
+<span class="c">% Plot and label lines: first doubling</span>
+<span class="nb">line</span><span class="p">([</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">],</span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="s">&#39;r&#39;</span><span class="p">,</span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="s">&#39;--&#39;</span><span class="p">)</span>
+<span class="nb">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">T</span><span class="p">],[</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">],</span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="s">&#39;r&#39;</span><span class="p">,</span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="s">&#39;--&#39;</span><span class="p">)</span>
+<span class="nb">hold</span><span class="w"> </span><span class="n">on</span><span class="w"> </span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="s">&#39;o&#39;</span><span class="p">)</span>
+<span class="nb">text</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="s">&#39;First doubling&#39;</span><span class="p">)</span>
+<span class="c">% Plot and label lines: second doubling</span>
+<span class="nb">plot</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">T</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="s">&#39;o&#39;</span><span class="p">)</span>
+<span class="nb">line</span><span class="p">([</span><span class="mi">2</span><span class="o">*</span><span class="n">T</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">T</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">40</span><span class="p">],</span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="s">&#39;g&#39;</span><span class="p">,</span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="s">&#39;--&#39;</span><span class="p">)</span>
+<span class="nb">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">T</span><span class="p">],[</span><span class="mi">40</span><span class="p">,</span><span class="mi">40</span><span class="p">],</span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="s">&#39;g&#39;</span><span class="p">,</span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="s">&#39;--&#39;</span><span class="p">)</span>
+<span class="nb">text</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="s">&#39;Second doubling&#39;</span><span class="p">)</span>
+<span class="c">% Label graph</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Exponential growth&#39;</span><span class="p">),</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;f(t) = 10*exp(-0.1*t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time t [s]&#39;</span><span class="p">)</span>
+<span class="nb">hold</span><span class="w"> </span><span class="n">off</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/59e69d17d7206bf26b7269510ac07ad4f022ce36dbc89f857b9573acfd3ed018.png" src="../_images/59e69d17d7206bf26b7269510ac07ad4f022ce36dbc89f857b9573acfd3ed018.png" />
+</div>
+</div>
+<p>Given that <span class="math notranslate nohighlight">\(\sigma = 0.1\)</span>, the doubling time <span class="math notranslate nohighlight">\(T \approx 0.7/\sigma = 7\)</span> s. The initial value is <span class="math notranslate nohighlight">\(10\)</span> at <span class="math notranslate nohighlight">\(t=0\)</span> s. It has doubled to <span class="math notranslate nohighlight">\(20\)</span> at <span class="math notranslate nohighlight">\(t\approx 7\)</span> s, and has doubled again to <span class="math notranslate nohighlight">\(40\)</span> at <span class="math notranslate nohighlight">\(t\approx 14\)</span>.</p>
+<p>We have added the exact solutions to the plot.</p>
+<p>The MATLAB code to reproduce this result is given in <span class="xref myst">example7.mlx</span></p>
+</section>
+</section>
+<section id="rate-of-exponential-decay">
+<h3>Rate of exponential decay<a class="headerlink" href="#rate-of-exponential-decay" title="Permalink to this heading">#</a></h3>
+<p>If <span class="math notranslate nohighlight">\(F(s)\)</span> has a pole <span class="math notranslate nohighlight">\(s = -\sigma\)</span>, one of the terms in the partial fraction expansion will be</p>
+<div class="math notranslate nohighlight">
+\[\frac{r_\sigma}{s+\sigma}\]</div>
+<p>where <span class="math notranslate nohighlight">\(r_\sigma\)</span> is the residue of the pole.</p>
+<p>The corresponding term in <span class="math notranslate nohighlight">\(f(t)\)</span> will be <span class="math notranslate nohighlight">\(r_\sigma e^{-\sigma t}\)</span>.</p>
+<p>This will be a decaying exponential for which the time constant <span class="math notranslate nohighlight">\(\tau = 1/|\sigma|\)</span> is a useful measure of the decay rate.</p>
+<p>Putting the time constant into the response equation</p>
+<div class="math notranslate nohighlight">
+\[r_\sigma e^{-\sigma \tau} = r_\sigma e^{-1} = 0.367879441171442r_\sigma \approx 0.37r_\sigma.\]</div>
+<p>Thus the response reaches around <span class="math notranslate nohighlight">\(37\%\)</span> of it’s initial value in <span class="math notranslate nohighlight">\(\tau = 1/|\sigma|\)</span> s.</p>
+<p>Another measure of decay that is sometimes used is the value of <span class="math notranslate nohighlight">\(t\)</span> for which the response reaches <span class="math notranslate nohighlight">\(1\%\)</span> of its initial value.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+  0.01 r_\sigma &amp;= r_\sigma e^{-t/\tau}\\
+  0.01 &amp;= e^{-t/\tau}\\
+  \log_e(0.01) &amp;= -t/\tau \\
+  t_{1\%} &amp;\approx 4.6 \tau
+\end{align}
+\end{split}\]</div>
+</section>
+</section>
+<section id="damping-ratio-and-natural-frequency">
+<span id="unit5-2-2"></span><h2>Damping ratio and natural frequency<a class="headerlink" href="#damping-ratio-and-natural-frequency" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="step-response-of-a-second-order-system">
+<span id="unit5-2-3"></span><h2>Step-response of a second-order system<a class="headerlink" href="#step-response-of-a-second-order-system" title="Permalink to this heading">#</a></h2>
+<section id="example-8">
+<span id="id3"></span><h3>Example 8<a class="headerlink" href="#example-8" title="Permalink to this heading">#</a></h3>
+<p>The current in the RC circuit shown in <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/index.html#rc-circuit-l">Fig. 41</a> has the transform</p>
+<div class="math notranslate nohighlight">
+\[i(t) = \frac{1/RC}{s+ 1/RC}\]</div>
+<p>If <span class="math notranslate nohighlight">\(R = 1\)</span> M<span class="math notranslate nohighlight">\(\Omega\)</span> and <span class="math notranslate nohighlight">\(C = 10\)</span> <span class="math notranslate nohighlight">\(\mu\)</span>F, determine:</p>
+<p>(a) The initial current <span class="math notranslate nohighlight">\(i(0)\)</span>.</p>
+<p>(b) The time constant <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
+<p>(c) The time at which the current decays to 1% of <span class="math notranslate nohighlight">\(i(0)\)</span>.</p>
+<section id="solution-to-example-8">
+<h4>Solution to example 8<a class="headerlink" href="#solution-to-example-8" title="Permalink to this heading">#</a></h4>
+<p>(a) The initial current is given by<a class="footnote-reference brackets" href="#unit5-2-1" id="id4">1</a></p>
+<div class="math notranslate nohighlight">
+\[\lim_{s\to\infty} sI(s) = \lim_{s\to\infty}s\frac{1/RC}{s + 1/RC} = 1/RC.\]</div>
+<p>Given the component values of <span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(i(0) = 1/RC = 100\)</span> mA.</p>
+<p>(b) The time constant <span class="math notranslate nohighlight">\(\tau = RC = 10\)</span> s.</p>
+<p>(c) The time at which the current decays to 1% of <span class="math notranslate nohighlight">\(i(0)\)</span> is 46 s.</p>
+<p>MATLAB confirmation</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
+<span class="n">R</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1e6</span><span class="p">;</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">10e-6</span><span class="p">;</span>
+<span class="n">sigma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">R</span><span class="o">*</span><span class="n">C</span><span class="p">);</span>
+<span class="c">% Time constant and initial current</span>
+<span class="n">tau</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="nb">abs</span><span class="p">(</span><span class="n">sigma</span><span class="p">);</span><span class="w"> </span><span class="n">i0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">R</span><span class="o">*</span><span class="n">C</span><span class="p">);</span>
+<span class="c">% Plot</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">i0</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">)),</span><span class="nb">grid</span>
+<span class="c">% Plot and label lines: time constant</span>
+<span class="nb">line</span><span class="p">([</span><span class="n">tau</span><span class="p">,</span><span class="n">tau</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="n">i0</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)],</span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="s">&#39;r&#39;</span><span class="p">,</span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="s">&#39;--&#39;</span><span class="p">)</span>
+<span class="nb">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">tau</span><span class="p">],[</span><span class="n">i0</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="n">i0</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)],</span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="s">&#39;r&#39;</span><span class="p">,</span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="s">&#39;--&#39;</span><span class="p">)</span>
+<span class="nb">text</span><span class="p">(</span><span class="n">tau</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">i0</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="s">&#39;Time constant: 37% of i0 in 10 seconds&#39;</span><span class="p">)</span>
+<span class="nb">hold</span><span class="w"> </span><span class="n">on</span><span class="w"> </span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">tau</span><span class="p">,</span><span class="n">i0</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="s">&#39;o&#39;</span><span class="p">)</span>
+<span class="c">% Plot and label lines: 1% point</span>
+<span class="nb">line</span><span class="p">([</span><span class="mf">4.6</span><span class="o">*</span><span class="n">tau</span><span class="p">,</span><span class="mf">4.6</span><span class="o">*</span><span class="n">tau</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="o">*</span><span class="n">i0</span><span class="p">],</span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="s">&#39;g&#39;</span><span class="p">,</span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="s">&#39;--&#39;</span><span class="p">)</span>
+<span class="nb">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">4.6</span><span class="o">*</span><span class="n">tau</span><span class="p">],[</span><span class="mf">0.01</span><span class="o">*</span><span class="n">i0</span><span class="p">,</span><span class="mf">0.01</span><span class="o">*</span><span class="n">i0</span><span class="p">],</span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="s">&#39;g&#39;</span><span class="p">,</span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="s">&#39;--&#39;</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="mf">4.6</span><span class="o">*</span><span class="n">tau</span><span class="p">,</span><span class="mf">0.01</span><span class="o">*</span><span class="n">i0</span><span class="p">,</span><span class="s">&#39;o&#39;</span><span class="p">)</span>
+<span class="nb">text</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="mf">0.01</span><span class="o">*</span><span class="n">i0</span><span class="o">+</span><span class="mf">0.005</span><span class="p">,</span><span class="s">&#39;1% of initial current in 46 seconds&#39;</span><span class="p">)</span>
+<span class="c">% Label graph</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Exponential decay of current in an RC circuit&#39;</span><span class="p">),</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Current i(t) [A]&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time t [s]&#39;</span><span class="p">)</span>
+<span class="nb">hold</span><span class="w"> </span><span class="n">off</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/77d5ff2b644322f949dbe4129d2ff6153c0cb34d566bbe4e4d1a27d520651e4c.png" src="../_images/77d5ff2b644322f949dbe4129d2ff6153c0cb34d566bbe4e4d1a27d520651e4c.png" />
+</div>
+</div>
+<p>The MATLAB code to reproduce this result is given in <span class="xref myst">example8.mlx</span></p>
+</section>
+</section>
+</section>
+<section id="exercises-16">
+<span id="examples16"></span><h2>Exercises 16<a class="headerlink" href="#exercises-16" title="Permalink to this heading">#</a></h2>
+<section id="exercise-16-1">
+<span id="ex16-1"></span><h3>Exercise 16.1<a class="headerlink" href="#exercise-16-1" title="Permalink to this heading">#</a></h3>
+<p>A signal or system response <span class="math notranslate nohighlight">\(f(t)\)</span> contains the terms</p>
+<div class="math notranslate nohighlight" id="equation-eq-ex16-1">
+<span class="eqno">(60)<a class="headerlink" href="#equation-eq-ex16-1" title="Permalink to this equation">#</a></span>\[\cdots - e^{-2t} - 0.1 t^2 \cos(3t + 5) \cdots\]</div>
+<p>(a) How many poles are there in <span class="math notranslate nohighlight">\(F(s)\)</span>?</p>
+<p>(b) What is the nature of the response due to the terms given in <a class="reference internal" href="#equation-eq-ex16-1">(60)</a>?</p>
+<p>(c) Which are the dominant poles?</p>
+</section>
+<section id="exercise-16-2">
+<span id="ex16-2"></span><h3>Exercise 16.2<a class="headerlink" href="#exercise-16-2" title="Permalink to this heading">#</a></h3>
+<p>A system has poles <span class="math notranslate nohighlight">\(s = 0,\,1\pm j,\,-1,\, -2\pm j2,\,-3\)</span> and zeros at <span class="math notranslate nohighlight">\(s = -1.5,\,-3\pm j3\)</span>.</p>
+<p>(a) Give the transfer function <span class="math notranslate nohighlight">\(F(s)=b(s)/a(a)\)</span></p>
+<p>(b) Plot the poles on a pole zero map</p>
+<p>(c) Give the time constant <span class="math notranslate nohighlight">\(\tau\)</span>, doubling time <span class="math notranslate nohighlight">\(T\)</span>, damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span>, angle <span class="math notranslate nohighlight">\(\theta\)</span>, natural frequency <span class="math notranslate nohighlight">\(\omega_n\)</span>, and quality factor <span class="math notranslate nohighlight">\(Q\)</span> as appropriate for each pole or pole pair.</p>
+<p>(d) How do the zeros affect the response <span class="math notranslate nohighlight">\(f(t)\)</span>?</p>
+<p>(e) Which is the dominant pole?</p>
+<p>(f) Will the system be stable or unstable?</p>
+<section id="partial-solution-to-exercise-16-2">
+<h4>Partial solution to Exercise 16.2<a class="headerlink" href="#partial-solution-to-exercise-16-2" title="Permalink to this heading">#</a></h4>
+<p>The poles and zeros can be entered into MATLAB</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mf">1.5</span><span class="p">;</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="w"> </span><span class="o">-</span><span class="w"> </span>3<span class="nb">j</span><span class="p">;</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>3<span class="nb">j</span><span class="p">];</span>
+<span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">j</span><span class="p">;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">j</span><span class="p">;</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>2<span class="nb">j</span><span class="p">;</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span>2<span class="nb">j</span><span class="p">;</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">];</span>
+<span class="c">% Define a transfer function in zero-pole-gain form</span>
+<span class="n">Fs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">zpk</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fs =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            (s+1.5) (s^2 + 6s + 18)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------------------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s (s+1) (s+3) (s^2 - 2s + 2) (s^2 + 4s + 8)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+</pre></div>
+</div>
+</div>
+</div>
+<p>(a) The transfer function is</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">tf</span><span class="p">(</span><span class="n">Fs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                s^3 + 7.5 s^2 + 27 s + 27
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------------------------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^7 + 6 s^6 + 13 s^5 + 6 s^4 - 10 s^3 + 40 s^2 + 48 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+</div>
+</div>
+<p>(b) The pole-zero map</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">pzmap</span><span class="p">(</span><span class="n">Fs</span><span class="p">),</span><span class="nb">xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">]),</span><span class="nb">ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">]),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Pole zero map for Example 16.2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/ff23f5604287439adb6848bc8c4d641ce704ed325d217a5b807ec2641c5aba94.png" src="../_images/ff23f5604287439adb6848bc8c4d641ce704ed325d217a5b807ec2641c5aba94.png" />
+</div>
+</div>
+<p><strong>Bonus</strong>: the step response is</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">step</span><span class="p">(</span><span class="n">Fs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/63c3bcc06286cbd8100e81ce9398ac795360d0cc202697dfb1046c8a9f8e7d4f.png" src="../_images/63c3bcc06286cbd8100e81ce9398ac795360d0cc202697dfb1046c8a9f8e7d4f.png" />
+</div>
+</div>
+</section>
+</section>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <section id="take-aways">
 <span id="unit5-2-takeaways"></span><h3>Take aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h3>
+<section id="real-pole-s-sigma">
+<h4>Real pole <span class="math notranslate nohighlight">\(s=\sigma\)</span>:<a class="headerlink" href="#real-pole-s-sigma" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Growth rate:, <span class="math notranslate nohighlight">\(\sigma &gt; 0\)</span>, the exponential signal doubles every <span class="math notranslate nohighlight">\(T\approx 0.7/\sigma\)</span> s.</p></li>
+<li><p>Time constant: <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span>, the exponential signal decays to <span class="math notranslate nohighlight">\(37\%\)</span> of it’s original value in <span class="math notranslate nohighlight">\(\tau = 1/\sigma\)</span> s. The expontial signal reaches <span class="math notranslate nohighlight">\(1\%\)</span> of it’s original value in <span class="math notranslate nohighlight">\(t\approx 4.6\tau\)</span> s.</p></li>
+</ul>
+</section>
+<section id="complex-pole-pair-s-sigma-pm-j-omega">
+<h4>Complex pole pair <span class="math notranslate nohighlight">\(s = \sigma \pm j\omega\)</span>:<a class="headerlink" href="#complex-pole-pair-s-sigma-pm-j-omega" title="Permalink to this heading">#</a></h4>
+</section>
 </section>
 </section>
 <section id="still-to-come">
@@ -483,6 +789,12 @@ document.write(`
 </section>
 <section id="footnotes">
 <h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this heading">#</a></h2>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="unit5-2-1"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
+<dd><p>This is easily determined from <span class="math notranslate nohighlight">\(\left.f(t)\right|_{t\to 0} = \left.\frac{1}{RC} e^{-t/RC}\right|_{t\to 0} = 1/RC\)</span>.</p>
+</dd>
+</dl>
 </section>
 </section>
 
@@ -550,9 +862,38 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-16">Examples 16</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-behaviour-of-real-poles">Quantitative behaviour of real poles</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rate-of-exponential-growth">Rate of exponential growth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-7">Example 7</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-7">Solution to example 7</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rate-of-exponential-decay">Rate of exponential decay</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#damping-ratio-and-natural-frequency">Damping ratio and natural frequency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-response-of-a-second-order-system">Step-response of a second-order system</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8">Example 8</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-8">Solution to example 8</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-16">Exercises 16</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-16-1">Exercise 16.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-16-2">Exercise 16.2</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-solution-to-exercise-16-2">Partial solution to Exercise 16.2</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take aways</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#real-pole-s-sigma">Real pole <span class="math notranslate nohighlight">\(s=\sigma\)</span>:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-pole-pair-s-sigma-pm-j-omega">Complex pole pair <span class="math notranslate nohighlight">\(s = \sigma \pm j\omega\)</span>:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#still-to-come">Still to come</a></li>

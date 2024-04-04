@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/poles_and_zeros/qualitative_properties.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Unit 5.2: Model Second Order Response" href="second_order_properties.html" />
+    <link rel="next" title="Unit 5.2: More on the Qualitative and Quantitative Response of First- and Second-Order Poles" href="second_order_properties.html" />
     <link rel="prev" title="Unit 5: Pole-Zero Analysis" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -201,7 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Unit 5 Pole-Zero Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit 5.1 Qualitative Properties of Signals and Transfer functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="second_order_properties.html">Unit 5.2 Model Second Order Response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="second_order_properties.html">Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../zbib.html">Bibliography</a></li>
@@ -447,6 +447,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-properties-of-terms">Quantitative properties of terms</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qualitative-analysis-from-the-pole-zero-map">Qualitative analysis from the pole-zero map</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-poles-damping-ratio-zeta-and-quality-factor-q">Complex poles: Damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> and quality factor <span class="math notranslate nohighlight">\(Q\)</span></a><ul class="nav section-nav flex-column">
@@ -491,8 +492,8 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-laplace-transform-terms">Inverse Laplace transform terms</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qalitative-properties-of-terms">Qalitative properties of terms</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantative-properties-of-terms">Quantative properties of terms</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Interpretation of Q</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Dominant poles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Interpretation of Q</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Dominant poles</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stability-of-lti-systems">Stability of LTI systems</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#consequences-of-what-we-have-learned">Consequences of what we have learned</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-value-and-final-value-theorem">Initial value and final value theorem</a></li>
@@ -593,7 +594,10 @@ document.write(`
 </section>
 <section id="quantitative-properties-of-terms">
 <span id="unit5-1-3"></span><h2>Quantitative properties of terms<a class="headerlink" href="#quantitative-properties-of-terms" title="Permalink to this heading">#</a></h2>
-<p>The pole <span class="math notranslate nohighlight">\(\lambda_1 = \sigma + j\omega\)</span> and its conjugate pair <span class="math notranslate nohighlight">\(\lambda_2 = \sigma - j\omega\)</span> will yield a time domain term</p>
+<p>The pole <span class="math notranslate nohighlight">\(\lambda_1 = \sigma + j\omega\)</span> and its conjugate pair <span class="math notranslate nohighlight">\(\bar{\lambda} = \overline{\left(\sigma - j\omega\right)} = \sigma - j\omega\)</span>[^pz:note3]</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{Re}\lambda=\sigma,\qquad\mathbf{Im}\lambda = \omega\]</div>
+<p>will yield a time domain term</p>
 <div class="math notranslate nohighlight" id="equation-eq-pz-3">
 <span class="eqno">(48)<a class="headerlink" href="#equation-eq-pz-3" title="Permalink to this equation">#</a></span>\[ae^{\sigma t}\cos\left(\omega t + \phi\right).\]</div>
 <ul class="simple">
@@ -602,13 +606,6 @@ document.write(`
 <ul class="simple">
 <li><p>The imaginary part gives the oscillation <em>frequency</em>.</p></li>
 </ul>
-<p>This is summarized in <a class="reference internal" href="#fig-pz-1"><span class="std std-numref">Fig. 74</span></a>.</p>
-<figure class="align-default" id="fig-pz-1">
-<a class="reference internal image-reference" href="../_images/quant.png"><img alt="A figure illustrating the quantitive properties of terms f(t) resulting from the poles of F(s)." src="../_images/quant.png" style="width: 50%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 74 </span><span class="caption-text">Illustrating the quantitive properties of the terms <span class="math notranslate nohighlight">\(f(t)\)</span> resulting from the poles of <span class="math notranslate nohighlight">\(F(s)\)</span></span><a class="headerlink" href="#fig-pz-1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
 <section id="example-1">
 <h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this heading">#</a></h3>
 <p>Quantifying the response for <span class="math notranslate nohighlight">\(f(t) = e^{\sigma t}\cos\left(\omega t\right)\)</span>: rows <span class="math notranslate nohighlight">\(\omega = 30, 15, 0\)</span>; columns: <span class="math notranslate nohighlight">\(\sigma = -1.5, 0.75, 0, 0.75, 1.5\)</span></p>
@@ -624,6 +621,17 @@ document.write(`
 <img alt="../_images/bd86c3facfc3b196ee162b5da2c6cd6d84bd5b61bbfd36541c5451a856057715.png" src="../_images/bd86c3facfc3b196ee162b5da2c6cd6d84bd5b61bbfd36541c5451a856057715.png" />
 </div>
 </div>
+</section>
+<section id="qualitative-analysis-from-the-pole-zero-map">
+<h3>Qualitative analysis from the pole-zero map<a class="headerlink" href="#qualitative-analysis-from-the-pole-zero-map" title="Permalink to this heading">#</a></h3>
+<p>By plotting the poles and zeros on the <span class="math notranslate nohighlight">\(s\)</span>-plane we can say quite a lot about the expected response.
+These ideas ares summarized in <a class="reference internal" href="#fig-pz-1"><span class="std std-numref">Fig. 74</span></a>.</p>
+<figure class="align-default" id="fig-pz-1">
+<a class="reference internal image-reference" href="../_images/quant.png"><img alt="A figure illustrating the quantitive properties of terms f(t) resulting from the poles of F(s)." src="../_images/quant.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 74 </span><span class="caption-text">Illustrating the quantitive properties of the terms <span class="math notranslate nohighlight">\(f(t)\)</span> resulting from the poles of <span class="math notranslate nohighlight">\(F(s)\)</span></span><a class="headerlink" href="#fig-pz-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The MATLAB code to reproduce this figure is given in <a class="reference download internal" download="" href="../_downloads/556b332fedd14b129e4b084e6cc38943/example1.mlx"><span class="xref download myst">example1.mlx</span></a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -636,9 +644,13 @@ document.write(`
 </section>
 <section id="complex-poles-damping-ratio-zeta-and-quality-factor-q">
 <span id="unit5-1-4"></span><h2>Complex poles: Damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> and quality factor <span class="math notranslate nohighlight">\(Q\)</span><a class="headerlink" href="#complex-poles-damping-ratio-zeta-and-quality-factor-q" title="Permalink to this heading">#</a></h2>
-<p>For a pole at <span class="math notranslate nohighlight">\(s = \lambda = \sigma + j\omega\)</span> (hence also at <span class="math notranslate nohighlight">\(\bar{\lambda}\)</span><a class="footnote-reference brackets" href="#pz-note3" id="id5">3</a>) with <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span>:</p>
+<p>For a pole at <span class="math notranslate nohighlight">\(s = \lambda = \sigma + j\omega\)</span> (hence also at <span class="math notranslate nohighlight">\(\bar{\lambda}\)</span>) with <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[F(s) = \frac{r}{s-\lambda} + \frac{\bar{r}}{s-\lambda},\;f(t) = ae^{\sigma t}\cos\left(\omega t + \phi\right)\]</div>
+\[F(s) = \frac{r}{s-\lambda} + \frac{\bar{r}}{s-\lambda}\]</div>
+<div class="math notranslate nohighlight">
+\[F(s) =\frac{2\mathbf{Re}\left(r\right)s-2\mathbf{Re}\left(r\lambda\right)}{s^2 - 2\sigma s +\left(\sigma^2 + \omega^2\right)}\]</div>
+<p>which resolves to
+$<span class="math notranslate nohighlight">\(f(t) = ae^{\sigma t}\cos\left(\omega t + \phi\right)\)</span>$</p>
 <p>There are two measures of the decay rate per cycle of oscillation:</p>
 <ul class="simple">
 <li><p><strong>damping ratio</strong></p></li>
@@ -657,6 +669,12 @@ document.write(`
 <p><span class="caption-number">Fig. 75 </span><span class="caption-text">The damping ratio is related the the angle of the pole in the complex plane</span><a class="headerlink" href="#fig-pz-3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<p>There is another concept in this diagram that we will refer to later.</p>
+<p>If we consider the polar form of the pole illustrated by the red line in <a class="reference internal" href="#fig-pz-3"><span class="std std-numref">Fig. 75</span></a></p>
+<div class="math notranslate nohighlight">
+\[\lambda_{1,2} = -\sigma \pm j\omega = -\omega_n e^{\pm j\theta}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta = \cos^{-1}\zeta\)</span> and <span class="math notranslate nohighlight">\(\omega_n = \sqrt{\sigma^2 + \omega^2}\)</span> is called the <em>natural frequency</em>.</p>
+<p>We will say more about the damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> and natural frequency <span class="math notranslate nohighlight">\(\omega_n\)</span> in <a class="reference internal" href="second_order_properties.html#unit5-2"><span class="std std-ref">Unit 5.2: More on the Qualitative and Quantitative Response of First- and Second-Order Poles</span></a>.</p>
 <p>The oscillation is</p>
 <ul class="simple">
 <li><p>underdamped: <span class="math notranslate nohighlight">\(\zeta &lt; 1\)</span> (<span class="math notranslate nohighlight">\(Q &gt; 1/2\)</span>)</p></li>
@@ -972,7 +990,7 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
 <section id="qalitative-properties-of-terms">
 <h4>Qalitative properties of terms<a class="headerlink" href="#qalitative-properties-of-terms" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p>Section <a class="reference internal" href="#unit5-1-2"><span class="std std-ref">Qualitative properties of terms</span></a> summarizes the types of responses that <span class="math notranslate nohighlight">\(f(t)\)</span> (a signal or system whose Laplace transform is a rational polynomial <span class="math notranslate nohighlight">\(F(s)\)</span><a class="footnote-reference brackets" href="#zp-note4" id="id7">4</a>) can exhibit.</p></li>
+<li><p>Section <a class="reference internal" href="#unit5-1-2"><span class="std std-ref">Qualitative properties of terms</span></a> summarizes the types of responses that <span class="math notranslate nohighlight">\(f(t)\)</span> (a signal or system whose Laplace transform is a rational polynomial <span class="math notranslate nohighlight">\(F(s)\)</span><a class="footnote-reference brackets" href="#zp-note4" id="id6">3</a>) can exhibit.</p></li>
 <li><p>The growth-rate and decay-rate of each system response term is governed by the real part of the pole <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
 <ul>
 <li><p>A response term will grow if <span class="math notranslate nohighlight">\(\sigma &gt; 0\)</span></p></li>
@@ -988,13 +1006,13 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
 <p>For complex poles, there are two measures of the decay rate per cycle of oscillation. These are defined in <a class="reference internal" href="#unit5-1-4"><span class="std std-ref">Complex poles: Damping ratio \zeta and quality factor Q</span></a>.</p>
 <p>In <a class="reference internal" href="#pz-example2"><span class="std std-ref">Example 2: parallel RLC circuit</span></a> we introduced the concepts of <em>overdamped response</em>, <em>critically damped response</em>*, <em>underdamped response</em> and <em>undamped</em> response. We also provided the definitions for <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(\zeta\)</span> for this circuit.</p>
 </section>
-<section id="id8">
-<h4>Interpretation of Q<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
+<section id="id7">
+<h4>Interpretation of Q<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
 <p>In <a class="reference internal" href="#pz-interpretation-of-q"><span class="std std-ref">Interpretation of Q</span></a> we declared that the time to decay to 1% of amplitude (called <em>settling time</em>) is about <span class="math notranslate nohighlight">\(4.6/|\sigma|\)</span> and the number of cycles to decay to 1% amplitude is about <span class="math notranslate nohighlight">\(N_{1\%} = 1.46\omega/(2|\sigma|)\)</span> s. <span class="math notranslate nohighlight">\(N_{1\%}\approx 1.46 Q\)</span> s for <span class="math notranslate nohighlight">\(Q&gt;2\)</span>.</p>
 <p>We also stated that <span class="math notranslate nohighlight">\(N_{4\%}\approx Q\)</span> s.</p>
 </section>
-<section id="id9">
-<h4>Dominant poles<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
+<section id="id8">
+<h4>Dominant poles<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
 <p>The dominant poles of a system are those which have the largest real part <span class="math notranslate nohighlight">\(\sigma\)</span>. The response term associated with this pole (or pole pair) will eventually come to dominate the overall response <span class="math notranslate nohighlight">\(f(t)\)</span>.</p>
 </section>
 <section id="stability-of-lti-systems">
@@ -1019,18 +1037,18 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
 </section>
 <section id="still-to-come">
 <h3>Still to come<a class="headerlink" href="#still-to-come" title="Permalink to this heading">#</a></h3>
-<p>In the next unit <a class="reference internal" href="second_order_properties.html#unit5-2"><span class="std std-ref">Unit 5.2: Model Second Order Response</span></a> we will expand our knowledge of the response of a complex term by defining a <em>canonical model</em> of a quadratic pole. We will also do some examples to practice what we have learned in this unit.</p>
+<p>In the next unit <a class="reference internal" href="second_order_properties.html#unit5-2"><span class="std std-ref">Unit 5.2: More on the Qualitative and Quantitative Response of First- and Second-Order Poles</span></a> we will expand our knowledge of the response of a complex term by defining a <em>canonical model</em> of a quadratic pole. We will also do some examples to practice what we have learned in this unit.</p>
 <p>We will build on these ideas in <strong>EG-247 Digital Signal Processing</strong> and you will be able to use what you have learned in <strong>EG-243 Control Systems</strong>.</p>
 </section>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id10">
+<div class="docutils container" id="id9">
 <dl class="citation">
-<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id2">All24</a></span></dt>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id2">All24</a></span></dt>
 <dd><p>Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: <a class="github reference external" href="https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0">MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems</a>.</p>
 </dd>
-<dt class="label" id="id27"><span class="brackets">Boy93</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id6">2</a>)</span></dt>
+<dt class="label" id="id26"><span class="brackets">Boy93</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id5">2</a>)</span></dt>
 <dd><p>Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: <a class="reference external" href="https://web.stanford.edu/~boyd/ee102/">https://web.stanford.edu/~boyd/ee102/</a>.</p>
 </dd>
 </dl>
@@ -1046,10 +1064,7 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
 <dt class="label" id="pz-note2"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
 <dd><p>The term <span class="math notranslate nohighlight">\(\lambda\)</span> may be complex, in which case there will be two complex poles <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> which form the complex conjugate pairs <span class="math notranslate nohighlight">\(\lambda_{1,2} = \sigma \pm j\omega\)</span>. In this case, the poles will be represented as the roots of the quadratic factor <span class="math notranslate nohighlight">\(\left(s - \sigma - j\omega\right)\left(s - \sigma + j\omega\right) = s^2 + 2\sigma s + \left(\sigma^2 + \omega^2\right)\)</span>. The inverse Laplace transform of a such a quadratic factor will be oscilliatory.</p>
 </dd>
-<dt class="label" id="pz-note3"><span class="brackets"><a class="fn-backref" href="#id5">3</a></span></dt>
-<dd><p>Here we are using the bar notation <span class="math notranslate nohighlight">\(\bar{x}\)</span> to represent the complex conjugate of complex number <span class="math notranslate nohighlight">\(x\)</span>.</p>
-</dd>
-<dt class="label" id="zp-note4"><span class="brackets"><a class="fn-backref" href="#id7">4</a></span></dt>
+<dt class="label" id="zp-note4"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
 <dd><p>In the case of a system, <span class="math notranslate nohighlight">\(F(s)\)</span> is the impulse response of the system transform of <span class="math notranslate nohighlight">\(H(s)\)</span>. The rational polynomial is called a <em>transfer function</em> (see <a class="reference internal" href="../laplace_transform/6/transfer_functions.html#unit4-6"><span class="std std-ref">Unit 4.6: Transfer Functions</span></a> for the definition).</p>
 </dd>
 </dl>
@@ -1100,7 +1115,7 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Unit 5.2: Model Second Order Response</p>
+        <p class="prev-next-title">Unit 5.2: More on the Qualitative and Quantitative Response of First- and Second-Order Poles</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1131,6 +1146,7 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantitative-properties-of-terms">Quantitative properties of terms</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qualitative-analysis-from-the-pole-zero-map">Qualitative analysis from the pole-zero map</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-poles-damping-ratio-zeta-and-quality-factor-q">Complex poles: Damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> and quality factor <span class="math notranslate nohighlight">\(Q\)</span></a><ul class="nav section-nav flex-column">
@@ -1175,8 +1191,8 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-laplace-transform-terms">Inverse Laplace transform terms</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qalitative-properties-of-terms">Qalitative properties of terms</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantative-properties-of-terms">Quantative properties of terms</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Interpretation of Q</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Dominant poles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Interpretation of Q</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Dominant poles</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stability-of-lti-systems">Stability of LTI systems</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#consequences-of-what-we-have-learned">Consequences of what we have learned</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-value-and-final-value-theorem">Initial value and final value theorem</a></li>

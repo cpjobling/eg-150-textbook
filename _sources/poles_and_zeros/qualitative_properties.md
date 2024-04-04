@@ -127,9 +127,17 @@ $$\mathcal{L}^{-1}\left\{\frac{1}{\left(s-\lambda\right)^k} \right\} = \frac{1}{
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-The pole $\lambda_1 = \sigma + j\omega$ and its conjugate pair $\lambda_2 = \sigma - j\omega$ will yield a time domain term 
+The pole $\lambda_1 = \sigma + j\omega$ and its conjugate pair $\bar{\lambda} = \overline{\left(\sigma - j\omega\right)} = \sigma - j\omega$[^pz:note3]
+
+$$\mathbf{Re}\lambda=\sigma,\qquad\mathbf{Im}\lambda = \omega$$
+
+will yield a time domain term 
 
 $$ae^{\sigma t}\cos\left(\omega t + \phi\right).$$ (eq:pz:3)
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+[^pz_note3]: Here we are using the bar notation $\bar{x}$ to represent the complex conjugate of complex number $x$.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -138,20 +146,6 @@ $$ae^{\sigma t}\cos\left(\omega t + \phi\right).$$ (eq:pz:3)
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 * The imaginary part gives the oscillation *frequency*.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-This is summarized in {numref}`fig:pz:1`.
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-:::{figure-md} fig:pz:1
-
-<img src="pictures/quant.png" width="50%"
-     alt="A figure illustrating the quantitive properties of terms f(t) resulting from the poles of F(s)." />
-
-Illustrating the quantitive properties of the terms $f(t)$ resulting from the poles of $F(s)$
-:::
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -171,6 +165,23 @@ example1
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+### Qualitative analysis from the pole-zero map
+
+By plotting the poles and zeros on the $s$-plane we can say quite a lot about the expected response.
+These ideas ares summarized in {numref}`fig:pz:1`.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+:::{figure-md} fig:pz:1
+
+<img src="pictures/quant.png" width="50%"
+     alt="A figure illustrating the quantitive properties of terms f(t) resulting from the poles of F(s)." />
+
+Illustrating the quantitive properties of the terms $f(t)$ resulting from the poles of $F(s)$
+:::
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
 The MATLAB code to reproduce this figure is given in [example1.mlx](matlab/example1.mlx)
 
 ```{code-cell}
@@ -186,9 +197,18 @@ open example1
 (unit5.1.4)=
 ## Complex poles: Damping ratio $\zeta$ and quality factor $Q$
 
-For a pole at $s = \lambda = \sigma + j\omega$ (hence also at $\bar{\lambda}$[^pz_note3]) with $\sigma < 0$:
+For a pole at $s = \lambda = \sigma + j\omega$ (hence also at $\bar{\lambda}$) with $\sigma < 0$:
 
-$$F(s) = \frac{r}{s-\lambda} + \frac{\bar{r}}{s-\lambda},\;f(t) = ae^{\sigma t}\cos\left(\omega t + \phi\right)$$
+$$F(s) = \frac{r}{s-\lambda} + \frac{\bar{r}}{s-\lambda}$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+$$F(s) =\frac{2\mathbf{Re}\left(r\right)s-2\mathbf{Re}\left(r\lambda\right)}{s^2 - 2\sigma s +\left(\sigma^2 + \omega^2\right)}$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+which resolves to
+$$f(t) = ae^{\sigma t}\cos\left(\omega t + \phi\right)$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -206,10 +226,6 @@ $$\zeta = \frac{-\sigma}{\sqrt{\sigma^2 + \omega^2}}$$ (eq:pz:4)
 
 $$Q = \frac{1}{2} \sqrt{\frac{\sigma^2 + \omega^2}{\sigma^2}} = \frac{1}{2\zeta} $$ (eq:pz:5)
 
-+++ {"slideshow": {"slide_type": "notes"}}
-
-[^pz_note3]: Here we are using the bar notation $\bar{x}$ to represent the complex conjugate of complex number $x$.
-
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 The damping ratio (or $Q$) is related to the $angle$ of the pole in the complex plane as shown in {numref}`fig:pz:3`:
@@ -220,6 +236,18 @@ The damping ratio (or $Q$) is related to the $angle$ of the pole in the complex 
 
 The damping ratio is related the the angle of the pole in the complex plane
 :::
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+There is another concept in this diagram that we will refer to later. 
+
+If we consider the polar form of the pole illustrated by the red line in {numref}`fig:pz:3`
+
+$$\lambda_{1,2} = -\sigma \pm j\omega = -\omega_n e^{\pm j\theta}$$
+
+where $\theta = \cos^{-1}\zeta$ and $\omega_n = \sqrt{\sigma^2 + \omega^2}$ is called the *natural frequency*. 
+
+We will say more about the damping ratio $\zeta$ and natural frequency $\omega_n$ in {ref}`unit5.2`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
