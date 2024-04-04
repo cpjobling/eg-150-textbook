@@ -59,14 +59,10 @@ parts:
     sections:
     - file: poles_and_zeros/qualitative_properties
       title: Unit 5.1 Qualitative Properties of Signals and Transfer functions
-    - file: poles_and_zeros/examples16
-      title: Examples 16
+    - file: poles_and_zeros/second_order_properties
+      title: Unit 5.2 Model Second Order Response
   - file: zbib
     title: Bibliography
-- caption: FAQs
-  chapters:
-  - file: FAQS/faq
-    title: Answers to Frequently Asked Questions
 #- caption: Lab Exercises
 #  chapters:
 #  - file: labs/index
@@ -74,7 +70,7 @@ parts:
 - caption: Appendices
   chapters:
   - file: takeaways
-    title: Unit takeaways
+    title: Unit take aways
   - file: exercises
     title: List of Unit Exercises
   - file: homework
