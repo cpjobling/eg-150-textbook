@@ -492,8 +492,8 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-laplace-transform-terms">Inverse Laplace transform terms</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qalitative-properties-of-terms">Qalitative properties of terms</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantative-properties-of-terms">Quantative properties of terms</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Interpretation of Q</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Dominant poles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Interpretation of Q</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Dominant poles</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stability-of-lti-systems">Stability of LTI systems</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#consequences-of-what-we-have-learned">Consequences of what we have learned</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-value-and-final-value-theorem">Initial value and final value theorem</a></li>
@@ -618,7 +618,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/355a69c64fa66e719192e3d0976665eecd1f20f843968e89a60b7866088ef7ac.png" src="../_images/355a69c64fa66e719192e3d0976665eecd1f20f843968e89a60b7866088ef7ac.png" />
+<img alt="../_images/68421333db9df57a7281001f93fbcc4481f78e3e1680ecce4dd8e32a9abe05bc.png" src="../_images/68421333db9df57a7281001f93fbcc4481f78e3e1680ecce4dd8e32a9abe05bc.png" />
 </div>
 </div>
 </section>
@@ -662,7 +662,7 @@ $<span class="math notranslate nohighlight">\(f(t) = ae^{\sigma t}\cos\left(\ome
 </ul>
 <div class="math notranslate nohighlight" id="equation-eq-pz-5">
 <span class="eqno">(50)<a class="headerlink" href="#equation-eq-pz-5" title="Permalink to this equation">#</a></span>\[Q = \frac{1}{2} \sqrt{\frac{\sigma^2 + \omega^2}{\sigma^2}} = \frac{1}{2\zeta} \]</div>
-<p>The damping ratio (or <span class="math notranslate nohighlight">\(Q\)</span>) is related to the <span class="math notranslate nohighlight">\(angle\)</span> of the pole in the complex plane as shown in <a class="reference internal" href="#fig-pz-3"><span class="std std-numref">Fig. 75</span></a>:</p>
+<p>The damping ratio (or <span class="math notranslate nohighlight">\(Q\)</span>) is related to the <span class="math notranslate nohighlight">\(angle\)</span> of the pole in the complex plane as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:pz:3</span></code>:</p>
 <figure class="align-default" id="fig-pz-3">
 <a class="reference internal image-reference" href="../_images/fig3.png"><img alt="The damping ratio is related the the angle of the pole in the complex plane" src="../_images/fig3.png" style="width: 50%;" /></a>
 <figcaption>
@@ -670,7 +670,7 @@ $<span class="math notranslate nohighlight">\(f(t) = ae^{\sigma t}\cos\left(\ome
 </figcaption>
 </figure>
 <p>There is another concept in this diagram that we will refer to later.</p>
-<p>If we consider the polar form of the pole illustrated by the red line in <a class="reference internal" href="#fig-pz-3"><span class="std std-numref">Fig. 75</span></a></p>
+<p>If we consider the polar form of the pole illustrated by the red line in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:pz:3</span></code></p>
 <div class="math notranslate nohighlight">
 \[\lambda_{1,2} = -\sigma \pm j\omega = -\omega_n e^{\pm j\theta}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\theta = \cos^{-1}\zeta\)</span> and <span class="math notranslate nohighlight">\(\omega_n = \sqrt{\sigma^2 + \omega^2}\)</span> is called the <em>natural frequency</em>.</p>
@@ -684,7 +684,13 @@ $<span class="math notranslate nohighlight">\(f(t) = ae^{\sigma t}\cos\left(\ome
 </ul>
 <section id="example-2-parallel-rlc-circuit">
 <span id="pz-example2"></span><h3>Example 2: parallel RLC circuit<a class="headerlink" href="#example-2-parallel-rlc-circuit" title="Permalink to this heading">#</a></h3>
-<p>Consider the parallel RLC citcuit shown in <a class="reference internal" href="#fig-pz-4"><span class="std std-numref">Fig. 76</span></a>.</p>
+<p>Consider the parallel RLC citcuit shown in <a class="reference internal" href="#fig-pz-4"><span class="std std-numref">Fig. 77</span></a>.</p>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/example2.png"><img alt="Parallel RCL circuit - resistor R in parallel with inductor L and capacitor C. The supplied voltage is the voltage across the capacitor v and the current is the current flowing the the inductor." src="../_images/example2.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 76 </span><span class="caption-text">Parallel RLC circuit (reproduced from page 6-8 of <span id="id5">[<a class="reference internal" href="../zbib.html#id18" title="Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: https://web.stanford.edu/~boyd/ee102/.">Boyd, 1993</a>]</span>)</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <section id="solution-to-example-2">
 <h4>Solution to example 2<a class="headerlink" href="#solution-to-example-2" title="Permalink to this heading">#</a></h4>
 <p>We have</p>
@@ -830,7 +836,7 @@ $<span class="math notranslate nohighlight">\(f(t) = ae^{\sigma t}\cos\left(\ome
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7e17e1576e593e819be9b504c65778ebf10b083704098cd58448ae39767abb95.png" src="../_images/7e17e1576e593e819be9b504c65778ebf10b083704098cd58448ae39767abb95.png" />
+<img alt="../_images/d737690db64d6203d72ff3917d63cd002e02106da3e2f80e253b8427b82a0c3c.png" src="../_images/d737690db64d6203d72ff3917d63cd002e02106da3e2f80e253b8427b82a0c3c.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this figure is given in <a class="reference download internal" download="" href="../_downloads/ca764614d8c4659036585882462f6043/example3.mlx"><span class="xref download myst">example3.mlx</span></a></p>
@@ -847,11 +853,11 @@ $<span class="math notranslate nohighlight">\(f(t) = ae^{\sigma t}\cos\left(\ome
 <ul class="simple">
 <li><p>As <span class="math notranslate nohighlight">\(t \to \infty\)</span> these terms become larger and larger compared to the other terms, no matter what the residues.</p></li>
 </ul>
-<p>As an example, see <a class="reference internal" href="#fig-pz-4"><span class="std std-numref">Fig. 76</span></a>. Although this system has six poles, the pole closest to <span class="math notranslate nohighlight">\(s = 0\)</span> has the largest real part and so will be dominant.</p>
+<p>As an example, see <a class="reference internal" href="#fig-pz-4"><span class="std std-numref">Fig. 77</span></a>. Although this system has six poles, the pole closest to <span class="math notranslate nohighlight">\(s = 0\)</span> has the largest real part and so will be dominant.</p>
 <figure class="align-default" id="fig-pz-4">
 <a class="reference internal image-reference" href="../_images/fig4.png"><img alt="Illustration of a dominant pole" src="../_images/fig4.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 76 </span><span class="caption-text">Dominant poles in a transform <span class="math notranslate nohighlight">\(F(s)\)</span></span><a class="headerlink" href="#fig-pz-4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 77 </span><span class="caption-text">Dominant poles in a transform <span class="math notranslate nohighlight">\(F(s)\)</span></span><a class="headerlink" href="#fig-pz-4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="example-4">
@@ -882,7 +888,7 @@ $<span class="math notranslate nohighlight">\(f(t) = ae^{\sigma t}\cos\left(\ome
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/edc93fb07000873519ccc90a467222a9b472230e63ce37823b6cbea1fd8c99a5.png" src="../_images/edc93fb07000873519ccc90a467222a9b472230e63ce37823b6cbea1fd8c99a5.png" />
+<img alt="../_images/a7561aea836c7021c1aab83306a980eba71cfbba7e9012d262bec8be10ed65b9.png" src="../_images/a7561aea836c7021c1aab83306a980eba71cfbba7e9012d262bec8be10ed65b9.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this figure is given in <a class="reference download internal" download="" href="../_downloads/1fe868b12b17534de36b4602d2468a37/example4.mlx"><span class="xref download myst">example4.mlx</span></a></p>
@@ -990,7 +996,7 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
 <section id="qalitative-properties-of-terms">
 <h4>Qalitative properties of terms<a class="headerlink" href="#qalitative-properties-of-terms" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p>Section <a class="reference internal" href="#unit5-1-2"><span class="std std-ref">Qualitative properties of terms</span></a> summarizes the types of responses that <span class="math notranslate nohighlight">\(f(t)\)</span> (a signal or system whose Laplace transform is a rational polynomial <span class="math notranslate nohighlight">\(F(s)\)</span><a class="footnote-reference brackets" href="#zp-note4" id="id6">3</a>) can exhibit.</p></li>
+<li><p>Section <a class="reference internal" href="#unit5-1-2"><span class="std std-ref">Qualitative properties of terms</span></a> summarizes the types of responses that <span class="math notranslate nohighlight">\(f(t)\)</span> (a signal or system whose Laplace transform is a rational polynomial <span class="math notranslate nohighlight">\(F(s)\)</span><a class="footnote-reference brackets" href="#zp-note4" id="id7">3</a>) can exhibit.</p></li>
 <li><p>The growth-rate and decay-rate of each system response term is governed by the real part of the pole <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
 <ul>
 <li><p>A response term will grow if <span class="math notranslate nohighlight">\(\sigma &gt; 0\)</span></p></li>
@@ -1006,13 +1012,13 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
 <p>For complex poles, there are two measures of the decay rate per cycle of oscillation. These are defined in <a class="reference internal" href="#unit5-1-4"><span class="std std-ref">Complex poles: Damping ratio \zeta and quality factor Q</span></a>.</p>
 <p>In <a class="reference internal" href="#pz-example2"><span class="std std-ref">Example 2: parallel RLC circuit</span></a> we introduced the concepts of <em>overdamped response</em>, <em>critically damped response</em>*, <em>underdamped response</em> and <em>undamped</em> response. We also provided the definitions for <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(\zeta\)</span> for this circuit.</p>
 </section>
-<section id="id7">
-<h4>Interpretation of Q<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
+<section id="id8">
+<h4>Interpretation of Q<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
 <p>In <a class="reference internal" href="#pz-interpretation-of-q"><span class="std std-ref">Interpretation of Q</span></a> we declared that the time to decay to 1% of amplitude (called <em>settling time</em>) is about <span class="math notranslate nohighlight">\(4.6/|\sigma|\)</span> and the number of cycles to decay to 1% amplitude is about <span class="math notranslate nohighlight">\(N_{1\%} = 1.46\omega/(2|\sigma|)\)</span> s. <span class="math notranslate nohighlight">\(N_{1\%}\approx 1.46 Q\)</span> s for <span class="math notranslate nohighlight">\(Q&gt;2\)</span>.</p>
 <p>We also stated that <span class="math notranslate nohighlight">\(N_{4\%}\approx Q\)</span> s.</p>
 </section>
-<section id="id8">
-<h4>Dominant poles<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
+<section id="id9">
+<h4>Dominant poles<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
 <p>The dominant poles of a system are those which have the largest real part <span class="math notranslate nohighlight">\(\sigma\)</span>. The response term associated with this pole (or pole pair) will eventually come to dominate the overall response <span class="math notranslate nohighlight">\(f(t)\)</span>.</p>
 </section>
 <section id="stability-of-lti-systems">
@@ -1043,12 +1049,12 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id9">
+<div class="docutils container" id="id10">
 <dl class="citation">
-<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id2">All24</a></span></dt>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id2">All24</a></span></dt>
 <dd><p>Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: <a class="github reference external" href="https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0">MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems</a>.</p>
 </dd>
-<dt class="label" id="id26"><span class="brackets">Boy93</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id5">2</a>)</span></dt>
+<dt class="label" id="id27"><span class="brackets">Boy93</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id5">2</a>)</span></dt>
 <dd><p>Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: <a class="reference external" href="https://web.stanford.edu/~boyd/ee102/">https://web.stanford.edu/~boyd/ee102/</a>.</p>
 </dd>
 </dl>
@@ -1064,7 +1070,7 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
 <dt class="label" id="pz-note2"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
 <dd><p>The term <span class="math notranslate nohighlight">\(\lambda\)</span> may be complex, in which case there will be two complex poles <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> which form the complex conjugate pairs <span class="math notranslate nohighlight">\(\lambda_{1,2} = \sigma \pm j\omega\)</span>. In this case, the poles will be represented as the roots of the quadratic factor <span class="math notranslate nohighlight">\(\left(s - \sigma - j\omega\right)\left(s - \sigma + j\omega\right) = s^2 + 2\sigma s + \left(\sigma^2 + \omega^2\right)\)</span>. The inverse Laplace transform of a such a quadratic factor will be oscilliatory.</p>
 </dd>
-<dt class="label" id="zp-note4"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
+<dt class="label" id="zp-note4"><span class="brackets"><a class="fn-backref" href="#id7">3</a></span></dt>
 <dd><p>In the case of a system, <span class="math notranslate nohighlight">\(F(s)\)</span> is the impulse response of the system transform of <span class="math notranslate nohighlight">\(H(s)\)</span>. The rational polynomial is called a <em>transfer function</em> (see <a class="reference internal" href="../laplace_transform/6/transfer_functions.html#unit4-6"><span class="std std-ref">Unit 4.6: Transfer Functions</span></a> for the definition).</p>
 </dd>
 </dl>
@@ -1191,8 +1197,8 @@ a_n\left(s^n Y(s) - s^{n-1}y(0) - s^{n-2} y'(0)-\cdots-y^{(n-1)}(0)\right)\\
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#inverse-laplace-transform-terms">Inverse Laplace transform terms</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qalitative-properties-of-terms">Qalitative properties of terms</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantative-properties-of-terms">Quantative properties of terms</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Interpretation of Q</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Dominant poles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Interpretation of Q</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Dominant poles</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stability-of-lti-systems">Stability of LTI systems</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#consequences-of-what-we-have-learned">Consequences of what we have learned</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-value-and-final-value-theorem">Initial value and final value theorem</a></li>

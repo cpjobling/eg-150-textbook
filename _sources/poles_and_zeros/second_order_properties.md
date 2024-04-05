@@ -42,8 +42,9 @@ You can watch the video on YouTube here:
 ## Agenda
 
 * {ref}`unit.5.2.1`
-* {ref}`unit5.2.2`
+* {ref}`unit.5.2.2`
 * {ref}`unit.5.2.3`
+* {ref}`unit.5.2.4`
 * {ref}`examples16`
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -250,19 +251,18 @@ The MATLAB code to reproduce this result is given in [example8.mlx](matlab/examp
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(unit5.2.2)=
+(unit.5.2.2)=
 ## Natural frequency
 
 The locations of the poles in the $s$-plane determine the natural oscillation frequencies present in the system.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Consider a pole in the complex plane illustrated in {numref}`fig:unit5_2:1`
+Consider a pole in the complex plane illustrated in {numref}`fig:unit5.2:1`
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-:::{figure-md} fig:unit5_2:1
-
+:::{figure-md} fig:unit5.2:1
 <img src="pictures/complex_pole.png" alt="Phase  and magnitude  of pole  shown in the complex plane" width="50%" />           
 Phase  and magnitude  of pole  shown in the complex plane
 :::
@@ -386,7 +386,7 @@ Notice that the impulse response is a product of an exponential and sine functio
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(unit5.2.3)=
+(unit.5.2.3)=
 ## Step-response of a second-order system
 
 The step response of a system $H(s)$ is often computed. The step response $y_s(t)$ is determined by taking the inverse Laplace transform of
@@ -418,7 +418,7 @@ Then take the PFE of the terms assuming that the complex poles will yield terms:
 $$r_1\frac{s+\zeta\omega_n}{\left(s + \zeta\omega_n\right)^2 +  \left(\omega_n\sqrt{1 - \zeta^2}\right)^2} + r_2\frac{\omega_n\sqrt{1 - \zeta^2}}{\left(s + \zeta\omega_n\right)^2 + \left(\omega_n\sqrt{1 - \zeta^2}\right)^2}$$ (eq:unit5.1:10)
 
 Making the substitutions $\sigma = \zeta\omega_n$ and $\omega = \omega_n \sqrt{1 - \zeta^2}$ we can simplify
-{eq}`(eq:unit5.1:10)` to
+{eq}`eq:unit5.1:10` to
 
 $$r_1\frac{s+\sigma}{\left(s + \sigma\right)^2 +  \omega^2} + r_2\frac{\omega}{\left(s + \sigma\right)^2 + \omega^2}$$ (eq:unit5.1:11)
 The step-response terms will then be
@@ -544,13 +544,12 @@ The MATLAB code to reproduce this result is given in [example9.mlx](matlab/examp
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(unit5.2.4)=
+(unit.5.2.4)=
 ## Useful quantifiers that result from step response
 
 The relationship between the pole locations and the step response are summarized in {numref}`fig:unit5.2:2`[^unit5.1:note:4]
 
 :::{figure-md} fig:unit5.2:2
-
 <img src="pictures/resppole.png" alt="Relationship between poles and step response" width="100%" />
 
 Relationship between poles and step response

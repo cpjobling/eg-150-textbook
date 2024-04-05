@@ -270,7 +270,7 @@ Consider the parallel RLC citcuit shown in {numref}`fig:pz:4`.
 
 :::{figure-md} fig:pz:3
 
-<img src="pictures/example2.png" alt="Parallel RCL circuit: resistor R in parallel with inductor L and capacitor C. The supplied voltage is the voltage across the capacitor v and the current is the current flowing the the inductor." width="50%" />
+<img src="pictures/example2.png" alt="Parallel RCL circuit - resistor R in parallel with inductor L and capacitor C. The supplied voltage is the voltage across the capacitor v and the current is the current flowing the the inductor." width="50%" />
 
 Parallel RLC circuit (reproduced from page 6-8 of {cite}`boyd93`)
 :::

@@ -516,8 +516,9 @@ document.write(`
 <h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#unit-5-2-1"><span class="std std-ref">Quantitative behaviour of real poles</span></a></p></li>
-<li><p><a class="reference internal" href="#unit5-2-2"><span class="std std-ref">Natural frequency</span></a></p></li>
-<li><p><span class="xref std std-ref">unit.5.2.3</span></p></li>
+<li><p><a class="reference internal" href="#unit-5-2-2"><span class="std std-ref">Natural frequency</span></a></p></li>
+<li><p><a class="reference internal" href="#unit-5-2-3"><span class="std std-ref">Step-response of a second-order system</span></a></p></li>
+<li><p><a class="reference internal" href="#unit-5-2-4"><span class="std std-ref">Useful quantifiers that result from step response</span></a></p></li>
 <li><p><a class="reference internal" href="#examples16"><span class="std std-ref">Exercises 16</span></a></p></li>
 </ul>
 </section>
@@ -582,7 +583,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/bf4ad761dd8beb5eff94a82e9dd54ebe3b164931073f61fb0c88ed70975ef1d7.png" src="../_images/bf4ad761dd8beb5eff94a82e9dd54ebe3b164931073f61fb0c88ed70975ef1d7.png" />
+<img alt="../_images/f1ee7cbda870e41347ce446b1d324d6fc09963c1230f3eb33bcbba5410917845.png" src="../_images/f1ee7cbda870e41347ce446b1d324d6fc09963c1230f3eb33bcbba5410917845.png" />
 </div>
 </div>
 <p>Given that <span class="math notranslate nohighlight">\(\sigma = 0.1\)</span>, the doubling time <span class="math notranslate nohighlight">\(T \approx 0.7/\sigma = 7\)</span> s. The initial value is <span class="math notranslate nohighlight">\(10\)</span> at <span class="math notranslate nohighlight">\(t=0\)</span> s. It has doubled to <span class="math notranslate nohighlight">\(20\)</span> at <span class="math notranslate nohighlight">\(t\approx 7\)</span> s, and has doubled again to <span class="math notranslate nohighlight">\(40\)</span> at <span class="math notranslate nohighlight">\(t\approx 14\)</span>.</p>
@@ -659,7 +660,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6f220208ee6450d434110511c7ad99f1e44184a50a3ec70e65b590e2e13e79e1.png" src="../_images/6f220208ee6450d434110511c7ad99f1e44184a50a3ec70e65b590e2e13e79e1.png" />
+<img alt="../_images/46f0dae3582573f5230f17114b3158f8dbe9c72b03d2b4a34c6e3698b15cc082.png" src="../_images/46f0dae3582573f5230f17114b3158f8dbe9c72b03d2b4a34c6e3698b15cc082.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this result is given in <a class="reference download internal" download="" href="../_downloads/b2296fa173d1562d6258c6ffcbe8592d/example8.mlx"><span class="xref download myst">example8.mlx</span></a></p>
@@ -667,9 +668,9 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 </section>
 <section id="natural-frequency">
-<span id="unit5-2-2"></span><h2>Natural frequency<a class="headerlink" href="#natural-frequency" title="Permalink to this heading">#</a></h2>
+<span id="unit-5-2-2"></span><h2>Natural frequency<a class="headerlink" href="#natural-frequency" title="Permalink to this heading">#</a></h2>
 <p>The locations of the poles in the <span class="math notranslate nohighlight">\(s\)</span>-plane determine the natural oscillation frequencies present in the system.</p>
-<p>Consider a pole in the complex plane illustrated in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5_2:1</span></code></p>
+<p>Consider a pole in the complex plane illustrated in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5.2:1</span></code></p>
 <ul class="simple">
 <li><p>The natural (undamped) frequency (in rad/s) contributed by a pole <span class="math notranslate nohighlight">\(p\)</span> is the pole magnitude, <span class="math notranslate nohighlight">\(r=\left|p\right|\)</span>.</p></li>
 <li><p>The phase, <span class="math notranslate nohighlight">\(\phi=\arg p\)</span>, determines the relative strength of the oscillatory component.</p></li>
@@ -698,7 +699,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <p>As stated above, the natural frequency is defined as the magnitude of the pole. The magnitude is computed as :</p>
 <div class="math notranslate nohighlight">
 \[\sqrt{\mathbf{Re}^2 + \mathbf{Im}^2}\]</div>
-<p>Using the definitions illustrated in <a class="reference internal" href="qualitative_properties.html#fig-pz-3"><span class="std std-numref">Fig. 75</span></a>, <span class="math notranslate nohighlight">\(\mathbf{Re} = -\sigma = -\zeta\omega_n\)</span> and <span class="math notranslate nohighlight">\(\mathbf{Im} = \omega = \omega_n \sqrt{1 - \zeta^2}\)</span>, so :</p>
+<p>Using the definitions illustrated in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:pz:3</span></code>, <span class="math notranslate nohighlight">\(\mathbf{Re} = -\sigma = -\zeta\omega_n\)</span> and <span class="math notranslate nohighlight">\(\mathbf{Im} = \omega = \omega_n \sqrt{1 - \zeta^2}\)</span>, so :</p>
 <p>\begin{array}{rl} |p|
 &amp;= \sqrt{\sigma^2 + \omega^2} \
 &amp;= \sqrt{ (-\zeta \omega_n)^2 + ( \pm \omega_n \sqrt{1-\zeta^2})^2 } \
@@ -753,7 +754,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 </section>
 <section id="step-response-of-a-second-order-system">
-<span id="unit5-2-3"></span><h2>Step-response of a second-order system<a class="headerlink" href="#step-response-of-a-second-order-system" title="Permalink to this heading">#</a></h2>
+<span id="unit-5-2-3"></span><h2>Step-response of a second-order system<a class="headerlink" href="#step-response-of-a-second-order-system" title="Permalink to this heading">#</a></h2>
 <p>The step response of a system <span class="math notranslate nohighlight">\(H(s)\)</span> is often computed. The step response <span class="math notranslate nohighlight">\(y_s(t)\)</span> is determined by taking the inverse Laplace transform of</p>
 <div class="math notranslate nohighlight">
 \[Y(s) = \frac{1}{s} \left(\frac{ \omega_n^2 }{s^2 + 2 \zeta \omega_n s  + \omega_n^2}\right)\]</div>
@@ -774,7 +775,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <div class="math notranslate nohighlight" id="equation-eq-unit5-1-10">
 <span class="eqno">(62)<a class="headerlink" href="#equation-eq-unit5-1-10" title="Permalink to this equation">#</a></span>\[r_1\frac{s+\zeta\omega_n}{\left(s + \zeta\omega_n\right)^2 +  \left(\omega_n\sqrt{1 - \zeta^2}\right)^2} + r_2\frac{\omega_n\sqrt{1 - \zeta^2}}{\left(s + \zeta\omega_n\right)^2 + \left(\omega_n\sqrt{1 - \zeta^2}\right)^2}\]</div>
 <p>Making the substitutions <span class="math notranslate nohighlight">\(\sigma = \zeta\omega_n\)</span> and <span class="math notranslate nohighlight">\(\omega = \omega_n \sqrt{1 - \zeta^2}\)</span> we can simplify
-<code class="xref eq docutils literal notranslate"><span class="pre">(eq:unit5.1:10)</span></code> to</p>
+<a class="reference internal" href="#equation-eq-unit5-1-10">(62)</a> to</p>
 <div class="math notranslate nohighlight" id="equation-eq-unit5-1-11">
 <span class="eqno">(63)<a class="headerlink" href="#equation-eq-unit5-1-11" title="Permalink to this equation">#</a></span>\[r_1\frac{s+\sigma}{\left(s + \sigma\right)^2 +  \omega^2} + r_2\frac{\omega}{\left(s + \sigma\right)^2 + \omega^2}\]</div>
 <p>The step-response terms will then be</p>
@@ -822,7 +823,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/66ef9ea1d9f87cec5cb7645320fc7c2df6b9cf49df93ca3f95a54ccf4f4281cc.png" src="../_images/66ef9ea1d9f87cec5cb7645320fc7c2df6b9cf49df93ca3f95a54ccf4f4281cc.png" />
+<img alt="../_images/5e15a3ad1d32c176462e489c18d1226be5ee52c3198b950895290869a5fafbe5.png" src="../_images/5e15a3ad1d32c176462e489c18d1226be5ee52c3198b950895290869a5fafbe5.png" />
 </div>
 </div>
 <p>Confirming the result with <a class="reference internal" href="#equation-eq-unit5-1-2">(61)</a> we get:</p>
@@ -847,7 +848,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7f41d4116b0c43962349e795d5d1f29d3924ada70cd864f1ce37b61dcad819f4.png" src="../_images/7f41d4116b0c43962349e795d5d1f29d3924ada70cd864f1ce37b61dcad819f4.png" />
+<img alt="../_images/e5572a7d712d9fc3212703bc0215ba0e0c7576b0d6ae125bed482b390617c412.png" src="../_images/e5572a7d712d9fc3212703bc0215ba0e0c7576b0d6ae125bed482b390617c412.png" />
 </div>
 </div>
 <p>Using the <code class="docutils literal notranslate"><span class="pre">tf</span></code> and <code class="docutils literal notranslate"><span class="pre">step</span></code> functions we get:</p>
@@ -889,19 +890,19 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/fcbf57c15b9ba8268fa8f887c19ffd7d21753bbe6ac599398468c1783f4e9d6f.png" src="../_images/fcbf57c15b9ba8268fa8f887c19ffd7d21753bbe6ac599398468c1783f4e9d6f.png" />
+<img alt="../_images/a2f0dfc4ea0aedbcf9f6153cd5fb57956c547e6d600bc5fee7367452f7548b39.png" src="../_images/a2f0dfc4ea0aedbcf9f6153cd5fb57956c547e6d600bc5fee7367452f7548b39.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this result is given in <a class="reference download internal" download="" href="../_downloads/3ba053ad62f7b263884af00ba1ace7eb/example9.mlx"><span class="xref download myst">example9.mlx</span></a></p>
 </section>
 </section>
 <section id="useful-quantifiers-that-result-from-step-response">
-<span id="unit5-2-4"></span><h2>Useful quantifiers that result from step response<a class="headerlink" href="#useful-quantifiers-that-result-from-step-response" title="Permalink to this heading">#</a></h2>
+<span id="unit-5-2-4"></span><h2>Useful quantifiers that result from step response<a class="headerlink" href="#useful-quantifiers-that-result-from-step-response" title="Permalink to this heading">#</a></h2>
 <p>The relationship between the pole locations and the step response are summarized in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5.2:2</span></code><a class="footnote-reference brackets" href="#unit5-1-note-4" id="id6">3</a></p>
 <figure class="align-default" id="fig-unit5-2-2">
 <a class="reference internal image-reference" href="../_images/resppole.png"><img alt="Relationship between poles and step response" src="../_images/resppole.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 77 </span><span class="caption-text">Relationship between poles and step response</span><a class="headerlink" href="#fig-unit5-2-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 78 </span><span class="caption-text">Relationship between poles and step response</span><a class="headerlink" href="#fig-unit5-2-2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Knowledge of the location of the poles and their damping ratio and natural frequency are useful for qualtitaive anaysis of the response of a complex pole pair. There are also a number of parameters that quantively define the features of the step response which we may be interested in. These are shown in the right-hand picture of <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5.2:2</span></code>. Knowledge of the poles allows us to predict the step response. But also, usefully for many design problems, knowledge of the step response allows us to predict the location of the poles.</p>
@@ -1050,7 +1051,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <figure class="align-default" id="id7">
 <a class="reference internal image-reference" href="../_images/trcurve.png"><img alt="Damping ratio as a function of normalised rise-time for a second-order underdamped response" src="../_images/trcurve.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 78 </span><span class="caption-text">Damping ratio as a function of normalised rise-time for a second-order underdamped response</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 79 </span><span class="caption-text">Damping ratio as a function of normalised rise-time for a second-order underdamped response</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For the problem being considered <span class="math notranslate nohighlight">\(\zeta = 0.5\)</span>, so <span class="math notranslate nohighlight">\(\omega_n T_r \approx 1.65\)</span> giving</p>
@@ -1063,7 +1064,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/74af1a302c84b053946c0d43c4d577ecd39855bde90eb57814060d7b7baf9518.png" src="../_images/74af1a302c84b053946c0d43c4d577ecd39855bde90eb57814060d7b7baf9518.png" />
+<img alt="../_images/23f8867479f10e49ec07967fb10bf25be83a21d3b45130b65db5e681620bda32.png" src="../_images/23f8867479f10e49ec07967fb10bf25be83a21d3b45130b65db5e681620bda32.png" />
 </div>
 </div>
 </section>
@@ -1109,7 +1110,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
          PeakTime: 0.3592
 </pre></div>
 </div>
-<img alt="../_images/84c7e8f5960e33394000e43873f875c8d84ab6dd3aac7fa860c394c4abbb568f.png" src="../_images/84c7e8f5960e33394000e43873f875c8d84ab6dd3aac7fa860c394c4abbb568f.png" />
+<img alt="../_images/c250957cb60d365a57fb1d113c8dd0db1b13225d3d2c41a2f87526a4a0309ebf.png" src="../_images/c250957cb60d365a57fb1d113c8dd0db1b13225d3d2c41a2f87526a4a0309ebf.png" />
 </div>
 </div>
 <p>The value looks about right!</p>
@@ -1143,7 +1144,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/31a78a078e5a6c3c5b82a51cc9117e5fc810158b201957e8376190d8c032664e.png" src="../_images/31a78a078e5a6c3c5b82a51cc9117e5fc810158b201957e8376190d8c032664e.png" />
+<img alt="../_images/481a7f3904b70c845b251a6d68717a7099f1ede82a1d4c8083ce6c731905b559.png" src="../_images/481a7f3904b70c845b251a6d68717a7099f1ede82a1d4c8083ce6c731905b559.png" />
 </div>
 </div>
 <p>Reverse formula check</p>
@@ -1187,7 +1188,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e7780f98eca5f7a22684fa17e268338eed349b129477cc01f7d02c0083d15dfc.png" src="../_images/e7780f98eca5f7a22684fa17e268338eed349b129477cc01f7d02c0083d15dfc.png" />
+<img alt="../_images/2413f88a4eb09b249de8777310f3eb8b2939adbeb6d241b55051f96dc32bf2ce.png" src="../_images/2413f88a4eb09b249de8777310f3eb8b2939adbeb6d241b55051f96dc32bf2ce.png" />
 </div>
 </div>
 </section>
@@ -1266,9 +1267,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s (s+1) (s+3) (s^2 - 2s + 2) (s^2 + 4s + 8)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
@@ -1315,7 +1314,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d683fcae4537c6b52d75face0470cee41b5d1fe51ab83c4e4677b1530d28c089.png" src="../_images/d683fcae4537c6b52d75face0470cee41b5d1fe51ab83c4e4677b1530d28c089.png" />
+<img alt="../_images/00e65864de7d907740009a99db0b8f757a018e01291890e735ee0df1b1f2719d.png" src="../_images/00e65864de7d907740009a99db0b8f757a018e01291890e735ee0df1b1f2719d.png" />
 </div>
 </div>
 <p><strong>Bonus</strong>: the step response is</p>
@@ -1326,18 +1325,18 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0c77205dcf728bdfaa580f6c3791e3a4f4b29647c817fe6f45a67a03fd519f34.png" src="../_images/0c77205dcf728bdfaa580f6c3791e3a4f4b29647c817fe6f45a67a03fd519f34.png" />
+<img alt="../_images/00c92fb8ace84b4af34c00f34f54a775972cdb3277ba7a6a5673930b713a805e.png" src="../_images/00c92fb8ace84b4af34c00f34f54a775972cdb3277ba7a6a5673930b713a805e.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="exercise-16-3-spring-mass-damper-system">
 <span id="ex16-3"></span><h3>Exercise 16.3: Spring-Mass-Damper System<a class="headerlink" href="#exercise-16-3-spring-mass-damper-system" title="Permalink to this heading">#</a></h3>
-<p>You can analyze a mass-spring-damper system (<a class="reference internal" href="#fig-unit5-2-3"><span class="std std-numref">Fig. 79</span></a>) by looking at the poles of its transfer function.</p>
+<p>You can analyze a mass-spring-damper system (<a class="reference internal" href="#fig-unit5-2-3"><span class="std std-numref">Fig. 80</span></a>) by looking at the poles of its transfer function.</p>
 <figure class="align-default" id="fig-unit5-2-3">
 <a class="reference internal image-reference" href="../_images/smd.png"><img alt="Diagram of a spring-mass-damper system" src="../_images/smd.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 79 </span><span class="caption-text">Diagram of a spring-mass-damper system</span><a class="headerlink" href="#fig-unit5-2-3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 80 </span><span class="caption-text">Diagram of a spring-mass-damper system</span><a class="headerlink" href="#fig-unit5-2-3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Consider a mass-spring-damper that</p>
