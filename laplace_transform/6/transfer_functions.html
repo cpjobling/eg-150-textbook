@@ -514,11 +514,11 @@ document.write(`
 <p>The laplace transform <span class="math notranslate nohighlight">\(H(s)\)</span> of <span class="math notranslate nohighlight">\(h(t)\)</span> is called the <em>transfer function</em> (or <em>system function</em>) of the system.</p>
 <p>By <a class="reference internal" href="#equation-eq-337">(33)</a>, the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> can also be defined as the ratio of the Laplace transforms of the output <span class="math notranslate nohighlight">\(y(t)\)</span> and the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
 <p>The transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> completely characterizes the system because the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> completely characterizes the system.</p>
-<p><a class="reference internal" href="#fig-3-7"><span class="std std-numref">Fig. 64</span></a> illustrates the relationship of Equations <a href="#id2"><span class="problematic" id="id3">eq:335</span></a> and <a href="#id4"><span class="problematic" id="id5">eq:336</span></a>.</p>
+<p><a class="reference internal" href="#fig-3-7"><span class="std std-numref">Fig. 65</span></a> illustrates the relationship of Equations <a href="#id2"><span class="problematic" id="id3">eq:335</span></a> and <a href="#id4"><span class="problematic" id="id5">eq:336</span></a>.</p>
 <figure class="align-default" id="fig-3-7">
 <a class="reference internal image-reference" href="../../_images/system_function.png"><img alt="Impulse response and system function." src="../../_images/system_function.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 64 </span><span class="caption-text">Impulse response and system function</span><a class="headerlink" href="#fig-3-7" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 65 </span><span class="caption-text">Impulse response and system function</span><a class="headerlink" href="#fig-3-7" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -580,30 +580,30 @@ document.write(`
 </section>
 <section id="block-diagrams-for-systems-interconnection">
 <span id="block-diagrams"></span><h2>Block diagrams for Systems Interconnection<a class="headerlink" href="#block-diagrams-for-systems-interconnection" title="Permalink to this heading">#</a></h2>
-<p>For two LTI systems (with <span class="math notranslate nohighlight">\(h_1(t)\)</span> and <span class="math notranslate nohighlight">\(h_2(t)\)</span>, respectively) in cascade (<a class="reference internal" href="#fig-3-8"><span class="std std-numref">Fig. 65</span></a>(a)), the overall impulse response is given</p>
+<p>For two LTI systems (with <span class="math notranslate nohighlight">\(h_1(t)\)</span> and <span class="math notranslate nohighlight">\(h_2(t)\)</span>, respectively) in cascade (<a class="reference internal" href="#fig-3-8"><span class="std std-numref">Fig. 66</span></a>(a)), the overall impulse response is given</p>
 <div class="math notranslate nohighlight">
 \[h(t) = h_1(t) * h_2(t)\]</div>
 <p>Thus, the corresponding transfer functions are related by the product</p>
 <div class="math notranslate nohighlight" id="equation-eq-3412">
 <span class="eqno">(38)<a class="headerlink" href="#equation-eq-3412" title="Permalink to this equation">#</a></span>\[H(s) = H_1(s)H_2(s)\]</div>
-<p>This relationship is illustrated in <a class="reference internal" href="#fig-3-8"><span class="std std-numref">Fig. 65</span></a>(b)</p>
+<p>This relationship is illustrated in <a class="reference internal" href="#fig-3-8"><span class="std std-numref">Fig. 66</span></a>(b)</p>
 <figure class="align-default" id="fig-3-8">
 <a class="reference internal image-reference" href="../../_images/bd1.png"><img alt="Two systems in cascade (a) Time-domain representation; (b) s-domain presentation." src="../../_images/bd1.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 65 </span><span class="caption-text">Two systems in cascade (a) Time-domain representation; (b) s-domain representation.</span><a class="headerlink" href="#fig-3-8" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 66 </span><span class="caption-text">Two systems in cascade (a) Time-domain representation; (b) s-domain representation.</span><a class="headerlink" href="#fig-3-8" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Similarly, the impulse response of a parallel combination of two LTI systems (<a class="reference internal" href="#fig-3-9"><span class="std std-numref">Fig. 66</span></a>(a)) is given by</p>
+<p>Similarly, the impulse response of a parallel combination of two LTI systems (<a class="reference internal" href="#fig-3-9"><span class="std std-numref">Fig. 67</span></a>(a)) is given by</p>
 <div class="math notranslate nohighlight">
 \[h(t) = h_1(t) + h_2(t)\]</div>
 <p>Thus,</p>
 <div class="math notranslate nohighlight" id="equation-eq-342">
 <span class="eqno">(39)<a class="headerlink" href="#equation-eq-342" title="Permalink to this equation">#</a></span>\[H(s) = H_1(s) + H_2(s)\]</div>
-<p>This relationship is illustrated in <a class="reference internal" href="#fig-3-9"><span class="std std-numref">Fig. 66</span></a>(b).</p>
+<p>This relationship is illustrated in <a class="reference internal" href="#fig-3-9"><span class="std std-numref">Fig. 67</span></a>(b).</p>
 <figure class="align-default" id="fig-3-9">
 <a class="reference internal image-reference" href="../../_images/bd2.png"><img alt="Two systems in parallel. (a) Time-domain representation; (b) s-domain representation." src="../../_images/bd2.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 66 </span><span class="caption-text">Two systems in parallel. (a) Time-domain representation; (b) s-domain representation.</span><a class="headerlink" href="#fig-3-9" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 67 </span><span class="caption-text">Two systems in parallel. (a) Time-domain representation; (b) s-domain representation.</span><a class="headerlink" href="#fig-3-9" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -611,7 +611,7 @@ document.write(`
 <span id="examples13"></span><h2>Examples 13: Transfer functions<a class="headerlink" href="#examples-13-transfer-functions" title="Permalink to this heading">#</a></h2>
 <section id="example-13-1">
 <span id="ex-13-1"></span><h3>Example 13.1<a class="headerlink" href="#example-13-1" title="Permalink to this heading">#</a></h3>
-<p>Find the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> and the impulse reponse <span class="math notranslate nohighlight">\(h(t)\)</span> of the RC circuit in <a class="reference internal" href="../../signals_and_systems/systems/index.html#fig-rc-circuit"><span class="std std-numref">Fig. 30</span></a> (<a class="reference internal" href="../../signals_and_systems/systems/index.html#ex4-1"><span class="std std-ref">Example 4.1: RC Circuit</span></a>).</p>
+<p>Find the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> and the impulse reponse <span class="math notranslate nohighlight">\(h(t)\)</span> of the RC circuit in <a class="reference internal" href="../../signals_and_systems/systems/index.html#fig-rc-circuit"><span class="std std-numref">Fig. 31</span></a> (<a class="reference internal" href="../../signals_and_systems/systems/index.html#ex4-1"><span class="std std-ref">Example 4.1: RC Circuit</span></a>).</p>
 <p>For the answer, refer to the lecture recording or see solved problem 3.23 in in <span id="id6">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="example-13-2">
@@ -652,11 +652,11 @@ document.write(`
 </section>
 <section id="example-13-8">
 <span id="ex-13-8"></span><h3>Example 13.8<a class="headerlink" href="#example-13-8" title="Permalink to this heading">#</a></h3>
-<p>The feedback interconnection of two causal subsytems with transfer functions <span class="math notranslate nohighlight">\(F(s)\)</span> and <span class="math notranslate nohighlight">\(G(s)\)</span> is shown in <a class="reference internal" href="#fig-ex13-8"><span class="std std-numref">Fig. 67</span></a>. Find the overall system function <span class="math notranslate nohighlight">\(H(s)\)</span> for this feedback system.</p>
+<p>The feedback interconnection of two causal subsytems with transfer functions <span class="math notranslate nohighlight">\(F(s)\)</span> and <span class="math notranslate nohighlight">\(G(s)\)</span> is shown in <a class="reference internal" href="#fig-ex13-8"><span class="std std-numref">Fig. 68</span></a>. Find the overall system function <span class="math notranslate nohighlight">\(H(s)\)</span> for this feedback system.</p>
 <figure class="align-default" id="fig-ex13-8">
 <a class="reference internal image-reference" href="../../_images/figex13_8.png"><img alt="Feedback system" src="../../_images/figex13_8.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 67 </span><span class="caption-text">Feedback system</span><a class="headerlink" href="#fig-ex13-8" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 68 </span><span class="caption-text">Feedback system</span><a class="headerlink" href="#fig-ex13-8" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For the answer, refer to the lecture recording or see solved problem 3.31 in in <span id="id13">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
@@ -687,7 +687,7 @@ document.write(`
 <h3>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h3>
 <section id="transfer-function">
 <h4>Transfer function<a class="headerlink" href="#transfer-function" title="Permalink to this heading">#</a></h4>
-<p>The summary of the time-domain and s-domain transforms are illustrated in <a class="reference internal" href="#fig-3-7"><span class="std std-numref">Fig. 64</span></a>. The key result is <span class="math notranslate nohighlight">\(Y(s) = H(s)X(s)\)</span> which simplifies the computation of the system response <span class="math notranslate nohighlight">\(y(t) = h(t)*x(t)\)</span> which has to be done using time-convolution.</p>
+<p>The summary of the time-domain and s-domain transforms are illustrated in <a class="reference internal" href="#fig-3-7"><span class="std std-numref">Fig. 65</span></a>. The key result is <span class="math notranslate nohighlight">\(Y(s) = H(s)X(s)\)</span> which simplifies the computation of the system response <span class="math notranslate nohighlight">\(y(t) = h(t)*x(t)\)</span> which has to be done using time-convolution.</p>
 <p>If we know <span class="math notranslate nohighlight">\(Y(s)\)</span> and <span class="math notranslate nohighlight">\(X(s)\)</span> we can determine <span class="math notranslate nohighlight">\(H(s)\)</span> using</p>
 <div class="math notranslate nohighlight">
 \[H(s) = \frac{Y(s)}{X(s)}\]</div>
@@ -710,7 +710,7 @@ document.write(`
 </section>
 <section id="id17">
 <h4>Block diagrams<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h4>
-<p>Complex systems can be broken down into subsystems which may be represented by block diagrams which have either series or parallel connections (see <a class="reference internal" href="#fig-3-8"><span class="std std-numref">Fig. 65</span></a> and <a class="reference internal" href="#fig-3-9"><span class="std std-numref">Fig. 66</span></a> and feedback (See <a class="reference internal" href="#ex-13-8"><span class="std std-ref">Example 13.8</span></a>)</p>
+<p>Complex systems can be broken down into subsystems which may be represented by block diagrams which have either series or parallel connections (see <a class="reference internal" href="#fig-3-8"><span class="std std-numref">Fig. 66</span></a> and <a class="reference internal" href="#fig-3-9"><span class="std std-numref">Fig. 67</span></a> and feedback (See <a class="reference internal" href="#ex-13-8"><span class="std std-ref">Example 13.8</span></a>)</p>
 </section>
 </section>
 <section id="still-to-come">

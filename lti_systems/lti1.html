@@ -564,11 +564,11 @@ document.write(`
 <p>is commonly called the <em>convolution integral</em>.</p>
 <p>Thus we have the fundamental result that:</p>
 <p><em>the output of any continuous-time LTI system is the convolution of the input <span class="math notranslate nohighlight">\(x(t)\)</span> with the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system</em>.</p>
-<p><a class="reference internal" href="#fig-ct-lti-system"><span class="std std-numref">Fig. 33</span></a> illustrates the definition of the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> and the convolution integral.</p>
+<p><a class="reference internal" href="#fig-ct-lti-system"><span class="std std-numref">Fig. 34</span></a> illustrates the definition of the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> and the convolution integral.</p>
 <figure class="align-default" id="fig-ct-lti-system">
 <a class="reference internal image-reference" href="../_images/ct_lti_system.png"><img alt="Continuous-time LTI system" src="../_images/ct_lti_system.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 33 </span><span class="caption-text">Continuous-time LTI system</span><a class="headerlink" href="#fig-ct-lti-system" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Continuous-time LTI system</span><a class="headerlink" href="#fig-ct-lti-system" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -740,7 +740,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/38309c0e4ff2fea580895944bb538efdb77fc6ab52906e7c678e806ab7d43940.png" src="../_images/38309c0e4ff2fea580895944bb538efdb77fc6ab52906e7c678e806ab7d43940.png" />
+<img alt="../_images/dd5053bf0724df96792b8d1a2366a8e78b0c4ea6e584eb24c07a7d4858903db8.png" src="../_images/dd5053bf0724df96792b8d1a2366a8e78b0c4ea6e584eb24c07a7d4858903db8.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the MATLAB function <code class="docutils literal notranslate"><span class="pre">int</span></code> to compute the convolution integral symbolically.</p>
@@ -755,9 +755,7 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-(2*exp(-(alpha*t)/2)*(exp(-(alpha*t)/2)/2 - exp((alpha*t)/2)/2)*(sign(t)/2 + 1/2))/alpha
@@ -781,16 +779,16 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ya(t) =
+ 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
- 
-</pre></div>
-</div>
-<img alt="../_images/b3390d714bae039b54c8ecdeb40f0aaa607ddf236e3f9cd297759b2e331affea.png" src="../_images/b3390d714bae039b54c8ecdeb40f0aaa607ddf236e3f9cd297759b2e331affea.png" />
+<img alt="../_images/9574b61bca05b54f92c0fee14cafad7227b8bd702456ea5806cbc4e4256c3445.png" src="../_images/9574b61bca05b54f92c0fee14cafad7227b8bd702456ea5806cbc4e4256c3445.png" />
 </div>
 </div>
 </section>
@@ -815,7 +813,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4fbb083de8d7f73b06e0d55c11c9cc7308b1e504b611904dccd0567868f27265.png" src="../_images/4fbb083de8d7f73b06e0d55c11c9cc7308b1e504b611904dccd0567868f27265.png" />
+<img alt="../_images/9e120f5b02aad0cb252e3225f64583728fa1c2ae488f6bece3c13bcafd457db1.png" src="../_images/9e120f5b02aad0cb252e3225f64583728fa1c2ae488f6bece3c13bcafd457db1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -829,9 +827,7 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-(2*exp(-(alpha*t)/2)*(exp(-(alpha*t)/2)/2 - exp((alpha*t)/2)/2)*(sign(t)/2 + 1/2))/alpha
@@ -864,7 +860,7 @@ In convolutiondemo (line 44)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
-<img alt="../_images/9da160a782e531246949dd1bd7c4f1115bf214c9640a13e9dd5c83cafa4e880f.png" src="../_images/9da160a782e531246949dd1bd7c4f1115bf214c9640a13e9dd5c83cafa4e880f.png" />
+<img alt="../_images/7a4b069d3084efd2c4ff73c946d1244ebbfd11b68257e8b8a4eed00161b26da9.png" src="../_images/7a4b069d3084efd2c4ff73c946d1244ebbfd11b68257e8b8a4eed00161b26da9.png" />
 </div>
 </div>
 <p>Go back to <a class="reference internal" href="#step-response"><span class="std std-ref">F. Step Response</span></a></p>
@@ -901,7 +897,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c64253985a1cf012ce3e4f7b77b207dd1c7e4f53f4c98520ebe18357a89326a7.png" src="../_images/c64253985a1cf012ce3e4f7b77b207dd1c7e4f53f4c98520ebe18357a89326a7.png" />
+<img alt="../_images/6c66a76b0f419a45e024305d5b33f02733ab093634f412db36ebac8b3212c898.png" src="../_images/6c66a76b0f419a45e024305d5b33f02733ab093634f412db36ebac8b3212c898.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the convolution integral</p>
@@ -935,7 +931,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/17bec77ae29414c331bc44628c027f6c1ad8f5e8ed80a8efffde5eebcc032680.png" src="../_images/17bec77ae29414c331bc44628c027f6c1ad8f5e8ed80a8efffde5eebcc032680.png" />
+<img alt="../_images/654b739d52b7be5e612209e63b887324ae6f41949dac81581f6d98265891da6d.png" src="../_images/654b739d52b7be5e612209e63b887324ae6f41949dac81581f6d98265891da6d.png" />
 </div>
 </div>
 </section>
@@ -943,11 +939,11 @@ In convolutiondemo (line 44)
 </section>
 <section id="example-5-6">
 <span id="ex5-6"></span><h3>Example 5.6<a class="headerlink" href="#example-5-6" title="Permalink to this heading">#</a></h3>
-<p>Evaluate <span class="math notranslate nohighlight">\(y(t) = x(t) * h(t)\)</span>, where <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(h(t)\)</span> are shown in <a class="reference internal" href="#fig-ex-5-6"><span class="std std-numref">Fig. 34</span></a>, by an alalytical technique, and (b) by a graphical method.</p>
+<p>Evaluate <span class="math notranslate nohighlight">\(y(t) = x(t) * h(t)\)</span>, where <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(h(t)\)</span> are shown in <a class="reference internal" href="#fig-ex-5-6"><span class="std std-numref">Fig. 35</span></a>, by an alalytical technique, and (b) by a graphical method.</p>
 <figure class="align-default" id="fig-ex-5-6">
 <a class="reference internal image-reference" href="../_images/ex5_6.png"><img alt="Signal and system for example 5.6" src="../_images/ex5_6.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Signal and system for example 5.6</span><a class="headerlink" href="#fig-ex-5-6" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Signal and system for example 5.6</span><a class="headerlink" href="#fig-ex-5-6" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="id14">
@@ -972,7 +968,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1ef0d34ccdc36a5f861ad13984822e5f9231f5e4a28308ed8e6f3036430f69cf.png" src="../_images/1ef0d34ccdc36a5f861ad13984822e5f9231f5e4a28308ed8e6f3036430f69cf.png" />
+<img alt="../_images/07bb0672f23bcf5e425134aa5b4f8716efa55b0d934d4ea70e228e02b4fe043a.png" src="../_images/07bb0672f23bcf5e425134aa5b4f8716efa55b0d934d4ea70e228e02b4fe043a.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span></p>
@@ -987,7 +983,9 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
- 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>heaviside(t - 5)*(t - 5) - heaviside(t - 3)*(t - 3) - heaviside(t - 2)*(t - 2) + t*heaviside(t)
@@ -1006,7 +1004,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/86629040411a9c447457da4ec3f9806f3e86396b57c3a4a027ba0f09e813756c.png" src="../_images/86629040411a9c447457da4ec3f9806f3e86396b57c3a4a027ba0f09e813756c.png" />
+<img alt="../_images/1862a82cba369b390df7d7f5a9a1d872a56ffc90fd5bb2e5d5f68dfde72658c9.png" src="../_images/1862a82cba369b390df7d7f5a9a1d872a56ffc90fd5bb2e5d5f68dfde72658c9.png" />
 </div>
 </div>
 </section>

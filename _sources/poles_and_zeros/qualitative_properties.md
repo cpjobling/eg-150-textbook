@@ -208,6 +208,7 @@ $$F(s) =\frac{2\mathbf{Re}\left(r\right)s-2\mathbf{Re}\left(r\lambda\right)}{s^2
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 which resolves to
+
 $$f(t) = ae^{\sigma t}\cos\left(\omega t + \phi\right)$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
@@ -228,9 +229,9 @@ $$Q = \frac{1}{2} \sqrt{\frac{\sigma^2 + \omega^2}{\sigma^2}} = \frac{1}{2\zeta}
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-The damping ratio (or $Q$) is related to the $angle$ of the pole in the complex plane as shown in {numref}`fig:pz:3`:
+The damping ratio (or $Q$) is related to the $angle$ of the pole in the complex plane as shown in {numref}`fig:pz:2`:
 
-:::{figure-md} fig:pz:3
+:::{figure-md} fig:pz:2
 
 <img src="pictures/fig3.png" alt="The damping ratio is related the the angle of the pole in the complex plane" width="50%" />
 
@@ -266,7 +267,7 @@ The oscillation is
 (pz:example2)=
 ### Example 2: parallel RLC circuit
 
-Consider the parallel RLC citcuit shown in {numref}`fig:pz:4`.
+Consider the parallel RLC citcuit shown in {numref}`fig:pz:3`.
 
 :::{figure-md} fig:pz:3
 
