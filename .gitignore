@@ -132,3 +132,6 @@ fourier_transform/1/ft1.slides.html
 slproj
 *.slxc
 
+log
+warnings
+

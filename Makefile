@@ -24,17 +24,16 @@ rebuild:
 	make build
 
 clean:
-	# find  . -name zbib.ipynb -exec rm {} \;
-	# find ./FAQS -name '*.ipynb' -exec rm {} \;
-	# find ./setup -name '*.ipynb' -exec rm {} \;
-	# find ./introduction -name '*.ipynb' -exec rm {} \;
-	# find ./signals_and_systems -name '*.ipynb' -exec rm {} \;
-	# find ./lti_systems -name '*.ipynb' -exec rm {} \;
+	find  . -name zbib.ipynb -exec rm {} \;
+	find ./setup -name '*.ipynb' -exec rm {} \;
+	find ./introduction -name '*.ipynb' -exec rm {} \;
+	find ./signals_and_systems -name '*.ipynb' -exec rm {} \;
+	find ./lti_systems -name '*.ipynb' -exec rm {} \;
 	# find ./labs -name '*.ipynb' -exec rm {} \;
-	# find ./fourier_series -name '*.ipynb' -exec rm {} \;
+	find ./poles_and_zeros -name '*.ipynb' -exec rm {} \;
 	# find ./homework -name '*.ipynb' -exec rm {} \;
 	# find ./worksheets -name '*.ipynb' -exec rm {} \;
-	# find ./laplace_transform -name '*.ipynb' -exec rm {} \;
+	find ./laplace_transform -name '*.ipynb' -exec rm {} \;
 	jupyter-book clean .
 
 build:  

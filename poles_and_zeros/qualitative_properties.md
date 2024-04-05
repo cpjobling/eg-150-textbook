@@ -208,6 +208,7 @@ $$F(s) =\frac{2\mathbf{Re}\left(r\right)s-2\mathbf{Re}\left(r\lambda\right)}{s^2
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 which resolves to
+
 $$f(t) = ae^{\sigma t}\cos\left(\omega t + \phi\right)$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
@@ -228,9 +229,9 @@ $$Q = \frac{1}{2} \sqrt{\frac{\sigma^2 + \omega^2}{\sigma^2}} = \frac{1}{2\zeta}
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-The damping ratio (or $Q$) is related to the $angle$ of the pole in the complex plane as shown in {numref}`fig:pz:3`:
+The damping ratio (or $Q$) is related to the $angle$ of the pole in the complex plane as shown in {numref}`fig:pz:2`:
 
-:::{figure-md} fig:pz:3
+:::{figure-md} fig:pz:2
 
 <img src="pictures/fig3.png" alt="The damping ratio is related the the angle of the pole in the complex plane" width="50%" />
 
@@ -266,11 +267,11 @@ The oscillation is
 (pz:example2)=
 ### Example 2: parallel RLC circuit
 
-Consider the parallel RLC citcuit shown in {numref}`fig:pz:4`.
+Consider the parallel RLC citcuit shown in {numref}`fig:pz:3`.
 
 :::{figure-md} fig:pz:3
 
-<img src="pictures/example2.png" alt="Parallel RCL circuit: resistor R in parallel with inductor L and capacitor C. The supplied voltage is the voltage across the capacitor v and the current is the current flowing the the inductor." width="50%" />
+<img src="pictures/example2.png" alt="Parallel RCL circuit - resistor R in parallel with inductor L and capacitor C. The supplied voltage is the voltage across the capacitor v and the current is the current flowing the the inductor." width="50%" />
 
 Parallel RLC circuit (reproduced from page 6-8 of {cite}`boyd93`)
 :::
@@ -756,7 +757,7 @@ We also stated that $N_{4\%}\approx Q$ s.
 
 #### Dominant poles
 
-The dominant poles of a system are those which have the largest real part $\sigma$. The response term associated with this pole (or pole pair) will eventually come to dominate the overall response $f(t)$. 
+The dominant poles of a system are those which have the largest real part $\sigma$. The response term associated with this pole (or pole pair) will eventually come to dominate the overall response $f(t)$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -801,3 +802,7 @@ We will build on these ideas in **EG-247 Digital Signal Processing** and you wil
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## Footnotes
+
+```{code-cell}
+
+```
