@@ -456,9 +456,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-response">Natural response</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-response-of-a-second-order-system">Step-response of a second-order system</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-9">Example 9</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-9">Solution to example 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-response-of-a-second-order-system">Step-response of a second-order system</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-9">Example 9</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-9">Solution to example 9</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-quantifiers-that-result-from-step-response">Useful quantifiers that result from step response</a><ul class="nav section-nav flex-column">
@@ -799,12 +801,11 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 \[r_1 e^{-\sigma t}\sin(\omega t) + r_2 e^{-\sigma t}\cos(\omega t)\]</div>
 <p>Having computed the residues <span class="math notranslate nohighlight">\(r_1\)</span> and <span class="math notranslate nohighlight">\(r_2\)</span> the sine and cosine terms can be combined to give the final <span class="math notranslate nohighlight">\(e^{-\sigma t}\cos(\omega t + \phi)\)</span> expression.</p>
 </div>
-</section>
 <section id="example-9">
-<span id="ex-unit5-2-9"></span><h2>Example 9<a class="headerlink" href="#example-9" title="Permalink to this heading">#</a></h2>
+<span id="ex-unit5-2-9"></span><h3>Example 9<a class="headerlink" href="#example-9" title="Permalink to this heading">#</a></h3>
 <p>Determine the step response for a second order system with <span class="math notranslate nohighlight">\(\omega_n = 10\)</span> rad/s and <span class="math notranslate nohighlight">\(\zeta = 0.5\)</span>. Confirm your result using <a class="reference internal" href="#equation-eq-unit5-1-2">(61)</a> and the <a class="reference external" href="https://uk.mathworks.com/help/control/ref/tf.html"><code class="docutils literal notranslate"><span class="pre">tf</span></code></a> and <a class="reference external" href="https://uk.mathworks.com/help/control/ref/dynamicsystem.step.html"><code class="docutils literal notranslate"><span class="pre">step</span></code></a> functions.</p>
 <section id="solution-to-example-9">
-<h3>Solution to example 9<a class="headerlink" href="#solution-to-example-9" title="Permalink to this heading">#</a></h3>
+<h4>Solution to example 9<a class="headerlink" href="#solution-to-example-9" title="Permalink to this heading">#</a></h4>
 <p>Analytical solution using the symbolic math toolbox</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -911,6 +912,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <p>The MATLAB code to reproduce this result is given in <a class="reference download internal" download="" href="../_downloads/3ba053ad62f7b263884af00ba1ace7eb/example9.mlx"><span class="xref download myst">example9.mlx</span></a></p>
+</section>
 </section>
 </section>
 <section id="useful-quantifiers-that-result-from-step-response">
@@ -1541,9 +1543,11 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-response">Natural response</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-response-of-a-second-order-system">Step-response of a second-order system</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-9">Example 9</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-9">Solution to example 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-response-of-a-second-order-system">Step-response of a second-order system</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-9">Example 9</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-9">Solution to example 9</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-quantifiers-that-result-from-step-response">Useful quantifiers that result from step response</a><ul class="nav section-nav flex-column">
