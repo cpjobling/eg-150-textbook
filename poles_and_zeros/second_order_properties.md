@@ -435,7 +435,7 @@ Having computed the residues $r_1$ and $r_2$ the sine and cosine terms can be co
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:unit5.2:9)=
-## Example 9
+### Example 9
 
 Determine the step response for a second order system with $\omega_n = 10$ rad/s and $\zeta = 0.5$. Confirm your result using {eq}`eq:unit5.1:2` and the [`tf`](https://uk.mathworks.com/help/control/ref/tf.html) and [`step`](https://uk.mathworks.com/help/control/ref/dynamicsystem.step.html) functions.
 
@@ -574,7 +574,7 @@ We will explore these ideas in the following sections.
 
 ### Poles
 
-The location of the system poles is important and can be obtained by factorizing the denominator of $H(s)$ either symbolically or numerically. There is also a handy function [`pole`](https://uk.mathworks.com/help/ident/ref/dynamicsystem.pole.html) which will take these values from a transfer function. 
+The location of the system poles is important and can be obtained by factorizing the denominator of $H(s)$ either symbolically or numerically. There is also a handy function [`pole`](https://uk.mathworks.com/help/ident/ref/dynamicsystem.pole.html) which will take these values from a transfer function.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -751,7 +751,7 @@ The value looks about right!
 
 The peak overshoot is a measure of damping in a system and is the height of the first peak ($C_\max$ in {numref}`fig:unit5.2:2`). It is usually quoted as a percentage of the final value.
 
-$$\%\mathrm{OS} = \exp\left(\frac{-\zeta\pi}{\sqrt{1-\zeta^2}}\right)\times 100$$ 
+$$\%\mathrm{OS} = \exp\left(\frac{-\zeta\pi}{\sqrt{1-\zeta^2}}\right)\times 100$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
