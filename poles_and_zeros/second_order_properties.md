@@ -27,7 +27,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook/poles_and_zeros/second_orde
 
 ## Acknowledgements
 
-The notes for this unit have been influenced by the MATLAB LiveScript **PoleZeroAnalysis.mlx** from the MathWorks curriculum module [Transfer Function Analysis of Dynamic Systems](https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems) {cite}`tfads`.
+The notes for this unit have been influenced by the MATLAB LiveScript **PoleZeroAnalysis.mlx** from the MathWorks curriculum module [Transfer Function Analysis of Dynamic Systems](https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems) {cite}`tfads`. You will find some useful interactive applications with which you can explore the concepts presented here. Some of these will be deomostrated in the lecture.
 
 The examples have been inspired by the recording of the second half of the video recording of Stephen Boyd's 1999 lecture 10 (delivered at Stanford University) which itself is based on [Qualitative properties of signals & Laplace transforms](https://web.stanford.edu/~boyd/ee102/qualitative.pdf) {cite}`boyd93`.
 
@@ -102,6 +102,7 @@ Done in MATLAB
 slideshow:
   slide_type: subslide
 ---
+format compact
 t = linspace(0,15,100);
 sigma = 0.1;
 % Doubling time
@@ -168,17 +169,7 @@ $$
 \end{align}
 $$
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-(unit5.2.2)=
-## Damping ratio and natural frequency
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-(unit5.2.3)=
-## Step-response of a second-order system
-
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (unit5.2:ex7)=
 ### Example 8
@@ -252,7 +243,314 @@ ylabel('Current i(t) [A]'),xlabel('Time t [s]')
 hold off
 ```
 
++++ {"slideshow": {"slide_type": "notes"}}
+
 The MATLAB code to reproduce this result is given in [example8.mlx](matlab/example8.mlx)
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(unit5.2.2)=
+## Natural frequency
+
+The locations of the poles in the $s$-plane determine the natural oscillation frequencies present in the system.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Consider a pole in the complex plane illustrated in {numref}`fig:unit5.2:1`
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+:::{figure-md} 
+
+<img src="pictures/complex_pole.png" alt="Phase  and magnitude  of pole  shown in the complex plane" width="50%" />           
+Phase  and magnitude  of pole  shown in the complex plane
+:::
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+* The natural (undamped) frequency (in rad/s) contributed by a pole $p$ is the pole magnitude, $r=\left|p\right|$.
+* The phase, $\phi=\arg p$, determines the relative strength of the oscillatory component.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+## Analysis of a second-order system
+
+Second-order systems with a pair of conjugate poles and no zeros are useful for illustrating the natural frequency response analytically. It is helpful to write this type of system in the form:
+
+$$G(s) = \frac{K}{s^2 + 2\zeta\omega_n s + \omega_n^2 }$$ 
+
+where 
+
+* $K$ is the gain coefficient
+* $\zeta$ is the damping ratio already introduced in {ref}`unit5.1.4`
+* and $\omega_n$ is the (undamped) natural frequency.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+These parameters are helpful for drawing a connection between the natural response of the system and the properties of the poles. In this section, the poles of the second-order system will be analytically computed and related to the natural response of the system.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Pole analysis
+
+The poles of the system occur when the denominator is zero:
+
+$$p_{1,2} = -\zeta\omega_n \pm \omega_n \sqrt{\zeta^2 - 1}$$
+    
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+For simplicity, consider $\zeta \in [0,1)$. In this case, the poles are
+    
+$$p_{1,2} = -\zeta\omega_n \pm j \omega_n \sqrt{1 - \zeta^2}$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+As stated above, the natural frequency is defined as the magnitude of the pole. The magnitude is computed as :
+
+$$\sqrt{\mathbf{Re}^2 + \mathbf{Im}^2}$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Using the definitions illustrated in {numref}`fig:pz:3`, $\mathbf{Re} = -\sigma = -\zeta\omega_n$ and $\mathbf{Im} = \omega = \omega_n \sqrt{1 - \zeta^2}$, so :
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+\begin{array}{rl} |p|
+ &= \sqrt{\sigma^2 + \omega^2} \\
+ &= \sqrt{ (-\zeta \omega_n)^2 + ( \pm \omega_n \sqrt{1-\zeta^2})^2 } \\ 
+ &= \sqrt{ \zeta^2 \omega_n^2 + \omega_n^2 (1-\zeta^2) } \\ 
+ &= |\omega_n|\ 
+\end{array}
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+This illustrates why this form of the equation is used: the natural frequency is the parameter $\omega_n$.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+The damping ratio $\zeta$ determines the relative strength of the exponential part of the response. 
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+As $\zeta\to 1$, the complex part of the pole tends to zero, implying less oscillatory and stronger exponential behavior. 
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+For stable systems, that implies greater damping. 
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+The gain coefficient $K$ affects the magnitude of the response, not the time-dependent behavior.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Natural response
+
+The impulse response of a system $H(s)$ is also called the *natural response*. The natural response $y(t)$ is computed by taking the inverse Laplace transform of
+
+$$\frac{Y(s)}{X(s)} = \frac{Y(s)}{1} = \frac{ K }{s^2 + 2 \zeta \omega_n s  + \omega_n^2}$$
+        
+because the impulse $x(t)=\delta(t)$ has a Laplace transform $1$. You can find the response's analytic form by referring to a table or using the MATLAB [ilaplace](https://uk.mathworks.com/help/symbolic/sym.ilaplace.html) function.
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+syms s zeta omega_n K Y(s) y(t)
+Y(s) = K/(s^2 + 2*zeta*omega_n*s + omega_n^2)
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+y(t) = ilaplace(Y); % The impulse response in the time domain
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Gives the result
+
+$$x(t) = \frac{K\,{\mathrm{e}}^{-\zeta\, \omega_n \,t } \,\sin \left(\omega_n \,t\,\sqrt{1-\zeta^2 }\right)}{\omega_n \,\sqrt{1-\zeta^2 }}$$ (eq:unit5.1:1)
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Notice that the impulse response is a product of an exponential and sine function. From these functions observe that:
+* The sine function frequency (in rads/s) is $\omega_n \,\sqrt{1-\zeta^2 }$. If the damping $\zeta=0$, then the frequency is $\omega_n$. This is the reason $\omega_n$  is often referred to as the *undamped natural frequency*.
+* The rate of decay of the exponential damping function is $\zeta\omega_n$. 
+* The gain parameter $K$ only contributes as a constant multiplier to the magnitude of the response.
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(unit5.2.3)=
+## Step-response of a second-order system
+
+The step response of a system $H(s)$ is often computed. The step response $y_s(t)$ is determined by taking the inverse Laplace transform of
+
+$$Y(s) = \frac{1}{s} \left(\frac{ \omega_n^2 }{s^2 + 2 \zeta \omega_n s  + \omega_n^2}\right)$$
+        
+because the step function $x(t)=u_0(t)$ has a Laplace transform $1/s$. You can find the response's analytic form by taking partial fraction expansion of $Y(s)$ and then referring to a table of Laplace transforms.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Here we will state, without proof[^unit5.1:2], that the step response will be
+
+$$y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\omega}\sin\left(\omega t\right)
+\right)\right)u_o(t)$$ (eq:unit5.1:2)
+
+where :
+* $\omega = \omega_n\sqrt{1 - \zeta^2}$ is the imaginary part of the system's complex pole pair, sometimes called the *damped natural frequency*
+* $\sigma = \zeta\omega_n$ is the magnitide of the real part of the system's complex pole pair
+* $\phi = \tan^{-1} \zeta/(1 - \zeta^2)$ is the phase shift.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+[^unit5.1:2]: The proof requires us to complete the square in the denominator of the term with the complex roots
+
+$$\left(s^2 + 2\zeta\omega_n + \omega_n^2\right)=\left(s + \zeta\omega_n\right)^2 + \left(\omega_n^2\left(1 - \zeta^2\right)\right)$$
+
+Then take the PFE of the terms assuming that the complex poles will yield terms:
+
+$$r_1\frac{s+\zeta\omega_n}{\left(s + \zeta\omega_n\right)^2 +  \left(\omega_n\sqrt{1 - \zeta^2}\right)^2} + r_2\frac{\omega_n\sqrt{1 - \zeta^2}}{\left(s + \zeta\omega_n\right)^2 + \left(\omega_n\sqrt{1 - \zeta^2}\right)^2}$$ (eq:unit5.1:10)
+
+Making the substitutions $\sigma = \zeta\omega_n$ and $\omega = \omega_n \sqrt{1 - \zeta^2}$ we can simplify
+{eq}`(eq:unit5.1:10)` to
+
+$$r_1\frac{s+\sigma}{\left(s + \sigma\right)^2 +  \omega^2} + r_2\frac{\omega}{\left(s + \sigma\right)^2 + \omega^2}$$ (eq:unit5.1:11)
+The step-response terms will then be
+
+$$r_1 e^{-\sigma t}\sin(\omega t) + r_2 e^{-\sigma t}\cos(\omega t)$$
+
+Having computed the residues $r_1$ and $r_2$ the sine and cosine terms can be combined to give the final $e^{-\sigma t}\cos(\omega t + \phi)$ expression.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex:unit5.2:9)=
+## Example 9
+
+Determine the step response for a second order system with $\omega_n = 10$ rad/s and $\zeta = 0.5$. Confirm your result using {eq}`eq:unit5.1:2` and the [tf](https://uk.mathworks.com/help/control/ref/tf.html) and [step](https://uk.mathworks.com/help/control/ref/dynamicsystem.step.html) functions.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### Solution to example 9
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Analytical solution using the symbolic math toolbox
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+syms Y_s(s) y_s(t)
+zeta = 0.5; omega_n = 10;
+X(s) = 1/s;
+H(s) = omega_n^2/(s^2 + 2*zeta*omega_n*s + omega_n^2);
+Y_s(s) = H(s)*X(s);
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+$$Y_s(s) = \frac{100}{s\,{\left(s^2 +10\,s+100\right)}}$$ (eq:unit5.1:3)
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+% step response 
+y_s(t) = ilaplace(Y_s(s));
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Gives the result
+
+$$y_s(t) = 1-{\mathrm{e}}^{-5\,t} \,{\left(\cos \left(5\,\sqrt{3}\,t\right)+\frac{\sqrt{3}\,\sin \left(5\,\sqrt{3}\,t\right)}{3}\right)}$$ (eq:unit5.1:4)
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Plot the solution
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+fplot(y_s(t)*heaviside(t),[0,1.2]),ylim([0,1.2]),grid
+xlabel('Time (seconds)'),ylabel('y_s(t)'),...
+title('Step Response: Determined analytically')
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Confirming the result with {eq}`eq:unit5.1:2` we get:
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+t = linspace(0,1.2,100);
+sigma = zeta*omega_n;
+omega = omega_n*sqrt(1 - zeta^2);
+phi = atan(zeta/(1 - zeta^2));
+yst = (1 - exp(-sigma*t).*(cos(omega*t)+(sigma/omega)*sin(omega*t)));
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+plot(t,yst),grid,xlabel('Time (seconds)'),ylabel('y_s(t)'),title('Step Response: Computed with formula')
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Using the `tf` and `step` functions we get:
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+num = omega_n^2; den = [1 2*zeta*omega_n,omega_n^2];
+Hs = tf(num,den)
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+step(Hs),title('Step Response: Computed with tf function')
+```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+The MATLAB code to reproduce this result is given in [example9.mlx](matlab/example9.mlx)
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+(unit5.2.4)=
+## Useful quantifiers that result from step response
+
++++
+
+### Rise-tme
+
++++
+
+### Settling time
+
++++
+
+### Peak overshoot
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
