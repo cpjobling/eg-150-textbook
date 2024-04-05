@@ -757,7 +757,7 @@ We also stated that $N_{4\%}\approx Q$ s.
 
 #### Dominant poles
 
-The dominant poles of a system are those which have the largest real part $\sigma$. The response term associated with this pole (or pole pair) will eventually come to dominate the overall response $f(t)$. 
+The dominant poles of a system are those which have the largest real part $\sigma$. The response term associated with this pole (or pole pair) will eventually come to dominate the overall response $f(t)$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -802,3 +802,7 @@ We will build on these ideas in **EG-247 Digital Signal Processing** and you wil
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## Footnotes
+
+```{code-cell}
+
+```

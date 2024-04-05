@@ -483,11 +483,15 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#real-pole-s-sigma">Real pole <span class="math notranslate nohighlight">\(s=\sigma\)</span>:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-pole-pair-s-sigma-pm-j-omega">Complex pole pair <span class="math notranslate nohighlight">\(s = \sigma \pm j\omega\)</span>:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-pole-pair-s-sigma-pm-j-omega">Complex pole pair <span class="math notranslate nohighlight">\(s = -\sigma \pm j\omega\)</span>:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-second-order-system-transfer-function">Standard second-order system transfer function</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-parameters-for-second-order-system">Performance parameters for second-order system</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-matlab-commands">Useful MATLAB commands</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-exploration">Further exploration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#still-to-come">Still to come</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
@@ -583,7 +587,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/117a744567831f8f8894b77b09c4cc88824ff3571e17f62a9b9d65e41e4251dd.png" src="../_images/117a744567831f8f8894b77b09c4cc88824ff3571e17f62a9b9d65e41e4251dd.png" />
+<img alt="../_images/feaef84277c98e3e18c44b9d0e8adb135125da3e939ba6de09cdcc637b4efe57.png" src="../_images/feaef84277c98e3e18c44b9d0e8adb135125da3e939ba6de09cdcc637b4efe57.png" />
 </div>
 </div>
 <p>Given that <span class="math notranslate nohighlight">\(\sigma = 0.1\)</span>, the doubling time <span class="math notranslate nohighlight">\(T \approx 0.7/\sigma = 7\)</span> s. The initial value is <span class="math notranslate nohighlight">\(10\)</span> at <span class="math notranslate nohighlight">\(t=0\)</span> s. It has doubled to <span class="math notranslate nohighlight">\(20\)</span> at <span class="math notranslate nohighlight">\(t\approx 7\)</span> s, and has doubled again to <span class="math notranslate nohighlight">\(40\)</span> at <span class="math notranslate nohighlight">\(t\approx 14\)</span>.</p>
@@ -660,7 +664,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1c3d6f3c3671073e1cee3f94adc86864997de7c51892ffe7840f1e5f50d25151.png" src="../_images/1c3d6f3c3671073e1cee3f94adc86864997de7c51892ffe7840f1e5f50d25151.png" />
+<img alt="../_images/bfca0eaa176e4c5e3118996ffff990c92344cad602cdeab77b8faeeb3762c6ef.png" src="../_images/bfca0eaa176e4c5e3118996ffff990c92344cad602cdeab77b8faeeb3762c6ef.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this result is given in <a class="reference download internal" download="" href="../_downloads/b2296fa173d1562d6258c6ffcbe8592d/example8.mlx"><span class="xref download myst">example8.mlx</span></a></p>
@@ -670,7 +674,13 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <section id="natural-frequency">
 <span id="unit-5-2-2"></span><h2>Natural frequency<a class="headerlink" href="#natural-frequency" title="Permalink to this heading">#</a></h2>
 <p>The locations of the poles in the <span class="math notranslate nohighlight">\(s\)</span>-plane determine the natural oscillation frequencies present in the system.</p>
-<p>Consider a pole in the complex plane illustrated in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5.2:1</span></code></p>
+<p>Consider a pole in the complex plane illustrated in <a class="reference internal" href="#fig-unit5-2-1"><span class="std std-numref">Fig. 79</span></a></p>
+<figure class="align-default" id="fig-unit5-2-1">
+<a class="reference internal image-reference" href="../_images/complex_pole.png"><img alt="Phase phi and magnitude r of pole p shown in the complex plane" src="../_images/complex_pole.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 79 </span><span class="caption-text">Phase <span class="math notranslate nohighlight">\(\phi\)</span> and magnitude <span class="math notranslate nohighlight">\(r\)</span> of pole <span class="math notranslate nohighlight">\(p\)</span> shown in the complex plane</span><a class="headerlink" href="#fig-unit5-2-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <ul class="simple">
 <li><p>The natural (undamped) frequency (in rad/s) contributed by a pole <span class="math notranslate nohighlight">\(p\)</span> is the pole magnitude, <span class="math notranslate nohighlight">\(r=\left|p\right|\)</span>.</p></li>
 <li><p>The phase, <span class="math notranslate nohighlight">\(\phi=\arg p\)</span>, determines the relative strength of the oscillatory component.</p></li>
@@ -699,13 +709,16 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <p>As stated above, the natural frequency is defined as the magnitude of the pole. The magnitude is computed as :</p>
 <div class="math notranslate nohighlight">
 \[\sqrt{\mathbf{Re}^2 + \mathbf{Im}^2}\]</div>
-<p>Using the definitions illustrated in <a class="reference internal" href="qualitative_properties.html#fig-pz-3"><span class="std std-numref">Fig. 77</span></a>, <span class="math notranslate nohighlight">\(\mathbf{Re} = -\sigma = -\zeta\omega_n\)</span> and <span class="math notranslate nohighlight">\(\mathbf{Im} = \omega = \omega_n \sqrt{1 - \zeta^2}\)</span>, so :</p>
-<p>\begin{array}{rl} |p|
-&amp;= \sqrt{\sigma^2 + \omega^2} \
-&amp;= \sqrt{ (-\zeta \omega_n)^2 + ( \pm \omega_n \sqrt{1-\zeta^2})^2 } \
-&amp;= \sqrt{ \zeta^2 \omega_n^2 + \omega_n^2 (1-\zeta^2) } \
-&amp;= |\omega_n|\
-\end{array}</p>
+<p>Using the definitions illustrated in <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/poles_and_zeros/qualitative_properties.html#fig-pz-2">Fig. 76</a>, <span class="math notranslate nohighlight">\(\mathbf{Re} = -\sigma = -\zeta\omega_n\)</span> and <span class="math notranslate nohighlight">\(\mathbf{Im} = \omega = \omega_n \sqrt{1 - \zeta^2}\)</span>, so :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{rl} |p|
+ &amp;= \sqrt{\sigma^2 + \omega^2} \\
+ &amp;= \sqrt{ (-\zeta \omega_n)^2 + ( \pm \omega_n \sqrt{1-\zeta^2})^2 } \\ 
+ &amp;= \sqrt{ \zeta^2 \omega_n^2 + \omega_n^2 (1-\zeta^2) } \\ 
+ &amp;= |\omega_n|\ 
+\end{array}
+\end{split}\]</div>
 <p>This illustrates why this form of the equation is used: the natural frequency is the parameter <span class="math notranslate nohighlight">\(\omega_n\)</span>.</p>
 <p>The damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> determines the relative strength of the exponential part of the response.</p>
 <p>As <span class="math notranslate nohighlight">\(\zeta\to 1\)</span>, the complex part of the pole tends to zero, implying less oscillatory and stronger exponential behavior.</p>
@@ -744,7 +757,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 <p>Gives the result</p>
 <div class="math notranslate nohighlight" id="equation-eq-unit5-1-1">
-<span class="eqno">(60)<a class="headerlink" href="#equation-eq-unit5-1-1" title="Permalink to this equation">#</a></span>\[x(t) = \frac{K\,{\mathrm{e}}^{-\zeta\, \omega_n \,t } \,\sin \left(\omega_n \,t\,\sqrt{1-\zeta^2 }\right)}{\omega_n \,\sqrt{1-\zeta^2 }}\]</div>
+<span class="eqno">(60)<a class="headerlink" href="#equation-eq-unit5-1-1" title="Permalink to this equation">#</a></span>\[y(t) = \frac{K\,{\mathrm{e}}^{-\zeta\, \omega_n \,t } \,\sin \left(\omega_n \,t\,\sqrt{1-\zeta^2 }\right)}{\omega_n \,\sqrt{1-\zeta^2 }}\]</div>
 <p>Notice that the impulse response is a product of an exponential and sine function. From these functions observe that:</p>
 <ul class="simple">
 <li><p>The sine function frequency (in rads/s) is <span class="math notranslate nohighlight">\(\omega_n \,\sqrt{1-\zeta^2 }\)</span>. If the damping <span class="math notranslate nohighlight">\(\zeta=0\)</span>, then the frequency is <span class="math notranslate nohighlight">\(\omega_n\)</span>. This is the reason <span class="math notranslate nohighlight">\(\omega_n\)</span>  is often referred to as the <em>undamped natural frequency</em>.</p></li>
@@ -759,7 +772,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <div class="math notranslate nohighlight">
 \[Y(s) = \frac{1}{s} \left(\frac{ \omega_n^2 }{s^2 + 2 \zeta \omega_n s  + \omega_n^2}\right)\]</div>
 <p>because the step function <span class="math notranslate nohighlight">\(x(t)=u_0(t)\)</span> has a Laplace transform <span class="math notranslate nohighlight">\(1/s\)</span>. You can find the response’s analytic form by taking partial fraction expansion of <span class="math notranslate nohighlight">\(Y(s)\)</span> and then referring to a table of Laplace transforms.</p>
-<p>Here we will state, without proof<a class="footnote-reference brackets" href="#unit5-1-2" id="id5">2</a>, that the step response will be</p>
+<p>Here we will state, without proof, that the step response will be</p>
 <div class="math notranslate nohighlight" id="equation-eq-unit5-1-2">
 <span class="eqno">(61)<a class="headerlink" href="#equation-eq-unit5-1-2" title="Permalink to this equation">#</a></span>\[y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\omega}\sin\left(\omega t\right)
 \right)\right)u_o(t)\]</div>
@@ -769,6 +782,9 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <li><p><span class="math notranslate nohighlight">\(\sigma = \zeta\omega_n\)</span> is the magnitide of the real part of the system’s complex pole pair</p></li>
 <li><p><span class="math notranslate nohighlight">\(\phi = \tan^{-1} \zeta/(1 - \zeta^2)\)</span> is the phase shift.</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The proof requires us to complete the square in the denominator of the term with the complex roots</p>
 <div class="math notranslate nohighlight">
 \[\left(s^2 + 2\zeta\omega_n + \omega_n^2\right)=\left(s + \zeta\omega_n\right)^2 + \left(\omega_n^2\left(1 - \zeta^2\right)\right)\]</div>
 <p>Then take the PFE of the terms assuming that the complex poles will yield terms:</p>
@@ -782,6 +798,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <div class="math notranslate nohighlight">
 \[r_1 e^{-\sigma t}\sin(\omega t) + r_2 e^{-\sigma t}\cos(\omega t)\]</div>
 <p>Having computed the residues <span class="math notranslate nohighlight">\(r_1\)</span> and <span class="math notranslate nohighlight">\(r_2\)</span> the sine and cosine terms can be combined to give the final <span class="math notranslate nohighlight">\(e^{-\sigma t}\cos(\omega t + \phi)\)</span> expression.</p>
+</div>
 </section>
 <section id="example-9">
 <span id="ex-unit5-2-9"></span><h2>Example 9<a class="headerlink" href="#example-9" title="Permalink to this heading">#</a></h2>
@@ -823,7 +840,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/468e3528ae98dc86baa4a841aa6b188e8b393aac6f2825a511d32fe6751b6024.png" src="../_images/468e3528ae98dc86baa4a841aa6b188e8b393aac6f2825a511d32fe6751b6024.png" />
+<img alt="../_images/08e461e89b57d8130b383ac01d8c849592c3263fcd5062678d39ce36e2254898.png" src="../_images/08e461e89b57d8130b383ac01d8c849592c3263fcd5062678d39ce36e2254898.png" />
 </div>
 </div>
 <p>Confirming the result with <a class="reference internal" href="#equation-eq-unit5-1-2">(61)</a> we get:</p>
@@ -848,7 +865,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/aa0d7b0421a5f5065af6c9bcf19e54f6cf48ccbf60d52dc6e68ffe9e07ef8f23.png" src="../_images/aa0d7b0421a5f5065af6c9bcf19e54f6cf48ccbf60d52dc6e68ffe9e07ef8f23.png" />
+<img alt="../_images/006529eda25f84bde692bae6b6d6f21b414033a601f4cf3568d40b26b25a2eb6.png" src="../_images/006529eda25f84bde692bae6b6d6f21b414033a601f4cf3568d40b26b25a2eb6.png" />
 </div>
 </div>
 <p>Using the <code class="docutils literal notranslate"><span class="pre">tf</span></code> and <code class="docutils literal notranslate"><span class="pre">step</span></code> functions we get:</p>
@@ -873,9 +890,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + 10 s + 100
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
@@ -890,7 +905,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/93ebfa37498398e67b143b57f9cd9b5d887b60b57bc8882b92fc48b2e4a5e46c.png" src="../_images/93ebfa37498398e67b143b57f9cd9b5d887b60b57bc8882b92fc48b2e4a5e46c.png" />
+<img alt="../_images/7fd1d809e6d940df315129e0389e93c0722ea077fa0cd97c321272ab7de5cf2a.png" src="../_images/7fd1d809e6d940df315129e0389e93c0722ea077fa0cd97c321272ab7de5cf2a.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this result is given in <a class="reference download internal" download="" href="../_downloads/3ba053ad62f7b263884af00ba1ace7eb/example9.mlx"><span class="xref download myst">example9.mlx</span></a></p>
@@ -898,14 +913,14 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 <section id="useful-quantifiers-that-result-from-step-response">
 <span id="unit-5-2-4"></span><h2>Useful quantifiers that result from step response<a class="headerlink" href="#useful-quantifiers-that-result-from-step-response" title="Permalink to this heading">#</a></h2>
-<p>The relationship between the pole locations and the step response are summarized in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5.2:2</span></code><a class="footnote-reference brackets" href="#unit5-1-note-4" id="id6">3</a></p>
+<p>The relationship between the pole locations and the step response are summarized in <a class="reference internal" href="#fig-unit5-2-2"><span class="std std-numref">Fig. 80</span></a> <a class="footnote-reference brackets" href="#unit5-1-note-4" id="id5">2</a></p>
 <figure class="align-default" id="fig-unit5-2-2">
 <a class="reference internal image-reference" href="../_images/resppole.png"><img alt="Relationship between poles and step response" src="../_images/resppole.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 79 </span><span class="caption-text">Relationship between poles and step response</span><a class="headerlink" href="#fig-unit5-2-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 80 </span><span class="caption-text">Relationship between poles and step response</span><a class="headerlink" href="#fig-unit5-2-2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Knowledge of the location of the poles and their damping ratio and natural frequency are useful for qualtitaive anaysis of the response of a complex pole pair. There are also a number of parameters that quantively define the features of the step response which we may be interested in. These are shown in the right-hand picture of <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5.2:2</span></code>. Knowledge of the poles allows us to predict the step response. But also, usefully for many design problems, knowledge of the step response allows us to predict the location of the poles.</p>
+<p>Knowledge of the location of the poles and their damping ratio and natural frequency are useful for qualtitaive anaysis of the response of a complex pole pair. There are also a number of parameters that quantively define the features of the step response which we may be interested in. These are shown in the right-hand picture of <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 81</span></a>. Knowledge of the poles allows us to predict the step response. But also, usefully for many design problems, knowledge of the step response allows us to predict the location of the poles.</p>
 <p>We will explore these ideas in the following sections.</p>
 <section id="poles">
 <h3>Poles<a class="headerlink" href="#poles" title="Permalink to this heading">#</a></h3>
@@ -1046,12 +1061,12 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 <section id="rise-tme">
 <h3>Rise-tme<a class="headerlink" href="#rise-tme" title="Permalink to this heading">#</a></h3>
-<p>The <em>rise time</em> <span class="math notranslate nohighlight">\(T_r\)</span> is a measure of the speed of response of a system. It is usually taken to be the time taken to transition from 10% to 90% of the final value in the initial rise of the response. It is shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5.2:2</span></code>.</p>
-<p>The rise-time depends on <span class="math notranslate nohighlight">\(\omega_n\)</span> but its actual value is also dependent on the damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> so we rely on a calibration curve such as that shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5.2:2</span></code>.</p>
-<figure class="align-default" id="id7">
+<p>The <em>rise time</em> <span class="math notranslate nohighlight">\(T_r\)</span> is a measure of the speed of response of a system. It is usually taken to be the time taken to transition from 10% to 90% of the final value in the initial rise of the response. It is shown in <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 81</span></a>.</p>
+<p>The rise-time depends on <span class="math notranslate nohighlight">\(\omega_n\)</span> but its actual value is also dependent on the damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> so we rely on a calibration curve such as that shown in <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 81</span></a>.</p>
+<figure class="align-default" id="id6">
 <a class="reference internal image-reference" href="../_images/trcurve.png"><img alt="Damping ratio as a function of normalised rise-time for a second-order underdamped response" src="../_images/trcurve.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 80 </span><span class="caption-text">Damping ratio as a function of normalised rise-time for a second-order underdamped response</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 81 </span><span class="caption-text">Damping ratio as a function of normalised rise-time for a second-order underdamped response</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For the problem being considered <span class="math notranslate nohighlight">\(\zeta = 0.5\)</span>, so <span class="math notranslate nohighlight">\(\omega_n T_r \approx 1.65\)</span> giving</p>
@@ -1064,13 +1079,13 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/31f07ad3f07534b6fa925fa3b522cc705ac0c98544b572fcc8daa3e720599ae4.png" src="../_images/31f07ad3f07534b6fa925fa3b522cc705ac0c98544b572fcc8daa3e720599ae4.png" />
+<img alt="../_images/f5eea9c623a960e8e8cb2bae61c0af14be88c60cc69216ae619e2dd108576701.png" src="../_images/f5eea9c623a960e8e8cb2bae61c0af14be88c60cc69216ae619e2dd108576701.png" />
 </div>
 </div>
 </section>
 <section id="settling-time">
 <h3>Settling time<a class="headerlink" href="#settling-time" title="Permalink to this heading">#</a></h3>
-<p>The <em>settling time</em> <span class="math notranslate nohighlight">\(T_s\)</span> is defined as the time taken for the peaks of the oscillations in the step response to be bounded by some arbitrary limit. In <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5.2:2</span></code> the bounds have been set to 2%.</p>
+<p>The <em>settling time</em> <span class="math notranslate nohighlight">\(T_s\)</span> is defined as the time taken for the peaks of the oscillations in the step response to be bounded by some arbitrary limit. In <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 81</span></a> the bounds have been set to 2%.</p>
 <p>The actual setting time is related to the real part of the poles and, for this case,</p>
 <div class="math notranslate nohighlight">
 \[2\% T_s \approx \frac{4}{\zeta\omega_n}\]</div>
@@ -1090,34 +1105,19 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">stepinfo</span><span class="p">(</span><span class="n">Hs</span><span class="p">)</span>
-<span class="nb">step</span><span class="p">(</span><span class="n">Hs</span><span class="p">),</span><span class="nb">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.2</span><span class="p">],[</span><span class="mf">1.02</span><span class="p">,</span><span class="mf">1.02</span><span class="p">]),</span><span class="nb">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.2</span><span class="p">],[</span><span class="mf">0.98</span><span class="p">,</span><span class="mf">0.98</span><span class="p">])</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">step</span><span class="p">(</span><span class="n">Hs</span><span class="p">),</span><span class="nb">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.2</span><span class="p">],[</span><span class="mf">1.02</span><span class="p">,</span><span class="mf">1.02</span><span class="p">]),</span><span class="nb">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.2</span><span class="p">],[</span><span class="mf">0.98</span><span class="p">,</span><span class="mf">0.98</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans = 
-  struct with fields:
-
-         RiseTime: 0.1639
-    TransientTime: 0.8076
-     SettlingTime: 0.8076
-      SettlingMin: 0.9315
-      SettlingMax: 1.1629
-        Overshoot: 16.2929
-       Undershoot: 0
-             Peak: 1.1629
-         PeakTime: 0.3592
-</pre></div>
-</div>
-<img alt="../_images/713ab64954e2fc2ba85b444820b340296e012fbe592cb2c6e0b3f74309c2621e.png" src="../_images/713ab64954e2fc2ba85b444820b340296e012fbe592cb2c6e0b3f74309c2621e.png" />
+<img alt="../_images/0d02020d1a21064310c443ab9636050d15208eb321a09825d88b1dfaa8185edb.png" src="../_images/0d02020d1a21064310c443ab9636050d15208eb321a09825d88b1dfaa8185edb.png" />
 </div>
 </div>
 <p>The value looks about right!</p>
 </section>
 <section id="peak-overshoot">
 <h3>Peak overshoot<a class="headerlink" href="#peak-overshoot" title="Permalink to this heading">#</a></h3>
-<p>The peak overshoot is a measure of damping in a system and is the height of the first peak (<span class="math notranslate nohighlight">\(C_\max\)</span> in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5.2:2</span></code>). It is usually quoted as a percentage of the final value.</p>
+<p>The peak overshoot is a measure of damping in a system and is the height of the first peak (<span class="math notranslate nohighlight">\(C_\max\)</span> in <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 81</span></a>). It is usually quoted as a percentage of the final value.</p>
 <div class="math notranslate nohighlight">
 \[\%\mathrm{OS} = \exp\left(\frac{-\zeta\pi}{\sqrt{1-\zeta^2}}\right)\times 100\]</div>
 <p>If we know the peak overshoot, we can calculate the damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> using the formula:</p>
@@ -1144,7 +1144,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/769ef5b18a58ee4447147d2e7ed49256170859ba8b325564b81c83eebe9d91ef.png" src="../_images/769ef5b18a58ee4447147d2e7ed49256170859ba8b325564b81c83eebe9d91ef.png" />
+<img alt="../_images/d84740122aadb5dd6d535e344db6fafa35ee14607b8aefc95f701e9ef46f6b9c.png" src="../_images/d84740122aadb5dd6d535e344db6fafa35ee14607b8aefc95f701e9ef46f6b9c.png" />
 </div>
 </div>
 <p>Reverse formula check</p>
@@ -1188,7 +1188,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5d3728c9d819d4be099ee76a997cdb57f56ebe54b6221170ec393fbc21388adb.png" src="../_images/5d3728c9d819d4be099ee76a997cdb57f56ebe54b6221170ec393fbc21388adb.png" />
+<img alt="../_images/f6770d44fc6f040c3686635d615fcfb43a91c92c7333e8933147296bb1df5553.png" src="../_images/f6770d44fc6f040c3686635d615fcfb43a91c92c7333e8933147296bb1df5553.png" />
 </div>
 </div>
 </section>
@@ -1264,7 +1264,9 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------------------------------------
-  s (s+1) (s+3) (s^2 - 2s + 2) (s^2 + 4s + 8)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s (s+1) (s+3) (s^2 - 2s + 2) (s^2 + 4s + 8)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
@@ -1314,7 +1316,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4ff7a45fe34ca5b7c89b2eeb136a358f593c5f8d3c2a5905bf5a0c458c7b238f.png" src="../_images/4ff7a45fe34ca5b7c89b2eeb136a358f593c5f8d3c2a5905bf5a0c458c7b238f.png" />
+<img alt="../_images/e8ba77879e7f1e4ed9ca821851674072d43a6740d7a751ea84370364f84e2528.png" src="../_images/e8ba77879e7f1e4ed9ca821851674072d43a6740d7a751ea84370364f84e2528.png" />
 </div>
 </div>
 <p><strong>Bonus</strong>: the step response is</p>
@@ -1325,18 +1327,18 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5f27f4c8a64e581c8dfb5ca41cfade24abd478b2567c82f2be3462d5af243ff8.png" src="../_images/5f27f4c8a64e581c8dfb5ca41cfade24abd478b2567c82f2be3462d5af243ff8.png" />
+<img alt="../_images/11185a7ebf17d8f8e7c9d2863813ef7d92e1f553607e6e8d9f8f8ec6f4a08769.png" src="../_images/11185a7ebf17d8f8e7c9d2863813ef7d92e1f553607e6e8d9f8f8ec6f4a08769.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="exercise-16-3-spring-mass-damper-system">
 <span id="ex16-3"></span><h3>Exercise 16.3: Spring-Mass-Damper System<a class="headerlink" href="#exercise-16-3-spring-mass-damper-system" title="Permalink to this heading">#</a></h3>
-<p>You can analyze a mass-spring-damper system (<a class="reference internal" href="#fig-unit5-2-3"><span class="std std-numref">Fig. 81</span></a>) by looking at the poles of its transfer function.</p>
+<p>You can analyze a mass-spring-damper system (<a class="reference internal" href="#fig-unit5-2-3"><span class="std std-numref">Fig. 82</span></a>) by looking at the poles of its transfer function.</p>
 <figure class="align-default" id="fig-unit5-2-3">
 <a class="reference internal image-reference" href="../_images/smd.png"><img alt="Diagram of a spring-mass-damper system" src="../_images/smd.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 81 </span><span class="caption-text">Diagram of a spring-mass-damper system</span><a class="headerlink" href="#fig-unit5-2-3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 82 </span><span class="caption-text">Diagram of a spring-mass-damper system</span><a class="headerlink" href="#fig-unit5-2-3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Consider a mass-spring-damper that</p>
@@ -1375,17 +1377,52 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <h4>Real pole <span class="math notranslate nohighlight">\(s=\sigma\)</span>:<a class="headerlink" href="#real-pole-s-sigma" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Growth rate: <span class="math notranslate nohighlight">\(\sigma &gt; 0\)</span>, the exponential signal doubles every <span class="math notranslate nohighlight">\(T\approx 0.7/\sigma\)</span> s.</p></li>
-<li><p>Time constant: <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span>, the exponential signal decays to <span class="math notranslate nohighlight">\(37\%\)</span> of it’s original value in <span class="math notranslate nohighlight">\(\tau = 1/\sigma\)</span> s. The expontial signal reaches <span class="math notranslate nohighlight">\(1\%\)</span> of it’s original value in <span class="math notranslate nohighlight">\(t\approx 4.6\tau\)</span> s.</p></li>
+<li><p>Time constant: <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span>, the exponential signal decays to <span class="math notranslate nohighlight">\(37\%\)</span> of it’s original value in <span class="math notranslate nohighlight">\(\tau = 1/\sigma\)</span> s. The exponential signal reaches <span class="math notranslate nohighlight">\(1\%\)</span> of it’s original value in <span class="math notranslate nohighlight">\(t\approx 4.6\tau\)</span> s.</p></li>
 </ul>
 </section>
 <section id="complex-pole-pair-s-sigma-pm-j-omega">
-<h4>Complex pole pair <span class="math notranslate nohighlight">\(s = \sigma \pm j\omega\)</span>:<a class="headerlink" href="#complex-pole-pair-s-sigma-pm-j-omega" title="Permalink to this heading">#</a></h4>
+<h4>Complex pole pair <span class="math notranslate nohighlight">\(s = -\sigma \pm j\omega\)</span>:<a class="headerlink" href="#complex-pole-pair-s-sigma-pm-j-omega" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
-<li><p>Representation of denominator: <span class="math notranslate nohighlight">\((s + \sigma + j\omega_n)(s - \sigma + j\omega) = s^2 + 2\sigma Natural frequency: \)</span>\omega_n = \sqrt{\sigma^2 + \omega^2}$</p></li>
-<li><p>Damping ration: $\zeta =</p></li>
+<li><p>Representation of denominator: <span class="math notranslate nohighlight">\((s + \sigma + j\omega_n)(s - \sigma + j\omega) = s^2 + 2\sigma s + \left(\sigma^2 + \omega_n^2\right)\)</span></p></li>
+<li><p>Natural frequency: <span class="math notranslate nohighlight">\(\omega_n = \sqrt{\sigma^2 + \omega^2}\)</span></p></li>
+<li><p>Damping ratio: <span class="math notranslate nohighlight">\(\zeta = -\sigma/\sqrt{\sigma^2 + \omega^2}\)</span></p></li>
+</ul>
+</section>
+<section id="standard-second-order-system-transfer-function">
+<h4>Standard second-order system transfer function<a class="headerlink" href="#standard-second-order-system-transfer-function" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Transfer function:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[G(s) = \frac{K}{s^2 + 2\zeta\omega_n s + \omega_n^2} \]</div>
+<ul class="simple">
+<li><p>Poles: <span class="math notranslate nohighlight">\(p_{1,2} = -\zeta\omega_n \pm j\omega_n\sqrt{1 - \zeta^2}\)</span></p></li>
+</ul>
+</section>
+<section id="performance-parameters-for-second-order-system">
+<h4>Performance parameters for second-order system<a class="headerlink" href="#performance-parameters-for-second-order-system" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Rise time: <span class="math notranslate nohighlight">\(T_r\)</span> is estimated from graph of normaized rise-time <span class="math notranslate nohighlight">\(\omega_n T_r\)</span> v <span class="math notranslate nohighlight">\(\zeta\)</span> shown in <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 81</span></a>.</p></li>
+<li><p>2% Setting time: <span class="math notranslate nohighlight">\(T_s \approx 4/\sigma\)</span></p></li>
+<li><p>Percentage overshoot: <span class="math notranslate nohighlight">\(\%\mathrm{OS} = \exp\left(-\zeta\pi/\sqrt{1 - \zeta^2}\right) \times 100\)</span></p></li>
+<li><p>Peak time: <span class="math notranslate nohighlight">\(T_p = \pi/\omega\)</span></p></li>
+</ul>
+</section>
+<section id="useful-matlab-commands">
+<h4>Useful MATLAB commands<a class="headerlink" href="#useful-matlab-commands" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tf</span></code>: defines a system as a transfer function <span class="math notranslate nohighlight">\(n(s)/d(s)\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">step</span></code>: plots the step response of a system</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pole</span></code>: lists the poles of a system</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">damp</span></code>: lists the natural frequency and damping ratios of the poles of a system</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stepinfo</span></code>: lists the properties of the step response of a system</p></li>
 </ul>
 </section>
 </section>
+</section>
+<section id="further-exploration">
+<h2>Further exploration<a class="headerlink" href="#further-exploration" title="Permalink to this heading">#</a></h2>
+<p>If you have access to MATLAB (desktop of online), you can install the MATLAB curriculum module <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems">Transfer Function Analysis of Dynamic Systems</a> <span id="id7">[<a class="reference internal" href="../zbib.html#id17" title="Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0.">Allie, 2024</a>]</span> and further explore the concepts given here. The MATLAB Live Script <strong>PoleZeroAnalysis.mlx</strong> provides some interactive tools that enable you to interactively explore second order system response and includes the impact of <em>zeros</em> which we have not covered here.</p>
 </section>
 <section id="still-to-come">
 <h2>Still to come<a class="headerlink" href="#still-to-come" title="Permalink to this heading">#</a></h2>
@@ -1393,6 +1430,16 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<div class="docutils container" id="id8">
+<dl class="citation">
+<dt class="label" id="id24"><span class="brackets">All24</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id7">2</a>)</span></dt>
+<dd><p>Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: <a class="github reference external" href="https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0">MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems</a>.</p>
+</dd>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id2">Boy93</a></span></dt>
+<dd><p>Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: <a class="reference external" href="https://web.stanford.edu/~boyd/ee102/">https://web.stanford.edu/~boyd/ee102/</a>.</p>
+</dd>
+</dl>
+</div>
 </section>
 <section id="footnotes">
 <h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this heading">#</a></h2>
@@ -1401,10 +1448,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <dt class="label" id="unit5-2-1"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
 <dd><p>This is easily determined from <span class="math notranslate nohighlight">\(\left.f(t)\right|_{t\to 0} = \left.\frac{1}{RC} e^{-t/RC}\right|_{t\to 0} = 1/RC\)</span>.</p>
 </dd>
-<dt class="label" id="unit5-1-2"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
-<dd><p>The proof requires us to complete the square in the denominator of the term with the complex roots</p>
-</dd>
-<dt class="label" id="unit5-1-note-4"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
+<dt class="label" id="unit5-1-note-4"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
 <dd><p>In the diagram we use a slightly changed notation: <span class="math notranslate nohighlight">\(\omega_d = \omega\)</span> is the <em>damped natural frequency</em> given by the <em>imaginary part of the pole</em> and <span class="math notranslate nohighlight">\(\sigma_d = \sigma\)</span> is the <em>real part of the pole</em>.</p>
 </dd>
 </dl>
@@ -1522,11 +1566,15 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#real-pole-s-sigma">Real pole <span class="math notranslate nohighlight">\(s=\sigma\)</span>:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-pole-pair-s-sigma-pm-j-omega">Complex pole pair <span class="math notranslate nohighlight">\(s = \sigma \pm j\omega\)</span>:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-pole-pair-s-sigma-pm-j-omega">Complex pole pair <span class="math notranslate nohighlight">\(s = -\sigma \pm j\omega\)</span>:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-second-order-system-transfer-function">Standard second-order system transfer function</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-parameters-for-second-order-system">Performance parameters for second-order system</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-matlab-commands">Useful MATLAB commands</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-exploration">Further exploration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#still-to-come">Still to come</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>

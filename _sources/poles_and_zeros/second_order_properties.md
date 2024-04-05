@@ -263,8 +263,9 @@ Consider a pole in the complex plane illustrated in {numref}`fig:unit5.2:1`
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 :::{figure-md} fig:unit5.2:1
-<img src="pictures/complex_pole.png" alt="Phase  and magnitude  of pole  shown in the complex plane" width="50%" />           
-Phase  and magnitude  of pole  shown in the complex plane
+<img src="pictures/complex_pole.png" alt="Phase phi and magnitude r of pole p shown in the complex plane" width="50%" />  
+
+Phase $\phi$ and magnitude $r$ of pole $p$ shown in the complex plane
 :::
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -312,16 +313,18 @@ $$\sqrt{\mathbf{Re}^2 + \mathbf{Im}^2}$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Using the definitions illustrated in {numref}`fig:pz:3`, $\mathbf{Re} = -\sigma = -\zeta\omega_n$ and $\mathbf{Im} = \omega = \omega_n \sqrt{1 - \zeta^2}$, so :
+Using the definitions illustrated in [Fig. 76](https://cpjobling.github.io/eg-150-textbook/poles_and_zeros/qualitative_properties.html#fig-pz-2), $\mathbf{Re} = -\sigma = -\zeta\omega_n$ and $\mathbf{Im} = \omega = \omega_n \sqrt{1 - \zeta^2}$, so :
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
+$$
 \begin{array}{rl} |p|
  &= \sqrt{\sigma^2 + \omega^2} \\
  &= \sqrt{ (-\zeta \omega_n)^2 + ( \pm \omega_n \sqrt{1-\zeta^2})^2 } \\ 
  &= \sqrt{ \zeta^2 \omega_n^2 + \omega_n^2 (1-\zeta^2) } \\ 
  &= |\omega_n|\ 
 \end{array}
+$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -375,7 +378,7 @@ y(t) = ilaplace(Y); % The impulse response in the time domain
 
 Gives the result
 
-$$x(t) = \frac{K\,{\mathrm{e}}^{-\zeta\, \omega_n \,t } \,\sin \left(\omega_n \,t\,\sqrt{1-\zeta^2 }\right)}{\omega_n \,\sqrt{1-\zeta^2 }}$$ (eq:unit5.1:1)
+$$y(t) = \frac{K\,{\mathrm{e}}^{-\zeta\, \omega_n \,t } \,\sin \left(\omega_n \,t\,\sqrt{1-\zeta^2 }\right)}{\omega_n \,\sqrt{1-\zeta^2 }}$$ (eq:unit5.1:1)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -397,7 +400,7 @@ because the step function $x(t)=u_0(t)$ has a Laplace transform $1/s$. You can f
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Here we will state, without proof[^unit5.1:2], that the step response will be
+Here we will state, without proof, that the step response will be
 
 $$y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\omega}\sin\left(\omega t\right)
 \right)\right)u_o(t)$$ (eq:unit5.1:2)
@@ -409,7 +412,8 @@ where :
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-[^unit5.1:2]: The proof requires us to complete the square in the denominator of the term with the complex roots
+```{note}
+The proof requires us to complete the square in the denominator of the term with the complex roots
 
 $$\left(s^2 + 2\zeta\omega_n + \omega_n^2\right)=\left(s + \zeta\omega_n\right)^2 + \left(\omega_n^2\left(1 - \zeta^2\right)\right)$$
 
@@ -426,6 +430,7 @@ The step-response terms will then be
 $$r_1 e^{-\sigma t}\sin(\omega t) + r_2 e^{-\sigma t}\cos(\omega t)$$
 
 Having computed the residues $r_1$ and $r_2$ the sine and cosine terms can be combined to give the final $e^{-\sigma t}\cos(\omega t + \phi)$ expression.
+```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -547,9 +552,9 @@ The MATLAB code to reproduce this result is given in [example9.mlx](matlab/examp
 (unit.5.2.4)=
 ## Useful quantifiers that result from step response
 
-The relationship between the pole locations and the step response are summarized in {numref}`fig:unit5.2:2`[^unit5.1:note:4]
+The relationship between the pole locations and the step response are summarized in {numref}`fig:unit5_2:2` [^unit5.1:note:4]
 
-:::{figure-md} fig:unit5.2:2
+:::{figure-md} fig:unit5_2:2
 <img src="pictures/resppole.png" alt="Relationship between poles and step response" width="100%" />
 
 Relationship between poles and step response
@@ -733,7 +738,6 @@ Ts = 4/(zeta*omega_n) % seconds
 slideshow:
   slide_type: fragment
 ---
-stepinfo(Hs)
 step(Hs),line([0,1.2],[1.02,1.02]),line([0,1.2],[0.98,0.98])
 ```
 
@@ -991,12 +995,43 @@ zeta = NaN;
 #### Real pole $s=\sigma$:
 
 * Growth rate: $\sigma > 0$, the exponential signal doubles every $T\approx 0.7/\sigma$ s.
-* Time constant: $\sigma < 0$, the exponential signal decays to $37\%$ of it's original value in $\tau = 1/\sigma$ s. The expontial signal reaches $1\%$ of it's original value in $t\approx 4.6\tau$ s.
+* Time constant: $\sigma < 0$, the exponential signal decays to $37\%$ of it's original value in $\tau = 1/\sigma$ s. The exponential signal reaches $1\%$ of it's original value in $t\approx 4.6\tau$ s.
 
-#### Complex pole pair $s = \sigma \pm j\omega$:
+#### Complex pole pair $s = -\sigma \pm j\omega$:
 
-* Representation of denominator: $(s + \sigma + j\omega_n)(s - \sigma + j\omega) = s^2 + 2\sigma Natural frequency: $\omega_n = \sqrt{\sigma^2 + \omega^2}$
-* Damping ration: $\zeta = 
+* Representation of denominator: $(s + \sigma + j\omega_n)(s - \sigma + j\omega) = s^2 + 2\sigma s + \left(\sigma^2 + \omega_n^2\right)$
+* Natural frequency: $\omega_n = \sqrt{\sigma^2 + \omega^2}$
+* Damping ratio: $\zeta = -\sigma/\sqrt{\sigma^2 + \omega^2}$
+
+#### Standard second-order system transfer function
+
+* Transfer function:
+
+$$G(s) = \frac{K}{s^2 + 2\zeta\omega_n s + \omega_n^2} $$
+
+* Poles: $p_{1,2} = -\zeta\omega_n \pm j\omega_n\sqrt{1 - \zeta^2}$
+
+#### Performance parameters for second-order system
+
+* Rise time: $T_r$ is estimated from graph of normaized rise-time $\omega_n T_r$ v $\zeta$ shown in {numref}`fig:unit5.2:2`.
+* 2% Setting time: $T_s \approx 4/\sigma$
+* Percentage overshoot: $\%\mathrm{OS} = \exp\left(-\zeta\pi/\sqrt{1 - \zeta^2}\right) \times 100$
+* Peak time: $T_p = \pi/\omega$
+
+
+#### Useful MATLAB commands
+
+* `tf`: defines a system as a transfer function $n(s)/d(s)$
+* `step`: plots the step response of a system
+* `pole`: lists the poles of a system
+* `damp`: lists the natural frequency and damping ratios of the poles of a system
+* `stepinfo`: lists the properties of the step response of a system
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Further exploration
+
+If you have access to MATLAB (desktop of online), you can install the MATLAB curriculum module [Transfer Function Analysis of Dynamic Systems](https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems) {cite}`tfads` and further explore the concepts given here. The MATLAB Live Script **PoleZeroAnalysis.mlx** provides some interactive tools that enable you to interactively explore second order system response and includes the impact of *zeros* which we have not covered here.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -1008,6 +1043,14 @@ We will the conclude this module by considering frequency response analysis of s
 
 ## References
 
+```{bibliography}
+:filter: docname in docnames
+```
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## Footnotes
+
+```{code-cell}
+
+```
