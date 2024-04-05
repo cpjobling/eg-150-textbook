@@ -103,6 +103,7 @@ slideshow:
   slide_type: subslide
 ---
 format compact
+clear variables
 t = linspace(0,15,100);
 sigma = 0.1;
 % Doubling time
@@ -260,7 +261,7 @@ Consider a pole in the complex plane illustrated in {numref}`fig:unit5.2:1`
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-:::{figure-md} 
+:::{figure-md} fig:unit5.2:1
 
 <img src="pictures/complex_pole.png" alt="Phase  and magnitude  of pole  shown in the complex plane" width="50%" />           
 Phase  and magnitude  of pole  shown in the complex plane
@@ -296,7 +297,6 @@ These parameters are helpful for drawing a connection between the natural respon
 The poles of the system occur when the denominator is zero:
 
 $$p_{1,2} = -\zeta\omega_n \pm \omega_n \sqrt{\zeta^2 - 1}$$
-    
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -329,15 +329,15 @@ This illustrates why this form of the equation is used: the natural frequency is
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-The damping ratio $\zeta$ determines the relative strength of the exponential part of the response. 
+The damping ratio $\zeta$ determines the relative strength of the exponential part of the response.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-As $\zeta\to 1$, the complex part of the pole tends to zero, implying less oscillatory and stronger exponential behavior. 
+As $\zeta\to 1$, the complex part of the pole tends to zero, implying less oscillatory and stronger exponential behavior.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-For stable systems, that implies greater damping. 
+For stable systems, that implies greater damping.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -358,7 +358,8 @@ because the impulse $x(t)=\delta(t)$ has a Laplace transform $1$. You can find t
 slideshow:
   slide_type: subslide
 ---
-syms s zeta omega_n K Y(s) y(t)
+syms s t zeta omega_n K Y(s) y(t) 
+assume(t > 0)
 Y(s) = K/(s^2 + 2*zeta*omega_n*s + omega_n^2)
 ```
 
@@ -431,7 +432,7 @@ Having computed the residues $r_1$ and $r_2$ the sine and cosine terms can be co
 (ex:unit5.2:9)=
 ## Example 9
 
-Determine the step response for a second order system with $\omega_n = 10$ rad/s and $\zeta = 0.5$. Confirm your result using {eq}`eq:unit5.1:2` and the [tf](https://uk.mathworks.com/help/control/ref/tf.html) and [step](https://uk.mathworks.com/help/control/ref/dynamicsystem.step.html) functions.
+Determine the step response for a second order system with $\omega_n = 10$ rad/s and $\zeta = 0.5$. Confirm your result using {eq}`eq:unit5.1:2` and the [`tf`](https://uk.mathworks.com/help/control/ref/tf.html) and [`step`](https://uk.mathworks.com/help/control/ref/dynamicsystem.step.html) functions.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -495,19 +496,25 @@ Confirming the result with {eq}`eq:unit5.1:2` we get:
 slideshow:
   slide_type: fragment
 ---
-t = linspace(0,1.2,100);
 sigma = zeta*omega_n;
 omega = omega_n*sqrt(1 - zeta^2);
-phi = atan(zeta/(1 - zeta^2));
+% Compute response using the formula
+t = linspace(0,1.2,100);
 yst = (1 - exp(-sigma*t).*(cos(omega*t)+(sigma/omega)*sin(omega*t)));
 ```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Plot the result
 
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
-plot(t,yst),grid,xlabel('Time (seconds)'),ylabel('y_s(t)'),title('Step Response: Computed with formula')
+plot(t,yst),grid,...
+xlabel('Time (seconds)'),ylabel('y_s(t)'),...
+title('Step Response: Computed with formula')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -540,17 +547,291 @@ The MATLAB code to reproduce this result is given in [example9.mlx](matlab/examp
 (unit5.2.4)=
 ## Useful quantifiers that result from step response
 
-+++
+The relationship between the pole locations and the step response are summarized in {numref}`fig:unit5.2:2`[^unit5.1:note:4]
+
+:::{figure-md} fig:unit5.2:2
+<img src="pictures/resppole.png" alt="Relationship between poles and step response" width="100%" />
+
+Relationship between poles and step response
+:::
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+[^unit5.1:note:4]: In the diagram we use a slightly changed notation: $\omega_d = \omega$ is the *damped natural frequency* given by the *imaginary part of the pole* and $\sigma_d = \sigma$ is the *real part of the pole*.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Knowledge of the location of the poles and their damping ratio and natural frequency are useful for qualtitaive anaysis of the response of a complex pole pair. There are also a number of parameters that quantively define the features of the step response which we may be interested in. These are shown in the right-hand picture of {numref}`fig:unit5.2:2`. Knowledge of the poles allows us to predict the step response. But also, usefully for many design problems, knowledge of the step response allows us to predict the location of the poles.
+
+We will explore these ideas in the following sections.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Poles
+
+The location of the system poles is important and can be obtained by factorizing the denominator of $H(s)$ either symbolically or numerically. There is also a handy function [`pole`](https://uk.mathworks.com/help/ident/ref/dynamicsystem.pole.html) which will take these values from a transfer function. 
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+We will illustrate these with the example used in {ref}`ex:unit5.2:9`.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+First we set up the system function $H(s)$
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+syms s t
+zeta = 0.5; omega_n = 10;
+H = omega_n^2/(s^2 + 2*zeta*omega_n*s + omega_n^2)
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Find the poles symbolically
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+[num,den] = numden(H);
+sym_poles = factor(den,'FactorMode','full') % FactorMode needed to reduce quadratic
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Factors interpreted as
+
+$$\left(s + 5 + j5\sqrt{3}\right)\left(s + 5 - j5\sqrt{3}\right)$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Now find the poles numerically
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+% Convert symbolic polynomials to numeric polynomials
+n = sym2poly(num); d = sym2poly(den);
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+% Compute the roots
+num_poles = roots(d)
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+FInally from the transfer function model
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+Hs = tf(n,d);
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+poles = pole(Hs)
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Damping ratio and natural frequencies
+
+These are most conveniently obtained from the transfer function using the [`damp`](https://uk.mathworks.com/help/control/ref/dynamicsystem.damp.html) function.
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+[wn,z] = damp(Hs)
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+The function `damp` can also return the poles
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+[wn,z,p] = damp(Hs)
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Rise-tme
 
-+++
+The *rise time* $T_r$ is a measure of the speed of response of a system. It is usually taken to be the time taken to transition from 10% to 90% of the final value in the initial rise of the response. It is shown in {numref}`fig:unit5.2:2`.
+
+The rise-time depends on $\omega_n$ but its actual value is also dependent on the damping ratio $\zeta$ so we rely on a calibration curve such as that shown in {numref}`fig:unit5.2:2`.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+:::{figure-md} fig:unit5.2:2
+<img src="pictures/trcurve.png" alt="Damping ratio as a function of normalised rise-time for a second-order underdamped response" width="50%" />
+
+Damping ratio as a function of normalised rise-time for a second-order underdamped response
+:::
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+For the problem being considered $\zeta = 0.5$, so $\omega_n T_r \approx 1.65$ giving
+
+$$T_r \approx \frac{1.65}{\omega_n} = \frac{1.65}{10} = 0.165\,\mathrm{s}.$$
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+step(Hs),line([0,0.1],[0.1,0.1]),line([0,0.25],[0.9,0.9])
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Settling time
 
-+++
+The *settling time* $T_s$ is defined as the time taken for the peaks of the oscillations in the step response to be bounded by some arbitrary limit. In {numref}`fig:unit5.2:2` the bounds have been set to 2%.
+
+The actual setting time is related to the real part of the poles and, for this case,
+
+$$2\% T_s \approx \frac{4}{\zeta\omega_n}$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+For our example
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+Ts = 4/(zeta*omega_n) % seconds
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+stepinfo(Hs)
+step(Hs),line([0,1.2],[1.02,1.02]),line([0,1.2],[0.98,0.98])
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+The value looks about right!
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Peak overshoot
+
+The peak overshoot is a measure of damping in a system and is the height of the first peak ($C_\max$ in {numref}`fig:unit5.2:2`). It is usually quoted as a percentage of the final value.
+
+$$\%\mathrm{OS} = \exp\left(\frac{-\zeta\pi}{\sqrt{1-\zeta^2}}\right)\times 100$$ 
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+If we know the peak overshoot, we can calculate the damping ratio $\zeta$ using the formula:
+
+$$\zeta = \frac{-\log_e\left(\%\mathrm{OS}/100\right)}{\sqrt{\pi^2 + \log_e^2\left(\%\mathrm{OS}/100\right)}} $$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+For our example
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+POS = exp(-zeta*pi/sqrt(1 - zeta^2))*100
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+step(Hs),line([0,1.2],[1.16304,1.16304])
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Reverse formula check
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+z = -log(POS/100)/sqrt(pi^2 + log(POS/100)^2)
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Peak time
+
+We sometimes compute the *peak time* $T_p$, which is the time at which the first peak occurs. It depends on the damped natural frequency:
+
+$$T_p = \frac{\pi}{\omega_d}  = \frac{\pi}{\omega_n\sqrt{1-\zeta^2}}$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+For our example
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+Tp = pi/(omega_n*sqrt(1 - zeta^2))
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+step(Hs),line([Tp,Tp],[0,1.16304])
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### List all properties
+
+MATLAB provides a useful function [stepinfo](https://uk.mathworks.com/help/control/ref/dynamicsystem.stepinfo.html) that computes a step response for a system and takes measurements of the response to summarize the useful quantitative data defined above as well as a few more quantities.
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+stepinfo(Hs)
+```
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+You should compare the values computed with the approximations given in this section.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -643,6 +924,60 @@ slideshow:
 ---
 step(Fs)
 ```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(ex16.3)=
+### Exercise 16.3: Spring-Mass-Damper System
+
+You can analyze a mass-spring-damper system ({numref}`fig:unit5.2:3`) by looking at the poles of its transfer function.
+
+:::{figure-md} fig:unit5.2:3
+<img src="pictures/smd.png" width="50%" alt="Diagram of a spring-mass-damper system" />
+
+Diagram of a spring-mass-damper system
+:::
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Consider a mass-spring-damper that
+* is dynamically forced by an arbitrary function 
+* has zero initial conditions: $x(0)=0$ and $x'(0)=0$
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+The position transfer function is
+
+$$G(s) = \frac{X(s)}{U(s)} = \frac{1}{ms^2 + cs + k} $$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(a) Write the mass-spring-damper transfer function in the form 
+         
+$$G(s) = \frac{ K }{s^2 + 2 \zeta \omega_n s  + \omega_n^2}$$
+
+and solve for the expressions of the gain $K$, damping ratio $\zeta$, and natural frequency $\omega_n$ in terms of the mass-spring-damper parameters. Write your answers using the symbolic variables $c$, $m$, and $k$.
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+% Use these symbolic variables
+syms m c k
+% Replace the NaNs with your expressions
+K = NaN;
+omega_n = NaN;
+zeta = NaN;
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(b)  Solve for the symbolic expressions of the poles of $G$ in terms of the mass-spring-damper parameters $m$, $c$, and $k$. Store the expressions below in `pplus` and `pminus` where `pplus` stores the positive root.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(c) Plot the step response of the system $G$ starting with $k = m = 1$ and $c=0$. Note the values of the poles, damping ratio, and natural frequency obtained. Observe the step-response parameters obtained using `sysinfo`. Adjust the values of $k$, $m$ and $c$ and comment on the effects on the step response observed.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

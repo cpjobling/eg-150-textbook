@@ -32,6 +32,7 @@ There are no exercises in this unit.
 {ref}`examples16` covers
 * {ref}`ex16.1`
 * {ref}`ex16.2`
+* {ref}`ex16.2`
 
 ```python
 

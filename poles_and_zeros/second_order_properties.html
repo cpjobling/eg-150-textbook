@@ -462,9 +462,13 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-quantifiers-that-result-from-step-response">Useful quantifiers that result from step response</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poles">Poles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#damping-ratio-and-natural-frequencies">Damping ratio and natural frequencies</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rise-tme">Rise-tme</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#settling-time">Settling time</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peak-overshoot">Peak overshoot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peak-time">Peak time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-all-properties">List all properties</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-16">Exercises 16</a><ul class="nav section-nav flex-column">
@@ -473,6 +477,7 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-solution-to-exercise-16-2">Partial solution to Exercise 16.2</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-16-3-spring-mass-damper-system">Exercise 16.3: Spring-Mass-Damper System</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
@@ -551,6 +556,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="w"> </span><span class="n">compact</span>
+<span class="nb">clear</span><span class="w"> </span><span class="n">variables</span>
 <span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
 <span class="n">sigma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span>
 <span class="c">% Doubling time</span>
@@ -576,12 +582,12 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/94483b45bf2a26092974ae5bab76e938eaab675a21b3cf57e9b7c45f4712868e.png" src="../_images/94483b45bf2a26092974ae5bab76e938eaab675a21b3cf57e9b7c45f4712868e.png" />
+<img alt="../_images/4e5d1ada735dcee2cb987c487274d92cc0f4d1c64f0bc6e75b49804aae7126ca.png" src="../_images/4e5d1ada735dcee2cb987c487274d92cc0f4d1c64f0bc6e75b49804aae7126ca.png" />
 </div>
 </div>
 <p>Given that <span class="math notranslate nohighlight">\(\sigma = 0.1\)</span>, the doubling time <span class="math notranslate nohighlight">\(T \approx 0.7/\sigma = 7\)</span> s. The initial value is <span class="math notranslate nohighlight">\(10\)</span> at <span class="math notranslate nohighlight">\(t=0\)</span> s. It has doubled to <span class="math notranslate nohighlight">\(20\)</span> at <span class="math notranslate nohighlight">\(t\approx 7\)</span> s, and has doubled again to <span class="math notranslate nohighlight">\(40\)</span> at <span class="math notranslate nohighlight">\(t\approx 14\)</span>.</p>
 <p>We have added the exact solutions to the plot.</p>
-<p>The MATLAB code to reproduce this result is given in <span class="xref myst">example7.mlx</span></p>
+<p>The MATLAB code to reproduce this result is given in <a class="reference download internal" download="" href="../_downloads/3cf432ee93ab868ce1a2f05f2e7667ec/example7.mlx"><span class="xref download myst">example7.mlx</span></a></p>
 </section>
 </section>
 <section id="rate-of-exponential-decay">
@@ -653,10 +659,10 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/460cc17ea12318b092c7702fc47c706ae111c8c851f121120a75319578e64f12.png" src="../_images/460cc17ea12318b092c7702fc47c706ae111c8c851f121120a75319578e64f12.png" />
+<img alt="../_images/201348a74b6154533e0d43f5f4a3555f8502beb9a84ee030fb013f1bc701efab.png" src="../_images/201348a74b6154533e0d43f5f4a3555f8502beb9a84ee030fb013f1bc701efab.png" />
 </div>
 </div>
-<p>The MATLAB code to reproduce this result is given in <span class="xref myst">example8.mlx</span></p>
+<p>The MATLAB code to reproduce this result is given in <a class="reference download internal" download="" href="../_downloads/b2296fa173d1562d6258c6ffcbe8592d/example8.mlx"><span class="xref download myst">example8.mlx</span></a></p>
 </section>
 </section>
 </section>
@@ -713,7 +719,8 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <p>because the impulse <span class="math notranslate nohighlight">\(x(t)=\delta(t)\)</span> has a Laplace transform <span class="math notranslate nohighlight">\(1\)</span>. You can find the response’s analytic form by referring to a table or using the MATLAB <a class="reference external" href="https://uk.mathworks.com/help/symbolic/sym.ilaplace.html">ilaplace</a> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="w"> </span><span class="s">zeta</span><span class="w"> </span><span class="s">omega_n</span><span class="w"> </span><span class="s">K</span><span class="w"> </span><span class="s">Y(s)</span><span class="w"> </span><span class="s">y(t)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="w"> </span><span class="s">t</span><span class="w"> </span><span class="s">zeta</span><span class="w"> </span><span class="s">omega_n</span><span class="w"> </span><span class="s">K</span><span class="w"> </span><span class="s">Y(s)</span><span class="w"> </span><span class="s">y(t)</span><span class="w"> </span>
+<span class="n">assume</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
 <span class="n">Y</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">K</span><span class="o">/</span><span class="p">(</span><span class="n">s</span>^<span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">zeta</span><span class="o">*</span><span class="n">omega_n</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">omega_n</span>^<span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -777,7 +784,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 <section id="example-9">
 <span id="ex-unit5-2-9"></span><h2>Example 9<a class="headerlink" href="#example-9" title="Permalink to this heading">#</a></h2>
-<p>Determine the step response for a second order system with <span class="math notranslate nohighlight">\(\omega_n = 10\)</span> rad/s and <span class="math notranslate nohighlight">\(\zeta = 0.5\)</span>. Confirm your result using <a class="reference internal" href="#equation-eq-unit5-1-2">(61)</a> and the <a class="reference external" href="https://uk.mathworks.com/help/control/ref/tf.html">tf</a> and <a class="reference external" href="https://uk.mathworks.com/help/control/ref/dynamicsystem.step.html">step</a> functions.</p>
+<p>Determine the step response for a second order system with <span class="math notranslate nohighlight">\(\omega_n = 10\)</span> rad/s and <span class="math notranslate nohighlight">\(\zeta = 0.5\)</span>. Confirm your result using <a class="reference internal" href="#equation-eq-unit5-1-2">(61)</a> and the <a class="reference external" href="https://uk.mathworks.com/help/control/ref/tf.html"><code class="docutils literal notranslate"><span class="pre">tf</span></code></a> and <a class="reference external" href="https://uk.mathworks.com/help/control/ref/dynamicsystem.step.html"><code class="docutils literal notranslate"><span class="pre">step</span></code></a> functions.</p>
 <section id="solution-to-example-9">
 <h3>Solution to example 9<a class="headerlink" href="#solution-to-example-9" title="Permalink to this heading">#</a></h3>
 <p>Analytical solution using the symbolic math toolbox</p>
@@ -815,29 +822,32 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/56aeeb0f83a67f422baa4406885e10d6518e269f130ddf6789f97abcf4886684.png" src="../_images/56aeeb0f83a67f422baa4406885e10d6518e269f130ddf6789f97abcf4886684.png" />
+<img alt="../_images/d7409429a1931f4e4f5ace3b9cbbe00b526708f1499bacea4362e70c395043ce.png" src="../_images/d7409429a1931f4e4f5ace3b9cbbe00b526708f1499bacea4362e70c395043ce.png" />
 </div>
 </div>
 <p>Confirming the result with <a class="reference internal" href="#equation-eq-unit5-1-2">(61)</a> we get:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
-<span class="n">sigma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">zeta</span><span class="o">*</span><span class="n">omega_n</span><span class="p">;</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">sigma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">zeta</span><span class="o">*</span><span class="n">omega_n</span><span class="p">;</span>
 <span class="n">omega</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega_n</span><span class="o">*</span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zeta</span>^<span class="mi">2</span><span class="p">);</span>
-<span class="n">phi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">atan</span><span class="p">(</span><span class="n">zeta</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zeta</span>^<span class="mi">2</span><span class="p">));</span>
+<span class="c">% Compute response using the formula</span>
+<span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
 <span class="n">yst</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">.*</span><span class="p">(</span><span class="nb">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">sigma</span><span class="o">/</span><span class="n">omega</span><span class="p">)</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)));</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Plot the result</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">yst</span><span class="p">),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time (seconds)&#39;</span><span class="p">),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;y_s(t)&#39;</span><span class="p">),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Step Response: Computed with formula&#39;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">yst</span><span class="p">),</span><span class="nb">grid</span><span class="p">,</span><span class="k">...</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time (seconds)&#39;</span><span class="p">),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;y_s(t)&#39;</span><span class="p">),</span><span class="k">...</span>
+<span class="nb">title</span><span class="p">(</span><span class="s">&#39;Step Response: Computed with formula&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1089c5ca65ee39ffcdb22390320828c6fd7abf596e1f79ebcacb70e4ef258a89.png" src="../_images/1089c5ca65ee39ffcdb22390320828c6fd7abf596e1f79ebcacb70e4ef258a89.png" />
+<img alt="../_images/5b2a4bd1c073475f851ecbd08c5a888691797d2bf84ac07e1a6b9cd524874c8c.png" src="../_images/5b2a4bd1c073475f851ecbd08c5a888691797d2bf84ac07e1a6b9cd524874c8c.png" />
 </div>
 </div>
 <p>Using the <code class="docutils literal notranslate"><span class="pre">tf</span></code> and <code class="docutils literal notranslate"><span class="pre">step</span></code> functions we get:</p>
@@ -862,7 +872,9 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + 10 s + 100
- 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
@@ -877,22 +889,335 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/12f09098f52ba31f2f156192f02e5c1d039a8d82163f2028fb0794f449f9cf39.png" src="../_images/12f09098f52ba31f2f156192f02e5c1d039a8d82163f2028fb0794f449f9cf39.png" />
+<img alt="../_images/68b122b756e60128569fcfe63f8c7ddb4c3cf8e3a03198708b450ca4c875e493.png" src="../_images/68b122b756e60128569fcfe63f8c7ddb4c3cf8e3a03198708b450ca4c875e493.png" />
 </div>
 </div>
-<p>The MATLAB code to reproduce this result is given in <span class="xref myst">example9.mlx</span></p>
+<p>The MATLAB code to reproduce this result is given in <a class="reference download internal" download="" href="../_downloads/3ba053ad62f7b263884af00ba1ace7eb/example9.mlx"><span class="xref download myst">example9.mlx</span></a></p>
 </section>
 </section>
 <section id="useful-quantifiers-that-result-from-step-response">
 <span id="unit5-2-4"></span><h2>Useful quantifiers that result from step response<a class="headerlink" href="#useful-quantifiers-that-result-from-step-response" title="Permalink to this heading">#</a></h2>
+<p>The relationship between the pole locations and the step response are summarized in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5.2:2</span></code><a class="footnote-reference brackets" href="#unit5-1-note-4" id="id6">3</a></p>
+<figure class="align-default" id="fig-unit5-2-2">
+<a class="reference internal image-reference" href="../_images/resppole.png"><img alt="Relationship between poles and step response" src="../_images/resppole.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 77 </span><span class="caption-text">Relationship between poles and step response</span><a class="headerlink" href="#fig-unit5-2-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Knowledge of the location of the poles and their damping ratio and natural frequency are useful for qualtitaive anaysis of the response of a complex pole pair. There are also a number of parameters that quantively define the features of the step response which we may be interested in. These are shown in the right-hand picture of <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5.2:2</span></code>. Knowledge of the poles allows us to predict the step response. But also, usefully for many design problems, knowledge of the step response allows us to predict the location of the poles.</p>
+<p>We will explore these ideas in the following sections.</p>
+<section id="poles">
+<h3>Poles<a class="headerlink" href="#poles" title="Permalink to this heading">#</a></h3>
+<p>The location of the system poles is important and can be obtained by factorizing the denominator of <span class="math notranslate nohighlight">\(H(s)\)</span> either symbolically or numerically. There is also a handy function <a class="reference external" href="https://uk.mathworks.com/help/ident/ref/dynamicsystem.pole.html"><code class="docutils literal notranslate"><span class="pre">pole</span></code></a> which will take these values from a transfer function.</p>
+<p>We will illustrate these with the example used in <a class="reference internal" href="#ex-unit5-2-9"><span class="std std-ref">Example 9</span></a>.</p>
+<p>First we set up the system function <span class="math notranslate nohighlight">\(H(s)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="w"> </span><span class="s">t</span>
+<span class="n">zeta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"> </span><span class="n">omega_n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="n">H</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega_n</span>^<span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">s</span>^<span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">zeta</span><span class="o">*</span><span class="n">omega_n</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">omega_n</span>^<span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>H =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100/(s^2 + 10*s + 100)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Find the poles symbolically</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">num</span><span class="p">,</span><span class="n">den</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">numden</span><span class="p">(</span><span class="n">H</span><span class="p">);</span>
+<span class="n">sym_poles</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">factor</span><span class="p">(</span><span class="n">den</span><span class="p">,</span><span class="s">&#39;FactorMode&#39;</span><span class="p">,</span><span class="s">&#39;full&#39;</span><span class="p">)</span><span class="w"> </span><span class="c">% FactorMode needed to reduce quadratic</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sym_poles =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[s + 5 + 3^(1/2)*5i, s + 5 - 3^(1/2)*5i]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Factors interpreted as</p>
+<div class="math notranslate nohighlight">
+\[\left(s + 5 + j5\sqrt{3}\right)\left(s + 5 - j5\sqrt{3}\right)\]</div>
+<p>Now find the poles numerically</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Convert symbolic polynomials to numeric polynomials</span>
+<span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sym2poly</span><span class="p">(</span><span class="n">num</span><span class="p">);</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sym2poly</span><span class="p">(</span><span class="n">den</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Compute the roots</span>
+<span class="n">num_poles</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">roots</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>num_poles =
+  -5.0000 + 8.6603i
+  -5.0000 - 8.6603i
+</pre></div>
+</div>
+</div>
+</div>
+<p>FInally from the transfer function model</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Hs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">d</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">poles</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">pole</span><span class="p">(</span><span class="n">Hs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>poles =
+  -5.0000 + 8.6603i
+  -5.0000 - 8.6603i
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="damping-ratio-and-natural-frequencies">
+<h3>Damping ratio and natural frequencies<a class="headerlink" href="#damping-ratio-and-natural-frequencies" title="Permalink to this heading">#</a></h3>
+<p>These are most conveniently obtained from the transfer function using the <a class="reference external" href="https://uk.mathworks.com/help/control/ref/dynamicsystem.damp.html"><code class="docutils literal notranslate"><span class="pre">damp</span></code></a> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">wn</span><span class="p">,</span><span class="n">z</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">damp</span><span class="p">(</span><span class="n">Hs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>wn =
+   10.0000
+   10.0000
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z =
+    0.5000
+    0.5000
+</pre></div>
+</div>
+</div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">damp</span></code> can also return the poles</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">wn</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">p</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">damp</span><span class="p">(</span><span class="n">Hs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>wn =
+   10.0000
+   10.0000
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z =
+    0.5000
+    0.5000
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p =
+  -5.0000 + 8.6603i
+  -5.0000 - 8.6603i
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="rise-tme">
 <h3>Rise-tme<a class="headerlink" href="#rise-tme" title="Permalink to this heading">#</a></h3>
+<p>The <em>rise time</em> <span class="math notranslate nohighlight">\(T_r\)</span> is a measure of the speed of response of a system. It is usually taken to be the time taken to transition from 10% to 90% of the final value in the initial rise of the response. It is shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5.2:2</span></code>.</p>
+<p>The rise-time depends on <span class="math notranslate nohighlight">\(\omega_n\)</span> but its actual value is also dependent on the damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> so we rely on a calibration curve such as that shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5.2:2</span></code>.</p>
+<figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/trcurve.png"><img alt="Damping ratio as a function of normalised rise-time for a second-order underdamped response" src="../_images/trcurve.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 78 </span><span class="caption-text">Damping ratio as a function of normalised rise-time for a second-order underdamped response</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For the problem being considered <span class="math notranslate nohighlight">\(\zeta = 0.5\)</span>, so <span class="math notranslate nohighlight">\(\omega_n T_r \approx 1.65\)</span> giving</p>
+<div class="math notranslate nohighlight">
+\[T_r \approx \frac{1.65}{\omega_n} = \frac{1.65}{10} = 0.165\,\mathrm{s}.\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">step</span><span class="p">(</span><span class="n">Hs</span><span class="p">),</span><span class="nb">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">],[</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">]),</span><span class="nb">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.25</span><span class="p">],[</span><span class="mf">0.9</span><span class="p">,</span><span class="mf">0.9</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/52da477287dcfc4b1309563a459d39c2d8dfa26542b70e2e6d696b657045d482.png" src="../_images/52da477287dcfc4b1309563a459d39c2d8dfa26542b70e2e6d696b657045d482.png" />
+</div>
+</div>
 </section>
 <section id="settling-time">
 <h3>Settling time<a class="headerlink" href="#settling-time" title="Permalink to this heading">#</a></h3>
+<p>The <em>settling time</em> <span class="math notranslate nohighlight">\(T_s\)</span> is defined as the time taken for the peaks of the oscillations in the step response to be bounded by some arbitrary limit. In <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5.2:2</span></code> the bounds have been set to 2%.</p>
+<p>The actual setting time is related to the real part of the poles and, for this case,</p>
+<div class="math notranslate nohighlight">
+\[2\% T_s \approx \frac{4}{\zeta\omega_n}\]</div>
+<p>For our example</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Ts</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">4</span><span class="o">/</span><span class="p">(</span><span class="n">zeta</span><span class="o">*</span><span class="n">omega_n</span><span class="p">)</span><span class="w"> </span><span class="c">% seconds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ts =
+    0.8000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">stepinfo</span><span class="p">(</span><span class="n">Hs</span><span class="p">)</span>
+<span class="nb">step</span><span class="p">(</span><span class="n">Hs</span><span class="p">),</span><span class="nb">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.2</span><span class="p">],[</span><span class="mf">1.02</span><span class="p">,</span><span class="mf">1.02</span><span class="p">]),</span><span class="nb">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.2</span><span class="p">],[</span><span class="mf">0.98</span><span class="p">,</span><span class="mf">0.98</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans = 
+  struct with fields:
+
+         RiseTime: 0.1639
+    TransientTime: 0.8076
+     SettlingTime: 0.8076
+      SettlingMin: 0.9315
+      SettlingMax: 1.1629
+        Overshoot: 16.2929
+       Undershoot: 0
+             Peak: 1.1629
+         PeakTime: 0.3592
+</pre></div>
+</div>
+<img alt="../_images/11a89f9aeb406965a6bf8745be933070107d308f4a4a7759501ac304ed4c63d0.png" src="../_images/11a89f9aeb406965a6bf8745be933070107d308f4a4a7759501ac304ed4c63d0.png" />
+</div>
+</div>
+<p>The value looks about right!</p>
 </section>
 <section id="peak-overshoot">
 <h3>Peak overshoot<a class="headerlink" href="#peak-overshoot" title="Permalink to this heading">#</a></h3>
+<p>The peak overshoot is a measure of damping in a system and is the height of the first peak (<span class="math notranslate nohighlight">\(C_\max\)</span> in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:unit5.2:2</span></code>). It is usually quoted as a percentage of the final value.</p>
+<div class="math notranslate nohighlight">
+\[\%\mathrm{OS} = \exp\left(\frac{-\zeta\pi}{\sqrt{1-\zeta^2}}\right)\times 100\]</div>
+<p>If we know the peak overshoot, we can calculate the damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> using the formula:</p>
+<div class="math notranslate nohighlight">
+\[\zeta = \frac{-\log_e\left(\%\mathrm{OS}/100\right)}{\sqrt{\pi^2 + \log_e^2\left(\%\mathrm{OS}/100\right)}} \]</div>
+<p>For our example</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">POS</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">zeta</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zeta</span>^<span class="mi">2</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>POS =
+   16.3034
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">step</span><span class="p">(</span><span class="n">Hs</span><span class="p">),</span><span class="nb">line</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.2</span><span class="p">],[</span><span class="mf">1.16304</span><span class="p">,</span><span class="mf">1.16304</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6fd6edf1fc4f75c226a8de80a71b12722200e8f7eebbdbeacb43df875eecbb7a.png" src="../_images/6fd6edf1fc4f75c226a8de80a71b12722200e8f7eebbdbeacb43df875eecbb7a.png" />
+</div>
+</div>
+<p>Reverse formula check</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="nb">log</span><span class="p">(</span><span class="n">POS</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">(</span><span class="nb">pi</span>^<span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">log</span><span class="p">(</span><span class="n">POS</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>^<span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z =
+    0.5000
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="peak-time">
+<h3>Peak time<a class="headerlink" href="#peak-time" title="Permalink to this heading">#</a></h3>
+<p>We sometimes compute the <em>peak time</em> <span class="math notranslate nohighlight">\(T_p\)</span>, which is the time at which the first peak occurs. It depends on the damped natural frequency:</p>
+<div class="math notranslate nohighlight">
+\[T_p = \frac{\pi}{\omega_d}  = \frac{\pi}{\omega_n\sqrt{1-\zeta^2}}\]</div>
+<p>For our example</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Tp</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">pi</span><span class="o">/</span><span class="p">(</span><span class="n">omega_n</span><span class="o">*</span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zeta</span>^<span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tp =
+    0.3628
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">step</span><span class="p">(</span><span class="n">Hs</span><span class="p">),</span><span class="nb">line</span><span class="p">([</span><span class="n">Tp</span><span class="p">,</span><span class="n">Tp</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.16304</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/ca0c2e617a6d8365296b68f4e098f59327f6bcd191360a06336b23cf3037986c.png" src="../_images/ca0c2e617a6d8365296b68f4e098f59327f6bcd191360a06336b23cf3037986c.png" />
+</div>
+</div>
+</section>
+<section id="list-all-properties">
+<h3>List all properties<a class="headerlink" href="#list-all-properties" title="Permalink to this heading">#</a></h3>
+<p>MATLAB provides a useful function <a class="reference external" href="https://uk.mathworks.com/help/control/ref/dynamicsystem.stepinfo.html">stepinfo</a> that computes a step response for a system and takes measurements of the response to summarize the useful quantitative data defined above as well as a few more quantities.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">stepinfo</span><span class="p">(</span><span class="n">Hs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans = 
+  struct with fields:
+
+         RiseTime: 0.1639
+    TransientTime: 0.8076
+     SettlingTime: 0.8076
+      SettlingMin: 0.9315
+      SettlingMax: 1.1629
+        Overshoot: 16.2929
+       Undershoot: 0
+             Peak: 1.1629
+         PeakTime: 0.3592
+</pre></div>
+</div>
+</div>
+</div>
+<p>You should compare the values computed with the approximations given in this section.</p>
 </section>
 </section>
 <section id="exercises-16">
@@ -990,7 +1315,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/15d7873cf38be4e78f8a4138e0c5726ef3f326ccb9f0948e43883fd82b864798.png" src="../_images/15d7873cf38be4e78f8a4138e0c5726ef3f326ccb9f0948e43883fd82b864798.png" />
+<img alt="../_images/0c38d46bed7aa08247e16dc0e09e295f8aac4a7abbf4db6398d18402467c32ab.png" src="../_images/0c38d46bed7aa08247e16dc0e09e295f8aac4a7abbf4db6398d18402467c32ab.png" />
 </div>
 </div>
 <p><strong>Bonus</strong>: the step response is</p>
@@ -1001,10 +1326,46 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/30b7de672e43260d3c9f305667eacd747de7a1c7faf9d5bd12b933e7f17b7208.png" src="../_images/30b7de672e43260d3c9f305667eacd747de7a1c7faf9d5bd12b933e7f17b7208.png" />
+<img alt="../_images/5fd676d74740054ad5c074cf454004ae8fce40b12e81eeac809c09a0dd65e7c9.png" src="../_images/5fd676d74740054ad5c074cf454004ae8fce40b12e81eeac809c09a0dd65e7c9.png" />
 </div>
 </div>
 </section>
+</section>
+<section id="exercise-16-3-spring-mass-damper-system">
+<span id="ex16-3"></span><h3>Exercise 16.3: Spring-Mass-Damper System<a class="headerlink" href="#exercise-16-3-spring-mass-damper-system" title="Permalink to this heading">#</a></h3>
+<p>You can analyze a mass-spring-damper system (<a class="reference internal" href="#fig-unit5-2-3"><span class="std std-numref">Fig. 79</span></a>) by looking at the poles of its transfer function.</p>
+<figure class="align-default" id="fig-unit5-2-3">
+<a class="reference internal image-reference" href="../_images/smd.png"><img alt="Diagram of a spring-mass-damper system" src="../_images/smd.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 79 </span><span class="caption-text">Diagram of a spring-mass-damper system</span><a class="headerlink" href="#fig-unit5-2-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Consider a mass-spring-damper that</p>
+<ul class="simple">
+<li><p>is dynamically forced by an arbitrary function</p></li>
+<li><p>has zero initial conditions: <span class="math notranslate nohighlight">\(x(0)=0\)</span> and <span class="math notranslate nohighlight">\(x'(0)=0\)</span></p></li>
+</ul>
+<p>The position transfer function is</p>
+<div class="math notranslate nohighlight">
+\[G(s) = \frac{X(s)}{U(s)} = \frac{1}{ms^2 + cs + k} \]</div>
+<p>(a) Write the mass-spring-damper transfer function in the form</p>
+<div class="math notranslate nohighlight">
+\[G(s) = \frac{ K }{s^2 + 2 \zeta \omega_n s  + \omega_n^2}\]</div>
+<p>and solve for the expressions of the gain <span class="math notranslate nohighlight">\(K\)</span>, damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span>, and natural frequency <span class="math notranslate nohighlight">\(\omega_n\)</span> in terms of the mass-spring-damper parameters. Write your answers using the symbolic variables <span class="math notranslate nohighlight">\(c\)</span>, <span class="math notranslate nohighlight">\(m\)</span>, and <span class="math notranslate nohighlight">\(k\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Use these symbolic variables</span>
+<span class="n">syms</span><span class="w"> </span><span class="s">m</span><span class="w"> </span><span class="s">c</span><span class="w"> </span><span class="s">k</span>
+<span class="c">% Replace the NaNs with your expressions</span>
+<span class="n">K</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span><span class="p">;</span>
+<span class="n">omega_n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span><span class="p">;</span>
+<span class="n">zeta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(b)  Solve for the symbolic expressions of the poles of <span class="math notranslate nohighlight">\(G\)</span> in terms of the mass-spring-damper parameters <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(c\)</span>, and <span class="math notranslate nohighlight">\(k\)</span>. Store the expressions below in <code class="docutils literal notranslate"><span class="pre">pplus</span></code> and <code class="docutils literal notranslate"><span class="pre">pminus</span></code> where <code class="docutils literal notranslate"><span class="pre">pplus</span></code> stores the positive root.</p>
+<p>(c) Plot the step response of the system <span class="math notranslate nohighlight">\(G\)</span> starting with <span class="math notranslate nohighlight">\(k = m = 1\)</span> and <span class="math notranslate nohighlight">\(c=0\)</span>. Note the values of the poles, damping ratio, and natural frequency obtained. Observe the step-response parameters obtained using <code class="docutils literal notranslate"><span class="pre">sysinfo</span></code>. Adjust the values of <span class="math notranslate nohighlight">\(k\)</span>, <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(c\)</span> and comment on the effects on the step response observed.</p>
 </section>
 </section>
 <section id="summary">
@@ -1039,6 +1400,9 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </dd>
 <dt class="label" id="unit5-1-2"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
 <dd><p>The proof requires us to complete the square in the denominator of the term with the complex roots</p>
+</dd>
+<dt class="label" id="unit5-1-note-4"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
+<dd><p>In the diagram we use a slightly changed notation: <span class="math notranslate nohighlight">\(\omega_d = \omega\)</span> is the <em>damped natural frequency</em> given by the <em>imaginary part of the pole</em> and <span class="math notranslate nohighlight">\(\sigma_d = \sigma\)</span> is the <em>real part of the pole</em>.</p>
 </dd>
 </dl>
 </section>
@@ -1134,9 +1498,13 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-quantifiers-that-result-from-step-response">Useful quantifiers that result from step response</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poles">Poles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#damping-ratio-and-natural-frequencies">Damping ratio and natural frequencies</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rise-tme">Rise-tme</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#settling-time">Settling time</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peak-overshoot">Peak overshoot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peak-time">Peak time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-all-properties">List all properties</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-16">Exercises 16</a><ul class="nav section-nav flex-column">
@@ -1145,6 +1513,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-solution-to-exercise-16-2">Partial solution to Exercise 16.2</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-16-3-spring-mass-damper-system">Exercise 16.3: Spring-Mass-Damper System</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
