@@ -42,7 +42,7 @@ You can watch the video on YouTube here:
 ## Agenda
 
 * {ref}`unit.5.2.1`
-* {ref}`unit.5.2.2`
+* {ref}`unit5.2.2`
 * {ref}`unit.5.2.3`
 * {ref}`examples16`
 
@@ -257,11 +257,11 @@ The locations of the poles in the $s$-plane determine the natural oscillation fr
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Consider a pole in the complex plane illustrated in {numref}`fig:unit5.2:1`
+Consider a pole in the complex plane illustrated in {numref}`fig:unit5_2:1`
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-:::{figure-md} fig:unit5.2:1
+:::{figure-md} fig:unit5_2:1
 
 <img src="pictures/complex_pole.png" alt="Phase  and magnitude  of pole  shown in the complex plane" width="50%" />           
 Phase  and magnitude  of pole  shown in the complex plane
@@ -550,6 +550,7 @@ The MATLAB code to reproduce this result is given in [example9.mlx](matlab/examp
 The relationship between the pole locations and the step response are summarized in {numref}`fig:unit5.2:2`[^unit5.1:note:4]
 
 :::{figure-md} fig:unit5.2:2
+
 <img src="pictures/resppole.png" alt="Relationship between poles and step response" width="100%" />
 
 Relationship between poles and step response
@@ -990,10 +991,13 @@ zeta = NaN;
 
 #### Real pole $s=\sigma$:
 
-* Growth rate:, $\sigma > 0$, the exponential signal doubles every $T\approx 0.7/\sigma$ s.
+* Growth rate: $\sigma > 0$, the exponential signal doubles every $T\approx 0.7/\sigma$ s.
 * Time constant: $\sigma < 0$, the exponential signal decays to $37\%$ of it's original value in $\tau = 1/\sigma$ s. The expontial signal reaches $1\%$ of it's original value in $t\approx 4.6\tau$ s.
 
 #### Complex pole pair $s = \sigma \pm j\omega$:
+
+* Representation of denominator: $(s + \sigma + j\omega_n)(s - \sigma + j\omega) = s^2 + 2\sigma Natural frequency: $\omega_n = \sqrt{\sigma^2 + \omega^2}$
+* Damping ration: $\zeta = 
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
