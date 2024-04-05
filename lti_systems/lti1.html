@@ -739,29 +739,11 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/dd5053bf0724df96792b8d1a2366a8e78b0c4ea6e584eb24c07a7d4858903db8.png" src="../_images/dd5053bf0724df96792b8d1a2366a8e78b0c4ea6e584eb24c07a7d4858903db8.png" />
-</div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the MATLAB function <code class="docutils literal notranslate"><span class="pre">int</span></code> to compute the convolution integral symbolically.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-(2*exp(-(alpha*t)/2)*(exp(-(alpha*t)/2)/2 - exp((alpha*t)/2)/2)*(sign(t)/2 + 1/2))/alpha
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -773,22 +755,6 @@ In convolutiondemo (line 44)
 <span class="nb">fplot</span><span class="p">(</span><span class="n">ya</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ya(t) =
- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<img alt="../_images/9574b61bca05b54f92c0fee14cafad7227b8bd702456ea5806cbc4e4256c3445.png" src="../_images/9574b61bca05b54f92c0fee14cafad7227b8bd702456ea5806cbc4e4256c3445.png" />
 </div>
 </div>
 </section>
@@ -812,28 +778,10 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/9e120f5b02aad0cb252e3225f64583728fa1c2ae488f6bece3c13bcafd457db1.png" src="../_images/9e120f5b02aad0cb252e3225f64583728fa1c2ae488f6bece3c13bcafd457db1.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="nb">Inf</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-(2*exp(-(alpha*t)/2)*(exp(-(alpha*t)/2)/2 - exp((alpha*t)/2)/2)*(sign(t)/2 + 1/2))/alpha
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -845,22 +793,6 @@ In convolutiondemo (line 44)
 <span class="nb">fplot</span><span class="p">(</span><span class="n">yb</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>yb(t) =
- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<img alt="../_images/7a4b069d3084efd2c4ff73c946d1244ebbfd11b68257e8b8a4eed00161b26da9.png" src="../_images/7a4b069d3084efd2c4ff73c946d1244ebbfd11b68257e8b8a4eed00161b26da9.png" />
 </div>
 </div>
 <p>Go back to <a class="reference internal" href="#step-response"><span class="std std-ref">F. Step Response</span></a></p>
@@ -896,29 +828,11 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/6c66a76b0f419a45e024305d5b33f02733ab093634f412db36ebac8b3212c898.png" src="../_images/6c66a76b0f419a45e024305d5b33f02733ab093634f412db36ebac8b3212c898.png" />
-</div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the convolution integral</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="nb">Inf</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>piecewise(0 &lt;= t, exp(-t)/2, t &lt;= 0, exp(t)/2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -929,9 +843,6 @@ In convolutiondemo (line 44)
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;y(t) = x(t) * y(t)&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/654b739d52b7be5e612209e63b887324ae6f41949dac81581f6d98265891da6d.png" src="../_images/654b739d52b7be5e612209e63b887324ae6f41949dac81581f6d98265891da6d.png" />
 </div>
 </div>
 </section>
@@ -967,31 +878,11 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/07bb0672f23bcf5e425134aa5b4f8716efa55b0d934d4ea70e228e02b4fe043a.png" src="../_images/07bb0672f23bcf5e425134aa5b4f8716efa55b0d934d4ea70e228e02b4fe043a.png" />
-</div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="nb">Inf</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>heaviside(t - 5)*(t - 5) - heaviside(t - 3)*(t - 3) - heaviside(t - 2)*(t - 2) + t*heaviside(t)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -1002,9 +893,6 @@ In convolutiondemo (line 44)
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">2.5</span><span class="p">]),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;h(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/1862a82cba369b390df7d7f5a9a1d872a56ffc90fd5bb2e5d5f68dfde72658c9.png" src="../_images/1862a82cba369b390df7d7f5a9a1d872a56ffc90fd5bb2e5d5f68dfde72658c9.png" />
 </div>
 </div>
 </section>
