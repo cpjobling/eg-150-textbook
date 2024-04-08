@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Unit 5: Pole-Zero Analysis &#8212; EG-150 Signals and Systems</title>
+    <title>Unit 6: Frequency Response Analysis &#8212; EG-150 Signals and Systems</title>
   
   
   
@@ -65,12 +65,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'poles_and_zeros/index';</script>
-    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/poles_and_zeros/index.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'freq_response/index';</script>
+    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/freq_response/index.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Unit 5.1: Qualitative Properties of Signals and Transfer functions" href="qualitative_properties.html" />
-    <link rel="prev" title="Unit 4.8: Computer-Aided Systems Analysis and Simulation" href="../laplace_transform/8/casas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -167,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Online notes</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Unit 1 Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/intro.html">Unit 1.1 Setting the Scene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/thecourse.html">Unit 1.2 About this Course</a></li>
@@ -199,9 +197,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/8/casas.html">Unit 4.8 Computer-Aided Systems Analysis and Simulation</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Unit 5 Pole-Zero Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="qualitative_properties.html">Unit 5.1 Qualitative Properties of Signals and Transfer functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="second_order_properties.html">Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../poles_and_zeros/index.html">Unit 5 Pole-Zero Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../poles_and_zeros/qualitative_properties.html">Unit 5.1 Qualitative Properties of Signals and Transfer functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../poles_and_zeros/second_order_properties.html">Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../zbib.html">Bibliography</a></li>
@@ -294,7 +292,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/poles_and_zeros/index.md" target="_blank"
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/freq_response/index.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -311,7 +309,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Fpoles_and_zeros/index.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Ffreq_response/index.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -341,7 +339,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/poles_and_zeros/index.md" target="_blank"
+      <li><a href="../_sources/freq_response/index.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -425,7 +423,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Unit 5: Pole-Zero Analysis</h1>
+    <h1>Unit 6: Frequency Response Analysis</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -447,32 +445,23 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="unit-5-pole-zero-analysis">
-<span id="poles-and-zeros"></span><h1>Unit 5: Pole-Zero Analysis<a class="headerlink" href="#unit-5-pole-zero-analysis" title="Permalink to this heading">#</a></h1>
-<p>In <a class="reference internal" href="../laplace_transform/4/inverse_laplace.html#unit4-4"><span class="std std-ref">Unit 4.4 The Inverse Laplace Transform</span></a> we introduced the idea of <em>poles and zeros</em> and in <a class="reference internal" href="../laplace_transform/6/transfer_functions.html#unit4-6"><span class="std std-ref">Unit 4.6: Transfer Functions</span></a> we introduced the idea of a <em>transfer function</em> which represents the <em>impulse response</em> of a system <span class="math notranslate nohighlight">\(H(s)\)</span>. The transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> has a numerator <span class="math notranslate nohighlight">\(N(s)\)</span> and a denominator <span class="math notranslate nohighlight">\(D(s)\)</span>:</p>
-<div class="math notranslate nohighlight" id="equation-eq-pz-1">
-<span class="eqno">(44)<a class="headerlink" href="#equation-eq-pz-1" title="Permalink to this equation">#</a></span>\[H(s) = \frac{N(s)}{D(s)}\]</div>
-<p>Both the numerator and the denominator can be factorised</p>
-<div class="math notranslate nohighlight" id="equation-eq-pz-2">
-<span class="eqno">(45)<a class="headerlink" href="#equation-eq-pz-2" title="Permalink to this equation">#</a></span>\[H(s) = \frac{(s - z_1)\ldots(s - z_m)}{(s - p_1)\ldots(s - p_n)}\]</div>
-<p>The <span class="math notranslate nohighlight">\(z_i\)</span>, which are the values for which <span class="math notranslate nohighlight">\(N(s)=0\)</span> are called the <em>zeros</em> of <span class="math notranslate nohighlight">\(H(s)\)</span>. The values <span class="math notranslate nohighlight">\(p_i\)</span> are the zeros of the denominator <span class="math notranslate nohighlight">\(D(s)\)</span> at which <span class="math notranslate nohighlight">\(H(s) = \infty\)</span>. The zeros of <span class="math notranslate nohighlight">\(D(s)\)</span> are called the <em>poles</em> of the system <span class="math notranslate nohighlight">\(H(s)\)</span>.</p>
-<p>In <a class="reference internal" href="../laplace_transform/4/inverse_laplace.html#unit4-4"><span class="std std-ref">Unit 4.4 The Inverse Laplace Transform</span></a> we categorised the poles of the system into four cases:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../laplace_transform/4/inverse_laplace.html#ilap-distinct-real-poles"><span class="std std-ref">The case of the distinct real poles</span></a></p></li>
-<li><p><a class="reference internal" href="../laplace_transform/4/inverse_laplace.html#case-complex-poles"><span class="std std-ref">The case of the complex poles</span></a></p></li>
-<li><p><a class="reference internal" href="../laplace_transform/4/inverse_laplace.html#ilap-repeated-poles"><span class="std std-ref">The case of the repeated poles</span></a></p></li>
-<li><p><a class="reference internal" href="../laplace_transform/4/inverse_laplace.html#ilap-improper"><span class="std std-ref">The case of the improper rational polynomial</span></a></p></li>
-</ul>
-<p>However, we didn’t really discuss the implications of these cases. In this unit we aim to correct this omission. At the end of this unit, we hope that you will be able to discuss the qualitative behaviour of a system with any number of poles and zeros. This will be vary useful going forward.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="unit-6-frequency-response-analysis">
+<h1>Unit 6: Frequency Response Analysis<a class="headerlink" href="#unit-6-frequency-response-analysis" title="Permalink to this heading">#</a></h1>
+<p>If you have a LTI system <span class="math notranslate nohighlight">\(h(t)\)</span> and your input <span class="math notranslate nohighlight">\(x(t) = a\sin(\omega t)\)</span> is a sinusoid, the steady-state output y(t), after any initial transient has died away, will be another sinusoid whose magitude and phase depends only on the frequency of the input signal and the poles and zeros of the system.</p>
+<p>In other words,</p>
+<div class="math notranslate nohighlight">
+\[Y(\omega) = H(\omega).\]</div>
+<p>To find the stead-state frequency response of any LTI system, we simply make the substituition</p>
+<div class="math notranslate nohighlight">
+\[s = j\omega\]</div>
+<p>In this final unit of EG-150 Signals and Systems we will explore this concept using MATLAB analysis and simulation and we will present a useful representation of the frequency response of a system called the Bode plot.</p>
 <section id="table-of-contents">
 <h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="qualitative_properties.html#unit5-1"><span class="std std-ref">Unit 5.1: Qualitative Properties of Signals and Transfer functions</span></a></p></li>
-<li><p><a class="reference internal" href="second_order_properties.html#unit5-2"><span class="std std-ref">Unit 5.2: More on the Qualitative and Quantitative Response of First- and Second-Order Poles</span></a></p></li>
+<li><p><a class="reference internal" href="tf_response.html#unit6-1"><span class="std std-ref">Unit 6.1: Frequency Respone of a Transfer Function</span></a></p></li>
+<li><p><a class="reference internal" href="bode_plots.html#unit6-2"><span class="std std-ref">Unit 6.2: Bode Plots</span></a></p></li>
 </ul>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -484,16 +473,16 @@ document.write(`
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "matlab"
+            mode: "python"
         },
         kernelOptions: {
-            name: "matlab",
-            path: "./poles_and_zeros"
+            name: "python3",
+            path: "./freq_response"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'matlab'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -505,24 +494,6 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../laplace_transform/8/casas.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Unit 4.8: Computer-Aided Systems Analysis and Simulation</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="qualitative_properties.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Unit 5.1: Qualitative Properties of Signals and Transfer functions</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
