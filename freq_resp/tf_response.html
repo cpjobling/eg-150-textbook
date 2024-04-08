@@ -301,7 +301,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/freq_resp/tf_response.ipynb" target="_blank"
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/freq_resp/tf_response.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -348,7 +348,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/freq_resp/tf_response.ipynb" target="_blank"
+      <li><a href="../_sources/freq_resp/tf_response.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -358,7 +358,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -448,16 +448,38 @@ document.write(`
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-response-of-a-transfer-function">Frequency response of a transfer function</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constructing-a-bode-plot">Constructing a Bode plot</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">Activity</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reflect">Reflect</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercise</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Reflect</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-evaluation-of-the-frequency-response">Numerical evaluation of the frequency response</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example.</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concluding-exercise">Concluding Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-directed-study">Self directed study</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#takeaway-1">Takeaway 1</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#still-to-come">Still to come</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
 </li>
 </ul>
@@ -475,7 +497,7 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="unit-6-1-frequency-respone-of-a-transfer-function">
 <span id="unit6-1"></span><h1>Unit 6.1: Frequency Respone of a Transfer Function<a class="headerlink" href="#unit-6-1-frequency-respone-of-a-transfer-function" title="Permalink to this heading">#</a></h1>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/freq_resp/tf_response">cpjobling.github.io/eg-150-textbook/freq_resp/tf_response</a></p>
-<p><img alt="QR Code for this lecture" src="freq_resp/pictures/qr_code_for_unit61.png" /></p>
+<p><img alt="QR Code for this lecture" src="../_images/qr_code_for_unit61.png" /></p>
 <section id="acknowledgements">
 <h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">#</a></h2>
 <p>This Unit is preparation for EG-247 Digital Signal Processing and EG-243 Modern Control Systems. It will not be examined for EG-150.</p>
@@ -488,19 +510,16 @@ document.write(`
 <h1>Agenda<a class="headerlink" href="#agenda" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="#unit6-1-1"><span class="std std-ref">Frequency response of a transfer function</span></a></p></li>
-<li><p><span class="xref std std-ref">unit6.1.2</span></p></li>
-<li><p><span class="xref std std-ref">unit6.1.3</span></p></li>
-<li><p><span class="xref std std-ref">unit6.1.4</span></p></li>
-<li><p><span class="xref std std-ref">unit6.1.5</span></p></li>
-<li><p><span class="xref std std-ref">unit6.1.6</span></p></li>
-<li><p><span class="xref std std-ref">unit6.1.7</span></p></li>
-<li><p><span class="xref std std-ref">unit6.1.8</span></p></li>
+<li><p><a class="reference internal" href="#unit6-1-2"><span class="std std-ref">Constructing a Bode plot</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-1-3"><span class="std std-ref">Numerical evaluation of the frequency response</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-1-4"><span class="std std-ref">Concluding Exercise</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-1-5"><span class="std std-ref">Self directed study</span></a></p></li>
 </ul>
 <section id="frequency-response-of-a-transfer-function">
 <span id="unit6-1-1"></span><h2>Frequency response of a transfer function<a class="headerlink" href="#frequency-response-of-a-transfer-function" title="Permalink to this heading">#</a></h2>
 <p>A transfer function with complex poles has undamped natural frequencies given by the magnitudes of the poles: <span class="math notranslate nohighlight">\(\omega_n = |p|\)</span>. If an input force drives a system at or near its natural frequency, the solution can grow rapidly in magnitude.</p>
-<section id="example-1">
-<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this heading">#</a></h3>
+<section id="exercise">
+<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h3>
 <p>In this example, we will visually analyze  mass-spring-damper’s response to sinusoidal inputs <span class="math notranslate nohighlight">\(u=\sin\left(\omega_u t\right)\)</span> with various frequencies <span class="math notranslate nohighlight">\(\omega_u\)</span>.</p>
 <figure class="align-default" id="fig-unit6-1-1">
 <a class="reference internal image-reference" href="../_images/smd.png"><img alt="daigram of a mass-spring-damper system" src="../_images/smd.png" style="width: 50%;" /></a>
@@ -520,26 +539,15 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Write your code here</span>
 
-<span class="n">G</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">1</span><span class="p">,[</span><span class="mi">1</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span>
-<span class="w"> </span>
 <span class="c">% Record your answer in p</span>
-<span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">pole</span><span class="p">(</span><span class="n">H</span><span class="p">)</span>
+<span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G =
- 
-         1
-  ---------------
-  s^2 + 0.1 s + 1
- 
-Continuous-time transfer function.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p =
 
-p =
-
-  -0.0500 + 0.9987i
-  -0.0500 - 0.9987i
+   NaN
 </pre></div>
 </div>
 </div>
@@ -550,15 +558,14 @@ p =
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Write your code here</span>
 
 <span class="c">% Record your answer in freq</span>
-<span class="n">freq</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">damp</span><span class="p">(</span><span class="n">H</span><span class="p">)</span>
+<span class="n">freq</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>freq =
 
-     1
-     1
+   NaN
 </pre></div>
 </div>
 </div>
@@ -579,7 +586,7 @@ p =
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% min=0.1 max = 2; step=0.1; default = 0.5;</span>
-<span class="n">omegau</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c">% Frequency of the forcing [rad/s]</span>
+<span class="n">omegau</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"> </span><span class="c">% Frequency of the forcing [rad/s]</span>
 <span class="nb">figure</span>
 <span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mf">1e3</span><span class="p">);</span><span class="w">   </span><span class="c">% Time variable array</span>
 <span class="n">u</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">omegau</span><span class="o">*</span><span class="n">t</span><span class="p">);</span><span class="w">         </span><span class="c">% Forcing function (as an array)</span>
@@ -591,10 +598,226 @@ p =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ffb370e94f5745ccb95489cdee3e3c337a0ad6ba3d398965931d586522cc7772.png" src="../_images/ffb370e94f5745ccb95489cdee3e3c337a0ad6ba3d398965931d586522cc7772.png" />
+<img alt="../_images/a4181f8d034d8ac993a41c4e9bc71eaa19e2c730a488c66751353d3c47a4a7a8.png" src="../_images/a4181f8d034d8ac993a41c4e9bc71eaa19e2c730a488c66751353d3c47a4a7a8.png" />
 </div>
 </div>
 </section>
+</section>
+<section id="constructing-a-bode-plot">
+<span id="unit6-1-2"></span><h2>Constructing a Bode plot<a class="headerlink" href="#constructing-a-bode-plot" title="Permalink to this heading">#</a></h2>
+<p>In general, the frequency response of a transfer function is analyzed by providing input sinusoids with different frequencies and identifying how the magnitude and phase of the steady output changes.</p>
+<figure class="align-default" id="fig-unit6-1-2">
+<a class="reference internal image-reference" href="../_images/fr.png"><img alt="The steady response of a linear time-invariant system to a sine input will be a sine wave with the same frequency as the input. The response sine wave undergoes a phase shift and a change in magnitude that depend on the frequency of the input sine wave. This plot only shows the response to a single frequency." src="../_images/fr.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 84 </span><span class="caption-text">The steady response of a linear time-invariant system to a sine input will be a sine wave with the same frequency as the input. The response sine wave undergoes a phase shift and a change in magnitude that depend on the frequency of the input sine wave. This plot only shows the response to a single frequency.</span><a class="headerlink" href="#fig-unit6-1-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The frequency-domain analysis is often shown in a <strong>Bode plot</strong>. The Bode plot is constructed by plotting the phase shift and magnitude at varied input frequencies, capturing the system’s response to many different frequencies in a single diagram.</p>
+<section id="activity">
+<h3>Activity<a class="headerlink" href="#activity" title="Permalink to this heading">#</a></h3>
+<p>In this activity (performed in the MATLAB Live Script <strong>FrequencyDomainAnalysis.mlx</strong>, you will construct the Bode plot for the mass-spring-damper displacement transfer function:</p>
+<div class="math notranslate nohighlight">
+\[G(s) = \frac{1}{s^2 + 0.1s + 1}\]</div>
+<p>For each sinusoidal input <span class="math notranslate nohighlight">\(u = \sin\left(\omega_u t\right)\)</span> the output <span class="math notranslate nohighlight">\(x(t)\)</span> shows a transient behavior and a steady state behavior. The steady-state behavior is a sine wave with magnitude <span class="math notranslate nohighlight">\(M\)</span> and phase <span class="math notranslate nohighlight">\(\phi\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[x_\mathrm{steady}(t) = M \sin \left(\omega_u t + \phi \right)\]</div>
+<p>The Bode plot is generated by plotting the magnitude and phase of the steady-state output against the input frequency, <span class="math notranslate nohighlight">\(\omega_u(t)\)</span>. The magnitude and frequency are plotted on logarithmic axes.</p>
+<p>Picture taken from MATLAB of the completed activity:</p>
+<p><img alt="Completed activity" src="../_images/activity1_complete.png" /></p>
+<section id="reflect">
+<h4>Reflect<a class="headerlink" href="#reflect" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>At which frequency is the most significant change in magnitude observed?</p></li>
+<li><p>At which frequencies are the oscillations attenuated?</p></li>
+<li><p>How does the phase of the response change between low and high frequency input signals?</p></li>
+</ul>
+</section>
+</section>
+<section id="id2">
+<h3>Exercise<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>Consider the transfer function used in the previous activity:</p>
+<div class="math notranslate nohighlight">
+\[G(s) = \frac{1}{ s^2 + 0.1 s + 1}\]</div>
+<p>Generate the Bode diagram using the <a class="reference external" href="https://uk.mathworks.com/help/control/ref/dynamicsystem.bode.html"><code class="docutils literal notranslate"><span class="pre">bode</span></code></a> function. Use <code class="docutils literal notranslate"><span class="pre">grid</span> <span class="pre">on</span></code> to turn on the grid.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">figure</span>
+<span class="c">% Create your Bode plot here</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/3051d5f8ce7a12681cf1aa8c044aa6b76e23fb44900181eaefd120b77918b716.png" src="../_images/3051d5f8ce7a12681cf1aa8c044aa6b76e23fb44900181eaefd120b77918b716.png" />
+</div>
+</div>
+<section id="id3">
+<h4>Reflect<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>How does this Bode diagram differ from the one created in the previous activity?</p></li>
+<li><p>How do you think the phase and magnitude of the response are computed “under the hood?”</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="numerical-evaluation-of-the-frequency-response">
+<span id="unit6-1-3"></span><h2>Numerical evaluation of the frequency response<a class="headerlink" href="#numerical-evaluation-of-the-frequency-response" title="Permalink to this heading">#</a></h2>
+<p>It is not necessary to compute the time-domain response to create a Bode plot as done in the activity above. The activity only illustrates the principle behind the Bode plot. In practice, the frequency response can be computed entirely in the <span class="math notranslate nohighlight">\(s\)</span>-domain. This is accomplished by:</p>
+<ul class="simple">
+<li><p>generating the complex transfer function by making the substitution <span class="math notranslate nohighlight">\(s=j\omega\)</span></p></li>
+</ul>
+<ul class="simple">
+<li><p>evaluating the complex transfer function at various frequencies</p></li>
+</ul>
+<ul class="simple">
+<li><p>computing the magnitude and phase of the result</p></li>
+</ul>
+<section id="example">
+<h3>Example.<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
+<p>Generate a Bode plot for the mass-spring-damper system:</p>
+<div class="math notranslate nohighlight">
+\[G(s) = \frac{1}{s^2 + 0,1 s + 1}\]</div>
+<p>by evaluating the complex transfer function.</p>
+<section id="solution">
+<h4>Solution.<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h4>
+<p>The complex transfer function is created by setting $s = j\omega:</p>
+<div class="math notranslate nohighlight">
+\[G(j \omega) = \frac{1}{  (j\omega)^2 + 0.1(j  \omega) + 1} = \frac{1}{ - \omega^2 + 0.1 j  \omega + 1}\]</div>
+<p>Numerically evaluating the complex transfer function for many frequencies <span class="math notranslate nohighlight">\(\omega\)</span> can be accomplished using an array of frequencies.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">omega</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">500</span><span class="p">);</span><span class="w">                   </span><span class="c">% An array of frequencies</span>
+<span class="n">Gjomega</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="o">-</span><span class="n">omega</span><span class="o">.^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.1</span><span class="o">*</span>1<span class="nb">i</span><span class="o">*</span><span class="n">omega</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">     </span><span class="c">% Complex transfer function evaluated at many frequencies</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The magnitude and phase of complex transfer function values can be computed directly on the arrays.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">Gjomega</span><span class="p">);</span><span class="w">       </span><span class="c">% The magnitude of the complex number</span>
+<span class="n">Mdb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">20</span><span class="o">*</span><span class="nb">log10</span><span class="p">(</span><span class="n">M</span><span class="p">);</span><span class="w">       </span><span class="c">% Magnitude in dB</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">phi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">angle</span><span class="p">(</span><span class="n">Gjomega</span><span class="p">);</span><span class="w">   </span><span class="c">% Phase angle in radians</span>
+<span class="n">phiDeg</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">phi</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="nb">pi</span><span class="p">;</span><span class="w">     </span><span class="c">% Phase angle in degrees</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The first panel in the Bode plot is constructed by graphing the magnitude in dB against the input frequencies, <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">figure</span>
+<span class="nb">semilogx</span><span class="p">(</span><span class="n">omega</span><span class="p">,</span><span class="n">Mdb</span><span class="p">)</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&quot;Frequency (rad/s)&quot;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&quot;Magnitude (dB)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/769cd5ebb65e271c5c82bf0b7bb14207a5e58fc89e7b7b76cc3cc04259ac7f8a.png" src="../_images/769cd5ebb65e271c5c82bf0b7bb14207a5e58fc89e7b7b76cc3cc04259ac7f8a.png" />
+</div>
+</div>
+<p>The second panel is constructed by graphing the phase in degrees against the input frequencies, <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">figure</span>
+<span class="nb">semilogx</span><span class="p">(</span><span class="n">omega</span><span class="p">,</span><span class="n">phiDeg</span><span class="p">)</span>
+<span class="nb">xlabel</span><span class="p">(</span><span class="s">&quot;Frequency (rad/s)&quot;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&quot;Phase (degrees)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/878f672597650ab1db406926047e9ee1b4a0d14da13749747c188e7e287a4bde.png" src="../_images/878f672597650ab1db406926047e9ee1b4a0d14da13749747c188e7e287a4bde.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="concluding-exercise">
+<span id="unit6-1-4"></span><h3>Concluding Exercise<a class="headerlink" href="#concluding-exercise" title="Permalink to this heading">#</a></h3>
+<p>In this exercise, you will analyze the transfer function</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \frac{1}{s^2 + 9}\]</div>
+<p>This transfer function corresponds to a mass-spring system with parameters <span class="math notranslate nohighlight">\(m=1\)</span>, <span class="math notranslate nohighlight">\(c=0\)</span> and <span class="math notranslate nohighlight">\(k=3\)</span>.</p>
+<p>(a) What are the natural frequencies of <span class="math notranslate nohighlight">\(H(s)\)</span> in rad/s?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Write your code here</span>
+
+<span class="c">% Record your answer in omegan</span>
+<span class="n">omegan</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>omegan =
+
+   NaN
+</pre></div>
+</div>
+</div>
+</div>
+<p>(b) Generate the Bode plot for <span class="math notranslate nohighlight">\(H(s)\)</span> using the <code class="docutils literal notranslate"><span class="pre">bode</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Write your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(c) Write the expression for the complex transfer function by making the substitution <span class="math notranslate nohighlight">\(s=j\omega\)</span>. What is the value of the complex transfer function for <span class="math notranslate nohighlight">\(\omega = 0.5\)</span>?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Record your answer in Hcomplex</span>
+<span class="n">Hcomplex</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hcomplex =
+
+   NaN
+</pre></div>
+</div>
+</div>
+</div>
+<p>(d) What are the magnitude (in dB) and phase (in degrees) of the transfer function for <span class="math notranslate nohighlight">\(\omega = 0.5\)</span>? Can you identify this point on the Bode plot?</p>
+<ul class="simple">
+<li><p>Use the definition <span class="math notranslate nohighlight">\(y_{[\mathrm{dB}]} = 20 \log_{10}(y)\)</span>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">MdB</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span><span class="p">;</span><span class="w"> </span><span class="c">% Calculate the magnitude in dB here</span>
+<span class="n">phase</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span><span class="p">;</span><span class="w"> </span><span class="c">% Calculate the phase in degrees here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Use the <a class="reference external" href="https://uk.mathworks.com/help/control/ref/dynamicsystem.lsim.html?searchHighlight=lsim"><code class="docutils literal notranslate"><span class="pre">lsim</span></code></a> function to compute and plot the time-domain response of <span class="math notranslate nohighlight">\(H\)</span> to a sinusoidal input function</p>
+<div class="math notranslate nohighlight">
+\[u(t) = \sin(\omega_n t)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\omega_n\)</span> is the natural frequency you computed in <strong>(a)</strong>. Simulate until a final time of 100 seconds.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Write your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="self-directed-study">
+<span id="unit6-1-5"></span><h2>Self directed study<a class="headerlink" href="#self-directed-study" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Install the MathWorks curriculum module <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems">Transfer Function Analysis of Dynamic Systems</a> <span id="id4">[<a class="reference internal" href="../zbib.html#id17" title="Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0.">Allie, 2024</a>]</span> and open the MATLAB Live Script <strong>FrequencyDomainAnalysis.mlx</strong>. Explore the Exercises and Activities we have reviewed in the unit.</p></li>
+<li><p>The remainder of the MATLAB Live Script <strong>FrequencyDomainAnalysis.mlx</strong> applies what we have looked at so far to a simple filtering problem based around a Buck Converter such as might be used in the DC-DC systems in an electric vehicle. Study the examples and try to complete the activities and exercises.</p></li>
+<li><p>The remaining Live Scripts in the curriculum module demostrate the cocepts of the Laplace transform, transfer functions and pole-zero analysis. You may find these useful. We will start EG-247 next year with these examples.</p></li>
+</ol>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
@@ -602,13 +825,10 @@ p =
 <p>We covered the following topics</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#unit6-1-1"><span class="std std-ref">Frequency response of a transfer function</span></a></p></li>
-<li><p><span class="xref std std-ref">unit6.1.2</span></p></li>
-<li><p><span class="xref std std-ref">unit6.1.3</span></p></li>
-<li><p><span class="xref std std-ref">unit6.1.4</span></p></li>
-<li><p><span class="xref std std-ref">unit6.1.5</span></p></li>
-<li><p><span class="xref std std-ref">unit6.1.6</span></p></li>
-<li><p><span class="xref std std-ref">unit6.1.7</span></p></li>
-<li><p><span class="xref std std-ref">unit6.1.8</span></p></li>
+<li><p><a class="reference internal" href="#unit6-1-2"><span class="std std-ref">Constructing a Bode plot</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-1-3"><span class="std std-ref">Numerical evaluation of the frequency response</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-1-4"><span class="std std-ref">Concluding Exercise</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-1-5"><span class="std std-ref">Self directed study</span></a></p></li>
 </ul>
 <section id="take-aways">
 <span id="unit6-1-takeaways"></span><h3>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h3>
@@ -616,6 +836,22 @@ p =
 <h4>Takeaway 1<a class="headerlink" href="#takeaway-1" title="Permalink to this heading">#</a></h4>
 </section>
 </section>
+<section id="still-to-come">
+<h3>Still to come<a class="headerlink" href="#still-to-come" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="bode_plots.html#unit6-2"><span class="std std-ref">Unit 6.2: Bode Plots</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<div class="docutils container" id="id5">
+<dl class="citation">
+<dt class="label" id="id21"><span class="brackets">All24</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id4">2</a>)</span></dt>
+<dd><p>Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: <a class="github reference external" href="https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0">MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems</a>.</p>
+</dd>
+</dl>
+</div>
 </section>
 </section>
 
@@ -688,16 +924,38 @@ p =
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-response-of-a-transfer-function">Frequency response of a transfer function</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1">Example 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constructing-a-bode-plot">Constructing a Bode plot</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activity">Activity</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reflect">Reflect</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercise</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Reflect</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-evaluation-of-the-frequency-response">Numerical evaluation of the frequency response</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example.</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concluding-exercise">Concluding Exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-directed-study">Self directed study</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#takeaway-1">Takeaway 1</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#still-to-come">Still to come</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
 </li>
 </ul>
