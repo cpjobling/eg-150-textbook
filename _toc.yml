@@ -61,6 +61,13 @@ parts:
       title: Unit 5.1 Qualitative Properties of Signals and Transfer functions
     - file: poles_and_zeros/second_order_properties
       title: Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles
+  - file: freq_resp/index
+    title: Unit 6 Frequency Domain Analysis
+    sections:
+    - file: freq_resp/tf_response
+      title: Unit 6.1 Frequency Response of a Transfer Function
+    - file: freq_resp/bode_plots
+      title: Unit 6.2 Bode Plots
   - file: zbib
     title: Bibliography
 #- caption: Lab Exercises
