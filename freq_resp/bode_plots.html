@@ -63,8 +63,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'freq_response/bode_plots';</script>
-    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/freq_response/bode_plots.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'freq_resp/bode_plots';</script>
+    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/freq_resp/bode_plots.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -200,6 +200,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../poles_and_zeros/second_order_properties.html">Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="index.html">Unit 6 Frequency Domain Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tf_response.html">Unit 6.1: Frequency Respone of a Transfer Function</a></li>
+
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../zbib.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
@@ -210,7 +215,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../laplace_transform/1/lt_props.html">Properties of the Laplace Transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../laplace_transform/1/lt_table.html">Common Laplace Transform Pairs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../setup/polling_setup.html">Set Up In-Class Polling</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../setup/jupyter.html">About Jupyter notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/python.html">Installing Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
@@ -290,7 +295,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/freq_response/bode_plots.ipynb" target="_blank"
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/freq_resp/bode_plots.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -307,7 +312,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Ffreq_response/bode_plots.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2Ffreq_resp/bode_plots.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -337,7 +342,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/freq_response/bode_plots.ipynb" target="_blank"
+      <li><a href="../_sources/freq_resp/bode_plots.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -460,7 +465,7 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="unit-6-2-bode-plots">
 <span id="unit6-2"></span><h1>Unit 6.2: Bode Plots<a class="headerlink" href="#unit-6-2-bode-plots" title="Permalink to this heading">#</a></h1>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/freq_resp/bode_plots">cpjobling.github.io/eg-150-textbook/freq_resp/tf_response</a></p>
-<p><img alt="QR Code for this lecture" src="freq_response/pictures/qr_code_for_unit62.png" /></p>
+<p><img alt="QR Code for this lecture" src="freq_resp/pictures/qr_code_for_unit62.png" /></p>
 <section id="acknowledgements">
 <h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">#</a></h2>
 <p>This Unit is preparation for EG-247 Digital Signal Processing and EG-243 Modern Control Systems. It will not be examined for EG-150.</p>
@@ -517,7 +522,7 @@ document.write(`
         },
         kernelOptions: {
             name: "matlab",
-            path: "./freq_response"
+            path: "./freq_resp"
         },
         predefinedOutput: true
     }
