@@ -31,9 +31,13 @@ In {ref}`unit4.4` we categorised the poles of the system into four cases:
 * {ref}`ilap:repeated_poles`
 * {ref}`ilap:improper`
 
-However, we didn't really discuss the implications of these cases. In this unit we aim to correct this omission. At the end of this unit, we hope that you will be able to discuss the qualitative behaviour of a system with any number of poles and zeros. This will be vary useful going forward.
+However, we didn't really discuss the implications of these cases. In this unit we aim to correct this omission. At the end of this unit, we hope that you will be able to discuss the qualitative behaviour of a system with any number of poles and zeros. This will be very useful going forward.
 
 ## Table of Contents
 
 * {ref}`unit5.1`
 * {ref}`unit5.2`
+
+```{code-cell}
+
+```

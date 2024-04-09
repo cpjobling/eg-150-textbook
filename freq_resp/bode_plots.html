@@ -63,12 +63,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'freq_resp/bode_plots';</script>
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/freq_resp/bode_plots.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="References" href="../zbib.html" />
-    <link rel="prev" title="Unit 6.1: Frequency Respone of a Transfer Function" href="tf_response.html" />
+    <link rel="prev" title="Unit 6.1: Frequency Response of a Transfer Function" href="tf_response.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -203,7 +205,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Unit 6 Frequency Domain Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="tf_response.html">Unit 6.1: Frequency Respone of a Transfer Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tf_response.html">Unit 6.1: Frequency Response of a Transfer Function</a></li>
 
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit 6.2: Bode Plots</a></li>
 
@@ -445,6 +447,36 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-little-history">A little history</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-response">Frequency Response</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculation-of-frequency-response">Calculation of Frequency Response</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#terminology-used">Terminology used</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dc-gain">DC-gain</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#roll-off-rate">Roll-off rate</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-frequency">Natural-frequency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-over-frequency">Cross-over frequency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bandwidth-frequency">Bandwidth frequency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aysymptotic-bode-plots-for-first-order-systems">Aysymptotic bode plots for first-order systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-bode-plots-for-simple-systems">Exploring Bode Plots for Simple Systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plot-of-a-gain">Asymptotic bode plot of a gain</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plot-of-an-integrator">Asymptotic bode plot of an integrator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plot-of-an-differentiator">Asymptotic bode plot of an differentiator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plot-of-an-single-pole">Asymptotic bode plot of an single pole</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plot-of-an-single-zero">Asymptotic bode plot of an single zero</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#demo-using-the-interactive-bode-analysis-tool-provided-by-matlab">Demo: Using the interactive Bode analysis tool provided by MATLAB</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aysymptotic-bode-plots-for-a-second-order-system">Aysymptotic bode plots for a second-order system</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-build-bode-plots-for-complex-systems">How to Build Bode Plots for Complex Systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-2nd-order-systems">Examples of 2nd-order systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#effect-of-damping-ratio-on-bode-plot">Effect of damping ratio on Bode plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#demo-2-complex-poles-and-their-bode-diagrams">Demo 2: Complex poles and their Bode diagrams</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bode-plots-for-analysis-and-design">Bode plots for analysis and design</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#takeaway-1">Takeaway 1</a></li>
@@ -452,6 +484,8 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
 </ul>
 </li>
 </ul>
@@ -473,36 +507,433 @@ document.write(`
 <section id="acknowledgements">
 <h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">#</a></h2>
 <p>This Unit is preparation for EG-247 Digital Signal Processing and EG-243 Modern Control Systems. It will not be examined for EG-150.</p>
-<p>The notes for this section have been adapted from the MATLAB LiveScript <strong>FrequencyResponseAnalysis.mlx</strong> from the MathWorks curriculum module <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems">Transfer Function Analysis of Dynamic Systems</a> <span id="id1">[<a class="reference internal" href="../zbib.html#id17" title="Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0.">Allie, 2024</a>]</span>.  To get the most out of this Unit, you should install that project and run the activities and complete the exercises.</p>
-<p>We will go through the process for installing the MatWorks curriculum process during the lecture.</p>
-<p>The other examples in the project provide useful reinforcement of the concepts covered in Units 4-6 of this course. They will form the basis of the introduction to EG-247 next year.</p>
+<p>The notes for this unit have been inspired by Carlos Osorio’s MATLAB Tech Talks series on <a class="reference external" href="https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html">Understanding Bode diagrams</a> <span id="id1">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span> with details adapted from the <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter5/section/section51">Example 5.47</a> in <span id="id2">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="agenda">
 <h1>Agenda<a class="headerlink" href="#agenda" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
-<li><p><span class="xref std std-ref">unit6.2.1</span></p></li>
-<li><p><span class="xref std std-ref">unit6.2.2</span></p></li>
-<li><p><span class="xref std std-ref">unit6.2.3</span></p></li>
-<li><p><span class="xref std std-ref">unit6.2.4</span></p></li>
-<li><p><span class="xref std std-ref">unit6.2.5</span></p></li>
-<li><p><span class="xref std std-ref">unit6.2.6</span></p></li>
-<li><p><span class="xref std std-ref">unit6.2.7</span></p></li>
-<li><p><span class="xref std std-ref">unit6.2.8</span></p></li>
+<li><p><a class="reference internal" href="#unit6-2-1"><span class="std std-ref">Introduction</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-2-2"><span class="std std-ref">A little history</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-2-3"><span class="std std-ref">Frequency Response</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-2-4"><span class="std std-ref">Calculation of Frequency Response</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-2-5"><span class="std std-ref">Terminology used</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-2-6"><span class="std std-ref">Aysymptotic bode plots for first-order systems</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-2-7"><span class="std std-ref">Aysymptotic bode plots for a second-order system</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-2-8"><span class="std std-ref">Bode plots for analysis and design</span></a></p></li>
 </ul>
+<section id="introduction">
+<span id="unit6-2-1"></span><h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>We introduce this section with a YouTube video <a class="reference external" href="https://uk.mathworks.com/videos/understanding-bode-plots-what-are-they-2-of-4-76212.html">What are Bode plots?</a> from Carlos Osorio of the MathWorks (publisher of MATLAB) <span id="id3">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/COzQwkeu8Ek?si=wz1Mxz_ISu6RuTfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p>The remaining videos, the first of which introduced the previous unit, <a class="reference internal" href="tf_response.html#unit6-1"><span class="std std-ref">Unit 6.1: Frequency Response of a Transfer Function</span></a>, can also be viewed on the YouTube playlist <a class="reference external" href="https://www.youtube.com/playlist?list=PLn8PRpmsu08poVEWzpqKXpj_c7aSwVDdm">Understanding Bode Plots</a> also published on the <a class="reference external" href="https://www.youtube.com/&#64;MATLAB">MATLAB channel by the MathWorks</a>.</p>
+</section>
+<section id="a-little-history">
+<span id="unit6-2-2"></span><h2>A little history<a class="headerlink" href="#a-little-history" title="Permalink to this heading">#</a></h2>
+<figure class="align-default" id="fig-unit6-2-1">
+<img alt="Hendrick Wade Bode" src="../_images/Hendrik_Wade_Bode.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 85 </span><span class="caption-text">Portrait of Hendrick Wade Bode (Public Domain <a class="reference external" href="https://en.wikipedia.org/wiki/File:Hendrik_Wade_Bode.png">Details</a>)</span><a class="headerlink" href="#fig-unit6-2-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Quoted from <a class="reference external" href="https://en.wikipedia.org/wiki/Hendrik_Wade_Bode">Hendrik Wade Bode</a>, Wikipedia:</p>
+<blockquote>
+<div><p>Hendrik Wade Bode (December 24, 1905 – June 21, 1982) was an American engineer, researcher, inventor, author and scientist, of Dutch ancestry.</p>
+</div></blockquote>
+<blockquote>
+<div><p>He made important contributions to control systems theory and mathematical tools for the analysis of stability of linear systems.</p>
+</div></blockquote>
+<blockquote>
+<div><p>In 1938, [Bode] developed asymptotic phase and magnitude plots, now known as <em>Bode plots</em>, which displayed the frequency response of systems clearly.</p>
+</div></blockquote>
+</section>
+<section id="frequency-response">
+<span id="unit6-2-3"></span><h2>Frequency Response<a class="headerlink" href="#frequency-response" title="Permalink to this heading">#</a></h2>
+<figure class="align-default" id="fig-unit6-2-2">
+<a class="reference internal image-reference" href="../_images/ss-freq-response.png"><img alt="Screenshot from the video What are Bode Plots? (see caption) showing the steady state response of a linear LTI system to a simusoidal input" src="../_images/ss-freq-response.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 86 </span><span class="caption-text">Steady-state response of of a stable LTI system is <span class="math notranslate nohighlight">\(y(t) = M \sin\left(\omega t + \phi\right)\)</span>. Screenshot from video <a class="reference external" href="https://youtu.be/COzQwkeu8Ek?si=XC1h92VGAQWiHV7N&amp;t=28">What are Bode Plots?</a> [t=28 seconds] from <span id="id4">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span></span><a class="headerlink" href="#fig-unit6-2-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In <a class="reference internal" href="tf_response.html#unit6-1"><span class="std std-ref">Unit 6.1: Frequency Response of a Transfer Function</span></a> we explored the idea of a frequency response and showed that, after the transient response of a stable LTI system, subjected to a sinusoidal input <span class="math notranslate nohighlight">\(x(t) = A_\mathrm{in} \sin\left(\omega t\right)\)</span> has died away, the steady-state output will be another sinusoid <span class="math notranslate nohighlight">\(y(t) = A_\mathrm{out} \sin\left(\omega t + \phi\right)\)</span>.</p>
+<p>This is illustrated in <a class="reference internal" href="#fig-unit6-2-2"><span class="std std-numref">Fig. 86</span></a>.</p>
+<p>We also showed, in <a class="reference internal" href="tf_response.html#u6-1-activity"><span class="std std-ref">Activity</span></a>, that you can plot amplitude gain</p>
+<div class="math notranslate nohighlight">
+\[M = \left|\frac{A_\mathrm{out}}{A_\mathrm{in}} \right|\]</div>
+<p>and phase shift <span class="math notranslate nohighlight">\(\phi\)</span> of the output against frequency to produce a frequency response diagram such as that shown in <a class="reference internal" href="#fig-unit6-2-3"><span class="std std-numref">Fig. 87</span></a>.</p>
+<figure class="align-default" id="fig-unit6-2-3">
+<a class="reference internal image-reference" href="../_images/bode_plot_1.png"><img alt="Screenshot from the video What are Bode Plots? (see caption) showing the steady state response of a linear LTI system to a simusoidal input" src="../_images/bode_plot_1.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 87 </span><span class="caption-text">Plot of magnitude v phase plotted against frequency interpolated from individual measurements. Screenshot from video <a class="reference external" href="https://youtu.be/COzQwkeu8Ek?si=XC1h92VGAQWiHV7N&amp;t=28">What are Bode Plots?</a> [t=1 minute 28 seconds] from <span id="id5">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span></span><a class="headerlink" href="#fig-unit6-2-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The plot of <em>amplfication</em> (<span class="math notranslate nohighlight">\(M\)</span>) and phase (<span class="math notranslate nohighlight">\(\phi\)</span>), usually plotted against the <em>log of frequency</em> <span class="math notranslate nohighlight">\(\omega\)</span> rad/s, is called a Bode plot.</p>
+<p>If you are constructing one of these yourself, you need to be sure to use sufficient values of frequency to capture all the important features (such as <em>resonant peaks</em> and <em>corner frequencies</em>) of the response.</p>
+</section>
+<section id="calculation-of-frequency-response">
+<span id="unit6-2-4"></span><h2>Calculation of Frequency Response<a class="headerlink" href="#calculation-of-frequency-response" title="Permalink to this heading">#</a></h2>
+<p>If we have a system with impulse response (transfer function) <span class="math notranslate nohighlight">\(H(s)\)</span>, the steady-state frequency response can be calulated by letting <span class="math notranslate nohighlight">\(s = j\omega\)</span>.</p>
+<p>That is the <em>system function</em></p>
+<div class="math notranslate nohighlight">
+\[H(j\omega)\]</div>
+<p>can be used to compute the frequency response directly.</p>
+<p>In particular, the <strong>magnitude</strong></p>
+<div class="math notranslate nohighlight">
+\[M = \left|\frac{A_\mathrm{out}}{A_\mathrm{in}} \right| = \left|H(j\omega)\right|\]</div>
+<p>and the <strong>phase angle</strong></p>
+<div class="math notranslate nohighlight">
+\[\phi = \angle H(j\omega)\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The magnitude and phase are usually plotted against <span class="math notranslate nohighlight">\(\omega\)</span> on a logarithmic scale with magnitude defined in <em>decibels</em>:</p>
+<div class="math notranslate nohighlight">
+\[\left|H(j\omega\right|_{\mathrm{dB}} = 20\log{10} \left|H(j\omega)\right|\]</div>
+<p>and phase in <em>degrees</em>:</p>
+<div class="math notranslate nohighlight">
+\[\phi_\mathrm{deg} = \frac{180}{\pi}\phi_\mathrm{rad}\]</div>
+</div>
+<p>In MATLAB, we can easily obtain a Bode plot by defining our system as a transfer function LTI model using the <a class="reference external" href="https://uk.mathworks.com/help/control/ref/tf.html"><code class="docutils literal notranslate"><span class="pre">tf</span></code></a> function and passing the system object to the <a class="reference external" href="https://uk.mathworks.com/help/control/ref/dynamicsystem.bode.html"><code class="docutils literal notranslate"><span class="pre">bode</span></code></a> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="w"> </span><span class="n">compact</span>
+<span class="n">Hsys</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">400</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hsys =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        400
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  ----------------
+  s^2 + 10 s + 400
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">Hsys</span><span class="p">),</span><span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b8a2685ffc1a3b9c19f6e6f6d9103050195b030243512caa94ce372e78615c38.png" src="../_images/b8a2685ffc1a3b9c19f6e6f6d9103050195b030243512caa94ce372e78615c38.png" />
+</div>
+</div>
+</section>
+<section id="terminology-used">
+<span id="unit6-2-5"></span><h2>Terminology used<a class="headerlink" href="#terminology-used" title="Permalink to this heading">#</a></h2>
+<p>When discussing frequency responses in general, and Bode plots in particular, we need to define some terms that will be used.</p>
+<p>You should should make a note of these for future reference.</p>
+<section id="dc-gain">
+<h3>DC-gain<a class="headerlink" href="#dc-gain" title="Permalink to this heading">#</a></h3>
+<p>Magnitude <span class="math notranslate nohighlight">\(M\)</span> at <span class="math notranslate nohighlight">\(\omega = 0\)</span> or DC.</p>
+<img src="pictures/dc_gain.png" alt="illustration of DC gain" width="75%" /></section>
+<section id="roll-off-rate">
+<h3>Roll-off rate<a class="headerlink" href="#roll-off-rate" title="Permalink to this heading">#</a></h3>
+<p>The <em>roll-off rate</em> refers to the slope of the magnitude plot as the magnitude drops off at high-frequency. It is usually quoted in <em>dB per decade</em><a class="footnote-reference brackets" href="#u62-note-1" id="id6">1</a>, where a <em>decade</em> is a ten-fold increase in frequency.</p>
+<img src="pictures/roll-off.png" alt="illustration of roll-off rate" width="75%" /></section>
+</section>
+<section id="natural-frequency">
+<h2>Natural-frequency<a class="headerlink" href="#natural-frequency" title="Permalink to this heading">#</a></h2>
+<p>Any peaks in the magnitude frequency response will be associated to some natural frequency in the poles of the system.</p>
+<img src="pictures/natural_freq.png" alt="illustration of natural frequencies indicated by peaks in the magnitude response" width="75%" /></section>
+<section id="cross-over-frequency">
+<h2>Cross-over frequency<a class="headerlink" href="#cross-over-frequency" title="Permalink to this heading">#</a></h2>
+<p>In the bode-plot, at low frequency, the gain is 0 dB (or 1). Above the cross-over frequency<a class="footnote-reference brackets" href="#u62-note-2" id="id7">2</a> the gain is less than 1 and the system starts to <em>attenuate</em> the input signal.</p>
+<img src="pictures/cross_over_freq.png" alt="illustration of the cross-over frequency in a Bode plot" width="75%" /></section>
+<section id="bandwidth-frequency">
+<h2>Bandwidth frequency<a class="headerlink" href="#bandwidth-frequency" title="Permalink to this heading">#</a></h2>
+<p>Above the <em>bandwidth frequency</em> the RMS value of the system is below the RMS value of the input. This so-called <em>half-power frequency</em> occurs when <span class="math notranslate nohighlight">\(M = \sqrt{2}/2\)</span> or <span class="math notranslate nohighlight">\(-3\)</span> dB<a class="footnote-reference brackets" href="#u62-note-3" id="id8">3</a>.</p>
+<img src="pictures/bandwidth_freq.png" alt="illustration of the bandwidth frequency in a Bode plot" width="75%" /></section>
+<section id="aysymptotic-bode-plots-for-first-order-systems">
+<span id="unit6-2-6"></span><h2>Aysymptotic bode plots for first-order systems<a class="headerlink" href="#aysymptotic-bode-plots-for-first-order-systems" title="Permalink to this heading">#</a></h2>
+<p>In the remainder of this Unit, we will rely on the explanations given by Carlos Osorio in Parts 3 and 4 of <span id="id9">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span>. This material is also covered in Worked Problem 5.47 from <span id="id10">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>You can always produce a bode plot for a system by use of the tools provided in MATLAB.</p>
+<p>However, a knowledge of the asymptotic behaviour of first and second order poles (the insight gained by Bode in 1938), provides a powerful tool for analysis and design of systems in the frequency domain.</p>
+<section id="exploring-bode-plots-for-simple-systems">
+<h3>Exploring Bode Plots for Simple Systems<a class="headerlink" href="#exploring-bode-plots-for-simple-systems" title="Permalink to this heading">#</a></h3>
+<p>[See video in the notes]</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ums33HwVYyw?si=_Lvz5nyCt9VW100U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+<section id="asymptotic-bode-plot-of-a-gain">
+<h3>Asymptotic bode plot of a gain<a class="headerlink" href="#asymptotic-bode-plot-of-a-gain" title="Permalink to this heading">#</a></h3>
+<p>If <span class="math notranslate nohighlight">\(H(s) = K\)</span></p>
+<p>The frequency response is <span class="math notranslate nohighlight">\(H(j\omega)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[M = \left|H(j\omega)\right| = K,\,\phi = 0^\circ\]</div>
+<p>Converting the magnitude into dB:</p>
+<div class="math notranslate nohighlight">
+\[M_\mathrm{dB} = 20\log_{10}(K)\]</div>
+<p>The Bode plot for <span class="math notranslate nohighlight">\(H(s) = K = 1 = 0\)</span> dB is</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">K</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">H1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="n">K</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">bode</span><span class="p">(</span><span class="n">H1</span><span class="p">),</span><span class="w"> </span><span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/bdd76ccd249dfa0953da876c7573fcf1c718fc629e0b566137c911731b8b1b75.png" src="../_images/bdd76ccd249dfa0953da876c7573fcf1c718fc629e0b566137c911731b8b1b75.png" />
+</div>
+</div>
+<p>Increasing the gain causes a shift in the magnitude plot <em>up</em> by <span class="math notranslate nohighlight">\(20\log_{10} K\)</span> dB for <span class="math notranslate nohighlight">\(K &gt; 1\)</span> or <em>down</em> for <span class="math notranslate nohighlight">\(K &lt; 1\)</span>.</p>
+</section>
+<section id="asymptotic-bode-plot-of-an-integrator">
+<h3>Asymptotic bode plot of an integrator<a class="headerlink" href="#asymptotic-bode-plot-of-an-integrator" title="Permalink to this heading">#</a></h3>
+<p>If</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \frac{1}{s} \]</div>
+<p>The frequency response is</p>
+<div class="math notranslate nohighlight">
+\[H(j\omega) = \frac{1}{j\omega} = -\frac{1}{\omega} j\]</div>
+<div class="math notranslate nohighlight">
+\[M = \left|H(j\omega)\right| = \frac{1}{\omega},\,\phi = -90^\circ\]</div>
+<div class="math notranslate nohighlight">
+\[\]</div>
+<p>Converting the magnitude into dB:</p>
+<div class="math notranslate nohighlight">
+\[M_\mathrm{dB} = 20\log_{10}(1) - 20\log_{10}({\omega})\]</div>
+<p>At <span class="math notranslate nohighlight">\(\omega = 0\)</span>, <span class="math notranslate nohighlight">\(M = 1\)</span>, <span class="math notranslate nohighlight">\(M_\mathrm{dB} = 0\)</span> dB. At <span class="math notranslate nohighlight">\(\omega = 10\)</span>, <span class="math notranslate nohighlight">\(M=1/10 = -20\)</span> dB. The phase shift is <span class="math notranslate nohighlight">\(-90^\circ\)</span> for all <span class="math notranslate nohighlight">\(\omega\)</span>. The bode plot is therefore:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">H2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">1</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]);</span><span class="w"> </span><span class="n">bode</span><span class="p">(</span><span class="n">H2</span><span class="p">),</span><span class="w"> </span><span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/83493b597cdfbe175ca84696d9edcd62a658425ffbab374f610aa47f1623354c.png" src="../_images/83493b597cdfbe175ca84696d9edcd62a658425ffbab374f610aa47f1623354c.png" />
+</div>
+</div>
+<p>The roll-off rate is <span class="math notranslate nohighlight">\(-20\)</span> dB/decade.</p>
+</section>
+<section id="asymptotic-bode-plot-of-an-differentiator">
+<h3>Asymptotic bode plot of an differentiator<a class="headerlink" href="#asymptotic-bode-plot-of-an-differentiator" title="Permalink to this heading">#</a></h3>
+<p>If</p>
+<div class="math notranslate nohighlight">
+\[H(s) = s \]</div>
+<p>The frequency response is</p>
+<div class="math notranslate nohighlight">
+\[H(j\omega) = j\omega\]</div>
+<div class="math notranslate nohighlight">
+\[M = \left|H(j\omega)\right| = \omega,\,\phi = +90^\circ\]</div>
+<p>Converting the magnitude into dB:</p>
+<div class="math notranslate nohighlight">
+\[M_\mathrm{dB} = + 20\log_{10}({\omega})\]</div>
+<p>At <span class="math notranslate nohighlight">\(\omega = 0\)</span>, <span class="math notranslate nohighlight">\(M = 1\)</span>, <span class="math notranslate nohighlight">\(M_\mathrm{dB} = 0\)</span> dB. At <span class="math notranslate nohighlight">\(\omega = 10\)</span>, <span class="math notranslate nohighlight">\(M=10 = 20\)</span> dB. The phase shift is <span class="math notranslate nohighlight">\(90^\circ\)</span> for all <span class="math notranslate nohighlight">\(\omega\)</span>. The bode plot is therefore:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">H3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">([</span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">bode</span><span class="p">(</span><span class="n">H3</span><span class="p">),</span><span class="w"> </span><span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/1e45bfa35f1cad35da206f970af5f8219ba38bedaca82755271dc94eccb5d899.png" src="../_images/1e45bfa35f1cad35da206f970af5f8219ba38bedaca82755271dc94eccb5d899.png" />
+</div>
+</div>
+<p>The magnification increases by 20 dB per decade and there is no limit! This is a bad thing as it will amplify high-frequencies.</p>
+</section>
+<section id="asymptotic-bode-plot-of-an-single-pole">
+<h3>Asymptotic bode plot of an single pole<a class="headerlink" href="#asymptotic-bode-plot-of-an-single-pole" title="Permalink to this heading">#</a></h3>
+<p>If</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \frac{1}{\tau s + 1}\]</div>
+<p>The frequency response is</p>
+<div class="math notranslate nohighlight">
+\[H(j\omega) = \frac{1}{j\omega \tau + 1} \]</div>
+<div class="math notranslate nohighlight">
+\[M = \left|H(j\omega\right| = \frac{1}{\sqrt{\tau^2\omega^2 + 1}},\phi = -\tan^{-1} \omega\tau\]</div>
+<p>This is complex to visualize, so we concentrate on the asymptotic behaviour.</p>
+<p>For <span class="math notranslate nohighlight">\(\omega \ll 1/\tau\)</span>, <span class="math notranslate nohighlight">\(\tau^2\omega^2 \ll 1\)</span>, <span class="math notranslate nohighlight">\(M \approx 1 = 0\)</span> dB, <span class="math notranslate nohighlight">\(\phi \approx 0^\circ\)</span>.</p>
+<p>For <span class="math notranslate nohighlight">\(\omega \gg 1/\tau\)</span>, <span class="math notranslate nohighlight">\(\tau^2\omega^2 \gg 1\)</span>, <span class="math notranslate nohighlight">\(M_\mathrm{dB} = 20\log_{10} 1 - 20\log_{10} \sqrt{\tau^2\omega^2} = - 20\log_{10} \left(\tau\omega\right)\)</span> dB, <span class="math notranslate nohighlight">\(\phi \approx -90^\circ\)</span>.</p>
+<p>We can plot this as shown below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">tau</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">H4</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">1</span><span class="p">,[</span><span class="n">tau</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]);</span><span class="w"> </span><span class="n">bode</span><span class="p">(</span><span class="n">H4</span><span class="p">),</span><span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/3bcd17867ced26d1c369f36f8698dd9f3d373f714dc55f0a19928a3c6ee12f80.png" src="../_images/3bcd17867ced26d1c369f36f8698dd9f3d373f714dc55f0a19928a3c6ee12f80.png" />
+</div>
+</div>
+<p>Adding the assymptotes gives</p>
+<p><img alt="Bode plot of a single pole with asymptotes added" src="../_images/bode4.png" /></p>
+<p>For most of the magnitude Bode plot, the computed plot is well matched by its asymptotes. The maximum error that at <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>, <span class="math notranslate nohighlight">\(M = 1/\sqrt{2}\)</span>, <span class="math notranslate nohighlight">\(M_\mathrm{dB} = -3\)</span> dB, <span class="math notranslate nohighlight">\(\phi = -45^\circ\)</span>. The asymptotes used on the phase diagram are usually taken to be 0 at <span class="math notranslate nohighlight">\(\omega = (1/10)\tau\)</span> and <span class="math notranslate nohighlight">\(-90^\circ = \omega = 10\tau\)</span>. In that case, the asymptotes and the actual plot are equal (<span class="math notranslate nohighlight">\(\phi = -45^\circ\)</span>) at the frequency <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>.</p>
+</section>
+<section id="asymptotic-bode-plot-of-an-single-zero">
+<h3>Asymptotic bode plot of an single zero<a class="headerlink" href="#asymptotic-bode-plot-of-an-single-zero" title="Permalink to this heading">#</a></h3>
+<p>If</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \tau s + 1\]</div>
+<p>The frequency response is</p>
+<div class="math notranslate nohighlight">
+\[H(j\omega) = j\omega \tau + 1 \]</div>
+<div class="math notranslate nohighlight">
+\[M = \sqrt{\tau^2\omega^2 + 1},\phi = \tan^{-1} \omega\tau\]</div>
+<p>For <span class="math notranslate nohighlight">\(\omega \ll 1/\tau\)</span>, <span class="math notranslate nohighlight">\(\tau^2\omega^2 \ll 1\)</span>, <span class="math notranslate nohighlight">\(M \approx 1 = 0\)</span> dB, <span class="math notranslate nohighlight">\(\phi \approx 0^\circ\)</span>.</p>
+<p>For <span class="math notranslate nohighlight">\(\omega \gg 1/\tau\)</span>, <span class="math notranslate nohighlight">\(\tau^2\omega^2 \gg 1\)</span>, <span class="math notranslate nohighlight">\(M_\mathrm{dB} = 20\log_{10} \sqrt{\tau^2\omega^2} = 20\log_{10} \left(\tau\omega\right)\)</span> dB, <span class="math notranslate nohighlight">\(\phi \approx +90^\circ\)</span>.</p>
+<p>We can plot this as shown below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">tau</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">H5</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">([</span><span class="n">tau</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">bode</span><span class="p">(</span><span class="n">H5</span><span class="p">),</span><span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6dd0a6007c58a14073dd5c7f67429ef6d4e6080454cea1dcbe73a3b6a38eec7f.png" src="../_images/6dd0a6007c58a14073dd5c7f67429ef6d4e6080454cea1dcbe73a3b6a38eec7f.png" />
+</div>
+</div>
+<p>Adding the assymptotes gives</p>
+<p><img alt="Bode plot of a single zero with asymptotes added" src="../_images/bode5.png" /></p>
+<p>Again, for most of the magnitude Bode plot, the computed plot is well matched by its asymptotes. The maximum error that at <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>, <span class="math notranslate nohighlight">\(M = \sqrt{2}\)</span>, <span class="math notranslate nohighlight">\(M_\mathrm{dB} = 3\)</span> dB, <span class="math notranslate nohighlight">\(\phi = 45^\circ\)</span>. The asymptotes used on the phase diagram are usually taken to be 0 at <span class="math notranslate nohighlight">\(\omega = (1/10)\tau\)</span> and <span class="math notranslate nohighlight">\(90^\circ = \omega = 10\tau\)</span>. In that case, the asymptotes and the actual plot are equal (<span class="math notranslate nohighlight">\(\phi = 45^\circ\)</span>) at the frequency <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>.</p>
+</section>
+<section id="demo-using-the-interactive-bode-analysis-tool-provided-by-matlab">
+<h3>Demo: Using the interactive Bode analysis tool provided by MATLAB<a class="headerlink" href="#demo-using-the-interactive-bode-analysis-tool-provided-by-matlab" title="Permalink to this heading">#</a></h3>
+<p>This has to be done in MATLAB for desktop or MATLAB online.</p>
+<ul class="simple">
+<li><p>Open MATLAB and select Bode designer</p></li>
+</ul>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">H</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">controlSystemDesigner</span><span class="p">(</span><span class="s">&#39;bode&#39;</span><span class="p">,</span><span class="n">H</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Show that changing gain shifts plot up or down.</p></li>
+<li><p>Add a pole at about <span class="math notranslate nohighlight">\(\omega = 1\)</span> rad/s. Show that moving the pole moves the cross-over frequency.</p></li>
+<li><p>Erase the pole and add a zero. Move the zero. Note the HF gain. Move the zero to about 0.1 rad/s.</p></li>
+<li><p>Add a pole at about <span class="math notranslate nohighlight">\(\omega = 1\)</span>. Note that multiplication is addition on phase diagram. Note the pole limits the HF gain and phase returns to zero.</p></li>
+<li><p>Add another pole close the first pole and note the roll-off is -20 dB/decade.</p></li>
+<li><p>Add a third pole and note attenuation becomes -240 dB/decade.</p></li>
+</ul>
+</section>
+</section>
+<section id="aysymptotic-bode-plots-for-a-second-order-system">
+<span id="unit6-2-7"></span><h2>Aysymptotic bode plots for a second-order system<a class="headerlink" href="#aysymptotic-bode-plots-for-a-second-order-system" title="Permalink to this heading">#</a></h2>
+<p>The model second order system is given by the transfer function</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \frac{\omega^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\omega_n\)</span> is the undamped natural frequency and <span class="math notranslate nohighlight">\(\zeta\)</span> is the damping ratio.</p>
+<p>As we will see, the shape of the frequency response of this system depends only on <span class="math notranslate nohighlight">\(\zeta\)</span> and <span class="math notranslate nohighlight">\(\omega_n\)</span>. Hence knowledge of this plot allows us to easily analysis a system which has factors that are quadratic polynomials in <span class="math notranslate nohighlight">\(s\)</span>.</p>
+<p>Once again, we will rely on the explanation given by Carlos Osorio in Parts 4 of <span id="id11">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span>.</p>
+<section id="how-to-build-bode-plots-for-complex-systems">
+<h3>How to Build Bode Plots for Complex Systems<a class="headerlink" href="#how-to-build-bode-plots-for-complex-systems" title="Permalink to this heading">#</a></h3>
+<p>[See video in the notes]</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MQjdeGNZ4mY?si=02fMhH7QH8yWicSY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+<section id="examples-of-2nd-order-systems">
+<h3>Examples of 2nd-order systems<a class="headerlink" href="#examples-of-2nd-order-systems" title="Permalink to this heading">#</a></h3>
+<p>We have already see examples of second order systems in the form of the mass-spring-damper system. Another example from electrical engineering would be the RLC circuit.</p>
+<p>Examples of these systems and the transfer functions that they represent are shown in <a class="reference internal" href="#fig-unit6-2-4"><span class="std std-numref">Fig. 88</span></a></p>
+<figure class="align-default" id="fig-unit6-2-4">
+<a class="reference internal image-reference" href="../_images/2nd_order_systems.png"><img alt="Screenshot from the video How to Build Bode Plots for Complex Systems? (see caption) showing a mass-spring damper system and an RLC circuit." src="../_images/2nd_order_systems.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 88 </span><span class="caption-text">Examples of second-order systems. Left: mass-spring-damper system. Right: RLC circuit. Screenshot from video <a class="reference external" href="https://youtu.be/MQjdeGNZ4mY?si=DdGiwbY3zQM_KDdZ&amp;t=47">How to Build Bode Plots for Complex Systems</a> [t=47 seconds] from <span id="id12">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span></span><a class="headerlink" href="#fig-unit6-2-4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For the mass-spring-damper system</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \frac{X(s)}{F(s)} = \frac{\frac{1}{m} }{s^2 + \left(\frac{c}{m}\right)s + \left(\frac{k}{m} \right)}\]</div>
+<p>and the natural frequency is</p>
+<div class="math notranslate nohighlight">
+\[\omega_n = \sqrt{\frac{k}{M}}.\]</div>
+<p>For the RLC circuit</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \frac{V_\mathrm{out}(s)}{V_\mathrm{in}(s)} = \frac{\left(\frac{R}{L}\right)s }{s^2 + \left(\frac{R}{L}\right)s + \left(\frac{1}{LC} \right)}\]</div>
+<p>and the natural frequency is</p>
+<div class="math notranslate nohighlight">
+\[\omega_n = \sqrt{\frac{1}{LC}}.\]</div>
+<p>Providing that <span class="math notranslate nohighlight">\(0 &lt; \zeta \le 1\)</span>, the poles of the system will be complex and of the form<a class="footnote-reference brackets" href="#u62-note-10" id="id13">4</a>:</p>
+<div class="math notranslate nohighlight">
+\[p_{1,2} = -\zeta\omega_n \pm j\omega_n \sqrt{1 - \zeta^2}\]</div>
+<p>So</p>
+<div class="math notranslate nohighlight">
+\[H(j\omega) = \frac{1}{-\left(\frac{\omega}{\omega_n}\right)^2 + j2\zeta\left(\frac{\omega}{\omega_n} \right)s + 1}\]</div>
+<p>To evaluate the asymptotes, we will look at the tendences for frequencies before and after <span class="math notranslate nohighlight">\(\omega_n\)</span>.</p>
+<p>For <span class="math notranslate nohighlight">\(\omega \ll \omega_n\)</span> the +1 term in the denominator will dominate and</p>
+<div class="math notranslate nohighlight">
+\[\left|H(j\omega\right|_\mathrm{dB} \approx 0\,\mathrm{dB}\]</div>
+<div class="math notranslate nohighlight">
+\[\angle H(j\omega = 0^\circ\]</div>
+<p>When <span class="math notranslate nohighlight">\(\omega = \omega_n\)</span> the square term will cancel the +1 term and the denominator will become</p>
+<div class="math notranslate nohighlight">
+\[\left|H(j\omega\right|_\mathrm{dB} = 20\log_{10}\left(\frac{1}{2\zeta} \right)\,\mathrm{dB}\]</div>
+<div class="math notranslate nohighlight">
+\[\angle H(j\omega =  -90^\circ\]</div>
+<p>When <span class="math notranslate nohighlight">\(\omega \gg \omega_n\)</span> the squared term will dominate, and</p>
+<div class="math notranslate nohighlight">
+\[\left|H(j\omega\right|_\mathrm{dB} \approx -40\log_{10}\left(\frac{\omega}{\omega_n} \right)\,\mathrm{dB}\]</div>
+<div class="math notranslate nohighlight">
+\[\angle H(j\omega = -180^\circ\]</div>
+<p>We have plotted this for the system with <span class="math notranslate nohighlight">\(\omega_n = 10\)</span> rad/s and <span class="math notranslate nohighlight">\(\zeta = 0.25\)</span> and added the assymptotes:</p>
+<p><img alt="Bode plot of a complex pole with asymptotes added" src="../_images/bode6.png" /></p>
+<p>Note that the actual peak is to the left of <span class="math notranslate nohighlight">\(\omega = \omega_n\)</span>. This is because the actual frequency, often called the <em>damped natural frequency</em>, is given by <span class="math notranslate nohighlight">\(\omega_d = \omega_n\sqrt{1 - \zeta^2}\)</span>.</p>
+</section>
+<section id="effect-of-damping-ratio-on-bode-plot">
+<h3>Effect of damping ratio on Bode plot<a class="headerlink" href="#effect-of-damping-ratio-on-bode-plot" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">wn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="n">figure</span>
+<span class="s">hold</span><span class="w"> </span><span class="s">on</span>
+<span class="k">for</span><span class="w"> </span><span class="n">zeta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.05</span><span class="p">,</span><span class="w"> </span><span class="mf">0.16</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.75</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span>
+<span class="w">  </span><span class="n">bode</span><span class="p">([</span><span class="n">wn</span>^<span class="mi">2</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">zeta</span><span class="o">*</span><span class="n">wn</span><span class="p">,</span><span class="w"> </span><span class="n">wn</span>^<span class="mi">2</span><span class="p">]);</span>
+<span class="k">end</span>
+<span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
+<span class="nb">hold</span><span class="w"> </span><span class="n">off</span>
+<span class="nb">legend</span><span class="p">(</span><span class="s">&#39;zeta = 0.05&#39;</span><span class="p">,</span><span class="s">&#39;zeta = 0.16&#39;</span><span class="p">,</span><span class="s">&#39;zeta = 0.5&#39;</span><span class="p">,</span><span class="s">&#39;zeta = 0.75&#39;</span><span class="p">,</span><span class="s">&#39;zeta = 1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/0b07a9e06c65cbec9926bb27e228c675bea94de4617585c0a26ae7fb4bccb7fb.png" src="../_images/0b07a9e06c65cbec9926bb27e228c675bea94de4617585c0a26ae7fb4bccb7fb.png" />
+</div>
+</div>
+</section>
+<section id="demo-2-complex-poles-and-their-bode-diagrams">
+<h3>Demo 2: Complex poles and their Bode diagrams<a class="headerlink" href="#demo-2-complex-poles-and-their-bode-diagrams" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Open MATLAB and select Bode designer</p></li>
+</ul>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">H</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">controlSystemDesigner</span><span class="p">(</span><span class="s">&#39;bode&#39;</span><span class="p">,</span><span class="n">H</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Show that changing gain shifts plot up or down.</p></li>
+<li><p>Add a pole at about <span class="math notranslate nohighlight">\(\omega = 1\)</span> rad/s. Show that moving the pole moves the cross-over frequency.</p></li>
+<li><p>Erase the pole and add a zero. Move the zero. Note the HF gain. Move the zero to about 0.1 rad/s.</p></li>
+<li><p>Add a pole at about <span class="math notranslate nohighlight">\(\omega = 1\)</span>. Note that multiplication is addition on phase diagram. Note the pole limits the HF gain and phase returns to zero.</p></li>
+<li><p>Add another pole close the first pole and note the roll-off is -20 dB/decade.</p></li>
+<li><p>Add a third pole and note attenuation becomes -240 dB/decade.</p></li>
+</ul>
+</section>
+</section>
+<section id="bode-plots-for-analysis-and-design">
+<span id="unit6-2-8"></span><h2>Bode plots for analysis and design<a class="headerlink" href="#bode-plots-for-analysis-and-design" title="Permalink to this heading">#</a></h2>
+</section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p>In this unit we have ….</p>
 <p>We covered the following topics</p>
 <ul class="simple">
-<li><p><span class="xref std std-ref">unit6.2.1</span></p></li>
-<li><p><span class="xref std std-ref">unit6.2.2</span></p></li>
-<li><p><span class="xref std std-ref">unit6.2.3</span></p></li>
-<li><p><span class="xref std std-ref">unit6.2.4</span></p></li>
-<li><p><span class="xref std std-ref">unit6.2.5</span></p></li>
-<li><p><span class="xref std std-ref">unit6.2.6</span></p></li>
-<li><p><span class="xref std std-ref">unit6.2.7</span></p></li>
-<li><p><span class="xref std std-ref">unit6.2.8</span></p></li>
+<li><p><a class="reference internal" href="#unit6-2-1"><span class="std std-ref">Introduction</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-2-2"><span class="std std-ref">A little history</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-2-3"><span class="std std-ref">Frequency Response</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-2-4"><span class="std std-ref">Calculation of Frequency Response</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-2-5"><span class="std std-ref">Terminology used</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-2-6"><span class="std std-ref">Aysymptotic bode plots for first-order systems</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-2-7"><span class="std std-ref">Aysymptotic bode plots for a second-order system</span></a></p></li>
+<li><p><a class="reference internal" href="#unit6-2-8"><span class="std std-ref">Bode plots for analysis and design</span></a></p></li>
 </ul>
 <section id="take-aways">
 <span id="unit6-2-takeaways"></span><h3>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h3>
@@ -510,6 +941,37 @@ document.write(`
 <h4>Takeaway 1<a class="headerlink" href="#takeaway-1" title="Permalink to this heading">#</a></h4>
 </section>
 </section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<div class="docutils container" id="id14">
+<dl class="citation">
+<dt class="label" id="id24"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id10">2</a>)</span></dt>
+<dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
+</dd>
+<dt class="label" id="id32"><span class="brackets">Oso13</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id4">3</a>,<a href="#id5">4</a>,<a href="#id9">5</a>,<a href="#id11">6</a>,<a href="#id12">7</a>)</span></dt>
+<dd><p>Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: <a class="reference external" href="https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html">https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html</a>.</p>
+</dd>
+</dl>
+</div>
+</section>
+<section id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this heading">#</a></h2>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="u62-note-1"><span class="brackets"><a class="fn-backref" href="#id6">1</a></span></dt>
+<dd><p>Audio engineers quote roll-off in <em>dB per octave</em>, where an octave is a doubling of frequency.</p>
+</dd>
+<dt class="label" id="u62-note-2"><span class="brackets"><a class="fn-backref" href="#id7">2</a></span></dt>
+<dd><p>The cross-over refers to the change in response from a <em>gain</em> (<span class="math notranslate nohighlight">\(M \ge 1\)</span>) to an <em>attenuation</em> <span class="math notranslate nohighlight">\(M &lt; 1\)</span>. Above the cross-over frequency the system starts to act like a low-pass filter.</p>
+</dd>
+<dt class="label" id="u62-note-3"><span class="brackets"><a class="fn-backref" href="#id8">3</a></span></dt>
+<dd><p>In filter terms, the bandwidth frequency marks the transition between the <em>pass-band</em> and the <em>stop-band</em>. In control system terms, the bandwidth gives a limit on the frequencies that you can influence with contollers.</p>
+</dd>
+<dt class="label" id="u62-note-10"><span class="brackets"><a class="fn-backref" href="#id13">4</a></span></dt>
+<dd><p>If <span class="math notranslate nohighlight">\(\zeta = 1\)</span> there will be two real and equal poles at <span class="math notranslate nohighlight">\(s = -\zeta\omega_n\)</span>. If <span class="math notranslate nohighlight">\(\zeta &gt; 1\)</span> there will be two real poles at <span class="math notranslate nohighlight">\(p_{1,2} = -\zeta\omega_n + \omega_n\sqrt{\zeta^2 - 1}\)</span>. These cases are already covered in <span class="xref std std-ref">unit:6.2.6</span>. You would just add the Bode plots for the real poles (or their asymptotes) together.</p>
+</dd>
+</dl>
 </section>
 </section>
 
@@ -549,7 +1011,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Unit 6.1: Frequency Respone of a Transfer Function</p>
+        <p class="prev-next-title">Unit 6.1: Frequency Response of a Transfer Function</p>
       </div>
     </a>
     <a class="right-next"
@@ -581,6 +1043,36 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-little-history">A little history</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-response">Frequency Response</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculation-of-frequency-response">Calculation of Frequency Response</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#terminology-used">Terminology used</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dc-gain">DC-gain</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#roll-off-rate">Roll-off rate</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-frequency">Natural-frequency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-over-frequency">Cross-over frequency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bandwidth-frequency">Bandwidth frequency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aysymptotic-bode-plots-for-first-order-systems">Aysymptotic bode plots for first-order systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-bode-plots-for-simple-systems">Exploring Bode Plots for Simple Systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plot-of-a-gain">Asymptotic bode plot of a gain</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plot-of-an-integrator">Asymptotic bode plot of an integrator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plot-of-an-differentiator">Asymptotic bode plot of an differentiator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plot-of-an-single-pole">Asymptotic bode plot of an single pole</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plot-of-an-single-zero">Asymptotic bode plot of an single zero</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#demo-using-the-interactive-bode-analysis-tool-provided-by-matlab">Demo: Using the interactive Bode analysis tool provided by MATLAB</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aysymptotic-bode-plots-for-a-second-order-system">Aysymptotic bode plots for a second-order system</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-build-bode-plots-for-complex-systems">How to Build Bode Plots for Complex Systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-2nd-order-systems">Examples of 2nd-order systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#effect-of-damping-ratio-on-bode-plot">Effect of damping ratio on Bode plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#demo-2-complex-poles-and-their-bode-diagrams">Demo 2: Complex poles and their Bode diagrams</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bode-plots-for-analysis-and-design">Bode plots for analysis and design</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#takeaway-1">Takeaway 1</a></li>
@@ -588,6 +1080,8 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
 </ul>
 </li>
 </ul>
