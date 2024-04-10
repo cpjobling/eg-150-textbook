@@ -461,12 +461,12 @@ The properties of the ROC are summarised in **Section 3.1 D** of {ref}`schaum` a
 +++ {"slideshow": {"slide_type": "notes"}}
 
 (laplace:examples)=
-## Examples 9
+## Exercises 9
 
 
 
 (ex9.1)=
-### Example 9.1
+### Exercise 9.1
 
 Find the Laplace transform of
 
@@ -516,7 +516,7 @@ In this unit we presented the Laplace transform and look at some important prope
 * {ref}`laplace:examples`
 
 (unit4.1:takeaways)=
-### Takeaways
+### Unit 4.1: Takeaways
 
 #### The Laplace transform
 

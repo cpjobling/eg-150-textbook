@@ -195,7 +195,7 @@ See also: [Wikibooks: Engineering_Tables/Laplace_Transform_Properties](https://e
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "slide"}}
 
 (examples10)=
-## Examples 10: Laplace transforms of common waveforms
+## Exercises 10: Laplace transforms of common waveforms
 
 We will work through a few of the following on the board in class
 
@@ -208,7 +208,7 @@ We will work through a few of the following on the board in class
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
 (ex10.1)=
-### Example 10.1: Pulse
+### Exercise 10.1: Pulse
 
 Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the pulse shown in {numref}`fig:ex10.1`.
 
@@ -225,7 +225,7 @@ For full solution see [Example 2.4.1](https://ebookcentral.proquest.com/lib/swan
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
 (ex10.2)=
-### Example 10.2: Line segment
+### Exercise 10.2: Line segment
 
 Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the line segment shown in {numref}`fig:ex10.2`.
 
@@ -242,7 +242,7 @@ For full solution see [Example 2.4.2](https://ebookcentral.proquest.com/lib/swan
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
 (ex10.3)=
-### Example 10.3: Triangular Pulse
+### Exercise 10.3: Triangular Pulse
 
 Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the triangular pulse shown in {numref}`fig:ex10.3`.
 
@@ -259,7 +259,7 @@ For full solution see [Example 2.4.3](https://ebookcentral.proquest.com/lib/swan
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
 (ex10.4)=
-### Example 10.4: Square Wave
+### Exercise 10.4: Square Wave
 
 Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the of the periodic function shown in {numref}`fig:ex10.4`.
 
@@ -276,7 +276,7 @@ For full solution see [Example 2.4.4](https://ebookcentral.proquest.com/lib/swan
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
 (ex10.5)=
-### Example 10.5: Half-rectified Sinewave
+### Exercise 10.5: Half-rectified Sinewave
 
 Use the tables of Laplace transforms and properties as appropriate to compute the Laplace transform of the half-rectified sine wave shown in {numref}`fig:ex10.5`.
 
@@ -304,7 +304,8 @@ If we have time, I will work through one or two of these in class.
 
 In this section we have presented some of the most useful and commonly used properties of the Laplace transform, provided a table of Laplace Transform properties, and given examples of how properties and transform tables can be used to determine the Laplace transform of some useful aperiodic and periodic signals. 
 
-### Take Aways
+(unit4.3:takeaways)=
+### Unit 4.3: Take Aways
 
 There are a number of useful properties of the Laplace transform that we can use to simplify more complex problems in signals and systems, for example to find the laplace transforms of more complex signals than those studied in {ref}`unit4.2`. In particular we found that the time delay property $f(t-a) \Leftrightarrow e^{-as}F(s)$ and the linearity property $c_1f_1(t) + c_2f_2(t) + \ldots + c_nf_n(t) \Leftrightarrow c_1F_1(s) + c_2F_2(s) + \ldots + c_nF_n(s)$ are particularly useful. 
 
@@ -334,7 +335,7 @@ We move on to consider
 
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
-## Answers to Examples 10
+## Answers to Exercise 10
 
 {ref}`ex10.1`
 
@@ -355,3 +356,7 @@ $$f_R(t)\Leftrightarrow \frac{A}{s}\tanh \left(\frac{As}{2}\right).$$
 {ref}`ex10.5`
 
 $$f_{HW}(t) \Leftrightarrow \frac{1}{\left(s^2 + 1\right)\left(1-e^{-\pi s}\right)}.$$
+
+```{code-cell} ipython3
+
+```

@@ -209,12 +209,12 @@ Later in this course, and probably for the rest of your career, you will find th
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (examples_8)=
-## Examples 8: Systems described by differential equations
+## Exercises 8: Systems described by differential equations
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_1)=
-### Example 8.1 
+### Exercise 8.1 
 
 The continuous-time system shown in {numref}`fig:ex:8.1` consists of one integrator and one scalar multiplier. Write the differential equation that relates the output $y(t)$ to the input $x(t)$.
 
@@ -258,7 +258,7 @@ You can download and run these scripts and try them yourself.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_2)=
-### Example 8.2
+### Exercise 8.2
 
 The continuous-time system shown in {numref}`fig:ex:8.2` consists of two integrators and two scalar multipliers. Write the differential equation that relates the output $y(t)$ to the input $x(t)$.
 
@@ -287,7 +287,7 @@ As we will be moving on to show how differential equations can be solved by the 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_3)=
-### Example 8.3
+### Exercise 8.3
 
 Consider a continuous-time system whose input $x(t)$ and output $y(t)$ are related by
 
@@ -376,7 +376,7 @@ $$y_\mathrm{zs}(t) = \frac{K}{a-b}\left(e^{-bt}-e^{-at}\right) u_0(t)$$
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_4)=
-### Example 8.4
+### Exercise 8.4
 
 Consider the system in {ref}`ex8_3`.
 
@@ -391,7 +391,7 @@ For the answer, see the solved problem 2.21 in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_5)=
-### Example 8.5
+### Exercise 8.5
 
 Consider the system in {ref}`ex8_3`. Show that the initial rest condition $y(0) = 0$ also implies that the system is time-invariant.
 
@@ -402,7 +402,7 @@ For the answer, see the solved problem 2.22 in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_6)=
-### Example 8.6
+### Exercise 8.6
 
 Consider the system in {ref}`ex8_3`. Find the impulse response $h(t)$ of the system.
 
@@ -413,7 +413,7 @@ For the answer, see the solved problem 2.23 in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex8_7)=
-### Example 8.7
+### Exercise 8.7
 
 Consider the system in {ref}`ex8_3` with $y(0)=0$. 
 
@@ -431,7 +431,7 @@ For the answer, see the solved problem 2.24 in {cite}`schaum`.
 
 (ex8_8)=
 
-### Example 8.8
+### Exercise 8.8
 
 Consider the system described by
 
@@ -449,7 +449,8 @@ For the answer, refer to the lecture recording or see solved problem 2.25 in {ci
 
 In this lecture we have concluded our introduction to LTI systems by looking at linear constant-coefficient differential equations.
 
-### Take aways
+(unit3.3:takeaways)=
+### Unit 3.3: Take aways
 
 #### LCCODEs
 

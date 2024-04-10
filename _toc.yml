@@ -62,7 +62,7 @@ parts:
     - file: poles_and_zeros/second_order_properties
       title: Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles
   - file: freq_resp/index
-    title: Unit 6 Frequency Domain Analysis
+    title: Unit 6 Frequency Response Analysis
     sections:
     - file: freq_resp/tf_response
       title: Unit 6.1 Frequency Response of a Transfer Function

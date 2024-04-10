@@ -465,8 +465,6 @@ If `z` is a complex number (or a vector of complex numbers), we compute magnitud
 
 The Bode plot is a form of frequency response diagram for which the magnitude (in DB) and phase (in degrees) are plotted against the log of frequency. Such a plot has nice geometric properties that we can exploit to simplify the analysis of complex systems. We will explore Bode diagrams in some detail in {ref}`unit6.2`.
 
-* {ref}`unit6.2`
-
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## References
