@@ -58,6 +58,7 @@ assets: FORCE
 	poles_and_zeros \
 	introduction \
 	laplace_transform \
+	freq_resp \
 	worksheets \
 	setup \
 	_assets

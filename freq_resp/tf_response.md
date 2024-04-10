@@ -424,9 +424,46 @@ We covered the following topics
 (unit6.1:takeaways)=
 ### Take Aways
 
-#### Takeaway 1
+#### Frequency response
 
-### Still to come
+If you subject a stable LTI system with transfer function
+
+$$H(s) = \frac{Y(s)}{X(s)}$$
+
+to a sinusoidal input signal $x(t) = A_\mathrm{in} \sin\left(\omega t \right)$, the steady-state response (after any initial transients have decayed to zero) will also be a sinusoidal signal $y(t) = A_\mathrm{out}\sin\left(\omega t + \phi\right)$. That is a signal with the same frequency as the input signal but a new amplitude $A_\mathrm{out}$ and a possible phase-shift $\phi$.
+
+The output signal amplitude and phase-shift can be measured experimentally, e.g. with a signal generator and oscilloscope. We then plot the *magnitude*
+
+$$M = \left|\frac{A_\mathrm{out}}{A_\mathrm{in}} \right|$$
+
+and phase-shift $\phi$ (in degrees) on two plots against frequency. These plot represents the *frequency response* of the system.
+
+#### Frequency response from system function
+
+The frequency response of a stable LTI system depends only on $H(s)$. To determine the magnitude and phase we let $s = j\omega$ then
+
+$$M = \left|H(j\omega\right)|,\,\phi = \angle H(j\omega)$$
+
+Since $H(j\omega)$ will be a *complex number* with real part $\Re\left\{H(j\omega)\right\}$ and imaginary part $\Im\left\{H(j\omega)\right\}$, the magnitude is 
+
+$$M = \sqrt{\Re\left\{H(j\omega)\right\}^2 + \Im\left\{H(j\omega)\right\}^2}$$
+
+and the phase-shift is
+
+$$\phi = \tan^{-1} \frac{\Im\left\{H(j\omega)\right\}}{\Re\left\{H(j\omega)\right\}}. $$
+
+#### MATLAB functions introduced
+
+* `tf`: define a system as a transfer function.
+* `lsim`: simulate the response of a system defined by `tf`.
+* `abs`: compute the magnitude of (a vector) of complex numbers.
+* `angle`: compute the angle of (a vector) of complex numers.
+
+If `z` is a complex number (or a vector of complex numbers), we compute magnitude in dB using `20*log10(abs(z))` and phase-shift in degrees using `(180/pi)*angle(z)`.
+
+## Coming next
+
+The Bode plot is a form of frequency response diagram for which the magnitude (in DB) and phase (in degrees) are plotted against the log of frequency. Such a plot has nice geometric properties that we can exploit to simplify the analysis of complex systems. We will explore Bode diagrams in some detail in {ref}`unit6.2`.
 
 * {ref}`unit6.2`
 
