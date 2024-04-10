@@ -29,7 +29,7 @@ Follow along at [cpjobling.github.io/eg-150-textbook/freq_resp/tf_response](http
 
 This Unit is preparation for EG-247 Digital Signal Processing and EG-243 Modern Control Systems. It will not be examined for EG-150. 
 
-The notes for this unit have been inspired by Carlos Osorio's MATLAB Tech Talks series on [Understanding Bode diagrams](https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html) {cite}`osorio93` with details adapted from the [Example 5.47](https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter5/section/section51) in {cite}`schaum`. 
+The notes for this unit have been inspired by Carlos Osorio's MATLAB Tech Talks series on [Understanding Bode diagrams](https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html) {cite}`osorio93` with details adapted from the [Example 5.47](https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter5/section/section51) in {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -78,7 +78,7 @@ Quoted from [Hendrik Wade Bode](https://en.wikipedia.org/wiki/Hendrik_Wade_Bode)
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-> In 1938, [Bode] developed asymptotic phase and magnitude plots, now known as *Bode plots*, which displayed the frequency response of systems clearly. 
+> In 1938, [Bode] developed asymptotic phase and magnitude plots, now known as *Bode plots*, which displayed the frequency response of systems clearly.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -97,7 +97,6 @@ Steady-state response of of a stable LTI system is $y(t) = M \sin\left(\omega t 
 In {ref}`unit6.1` we explored the idea of a frequency response and showed that, after the transient response of a stable LTI system, subjected to a sinusoidal input $x(t) = A_\mathrm{in} \sin\left(\omega t\right)$ has died away, the steady-state output will be another sinusoid $y(t) = A_\mathrm{out} \sin\left(\omega t + \phi\right)$. 
 
 This is illustrated in {numref}`fig:unit6.2:2`.
-
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -383,11 +382,11 @@ This is complex to visualize, so we concentrate on the asymptotic behaviour.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-For $\omega \ll 1/\tau$, $\tau^2\omega^2 \ll 1$, $M \approx 1 = 0$ dB, $\phi \approx 0^\circ$. 
+For $\omega \ll 1/\tau$, $\tau^2\omega^2 \ll 1$, $M \approx 1 = 0$ dB, $\phi \approx 0^\circ$.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-For $\omega \gg 1/\tau$, $\tau^2\omega^2 \gg 1$, $M_\mathrm{dB} = 20\log_{10} 1 - 20\log_{10} \sqrt{\tau^2\omega^2} = - 20\log_{10} \left(\tau\omega\right)$ dB, $\phi \approx -90^\circ$. 
+For $\omega \gg 1/\tau$, $\tau^2\omega^2 \gg 1$, $M_\mathrm{dB} = 20\log_{10} 1 - 20\log_{10} \sqrt{\tau^2\omega^2} = - 20\log_{10} \left(\tau\omega\right)$ dB, $\phi \approx -90^\circ$.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -431,7 +430,7 @@ For $\omega \ll 1/\tau$, $\tau^2\omega^2 \ll 1$, $M \approx 1 = 0$ dB, $\phi \ap
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-For $\omega \gg 1/\tau$, $\tau^2\omega^2 \gg 1$, $M_\mathrm{dB} = 20\log_{10} \sqrt{\tau^2\omega^2} = 20\log_{10} \left(\tau\omega\right)$ dB, $\phi \approx +90^\circ$. 
+For $\omega \gg 1/\tau$, $\tau^2\omega^2 \gg 1$, $M_\mathrm{dB} = 20\log_{10} \sqrt{\tau^2\omega^2} = 20\log_{10} \left(\tau\omega\right)$ dB, $\phi \approx +90^\circ$.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -592,7 +591,7 @@ We have plotted this for the system with $\omega_n = 10$ rad/s and $\zeta = 0.25
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Note that the actual peak is to the left of $\omega = \omega_n$. This is because the actual frequency, often called the *damped natural frequency*, is given by $\omega_d = \omega_n\sqrt{1 - \zeta^2}$. 
+Note that the actual peak is to the left of $\omega = \omega_n$. This is because the actual frequency, often called the *damped natural frequency*, is given by $\omega_d = \omega_n\sqrt{1 - \zeta^2}$.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -614,7 +613,7 @@ hold off
 legend('zeta = 0.05','zeta = 0.16','zeta = 0.5','zeta = 0.75','zeta = 1')
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Demo 2: Complex poles and their Bode diagrams
 
@@ -625,22 +624,45 @@ H = tf(1,1)
 controlSystemDesigner('bode',H)
 ```
 
-* Show that changing gain shifts plot up or down.
+* Add a complex pole with $\omega_n = 10$, $\zeta = 1$. Note that there are two real poles.
 
-* Add a pole at about $\omega = 1$ rad/s. Show that moving the pole moves the cross-over frequency.
+* Change damping to $\zeta = 0.5$. Note roots become complex. Peak gain is $|1/2\zeta|=1=0$ dB. Cross-over frequency at 0 dB is $\omega_n$.
 
-* Erase the pole and add a zero. Move the zero. Note the HF gain. Move the zero to about 0.1 rad/s.
+* Change damping to $\zeta=0.05$. Peak gain is $|1/2\zeta|=10=20$ dB. If you change the natural frequency, you change the location of the peak, not the size of the peak. Change $\omega_n = 1$ rad/s.
 
-* Add a pole at about $\omega = 1$. Note that multiplication is addition on phase diagram. Note the pole limits the HF gain and phase returns to zero.
+* Change the gain to 10. Note that the magnitude plot shits up 20 dB. This illustrates the additive properties of the bode diagram. Because the phase of a gain is 0, the phase is unaffected. 
 
-* Add another pole close the first pole and note the roll-off is -20 dB/decade.
+* Add a zero at $\omega = 10$ rad/s. Note the roll-off slope changes from -40 dB/decade to -20 dB/decade. The final phase changes from $-180^\circ$ to $-90^\circ$ another pole close the first pole and note the roll-off is -20 dB/decade.
 
-* Add a third pole and note attenuation becomes -240 dB/decade.
+* Add a pole at $\omega = 100$ rad/s. Note final magnitude slope retrurns to -40 db/decade and final phase returns to $-180^\circ$.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+After this exercise, the final transfer function is
+$$\frac{10\left(0.1s + 1\right)}{\left(0.01s + 1\right)\left(s^2 + 0.1s + 1\right)} $$
+
+So, using this concept of superposition we can easily construct any transfer function that we are interested in studying. 
+
+All we need to do is break down or factor the transfer function into smaller constructs, and then graphically add all of those traces together as shown in {numref}`unit6.2:6`.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+::: {figure-md} fig:unit6.2:6
+<img src="pictures/superposition.png" alt="Screenshot from the video How to Build Bode Plots for Complex Systems? (see caption) showing the idea of superpostion." width="100%" />
+
+The idea of superpostion: a bode diagram can be obtained by adding the magnitude and phase of the component bode plots  [What are Bode Plots?](https://youtu.be/MQjdeGNZ4mY?si=0KeRrQKVikU281JX&t=413) [t=6 minute 53 seconds] from {cite}`osorio93`
+:::
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (unit6.2.8)=
 ## Bode plots for analysis and design
+
+As we have seen, the Bode plot is a useful system analysis tool. 
+
+With MATLAB and the Control System Designer tool is is very easy to explore the behaviour of indiviual poles and zeros and see how the combination of poles and zeros impact the overall frquency response.
+
+It is also a very useful tool for examining the stability, gain and phase margin for feedback control systems. You will see this application in EG-243 next year.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
