@@ -479,7 +479,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bode-plots-for-analysis-and-design">Bode plots for analysis and design</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#takeaway-1">Takeaway 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Frequency response</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bode-plot">Bode plot</a></li>
 </ul>
 </li>
 </ul>
@@ -932,11 +933,13 @@ $<span class="math notranslate nohighlight">\(\frac{10\left(0.1s + 1\right)}{\le
 <span id="unit6-2-8"></span><h2>Bode plots for analysis and design<a class="headerlink" href="#bode-plots-for-analysis-and-design" title="Permalink to this heading">#</a></h2>
 <p>As we have seen, the Bode plot is a useful system analysis tool.</p>
 <p>With MATLAB and the Control System Designer tool is is very easy to explore the behaviour of indiviual poles and zeros and see how the combination of poles and zeros impact the overall frquency response.</p>
-<p>It is also a very useful tool for examining the stability, gain and phase margin for feedback control systems. You will see this application in EG-243 next year.</p>
+<p>It is also a very useful tool for examining the stability, gain and phase margin for feedback control systems.</p>
+<p>You acan also use the superposition properties of the Bode plot to facilitae the design of PID, lead and lag controllers in control system design.</p>
+<p>You will study the latter two applications in EG-243 next year.</p>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
-<p>In this unit we have ….</p>
+<p>In this unit we have explored the Bode plot and demonstrated its properties usful for the analysis of LTI systems.</p>
 <p>We covered the following topics</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#unit6-2-1"><span class="std std-ref">Introduction</span></a></p></li>
@@ -950,19 +953,28 @@ $<span class="math notranslate nohighlight">\(\frac{10\left(0.1s + 1\right)}{\le
 </ul>
 <section id="take-aways">
 <span id="unit6-2-takeaways"></span><h3>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h3>
-<section id="takeaway-1">
-<h4>Takeaway 1<a class="headerlink" href="#takeaway-1" title="Permalink to this heading">#</a></h4>
+<section id="id15">
+<h4>Frequency response<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h4>
+<p>The steady-state output of a linear time-invariant system <span class="math notranslate nohighlight">\(H(s)\)</span> subject to a waveform <span class="math notranslate nohighlight">\(x(t) = A_{\mathrm{in}}\left(\sin\omega t\right)\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[y(t) = \left|\frac{A_\mathrm{out}}{A_\mathrm{in}} \right|=\sin\left(\omega t + \phi\right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(M = \left|A_\mathrm{out}/A_\mathrm{in}\right| = \left|H(j\omega)\right|\)</span> and <span class="math notranslate nohighlight">\(\phi = \angle H(j\omega)\)</span> rad/s. Both <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span> depend only in the system transfer function (Laplace transform of the impulse response).</p>
+</section>
+<section id="bode-plot">
+<h4>Bode plot<a class="headerlink" href="#bode-plot" title="Permalink to this heading">#</a></h4>
+<p>The Bode plot is a plot of <span class="math notranslate nohighlight">\(M_{\mathrm{dB}} = 20\log_{10} M\)</span> dB and phase <span class="math notranslate nohighlight">\(\phi_\mathrm{degree} = (180/\pi)\phi_{\mathrm{radian}}\)</span> plotted against <span class="math notranslate nohighlight">\(\log_{10} \omega\)</span>.</p>
+<p>A Bode plot magnitude and phase plots have the property of <em>superposition</em>. That is, to obtain the Bode plot of a complex transfer function, we add the Bode plots of the real and complex factors (poles and zeros) of the transfer function.</p>
 </section>
 </section>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id15">
+<div class="docutils container" id="id16">
 <dl class="citation">
-<dt class="label" id="id25"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id10">2</a>)</span></dt>
+<dt class="label" id="id26"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id10">2</a>)</span></dt>
 <dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
 </dd>
-<dt class="label" id="id33"><span class="brackets">Oso13</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id4">3</a>,<a href="#id5">4</a>,<a href="#id9">5</a>,<a href="#id11">6</a>,<a href="#id12">7</a>,<a href="#id14">8</a>)</span></dt>
+<dt class="label" id="id34"><span class="brackets">Oso13</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id4">3</a>,<a href="#id5">4</a>,<a href="#id9">5</a>,<a href="#id11">6</a>,<a href="#id12">7</a>,<a href="#id14">8</a>)</span></dt>
 <dd><p>Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: <a class="reference external" href="https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html">https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html</a>.</p>
 </dd>
 </dl>
@@ -1088,7 +1100,8 @@ $<span class="math notranslate nohighlight">\(\frac{10\left(0.1s + 1\right)}{\le
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bode-plots-for-analysis-and-design">Bode plots for analysis and design</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#takeaway-1">Takeaway 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Frequency response</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bode-plot">Bode plot</a></li>
 </ul>
 </li>
 </ul>
