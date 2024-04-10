@@ -14,6 +14,7 @@ kernelspec:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(unit2.4)=
 # Unit 2.4: Systems and Classification of Systems
 
 This section is based on Section 1.5 of {cite}`schaum`.
@@ -360,13 +361,13 @@ You will see examples of systems with feedback when you study op-amp circuits in
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (worked_examples_4)=
-## Examples 4
+## Exercises 4
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex4.1)=
 
-### Example 4.1: RC Circuit 
+### Exercise 4.1: RC Circuit 
 
 
 ```{admonition} MATLAB Example
@@ -395,7 +396,7 @@ For the answer, refer to the lecture recording or see solved problem 1.32 in {ci
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex4_2)=
-### Example 4.2: Capacitor circuit
+### Exercise 4.2: Capacitor circuit
 
  ```{admonition} MATLAB Example
 :class: tip
@@ -425,7 +426,7 @@ For the answer, refer to the lecture recording or see solved problem 1.33 in {ci
 (ex4_3)=
 
 
-### Example 4.3: Signal modulator
+### Exercise 4.3: Signal modulator
 
 ```{admonition} MATLAB Example
 :class: tip
@@ -448,7 +449,7 @@ For the answer, refer to the lecture recording or see solved problem 1.34 in {ci
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex4_4)=
-### Example 4.4 
+### Exercise 4.4 
 
 A system has the input-output relationship given by
 
@@ -463,7 +464,7 @@ For the answer, see the solved problem 1.35 in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex4_5)=
-### Example 4.5
+### Exercise 4.5
 
 Consider the system whose input-output relationship is given by the linear equation 
 
@@ -478,7 +479,7 @@ For the answer, see the solved problem 1.40 in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex4_6)=
-### Example 4.6 
+### Exercise 4.6 
 
 (a) Show that the causality for a continuous-time linear system is equivalent to the following statement: For any time $t_0$ and any input $x(t)$ with $x(t) = 0$ for $t \le t_0$, the output $y(t)$ is zero for $t \le t_0$.
 
@@ -495,7 +496,7 @@ For the answer, see the solved problem 1.43 in {cite}`schaum`.
 (ex4_7)=
 
 
-### Example 4.7
+### Exercise 4.7
 
 Let $\mathbf{T}$ represent a continuous-time LTI system. Then show that
 
@@ -543,7 +544,8 @@ where $\lambda = y(0)$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-## Summary
+(unit2.4:takeaways)=
+## Unit 2.4 Takeaways
 
 In this lecture we have started our look at systems and the classification of systems.
 
@@ -606,4 +608,8 @@ where $k_1$ and $k_2$ are finite real constants.
 
 ```{bibliography}
 :filter: docname in docnames
+```
+
+```{code-cell}
+
 ```

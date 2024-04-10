@@ -14,7 +14,7 @@ kernelspec:
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(lti_systems)=
+(lti_systems2)=
 # Unit 3.2: Properties and Eigenfunctions of Continuous-Time LTI Systems
 
 This section is based on Sections 2.3 and 2.4 of {cite}`schaum`
@@ -186,7 +186,7 @@ Note from the equation
 
 $$y(t) = H(s)e^{st}$$
 
-that $y(0) = H(s)$ (see {ref}`ex:4_7`).
+that $y(0) = H(s)$.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -196,12 +196,12 @@ The above results underline the definition of the Laplace transform and Fourier 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (examples_6)=
-## Examples 6: Properties of Continuous-Time LTI Systems
+## Exercises 6: Properties of Continuous-Time LTI Systems
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex6_1)=
-### Example 6.1 
+### Exercise 6.1 
 
 The signals in {numref}`fig:ex6.1`(a) and (b) are the input $x(t)$ and the output $y(t)$, respectively, of a certain continuous-time LTI system. 
 
@@ -226,7 +226,7 @@ For the answer, refer to the lecture recording or see solved problem 2.9 in in {
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex6_2)=
-### Example 6.2 
+### Exercise 6.2 
 
 Consider a continuous-time LTI system whose step response is given by
 
@@ -261,7 +261,7 @@ fplot(y(t),[0, 6]),ylim([-1,1.25]),grid,xlabel('t'),ylabel('y(t)')
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex6_3)=
-### Example 6.3
+### Exercise 6.3
 
 ```{note}
 Interesting result but not examined further.
@@ -282,7 +282,7 @@ For the answer, see the solved problem 2.11 in in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex6_4)=
-### Example 6.4
+### Exercise 6.4
 
 ```{note}
 Interesting result but not examined further.
@@ -298,7 +298,7 @@ For the answer, refer to the solved problem 2.12 in in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex6_5)=
-### Example 6.5
+### Exercise 6.5
 
 ```{note}
 Interesting result but not examined further.
@@ -313,7 +313,7 @@ For the answer, see the solved problem 2.13 in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex6_6)=
-### Example 6.6
+### Exercise 6.6
 
 The system shown in {numref}`fig:ex6.6`(a) is formed by connecting two systems in *cascade*. The impulse responses of the two systems are $h_1(t)$ and $h_2(t)$, respectively, and
 
@@ -338,12 +338,12 @@ For the answer, refer to the lecture recording or see solved problem 2.14 in {ci
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (examples_7)=
-## Examples 7: Eigenfunctions of Continuous-Time LTI systems
+## Exercises 7: Eigenfunctions of Continuous-Time LTI systems
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex7_1)=
-### Example 7.1
+### Exercise 7.1
 
 ```{note}
 This is a foretaste of the Laplace Transform.
@@ -366,7 +366,7 @@ For the answer, refer to the lecture recording or see solved problem 2.15 in {ci
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex7_2)=
-### Example 7.2
+### Exercise 7.2
 
 ```{note}
 Interesting result which will not be examined.
@@ -387,7 +387,7 @@ For the answer, see the solved problem 2.16 in {cite}`schaum`.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex7_3)=
-### Example 7.3
+### Exercise 7.3
 
 ```{note}
 Interesting result that is a foretaste of the Fourier transform which will not be examined.
@@ -409,7 +409,8 @@ We have continued our introdiuction the continuous-time LTI systems by consideri
 * {ref}`Properties_of_Continuous_Time_LTI_Systems`
 * {ref}`eigenfunctions_of_continuous_time_LTI_systems`
 
-### Take aways
+(unit3.2:takeaways)=
+### Unit 3.2: Take aways
 
 #### Properties of continuous-time LTI systems
 

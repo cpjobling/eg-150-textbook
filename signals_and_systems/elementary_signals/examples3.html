@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Examples 3 - Elementary Signals &#8212; EG-150 Signals and Systems</title>
+    <title>Exercises 3 - Elementary Signals &#8212; EG-150 Signals and Systems</title>
   
   
   
@@ -204,7 +204,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../poles_and_zeros/second_order_properties.html">Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../freq_resp/index.html">Unit 6 Frequency Domain Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../freq_resp/index.html">Unit 6 Frequency Response Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../freq_resp/tf_response.html">Unit 6.1: Frequency Response of a Transfer Function</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../freq_resp/bode_plots.html">Unit 6.2: Bode Plots</a></li>
@@ -432,7 +432,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Examples 3 - Elementary Signals</h1>
+    <h1>Exercises 3 - Elementary Signals</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -443,16 +443,16 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-unit-step">Plot the Unit Step</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-forms-of-unit-step">3.1: Other forms of unit step</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthesis-of-signals-from-unit-step">3.2: Synthesis of Signals from Unit Step</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-1-other-forms-of-unit-step">Exercise 3.1: Other forms of unit step</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-2-synthesis-of-signals-from-unit-step">Exercise 3.2: Synthesis of Signals from Unit Step</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-synthesize-rectangular-pulse">a) Synthesize Rectangular Pulse</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-synthesize-square-wave">b) Synthesize Square Wave</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-synthesize-symmetric-rectangular-pulse">c) Synthesize Symmetric Rectangular Pulse</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-synthesize-symmetric-triangular-pulse">d) Synthesize Symmetric Triangular Pulse</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3-3-important-properties-of-the-delta-function">Example 3.3: Important properties of the delta function</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3-4-signal-synthesis">Example 3.4: Signal Synthesis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-3-important-properties-of-the-delta-function">Exercise 3.3: Important properties of the delta function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-4-signal-synthesis">Exercise 3.4: Signal Synthesis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-work">Lab Work</a></li>
 </ul>
             </nav>
@@ -474,8 +474,8 @@ document.write(`
 </div>
 </div>
 </div>
-<section class="tex2jax_ignore mathjax_ignore" id="examples-3-elementary-signals">
-<span id="worked-examples-3"></span><h1>Examples 3 - Elementary Signals<a class="headerlink" href="#examples-3-elementary-signals" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="exercises-3-elementary-signals">
+<span id="worked-examples-3"></span><h1>Exercises 3 - Elementary Signals<a class="headerlink" href="#exercises-3-elementary-signals" title="Permalink to this heading">#</a></h1>
 <p>To accompany <a class="reference internal" href="index.html#elementary-signals"><span class="std std-ref">Unit 2.3: Elementary Signals</span></a>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals/examples3">cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals/examples3</a></p>
 <p><img alt="QR Code" src="../../_images/qrcode_examples3.png" /></p>
@@ -494,8 +494,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="other-forms-of-unit-step">
-<span id="ex3-1"></span><h2>3.1: Other forms of unit step<a class="headerlink" href="#other-forms-of-unit-step" title="Permalink to this heading">#</a></h2>
+<section id="exercise-3-1-other-forms-of-unit-step">
+<span id="ex3-1"></span><h2>Exercise 3.1: Other forms of unit step<a class="headerlink" href="#exercise-3-1-other-forms-of-unit-step" title="Permalink to this heading">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
@@ -554,8 +554,8 @@ document.write(`
 </figcaption>
 </figure>
 </section>
-<section id="synthesis-of-signals-from-unit-step">
-<span id="ex3-2"></span><h2>3.2: Synthesis of Signals from Unit Step<a class="headerlink" href="#synthesis-of-signals-from-unit-step" title="Permalink to this heading">#</a></h2>
+<section id="exercise-3-2-synthesis-of-signals-from-unit-step">
+<span id="ex3-2"></span><h2>Exercise 3.2: Synthesis of Signals from Unit Step<a class="headerlink" href="#exercise-3-2-synthesis-of-signals-from-unit-step" title="Permalink to this heading">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
@@ -622,8 +622,8 @@ document.write(`
 
 </pre></section>
 </section>
-<section id="example-3-3-important-properties-of-the-delta-function">
-<span id="ex3-3"></span><h2>Example 3.3: Important properties of the delta function<a class="headerlink" href="#example-3-3-important-properties-of-the-delta-function" title="Permalink to this heading">#</a></h2>
+<section id="exercise-3-3-important-properties-of-the-delta-function">
+<span id="ex3-3"></span><h2>Exercise 3.3: Important properties of the delta function<a class="headerlink" href="#exercise-3-3-important-properties-of-the-delta-function" title="Permalink to this heading">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
@@ -679,8 +679,8 @@ document.write(`
 
 
 </pre></section>
-<section id="example-3-4-signal-synthesis">
-<span id="ex3-4"></span><h2>Example 3.4: Signal Synthesis<a class="headerlink" href="#example-3-4-signal-synthesis" title="Permalink to this heading">#</a></h2>
+<section id="exercise-3-4-signal-synthesis">
+<span id="ex3-4"></span><h2>Exercise 3.4: Signal Synthesis<a class="headerlink" href="#exercise-3-4-signal-synthesis" title="Permalink to this heading">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve this example by hand and then give the solution in the MATLAB lab.</p>
@@ -792,16 +792,16 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-unit-step">Plot the Unit Step</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-forms-of-unit-step">3.1: Other forms of unit step</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthesis-of-signals-from-unit-step">3.2: Synthesis of Signals from Unit Step</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-1-other-forms-of-unit-step">Exercise 3.1: Other forms of unit step</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-2-synthesis-of-signals-from-unit-step">Exercise 3.2: Synthesis of Signals from Unit Step</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-synthesize-rectangular-pulse">a) Synthesize Rectangular Pulse</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-synthesize-square-wave">b) Synthesize Square Wave</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-synthesize-symmetric-rectangular-pulse">c) Synthesize Symmetric Rectangular Pulse</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-synthesize-symmetric-triangular-pulse">d) Synthesize Symmetric Triangular Pulse</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3-3-important-properties-of-the-delta-function">Example 3.3: Important properties of the delta function</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-3-4-signal-synthesis">Example 3.4: Signal Synthesis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-3-important-properties-of-the-delta-function">Exercise 3.3: Important properties of the delta function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-4-signal-synthesis">Exercise 3.4: Signal Synthesis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-work">Lab Work</a></li>
 </ul>
   </nav></div>

@@ -472,6 +472,7 @@ $$\int_{-\infty}^{\infty}f(t)\delta^n(t-\alpha)dt = \left. ( - 1)^n\frac{d^n}{dt
 
 In this chapter we have looked at some elementary signals and the theoretical circuits that can be used to generate them.
 
+(unit2.3:takeaways)=
 ### Unit 2.3: Take aways
 
 * You should note that the unit step is the *heaviside function* $u_0(t)$.
@@ -482,9 +483,9 @@ In this chapter we have looked at some elementary signals and the theoretical ci
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-## Examples
+## Exercises
 
-We will do some of these in class. See [Examples 3](examples3).
+We will do some of these in class. See [Exercises 3](examples3).
 
 
 ## References

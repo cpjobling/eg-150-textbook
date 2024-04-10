@@ -262,12 +262,12 @@ Thus the impulse response $h(t)$ can be determined by differentiating the step r
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (examples_5_Responses_of_a_Continuous_Time_LTI_System_and_Convolution)=
-## Examples 5: Responses of a Continuous-Time LTI System and Convolution
+## Exercises 5: Responses of a Continuous-Time LTI System and Convolution
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex5_1)=
-### Example 5.1 
+### Exercise 5.1 
 
 Verify the following properties of the convolution integral; that is,
 
@@ -282,7 +282,7 @@ For the answer, refer to the lecture recording or see solved problem 2.1 in in {
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex5_2)=
-### Example 5.2
+### Exercise 5.2
 
 Show that
 
@@ -301,7 +301,7 @@ For the answer, refer to the lecture recording or see solved problem 2.2 in in {
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex5_3)=
-### Example 5.3
+### Exercise 5.3
 
 Let $y(t) = x(t) * h(t)$. Then show that
 
@@ -314,7 +314,7 @@ For the answer, refer to the lecture recording or see solved problem 2.3 in in {
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex5_4)=
-### Example 5.4
+### Exercise 5.4
 
 The input $x(t)$ and the impulse response $h(t)$ of a continuous-time LTI system are given by
 
@@ -450,7 +450,7 @@ Go back to {ref}`step_response`
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex5_5)=
-### Example 5.5
+### Exercise 5.5
 
 Compute the output $y(t)$ for a continuous-time LTI system whose impulse response $h(t)$ and the input $x(t)$ are given by
 
@@ -514,7 +514,7 @@ fplot(y(t)),title('y(t) = x(t) * y(t)')
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex5_6)=
-### Example 5.6
+### Exercise 5.6
 
 Evaluate $y(t) = x(t) * h(t)$, where $x(t)$ and $h(t)$ are shown in {numref}`fig:ex:5.6`, by an alalytical technique, and (b) by a graphical method.
 
@@ -600,6 +600,7 @@ In this lecture we have looked at
 * {ref}`convolution_operation`
 * {ref}`step_response`
 
+(unit3.1:takeaways)=
 ### Unit 3.1: Take Aways
 
 * *Impulse response*: $h(t) = \mathbf{T}\left\{\delta(t)\right\}$

@@ -204,7 +204,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../poles_and_zeros/second_order_properties.html">Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../freq_resp/index.html">Unit 6 Frequency Domain Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../freq_resp/index.html">Unit 6 Frequency Response Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../freq_resp/tf_response.html">Unit 6.1: Frequency Response of a Transfer Function</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../freq_resp/bode_plots.html">Unit 6.2: Bode Plots</a></li>
@@ -457,28 +457,28 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-peek-into-the-future">A peek into the future</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-8-systems-described-by-differential-equations">Examples 8: Systems described by differential equations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8-1">Example 8.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-8-systems-described-by-differential-equations">Exercises 8: Systems described by differential equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-1">Exercise 8.1</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solution">MATLAB Solution</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8-2">Example 8.2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-2">Exercise 8.2</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">MATLAB Solution</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8-3">Example 8.3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-3">Exercise 8.3</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8-4">Example 8.4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8-5">Example 8.5</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8-6">Example 8.6</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8-7">Example 8.7</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8-8">Example 8.8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-4">Exercise 8.4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-5">Exercise 8.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-6">Exercise 8.6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-7">Exercise 8.7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-8">Exercise 8.8</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-3-3-take-aways">Unit 3.3: Take aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lccodes">LCCODEs</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-lccodes">Solution of LCCODEs</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analogue-computer-models">Analogue computer models</a></li>
@@ -511,7 +511,7 @@ document.write(`
 <p>We conclude our introduction to continuous-time LTI system by considering</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#continuous-time-lti-systems-described-by-differential-equations"><span class="std std-ref">Continuous-time LTI systems described by differential equations</span></a></p></li>
-<li><p><a class="reference internal" href="#examples-8"><span class="std std-ref">Examples 8: Systems described by differential equations</span></a></p></li>
+<li><p><a class="reference internal" href="#examples-8"><span class="std std-ref">Exercises 8: Systems described by differential equations</span></a></p></li>
 </ul>
 </section>
 <section id="continuous-time-lti-systems-described-by-differential-equations">
@@ -541,7 +541,7 @@ document.write(`
 </section>
 <section id="illustration-an-rc-circuit">
 <h4>Illustration: An RC Circuit<a class="headerlink" href="#illustration-an-rc-circuit" title="Permalink to this heading">#</a></h4>
-<p>For instance, in the RC circuit considered in <a class="reference internal" href="../signals_and_systems/systems/index.html#ex4-1"><span class="std std-ref">Example 4.1: RC Circuit</span></a>, the input <span class="math notranslate nohighlight">\(x(t)=v_s(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t)=v_c(t)\)</span> are related by a first-order constant-coefficient differential equation</p>
+<p>For instance, in the RC circuit considered in <a class="reference internal" href="../signals_and_systems/systems/index.html#ex4-1"><span class="std std-ref">Exercise 4.1: RC Circuit</span></a>, the input <span class="math notranslate nohighlight">\(x(t)=v_s(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t)=v_c(t)\)</span> are related by a first-order constant-coefficient differential equation</p>
 <div class="math notranslate nohighlight">
 \[\frac{dy(t)}{dt}+\frac{1}{RC}y(t)=\frac{1}{RC}x(t)\]</div>
 <p>So, by inspection, <span class="math notranslate nohighlight">\(N=1\)</span>, <span class="math notranslate nohighlight">\(a_1 = 1\)</span>, <span class="math notranslate nohighlight">\(a_0 = b_0 = 1/RC\)</span>.</p>
@@ -569,7 +569,7 @@ document.write(`
 <p>The system defined by</p>
 <div class="math notranslate nohighlight">
 \[\sum_{k=0}^N a_k \frac{d^k}{dt^k}y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)\]</div>
-<p>will be linear only if all the auxilliary conditions are zero (see <a class="reference internal" href="#ex8-4"><span class="std std-ref">Example 8.4</span></a>).</p>
+<p>will be linear only if all the auxilliary conditions are zero (see <a class="reference internal" href="#ex8-4"><span class="std std-ref">Exercise 8.4</span></a>).</p>
 <p>If the auxilliary conditions are not zero, then the response <span class="math notranslate nohighlight">\(y(t)\)</span> of a system can be expressed as</p>
 <div class="math notranslate nohighlight">
 \[y(t) = y_\mathrm{zi}(t) + y_\mathrm{zs}(t)\]</div>
@@ -581,7 +581,7 @@ document.write(`
 <p><span class="caption-number">Fig. 39 </span><span class="caption-text">Zero-state and zero-input responses</span><a class="headerlink" href="#fig-zs-and-zi-responses" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Note that <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t) \neq y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t) \neq y_p(t)\)</span> and that in general <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t)\)</span> contains <span class="math notranslate nohighlight">\(y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t)\)</span> contains both <span class="math notranslate nohighlight">\(y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_p(t)\)</span> (see <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.3</span></a>).</p>
+<p>Note that <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t) \neq y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t) \neq y_p(t)\)</span> and that in general <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t)\)</span> contains <span class="math notranslate nohighlight">\(y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t)\)</span> contains both <span class="math notranslate nohighlight">\(y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_p(t)\)</span> (see <a class="reference internal" href="#ex8-3"><span class="std std-ref">Exercise 8.3</span></a>).</p>
 </section>
 <section id="c-causality">
 <span id="ccde-c-causality"></span><h3>C. Causality<a class="headerlink" href="#c-causality" title="Permalink to this heading">#</a></h3>
@@ -589,7 +589,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\sum_{k=0}^N a_k \frac{d^k}{dt^k}y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k}x(t)\]</div>
 <p>to be causal, we must assume the condition of <em>initial rest</em> (or an <em>initially relaxed condition</em>).</p>
-<p>That is, if <span class="math notranslate nohighlight">\(x(t)=0\)</span> for <span class="math notranslate nohighlight">\(t\le t_0\)</span>, then assume <span class="math notranslate nohighlight">\(y(t) = 0\)</span> for <span class="math notranslate nohighlight">\(t\le t_0\)</span> (See <a class="reference internal" href="../signals_and_systems/systems/index.html#ex4-6"><span class="std std-ref">Example 4.6</span></a>).</p>
+<p>That is, if <span class="math notranslate nohighlight">\(x(t)=0\)</span> for <span class="math notranslate nohighlight">\(t\le t_0\)</span>, then assume <span class="math notranslate nohighlight">\(y(t) = 0\)</span> for <span class="math notranslate nohighlight">\(t\le t_0\)</span> (See <a class="reference internal" href="../signals_and_systems/systems/index.html#ex4-6"><span class="std std-ref">Exercise 4.6</span></a>).</p>
 <p>Thus, the response for <span class="math notranslate nohighlight">\(t &gt; t_0\)</span> can be calculated from the linear constant-coefficient differential equation with the initial conditions</p>
 <div class="math notranslate nohighlight">
 \[y(t_0)=\frac{d}{dt}y(t_0)=\cdots=\frac{d^{N-1}}{dt^{N-1}}y(t_0)=0\]</div>
@@ -600,7 +600,7 @@ document.write(`
 </section>
 <section id="d-time-invariance">
 <span id="ccde-d-time-invariance"></span><h3>D. Time-invariance<a class="headerlink" href="#d-time-invariance" title="Permalink to this heading">#</a></h3>
-<p>For a linear causal system, initial rest also implies time-invariance (<a class="reference internal" href="#ex8-6"><span class="std std-ref">Example 8.6</span></a>).</p>
+<p>For a linear causal system, initial rest also implies time-invariance (<a class="reference internal" href="#ex8-6"><span class="std std-ref">Exercise 8.6</span></a>).</p>
 </section>
 <section id="e-impulse-response">
 <span id="ccde-e-impulse-response"></span><h3>E. Impulse response<a class="headerlink" href="#e-impulse-response" title="Permalink to this heading">#</a></h3>
@@ -608,17 +608,17 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\sum_{k=0}^N a_k \frac{d^k}{dt^k}y(t) = \sum_{k=0}^M b_k \frac{d^k}{dt^k} \delta(t)\]</div>
 <p>with the initial rest condition.</p>
-<p>Examples of finding impulse responses are given in <a class="reference internal" href="#ex8-6"><span class="std std-ref">Example 8.6</span></a> to <a class="reference internal" href="#ex8-8"><span class="std std-ref">Example 8.8</span></a>.</p>
+<p>Examples of finding impulse responses are given in <a class="reference internal" href="#ex8-6"><span class="std std-ref">Exercise 8.6</span></a> to <a class="reference internal" href="#ex8-8"><span class="std std-ref">Exercise 8.8</span></a>.</p>
 </section>
 <section id="a-peek-into-the-future">
 <h3>A peek into the future<a class="headerlink" href="#a-peek-into-the-future" title="Permalink to this heading">#</a></h3>
 <p>Later in this course, and probably for the rest of your career, you will find the impulse and other responses by using the Laplace transform.</p>
 </section>
 </section>
-<section id="examples-8-systems-described-by-differential-equations">
-<span id="examples-8"></span><h2>Examples 8: Systems described by differential equations<a class="headerlink" href="#examples-8-systems-described-by-differential-equations" title="Permalink to this heading">#</a></h2>
-<section id="example-8-1">
-<span id="ex8-1"></span><h3>Example 8.1<a class="headerlink" href="#example-8-1" title="Permalink to this heading">#</a></h3>
+<section id="exercises-8-systems-described-by-differential-equations">
+<span id="examples-8"></span><h2>Exercises 8: Systems described by differential equations<a class="headerlink" href="#exercises-8-systems-described-by-differential-equations" title="Permalink to this heading">#</a></h2>
+<section id="exercise-8-1">
+<span id="ex8-1"></span><h3>Exercise 8.1<a class="headerlink" href="#exercise-8-1" title="Permalink to this heading">#</a></h3>
 <p>The continuous-time system shown in <a class="reference internal" href="#fig-ex-8-1"><span class="std std-numref">Fig. 40</span></a> consists of one integrator and one scalar multiplier. Write the differential equation that relates the output <span class="math notranslate nohighlight">\(y(t)\)</span> to the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
 <figure class="align-default" id="fig-ex-8-1">
 <a class="reference internal image-reference" href="../_images/ex8_1.png"><img alt="A one-integrator linear system" src="../_images/ex8_1.png" style="width: 40%;" /></a>
@@ -650,8 +650,8 @@ document.write(`
 </ul>
 </section>
 </section>
-<section id="example-8-2">
-<span id="ex8-2"></span><h3>Example 8.2<a class="headerlink" href="#example-8-2" title="Permalink to this heading">#</a></h3>
+<section id="exercise-8-2">
+<span id="ex8-2"></span><h3>Exercise 8.2<a class="headerlink" href="#exercise-8-2" title="Permalink to this heading">#</a></h3>
 <p>The continuous-time system shown in <a class="reference internal" href="#fig-ex-8-2"><span class="std std-numref">Fig. 41</span></a> consists of two integrators and two scalar multipliers. Write the differential equation that relates the output <span class="math notranslate nohighlight">\(y(t)\)</span> to the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
 <figure class="align-default" id="fig-ex-8-2">
 <a class="reference internal image-reference" href="../_images/ex8_2.png"><img alt="A two-integrator linear system" src="../_images/ex8_2.png" style="width: 60%;" /></a>
@@ -671,8 +671,8 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="example-8-3">
-<span id="ex8-3"></span><h3>Example 8.3<a class="headerlink" href="#example-8-3" title="Permalink to this heading">#</a></h3>
+<section id="exercise-8-3">
+<span id="ex8-3"></span><h3>Exercise 8.3<a class="headerlink" href="#exercise-8-3" title="Permalink to this heading">#</a></h3>
 <p>Consider a continuous-time system whose input <span class="math notranslate nohighlight">\(x(t)\)</span> and output <span class="math notranslate nohighlight">\(y(t)\)</span> are related by</p>
 <div class="math notranslate nohighlight">
 \[\frac{dy(t)}{dt}+ay(t)=x(t)\]</div>
@@ -734,33 +734,33 @@ document.write(`
 \[y_\mathrm{zs}(t) = \frac{K}{a-b}\left(e^{-bt}-e^{-at}\right) u_0(t)\]</div>
 </section>
 </section>
-<section id="example-8-4">
-<span id="ex8-4"></span><h3>Example 8.4<a class="headerlink" href="#example-8-4" title="Permalink to this heading">#</a></h3>
-<p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.3</span></a>.</p>
+<section id="exercise-8-4">
+<span id="ex8-4"></span><h3>Exercise 8.4<a class="headerlink" href="#exercise-8-4" title="Permalink to this heading">#</a></h3>
+<p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Exercise 8.3</span></a>.</p>
 <p>(a) Show that the system is not linear if <span class="math notranslate nohighlight">\(y(0)=y_0\neq 0\)</span>.</p>
 <p>(b) Show that the system is linear if <span class="math notranslate nohighlight">\(y(0) = 0\)</span>.</p>
 <p>For the answer, see the solved problem 2.21 in <span id="id6">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-8-5">
-<span id="ex8-5"></span><h3>Example 8.5<a class="headerlink" href="#example-8-5" title="Permalink to this heading">#</a></h3>
-<p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.3</span></a>. Show that the initial rest condition <span class="math notranslate nohighlight">\(y(0) = 0\)</span> also implies that the system is time-invariant.</p>
+<section id="exercise-8-5">
+<span id="ex8-5"></span><h3>Exercise 8.5<a class="headerlink" href="#exercise-8-5" title="Permalink to this heading">#</a></h3>
+<p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Exercise 8.3</span></a>. Show that the initial rest condition <span class="math notranslate nohighlight">\(y(0) = 0\)</span> also implies that the system is time-invariant.</p>
 <p>For the answer, see the solved problem 2.22 in <span id="id7">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-8-6">
-<span id="ex8-6"></span><h3>Example 8.6<a class="headerlink" href="#example-8-6" title="Permalink to this heading">#</a></h3>
-<p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.3</span></a>. Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system.</p>
+<section id="exercise-8-6">
+<span id="ex8-6"></span><h3>Exercise 8.6<a class="headerlink" href="#exercise-8-6" title="Permalink to this heading">#</a></h3>
+<p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Exercise 8.3</span></a>. Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system.</p>
 <p>For the answer, see the solved problem 2.23 in <span id="id8">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-8-7">
-<span id="ex8-7"></span><h3>Example 8.7<a class="headerlink" href="#example-8-7" title="Permalink to this heading">#</a></h3>
-<p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.3</span></a> with <span class="math notranslate nohighlight">\(y(0)=0\)</span>.</p>
+<section id="exercise-8-7">
+<span id="ex8-7"></span><h3>Exercise 8.7<a class="headerlink" href="#exercise-8-7" title="Permalink to this heading">#</a></h3>
+<p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Exercise 8.3</span></a> with <span class="math notranslate nohighlight">\(y(0)=0\)</span>.</p>
 <p>(a) Find the step response <span class="math notranslate nohighlight">\(s(t)\)</span> of the system without using the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>.</p>
-<p>(b) Find the step response <span class="math notranslate nohighlight">\(s(t)\)</span> of the system with the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> obtained in <a class="reference internal" href="#ex8-6"><span class="std std-ref">Example 8.6</span></a>.</p>
+<p>(b) Find the step response <span class="math notranslate nohighlight">\(s(t)\)</span> of the system with the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> obtained in <a class="reference internal" href="#ex8-6"><span class="std std-ref">Exercise 8.6</span></a>.</p>
 <p>(c) Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> from the step response <span class="math notranslate nohighlight">\(s(t)\)</span>.</p>
 <p>For the answer, see the solved problem 2.24 in <span id="id9">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-8-8">
-<span id="ex8-8"></span><h3>Example 8.8<a class="headerlink" href="#example-8-8" title="Permalink to this heading">#</a></h3>
+<section id="exercise-8-8">
+<span id="ex8-8"></span><h3>Exercise 8.8<a class="headerlink" href="#exercise-8-8" title="Permalink to this heading">#</a></h3>
 <p>Consider the system described by</p>
 <div class="math notranslate nohighlight">
 \[\frac{dy(t)}{dt} + 2y(t) = x(t) + \frac{dx(t)}{dt}\]</div>
@@ -771,8 +771,8 @@ document.write(`
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p>In this lecture we have concluded our introduction to LTI systems by looking at linear constant-coefficient differential equations.</p>
-<section id="take-aways">
-<h3>Take aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h3>
+<section id="unit-3-3-take-aways">
+<span id="unit3-3-takeaways"></span><h3>Unit 3.3: Take aways<a class="headerlink" href="#unit-3-3-take-aways" title="Permalink to this heading">#</a></h3>
 <section id="lccodes">
 <h4>LCCODEs<a class="headerlink" href="#lccodes" title="Permalink to this heading">#</a></h4>
 <p>Continuous-time LTI systems are often modelled as linear constant coefficient ordinary differential equations (LCCODEs). The solution of such equations has wide application in engineering and science.</p>
@@ -787,12 +787,12 @@ document.write(`
 <p>The solution of LCCODEs requires the determination and combination of the <em>homegenious solution</em> which is due only to the output <span class="math notranslate nohighlight">\(y(t)\)</span> and its derivatives, and a <em>particular solution</em> which takes account of the input <span class="math notranslate nohighlight">\(x(t)\)</span>, its derivatives, and the initial values of <span class="math notranslate nohighlight">\(y(t)\)</span> and its derivatives.</p>
 <p>We were told that continuous-time LTI systems defined by LCCODEs are only <em>causal</em> and <em>time invariant</em> if they are initially at rest.</p>
 <p>The output of the continuous-time LTI system with input <span class="math notranslate nohighlight">\(x(t)\)</span> that is at rest and has zero initial conditions is called the <em>zero-state</em> output <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t)\)</span>. The outputs due to the inital conditions can be computed from the system with zero input which is named <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t)\)</span>. The total response of such a system is given by <span class="math notranslate nohighlight">\(y(t) = y_\mathrm{zs}(t) + y_\mathrm{zi}(t)\)</span>.</p>
-<p>For reference, a fully worked solution of a first-order LCCODE is provided in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Example 8.3</span></a>. <strong>You will not be expected to solve such problems in the assessments for this module</strong>.</p>
+<p>For reference, a fully worked solution of a first-order LCCODE is provided in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Exercise 8.3</span></a>. <strong>You will not be expected to solve such problems in the assessments for this module</strong>.</p>
 </section>
 <section id="analogue-computer-models">
 <h4>Analogue computer models<a class="headerlink" href="#analogue-computer-models" title="Permalink to this heading">#</a></h4>
-<p>In <a class="reference internal" href="#examples-8"><span class="std std-ref">Examples 8: Systems described by differential equations</span></a> we were introduced to the representation of an LCCODE as a block diagram constructed from integral, gain and summing blocks. Such models were the basis of <em>analogue computation</em> which was used widely by engineers before the widespread adoption of digital computers. Models based on integration are still the basis of modern numerical digital system simulation tools like Multisim and Simulink.</p>
-<p>Examples of the solution of <a class="reference internal" href="#ex8-1"><span class="std std-ref">Example 8.1</span></a> and <a class="reference internal" href="#ex8-2"><span class="std std-ref">Example 8.2</span></a> have been provided in MATLAB and Simulink.</p>
+<p>In <a class="reference internal" href="#examples-8"><span class="std std-ref">Exercises 8: Systems described by differential equations</span></a> we were introduced to the representation of an LCCODE as a block diagram constructed from integral, gain and summing blocks. Such models were the basis of <em>analogue computation</em> which was used widely by engineers before the widespread adoption of digital computers. Models based on integration are still the basis of modern numerical digital system simulation tools like Multisim and Simulink.</p>
+<p>Examples of the solution of <a class="reference internal" href="#ex8-1"><span class="std std-ref">Exercise 8.1</span></a> and <a class="reference internal" href="#ex8-2"><span class="std std-ref">Exercise 8.2</span></a> have been provided in MATLAB and Simulink.</p>
 </section>
 </section>
 <section id="looking-ahead">
@@ -907,28 +907,28 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-peek-into-the-future">A peek into the future</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-8-systems-described-by-differential-equations">Examples 8: Systems described by differential equations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8-1">Example 8.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-8-systems-described-by-differential-equations">Exercises 8: Systems described by differential equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-1">Exercise 8.1</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solution">MATLAB Solution</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8-2">Example 8.2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-2">Exercise 8.2</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">MATLAB Solution</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8-3">Example 8.3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-3">Exercise 8.3</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8-4">Example 8.4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8-5">Example 8.5</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8-6">Example 8.6</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8-7">Example 8.7</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-8-8">Example 8.8</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-4">Exercise 8.4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-5">Exercise 8.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-6">Exercise 8.6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-7">Exercise 8.7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-8-8">Exercise 8.8</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-3-3-take-aways">Unit 3.3: Take aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lccodes">LCCODEs</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-lccodes">Solution of LCCODEs</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analogue-computer-models">Analogue computer models</a></li>

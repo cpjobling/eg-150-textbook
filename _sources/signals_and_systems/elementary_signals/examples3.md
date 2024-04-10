@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.4
+    jupytext_version: 1.15.2
 kernelspec:
   display_name: Matlab
   language: matlab
@@ -28,7 +28,7 @@ format compact
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (worked_examples_3)=
-# Examples 3 - Elementary Signals
+# Exercises 3 - Elementary Signals
 
 To accompany {ref}`elementary_signals`.
 
@@ -59,7 +59,7 @@ fplot(v1,'LineWidth',2),title('Unit step'),subtitle(texlabel('v_1(t) = Au_0(t)')
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (ex3_1)=
-## 3.1: Other forms of unit step
+## Exercise 3.1: Other forms of unit step
 
 ```{admonition} MATLAB Example
 :class: tip
@@ -148,7 +148,7 @@ Other forms of unit step function (Figure 1.8 {cite}`karris`) reproduced in MATL
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (ex3_2)=
-## 3.2: Synthesis of Signals from Unit Step
+## Exercise 3.2: Synthesis of Signals from Unit Step
 
 ```{admonition} MATLAB Example
 :class: tip
@@ -248,7 +248,7 @@ Unit step functions can be used to represent other time-varying functions such a
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (ex3_3)=
-## Example 3.3: Important properties of the delta function
+## Exercise 3.3: Important properties of the delta function
 
 ```{admonition} MATLAB Example
 :class: tip
@@ -333,7 +333,7 @@ $$t^2\delta'(t-3)$$
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex3_4)=
-## Example 3.4: Signal Synthesis
+## Exercise 3.4: Signal Synthesis
 
 ```{admonition} MATLAB Example
 :class: tip

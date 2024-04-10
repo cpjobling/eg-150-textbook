@@ -345,12 +345,12 @@ Note the product of two even signals or two odd signals is an even signal and th
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (worked_examples_1)=
-## Examples 1
+## Exercises 1
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex1.1)=
-### Example 1.1: Signals
+### Exercise 1.1: Signals
 
 `````{admonition} MATLAB Example
 :class: tip
@@ -390,7 +390,7 @@ For the answer, refer to the lecture recording or see solved problem 1.1 in {cit
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex1.2)=
-### Example 1.2: Uniform sampling
+### Exercise 1.2: Uniform sampling
 
 `````{admonition} MATLAB Example
 :class: tip
@@ -429,7 +429,7 @@ For the answer, refer to the lecture recording or see solved problem 1.3 in {cit
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex1.3)=
-### Example 1.3: Odd and even signals
+### Exercise 1.3: Odd and even signals
 
 `````{admonition} MATLAB Example
 :class: tip
@@ -455,7 +455,7 @@ For the answer, refer to the lecture recording or see solved problem 1.5 in {cit
 
 (ex1.4)=
 
-### Example 1.4
+### Exercise 1.4
 
 Find the odd and even components of $x(t) = e^{jt}$.
 
@@ -467,7 +467,7 @@ For the answer, refer to the lecture recording or see solved problem 1.6 in {cit
 
 (ex1.5)=
 
-### Example 1.5
+### Exercise 1.5
 
 Show that the product of two even signals or of two odd signals is an even signal and that the product of an even signal and an odd signal is an odd signal.
 
@@ -479,7 +479,7 @@ For the answer, refer to the lecture recording or see solved problem 1.7 in {cit
 
 (ex1.6)=
 
-### Example 1.6
+### Exercise 1.6
 
 Show that 
 
@@ -501,7 +501,7 @@ For the answer, refer to the lecture recording or see solved problem 1.8 in {cit
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-(unit1_1_summary)=
+(unit2_1_summary)=
 ## Summary
 
 In this lecture we have started our look at signals and the classification of signals. 
@@ -516,6 +516,7 @@ In particular we have looked at
 * {ref}`det_n_rand`
 * {ref}`even_n_odd`
 
+(unit2.1:takeaways)=
 ### Unit 2.1: Take aways
 
 * *Continuous-time signal*: $x(t)$

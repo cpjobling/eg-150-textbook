@@ -204,7 +204,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../poles_and_zeros/second_order_properties.html">Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../freq_resp/index.html">Unit 6 Frequency Domain Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../freq_resp/index.html">Unit 6 Frequency Response Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../freq_resp/tf_response.html">Unit 6.1: Frequency Response of a Transfer Function</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../freq_resp/bode_plots.html">Unit 6.2: Bode Plots</a></li>
@@ -457,23 +457,23 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looking-ahead">Looking Ahead</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-6-properties-of-continuous-time-lti-systems">Examples 6: Properties of Continuous-Time LTI Systems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-1">Example 6.1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-2">Example 6.2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-3">Example 6.3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-4">Example 6.4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-5">Example 6.5</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-6">Example 6.6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-6-properties-of-continuous-time-lti-systems">Exercises 6: Properties of Continuous-Time LTI Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-1">Exercise 6.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-2">Exercise 6.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-3">Exercise 6.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-4">Exercise 6.4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-5">Exercise 6.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-6">Exercise 6.6</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-7-eigenfunctions-of-continuous-time-lti-systems">Examples 7: Eigenfunctions of Continuous-Time LTI systems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-7-1">Example 7.1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-7-2">Example 7.2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-7-3">Example 7.3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-7-eigenfunctions-of-continuous-time-lti-systems">Exercises 7: Eigenfunctions of Continuous-Time LTI systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-7-1">Exercise 7.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-7-2">Exercise 7.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-7-3">Exercise 7.3</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-3-2-take-aways">Unit 3.2: Take aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Properties of continuous-time LTI systems</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#eignenfunctions-of-continuous-time-lti-systems">Eignenfunctions of continuous-time LTI systems</a></li>
 </ul>
@@ -494,7 +494,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="unit-3-2-properties-and-eigenfunctions-of-continuous-time-lti-systems">
-<span id="lti-systems"></span><h1>Unit 3.2: Properties and Eigenfunctions of Continuous-Time LTI Systems<a class="headerlink" href="#unit-3-2-properties-and-eigenfunctions-of-continuous-time-lti-systems" title="Permalink to this heading">#</a></h1>
+<span id="lti-systems2"></span><h1>Unit 3.2: Properties and Eigenfunctions of Continuous-Time LTI Systems<a class="headerlink" href="#unit-3-2-properties-and-eigenfunctions-of-continuous-time-lti-systems" title="Permalink to this heading">#</a></h1>
 <p>This section is based on Sections 2.3 and 2.4 of <span id="id1">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span></p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/lti_systems/lti2">cpjobling.github.io/eg-150-textbook/lti_systems/lti2</a></p>
 <p><img alt="QR Code for this lecture" src="../_images/qrcode_lti2.png" /></p>
@@ -504,8 +504,8 @@ document.write(`
 <ul class="simple">
 <li><p><a class="reference internal" href="#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#examples-6"><span class="std std-ref">Examples 6: Properties of Continuous-Time LTI Systems</span></a></p></li>
-<li><p><a class="reference internal" href="#examples-7"><span class="std std-ref">Examples 7: Eigenfunctions of Continuous-Time LTI systems</span></a></p></li>
+<li><p><a class="reference internal" href="#examples-6"><span class="std std-ref">Exercises 6: Properties of Continuous-Time LTI Systems</span></a></p></li>
+<li><p><a class="reference internal" href="#examples-7"><span class="std std-ref">Exercises 7: Eigenfunctions of Continuous-Time LTI systems</span></a></p></li>
 </ul>
 </section>
 <section id="properties-of-continuous-time-lti-systems">
@@ -560,7 +560,7 @@ document.write(`
 </section>
 <section id="c-stability">
 <span id="id5"></span><h3>C. Stability<a class="headerlink" href="#c-stability" title="Permalink to this heading">#</a></h3>
-<p>The BIBO (bounded-input/bounded-output) stability of an LTI system (Section <a class="reference internal" href="../signals_and_systems/systems/index.html#stable-systems"><span class="std std-ref">Stable Systems</span></a>) is readily ascertained by the impuse response. It can be shown (<a class="reference internal" href="#ex6-5"><span class="std std-ref">Example 6.5</span></a>) that a continuous-time LTI system is BIBO stable if its  impulse response is absolutely integrable; that is,</p>
+<p>The BIBO (bounded-input/bounded-output) stability of an LTI system (Section <a class="reference internal" href="../signals_and_systems/systems/index.html#stable-systems"><span class="std std-ref">Stable Systems</span></a>) is readily ascertained by the impuse response. It can be shown (<a class="reference internal" href="#ex6-5"><span class="std std-ref">Exercise 6.5</span></a>) that a continuous-time LTI system is BIBO stable if its  impulse response is absolutely integrable; that is,</p>
 <div class="math notranslate nohighlight" id="equation-eq-221">
 <span class="eqno">(1)<a class="headerlink" href="#equation-eq-221" title="Permalink to this equation">#</a></span>\[\int_{-\infty}^{\infty}\left|h(\tau)\right|\,d\tau \lt \infty\]</div>
 </section>
@@ -568,7 +568,7 @@ document.write(`
 <section id="eigenfunctions-of-continuous-time-lti-systems">
 <span id="id6"></span><h2>Eigenfunctions of Continuous-Time LTI Systems<a class="headerlink" href="#eigenfunctions-of-continuous-time-lti-systems" title="Permalink to this heading">#</a></h2>
 <p>In <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/signals_and_systems/systems/index.html#ex4-7">Unit 2.4: Systems and Classification of Systems
-</a> (Example <a class="reference internal" href="../signals_and_systems/systems/index.html#ex4-7"><span class="std std-ref">Example 4.7</span></a>) we saw that the eigenfunctions of continuous-time LTI system represented by the complex exponentials <span class="math notranslate nohighlight">\(e^{st}\)</span>, with <span class="math notranslate nohighlight">\(s\)</span> a complex variable.</p>
+</a> (Example <a class="reference internal" href="../signals_and_systems/systems/index.html#ex4-7"><span class="std std-ref">Exercise 4.7</span></a>) we saw that the eigenfunctions of continuous-time LTI system represented by the complex exponentials <span class="math notranslate nohighlight">\(e^{st}\)</span>, with <span class="math notranslate nohighlight">\(s\)</span> a complex variable.</p>
 <p>That is</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{T}\left\{e^{st}\right\}=\lambda e^{st}\]</div>
@@ -591,16 +591,16 @@ document.write(`
 <p>Note from the equation</p>
 <div class="math notranslate nohighlight">
 \[y(t) = H(s)e^{st}\]</div>
-<p>that <span class="math notranslate nohighlight">\(y(0) = H(s)\)</span> (see <span class="xref std std-ref">ex:4_7</span>).</p>
+<p>that <span class="math notranslate nohighlight">\(y(0) = H(s)\)</span>.</p>
 <section id="looking-ahead">
 <h3>Looking Ahead<a class="headerlink" href="#looking-ahead" title="Permalink to this heading">#</a></h3>
 <p>The above results underline the definition of the Laplace transform and Fourier transform. The <a class="reference internal" href="../laplace_transform/index.html#laplace"><span class="std std-ref">Unit 4: Laplace Transforms and their Applications</span></a> will be discussed later in this course. The Fourier Transform will be introduced in <strong>EG-247 Digital Signal Processing</strong> next year.</p>
 </section>
 </section>
-<section id="examples-6-properties-of-continuous-time-lti-systems">
-<span id="examples-6"></span><h2>Examples 6: Properties of Continuous-Time LTI Systems<a class="headerlink" href="#examples-6-properties-of-continuous-time-lti-systems" title="Permalink to this heading">#</a></h2>
-<section id="example-6-1">
-<span id="ex6-1"></span><h3>Example 6.1<a class="headerlink" href="#example-6-1" title="Permalink to this heading">#</a></h3>
+<section id="exercises-6-properties-of-continuous-time-lti-systems">
+<span id="examples-6"></span><h2>Exercises 6: Properties of Continuous-Time LTI Systems<a class="headerlink" href="#exercises-6-properties-of-continuous-time-lti-systems" title="Permalink to this heading">#</a></h2>
+<section id="exercise-6-1">
+<span id="ex6-1"></span><h3>Exercise 6.1<a class="headerlink" href="#exercise-6-1" title="Permalink to this heading">#</a></h3>
 <p>The signals in <a class="reference internal" href="#fig-ex6-1"><span class="std std-numref">Fig. 36</span></a>(a) and (b) are the input <span class="math notranslate nohighlight">\(x(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t)\)</span>, respectively, of a certain continuous-time LTI system.</p>
 <figure class="align-default" id="fig-ex6-1">
 <a class="reference internal image-reference" href="../_images/ex6_1.png"><img alt="Input and output signals for a continuous-time LTI system" src="../_images/ex6_1.png" style="width: 60%;" /></a>
@@ -613,8 +613,8 @@ document.write(`
 <p>(b) <span class="math notranslate nohighlight">\(\frac{1}{2}x(t)\)</span>.</p>
 <p>For the answer, refer to the lecture recording or see solved problem 2.9 in in <span id="id7">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-6-2">
-<span id="ex6-2"></span><h3>Example 6.2<a class="headerlink" href="#example-6-2" title="Permalink to this heading">#</a></h3>
+<section id="exercise-6-2">
+<span id="ex6-2"></span><h3>Exercise 6.2<a class="headerlink" href="#exercise-6-2" title="Permalink to this heading">#</a></h3>
 <p>Consider a continuous-time LTI system whose step response is given by</p>
 <div class="math notranslate nohighlight">
 \[y(t) = e^{-t}u_0(t)\]</div>
@@ -636,12 +636,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c6d26d6611746154ac022383ff048af64ddb1c7c0e53dc9618ee179d3d22f013.png" src="../_images/c6d26d6611746154ac022383ff048af64ddb1c7c0e53dc9618ee179d3d22f013.png" />
+<img alt="../_images/019a8e89f49a8342412586f7c80f1639248425daf1d711ffa9f6fe90b21e4112.png" src="../_images/019a8e89f49a8342412586f7c80f1639248425daf1d711ffa9f6fe90b21e4112.png" />
 </div>
 </div>
 </section>
-<section id="example-6-3">
-<span id="ex6-3"></span><h3>Example 6.3<a class="headerlink" href="#example-6-3" title="Permalink to this heading">#</a></h3>
+<section id="exercise-6-3">
+<span id="ex6-3"></span><h3>Exercise 6.3<a class="headerlink" href="#exercise-6-3" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Interesting result but not examined further.</p>
@@ -653,8 +653,8 @@ document.write(`
 <p>(b) Is this system causal?</p>
 <p>For the answer, see the solved problem 2.11 in in <span id="id8">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-6-4">
-<span id="ex6-4"></span><h3>Example 6.4<a class="headerlink" href="#example-6-4" title="Permalink to this heading">#</a></h3>
+<section id="exercise-6-4">
+<span id="ex6-4"></span><h3>Exercise 6.4<a class="headerlink" href="#exercise-6-4" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Interesting result but not examined further.</p>
@@ -662,8 +662,8 @@ document.write(`
 <p>Let <span class="math notranslate nohighlight">\(y(t)\)</span> be the output of a continuous-time LTI system with input <span class="math notranslate nohighlight">\(x(t)\)</span>. Find the output of the system if ths input is <span class="math notranslate nohighlight">\(x'(t)\)</span>, where <span class="math notranslate nohighlight">\(x'(t)\)</span> is the first derivative of <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
 <p>For the answer, refer to the solved problem 2.12 in in <span id="id9">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-6-5">
-<span id="ex6-5"></span><h3>Example 6.5<a class="headerlink" href="#example-6-5" title="Permalink to this heading">#</a></h3>
+<section id="exercise-6-5">
+<span id="ex6-5"></span><h3>Exercise 6.5<a class="headerlink" href="#exercise-6-5" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Interesting result but not examined further.</p>
@@ -671,8 +671,8 @@ document.write(`
 <p>Verify the BIBO stability condition (<a class="reference internal" href="#c-stability"><span class="std std-ref">C. Stability</span></a>) for continuous-time LTI systems.</p>
 <p>For the answer, see the solved problem 2.13 in <span id="id10">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-6-6">
-<span id="ex6-6"></span><h3>Example 6.6<a class="headerlink" href="#example-6-6" title="Permalink to this heading">#</a></h3>
+<section id="exercise-6-6">
+<span id="ex6-6"></span><h3>Exercise 6.6<a class="headerlink" href="#exercise-6-6" title="Permalink to this heading">#</a></h3>
 <p>The system shown in <a class="reference internal" href="#fig-ex6-6"><span class="std std-numref">Fig. 38</span></a>(a) is formed by connecting two systems in <em>cascade</em>. The impulse responses of the two systems are <span class="math notranslate nohighlight">\(h_1(t)\)</span> and <span class="math notranslate nohighlight">\(h_2(t)\)</span>, respectively, and</p>
 <div class="math notranslate nohighlight">
 \[h_1(t) = e^{-2t}u_0(t)\quad h_2(t)=2e^{-t}u_0(t)\]</div>
@@ -687,10 +687,10 @@ document.write(`
 <p>For the answer, refer to the lecture recording or see solved problem 2.14 in <span id="id11">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 </section>
-<section id="examples-7-eigenfunctions-of-continuous-time-lti-systems">
-<span id="examples-7"></span><h2>Examples 7: Eigenfunctions of Continuous-Time LTI systems<a class="headerlink" href="#examples-7-eigenfunctions-of-continuous-time-lti-systems" title="Permalink to this heading">#</a></h2>
-<section id="example-7-1">
-<span id="ex7-1"></span><h3>Example 7.1<a class="headerlink" href="#example-7-1" title="Permalink to this heading">#</a></h3>
+<section id="exercises-7-eigenfunctions-of-continuous-time-lti-systems">
+<span id="examples-7"></span><h2>Exercises 7: Eigenfunctions of Continuous-Time LTI systems<a class="headerlink" href="#exercises-7-eigenfunctions-of-continuous-time-lti-systems" title="Permalink to this heading">#</a></h2>
+<section id="exercise-7-1">
+<span id="ex7-1"></span><h3>Exercise 7.1<a class="headerlink" href="#exercise-7-1" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is a foretaste of the Laplace Transform.</p>
@@ -703,8 +703,8 @@ document.write(`
 <p>(c) Find the eigenvalue of the system corresponding to <span class="math notranslate nohighlight">\(e^{st}\)</span> using the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> obtained in part (a).</p>
 <p>For the answer, refer to the lecture recording or see solved problem 2.15 in <span id="id12">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-7-2">
-<span id="ex7-2"></span><h3>Example 7.2<a class="headerlink" href="#example-7-2" title="Permalink to this heading">#</a></h3>
+<section id="exercise-7-2">
+<span id="ex7-2"></span><h3>Exercise 7.2<a class="headerlink" href="#exercise-7-2" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Interesting result which will not be examined.</p>
@@ -716,8 +716,8 @@ document.write(`
 <p>(b) Repeat part (a) by using the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system.</p>
 <p>For the answer, see the solved problem 2.16 in <span id="id13">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-7-3">
-<span id="ex7-3"></span><h3>Example 7.3<a class="headerlink" href="#example-7-3" title="Permalink to this heading">#</a></h3>
+<section id="exercise-7-3">
+<span id="ex7-3"></span><h3>Exercise 7.3<a class="headerlink" href="#exercise-7-3" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Interesting result that is a foretaste of the Fourier transform which will not be examined.</p>
@@ -733,8 +733,8 @@ document.write(`
 <li><p><a class="reference internal" href="#properties-of-continuous-time-lti-systems"><span class="std std-ref">Properties of Continuous-Time LTI Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a></p></li>
 </ul>
-<section id="take-aways">
-<h3>Take aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h3>
+<section id="unit-3-2-take-aways">
+<span id="unit3-2-takeaways"></span><h3>Unit 3.2: Take aways<a class="headerlink" href="#unit-3-2-take-aways" title="Permalink to this heading">#</a></h3>
 <section id="id15">
 <h4>Properties of continuous-time LTI systems<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h4>
 <p>The input to an LTI system is <span class="math notranslate nohighlight">\(x(t)\)</span>, the impulse response of the LTI system is <span class="math notranslate nohighlight">\(h(t)\)</span> and the output is <span class="math notranslate nohighlight">\(y(t)\)</span>.</p>
@@ -861,23 +861,23 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looking-ahead">Looking Ahead</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-6-properties-of-continuous-time-lti-systems">Examples 6: Properties of Continuous-Time LTI Systems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-1">Example 6.1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-2">Example 6.2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-3">Example 6.3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-4">Example 6.4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-5">Example 6.5</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-6-6">Example 6.6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-6-properties-of-continuous-time-lti-systems">Exercises 6: Properties of Continuous-Time LTI Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-1">Exercise 6.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-2">Exercise 6.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-3">Exercise 6.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-4">Exercise 6.4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-5">Exercise 6.5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-6-6">Exercise 6.6</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-7-eigenfunctions-of-continuous-time-lti-systems">Examples 7: Eigenfunctions of Continuous-Time LTI systems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-7-1">Example 7.1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-7-2">Example 7.2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-7-3">Example 7.3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-7-eigenfunctions-of-continuous-time-lti-systems">Exercises 7: Eigenfunctions of Continuous-Time LTI systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-7-1">Exercise 7.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-7-2">Exercise 7.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-7-3">Exercise 7.3</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-3-2-take-aways">Unit 3.2: Take aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Properties of continuous-time LTI systems</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#eignenfunctions-of-continuous-time-lti-systems">Eignenfunctions of continuous-time LTI systems</a></li>
 </ul>

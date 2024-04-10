@@ -204,7 +204,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../poles_and_zeros/second_order_properties.html">Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../freq_resp/index.html">Unit 6 Frequency Domain Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../freq_resp/index.html">Unit 6 Frequency Response Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../freq_resp/tf_response.html">Unit 6.1: Frequency Response of a Transfer Function</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../freq_resp/bode_plots.html">Unit 6.2: Bode Plots</a></li>
@@ -462,34 +462,34 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#impulse-response-from-step-response">Impulse response from step response</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution">Examples 5: Responses of a Continuous-Time LTI System and Convolution</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-1">Example 5.1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-2">Example 5.2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-3">Example 5.3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-4">Example 5.4</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-5-responses-of-a-continuous-time-lti-system-and-convolution">Exercises 5: Responses of a Continuous-Time LTI System and Convolution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-1">Exercise 5.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-2">Exercise 5.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-3">Exercise 5.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-4">Exercise 5.4</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">Solutions</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#a-graphical">(a) Graphical</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-solution">Manual solution</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solution">MATLAB Solution</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#b-graphical">(b) Graphical</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Manual solution</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">MATLAB Solution</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Manual solution</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">MATLAB Solution</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-5">Example 5.5</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Solutions</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Manual solution</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">MATLAB Solution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-5">Exercise 5.5</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Solutions</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Manual solution</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">MATLAB Solution</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-6">Example 5.6</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Solutions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-6">Exercise 5.6</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Solutions</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#a-analytical">(a) Analytical</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">(b) Graphical</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">(b) Graphical</a></li>
 </ul>
 </li>
 </ul>
@@ -527,7 +527,7 @@ document.write(`
 <li><p><a class="reference internal" href="#props-of-con-integral"><span class="std std-ref">D. Properties of the Convolution Integral</span></a></p></li>
 <li><p><a class="reference internal" href="#convolution-operation"><span class="std std-ref">E. Convolution Integral Operation</span></a></p></li>
 <li><p><a class="reference internal" href="#step-response"><span class="std std-ref">F. Step Response</span></a></p></li>
-<li><p><a class="reference internal" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution"><span class="std std-ref">Examples 5: Responses of a Continuous-Time LTI System and Convolution</span></a></p></li>
+<li><p><a class="reference internal" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution"><span class="std std-ref">Exercises 5: Responses of a Continuous-Time LTI System and Convolution</span></a></p></li>
 </ul>
 </section>
 <section id="a-impulse-response">
@@ -660,7 +660,7 @@ In convolutiondemo (line 44)
 </section>
 <section id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
-<p>We will do <a class="reference internal" href="#ex5-4"><span class="std std-ref">Example 5.4</span></a> in class</p>
+<p>We will do <a class="reference internal" href="#ex5-4"><span class="std std-ref">Exercise 5.4</span></a> in class</p>
 </section>
 </section>
 <section id="f-step-response">
@@ -680,33 +680,33 @@ In convolutiondemo (line 44)
 <p>Thus the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> can be determined by differentiating the step response <span class="math notranslate nohighlight">\(s(t)\)</span>.</p>
 </section>
 </section>
-<section id="examples-5-responses-of-a-continuous-time-lti-system-and-convolution">
-<span id="id2"></span><h2>Examples 5: Responses of a Continuous-Time LTI System and Convolution<a class="headerlink" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution" title="Permalink to this heading">#</a></h2>
-<section id="example-5-1">
-<span id="ex5-1"></span><h3>Example 5.1<a class="headerlink" href="#example-5-1" title="Permalink to this heading">#</a></h3>
+<section id="exercises-5-responses-of-a-continuous-time-lti-system-and-convolution">
+<span id="examples-5-responses-of-a-continuous-time-lti-system-and-convolution"></span><h2>Exercises 5: Responses of a Continuous-Time LTI System and Convolution<a class="headerlink" href="#exercises-5-responses-of-a-continuous-time-lti-system-and-convolution" title="Permalink to this heading">#</a></h2>
+<section id="exercise-5-1">
+<span id="ex5-1"></span><h3>Exercise 5.1<a class="headerlink" href="#exercise-5-1" title="Permalink to this heading">#</a></h3>
 <p>Verify the following properties of the convolution integral; that is,</p>
 <p>(a) <span class="math notranslate nohighlight">\(x(t)*h(t) = h(t)*x(t)\)</span></p>
 <p>(b) <span class="math notranslate nohighlight">\(\left\{x(t) * h_1(t)\right\} * h_2(t) = x(t)*\left\{h_1(t) * h_2(t)\right\}\)</span></p>
-<p>For the answer, refer to the lecture recording or see solved problem 2.1 in in <span id="id3">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.1 in in <span id="id2">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-5-2">
-<span id="ex5-2"></span><h3>Example 5.2<a class="headerlink" href="#example-5-2" title="Permalink to this heading">#</a></h3>
+<section id="exercise-5-2">
+<span id="ex5-2"></span><h3>Exercise 5.2<a class="headerlink" href="#exercise-5-2" title="Permalink to this heading">#</a></h3>
 <p>Show that</p>
 <p>(a) <span class="math notranslate nohighlight">\(x(t) * \delta(t) = x(t)\)</span></p>
 <p>(b) <span class="math notranslate nohighlight">\(x(t) * \delta(t-t_0) = x(t - t_0)\)</span></p>
 <p>(c) <span class="math notranslate nohighlight">\(x(t)*u_0(t) = \int_{-\infty}^{t}x(\tau)\,d\tau\)</span></p>
 <p>(d) <span class="math notranslate nohighlight">\(x(t) * u_0(t - t_0) = \int_{-\infty}^{t_0}x(\tau)\,d\tau\)</span></p>
-<p>For the answer, refer to the lecture recording or see solved problem 2.2 in in <span id="id4">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.2 in in <span id="id3">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-5-3">
-<span id="ex5-3"></span><h3>Example 5.3<a class="headerlink" href="#example-5-3" title="Permalink to this heading">#</a></h3>
+<section id="exercise-5-3">
+<span id="ex5-3"></span><h3>Exercise 5.3<a class="headerlink" href="#exercise-5-3" title="Permalink to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(y(t) = x(t) * h(t)\)</span>. Then show that</p>
 <div class="math notranslate nohighlight">
 \[x(t-t_1)*h(t-t_2) = y(t - t_1 - t_2)\]</div>
-<p>For the answer, refer to the lecture recording or see solved problem 2.3 in in <span id="id5">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 2.3 in in <span id="id4">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-5-4">
-<span id="ex5-4"></span><h3>Example 5.4<a class="headerlink" href="#example-5-4" title="Permalink to this heading">#</a></h3>
+<section id="exercise-5-4">
+<span id="ex5-4"></span><h3>Exercise 5.4<a class="headerlink" href="#exercise-5-4" title="Permalink to this heading">#</a></h3>
 <p>The input <span class="math notranslate nohighlight">\(x(t)\)</span> and the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of a continuous-time LTI system are given by</p>
 <div class="math notranslate nohighlight">
 \[x(t) = u_0(t)\]</div>
@@ -727,7 +727,7 @@ In convolutiondemo (line 44)
 </section>
 <section id="manual-solution">
 <h5>Manual solution<a class="headerlink" href="#manual-solution" title="Permalink to this heading">#</a></h5>
-<p>For the manual solution, refer to the lecture recording or see solved problem 2.3 in in <span id="id6">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the manual solution, refer to the lecture recording or see solved problem 2.3 in in <span id="id5">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="matlab-solution">
 <h5>MATLAB Solution<a class="headerlink" href="#matlab-solution" title="Permalink to this heading">#</a></h5>
@@ -746,29 +746,11 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/5fb28b9e62ff1c04911576d81066cb832615b86f687f929469352d4f3e5cdc50.png" src="../_images/5fb28b9e62ff1c04911576d81066cb832615b86f687f929469352d4f3e5cdc50.png" />
-</div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the MATLAB function <code class="docutils literal notranslate"><span class="pre">int</span></code> to compute the convolution integral symbolically.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-(2*exp(-(alpha*t)/2)*(exp(-(alpha*t)/2)/2 - exp((alpha*t)/2)/2)*(sign(t)/2 + 1/2))/alpha
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -781,34 +763,18 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ya(t) =
- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<img alt="../_images/34dc13749e20bb4c95280b8a8085af56d4738a05e8be1ae1a232be655ac69fe7.png" src="../_images/34dc13749e20bb4c95280b8a8085af56d4738a05e8be1ae1a232be655ac69fe7.png" />
-</div>
 </div>
 </section>
 <section id="b-graphical">
 <h5>(b) Graphical<a class="headerlink" href="#b-graphical" title="Permalink to this heading">#</a></h5>
 <p>Reverse the settings for <code class="docutils literal notranslate"><span class="pre">f(t)</span></code>and <code class="docutils literal notranslate"><span class="pre">g(t)</span></code> in the <em>convolutiondemo</em> tool.</p>
 </section>
-<section id="id7">
-<h5>Manual solution<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h5>
-<p>For the manual solution, refer to the lecture recording or see solved problem 2.3 in in <span id="id8">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<section id="id6">
+<h5>Manual solution<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h5>
+<p>For the manual solution, refer to the lecture recording or see solved problem 2.3 in in <span id="id7">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="id9">
-<h5>MATLAB Solution<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h5>
+<section id="id8">
+<h5>MATLAB Solution<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h5>
 <p>Reverse the arguments to the <code class="docutils literal notranslate"><span class="pre">fplot</span></code> and <code class="docutils literal notranslate"><span class="pre">int</span></code> functions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -819,30 +785,10 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/806398b53a3285ff4d18426e415b9e28fb9df02dbb6300b265436de1b4a157d5.png" src="../_images/806398b53a3285ff4d18426e415b9e28fb9df02dbb6300b265436de1b4a157d5.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="nb">Inf</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-(2*exp(-(alpha*t)/2)*(exp(-(alpha*t)/2)/2 - exp((alpha*t)/2)/2)*(sign(t)/2 + 1/2))/alpha
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -855,29 +801,13 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>yb(t) =
- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<img alt="../_images/0ed13273d0431bfcabe4e08a86db41597b25ced13b2f0647d05c87f077c825f0.png" src="../_images/0ed13273d0431bfcabe4e08a86db41597b25ced13b2f0647d05c87f077c825f0.png" />
-</div>
 </div>
 <p>Go back to <a class="reference internal" href="#step-response"><span class="std std-ref">F. Step Response</span></a></p>
 </section>
 </section>
 </section>
-<section id="example-5-5">
-<span id="ex5-5"></span><h3>Example 5.5<a class="headerlink" href="#example-5-5" title="Permalink to this heading">#</a></h3>
+<section id="exercise-5-5">
+<span id="ex5-5"></span><h3>Exercise 5.5<a class="headerlink" href="#exercise-5-5" title="Permalink to this heading">#</a></h3>
 <p>Compute the output <span class="math notranslate nohighlight">\(y(t)\)</span> for a continuous-time LTI system whose impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> and the input <span class="math notranslate nohighlight">\(x(t)\)</span> are given by</p>
 <div class="math notranslate nohighlight">
 \[h(t) = e^{-\alpha t}u_0(t)\]</div>
@@ -885,14 +815,14 @@ In convolutiondemo (line 44)
 \[x(t) = e^{\alpha t}u_0(-t)\]</div>
 <div class="math notranslate nohighlight">
 \[\alpha &gt; 0.\]</div>
+<section id="id9">
+<h4>Solutions<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
 <section id="id10">
-<h4>Solutions<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h4>
-<section id="id11">
-<h5>Manual solution<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h5>
-<p>For the manual solution, refer to the lecture recording or see solved problem 2.3 in in <span id="id12">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<h5>Manual solution<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h5>
+<p>For the manual solution, refer to the lecture recording or see solved problem 2.3 in in <span id="id11">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="id13">
-<h5>MATLAB Solution<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h5>
+<section id="id12">
+<h5>MATLAB Solution<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h5>
 <p>We can also use the Symbolic Math Toolbox to solve the problem directly:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -905,31 +835,11 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/b598f4b61ef37393378d1649636e6855eb3a877ef28bf5fb3cb31f8c1b6f2897.png" src="../_images/b598f4b61ef37393378d1649636e6855eb3a877ef28bf5fb3cb31f8c1b6f2897.png" />
-</div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the convolution integral</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="nb">Inf</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>piecewise(0 &lt;= t, exp(-t)/2, t &lt;= 0, exp(t)/2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -941,15 +851,12 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/87ee65cf99815ceb1c165591a7fed489603bc4f5cc4f0be10aa5ec08680c99a7.png" src="../_images/87ee65cf99815ceb1c165591a7fed489603bc4f5cc4f0be10aa5ec08680c99a7.png" />
-</div>
 </div>
 </section>
 </section>
 </section>
-<section id="example-5-6">
-<span id="ex5-6"></span><h3>Example 5.6<a class="headerlink" href="#example-5-6" title="Permalink to this heading">#</a></h3>
+<section id="exercise-5-6">
+<span id="ex5-6"></span><h3>Exercise 5.6<a class="headerlink" href="#exercise-5-6" title="Permalink to this heading">#</a></h3>
 <p>Evaluate <span class="math notranslate nohighlight">\(y(t) = x(t) * h(t)\)</span>, where <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(h(t)\)</span> are shown in <a class="reference internal" href="#fig-ex-5-6"><span class="std std-numref">Fig. 35</span></a>, by an alalytical technique, and (b) by a graphical method.</p>
 <figure class="align-default" id="fig-ex-5-6">
 <a class="reference internal image-reference" href="../_images/ex5_6.png"><img alt="Signal and system for example 5.6" src="../_images/ex5_6.png" style="width: 60%;" /></a>
@@ -957,8 +864,8 @@ In convolutiondemo (line 44)
 <p><span class="caption-number">Fig. 35 </span><span class="caption-text">Signal and system for example 5.6</span><a class="headerlink" href="#fig-ex-5-6" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<section id="id14">
-<h4>Solutions<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h4>
+<section id="id13">
+<h4>Solutions<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h4>
 <section id="a-analytical">
 <h5>(a) Analytical<a class="headerlink" href="#a-analytical" title="Permalink to this heading">#</a></h5>
 <p>We first express <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(h(t)\)</span> in functional form using the unit step (or <em>Heaviside</em> function)</p>
@@ -978,29 +885,11 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/6ac65e2de777f7aeeaaac31a70bfc6b2176fe7a8fc750179ff7ced6d66d3719d.png" src="../_images/6ac65e2de777f7aeeaaac31a70bfc6b2176fe7a8fc750179ff7ced6d66d3719d.png" />
-</div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">int</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tau</span><span class="p">),</span><span class="n">tau</span><span class="p">,</span><span class="o">-</span><span class="nb">Inf</span><span class="p">,</span><span class="nb">Inf</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(t) =
- 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>heaviside(t - 5)*(t - 5) - heaviside(t - 3)*(t - 3) - heaviside(t - 2)*(t - 2) + t*heaviside(t)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -1012,18 +901,15 @@ In convolutiondemo (line 44)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/4aceeb6c7e0e70ff67352bc2c288111985589d9ae6cf530f8b4ebf60e0932454.png" src="../_images/4aceeb6c7e0e70ff67352bc2c288111985589d9ae6cf530f8b4ebf60e0932454.png" />
-</div>
 </div>
 </section>
-<section id="id15">
-<h5>(b) Graphical<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h5>
+<section id="id14">
+<h5>(b) Graphical<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h5>
 <p>Since both functions are unity between the limits set by the Heaviside function, graphical solution requires multiple applications of the definate integral</p>
 <div class="math notranslate nohighlight">
 \[\int_{t_0}^{t_1}1\times 1\,d\tau = \int_{t_0}^{t_1}1\,d\tau\]</div>
 <p>with different values for the limits <span class="math notranslate nohighlight">\(t_0\)</span> and <span class="math notranslate nohighlight">\(t_1\)</span>. The <em>convolutiondemo</em> tool can help us discover the limits for the piecewise continuous signal <span class="math notranslate nohighlight">\(y(t)\)</span>.</p>
-<p>For the complete solution to Example 5.2 refer to the lecture recording or see solved problem 2.6 in in <span id="id16">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the complete solution to Example 5.2 refer to the lecture recording or see solved problem 2.6 in in <span id="id15">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 </section>
 </section>
@@ -1039,7 +925,7 @@ In convolutiondemo (line 44)
 <li><p><a class="reference internal" href="#step-response"><span class="std std-ref">F. Step Response</span></a></p></li>
 </ul>
 <section id="unit-3-1-take-aways">
-<h3>Unit 3.1: Take Aways<a class="headerlink" href="#unit-3-1-take-aways" title="Permalink to this heading">#</a></h3>
+<span id="unit3-1-takeaways"></span><h3>Unit 3.1: Take Aways<a class="headerlink" href="#unit-3-1-take-aways" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><em>Impulse response</em>: <span class="math notranslate nohighlight">\(h(t) = \mathbf{T}\left\{\delta(t)\right\}\)</span></p></li>
 <li><p><em>Step response</em>: <span class="math notranslate nohighlight">\(s(t) = \mathbf{T}\left\{u_0(t)\right\} = \int_0^t h(\tau)\,d\tau\)</span></p></li>
@@ -1066,9 +952,9 @@ In convolutiondemo (line 44)
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id17">
+<div class="docutils container" id="id16">
 <dl class="citation">
-<dt class="label" id="id27"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id4">3</a>,<a href="#id5">4</a>,<a href="#id6">5</a>,<a href="#id8">6</a>,<a href="#id12">7</a>,<a href="#id16">8</a>)</span></dt>
+<dt class="label" id="id26"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>,<a href="#id4">4</a>,<a href="#id5">5</a>,<a href="#id7">6</a>,<a href="#id11">7</a>,<a href="#id15">8</a>)</span></dt>
 <dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
 </dd>
 </dl>
@@ -1159,34 +1045,34 @@ In convolutiondemo (line 44)
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#impulse-response-from-step-response">Impulse response from step response</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-5-responses-of-a-continuous-time-lti-system-and-convolution">Examples 5: Responses of a Continuous-Time LTI System and Convolution</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-1">Example 5.1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-2">Example 5.2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-3">Example 5.3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-4">Example 5.4</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-5-responses-of-a-continuous-time-lti-system-and-convolution">Exercises 5: Responses of a Continuous-Time LTI System and Convolution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-1">Exercise 5.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-2">Exercise 5.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-3">Exercise 5.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-4">Exercise 5.4</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">Solutions</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#a-graphical">(a) Graphical</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-solution">Manual solution</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solution">MATLAB Solution</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#b-graphical">(b) Graphical</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Manual solution</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">MATLAB Solution</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Manual solution</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">MATLAB Solution</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-5">Example 5.5</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Solutions</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Manual solution</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">MATLAB Solution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-5">Exercise 5.5</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Solutions</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Manual solution</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">MATLAB Solution</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-5-6">Example 5.6</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Solutions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5-6">Exercise 5.6</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Solutions</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#a-analytical">(a) Analytical</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">(b) Graphical</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">(b) Graphical</a></li>
 </ul>
 </li>
 </ul>

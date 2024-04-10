@@ -404,7 +404,7 @@ $$\mathrm{PAPR}_x = \frac{\left|x\right|_\mathrm{peak}^2}{P}$$
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (worked_examples_2)=
-## Examples 2
+## Exercises 2
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -420,7 +420,7 @@ For the answer, refer to the lecture recording or see solved problem 1.14 in {ci
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex2.2)=
-### Example 2.2: Periodic signals
+### Exercise 2.2: Periodic signals
 
 `````{admonition} MATLAB Example
 :class: tip
@@ -460,7 +460,7 @@ For the answers, refer to the lecture recording or see solved problem 1.16 in {c
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex2.3)=
-### Example 2.3: Integral properties of periodic signals
+### Exercise 2.3: Integral properties of periodic signals
 
 Show that if $x(t + T) = x(t)$, then
 
@@ -477,7 +477,7 @@ For the answer, refer to the lecture recording or see solved problem 1.17 in {ci
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex2.4)=
-### Example 2.4: Power in a periodic signal
+### Exercise 2.4: Power in a periodic signal
 
 Show that if $x(t)$ is periodic with fundamental period $T_0$, then the normalized average power $P$ of $x(t)$ defined by
 
@@ -494,7 +494,7 @@ For the answer, refer to the lecture recording or see solved problem 1.18 in {ci
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex2.5)=
-### Example 2.5: Power and energy signals
+### Exercise 2.5: Power and energy signals
 
 `````{admonition} MATLAB Example
 :class: tip
@@ -524,7 +524,7 @@ Note $u_0(t)$ is the unit step (or Heaviside) function formally introduced in th
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex2.6)=
-### Example 2.6: Power in domestic mains electricty
+### Exercise 2.6: Power in domestic mains electricty
 
 Domestic mains power in the UK is delivered as a sinusoidal signal $x(t)=A\cos(\omega_0 t + \theta)$ with frequency of $50\mathrm{Hz}$ and RMS value of $240\mathrm{V}$. 
 
@@ -544,6 +544,7 @@ In particular we have looked at
 * {ref}`e_n_p` of a signal $x(t)$
 * {ref}`other_measures_of_signal_size`
 
+(unit2.2:takeaways)=
 ### Unit 2.2: Take aways
 
 * A signal is periodic, with period $T$ is $x(t + T) = x(t)\;\mathrm{all}\;t$
