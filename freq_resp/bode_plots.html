@@ -472,6 +472,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aysymptotic-bode-plots-for-a-second-order-system">Aysymptotic bode plots for a second-order system</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-build-bode-plots-for-complex-systems">How to Build Bode Plots for Complex Systems</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-2nd-order-systems">Examples of 2nd-order systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotes-for-a-second-oder-system">Asymptotes for a second-oder system</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#effect-of-damping-ratio-on-bode-plot">Effect of damping ratio on Bode plot</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#demo-2-complex-poles-and-their-bode-diagrams">Demo 2: Complex poles and their Bode diagrams</a></li>
 </ul>
@@ -481,10 +482,16 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Frequency response</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bode-plot">Bode plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#key-definitions">Key definitions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plots">Asymptotic bode plots</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-systems">Second order-systems</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-bode-diagrams">Applications of Bode diagrams</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-functions-introduced">MATLAB functions introduced</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coming-next">Coming Next</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
 </ul>
@@ -669,7 +676,7 @@ document.write(`
 <p>[See video in the notes]</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ums33HwVYyw?si=_Lvz5nyCt9VW100U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
 <section id="asymptotic-bode-plot-of-a-gain">
-<h3>Asymptotic bode plot of a gain<a class="headerlink" href="#asymptotic-bode-plot-of-a-gain" title="Permalink to this heading">#</a></h3>
+<span id="u62-gain"></span><h3>Asymptotic bode plot of a gain<a class="headerlink" href="#asymptotic-bode-plot-of-a-gain" title="Permalink to this heading">#</a></h3>
 <p>If <span class="math notranslate nohighlight">\(H(s) = K\)</span></p>
 <p>The frequency response is <span class="math notranslate nohighlight">\(H(j\omega)\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -691,7 +698,7 @@ document.write(`
 <p>Increasing the gain causes a shift in the magnitude plot <em>up</em> by <span class="math notranslate nohighlight">\(20\log_{10} K\)</span> dB for <span class="math notranslate nohighlight">\(K &gt; 1\)</span> or <em>down</em> for <span class="math notranslate nohighlight">\(K &lt; 1\)</span>.</p>
 </section>
 <section id="asymptotic-bode-plot-of-an-integrator">
-<h3>Asymptotic bode plot of an integrator<a class="headerlink" href="#asymptotic-bode-plot-of-an-integrator" title="Permalink to this heading">#</a></h3>
+<span id="u62-int"></span><h3>Asymptotic bode plot of an integrator<a class="headerlink" href="#asymptotic-bode-plot-of-an-integrator" title="Permalink to this heading">#</a></h3>
 <p>If</p>
 <div class="math notranslate nohighlight">
 \[H(s) = \frac{1}{s} \]</div>
@@ -719,7 +726,7 @@ document.write(`
 <p>The roll-off rate is <span class="math notranslate nohighlight">\(-20\)</span> dB/decade.</p>
 </section>
 <section id="asymptotic-bode-plot-of-an-differentiator">
-<h3>Asymptotic bode plot of an differentiator<a class="headerlink" href="#asymptotic-bode-plot-of-an-differentiator" title="Permalink to this heading">#</a></h3>
+<span id="u62-diff"></span><h3>Asymptotic bode plot of an differentiator<a class="headerlink" href="#asymptotic-bode-plot-of-an-differentiator" title="Permalink to this heading">#</a></h3>
 <p>If</p>
 <div class="math notranslate nohighlight">
 \[H(s) = s \]</div>
@@ -745,7 +752,7 @@ document.write(`
 <p>The magnification increases by 20 dB per decade and there is no limit! This is a bad thing as it will amplify high-frequencies.</p>
 </section>
 <section id="asymptotic-bode-plot-of-an-single-pole">
-<h3>Asymptotic bode plot of an single pole<a class="headerlink" href="#asymptotic-bode-plot-of-an-single-pole" title="Permalink to this heading">#</a></h3>
+<span id="u62-pole"></span><h3>Asymptotic bode plot of an single pole<a class="headerlink" href="#asymptotic-bode-plot-of-an-single-pole" title="Permalink to this heading">#</a></h3>
 <p>If</p>
 <div class="math notranslate nohighlight">
 \[H(s) = \frac{1}{\tau s + 1}\]</div>
@@ -773,7 +780,7 @@ document.write(`
 <p>For most of the magnitude Bode plot, the computed plot is well matched by its asymptotes. The maximum error that at <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>, <span class="math notranslate nohighlight">\(M = 1/\sqrt{2}\)</span>, <span class="math notranslate nohighlight">\(M_\mathrm{dB} = -3\)</span> dB, <span class="math notranslate nohighlight">\(\phi = -45^\circ\)</span>. The asymptotes used on the phase diagram are usually taken to be 0 at <span class="math notranslate nohighlight">\(\omega = (1/10)\tau\)</span> and <span class="math notranslate nohighlight">\(-90^\circ = \omega = 10\tau\)</span>. In that case, the asymptotes and the actual plot are equal (<span class="math notranslate nohighlight">\(\phi = -45^\circ\)</span>) at the frequency <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>.</p>
 </section>
 <section id="asymptotic-bode-plot-of-an-single-zero">
-<h3>Asymptotic bode plot of an single zero<a class="headerlink" href="#asymptotic-bode-plot-of-an-single-zero" title="Permalink to this heading">#</a></h3>
+<span id="u62-zero"></span><h3>Asymptotic bode plot of an single zero<a class="headerlink" href="#asymptotic-bode-plot-of-an-single-zero" title="Permalink to this heading">#</a></h3>
 <p>If</p>
 <div class="math notranslate nohighlight">
 \[H(s) = \tau s + 1\]</div>
@@ -856,6 +863,9 @@ document.write(`
 <p>Providing that <span class="math notranslate nohighlight">\(0 &lt; \zeta \le 1\)</span>, the poles of the system will be complex and of the form<a class="footnote-reference brackets" href="#u62-note-10" id="id13">4</a>:</p>
 <div class="math notranslate nohighlight">
 \[p_{1,2} = -\zeta\omega_n \pm j\omega_n \sqrt{1 - \zeta^2}\]</div>
+</section>
+<section id="asymptotes-for-a-second-oder-system">
+<span id="u62-2nd-resp"></span><h3>Asymptotes for a second-oder system<a class="headerlink" href="#asymptotes-for-a-second-oder-system" title="Permalink to this heading">#</a></h3>
 <p>So</p>
 <div class="math notranslate nohighlight">
 \[H(j\omega) = \frac{1}{-\left(\frac{\omega}{\omega_n}\right)^2 + j2\zeta\left(\frac{\omega}{\omega_n} \right)s + 1}\]</div>
@@ -880,7 +890,7 @@ document.write(`
 <p>Note that the actual peak is to the left of <span class="math notranslate nohighlight">\(\omega = \omega_n\)</span>. This is because the actual frequency, often called the <em>damped natural frequency</em>, is given by <span class="math notranslate nohighlight">\(\omega_d = \omega_n\sqrt{1 - \zeta^2}\)</span>.</p>
 </section>
 <section id="effect-of-damping-ratio-on-bode-plot">
-<h3>Effect of damping ratio on Bode plot<a class="headerlink" href="#effect-of-damping-ratio-on-bode-plot" title="Permalink to this heading">#</a></h3>
+<span id="u62-effect-of-damping"></span><h3>Effect of damping ratio on Bode plot<a class="headerlink" href="#effect-of-damping-ratio-on-bode-plot" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">wn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
@@ -916,6 +926,7 @@ document.write(`
 <li><p>Change the gain to 10. Note that the magnitude plot shits up 20 dB. This illustrates the additive properties of the bode diagram. Because the phase of a gain is 0, the phase is unaffected.</p></li>
 <li><p>Add a zero at <span class="math notranslate nohighlight">\(\omega = 10\)</span> rad/s. Note the roll-off slope changes from -40 dB/decade to -20 dB/decade. The final phase changes from <span class="math notranslate nohighlight">\(-180^\circ\)</span> to <span class="math notranslate nohighlight">\(-90^\circ\)</span> another pole close the first pole and note the roll-off is -20 dB/decade.</p></li>
 <li><p>Add a pole at <span class="math notranslate nohighlight">\(\omega = 100\)</span> rad/s. Note final magnitude slope retrurns to -40 db/decade and final phase returns to <span class="math notranslate nohighlight">\(-180^\circ\)</span>.</p></li>
+<li><p>Change damping to <span class="math notranslate nohighlight">\(1/\sqrt{2}\)</span> to illustrate what is called <em>ideal damping</em>. Here there is no overshoot and the magnitude is -3 dB at <span class="math notranslate nohighlight">\(\omega = \omega_n\)</span>.</p></li>
 </ul>
 <p>After this exercise, the final transfer function is
 $<span class="math notranslate nohighlight">\(\frac{10\left(0.1s + 1\right)}{\left(0.01s + 1\right)\left(s^2 + 0.1s + 1\right)} \)</span>$</p>
@@ -965,7 +976,55 @@ $<span class="math notranslate nohighlight">\(\frac{10\left(0.1s + 1\right)}{\le
 <p>The Bode plot is a plot of <span class="math notranslate nohighlight">\(M_{\mathrm{dB}} = 20\log_{10} M\)</span> dB and phase <span class="math notranslate nohighlight">\(\phi_\mathrm{degree} = (180/\pi)\phi_{\mathrm{radian}}\)</span> plotted against <span class="math notranslate nohighlight">\(\log_{10} \omega\)</span>.</p>
 <p>A Bode plot magnitude and phase plots have the property of <em>superposition</em>. That is, to obtain the Bode plot of a complex transfer function, we add the Bode plots of the real and complex factors (poles and zeros) of the transfer function.</p>
 </section>
+<section id="key-definitions">
+<h4>Key definitions<a class="headerlink" href="#key-definitions" title="Permalink to this heading">#</a></h4>
+<p>Terms used in the discussion of Bode plots are <em>DC-gain</em>, <em>roll-off rate</em>, <em>natural-frequency</em>, <em>cross-over frequency</em> and <em>bandwidth frequency</em> are defined in <a class="reference internal" href="#unit6-2-5"><span class="std std-ref">Terminology used</span></a>.</p>
 </section>
+<section id="asymptotic-bode-plots">
+<h4>Asymptotic bode plots<a class="headerlink" href="#asymptotic-bode-plots" title="Permalink to this heading">#</a></h4>
+<p>These are linear approximations to the magnitude and phase plots which are very useful is assessing the frequency response of a system without computing it mathematically.</p>
+<p>In summary these are:</p>
+<ul class="simple">
+<li><p>Gain <span class="math notranslate nohighlight">\(K\)</span>: horizontal line with <span class="math notranslate nohighlight">\(M_\mathrm{dB} = 20\log_{10} K\)</span> and <span class="math notranslate nohighlight">\(\phi = 0^\circ\)</span>. See <a class="reference internal" href="#u62-gain"><span class="std std-ref">Asymptotic bode plot of a gain</span></a> for details.</p></li>
+<li><p>Integrator <span class="math notranslate nohighlight">\(H(j\omega) = 1/j\omega\)</span>: line <span class="math notranslate nohighlight">\(M = -20 \log{10} \omega\)</span> and phase <span class="math notranslate nohighlight">\(\phi = -90^\circ\)</span>. The magnitude is plotted as a line with slope -20 dB/decade passing through <span class="math notranslate nohighlight">\(0\)</span> dB at <span class="math notranslate nohighlight">\(\omega=1\)</span> rad/s. The phase is an horizontal line at <span class="math notranslate nohighlight">\(\phi = -90^\circ\)</span>. See <a class="reference internal" href="#u62-int"><span class="std std-ref">Asymptotic bode plot of an integrator</span></a> for details.</p></li>
+<li><p>Differentiator <span class="math notranslate nohighlight">\(H(j\omega) = j\omega\)</span>: line <span class="math notranslate nohighlight">\(M = 20 \log{10} \omega\)</span> and phase <span class="math notranslate nohighlight">\(\phi = +90^\circ\)</span>. The magnitude is plotted as a line with slope 20 dB/decade passing through <span class="math notranslate nohighlight">\(0\)</span> dB at <span class="math notranslate nohighlight">\(\omega=1\)</span> rad/s. The phase is an horizontal line at <span class="math notranslate nohighlight">\(\phi = +90^\circ\)</span>. See <a class="reference internal" href="#u62-diff"><span class="std std-ref">Asymptotic bode plot of an differentiator</span></a> for details.</p></li>
+<li><p>Single pole <span class="math notranslate nohighlight">\(H(j\omega) = 1/(\tau j\omega + 1)\)</span>: at <span class="math notranslate nohighlight">\(\omega \ll 1/\tau\)</span> the magnitude asymptote is horizontal line at <span class="math notranslate nohighlight">\(0\)</span> dB; at <span class="math notranslate nohighlight">\(\omega \gg 1/\tau\)</span> the magnitude asymptote is a line with slope <span class="math notranslate nohighlight">\(-20\)</span> dB/decade with origin at 0 dB at <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>. The phase transitions from <span class="math notranslate nohighlight">\(\phi = 0^\circ\)</span> to <span class="math notranslate nohighlight">\(-90^\circ\)</span> over a range of about a decade below <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span> to <span class="math notranslate nohighlight">\(\phi = -90^\circ\)</span> a decade above <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>. The magnitude is -3 dB at <span class="math notranslate nohighlight">\(\omega + 1/\tau\)</span>. The phase <span class="math notranslate nohighlight">\(\phi = -45^\circ\)</span> at <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>. A common asymptotic approximation of the phase is an horizontal line at <span class="math notranslate nohighlight">\(0^\circ\)</span> up to <span class="math notranslate nohighlight">\(\omega = 0.1/\tau\)</span>, an line with slope <span class="math notranslate nohighlight">\(-45^\circ\)</span> per decade between <span class="math notranslate nohighlight">\(0.1/\tau \lt \omega \lt 10/\tau\)</span> (which will pass through <span class="math notranslate nohighlight">\(\phi = -45^\circ\)</span> at <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>), and a further horizontal line at <span class="math notranslate nohighlight">\(\phi = -90^\circ\)</span> which starts at <span class="math notranslate nohighlight">\(\omega = 10\tau\)</span>. See <a class="reference internal" href="#u62-pole"><span class="std std-ref">Asymptotic bode plot of an single pole</span></a> for details.</p></li>
+<li><p>Single zero <span class="math notranslate nohighlight">\(H(j\omega) = \tau j\omega + 1\)</span>: at <span class="math notranslate nohighlight">\(\omega \ll 1/\tau\)</span> the magnitude asymptote is horizontal line at <span class="math notranslate nohighlight">\(0\)</span> dB; at <span class="math notranslate nohighlight">\(\omega \gg 1/\tau\)</span> the magnitude asymptote is a line with slope <span class="math notranslate nohighlight">\(20\)</span> dB/decade with origin at 0 dB at <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>. The phase transitions from <span class="math notranslate nohighlight">\(\phi = 0^\circ\)</span> to <span class="math notranslate nohighlight">\(90^\circ\)</span> over a range of about a decade below <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span> to <span class="math notranslate nohighlight">\(\phi = 90^\circ\)</span> a decade above <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>. The phase <span class="math notranslate nohighlight">\(\phi = 45^\circ\)</span> at <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>. A common asymptotic approximation of the phase is an horizontal line at <span class="math notranslate nohighlight">\(0^\circ\)</span> up to <span class="math notranslate nohighlight">\(\omega = 0.1/\tau\)</span>, an line with slope <span class="math notranslate nohighlight">\(45^\circ\)</span> per decade between <span class="math notranslate nohighlight">\(0.1/\tau \lt \omega \lt 10/\tau\)</span> (which will pass through <span class="math notranslate nohighlight">\(\phi = 45^\circ\)</span> at <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>), and a further horizontal line at <span class="math notranslate nohighlight">\(\phi = 90^\circ\)</span> which starts at <span class="math notranslate nohighlight">\(\omega = 10\tau\)</span>. See <a class="reference internal" href="#u62-zero"><span class="std std-ref">Asymptotic bode plot of an single zero</span></a> for details.</p></li>
+</ul>
+</section>
+<section id="second-order-systems">
+<h4>Second order-systems<a class="headerlink" href="#second-order-systems" title="Permalink to this heading">#</a></h4>
+<p>The model is</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \frac{\omega_n^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}\]</div>
+<p>In the frequency response, the key properties are governed by samping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> and natural frequency <span class="math notranslate nohighlight">\(\omega_n\)</span> rad/s.</p>
+<p>The propertes are summarized below. For full details see <a class="reference internal" href="#u62-2nd-resp"><span class="std std-ref">Asymptotes for a second-oder system</span></a>.</p>
+<ul class="simple">
+<li><p>The natual frequency defines the position of the cross-over frequency.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(0 \lt \zeta \le 1\)</span> the asymptotic bode plot is similar in shape to the single pole case except that the cross-over frequency is around <span class="math notranslate nohighlight">\(\omega = \omega_n\)</span>. The high frequency asymtote has a roll-off of -40 dB/decade. The maximum magnification is <span class="math notranslate nohighlight">\(M_\max = 20 \log_{10}\left|1/(2\zeta)\right|\)</span> and occurs at the <em>damped natural frequency</em> <span class="math notranslate nohighlight">\(\omega_d = \omega_n\sqrt{1 - \zeta^2}\)</span>. The phase transitions from <span class="math notranslate nohighlight">\(\phi = 0^\circ\)</span> at low frequencies to <span class="math notranslate nohighlight">\(\phi = -180^\circ\)</span> at high frequency. The height of the peak magnification and the shape of the phase diagram depends on <span class="math notranslate nohighlight">\(\zeta\)</span>. The peak is higher and phase transition has a highwer slope for low values of <span class="math notranslate nohighlight">\(\zeta\)</span>. A plot comparing the response of multiple values of <span class="math notranslate nohighlight">\(\zeta\)</span> is given in <a class="reference internal" href="#u62-effect-of-damping"><span class="std std-ref">Effect of damping ratio on Bode plot</span></a></p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\zeta = 1/\sqrt{2}\)</span> we have what is sometimes called <em>ideal damping</em>. The response is flat (no overshoot) and  the response has an attenuation of - 3 dB at <span class="math notranslate nohighlight">\(\omega = \omega_n\)</span>. This response is also called a <em>Butterworth response</em>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\zeta = 1\)</span> (critical damping) the response is the sum of Bode plots of the two equal real poles <span class="math notranslate nohighlight">\(s_{1,2} = -\zeta\omega_n\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\zeta \gt 1\)</span> (overdamped) the response is the sum of Bode plots of the two distinct real poles <span class="math notranslate nohighlight">\(s_{1,2} = -\zeta\omega_n \pm \omega_n\sqrt{\zeta^2 - 1}\)</span>.</p></li>
+</ul>
+</section>
+<section id="applications-of-bode-diagrams">
+<h4>Applications of Bode diagrams<a class="headerlink" href="#applications-of-bode-diagrams" title="Permalink to this heading">#</a></h4>
+<p>Bode diagrams are primarily used in the analysis of stability of feedback systems. If the Bode plot respresents the frequency system of an <em>open-loop system</em>, concepts such as <em>phase- and gain-margin</em> can be developed and analysed using the Bode diagram. The superposition property is usefully used in the design of PID, lead and lag compensators and the use of tools like MATLAB’s Control System Design tool faciltates the design of such compensation schemes. You will explore these applications of Bode plots in EG-243 Control Systems next year.</p>
+</section>
+<section id="matlab-functions-introduced">
+<h4>MATLAB functions introduced<a class="headerlink" href="#matlab-functions-introduced" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tf</span></code>: defines a system model as a transfer function</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bode</span></code>: plots the Bode plot of a system</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">controlSystemDesigner</span></code>: an app provided in the MATLAB Control System Toolbox for exploring LTI systems.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="coming-next">
+<h2>Coming Next<a class="headerlink" href="#coming-next" title="Permalink to this heading">#</a></h2>
+<p>This concludes the course material for EG-150 Signals and Systems.</p>
+<p>We will build on the topics introduced in the follow-on module <em>EG-247 Digital Control Systems</em> which you can preview by visiting the online textbook <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook">eg-247-textbook</a>.</p>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
@@ -994,7 +1053,7 @@ $<span class="math notranslate nohighlight">\(\frac{10\left(0.1s + 1\right)}{\le
 <dd><p>In filter terms, the bandwidth frequency marks the transition between the <em>pass-band</em> and the <em>stop-band</em>. In control system terms, the bandwidth gives a limit on the frequencies that you can influence with contollers.</p>
 </dd>
 <dt class="label" id="u62-note-10"><span class="brackets"><a class="fn-backref" href="#id13">4</a></span></dt>
-<dd><p>If <span class="math notranslate nohighlight">\(\zeta = 1\)</span> there will be two real and equal poles at <span class="math notranslate nohighlight">\(s = -\zeta\omega_n\)</span>. If <span class="math notranslate nohighlight">\(\zeta &gt; 1\)</span> there will be two real poles at <span class="math notranslate nohighlight">\(p_{1,2} = -\zeta\omega_n + \omega_n\sqrt{\zeta^2 - 1}\)</span>. These cases are already covered in <span class="xref std std-ref">unit:6.2.6</span>. You would just add the Bode plots for the real poles (or their asymptotes) together.</p>
+<dd><p>If <span class="math notranslate nohighlight">\(\zeta = 1\)</span> there will be two real and equal poles at <span class="math notranslate nohighlight">\(s = -\zeta\omega_n\)</span>. If <span class="math notranslate nohighlight">\(\zeta &gt; 1\)</span> there will be two real poles at <span class="math notranslate nohighlight">\(p_{1,2} = -\zeta\omega_n \pm \omega_n\sqrt{\zeta^2 - 1}\)</span>. These cases are already covered in <span class="xref std std-ref">unit:6.2.6</span>. You would just add the Bode plots for the real poles (or their asymptotes) together.</p>
 </dd>
 </dl>
 </section>
@@ -1093,6 +1152,7 @@ $<span class="math notranslate nohighlight">\(\frac{10\left(0.1s + 1\right)}{\le
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aysymptotic-bode-plots-for-a-second-order-system">Aysymptotic bode plots for a second-order system</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-build-bode-plots-for-complex-systems">How to Build Bode Plots for Complex Systems</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-2nd-order-systems">Examples of 2nd-order systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotes-for-a-second-oder-system">Asymptotes for a second-oder system</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#effect-of-damping-ratio-on-bode-plot">Effect of damping ratio on Bode plot</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#demo-2-complex-poles-and-their-bode-diagrams">Demo 2: Complex poles and their Bode diagrams</a></li>
 </ul>
@@ -1102,10 +1162,16 @@ $<span class="math notranslate nohighlight">\(\frac{10\left(0.1s + 1\right)}{\le
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Frequency response</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bode-plot">Bode plot</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#key-definitions">Key definitions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plots">Asymptotic bode plots</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#second-order-systems">Second order-systems</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-bode-diagrams">Applications of Bode diagrams</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-functions-introduced">MATLAB functions introduced</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coming-next">Coming Next</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
 </ul>

@@ -266,6 +266,7 @@ However, a knowledge of the asymptotic behaviour of first and second order poles
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(u62:gain)=
 ### Asymptotic bode plot of a gain
 
 If $H(s) = K$ 
@@ -296,6 +297,7 @@ Increasing the gain causes a shift in the magnitude plot *up* by $20\log_{10} K$
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(u62:int)=
 ### Asymptotic bode plot of an integrator
 
 If
@@ -332,6 +334,7 @@ The roll-off rate is $-20$ dB/decade.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(u62:diff)=
 ### Asymptotic bode plot of an differentiator
 
 If
@@ -366,6 +369,7 @@ The magnification increases by 20 dB per decade and there is no limit! This is a
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(u62:pole)=
 ### Asymptotic bode plot of an single pole
 
 If 
@@ -412,6 +416,7 @@ For most of the magnitude Bode plot, the computed plot is well matched by its as
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+(u62:zero)=
 ### Asymptotic bode plot of an single zero
 
 If 
@@ -547,7 +552,12 @@ $$p_{1,2} = -\zeta\omega_n \pm j\omega_n \sqrt{1 - \zeta^2}$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-[^u62:note:10]: If $\zeta = 1$ there will be two real and equal poles at $s = -\zeta\omega_n$. If $\zeta > 1$ there will be two real poles at $p_{1,2} = -\zeta\omega_n + \omega_n\sqrt{\zeta^2 - 1}$. These cases are already covered in {ref}`unit:6.2.6`. You would just add the Bode plots for the real poles (or their asymptotes) together.
+[^u62:note:10]: If $\zeta = 1$ there will be two real and equal poles at $s = -\zeta\omega_n$. If $\zeta > 1$ there will be two real poles at $p_{1,2} = -\zeta\omega_n \pm \omega_n\sqrt{\zeta^2 - 1}$. These cases are already covered in {ref}`unit:6.2.6`. You would just add the Bode plots for the real poles (or their asymptotes) together.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(u62:2nd_resp)=
+### Asymptotes for a second-oder system
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -595,6 +605,7 @@ Note that the actual peak is to the left of $\omega = \omega_n$. This is because
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+(u62:effect_of_damping)=
 ### Effect of damping ratio on Bode plot
 
 ```{code-cell}
@@ -635,6 +646,8 @@ controlSystemDesigner('bode',H)
 * Add a zero at $\omega = 10$ rad/s. Note the roll-off slope changes from -40 dB/decade to -20 dB/decade. The final phase changes from $-180^\circ$ to $-90^\circ$ another pole close the first pole and note the roll-off is -20 dB/decade.
 
 * Add a pole at $\omega = 100$ rad/s. Note final magnitude slope retrurns to -40 db/decade and final phase returns to $-180^\circ$.
+
+* Change damping to $1/\sqrt{2}$ to illustrate what is called *ideal damping*. Here there is no overshoot and the magnitude is -3 dB at $\omega = \omega_n$.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -703,6 +716,63 @@ where $M = \left|A_\mathrm{out}/A_\mathrm{in}\right| = \left|H(j\omega)\right|$ 
 The Bode plot is a plot of $M_{\mathrm{dB}} = 20\log_{10} M$ dB and phase $\phi_\mathrm{degree} = (180/\pi)\phi_{\mathrm{radian}}$ plotted against $\log_{10} \omega$.
 
 A Bode plot magnitude and phase plots have the property of *superposition*. That is, to obtain the Bode plot of a complex transfer function, we add the Bode plots of the real and complex factors (poles and zeros) of the transfer function.
+
+#### Key definitions
+
+Terms used in the discussion of Bode plots are *DC-gain*, *roll-off rate*, *natural-frequency*, *cross-over frequency* and *bandwidth frequency* are defined in {ref}`unit6.2.5`.
+
+#### Asymptotic bode plots
+
+These are linear approximations to the magnitude and phase plots which are very useful is assessing the frequency response of a system without computing it mathematically.
+
+In summary these are:
+
+* Gain $K$: horizontal line with $M_\mathrm{dB} = 20\log_{10} K$ and $\phi = 0^\circ$. See {ref}`u62:gain` for details.
+
+* Integrator $H(j\omega) = 1/j\omega$: line $M = -20 \log{10} \omega$ and phase $\phi = -90^\circ$. The magnitude is plotted as a line with slope -20 dB/decade passing through $0$ dB at $\omega=1$ rad/s. The phase is an horizontal line at $\phi = -90^\circ$. See {ref}`u62:int` for details.
+
+* Differentiator $H(j\omega) = j\omega$: line $M = 20 \log{10} \omega$ and phase $\phi = +90^\circ$. The magnitude is plotted as a line with slope 20 dB/decade passing through $0$ dB at $\omega=1$ rad/s. The phase is an horizontal line at $\phi = +90^\circ$. See {ref}`u62:diff` for details.
+
+* Single pole $H(j\omega) = 1/(\tau j\omega + 1)$: at $\omega \ll 1/\tau$ the magnitude asymptote is horizontal line at $0$ dB; at $\omega \gg 1/\tau$ the magnitude asymptote is a line with slope $-20$ dB/decade with origin at 0 dB at $\omega = 1/\tau$. The phase transitions from $\phi = 0^\circ$ to $-90^\circ$ over a range of about a decade below $\omega = 1/\tau$ to $\phi = -90^\circ$ a decade above $\omega = 1/\tau$. The magnitude is -3 dB at $\omega + 1/\tau$. The phase $\phi = -45^\circ$ at $\omega = 1/\tau$. A common asymptotic approximation of the phase is an horizontal line at $0^\circ$ up to $\omega = 0.1/\tau$, an line with slope $-45^\circ$ per decade between $0.1/\tau \lt \omega \lt 10/\tau$ (which will pass through $\phi = -45^\circ$ at $\omega = 1/\tau$), and a further horizontal line at $\phi = -90^\circ$ which starts at $\omega = 10\tau$. See {ref}`u62:pole` for details.
+
+* Single zero $H(j\omega) = \tau j\omega + 1$: at $\omega \ll 1/\tau$ the magnitude asymptote is horizontal line at $0$ dB; at $\omega \gg 1/\tau$ the magnitude asymptote is a line with slope $20$ dB/decade with origin at 0 dB at $\omega = 1/\tau$. The phase transitions from $\phi = 0^\circ$ to $90^\circ$ over a range of about a decade below $\omega = 1/\tau$ to $\phi = 90^\circ$ a decade above $\omega = 1/\tau$. The phase $\phi = 45^\circ$ at $\omega = 1/\tau$. A common asymptotic approximation of the phase is an horizontal line at $0^\circ$ up to $\omega = 0.1/\tau$, an line with slope $45^\circ$ per decade between $0.1/\tau \lt \omega \lt 10/\tau$ (which will pass through $\phi = 45^\circ$ at $\omega = 1/\tau$), and a further horizontal line at $\phi = 90^\circ$ which starts at $\omega = 10\tau$. See {ref}`u62:zero` for details.
+
+#### Second order-systems
+
+The model is 
+
+$$H(s) = \frac{\omega_n^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}$$
+
+In the frequency response, the key properties are governed by samping ratio $\zeta$ and natural frequency $\omega_n$ rad/s.
+
+The propertes are summarized below. For full details see {ref}`u62:2nd_resp`.
+
+* The natual frequency defines the position of the cross-over frequency.
+* If $0 \lt \zeta \le 1$ the asymptotic bode plot is similar in shape to the single pole case except that the cross-over frequency is around $\omega = \omega_n$. The high frequency asymtote has a roll-off of -40 dB/decade. The maximum magnification is $M_\max = 20 \log_{10}\left|1/(2\zeta)\right|$ and occurs at the *damped natural frequency* $\omega_d = \omega_n\sqrt{1 - \zeta^2}$. The phase transitions from $\phi = 0^\circ$ at low frequencies to $\phi = -180^\circ$ at high frequency. The height of the peak magnification and the shape of the phase diagram depends on $\zeta$. The peak is higher and phase transition has a highwer slope for low values of $\zeta$. A plot comparing the response of multiple values of $\zeta$ is given in {ref}`u62:effect_of_damping`
+
+* If $\zeta = 1/\sqrt{2}$ we have what is sometimes called *ideal damping*. The response is flat (no overshoot) and  the response has an attenuation of - 3 dB at $\omega = \omega_n$. This response is also called a *Butterworth response*.
+
+* If $\zeta = 1$ (critical damping) the response is the sum of Bode plots of the two equal real poles $s_{1,2} = -\zeta\omega_n$.
+
+* If $\zeta \gt 1$ (overdamped) the response is the sum of Bode plots of the two distinct real poles $s_{1,2} = -\zeta\omega_n \pm \omega_n\sqrt{\zeta^2 - 1}$.
+
+#### Applications of Bode diagrams
+
+Bode diagrams are primarily used in the analysis of stability of feedback systems. If the Bode plot respresents the frequency system of an *open-loop system*, concepts such as *phase- and gain-margin* can be developed and analysed using the Bode diagram. The superposition property is usefully used in the design of PID, lead and lag compensators and the use of tools like MATLAB's Control System Design tool faciltates the design of such compensation schemes. You will explore these applications of Bode plots in EG-243 Control Systems next year.
+
+#### MATLAB functions introduced
+
+* `tf`: defines a system model as a transfer function
+* `bode`: plots the Bode plot of a system
+* `controlSystemDesigner`: an app provided in the MATLAB Control System Toolbox for exploring LTI systems.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+## Coming Next
+
+This concludes the course material for EG-150 Signals and Systems.
+
+We will build on the topics introduced in the follow-on module *EG-247 Digital Control Systems* which you can preview by visiting the online textbook [eg-247-textbook](https://cpjobling.github.io/eg-247-textbook).
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

@@ -473,12 +473,14 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-directed-study">Self directed study</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#takeaway-1">Takeaway 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-response">Frequency response</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-response-from-system-function">Frequency response from system function</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-functions-introduced">MATLAB functions introduced</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#still-to-come">Still to come</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coming-next">Coming next</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
 </li>
@@ -832,16 +834,47 @@ document.write(`
 </ul>
 <section id="take-aways">
 <span id="unit6-1-takeaways"></span><h3>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h3>
-<section id="takeaway-1">
-<h4>Takeaway 1<a class="headerlink" href="#takeaway-1" title="Permalink to this heading">#</a></h4>
+<section id="frequency-response">
+<h4>Frequency response<a class="headerlink" href="#frequency-response" title="Permalink to this heading">#</a></h4>
+<p>If you subject a stable LTI system with transfer function</p>
+<div class="math notranslate nohighlight">
+\[H(s) = \frac{Y(s)}{X(s)}\]</div>
+<p>to a sinusoidal input signal <span class="math notranslate nohighlight">\(x(t) = A_\mathrm{in} \sin\left(\omega t \right)\)</span>, the steady-state response (after any initial transients have decayed to zero) will also be a sinusoidal signal <span class="math notranslate nohighlight">\(y(t) = A_\mathrm{out}\sin\left(\omega t + \phi\right)\)</span>. That is a signal with the same frequency as the input signal but a new amplitude <span class="math notranslate nohighlight">\(A_\mathrm{out}\)</span> and a possible phase-shift <span class="math notranslate nohighlight">\(\phi\)</span>.</p>
+<p>The output signal amplitude and phase-shift can be measured experimentally, e.g. with a signal generator and oscilloscope. We then plot the <em>magnitude</em></p>
+<div class="math notranslate nohighlight">
+\[M = \left|\frac{A_\mathrm{out}}{A_\mathrm{in}} \right|\]</div>
+<p>and phase-shift <span class="math notranslate nohighlight">\(\phi\)</span> (in degrees) on two plots against frequency. These plot represents the <em>frequency response</em> of the system.</p>
+</section>
+<section id="frequency-response-from-system-function">
+<h4>Frequency response from system function<a class="headerlink" href="#frequency-response-from-system-function" title="Permalink to this heading">#</a></h4>
+<p>The frequency response of a stable LTI system depends only on <span class="math notranslate nohighlight">\(H(s)\)</span>. To determine the magnitude and phase we let <span class="math notranslate nohighlight">\(s = j\omega\)</span> then</p>
+<div class="math notranslate nohighlight">
+\[M = \left|H(j\omega\right)|,\,\phi = \angle H(j\omega)\]</div>
+<p>Since <span class="math notranslate nohighlight">\(H(j\omega)\)</span> will be a <em>complex number</em> with real part <span class="math notranslate nohighlight">\(\Re\left\{H(j\omega)\right\}\)</span> and imaginary part <span class="math notranslate nohighlight">\(\Im\left\{H(j\omega)\right\}\)</span>, the magnitude is</p>
+<div class="math notranslate nohighlight">
+\[M = \sqrt{\Re\left\{H(j\omega)\right\}^2 + \Im\left\{H(j\omega)\right\}^2}\]</div>
+<p>and the phase-shift is</p>
+<div class="math notranslate nohighlight">
+\[\phi = \tan^{-1} \frac{\Im\left\{H(j\omega)\right\}}{\Re\left\{H(j\omega)\right\}}. \]</div>
+</section>
+<section id="matlab-functions-introduced">
+<h4>MATLAB functions introduced<a class="headerlink" href="#matlab-functions-introduced" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tf</span></code>: define a system as a transfer function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lsim</span></code>: simulate the response of a system defined by <code class="docutils literal notranslate"><span class="pre">tf</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">abs</span></code>: compute the magnitude of (a vector) of complex numbers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">angle</span></code>: compute the angle of (a vector) of complex numers.</p></li>
+</ul>
+<p>If <code class="docutils literal notranslate"><span class="pre">z</span></code> is a complex number (or a vector of complex numbers), we compute magnitude in dB using <code class="docutils literal notranslate"><span class="pre">20*log10(abs(z))</span></code> and phase-shift in degrees using <code class="docutils literal notranslate"><span class="pre">(180/pi)*angle(z)</span></code>.</p>
 </section>
 </section>
-<section id="still-to-come">
-<h3>Still to come<a class="headerlink" href="#still-to-come" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="coming-next">
+<h2>Coming next<a class="headerlink" href="#coming-next" title="Permalink to this heading">#</a></h2>
+<p>The Bode plot is a form of frequency response diagram for which the magnitude (in DB) and phase (in degrees) are plotted against the log of frequency. Such a plot has nice geometric properties that we can exploit to simplify the analysis of complex systems. We will explore Bode diagrams in some detail in <a class="reference internal" href="bode_plots.html#unit6-2"><span class="std std-ref">Unit 6.2: Bode Plots</span></a>.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="bode_plots.html#unit6-2"><span class="std std-ref">Unit 6.2: Bode Plots</span></a></p></li>
 </ul>
-</section>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
@@ -949,12 +982,14 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-directed-study">Self directed study</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#takeaway-1">Takeaway 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-response">Frequency response</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-response-from-system-function">Frequency response from system function</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-functions-introduced">MATLAB functions introduced</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#still-to-come">Still to come</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coming-next">Coming next</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
 </li>
