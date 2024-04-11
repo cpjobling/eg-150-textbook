@@ -225,7 +225,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter.html">About Jupyter notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/python.html">Installing Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../setup/matlab_kernel.html">Testing the Jupyter Matlab Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/matlab_kernel.html">Testing the Jupyter MATLAB Kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter-book.html">Setting up jupyter-book</a></li>
 </ul>
@@ -460,25 +460,25 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-of-the-complex-poles">The case of the complex poles</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-of-the-repeated-poles">The case of the repeated poles</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-of-the-improper-rational-polynomial">The case of the improper rational polynomial</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-11-inverse-laplace-transforms">Examples 11: Inverse Laplace Transforms</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-1">Example 11.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-11-inverse-laplace-transforms">Exercises 11: Inverse Laplace Transforms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-11-1-real-poles">Exercise 11.1: Real Poles</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solution-numerical">MATLAB Solution - Numerical</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solution-symbolic">MATLAB solution - symbolic</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-2">Example 11.2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-11-2-cubic-with-real-poles">Exercise 11.2: Cubic with Real Poles</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-11-2">Solution 11.2</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-3">Example 11.3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-11-3-system-with-complex-poles">Exercise 11.3: System with Complex Poles</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-11-3">Solution 11.3</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-4">Example 11.4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-11-4-repeated-real-poles">Exercise 11.4: Repeated Real Poles</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-11-4">Solution 11.4</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-5-and-some-new-transform-pairs">Example 11.5 - and some new transform pairs.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-11-5-non-proper-rational-polynomial">Exercise 11.5: Non-proper rational polynomial</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-11-5">Solution 11.5</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-function-of-t-has-laplace-transform-s">What function of t has Laplace transform s?</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#new-transform-pairs">New Transform Pairs</a></li>
@@ -490,7 +490,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-work">Lab Work</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-4-4-take-aways">Unit 4.4: Take Aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab">MATLAB</a></li>
 </ul>
 </li>
@@ -530,7 +530,7 @@ document.write(`
 <li><p><a class="reference internal" href="#ilap-defn"><span class="std std-ref">Definition</span></a></p></li>
 <li><p><a class="reference internal" href="#ilap-pfe"><span class="std std-ref">Partial Fraction Expansion</span></a></p></li>
 <li><p><a class="reference internal" href="#ilap-by-pfe"><span class="std std-ref">Inverse Laplace Transform by Partial Fraction Expansion (PFE)</span></a></p></li>
-<li><p><a class="reference internal" href="#examples11"><span class="std std-ref">Examples 11: Inverse Laplace Transforms</span></a></p></li>
+<li><p><a class="reference internal" href="#examples11"><span class="std std-ref">Exercises 11: Inverse Laplace Transforms</span></a></p></li>
 </ul>
 </section>
 <section id="definition">
@@ -641,8 +641,8 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 <span class="eqno">(12)<a class="headerlink" href="#equation-eq-4-4-11" title="Permalink to this equation">#</a></span>\[F(s) = k_0 + k_1s + k_2s^2 + \cdots + k_{m-n}s^{m-n} + \frac{N(s)}{D(s)}\]</div>
 <p>and then <span class="math notranslate nohighlight">\(N(s)/D(s)\)</span> will be a proper rational polynomial.</p>
 </section>
-<section id="examples-11-inverse-laplace-transforms">
-<span id="examples11"></span><h2>Examples 11: Inverse Laplace Transforms<a class="headerlink" href="#examples-11-inverse-laplace-transforms" title="Permalink to this heading">#</a></h2>
+<section id="exercises-11-inverse-laplace-transforms">
+<span id="examples11"></span><h2>Exercises 11: Inverse Laplace Transforms<a class="headerlink" href="#exercises-11-inverse-laplace-transforms" title="Permalink to this heading">#</a></h2>
 <p>Lecturer clear all cells and set up MATLAB</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -652,8 +652,8 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 </div>
 </div>
 </div>
-<section id="example-11-1">
-<span id="ex11-1"></span><h3>Example 11.1<a class="headerlink" href="#example-11-1" title="Permalink to this heading">#</a></h3>
+<section id="exercise-11-1-real-poles">
+<span id="ex11-1"></span><h3>Exercise 11.1: Real Poles<a class="headerlink" href="#exercise-11-1-real-poles" title="Permalink to this heading">#</a></h3>
 <p>Use the PFE method to simplify <span class="math notranslate nohighlight">\(F_1(s)\)</span> below and find the time domain function <span class="math notranslate nohighlight">\(f_1(t)\)</span> corresponding to <span class="math notranslate nohighlight">\(F_1(s)\)</span></p>
 <div class="math notranslate nohighlight">
 \[F_1(s) = \frac{2s+5}{s^2 + 5s + 6}\]</div>
@@ -708,13 +708,13 @@ k =
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>exp(-2*t) + exp(-3*t)
 </pre></div>
 </div>
-<img alt="../../_images/99ea241926901115d29a4d69ae70941760b75862d1ebe9fcf52702b03cb05298.png" src="../../_images/99ea241926901115d29a4d69ae70941760b75862d1ebe9fcf52702b03cb05298.png" />
+<img alt="../../_images/80a1457cfe4a7471a56253f52fb3f255c159353ffb9b530b707db108d8c3feb8.png" src="../../_images/80a1457cfe4a7471a56253f52fb3f255c159353ffb9b530b707db108d8c3feb8.png" />
 </div>
 </div>
 </section>
 </section>
-<section id="example-11-2">
-<span id="ex-11-2"></span><h3>Example 11.2<a class="headerlink" href="#example-11-2" title="Permalink to this heading">#</a></h3>
+<section id="exercise-11-2-cubic-with-real-poles">
+<span id="ex-11-2"></span><h3>Exercise 11.2: Cubic with Real Poles<a class="headerlink" href="#exercise-11-2-cubic-with-real-poles" title="Permalink to this heading">#</a></h3>
 <p>Determine the Inverse Laplace Transform of</p>
 <div class="math notranslate nohighlight">
 \[F_2(s) = \frac{3s^2+2s+5}{s^3 + 9s^2 + 23s + 15}\]</div>
@@ -748,8 +748,8 @@ k =
 <p>which we will solve in class</p>
 </section>
 </section>
-<section id="example-11-3">
-<span id="ex-11-3"></span><h3>Example 11.3<a class="headerlink" href="#example-11-3" title="Permalink to this heading">#</a></h3>
+<section id="exercise-11-3-system-with-complex-poles">
+<span id="ex-11-3"></span><h3>Exercise 11.3: System with Complex Poles<a class="headerlink" href="#exercise-11-3-system-with-complex-poles" title="Permalink to this heading">#</a></h3>
 <p>Rework Example 3-2 from the <span id="id4">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> using quadratic factors.</p>
 <p>Find the Inverse Laplace Transform of</p>
 <div class="math notranslate nohighlight" id="equation-pfe1">
@@ -817,8 +817,8 @@ k =
 <p>You can use trig. identities to simplify this further if you wish.</p>
 </section>
 </section>
-<section id="example-11-4">
-<span id="ex11-4"></span><h3>Example 11.4<a class="headerlink" href="#example-11-4" title="Permalink to this heading">#</a></h3>
+<section id="exercise-11-4-repeated-real-poles">
+<span id="ex11-4"></span><h3>Exercise 11.4: Repeated Real Poles<a class="headerlink" href="#exercise-11-4-repeated-real-poles" title="Permalink to this heading">#</a></h3>
 <p>Find the inverse Laplace Transform of</p>
 <div class="math notranslate nohighlight">
 \[F_4(s) = \frac{s+3}{(s+2)(s+1)^2}\]</div>
@@ -840,8 +840,9 @@ k =
 \[F_4(s) = \frac{s+3}{(s+2)(s+1)^2}\]</div>
 </section>
 </section>
-<section id="example-11-5-and-some-new-transform-pairs">
-<span id="ex11-5"></span><h3>Example 11.5 - and some new transform pairs.<a class="headerlink" href="#example-11-5-and-some-new-transform-pairs" title="Permalink to this heading">#</a></h3>
+<section id="exercise-11-5-non-proper-rational-polynomial">
+<span id="ex11-5"></span><h3>Exercise 11.5: Non-proper rational polynomial<a class="headerlink" href="#exercise-11-5-non-proper-rational-polynomial" title="Permalink to this heading">#</a></h3>
+<p>Introduces some new transform pairs!</p>
 <div class="math notranslate nohighlight">
 \[F_6(s)= \frac{s^2 + 2s + 2}{s+1}\]</div>
 <p>(Quick solution: <a class="reference external" href="https://www.wolframalpha.com/input/?i=inverse+laplace+transform+%28s%5E2+%2B+2s+%2B+2%29%2F%28s+%2B+1%29">Wolfram Alpha</a>)</p>
@@ -928,7 +929,7 @@ k =
 </section>
 <section id="homework">
 <h2>Homework<a class="headerlink" href="#homework" title="Permalink to this heading">#</a></h2>
-<p>Complete <a class="reference internal" href="#ex-11-3"><span class="std std-ref">Example 11.3</span></a> to confirm the result <a class="reference internal" href="#equation-pfe4">(16)</a>. Then do the end of the chapter exercises (Section 3.67) from the <span id="id7">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>. Don’t look at the answers until you have attempted the problems.</p>
+<p>Complete <a class="reference internal" href="#ex-11-3"><span class="std std-ref">Exercise 11.3: System with Complex Poles</span></a> to confirm the result <a class="reference internal" href="#equation-pfe4">(16)</a>. Then do the end of the chapter exercises (Section 3.67) from the <span id="id7">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>. Don’t look at the answers until you have attempted the problems.</p>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
@@ -937,11 +938,11 @@ k =
 <li><p><a class="reference internal" href="#ilap-defn"><span class="std std-ref">Definition</span></a></p></li>
 <li><p><a class="reference internal" href="#ilap-pfe"><span class="std std-ref">Partial Fraction Expansion</span></a></p></li>
 <li><p><a class="reference internal" href="#ilap-by-pfe"><span class="std std-ref">Inverse Laplace Transform by Partial Fraction Expansion (PFE)</span></a></p></li>
-<li><p><a class="reference internal" href="#examples11"><span class="std std-ref">Examples 11: Inverse Laplace Transforms</span></a></p></li>
+<li><p><a class="reference internal" href="#examples11"><span class="std std-ref">Exercises 11: Inverse Laplace Transforms</span></a></p></li>
 </ul>
 </section>
-<section id="take-aways">
-<h2>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h2>
+<section id="unit-4-4-take-aways">
+<span id="unit4-4-takeaways"></span><h2>Unit 4.4: Take Aways<a class="headerlink" href="#unit-4-4-take-aways" title="Permalink to this heading">#</a></h2>
 <p>For causal signals and continuous-time LTI systems, the Laplace transform usually takes the form of a rational polynomial with general form <span class="math notranslate nohighlight">\(F(s)\)</span> as shown in equation <a class="reference internal" href="#equation-eq-4-4-2">(3)</a>. The denominator of <span class="math notranslate nohighlight">\(F(s)\)</span>, <span class="math notranslate nohighlight">\(D(s)\)</span>, can always be factorised, and the factors (zeros of D(s), poles of F(s)) will be real <span class="math notranslate nohighlight">\((s - p_k)\)</span>, real and repeated, such as <span class="math notranslate nohighlight">\((s - p_k)^n\)</span> or complex conjugate pairs <span class="math notranslate nohighlight">\((s - \sigma_k - j\omega_k)(s - \sigma_k + j\omega_k)^1\)</span>, or a combination of these.</p>
 <p>Each such rational polynomial can then be represented as a <em>partial fraction</em> with <em>residues</em> <span class="math notranslate nohighlight">\(r_k\)</span> whose values are determined by using one of the <em>partial fraction expansion</em> methods presented in this unit:</p>
 <ul class="simple">
@@ -1086,25 +1087,25 @@ k =
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-of-the-complex-poles">The case of the complex poles</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-of-the-repeated-poles">The case of the repeated poles</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-case-of-the-improper-rational-polynomial">The case of the improper rational polynomial</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-11-inverse-laplace-transforms">Examples 11: Inverse Laplace Transforms</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-1">Example 11.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-11-inverse-laplace-transforms">Exercises 11: Inverse Laplace Transforms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-11-1-real-poles">Exercise 11.1: Real Poles</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solution-numerical">MATLAB Solution - Numerical</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solution-symbolic">MATLAB solution - symbolic</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-2">Example 11.2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-11-2-cubic-with-real-poles">Exercise 11.2: Cubic with Real Poles</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-11-2">Solution 11.2</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-3">Example 11.3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-11-3-system-with-complex-poles">Exercise 11.3: System with Complex Poles</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-11-3">Solution 11.3</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-4">Example 11.4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-11-4-repeated-real-poles">Exercise 11.4: Repeated Real Poles</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-11-4">Solution 11.4</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-11-5-and-some-new-transform-pairs">Example 11.5 - and some new transform pairs.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-11-5-non-proper-rational-polynomial">Exercise 11.5: Non-proper rational polynomial</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-11-5">Solution 11.5</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-function-of-t-has-laplace-transform-s">What function of t has Laplace transform s?</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#new-transform-pairs">New Transform Pairs</a></li>
@@ -1116,7 +1117,7 @@ k =
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-work">Lab Work</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-4-4-take-aways">Unit 4.4: Take Aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab">MATLAB</a></li>
 </ul>
 </li>

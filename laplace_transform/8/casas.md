@@ -703,12 +703,12 @@ It can, however be used in modelling and simulation studies.
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (examples15)=
-## Examples 15
+## Exercises 15
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (ex:15.1)=
-### Example 15.1 
+### Exercise 15.1 
 
 `````{admonition} MATLAB Example
 :class: tip
@@ -821,7 +821,7 @@ The following examples have been adapted from *Session 3: RC Networks and the Op
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex15.2)=
-### Example 15.2: Periodic Excitation
+### Exercise 15.2: Periodic Excitation
 
 Consider the RC circuit shown in {numref}`fig:ex15.2`(b). The circuit is subjected to the periodic signal $x(t) = v_1(t)$ shown in {numref}`fig:ex15.2`(a).
 
@@ -844,7 +844,7 @@ e) Use the transfer function block and the signal editor provided by Simulink to
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (15.3)=
-### Example 15.3: Operational Differentiator
+### Exercise 15.3: Operational Differentiator
 
 In Section 3.3 of {cite}`eg152` it is given that the differential equation of the *operational differentiator* illustrated in {numref}`fig:15.3` is
 
@@ -868,7 +868,7 @@ c) Compute and plot the response of the operational differentiator to three cycl
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (15.4)=
-### Example 15.4: Operational Integrator
+### Exercise 15.4: Operational Integrator
 
 In Section 3.5 of {cite}`eg152` it is given that the differential equation of the *operational inetgrator* illustrated in {numref}`fig:15.4` is
 
@@ -906,8 +906,10 @@ In this section we have explored the various methods that we can use the compute
 * {ref}`simulink_tf`
 * {ref}`examples15`
 
++++ {"slideshow": {"slide_type": "notes"}}
 
-### Takeaways
+(unit4.8:takeaways)=
+### Unit 4.8: Takeaways
 
 In MATLAB the rational polynomials that represent the transfer functions of continuous-time LTI systems can be defined numerically or symbolicly (see {ref}`matlab_tf`). There are two forms of numerical representation. The first of these uses the expanded polynomials (called *transfer function*), the second uses the factors (called *zero-pole-gain* form). The Control Systems Toolbox in MATLAB provides an object called the LTI block which supports both forms (and a third form, called *state-space*, not studied here, which is used in filter design and advanced control systems).
 
@@ -953,7 +955,7 @@ We will complete this course with an introduction to Frequency response analysis
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-## Matlab Solutions
+## MATLAB Solutions
 
 For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab) folder.
 

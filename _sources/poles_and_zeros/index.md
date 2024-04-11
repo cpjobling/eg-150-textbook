@@ -37,7 +37,3 @@ However, we didn't really discuss the implications of these cases. In this unit 
 
 * {ref}`unit5.1`
 * {ref}`unit5.2`
-
-```{code-cell}
-
-```

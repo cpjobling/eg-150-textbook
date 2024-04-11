@@ -845,7 +845,7 @@ You should compare the values computed with the approximations given in this sec
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex16.1)=
-### Exercise 16.1
+### Exercise 16.1: Qualitative analysis
 
 A signal or system response $f(t)$ contains the terms
 
@@ -860,7 +860,7 @@ $$\cdots - e^{-2t} - 0.1 t^2 \cos(3t + 5) \cdots$$ (eq:ex16:1)
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex16.2)=
-### Exercise 16.2
+### Exercise 16.2: Qualitative and quantitative analysis
 
 A system has poles $s = 0,\,1\pm j,\,-1,\, -2\pm j2,\,-3$ and zeros at $s = -1.5,\,-3\pm j3$.
 
@@ -990,7 +990,7 @@ zeta = NaN;
 +++ {"slideshow": {"slide_type": "notes"}}
 
 (unit5.2:takeaways)=
-### Take aways
+### Unit 5.2: Take aways
 
 #### Real pole $s=\sigma$:
 
@@ -1050,7 +1050,3 @@ We will the conclude this module by considering frequency response analysis of s
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## Footnotes
-
-```{code-cell}
-
-```

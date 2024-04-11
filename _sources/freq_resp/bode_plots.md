@@ -701,7 +701,7 @@ We covered the following topics
 +++ {"slideshow": {"slide_type": "notes"}}
 
 (unit6.2:takeaways)=
-### Take Aways
+### Unit 6.2: Take Aways
 
 #### Frequency response
 

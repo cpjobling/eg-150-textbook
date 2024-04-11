@@ -7,7 +7,7 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.15.2
 kernelspec:
-  display_name: Matlab
+  display_name: MATLAB
   language: matlab
   name: matlab
 ---
@@ -81,7 +81,7 @@ $${u_0}(t) = \left\{ {\begin{array}{*{20}{c}}
 
 ### In MATLAB
 
-In Matlab, we use the `heaviside` function (named after [Oliver Heaviside](https://en.wikipedia.org/wiki/Oliver_Heaviside)).
+In MATLAB, we use the `heaviside` function (named after [Oliver Heaviside](https://en.wikipedia.org/wiki/Oliver_Heaviside)).
 
 ```{code-cell}
 ---
@@ -105,7 +105,7 @@ plot_heaviside
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Note that, so that it can be plotted, Matlab defines the *Heaviside function* slightly differently from the mathematically ideal unit step:
+Note that, so that it can be plotted, MATLAB defines the *Heaviside function* slightly differently from the mathematically ideal unit step:
 
 $$\mathrm{heaviside}(t) = \left\{ {\begin{array}{*{20}{c}}
 {0\quad t < 0}\\

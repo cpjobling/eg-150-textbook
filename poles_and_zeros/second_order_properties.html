@@ -225,7 +225,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../setup/jupyter.html">About Jupyter notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/python.html">Installing Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../setup/matlab_kernel.html">Testing the Jupyter Matlab Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup/matlab_kernel.html">Testing the Jupyter MATLAB Kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/jupyter-book.html">Setting up jupyter-book</a></li>
 </ul>
@@ -481,8 +481,8 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-16">Exercises 16</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-16-1">Exercise 16.1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-16-2">Exercise 16.2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-16-1-qualitative-analysis">Exercise 16.1: Qualitative analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-16-2-qualitative-and-quantitative-analysis">Exercise 16.2: Qualitative and quantitative analysis</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-solution-to-exercise-16-2">Partial solution to Exercise 16.2</a></li>
 </ul>
 </li>
@@ -490,7 +490,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-5-2-take-aways">Unit 5.2: Take aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#real-pole-s-sigma">Real pole <span class="math notranslate nohighlight">\(s=\sigma\)</span>:</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-pole-pair-s-sigma-pm-j-omega">Complex pole pair <span class="math notranslate nohighlight">\(s = -\sigma \pm j\omega\)</span>:</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-second-order-system-transfer-function">Standard second-order system transfer function</a></li>
@@ -596,7 +596,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/daad0db864be6f48be48bf75b07d949fe87b5f70a0e3656d3ccd856695eb7017.png" src="../_images/daad0db864be6f48be48bf75b07d949fe87b5f70a0e3656d3ccd856695eb7017.png" />
+<img alt="../_images/ca064ea1b58f7bce07f597adee28d9d85c0bc77c37ceee1d264e507bb27b8b12.png" src="../_images/ca064ea1b58f7bce07f597adee28d9d85c0bc77c37ceee1d264e507bb27b8b12.png" />
 </div>
 </div>
 <p>Given that <span class="math notranslate nohighlight">\(\sigma = 0.1\)</span>, the doubling time <span class="math notranslate nohighlight">\(T \approx 0.7/\sigma = 7\)</span> s. The initial value is <span class="math notranslate nohighlight">\(10\)</span> at <span class="math notranslate nohighlight">\(t=0\)</span> s. It has doubled to <span class="math notranslate nohighlight">\(20\)</span> at <span class="math notranslate nohighlight">\(t\approx 7\)</span> s, and has doubled again to <span class="math notranslate nohighlight">\(40\)</span> at <span class="math notranslate nohighlight">\(t\approx 14\)</span>.</p>
@@ -673,7 +673,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/13f6343c86639916164490969768ba042e161cb442503527434335c3a4ccba49.png" src="../_images/13f6343c86639916164490969768ba042e161cb442503527434335c3a4ccba49.png" />
+<img alt="../_images/87e7d221ee2366716e87b4ac1fbbac094e72be5d41c29c3cd01fe423f4c74c72.png" src="../_images/87e7d221ee2366716e87b4ac1fbbac094e72be5d41c29c3cd01fe423f4c74c72.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this result is given in <a class="reference download internal" download="" href="../_downloads/b2296fa173d1562d6258c6ffcbe8592d/example8.mlx"><span class="xref download myst">example8.mlx</span></a></p>
@@ -848,7 +848,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/827514805b80574d72d545e2db103d4f99e846de9006cb34779cd2d22877e389.png" src="../_images/827514805b80574d72d545e2db103d4f99e846de9006cb34779cd2d22877e389.png" />
+<img alt="../_images/0456e5b7f3175d26c8d5d64b73a6292ad94283a653f4f00915143208e6041a94.png" src="../_images/0456e5b7f3175d26c8d5d64b73a6292ad94283a653f4f00915143208e6041a94.png" />
 </div>
 </div>
 <p>Confirming the result with <a class="reference internal" href="#equation-eq-unit5-1-2">(61)</a> we get:</p>
@@ -873,7 +873,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6dc727390376de7ae1b4c62d90f277f4997ee6d07cfa9cf1610d8d3972ae0a45.png" src="../_images/6dc727390376de7ae1b4c62d90f277f4997ee6d07cfa9cf1610d8d3972ae0a45.png" />
+<img alt="../_images/261eb0165c14db453687bfa381f86377e171895eac256e35967e5629e4c4917d.png" src="../_images/261eb0165c14db453687bfa381f86377e171895eac256e35967e5629e4c4917d.png" />
 </div>
 </div>
 <p>Using the <code class="docutils literal notranslate"><span class="pre">tf</span></code> and <code class="docutils literal notranslate"><span class="pre">step</span></code> functions we get:</p>
@@ -915,7 +915,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/fa79a35c481f8c21d20ff6b461f5707817b5fd312855e7befa54d27e7e32c008.png" src="../_images/fa79a35c481f8c21d20ff6b461f5707817b5fd312855e7befa54d27e7e32c008.png" />
+<img alt="../_images/bc088053fb60ec435560a39d41b02824462ac586f9fea13f71b7154e64b7b26a.png" src="../_images/bc088053fb60ec435560a39d41b02824462ac586f9fea13f71b7154e64b7b26a.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this result is given in <a class="reference download internal" download="" href="../_downloads/3ba053ad62f7b263884af00ba1ace7eb/example9.mlx"><span class="xref download myst">example9.mlx</span></a></p>
@@ -1090,7 +1090,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5f10a393acd7cef2b26145e1c1951676125bfc3b67c5f02d13f40b0f34e381e0.png" src="../_images/5f10a393acd7cef2b26145e1c1951676125bfc3b67c5f02d13f40b0f34e381e0.png" />
+<img alt="../_images/d47fa0951c71c89264b59d98dc66ab118b2d65f14d870afd56b6bf7502416f63.png" src="../_images/d47fa0951c71c89264b59d98dc66ab118b2d65f14d870afd56b6bf7502416f63.png" />
 </div>
 </div>
 </section>
@@ -1121,7 +1121,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1fff94dcfdb23a57d739d6475135c66c0cea15e29ae866a4663c13ed815646df.png" src="../_images/1fff94dcfdb23a57d739d6475135c66c0cea15e29ae866a4663c13ed815646df.png" />
+<img alt="../_images/6b49c16cdcf1722b09ae72525861b99a89e6d8ad26e4ca22d7c05a855821f3a8.png" src="../_images/6b49c16cdcf1722b09ae72525861b99a89e6d8ad26e4ca22d7c05a855821f3a8.png" />
 </div>
 </div>
 <p>The value looks about right!</p>
@@ -1155,7 +1155,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/28881c3bd41c9aeb69cd2fe8150577768de099c904f81fb66c5d8e96729cfc49.png" src="../_images/28881c3bd41c9aeb69cd2fe8150577768de099c904f81fb66c5d8e96729cfc49.png" />
+<img alt="../_images/f84cb486652c8ef388364eb9b63466424f70e5f0b94543fd311b9c543cd23337.png" src="../_images/f84cb486652c8ef388364eb9b63466424f70e5f0b94543fd311b9c543cd23337.png" />
 </div>
 </div>
 <p>Reverse formula check</p>
@@ -1199,7 +1199,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/744a5bbc01f015ebad7f87dd52b13f81ca97e1211528bef2c53a34425c969502.png" src="../_images/744a5bbc01f015ebad7f87dd52b13f81ca97e1211528bef2c53a34425c969502.png" />
+<img alt="../_images/14ce3d667d0eb9c4e038a729d3d38733cd1121601365f3b5148dffc109b34679.png" src="../_images/14ce3d667d0eb9c4e038a729d3d38733cd1121601365f3b5148dffc109b34679.png" />
 </div>
 </div>
 </section>
@@ -1234,8 +1234,8 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 <section id="exercises-16">
 <span id="examples16"></span><h2>Exercises 16<a class="headerlink" href="#exercises-16" title="Permalink to this heading">#</a></h2>
-<section id="exercise-16-1">
-<span id="ex16-1"></span><h3>Exercise 16.1<a class="headerlink" href="#exercise-16-1" title="Permalink to this heading">#</a></h3>
+<section id="exercise-16-1-qualitative-analysis">
+<span id="ex16-1"></span><h3>Exercise 16.1: Qualitative analysis<a class="headerlink" href="#exercise-16-1-qualitative-analysis" title="Permalink to this heading">#</a></h3>
 <p>A signal or system response <span class="math notranslate nohighlight">\(f(t)\)</span> contains the terms</p>
 <div class="math notranslate nohighlight" id="equation-eq-ex16-1">
 <span class="eqno">(66)<a class="headerlink" href="#equation-eq-ex16-1" title="Permalink to this equation">#</a></span>\[\cdots - e^{-2t} - 0.1 t^2 \cos(3t + 5) \cdots\]</div>
@@ -1243,8 +1243,8 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <p>(b) What is the nature of the response due to the terms given in <a class="reference internal" href="#equation-eq-ex16-1">(66)</a>?</p>
 <p>(c) Which are the dominant poles?</p>
 </section>
-<section id="exercise-16-2">
-<span id="ex16-2"></span><h3>Exercise 16.2<a class="headerlink" href="#exercise-16-2" title="Permalink to this heading">#</a></h3>
+<section id="exercise-16-2-qualitative-and-quantitative-analysis">
+<span id="ex16-2"></span><h3>Exercise 16.2: Qualitative and quantitative analysis<a class="headerlink" href="#exercise-16-2-qualitative-and-quantitative-analysis" title="Permalink to this heading">#</a></h3>
 <p>A system has poles <span class="math notranslate nohighlight">\(s = 0,\,1\pm j,\,-1,\, -2\pm j2,\,-3\)</span> and zeros at <span class="math notranslate nohighlight">\(s = -1.5,\,-3\pm j3\)</span>.</p>
 <p>(a) Give the transfer function <span class="math notranslate nohighlight">\(F(s)=b(s)/a(a)\)</span></p>
 <p>(b) Plot the poles on a pole zero map</p>
@@ -1327,7 +1327,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d1b88a41152c30acbd0cdf23efc668d75e6610b607e2e7d6cab048a016b09757.png" src="../_images/d1b88a41152c30acbd0cdf23efc668d75e6610b607e2e7d6cab048a016b09757.png" />
+<img alt="../_images/2b0797c56f5bcb46d799149155417ccf74f1cdc8efd7fe47303c404a1ef7576f.png" src="../_images/2b0797c56f5bcb46d799149155417ccf74f1cdc8efd7fe47303c404a1ef7576f.png" />
 </div>
 </div>
 <p><strong>Bonus</strong>: the step response is</p>
@@ -1338,7 +1338,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3bd21b0b41f88a1fa4aa75762c0cef24fcd2ec01cdc06a3461561f4d2adc548b.png" src="../_images/3bd21b0b41f88a1fa4aa75762c0cef24fcd2ec01cdc06a3461561f4d2adc548b.png" />
+<img alt="../_images/36f771b3f72535edeadb6daa89ac58ad3938e57459546def524de3ab8137ecd3.png" src="../_images/36f771b3f72535edeadb6daa89ac58ad3938e57459546def524de3ab8137ecd3.png" />
 </div>
 </div>
 </section>
@@ -1382,8 +1382,8 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
-<section id="take-aways">
-<span id="unit5-2-takeaways"></span><h3>Take aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h3>
+<section id="unit-5-2-take-aways">
+<span id="unit5-2-takeaways"></span><h3>Unit 5.2: Take aways<a class="headerlink" href="#unit-5-2-take-aways" title="Permalink to this heading">#</a></h3>
 <section id="real-pole-s-sigma">
 <h4>Real pole <span class="math notranslate nohighlight">\(s=\sigma\)</span>:<a class="headerlink" href="#real-pole-s-sigma" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
@@ -1568,8 +1568,8 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-16">Exercises 16</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-16-1">Exercise 16.1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-16-2">Exercise 16.2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-16-1-qualitative-analysis">Exercise 16.1: Qualitative analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-16-2-qualitative-and-quantitative-analysis">Exercise 16.2: Qualitative and quantitative analysis</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-solution-to-exercise-16-2">Partial solution to Exercise 16.2</a></li>
 </ul>
 </li>
@@ -1577,7 +1577,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-5-2-take-aways">Unit 5.2: Take aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#real-pole-s-sigma">Real pole <span class="math notranslate nohighlight">\(s=\sigma\)</span>:</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-pole-pair-s-sigma-pm-j-omega">Complex pole pair <span class="math notranslate nohighlight">\(s = -\sigma \pm j\omega\)</span>:</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-second-order-system-transfer-function">Standard second-order system transfer function</a></li>

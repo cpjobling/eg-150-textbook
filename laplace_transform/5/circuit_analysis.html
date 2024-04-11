@@ -225,7 +225,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter.html">About Jupyter notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/python.html">Installing Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../setup/matlab_kernel.html">Testing the Jupyter Matlab Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/matlab_kernel.html">Testing the Jupyter MATLAB Kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter-book.html">Setting up jupyter-book</a></li>
 </ul>
@@ -466,7 +466,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-frequency-domain-of-a-capacitive-network">Complex Frequency Domain of a Capacitive Network</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-12">Exercises 12</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-impedance-z-s">Complex Impedance <span class="math notranslate nohighlight">\(Z(s)\)</span></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-impedance-of-components">Complex impedance of components</a></li>
 </ul>
@@ -475,10 +475,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-admittance-of-components">Complex admittance of components</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-12">Examples 12</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-1">Example 12.1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-2">Example 12.2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-3">Example 12.3</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples12">Exercises 12</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-1-rc-circuit-solved-by-kcl">Exercise 12.1: RC circuit solved by KCL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-2-rc-circuit-solved-by-kvl">Exercise 12.2: RC circuit solved by KVL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-3-a-complex-rlc-circuit-with-initial-conditions">Exercise 12.3: A complex RLC circuit with initial conditions</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-solution-ex-12-3">Worked Solution: <span class="xref std std-ref">ex:12.3</span></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-12-3">Solution to Example 12.3</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalent-circuit">1. Equivalent Circuit</a></li>
@@ -497,13 +497,13 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-4">Example 12.4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-5">Example 12.5</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-4-rlc-circuit">Exercise 12.4: RLC circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-5-complex-impedance">Exercise 12.5: Complex Impedance</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-by-nodal-analysis">1. Solution by nodal analysis</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-by-by-successive-application-of-parallel-and-series-combination-of-impedences">2. Solution by by successive application of parallel and series combination of impedences</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-6">Example 12.6</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-6-complex-admittance">Exercise 12.6: Complex admittance</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#answer-12-6">Answer 12.6</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-6-verification-of-solution">Example 12.6: Verification of Solution</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#admittance">Admittance</a></li>
@@ -511,16 +511,16 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-7">Example 12.7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-7-admittance-and-time-response">Exercise 12.7: Admittance and time response</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-work">Lab Work</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-4-5-take-aways">Unit 4.5: Take Aways</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next time</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solutions">Matlab Solutions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solutions">MATLAB Solutions</a></li>
 </ul>
             </nav>
         </div>
@@ -544,7 +544,7 @@ document.write(`
 <li><p><a class="reference internal" href="#circuit-transforms"><span class="std std-ref">Circuit Transformation from Time to Complex Frequency</span></a></p></li>
 <li><p><a class="reference internal" href="#complex-impedance"><span class="std std-ref">Complex Impedance Z(s)</span></a></p></li>
 <li><p><a class="reference internal" href="#complex-admittance"><span class="std std-ref">Complex Admittance Y(s)</span></a></p></li>
-<li><p><a class="reference internal" href="#examples12"><span class="std std-ref">Examples 12</span></a></p></li>
+<li><p><a class="reference internal" href="#examples12"><span class="std std-ref">Exercises 12</span></a></p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -809,9 +809,9 @@ document.write(`
 </figure>
 </section>
 </section>
-<section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
-<p>Do examples 12.1 and 12.2 Now</p>
+<section id="exercises-12">
+<h2>Exercises 12<a class="headerlink" href="#exercises-12" title="Permalink to this heading">#</a></h2>
+<p>Do exercises 12.1 and 12.2 Now</p>
 </section>
 <section id="complex-impedance-z-s">
 <span id="complex-impedance"></span><h2>Complex Impedance <span class="math notranslate nohighlight">\(Z(s)\)</span><a class="headerlink" href="#complex-impedance-z-s" title="Permalink to this heading">#</a></h2>
@@ -912,14 +912,14 @@ document.write(`
 <p><span class="math notranslate nohighlight">\(Y(s)\)</span> is complex and is known as the <em>complex input admittance</em> of this GLC parallel circuit.</p>
 </section>
 </section>
-<section id="examples-12">
-<span id="examples12"></span><h2>Examples 12<a class="headerlink" href="#examples-12" title="Permalink to this heading">#</a></h2>
+<section id="examples12">
+<span id="id7"></span><h2>Exercises 12<a class="headerlink" href="#examples12" title="Permalink to this heading">#</a></h2>
 <p>We will work through these in class.</p>
-<section id="example-12-1">
-<span id="ex-12-1"></span><h3>Example 12.1<a class="headerlink" href="#example-12-1" title="Permalink to this heading">#</a></h3>
+<section id="exercise-12-1-rc-circuit-solved-by-kcl">
+<span id="ex-12-1"></span><h3>Exercise 12.1: RC circuit solved by KCL<a class="headerlink" href="#exercise-12-1-rc-circuit-solved-by-kcl" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is based on <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=102">Example 4.1</a> from <span id="id7">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
+<p>This is based on <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=102">Example 4.1</a> from <span id="id8">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
 </div>
 <p>Use the Laplace transform method and apply Kirchoff’s Current Law (KCL) to find the voltage <span class="math notranslate nohighlight">\(v_c(t)\)</span> across the capacitor for the circuit in <a class="reference internal" href="#fig-12-1"><span class="std std-numref">Fig. 59</span></a> given that <span class="math notranslate nohighlight">\(v_c(0^-) = 6\)</span> V.</p>
 <figure class="align-default" id="fig-12-1">
@@ -929,11 +929,11 @@ document.write(`
 </figcaption>
 </figure>
 </section>
-<section id="example-12-2">
-<span id="ex-12-2"></span><h3>Example 12.2<a class="headerlink" href="#example-12-2" title="Permalink to this heading">#</a></h3>
+<section id="exercise-12-2-rc-circuit-solved-by-kvl">
+<span id="ex-12-2"></span><h3>Exercise 12.2: RC circuit solved by KVL<a class="headerlink" href="#exercise-12-2-rc-circuit-solved-by-kvl" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is based on <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=104">Example 4.2</a> from <span id="id8">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
+<p>This is based on <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=104">Example 4.2</a> from <span id="id9">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
 </div>
 <p>Use the Laplace transform method and apply Kirchoff’s Voltage Law (KVL) to find the voltage <span class="math notranslate nohighlight">\(v_c(t)\)</span> across the capacitor for the circuit shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:12.2</span></code> given that <span class="math notranslate nohighlight">\(v_c(0^-) = 6\)</span> V.</p>
 <figure class="align-default" id="fig-ex12-2">
@@ -943,11 +943,11 @@ document.write(`
 </figcaption>
 </figure>
 </section>
-<section id="example-12-3">
-<span id="ex-12-3"></span><h3>Example 12.3<a class="headerlink" href="#example-12-3" title="Permalink to this heading">#</a></h3>
+<section id="exercise-12-3-a-complex-rlc-circuit-with-initial-conditions">
+<span id="ex-12-3"></span><h3>Exercise 12.3: A complex RLC circuit with initial conditions<a class="headerlink" href="#exercise-12-3-a-complex-rlc-circuit-with-initial-conditions" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
-<p>This is based on <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=104">Example 4.3</a> in <span id="id9">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
+<p>This is based on <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=104">Example 4.3</a> in <span id="id10">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
 <p>We will solve this example by hand in <strong>Examples class 4</strong> and then review the solution in MATLAB lab 5.</p>
 </div>
 <p>In the circuit shown in <a class="reference internal" href="#fig-ex12-3"><span class="std std-numref">Fig. 61</span></a>, switch <span class="math notranslate nohighlight">\(S_1\)</span> closes at <span class="math notranslate nohighlight">\(t=0\)</span>, while at the same time, switch <span class="math notranslate nohighlight">\(S_2\)</span> opens. Use the Laplace transform method to find <span class="math notranslate nohighlight">\(v_{\mathrm{out}}(t)\)</span> for <span class="math notranslate nohighlight">\(t &gt; 0\)</span>.</p>
@@ -962,9 +962,9 @@ document.write(`
 <span class="eqno">(30)<a class="headerlink" href="#equation-sol-12-3" title="Permalink to this equation">#</a></span>\[V_{\mathrm{out}}=\left(1.36e^{-6.57t}+0.64e^{-0.715t}\cos 0.316t - 1.84e^{-0.715t}\sin 0.316t\right)u_0(t)\]</div>
 <p>and we can plot the result (see <a class="reference internal" href="#sol-mat12-3"><span class="std std-ref">4. Complete solution in MATLAB</span></a>)</p>
 <section id="worked-solution-ex-12-3">
-<h4>Worked Solution: <a class="reference internal" href="#ex-12-3"><span class="std std-ref">Example 12.3</span></a><a class="headerlink" href="#worked-solution-ex-12-3" title="Permalink to this heading">#</a></h4>
+<h4>Worked Solution: <a class="reference internal" href="#ex-12-3"><span class="std std-ref">Exercise 12.3: A complex RLC circuit with initial conditions</span></a><a class="headerlink" href="#worked-solution-ex-12-3" title="Permalink to this heading">#</a></h4>
 <p>File Pencast: <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/example3.pdf">example12_3.pdf</a> - Download and open in Adobe Acrobat Reader.</p>
-<p>The attached PDF gives the solution to <a class="reference internal" href="#ex-12-3"><span class="std std-ref">Example 12.3</span></a> by hand. It’s quite a complex, error-prone (as you can see by the crosssings out!) calculation that needs careful attention to detail. This in itself gives justification to my belief that you should use computers wherever possible.</p>
+<p>The attached PDF gives the solution to <a class="reference internal" href="#ex-12-3"><span class="std std-ref">Exercise 12.3: A complex RLC circuit with initial conditions</span></a> by hand. It’s quite a complex, error-prone (as you can see by the crosssings out!) calculation that needs careful attention to detail. This in itself gives justification to my belief that you should use computers wherever possible.</p>
 </section>
 <section id="solution-to-example-12-3">
 <span id="sol-12-3"></span><h4>Solution to Example 12.3<a class="headerlink" href="#solution-to-example-12-3" title="Permalink to this heading">#</a></h4>
@@ -984,7 +984,7 @@ document.write(`
 </section>
 <section id="complete-solution-in-matlab">
 <span id="sol-mat12-3"></span><h4>4. Complete solution in MATLAB<a class="headerlink" href="#complete-solution-in-matlab" title="Permalink to this heading">#</a></h4>
-<p>In the lecture we showed that after simplification for <a class="reference internal" href="#ex-12-3"><span class="std std-ref">Example 12.3</span></a></p>
+<p>In the lecture we showed that after simplification for <a class="reference internal" href="#ex-12-3"><span class="std std-ref">Exercise 12.3: A complex RLC circuit with initial conditions</span></a></p>
 <div class="math notranslate nohighlight">
 \[V_{\mathrm{out}}(s)=\frac{2s(s+3)}{s^3 + 8s^2 + 10s + 4}\]</div>
 <p>We will use MATLAB to factorize the denominator <span class="math notranslate nohighlight">\(D(s)\)</span> of the equation
@@ -1059,15 +1059,15 @@ into a linear and a quadratic factor.</p>
 </section>
 </section>
 </section>
-<section id="example-12-4">
-<h3>Example 12.4<a class="headerlink" href="#example-12-4" title="Permalink to this heading">#</a></h3>
+<section id="exercise-12-4-rlc-circuit">
+<span id="ex-12-4"></span><h3>Exercise 12.4: RLC circuit<a class="headerlink" href="#exercise-12-4-rlc-circuit" title="Permalink to this heading">#</a></h3>
 <p>Consider <a class="reference internal" href="#fig-complex-imp"><span class="std std-numref">Fig. 57</span></a> and give an expression for <span class="math notranslate nohighlight">\(V_c(s)\)</span>.</p>
 </section>
-<section id="example-12-5">
-<span id="ex-12-5"></span><h3>Example 12.5<a class="headerlink" href="#example-12-5" title="Permalink to this heading">#</a></h3>
+<section id="exercise-12-5-complex-impedance">
+<span id="ex-12-5"></span><h3>Exercise 12.5: Complex Impedance<a class="headerlink" href="#exercise-12-5-complex-impedance" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
-<p>This is based on <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=109">Example 4.4</a> from <span id="id10">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
+<p>This is based on <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=109">Example 4.4</a> from <span id="id11">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
 <p>We will solve this examples by hand and then review the solution in MATLAB lab 5.</p>
 </div>
 <p>For the network shown in <a class="reference internal" href="#fig-ex12-5"><span class="std std-numref">Fig. 62</span></a>, all the complex impedance values are given in <span class="math notranslate nohighlight">\(\Omega\)</span> (ohms).</p>
@@ -1090,11 +1090,11 @@ into a linear and a quadratic factor.</p>
 <p><strong>Solutions</strong>: Pencasts <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/ex4_1.pdf">ex4_1.pdf</a> and <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/ex4_2.pdf">ex4_2.pdf</a> – open in Adobe Acrobat.</p>
 </section>
 </section>
-<section id="example-12-6">
-<span id="ex-12-6"></span><h3>Example 12.6<a class="headerlink" href="#example-12-6" title="Permalink to this heading">#</a></h3>
+<section id="exercise-12-6-complex-admittance">
+<span id="ex-12-6"></span><h3>Exercise 12.6: Complex admittance<a class="headerlink" href="#exercise-12-6-complex-admittance" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
-<p>This is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=112">Example 4.5</a> from <span id="id11">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span></p>
+<p>This is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=112">Example 4.5</a> from <span id="id12">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span></p>
 <p>We will solve this examples by hand and then review the solution in MATLAB Lab 5.3.</p>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(Z(s)\)</span> and <span class="math notranslate nohighlight">\(Y(s)\)</span> for the circuit shown in <a class="reference internal" href="#fig-ex12-6"><span class="std std-numref">Fig. 63</span></a>. All impedence values are in <span class="math notranslate nohighlight">\(\Omega\)</span> (ohms). Verify your answers with MATLAB.</p>
@@ -1159,11 +1159,11 @@ into a linear and a quadratic factor.</p>
 </section>
 </section>
 </section>
-<section id="example-12-7">
-<span id="ex12-7"></span><h3>Example 12.7<a class="headerlink" href="#example-12-7" title="Permalink to this heading">#</a></h3>
+<section id="exercise-12-7-admittance-and-time-response">
+<span id="ex-12-7"></span><h3>Exercise 12.7: Admittance and time response<a class="headerlink" href="#exercise-12-7-admittance-and-time-response" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
-<p>This is Exercise 4 from <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=121">4.7 Exercises</a> from <span id="id12">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span></p>
+<p>This is Exercise 4 from <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=121">4.7 Exercises</a> from <span id="id13">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span></p>
 <p>This example will be solved in MATLAB Lab 5.3.</p>
 </div>
 <p>For the s-domain circuit shown in <a class="reference internal" href="#fig-12-7"><span class="std std-numref">Fig. 64</span></a></p>
@@ -1185,8 +1185,8 @@ into a linear and a quadratic factor.</p>
 </section>
 <section id="homework">
 <h2>Homework<a class="headerlink" href="#homework" title="Permalink to this heading">#</a></h2>
-<p>Complete any exercises that were not covered in the class or follow-up examples class. There are a number of related problems in <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section47#ch03fig14">Solved Problems 3.39</a>—3.41 in <span id="id13">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span> and in section <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=121">4.7 Exercises</a> in <span id="id14">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
-<p>Supplementary problems <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section48">3.52 and following</a> (<span id="id15">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>) provide opportunities for extra practice.</p>
+<p>Complete any exercises that were not covered in the class or follow-up examples class. There are a number of related problems in <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section47#ch03fig14">Solved Problems 3.39</a>—3.41 in <span id="id14">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span> and in section <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=121">4.7 Exercises</a> in <span id="id15">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
+<p>Supplementary problems <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section48">3.52 and following</a> (<span id="id16">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>) provide opportunities for extra practice.</p>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
@@ -1195,11 +1195,11 @@ into a linear and a quadratic factor.</p>
 <li><p><a class="reference internal" href="#circuit-transforms"><span class="std std-ref">Circuit Transformation from Time to Complex Frequency</span></a></p></li>
 <li><p><a class="reference internal" href="#complex-impedance"><span class="std std-ref">Complex Impedance Z(s)</span></a></p></li>
 <li><p><a class="reference internal" href="#complex-admittance"><span class="std std-ref">Complex Admittance Y(s)</span></a></p></li>
-<li><p><a class="reference internal" href="#examples12"><span class="std std-ref">Examples 12</span></a></p></li>
+<li><p><a class="reference internal" href="#examples12"><span class="std std-ref">Exercises 12</span></a></p></li>
 </ul>
 </section>
-<section id="take-aways">
-<h2>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h2>
+<section id="unit-4-5-take-aways">
+<span id="unit4-5-takeaways"></span><h2>Unit 4.5: Take Aways<a class="headerlink" href="#unit-4-5-take-aways" title="Permalink to this heading">#</a></h2>
 <p>Circuit analysis can be performed using Laplace transforms by using the Laplace transform equivalents of the component impedence or admittance. In particular, for impedence, we use <span class="math notranslate nohighlight">\(R\)</span>, <span class="math notranslate nohighlight">\(sL\)</span> and <span class="math notranslate nohighlight">\(1/sC\)</span>; for admittance we use <span class="math notranslate nohighlight">\(G = 1/R\)</span>, <span class="math notranslate nohighlight">\(1/sL\)</span>, <span class="math notranslate nohighlight">\(sC\)</span>. Once the circuit has been reduced to a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span>, the inverse laplace transform can be used to determine the time response of the circuit.</p>
 <p>When dealing with components using their complex component equivalents, the usual circuit analysis rules, KVL, KCL, voltage-divider rule, etc, can all be used.</p>
 <p>The complex impedence of a circuit is the resistance to current flow and is given by the general law <span class="math notranslate nohighlight">\(V(s) = Z(s) I(s)\)</span> from which the impendence is given by <span class="math notranslate nohighlight">\(Z(s) = V(s)/I(s)\)</span>. Similarly, the complex admittance of a circuit is given by <span class="math notranslate nohighlight">\(Y(s) = I(s)/V(s)\)</span>.</p>
@@ -1215,19 +1215,19 @@ into a linear and a quadratic factor.</p>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id16">
+<div class="docutils container" id="id17">
 <dl class="citation">
-<dt class="label" id="id26"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id13">2</a>,<a href="#id15">3</a>)</span></dt>
+<dt class="label" id="id27"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id14">2</a>,<a href="#id16">3</a>)</span></dt>
 <dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
 </dd>
-<dt class="label" id="id22"><span class="brackets">Kar12</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id7">2</a>,<a href="#id8">3</a>,<a href="#id9">4</a>,<a href="#id10">5</a>,<a href="#id11">6</a>,<a href="#id12">7</a>,<a href="#id14">8</a>)</span></dt>
+<dt class="label" id="id23"><span class="brackets">Kar12</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id8">2</a>,<a href="#id9">3</a>,<a href="#id10">4</a>,<a href="#id11">5</a>,<a href="#id12">6</a>,<a href="#id13">7</a>,<a href="#id15">8</a>)</span></dt>
 <dd><p>Steven T. Karris. <em>Signals and systems with MATLAB computing and Simulink modeling</em>. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197">https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197</a>.</p>
 </dd>
 </dl>
 </div>
 </section>
 <section id="matlab-solutions">
-<span id="matlab-solutions12"></span><h2>Matlab Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this heading">#</a></h2>
+<span id="matlab-solutions12"></span><h2>MATLAB Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this heading">#</a></h2>
 <p>For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying <a class="reference external" href="https://github.com/cpjobling/eg-247-textbook/tree/master/laplace_transform/matlab">MATLAB</a> folder in the <a class="reference external" href="https://github.com/cpjobling/eg-247-textbook">GitHub repository</a>.</p>
 <ul class="simple">
 <li><p>Solution 12.3 [<a class="reference external" href="https://raw.githubusercontent.com/cpjobling/eg-150-textbook/main/laplace_transform/matlab/solution12_3.mlx">solution12_3.mlx</a>]</p></li>
@@ -1323,7 +1323,7 @@ into a linear and a quadratic factor.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-frequency-domain-of-a-capacitive-network">Complex Frequency Domain of a Capacitive Network</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-12">Exercises 12</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-impedance-z-s">Complex Impedance <span class="math notranslate nohighlight">\(Z(s)\)</span></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-impedance-of-components">Complex impedance of components</a></li>
 </ul>
@@ -1332,10 +1332,10 @@ into a linear and a quadratic factor.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complex-admittance-of-components">Complex admittance of components</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-12">Examples 12</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-1">Example 12.1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-2">Example 12.2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-3">Example 12.3</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples12">Exercises 12</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-1-rc-circuit-solved-by-kcl">Exercise 12.1: RC circuit solved by KCL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-2-rc-circuit-solved-by-kvl">Exercise 12.2: RC circuit solved by KVL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-3-a-complex-rlc-circuit-with-initial-conditions">Exercise 12.3: A complex RLC circuit with initial conditions</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-solution-ex-12-3">Worked Solution: <span class="xref std std-ref">ex:12.3</span></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-to-example-12-3">Solution to Example 12.3</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalent-circuit">1. Equivalent Circuit</a></li>
@@ -1354,13 +1354,13 @@ into a linear and a quadratic factor.</p>
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-4">Example 12.4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-5">Example 12.5</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-4-rlc-circuit">Exercise 12.4: RLC circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-5-complex-impedance">Exercise 12.5: Complex Impedance</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-by-nodal-analysis">1. Solution by nodal analysis</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-by-by-successive-application-of-parallel-and-series-combination-of-impedences">2. Solution by by successive application of parallel and series combination of impedences</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-6">Example 12.6</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-6-complex-admittance">Exercise 12.6: Complex admittance</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#answer-12-6">Answer 12.6</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-6-verification-of-solution">Example 12.6: Verification of Solution</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#admittance">Admittance</a></li>
@@ -1368,16 +1368,16 @@ into a linear and a quadratic factor.</p>
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-12-7">Example 12.7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-12-7-admittance-and-time-response">Exercise 12.7: Admittance and time response</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-work">Lab Work</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-4-5-take-aways">Unit 4.5: Take Aways</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next time</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solutions">Matlab Solutions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solutions">MATLAB Solutions</a></li>
 </ul>
   </nav></div>
 

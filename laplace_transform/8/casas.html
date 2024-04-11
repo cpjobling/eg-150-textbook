@@ -225,7 +225,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter.html">About Jupyter notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/python.html">Installing Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../setup/matlab_kernel.html">Testing the Jupyter Matlab Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/matlab_kernel.html">Testing the Jupyter MATLAB Kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter-book.html">Setting up jupyter-book</a></li>
 </ul>
@@ -468,21 +468,21 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-transfer-functions-in-simulink-for-system-simulation">Using Transfer Functions in Simulink for System Simulation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-15">Examples 15</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-15-1">Example 15.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-15">Exercises 15</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-1">Exercise 15.1</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solution">MATLAB Solution</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#live-script-solution">Live Script Solution</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#simulink-model">Simulink model</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-15-2-periodic-excitation">Example 15.2: Periodic Excitation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-15-3-operational-differentiator">Example 15.3: Operational Differentiator</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-15-4-operational-integrator">Example 15.4: Operational Integrator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-2-periodic-excitation">Exercise 15.2: Periodic Excitation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-3-operational-differentiator">Exercise 15.3: Operational Differentiator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-4-operational-integrator">Exercise 15.4: Operational Integrator</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-5">Lab 5</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#takeaways">Takeaways</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-4-8-takeaways">Unit 4.8: Takeaways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-reference-to-matlab-objects-and-functions">Quick Reference to MATLAB objects and functions</a></li>
 </ul>
 </li>
@@ -490,7 +490,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next time</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solutions">Matlab Solutions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solutions">MATLAB Solutions</a></li>
 </ul>
             </nav>
         </div>
@@ -508,12 +508,12 @@ document.write(`
 <p><img alt="QR Code for this lecture" src="../../_images/qrcode_lap8.png" /></p>
 <section id="agenda">
 <h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this heading">#</a></h2>
-<p>We conclude our introduction to the applications of the Laplace transform by demonstrating the facilties provided by the <em>Control Systems Toolbox</em> and the simulation tool <em>Simulink</em>. We will repeat <span class="xref std std-ref">ex:14.2</span> using these tools and we will conclude by exploring some of the problems you have studied in <strong>EG-152 Analogue Design</strong> hopefully confirming some of the results you have obbserved in that lab.</p>
+<p>We conclude our introduction to the applications of the Laplace transform by demonstrating the facilties provided by the <em>Control Systems Toolbox</em> and the simulation tool <em>Simulink</em>. We will repeat <a class="reference internal" href="../7/tf_for_circuits.html#ex-14-2"><span class="std std-ref">Exercise 14.2</span></a> using these tools and we will conclude by exploring some of the problems you have studied in <strong>EG-152 Analogue Design</strong> hopefully confirming some of the results you have obbserved in that lab.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../7/tf_for_circuits.html#circ-tf"><span class="std std-ref">Transfer Functions for Circuits</span></a></p></li>
 <li><p><a class="reference internal" href="#matlab-tf"><span class="std std-ref">Defining Transfer Functions in MATLAB</span></a></p></li>
 <li><p><a class="reference internal" href="#simulink-tf"><span class="std std-ref">Using Transfer Functions in Simulink for System Simulation</span></a></p></li>
-<li><p><a class="reference internal" href="#examples15"><span class="std std-ref">Examples 15</span></a></p></li>
+<li><p><a class="reference internal" href="#examples15"><span class="std std-ref">Exercises 15</span></a></p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -829,9 +829,7 @@ symbolically.</p>
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 6 s^2 + 8 s
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
@@ -890,7 +888,9 @@ symbolically.</p>
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-  From input &quot;Armature Voltage (V)&quot; to output &quot;Load Shaft Position (rad)&quot;:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  From input &quot;Armature Voltage (V)&quot; to output &quot;Load Shaft Position (rad)&quot;:
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   (s+1) (s+3)
@@ -1136,8 +1136,12 @@ symbolically.</p>
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------------
-     s^3 + 5 s^2 + 6 s
- 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     s^3 + 5 s^2 + 6 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
@@ -1218,7 +1222,7 @@ symbolically.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/b0bda40f1910219538da797982555ae454d9daf452b30a169320b0c970a73da7.png" src="../../_images/b0bda40f1910219538da797982555ae454d9daf452b30a169320b0c970a73da7.png" />
+<img alt="../../_images/d757d1bbe0883608712e96432f61a9ad07b3a97c3f6c0e2cccbdb422d9f0752c.png" src="../../_images/d757d1bbe0883608712e96432f61a9ad07b3a97c3f6c0e2cccbdb422d9f0752c.png" />
 </div>
 </div>
 </section>
@@ -1231,7 +1235,7 @@ symbolically.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/6599c56ac2dc44cf1c37a7c8815ac6b3269a53be4f9b2204cf8c934708fdcc07.png" src="../../_images/6599c56ac2dc44cf1c37a7c8815ac6b3269a53be4f9b2204cf8c934708fdcc07.png" />
+<img alt="../../_images/e4ccf6c0ea91faf87049953cb918c9dbdf5674008778fc6236fdf23304e106c4.png" src="../../_images/e4ccf6c0ea91faf87049953cb918c9dbdf5674008778fc6236fdf23304e106c4.png" />
 </div>
 </div>
 </section>
@@ -1244,7 +1248,7 @@ symbolically.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/f1aa59d9a083e8b23cc3526599192b6a58253295b645609db789edc9c8f77513.png" src="../../_images/f1aa59d9a083e8b23cc3526599192b6a58253295b645609db789edc9c8f77513.png" />
+<img alt="../../_images/a9bdae5efcdf9c613cbdfb02d2544eee0f20c202401648935b4d950657fd5961.png" src="../../_images/a9bdae5efcdf9c613cbdfb02d2544eee0f20c202401648935b4d950657fd5961.png" />
 </div>
 </div>
 </section>
@@ -1257,7 +1261,7 @@ symbolically.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/8b9236fd457ae43308f606b615364ec2a7c6b7f0a446fab3dd00a98fb99ad7cb.png" src="../../_images/8b9236fd457ae43308f606b615364ec2a7c6b7f0a446fab3dd00a98fb99ad7cb.png" />
+<img alt="../../_images/a3137cba503a89737d4b4f164160fd38b1e04b5a987310a6aee70f458a9d057b.png" src="../../_images/a3137cba503a89737d4b4f164160fd38b1e04b5a987310a6aee70f458a9d057b.png" />
 </div>
 </div>
 </section>
@@ -1270,7 +1274,7 @@ symbolically.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/6e21657be9b5c1fa1657f0ca9ed5b74960081019fc30934118fcd7e22b4b9b6d.png" src="../../_images/6e21657be9b5c1fa1657f0ca9ed5b74960081019fc30934118fcd7e22b4b9b6d.png" />
+<img alt="../../_images/cbfe98952627208a4b1d9d0806af097e61a2d0d0369162a19e0ed9e9900f97e4.png" src="../../_images/cbfe98952627208a4b1d9d0806af097e61a2d0d0369162a19e0ed9e9900f97e4.png" />
 </div>
 </div>
 </section>
@@ -1283,7 +1287,7 @@ symbolically.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/ce6567659a0ce06f950a2488e70ef4b914a9a2199d94c687e5f9e3d624cefa96.png" src="../../_images/ce6567659a0ce06f950a2488e70ef4b914a9a2199d94c687e5f9e3d624cefa96.png" />
+<img alt="../../_images/2ff4a35fd6ab74f586d0429565bad4b7d4b5628d246403da0b7372251a1a41b7.png" src="../../_images/2ff4a35fd6ab74f586d0429565bad4b7d4b5628d246403da0b7372251a1a41b7.png" />
 </div>
 </div>
 <p>MATLAB also provides two interactive graphical tools that work with LTI system objects</p>
@@ -1384,7 +1388,9 @@ symbolically.</p>
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  ---------------
-  s^2 + 13 s + 30
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + 13 s + 30
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
@@ -1393,7 +1399,7 @@ symbolically.</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
 </pre></div>
 </div>
-<img alt="../../_images/db3ce8bed01f2e29419902d094e5462d77ba72b5a767da200de37786abd94044.png" src="../../_images/db3ce8bed01f2e29419902d094e5462d77ba72b5a767da200de37786abd94044.png" />
+<img alt="../../_images/6e6ce37f388361d6f076bd4753338a194098a4e4a4d1c9d742542bef99d8b2f0.png" src="../../_images/6e6ce37f388361d6f076bd4753338a194098a4e4a4d1c9d742542bef99d8b2f0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1405,7 +1411,7 @@ symbolically.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/4faa1e876d0f1388df335ecaf63e5580ad4c30e3487d2d23f11035803bc7bf89.png" src="../../_images/4faa1e876d0f1388df335ecaf63e5580ad4c30e3487d2d23f11035803bc7bf89.png" />
+<img alt="../../_images/9cb44ea1062da7f439e212facdc6b443879d974e47f5a9122c7b355d769032a4.png" src="../../_images/9cb44ea1062da7f439e212facdc6b443879d974e47f5a9122c7b355d769032a4.png" />
 </div>
 </div>
 <p>Completing the problem using the Symbolic toolbox is left as an exercise for the reader.</p>
@@ -1427,20 +1433,20 @@ symbolically.</p>
 <p>and is not specific nor restricted to circuit analysis.</p>
 <p>It can, however be used in modelling and simulation studies.</p>
 </section>
-<section id="examples-15">
-<span id="examples15"></span><h2>Examples 15<a class="headerlink" href="#examples-15" title="Permalink to this heading">#</a></h2>
-<section id="example-15-1">
-<span id="ex-15-1"></span><h3>Example 15.1<a class="headerlink" href="#example-15-1" title="Permalink to this heading">#</a></h3>
+<section id="exercises-15">
+<span id="examples15"></span><h2>Exercises 15<a class="headerlink" href="#exercises-15" title="Permalink to this heading">#</a></h2>
+<section id="exercise-15-1">
+<span id="ex-15-1"></span><h3>Exercise 15.1<a class="headerlink" href="#exercise-15-1" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>We will solve this examples by hand and then review the solution in MATLAB lab 5.</p>
 </div>
-<p>Recast <span class="xref std std-ref">ex:14.2</span> as a MATLAB problem using the LTI Transfer Function block.</p>
+<p>Recast <a class="reference internal" href="../7/tf_for_circuits.html#ex-14-2"><span class="std std-ref">Exercise 14.2</span></a> as a MATLAB problem using the LTI Transfer Function block.</p>
 <p>For simplicity use parameters <span class="math notranslate nohighlight">\(R_1 = R_2 = R_3 = 1\; \Omega\)</span>, and <span class="math notranslate nohighlight">\(C_1 = C_2 = 1\)</span> F.</p>
 <p>Calculate the step response using the LTI functions and verify the result with Simulink.</p>
 <section id="matlab-solution">
 <h4>MATLAB Solution<a class="headerlink" href="#matlab-solution" title="Permalink to this heading">#</a></h4>
-<p>From a previous analysis (<span class="xref std std-ref">ex:14.2</span>) the transfer function is:</p>
+<p>From a previous analysis (<a class="reference internal" href="../7/tf_for_circuits.html#ex-14-2"><span class="std std-ref">Exercise 14.2</span></a>) the transfer function is:</p>
 <div class="math notranslate nohighlight">
 \[G(s) = \frac{V_\mathrm{out}}{V_\mathrm{in}} = \frac{-1}{R_1\left[(1/R_1 + 1/R_2 + 1/R_3 + sC_1)(sR_3C_2) + 1/R_2\right]}\]</div>
 <p>so substituting the component values we get:</p>
@@ -1492,7 +1498,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/01648fd39ef7d67a5a3cdf4e7778d8329108b627bb2424ec5e316c049c8241ee.png" src="../../_images/01648fd39ef7d67a5a3cdf4e7778d8329108b627bb2424ec5e316c049c8241ee.png" />
+<img alt="../../_images/cfa1c445144942a9256dd7e9c2cddddc5bb284d54e58053a55dc8d9f0414cd60.png" src="../../_images/cfa1c445144942a9256dd7e9c2cddddc5bb284d54e58053a55dc8d9f0414cd60.png" />
 </div>
 </div>
 </section>
@@ -1521,7 +1527,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/a76d53c0d0a300be548d9b0cd014752b43fb6b9e473850c2f300a05d741286bb.png" src="../../_images/a76d53c0d0a300be548d9b0cd014752b43fb6b9e473850c2f300a05d741286bb.png" />
+<img alt="../../_images/705023017abdc453e11e657988bcbe67842a32cb75eb930b48bc74480afbe867.png" src="../../_images/705023017abdc453e11e657988bcbe67842a32cb75eb930b48bc74480afbe867.png" />
 </div>
 </div>
 <div class="admonition note">
@@ -1530,8 +1536,8 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </div>
 </section>
 </section>
-<section id="example-15-2-periodic-excitation">
-<span id="ex15-2"></span><h3>Example 15.2: Periodic Excitation<a class="headerlink" href="#example-15-2-periodic-excitation" title="Permalink to this heading">#</a></h3>
+<section id="exercise-15-2-periodic-excitation">
+<span id="ex15-2"></span><h3>Exercise 15.2: Periodic Excitation<a class="headerlink" href="#exercise-15-2-periodic-excitation" title="Permalink to this heading">#</a></h3>
 <p>Consider the RC circuit shown in <a class="reference internal" href="#fig-ex15-2"><span class="std std-numref">Fig. 72</span></a>(b). The circuit is subjected to the periodic signal <span class="math notranslate nohighlight">\(x(t) = v_1(t)\)</span> shown in <a class="reference internal" href="#fig-ex15-2"><span class="std std-numref">Fig. 72</span></a>(a).</p>
 <figure class="align-default" id="fig-ex15-2">
 <a class="reference internal image-reference" href="../../_images/eg-152-3.1.png"><img alt="Circuit for Investigating Recurrent Boundary Conditions." src="../../_images/eg-152-3.1.png" style="width: 80%;" /></a>
@@ -1545,8 +1551,8 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <p>d) Given that <span class="math notranslate nohighlight">\(V_L = -5\)</span> V and <span class="math notranslate nohighlight">\(V_U = 5\)</span> V, and assuming that the time constant <span class="math notranslate nohighlight">\(\tau = RC = T_A = 2 T_B\)</span>,  use MATLAB to plot the response <span class="math notranslate nohighlight">\(v_1(t)\)</span> over two cycles of the input signal. Use any suitable values of <span class="math notranslate nohighlight">\(RC\)</span> that you feel are appropriate.</p>
 <p>e) Use the transfer function block and the signal editor provided by Simulink to confirm by simulation the response computed in Example 15.2(d).</p>
 </section>
-<section id="example-15-3-operational-differentiator">
-<span id="id3"></span><h3>Example 15.3: Operational Differentiator<a class="headerlink" href="#example-15-3-operational-differentiator" title="Permalink to this heading">#</a></h3>
+<section id="exercise-15-3-operational-differentiator">
+<span id="id3"></span><h3>Exercise 15.3: Operational Differentiator<a class="headerlink" href="#exercise-15-3-operational-differentiator" title="Permalink to this heading">#</a></h3>
 <p>In Section 3.3 of <span id="id4">[<a class="reference internal" href="../../zbib.html#id16" title="Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. EG-152 Analogue Design Laboratory. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.">Evans <em>et al.</em>, 2016</a>]</span> it is given that the differential equation of the <em>operational differentiator</em> illustrated in <a class="reference internal" href="#fig-15-3"><span class="std std-numref">Fig. 73</span></a> is</p>
 <div class="math notranslate nohighlight">
 \[v_2(t) = -R i(t) = -RC \frac{d}{dt}v_1(t)\]</div>
@@ -1560,8 +1566,8 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <p>b) Compute the impulse and step response of the operational differentiator.</p>
 <p>c) Compute and plot the response of the operational differentiator to three cycles of the input of <a class="reference internal" href="../5/circuit_analysis.html#fig-ex12-2"><span class="std std-numref">Fig. 60</span></a>(a) when <span class="math notranslate nohighlight">\(V_L = -6\)</span> V, <span class="math notranslate nohighlight">\(V_U = 3\)</span> V, given that the waveform period <span class="math notranslate nohighlight">\(T = 1\)</span> ms, the duty cycle <span class="math notranslate nohighlight">\(D = T_A/(T_A + T_B) = 2/5\)</span> and time constant <span class="math notranslate nohighlight">\(\tau = RC = 50\)</span> ms.</p>
 </section>
-<section id="example-15-4-operational-integrator">
-<span id="id6"></span><h3>Example 15.4: Operational Integrator<a class="headerlink" href="#example-15-4-operational-integrator" title="Permalink to this heading">#</a></h3>
+<section id="exercise-15-4-operational-integrator">
+<span id="id6"></span><h3>Exercise 15.4: Operational Integrator<a class="headerlink" href="#exercise-15-4-operational-integrator" title="Permalink to this heading">#</a></h3>
 <p>In Section 3.5 of <span id="id7">[<a class="reference internal" href="../../zbib.html#id16" title="Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. EG-152 Analogue Design Laboratory. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.">Evans <em>et al.</em>, 2016</a>]</span> it is given that the differential equation of the <em>operational inetgrator</em> illustrated in <a class="reference internal" href="#fig-15-4"><span class="std std-numref">Fig. 74</span></a> is</p>
 <div class="math notranslate nohighlight">
 \[v_2(t) = -\frac{1}{RC} \int_0^t v_1(\tau)\, d\tau.\]</div>
@@ -1587,10 +1593,10 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <li><p><a class="reference internal" href="../7/tf_for_circuits.html#circ-tf"><span class="std std-ref">Transfer Functions for Circuits</span></a></p></li>
 <li><p><a class="reference internal" href="#matlab-tf"><span class="std std-ref">Defining Transfer Functions in MATLAB</span></a></p></li>
 <li><p><a class="reference internal" href="#simulink-tf"><span class="std std-ref">Using Transfer Functions in Simulink for System Simulation</span></a></p></li>
-<li><p><a class="reference internal" href="#examples15"><span class="std std-ref">Examples 15</span></a></p></li>
+<li><p><a class="reference internal" href="#examples15"><span class="std std-ref">Exercises 15</span></a></p></li>
 </ul>
-<section id="takeaways">
-<h3>Takeaways<a class="headerlink" href="#takeaways" title="Permalink to this heading">#</a></h3>
+<section id="unit-4-8-takeaways">
+<span id="unit4-8-takeaways"></span><h3>Unit 4.8: Takeaways<a class="headerlink" href="#unit-4-8-takeaways" title="Permalink to this heading">#</a></h3>
 <p>In MATLAB the rational polynomials that represent the transfer functions of continuous-time LTI systems can be defined numerically or symbolicly (see <a class="reference internal" href="#matlab-tf"><span class="std std-ref">Defining Transfer Functions in MATLAB</span></a>). There are two forms of numerical representation. The first of these uses the expanded polynomials (called <em>transfer function</em>), the second uses the factors (called <em>zero-pole-gain</em> form). The Control Systems Toolbox in MATLAB provides an object called the LTI block which supports both forms (and a third form, called <em>state-space</em>, not studied here, which is used in filter design and advanced control systems).</p>
 <p>The MATLAB commands discussed in this section are summarized in the table given below.</p>
 <section id="quick-reference-to-matlab-objects-and-functions">
@@ -1742,10 +1748,10 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </div>
 </section>
 <section id="matlab-solutions">
-<h2>Matlab Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this heading">#</a></h2>
+<h2>MATLAB Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this heading">#</a></h2>
 <p>For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab">MATLAB</a> folder.</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#ex-15-1"><span class="std std-ref">Example 15.1</span></a> <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/solution15_1.mlx">example15.1.mlx</a></p></li>
+<li><p><a class="reference internal" href="#ex-15-1"><span class="std std-ref">Exercise 15.1</span></a> <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/solution15_1.mlx">example15.1.mlx</a></p></li>
 <li><p><span class="xref std std-ref">ex:15.2</span> <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/solution15_2.mlx">example15.2.mlx</a></p></li>
 </ul>
 </section>
@@ -1840,21 +1846,21 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-transfer-functions-in-simulink-for-system-simulation">Using Transfer Functions in Simulink for System Simulation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-15">Examples 15</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-15-1">Example 15.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-15">Exercises 15</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-1">Exercise 15.1</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solution">MATLAB Solution</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#live-script-solution">Live Script Solution</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#simulink-model">Simulink model</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-15-2-periodic-excitation">Example 15.2: Periodic Excitation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-15-3-operational-differentiator">Example 15.3: Operational Differentiator</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-15-4-operational-integrator">Example 15.4: Operational Integrator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-2-periodic-excitation">Exercise 15.2: Periodic Excitation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-3-operational-differentiator">Exercise 15.3: Operational Differentiator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-15-4-operational-integrator">Exercise 15.4: Operational Integrator</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-5">Lab 5</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#takeaways">Takeaways</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-4-8-takeaways">Unit 4.8: Takeaways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-reference-to-matlab-objects-and-functions">Quick Reference to MATLAB objects and functions</a></li>
 </ul>
 </li>
@@ -1862,7 +1868,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next time</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solutions">Matlab Solutions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solutions">MATLAB Solutions</a></li>
 </ul>
   </nav></div>
 

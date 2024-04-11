@@ -225,7 +225,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter.html">About Jupyter notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/python.html">Installing Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../setup/matlab_kernel.html">Testing the Jupyter Matlab Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/matlab_kernel.html">Testing the Jupyter MATLAB Kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter-book.html">Setting up jupyter-book</a></li>
 </ul>
@@ -452,15 +452,15 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transfer-functions-for-lti-system-described-by-linear-constant-coefficient-ordinary-differential-equations">Transfer functions for LTI system described by Linear Constant-Coefficient Ordinary Differential Equations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#block-diagrams-for-systems-interconnection">Block diagrams for Systems Interconnection</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-13-transfer-functions">Examples 13: Transfer functions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-13-1">Example 13.1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-13-2">Example 13.2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-13-3">Example 13.3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-13-4">Example 13.4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-13-5">Example 13.5</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-13-6">Example 13.6</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-13-7">Example 13.7</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-13-8">Example 13.8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-13-transfer-functions">Exercises 13: Transfer functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-1-rc-circuit">Exercise 13.1: RC circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-2-step-response">Exercise 13.2: Step response</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-3-impulse-response-from-step-response">Exercise 13.3: Impulse response from step response</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-4-convolution">Exercise 13.4: Convolution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-5-differential-equation-1">Exercise 13.5: Differential equation 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-6-differential-equation-2">Exercise 13.6: Differential equation 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-7-differential-equation-3">Exercise 13.7: Differential equation 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-8-feedback">Exercise 13.8: Feedback</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a><ul class="nav section-nav flex-column">
@@ -468,7 +468,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-4-6-take-aways">Unit 4.6: Take Aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#transfer-function">Transfer function</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Characterization of LTI Systems</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#laplace-transforms-of-lccodes">Laplace transforms of LCCODEs</a></li>
@@ -503,7 +503,7 @@ document.write(`
 <li><p><a class="reference internal" href="#char-lti-systems"><span class="std std-ref">Characterization of LTI Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#tf-for-lccode"><span class="std std-ref">Transfer functions for LTI system described by Linear Constant-Coefficient Ordinary Differential Equations</span></a></p></li>
 <li><p><a class="reference internal" href="#block-diagrams"><span class="std std-ref">Block diagrams for Systems Interconnection</span></a></p></li>
-<li><p><a class="reference internal" href="#examples13"><span class="std std-ref">Examples 13: Transfer functions</span></a></p></li>
+<li><p><a class="reference internal" href="#examples13"><span class="std std-ref">Exercises 13: Transfer functions</span></a></p></li>
 </ul>
 </section>
 <section id="the-transfer-function">
@@ -614,42 +614,42 @@ document.write(`
 </figcaption>
 </figure>
 </section>
-<section id="examples-13-transfer-functions">
-<span id="examples13"></span><h2>Examples 13: Transfer functions<a class="headerlink" href="#examples-13-transfer-functions" title="Permalink to this heading">#</a></h2>
-<section id="example-13-1">
-<span id="ex-13-1"></span><h3>Example 13.1<a class="headerlink" href="#example-13-1" title="Permalink to this heading">#</a></h3>
+<section id="exercises-13-transfer-functions">
+<span id="examples13"></span><h2>Exercises 13: Transfer functions<a class="headerlink" href="#exercises-13-transfer-functions" title="Permalink to this heading">#</a></h2>
+<section id="exercise-13-1-rc-circuit">
+<span id="ex-13-1"></span><h3>Exercise 13.1: RC circuit<a class="headerlink" href="#exercise-13-1-rc-circuit" title="Permalink to this heading">#</a></h3>
 <p>Find the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> and the impulse reponse <span class="math notranslate nohighlight">\(h(t)\)</span> of the RC circuit in <a class="reference internal" href="../../signals_and_systems/systems/index.html#fig-rc-circuit"><span class="std std-numref">Fig. 31</span></a> (<a class="reference internal" href="../../signals_and_systems/systems/index.html#ex4-1"><span class="std std-ref">Exercise 4.1: RC Circuit</span></a>).</p>
 <p>For the answer, refer to the lecture recording or see solved problem 3.23 in in <span id="id6">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-13-2">
-<span id="ex-13-2"></span><h3>Example 13.2<a class="headerlink" href="#example-13-2" title="Permalink to this heading">#</a></h3>
+<section id="exercise-13-2-step-response">
+<span id="ex-13-2"></span><h3>Exercise 13.2: Step response<a class="headerlink" href="#exercise-13-2-step-response" title="Permalink to this heading">#</a></h3>
 <p>Use the Laplace transform to redo <a class="reference internal" href="../../lti_systems/lti1.html#ex5-5"><span class="std std-ref">Exercise 5.5</span></a>.</p>
 <p>For the answer, refer to the lecture recording or see solved problem 3.24 in in <span id="id7">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-13-3">
-<span id="ex-13-3"></span><h3>Example 13.3<a class="headerlink" href="#example-13-3" title="Permalink to this heading">#</a></h3>
+<section id="exercise-13-3-impulse-response-from-step-response">
+<span id="ex-13-3"></span><h3>Exercise 13.3: Impulse response from step response<a class="headerlink" href="#exercise-13-3-impulse-response-from-step-response" title="Permalink to this heading">#</a></h3>
 <p>The output <span class="math notranslate nohighlight">\(y(t)\)</span> of a continuous-time LTI system is found to be <span class="math notranslate nohighlight">\(2e^{-3t}u_0(t)\)</span> when the input <span class="math notranslate nohighlight">\(x(t)\)</span> is <span class="math notranslate nohighlight">\(u_0(t)\)</span>.</p>
 <p>a). Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system.</p>
 <p>b). Find the output <span class="math notranslate nohighlight">\(y(t)\)</span> when the input is <span class="math notranslate nohighlight">\(e^{-t}u_0(t)\)</span>.</p>
 <p>For the answer, refer to the lecture recording or see solved problem 3.25 in in <span id="id8">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-13-4">
-<span id="ex-13-4"></span><h3>Example 13.4<a class="headerlink" href="#example-13-4" title="Permalink to this heading">#</a></h3>
+<section id="exercise-13-4-convolution">
+<span id="ex-13-4"></span><h3>Exercise 13.4: Convolution<a class="headerlink" href="#exercise-13-4-convolution" title="Permalink to this heading">#</a></h3>
 <p>Use the Laplace transform to redo <a class="reference internal" href="../../lti_systems/lti2.html#ex6-6"><span class="std std-ref">Exercise 6.6</span></a>.</p>
 <p>For the answer, refer to the lecture recording or see solved problem 3.27 in in <span id="id9">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-13-5">
-<span id="ex-13-5"></span><h3>Example 13.5<a class="headerlink" href="#example-13-5" title="Permalink to this heading">#</a></h3>
+<section id="exercise-13-5-differential-equation-1">
+<span id="ex-13-5"></span><h3>Exercise 13.5: Differential equation 1<a class="headerlink" href="#exercise-13-5-differential-equation-1" title="Permalink to this heading">#</a></h3>
 <p>Use the Laplace transform to redo <a class="reference internal" href="../../lti_systems/lti3.html#ex8-6"><span class="std std-ref">Exercise 8.6</span></a>.</p>
 <p>For the answer, refer to the lecture recording or see solved problem 3.28 in in <span id="id10">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-13-6">
-<span id="ex-13-6"></span><h3>Example 13.6<a class="headerlink" href="#example-13-6" title="Permalink to this heading">#</a></h3>
+<section id="exercise-13-6-differential-equation-2">
+<span id="ex-13-6"></span><h3>Exercise 13.6: Differential equation 2<a class="headerlink" href="#exercise-13-6-differential-equation-2" title="Permalink to this heading">#</a></h3>
 <p>Use the Laplace transform to redo <a class="reference internal" href="../../lti_systems/lti3.html#ex8-8"><span class="std std-ref">Exercise 8.8</span></a>.</p>
 <p>For the answer, refer to the lecture recording or see solved problem 3.29 in in <span id="id11">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-13-7">
-<span id="ex-13-7"></span><h3>Example 13.7<a class="headerlink" href="#example-13-7" title="Permalink to this heading">#</a></h3>
+<section id="exercise-13-7-differential-equation-3">
+<span id="ex-13-7"></span><h3>Exercise 13.7: Differential equation 3<a class="headerlink" href="#exercise-13-7-differential-equation-3" title="Permalink to this heading">#</a></h3>
 <p>Consider a continuous-time LTI system for which the input <span class="math notranslate nohighlight">\(x(t)\)</span> and output <span class="math notranslate nohighlight">\(y(t)\)</span> are related by</p>
 <div class="math notranslate nohighlight" id="equation-eq-386">
 <span class="eqno">(40)<a class="headerlink" href="#equation-eq-386" title="Permalink to this equation">#</a></span>\[\frac{d^2 y(t)}{dt^2} + \frac{dy(t)}{dt} - 2y(t) = x(t)\]</div>
@@ -657,8 +657,8 @@ document.write(`
 <p>b) Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span></p>
 <p>For the answer, refer to the lecture recording or see solved problem 3.30 in in <span id="id12">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
-<section id="example-13-8">
-<span id="ex-13-8"></span><h3>Example 13.8<a class="headerlink" href="#example-13-8" title="Permalink to this heading">#</a></h3>
+<section id="exercise-13-8-feedback">
+<span id="ex-13-8"></span><h3>Exercise 13.8: Feedback<a class="headerlink" href="#exercise-13-8-feedback" title="Permalink to this heading">#</a></h3>
 <p>The feedback interconnection of two causal subsytems with transfer functions <span class="math notranslate nohighlight">\(F(s)\)</span> and <span class="math notranslate nohighlight">\(G(s)\)</span> is shown in <a class="reference internal" href="#fig-ex13-8"><span class="std std-numref">Fig. 68</span></a>. Find the overall system function <span class="math notranslate nohighlight">\(H(s)\)</span> for this feedback system.</p>
 <figure class="align-default" id="fig-ex13-8">
 <a class="reference internal image-reference" href="../../_images/figex13_8.png"><img alt="Feedback system" src="../../_images/figex13_8.png" style="width: 50%;" /></a>
@@ -671,7 +671,7 @@ document.write(`
 </section>
 <section id="homework">
 <h2>Homework<a class="headerlink" href="#homework" title="Permalink to this heading">#</a></h2>
-<p>Attempt any of the questions in <a class="reference internal" href="../5/circuit_analysis.html#examples12"><span class="std std-ref">Examples 12</span></a> of these course notes that have not been covered in the examples class.</p>
+<p>Attempt any of the questions in <a class="reference internal" href="../5/circuit_analysis.html#examples12"><span class="std std-ref">Exercises 12</span></a> of these course notes that have not been covered in the examples class.</p>
 <p>The solutions for Unit 4.6 are in <strong>Section 3.8 Solved Problems</strong> <span id="id14">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span> starting at 3.23. (The actual numbers are listed with the examples above.)</p>
 <p>We will do some problems from these sets in Examples Class 4.</p>
 <section id="supplementary-problems">
@@ -687,11 +687,11 @@ document.write(`
 <li><p><a class="reference internal" href="#char-lti-systems"><span class="std std-ref">Characterization of LTI Systems</span></a></p></li>
 <li><p><a class="reference internal" href="#tf-for-lccode"><span class="std std-ref">Transfer functions for LTI system described by Linear Constant-Coefficient Ordinary Differential Equations</span></a></p></li>
 <li><p><a class="reference internal" href="#block-diagrams"><span class="std std-ref">Block diagrams for Systems Interconnection</span></a></p></li>
-<li><p><a class="reference internal" href="#examples13"><span class="std std-ref">Examples 13: Transfer functions</span></a></p></li>
+<li><p><a class="reference internal" href="#examples13"><span class="std std-ref">Exercises 13: Transfer functions</span></a></p></li>
 </ul>
+<section id="unit-4-6-take-aways">
+<span id="unit4-6-takeaways"></span><h3>Unit 4.6: Take Aways<a class="headerlink" href="#unit-4-6-take-aways" title="Permalink to this heading">#</a></h3>
 <p><strong>My main message to you is that, as an engineer faced with a LCCODE to solve, you should use Laplace transforms!</strong></p>
-<section id="take-aways">
-<h3>Take Aways<a class="headerlink" href="#take-aways" title="Permalink to this heading">#</a></h3>
 <section id="transfer-function">
 <h4>Transfer function<a class="headerlink" href="#transfer-function" title="Permalink to this heading">#</a></h4>
 <p>The summary of the time-domain and s-domain transforms are illustrated in <a class="reference internal" href="#fig-3-7"><span class="std std-numref">Fig. 65</span></a>. The key result is <span class="math notranslate nohighlight">\(Y(s) = H(s)X(s)\)</span> which simplifies the computation of the system response <span class="math notranslate nohighlight">\(y(t) = h(t)*x(t)\)</span> which has to be done using time-convolution.</p>
@@ -713,11 +713,11 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[Y(s) = H(s)X(s)\]</div>
 <p>and taking inverse Laplace transforms using the Partial Fraction Expansion method discussed in <a class="reference internal" href="../5/circuit_analysis.html#unit4-5"><span class="std std-ref">Unit 4.5: Using Laplace Transforms for Circuit Analysis</span></a>.</p>
-<p>Several examples are given in <a class="reference internal" href="../5/circuit_analysis.html#examples12"><span class="std std-ref">Examples 12</span></a> in which the problems given in <span class="xref std std-ref">examples8</span> of <span class="xref std std-ref">unit3.3</span> are redone as Laplace transform problems.</p>
+<p>Several examples are given in <a class="reference internal" href="../5/circuit_analysis.html#examples12"><span class="std std-ref">Exercises 12</span></a> in which the problems given in <span class="xref std std-ref">examples8</span> of <span class="xref std std-ref">unit3.3</span> are redone as Laplace transform problems.</p>
 </section>
 <section id="id17">
 <h4>Block diagrams<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h4>
-<p>Complex systems can be broken down into subsystems which may be represented by block diagrams which have either series or parallel connections (see <a class="reference internal" href="#fig-3-8"><span class="std std-numref">Fig. 66</span></a> and <a class="reference internal" href="#fig-3-9"><span class="std std-numref">Fig. 67</span></a> and feedback (See <a class="reference internal" href="#ex-13-8"><span class="std std-ref">Example 13.8</span></a>)</p>
+<p>Complex systems can be broken down into subsystems which may be represented by block diagrams which have either series or parallel connections (see <a class="reference internal" href="#fig-3-8"><span class="std std-numref">Fig. 66</span></a> and <a class="reference internal" href="#fig-3-9"><span class="std std-numref">Fig. 67</span></a> and feedback (See <a class="reference internal" href="#ex-13-8"><span class="std std-ref">Exercise 13.8: Feedback</span></a>)</p>
 </section>
 </section>
 <section id="still-to-come">
@@ -818,15 +818,15 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transfer-functions-for-lti-system-described-by-linear-constant-coefficient-ordinary-differential-equations">Transfer functions for LTI system described by Linear Constant-Coefficient Ordinary Differential Equations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#block-diagrams-for-systems-interconnection">Block diagrams for Systems Interconnection</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-13-transfer-functions">Examples 13: Transfer functions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-13-1">Example 13.1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-13-2">Example 13.2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-13-3">Example 13.3</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-13-4">Example 13.4</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-13-5">Example 13.5</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-13-6">Example 13.6</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-13-7">Example 13.7</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-13-8">Example 13.8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-13-transfer-functions">Exercises 13: Transfer functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-1-rc-circuit">Exercise 13.1: RC circuit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-2-step-response">Exercise 13.2: Step response</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-3-impulse-response-from-step-response">Exercise 13.3: Impulse response from step response</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-4-convolution">Exercise 13.4: Convolution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-5-differential-equation-1">Exercise 13.5: Differential equation 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-6-differential-equation-2">Exercise 13.6: Differential equation 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-7-differential-equation-3">Exercise 13.7: Differential equation 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-13-8-feedback">Exercise 13.8: Feedback</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a><ul class="nav section-nav flex-column">
@@ -834,7 +834,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-aways">Take Aways</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-4-6-take-aways">Unit 4.6: Take Aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#transfer-function">Transfer function</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Characterization of LTI Systems</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#laplace-transforms-of-lccodes">Laplace transforms of LCCODEs</a></li>

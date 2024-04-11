@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/setup/setup.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Testing the Jupyter Matlab Kernel" href="matlab_kernel.html" />
+    <link rel="next" title="Testing the Jupyter MATLAB Kernel" href="matlab_kernel.html" />
     <link rel="prev" title="Install Python" href="python.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -223,7 +223,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="jupyter.html">About Jupyter notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="python.html">Installing Python</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="matlab_kernel.html">Testing the Jupyter Matlab Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matlab_kernel.html">Testing the Jupyter MATLAB Kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="advanced-setup.html">Quick Start - For Experienced Users</a></li>
 <li class="toctree-l2"><a class="reference internal" href="jupyter-book.html">Setting up jupyter-book</a></li>
 </ul>
@@ -642,7 +642,7 @@ document.write(`
 <h2>Python-MATLAB Bridge<a class="headerlink" href="#python-matlab-bridge" title="Permalink to this heading">#</a></h2>
 <p>To install this, we first have to install MATLAB. I’m assuming that this has been done and you have MATLAB 2017b or greater installed.</p>
 <p>Now we install the Python-MATLAB bridge.</p>
-<p>Here we’ve adapted the instructions given in the official Matlab documentation <a class="reference external" href="https://uk.mathworks.com/help/matlab/matlab-engine-for-python.html">MATLAB API for Python</a>.</p>
+<p>Here we’ve adapted the instructions given in the official MATLAB documentation <a class="reference external" href="https://uk.mathworks.com/help/matlab/matlab-engine-for-python.html">MATLAB API for Python</a>.</p>
 <p>I ran this on my Mac. The equivalent Windows and Linux commands are given in the comments.</p>
 <section id="mac-os">
 <h3>Mac OS:<a class="headerlink" href="#mac-os" title="Permalink to this heading">#</a></h3>
@@ -1411,12 +1411,12 @@ document.write(`
 </section>
 <section id="test-matlab-kernel">
 <h2>Test MATLAB Kernel<a class="headerlink" href="#test-matlab-kernel" title="Permalink to this heading">#</a></h2>
-<p>From the <code class="docutils literal notranslate"><span class="pre">Kernel</span></code> menu you should be able to navigate to <code class="docutils literal notranslate"><span class="pre">Change</span> <span class="pre">kernel</span></code> and <code class="docutils literal notranslate"><span class="pre">Matlab</span></code> should now be listed (Fig. 1).</p>
+<p>From the <code class="docutils literal notranslate"><span class="pre">Kernel</span></code> menu you should be able to navigate to <code class="docutils literal notranslate"><span class="pre">Change</span> <span class="pre">kernel</span></code> and <code class="docutils literal notranslate"><span class="pre">MATLAB</span></code> should now be listed (Fig. 1).</p>
 <p><img alt="Figure 1: The Kernel Menu" src="../_images/fig1.png" /></p>
 <p>Figure 1: The Kernel Menu</p>
 <p>Go ahead and switch to the MATLAB kernel.</p>
-<p>If all is well, you should see the Kernel indicator (top right) change to ‘Matlab’ (Fig. 2)</p>
-<p><img alt="Figure 2: Matlab kernel indicator" src="../_images/fig2.png" /></p>
+<p>If all is well, you should see the Kernel indicator (top right) change to ‘MATLAB’ (Fig. 2)</p>
+<p><img alt="Figure 2: MATLAB kernel indicator" src="../_images/fig2.png" /></p>
 <p>Figure 2: The MATLAB kernel indicator</p>
 <p>You should now be able to execute the MATLAB <code class="docutils literal notranslate"><span class="pre">magic(10)</span></code> function again and get the result shown:</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">magic</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -1459,7 +1459,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>If you wish to further test the Matlab interface, download this file from the <code class="docutils literal notranslate"><span class="pre">Calysto/matlab_kernel</span></code> repository <a class="reference external" href="https://github.com/Calysto/matlab_kernel/blob/master/matlab_kernel.ipynb">matlab_kernel.ipynb</a>, open it in Jupyter and run the whole notebook.</p>
+<p>If you wish to further test the MATLAB interface, download this file from the <code class="docutils literal notranslate"><span class="pre">Calysto/matlab_kernel</span></code> repository <a class="reference external" href="https://github.com/Calysto/matlab_kernel/blob/master/matlab_kernel.ipynb">matlab_kernel.ipynb</a>, open it in Jupyter and run the whole notebook.</p>
 <p>If <em>you</em> have any problems, send me a message through the Teams page for the EG-247 Course.</p>
 </section>
 <section id="for-more-information-on-jupyter">
@@ -1480,7 +1480,7 @@ document.write(`
 <section id="jupyter-noteboooks-versus-matlab-live-scripts">
 <h2>Jupyter Noteboooks versus MATLAB Live Scripts<a class="headerlink" href="#jupyter-noteboooks-versus-matlab-live-scripts" title="Permalink to this heading">#</a></h2>
 <p>Both Jupyter and MATLAB Live Script trace their origins – or at least their inspiration – to the <a href="https://en.wikipedia.org/wiki/Wolfram_Mathematica_(software)#The_Notebook_interface">Mathematica Notebook interface</a>. All allow the mixing of code with output, the running of code in sections, and the ability to add formatted text, images, and equations to tell a story and provide a repeatable record of a computation.</p>
-<p>The Mathworks claims some <a class="reference external" href="https://uk.mathworks.com/matlabcentral/answers/329935-jupyter-notebook-vs-live-scripts#answer_259207">advantages for the MATLAB Live Script interface</a> due to its close integration with the MATLAB desktop and the new MATLAB Online product. Other teachers have also advocated the use of Live Script in teaching, e.g. <a class="reference external" href="https://bastibe.de/2016-06-15-matlab-live-scripts.html">Teaching with Matlab Live Scripts</a>. The main issue though is that MATLAB is an expensive, licensed product. It’s free to use while you are a student or a teacher at Swansea University. It is extremely expensive once you graduate!</p>
+<p>The Mathworks claims some <a class="reference external" href="https://uk.mathworks.com/matlabcentral/answers/329935-jupyter-notebook-vs-live-scripts#answer_259207">advantages for the MATLAB Live Script interface</a> due to its close integration with the MATLAB desktop and the new MATLAB Online product. Other teachers have also advocated the use of Live Script in teaching, e.g. <a class="reference external" href="https://bastibe.de/2016-06-15-matlab-live-scripts.html">Teaching with MATLAB Live Scripts</a>. The main issue though is that MATLAB is an expensive, licensed product. It’s free to use while you are a student or a teacher at Swansea University. It is extremely expensive once you graduate!</p>
 <p>For me, the main advantage of Jupyter notebooks is that it is language independent, well supported, open source and free! It also has some features, mentioned at the top of this document, that make it particularly attractive as a support tool for the teaching on this course.</p>
 <p>That said, we will be using MATLAB throughout this course and MATLAB Live Scripts in the Labs for this module.</p>
 </section>
@@ -1538,7 +1538,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Testing the Jupyter Matlab Kernel</p>
+        <p class="prev-next-title">Testing the Jupyter MATLAB Kernel</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

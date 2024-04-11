@@ -79,13 +79,14 @@ $$G(s) = \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)}$$
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (examples14)=
-## Examples 14
+## Exercises 14
 
 We will work through these and demonstrate the MATLAB solutions in class.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Example 14.1
+(ex:14.1)=
+### Exercise 14.1
 
 Derive an expression for the transfer function $G(s)$ for the circuit shown in {numref}`fig:ex14.1`. 
 
@@ -133,7 +134,8 @@ $$G(s) = \frac{V_\mathrm{out}(s)}{V_s(s)} = \frac{R_L + sL + 1/sC}{R_g + R_L + s
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Example 14.2
+(ex:14.2)=
+### Exercise 14.2
 
 ::::{admonition} MATLAB Example
 :class: tip
@@ -332,6 +334,12 @@ title('Magnitude Vout/Vin vs. Radian Frequency')
 grid
 ```
 
++++ {"slideshow": {"slide_type": "notes"}}
+
+```{note}
+Note that this is a low-pass filter. Sinusoids at low frequencies are passed with a gain of 0.2. For frequencies above around 100 rad/s, the filter starts to increase the attenuation of the passed signal. At 10,000 rad/s, the attenuation is 1/10 of the attenuation at 1 rad/s.
+```
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ## MATLAB Solutions
@@ -342,20 +350,6 @@ For convenience, single script MATLAB solutions to the examples are provided and
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-## Next time
-
-We explore the facilties provided by other toolboxes in MATLAB, most notably the *Control Systems Toolbox* and the simulation tool Simulink in {ref}`unit4.8`. We will also look at some of the problems you have studied in **EG-152 Analogue Design** hopefully confirming some of the results you have obbserved in the lab.
-
-* {ref}`unit4.8`
-
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
 ## Summary
 
 In this unit, we will explored how transfer functions introduced in {ref}`unit4.6` can be applied to the analysis of circuits.
@@ -363,7 +357,10 @@ In this unit, we will explored how transfer functions introduced in {ref}`unit4.
 * {ref}`circ_tf`
 * {ref}`examples14`
 
-### Take Away
++++ {"slideshow": {"slide_type": "notes"}}
+
+(unit4.7:takeaways)=
+### Unit 4.7: Take Away
 
 The ratio of the output voltage  $V_\mathrm{out}(s)$ to the input voltage $V_\mathrm{in}(s)$ under zero initial conditions is of great interest. We call this ratio the *voltage transfer function*
 
@@ -377,4 +374,16 @@ but in practice this is rarely used.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Note that this is a low-pass filter. Sinusoids at low frequencies are passed with a gain of 0.2. For frequencies above around 100 rad/s, the filter starts to increase the attenuation of the passed signal. At 10,000 rad/s, the attenuation is 1/10 of the attenuation at 1 rad/s.
+## Next time
+
+We explore the facilties provided by other toolboxes in MATLAB, most notably the *Control Systems Toolbox* and the simulation tool Simulink in {ref}`unit4.8`. We will also look at some of the problems you have studied in **EG-152 Analogue Design** hopefully confirming some of the results you have obbserved in the lab.
+
+* {ref}`unit4.8`
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```

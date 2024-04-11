@@ -225,7 +225,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter.html">About Jupyter notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/python.html">Installing Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../setup/matlab_kernel.html">Testing the Jupyter Matlab Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup/matlab_kernel.html">Testing the Jupyter MATLAB Kernel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter-book.html">Setting up jupyter-book</a></li>
 </ul>
@@ -444,14 +444,14 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transfer-functions-for-circuits">Transfer Functions for Circuits</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-14">Examples 14</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-14-1">Example 14.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-14">Exercises 14</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-1">Exercise 14.1</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sketch-of-solution-for-example-14-1">Sketch of Solution for Example 14.1</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-solution-for-example-14-1">Worked solution for Example 14.1</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#answer-for-example-14-1">Answer for Example 14.1</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-14-2">Example 14.2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-2">Exercise 14.2</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sketch-of-solution-for-example-14-2">Sketch of Solution for Example 14.2</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sketch-of-solution-for-example-14-2-continued">Sketch of Solution for Example 14.2 (continued)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#answer-for-example-14-2">Answer for Example 14.2</a></li>
@@ -463,12 +463,12 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solutions">MATLAB Solutions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next time</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-away">Take Away</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-4-7-take-away">Unit 4.7: Take Away</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
         </div>
@@ -490,7 +490,7 @@ document.write(`
 <p>In this unit, we will explore how transfer functions introduced in <a class="reference internal" href="../6/transfer_functions.html#unit4-6"><span class="std std-ref">Unit 4.6: Transfer Functions</span></a> can be applied to the analysis of circuits.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#circ-tf"><span class="std std-ref">Transfer Functions for Circuits</span></a></p></li>
-<li><p><a class="reference internal" href="#examples14"><span class="std std-ref">Examples 14</span></a></p></li>
+<li><p><a class="reference internal" href="#examples14"><span class="std std-ref">Exercises 14</span></a></p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -516,11 +516,11 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[G(s) = \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)}\]</div>
 </section>
-<section id="examples-14">
-<span id="examples14"></span><h2>Examples 14<a class="headerlink" href="#examples-14" title="Permalink to this heading">#</a></h2>
+<section id="exercises-14">
+<span id="examples14"></span><h2>Exercises 14<a class="headerlink" href="#exercises-14" title="Permalink to this heading">#</a></h2>
 <p>We will work through these and demonstrate the MATLAB solutions in class.</p>
-<section id="example-14-1">
-<h3>Example 14.1<a class="headerlink" href="#example-14-1" title="Permalink to this heading">#</a></h3>
+<section id="exercise-14-1">
+<span id="ex-14-1"></span><h3>Exercise 14.1<a class="headerlink" href="#exercise-14-1" title="Permalink to this heading">#</a></h3>
 <p>Derive an expression for the transfer function <span class="math notranslate nohighlight">\(G(s)\)</span> for the circuit shown in <a class="reference internal" href="#fig-ex14-1"><span class="std std-numref">Fig. 69</span></a>.</p>
 <p>In this circuit <span class="math notranslate nohighlight">\(R_g\)</span> represents the internal resistance of the applied (voltage) source <span class="math notranslate nohighlight">\(v_s\)</span>, and <span class="math notranslate nohighlight">\(R_L\)</span> represents the resistance of the load that consists of <span class="math notranslate nohighlight">\(R_L\)</span>, <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(C\)</span>.</p>
 <figure class="align-default" id="fig-ex14-1">
@@ -552,8 +552,8 @@ document.write(`
 \[G(s) = \frac{V_\mathrm{out}(s)}{V_s(s)} = \frac{R_L + sL + 1/sC}{R_g + R_L + sL + 1/sC}.\]</div>
 </section>
 </section>
-<section id="example-14-2">
-<h3>Example 14.2<a class="headerlink" href="#example-14-2" title="Permalink to this heading">#</a></h3>
+<section id="exercise-14-2">
+<span id="ex-14-2"></span><h3>Exercise 14.2<a class="headerlink" href="#exercise-14-2" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">MATLAB Example</p>
 <p>This is based on <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=115">Example 4.7</a> from <span id="id3">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
@@ -704,8 +704,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/befce9adda38bf9984d0d15d7baa15eca2b590460c88660248c37aaa9ccf6174.png" src="../../_images/befce9adda38bf9984d0d15d7baa15eca2b590460c88660248c37aaa9ccf6174.png" />
+<img alt="../../_images/cc403e255e58bacee137dbc81535cb474dbfc804137d28d431832406cc1a7ede.png" src="../../_images/cc403e255e58bacee137dbc81535cb474dbfc804137d28d431832406cc1a7ede.png" />
 </div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that this is a low-pass filter. Sinusoids at low frequencies are passed with a gain of 0.2. For frequencies above around 100 rad/s, the filter starts to increase the attenuation of the passed signal. At 10,000 rad/s, the attenuation is 1/10 of the attenuation at 1 rad/s.</p>
 </div>
 </section>
 </section>
@@ -714,8 +718,26 @@ document.write(`
 <h2>MATLAB Solutions<a class="headerlink" href="#matlab-solutions" title="Permalink to this heading">#</a></h2>
 <p>For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab">MATLAB</a> folder.</p>
 <ul class="simple">
-<li><p><span class="xref std std-ref">ex:14.2</span> [<a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/example_14_2.mlx">example_14.2.mlx</a>]</p></li>
+<li><p><a class="reference internal" href="#ex-14-2"><span class="std std-ref">Exercise 14.2</span></a> [<a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/example_14_2.mlx">example_14.2.mlx</a>]</p></li>
 </ul>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<p>In this unit, we will explored how transfer functions introduced in <a class="reference internal" href="../6/transfer_functions.html#unit4-6"><span class="std std-ref">Unit 4.6: Transfer Functions</span></a> can be applied to the analysis of circuits.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#circ-tf"><span class="std std-ref">Transfer Functions for Circuits</span></a></p></li>
+<li><p><a class="reference internal" href="#examples14"><span class="std std-ref">Exercises 14</span></a></p></li>
+</ul>
+<section id="unit-4-7-take-away">
+<span id="unit4-7-takeaways"></span><h3>Unit 4.7: Take Away<a class="headerlink" href="#unit-4-7-take-away" title="Permalink to this heading">#</a></h3>
+<p>The ratio of the output voltage  <span class="math notranslate nohighlight">\(V_\mathrm{out}(s)\)</span> to the input voltage <span class="math notranslate nohighlight">\(V_\mathrm{in}(s)\)</span> under zero initial conditions is of great interest. We call this ratio the <em>voltage transfer function</em></p>
+<div class="math notranslate nohighlight">
+\[G_v(s) = \frac{V_\mathrm{out}(s)}{V_\mathrm{in}(s)}\]</div>
+<p>We can consider other ratios such as the <em>current transfer function</em></p>
+<div class="math notranslate nohighlight">
+\[G_i(s) = \frac{I_\mathrm{out}(s)}{I_\mathrm{in}(s)}\]</div>
+<p>but in practice this is rarely used.</p>
+</section>
 </section>
 <section id="next-time">
 <h2>Next time<a class="headerlink" href="#next-time" title="Permalink to this heading">#</a></h2>
@@ -736,25 +758,6 @@ document.write(`
 </dd>
 </dl>
 </div>
-</section>
-<section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
-<p>In this unit, we will explored how transfer functions introduced in <a class="reference internal" href="../6/transfer_functions.html#unit4-6"><span class="std std-ref">Unit 4.6: Transfer Functions</span></a> can be applied to the analysis of circuits.</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#circ-tf"><span class="std std-ref">Transfer Functions for Circuits</span></a></p></li>
-<li><p><a class="reference internal" href="#examples14"><span class="std std-ref">Examples 14</span></a></p></li>
-</ul>
-<section id="take-away">
-<h3>Take Away<a class="headerlink" href="#take-away" title="Permalink to this heading">#</a></h3>
-<p>The ratio of the output voltage  <span class="math notranslate nohighlight">\(V_\mathrm{out}(s)\)</span> to the input voltage <span class="math notranslate nohighlight">\(V_\mathrm{in}(s)\)</span> under zero initial conditions is of great interest. We call this ratio the <em>voltage transfer function</em></p>
-<div class="math notranslate nohighlight">
-\[G_v(s) = \frac{V_\mathrm{out}(s)}{V_\mathrm{in}(s)}\]</div>
-<p>We can consider other ratios such as the <em>current transfer function</em></p>
-<div class="math notranslate nohighlight">
-\[G_i(s) = \frac{I_\mathrm{out}(s)}{I_\mathrm{in}(s)}\]</div>
-<p>but in practice this is rarely used.</p>
-<p>Note that this is a low-pass filter. Sinusoids at low frequencies are passed with a gain of 0.2. For frequencies above around 100 rad/s, the filter starts to increase the attenuation of the passed signal. At 10,000 rad/s, the attenuation is 1/10 of the attenuation at 1 rad/s.</p>
-</section>
 </section>
 </section>
 
@@ -823,14 +826,14 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transfer-functions-for-circuits">Transfer Functions for Circuits</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-14">Examples 14</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-14-1">Example 14.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises-14">Exercises 14</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-1">Exercise 14.1</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sketch-of-solution-for-example-14-1">Sketch of Solution for Example 14.1</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#worked-solution-for-example-14-1">Worked solution for Example 14.1</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#answer-for-example-14-1">Answer for Example 14.1</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-14-2">Example 14.2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-14-2">Exercise 14.2</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sketch-of-solution-for-example-14-2">Sketch of Solution for Example 14.2</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sketch-of-solution-for-example-14-2-continued">Sketch of Solution for Example 14.2 (continued)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#answer-for-example-14-2">Answer for Example 14.2</a></li>
@@ -842,12 +845,12 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab-solutions">MATLAB Solutions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next time</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take-away">Take Away</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-4-7-take-away">Unit 4.7: Take Away</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-time">Next time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
 

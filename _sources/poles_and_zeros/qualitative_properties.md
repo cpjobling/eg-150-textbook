@@ -717,7 +717,7 @@ We covered the following topics
 +++ {"slideshow": {"slide_type": "notes"}}
 
 (unit5.1:takeaways)=
-### Take Aways
+### Unit 5.1: Take Aways
 
 #### Inverse Laplace transform terms
 * The *poles* of $F(s)$ determine the types of terms that appear in $f(t)$
@@ -802,7 +802,3 @@ We will build on these ideas in **EG-247 Digital Signal Processing** and you wil
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ## Footnotes
-
-```{code-cell}
-
-```
