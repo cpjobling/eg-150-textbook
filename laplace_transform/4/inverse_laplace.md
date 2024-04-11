@@ -539,7 +539,8 @@ In MATLAB Lab 4, we will explore the tools provided by MATLAB for taking Laplace
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Homework
+(unit4.4:hw)=
+## Unit 4.4: Homework
 
 Complete {ref}`ex:11.3` to confirm the result {eq}`pfe4`. Then do the end of the chapter exercises (Section 3.67) from the {cite}`karris`. Don't look at the answers until you have attempted the problems.
 

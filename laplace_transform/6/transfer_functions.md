@@ -336,7 +336,8 @@ For the answer, refer to the lecture recording or see solved problem 3.31 in in 
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-## Homework
+(unit4.6:hw)=
+## Unit 4.6: Homework
 
 Attempt any of the questions in {ref}`examples12` of these course notes that have not been covered in the examples class.
 

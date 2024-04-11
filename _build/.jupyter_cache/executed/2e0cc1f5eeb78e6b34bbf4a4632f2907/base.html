@@ -1,0 +1,1457 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; EG-150 Signals and Systems</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_build/.jupyter_cache/executed/2e0cc1f5eeb78e6b34bbf4a4632f2907/base';</script>
+    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/_build/.jupyter_cache/executed/2e0cc1f5eeb78e6b34bbf4a4632f2907/base.html" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EG-150 Signals and Systems</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../index.html">
+                    EG-150 Signals and Systems
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Online notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../introduction/index.html">Unit 1 Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction/intro.html">Unit 1.1 Setting the Scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction/thecourse.html">Unit 1.2 About this Course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction/concepts.html">Unit 1.3 Introduction to the Concepts to be Studied</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../signals_and_systems/index.html">Unit 2 Signals and Systems</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../signals_and_systems/signals/index.html">Unit 2.1 Signals and Classification of Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../signals_and_systems/signals/pep_signals.html">Unit 2.2 Periodic, Energy and Power Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../signals_and_systems/elementary_signals/index.html">Unit 2.3 Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../signals_and_systems/elementary_signals/examples3.html">Examples 3 - Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../signals_and_systems/systems/index.html">Unit 2.4 Systems and Classification of Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../lti_systems/index.html">Unit 3 Linear Time-Invariant Systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../lti_systems/lti1.html">Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../lti_systems/lti2.html">Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../lti_systems/lti3.html">Unit 3.3 Systems Described by Differential Equations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../laplace_transform/index.html">Unit 4 Laplace Transforms and their Applications</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../laplace_transform/1/laplace.html">Unit 4.1 The Laplace Transformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../laplace_transform/2/laplace_of_common_signals.html">Unit 4.2 Laplace Transform of Some Common Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../laplace_transform/3/laplace_properties.html">Unit 4.3 Properties of Laplace Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../laplace_transform/4/inverse_laplace.html">Unit 4.4 The Inverse Laplace Transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../laplace_transform/5/circuit_analysis.html">Unit 4.5 Using Laplace Transforms for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../laplace_transform/6/transfer_functions.html">Unit 4.6 Transfer Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../laplace_transform/7/tf_for_circuits.html">Unit 4.7 Transfer Functions for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../laplace_transform/8/casas.html">Unit 4.8 Computer-Aided Systems Analysis and Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../poles_and_zeros/index.html">Unit 5 Pole-Zero Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../poles_and_zeros/qualitative_properties.html">Unit 5.1 Qualitative Properties of Signals and Transfer functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../poles_and_zeros/second_order_properties.html">Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../freq_resp/index.html">Unit 6 Frequency Response Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../freq_resp/tf_response.html">Unit 6.1: Frequency Response of a Transfer Function</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../../../freq_resp/bode_plots.html">Unit 6.2: Bode Plots</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../zbib.html">Bibliography</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../takeaways.html">Unit take aways</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../exercises.html">List of Unit Exercises</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../homework/index.html">Homework Problems</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw1.html">Homework 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw2.html">Homework 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw3.html">Homework 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw4.html">Homework 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw5.html">Homework 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw6.html">Homework 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw7.html">Homework 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw8.html">Homework 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw9.html">Homework 9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw10.html">Homework 10</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../laplace_transform/1/lt_props.html">Properties of the Laplace Transform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../laplace_transform/1/lt_table.html">Common Laplace Transform Pairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/polling_setup.html">Set Up In-Class Polling</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../setup/jupyter.html">About Jupyter notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../setup/python.html">Installing Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../setup/matlab_kernel.html">Testing the Jupyter MATLAB Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../setup/jupyter-book.html">Setting up jupyter-book</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/_build/.jupyter_cache/executed/2e0cc1f5eeb78e6b34bbf4a4632f2907/base.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2F_build/.jupyter_cache/executed/2e0cc1f5eeb78e6b34bbf4a4632f2907/base.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/_build/.jupyter_cache/executed/2e0cc1f5eeb78e6b34bbf4a4632f2907/base.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">import</span><span class="w"> </span><span class="n">math</span>
+<span class="nb">import</span><span class="w"> </span><span class="n">os</span>
+<span class="nb">import</span><span class="w"> </span><span class="n">sys</span>
+
+
+<span class="n">def</span><span class="w"> </span><span class="s">test_is_python_35():</span>
+<span class="w">    </span><span class="n">major</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sys</span><span class="p">.</span><span class="n">version_info</span><span class="p">.</span><span class="n">major</span>
+<span class="w">    </span><span class="n">minor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sys</span><span class="p">.</span><span class="n">version_info</span><span class="p">.</span><span class="n">minor</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">major</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span>
+<span class="w">        </span><span class="n">pass</span><span class="w"> </span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;You are running Python {}, but we need Python {}.&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">major</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">))</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Download and install the Anaconda distribution for Python 3.&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Stopping here.&quot;</span><span class="p">)</span>
+
+<span class="w">        </span>#<span class="w"> </span><span class="n">Let</span><span class="o">&#39;</span><span class="n">s</span><span class="w"> </span><span class="nb">stop</span><span class="w"> </span><span class="n">here</span>
+<span class="w">        </span><span class="n">sys</span><span class="p">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">None</span>
+<span class="w">        </span>#<span class="w"> </span><span class="nb">assert</span><span class="w"> </span><span class="n">major</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Stopping here - we need Python 3.&quot;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">minor</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Testing Python version-&gt; py{}.{} OK&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">major</span><span class="p">,</span><span class="w"> </span><span class="n">minor</span><span class="p">))</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Warning: You should be running Python 3.5 or newer, &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="s">&quot;you have Python {}.{}.&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">major</span><span class="p">,</span><span class="w"> </span><span class="n">minor</span><span class="p">))</span>
+<span class="w">        </span>
+<span class="w">        </span>
+<span class="n">def</span><span class="w"> </span><span class="s">test_numpy():</span>
+<span class="w">    </span><span class="k">try</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">import</span><span class="w"> </span><span class="n">numpy</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">np</span>
+<span class="w">    </span><span class="n">except</span><span class="w"> </span><span class="n">ImportError</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Could not import numpy -&gt; numpy failed&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">None</span>
+<span class="w">    </span>#<span class="w"> </span><span class="n">Simple</span><span class="w"> </span><span class="n">test</span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">assert</span><span class="w"> </span><span class="n">np</span><span class="p">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Testing numpy...      -&gt; numpy OK&quot;</span><span class="p">)</span>
+
+
+<span class="n">def</span><span class="w"> </span><span class="s">test_scipy():</span>
+<span class="w">    </span><span class="k">try</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">import</span><span class="w"> </span><span class="n">scipy</span>
+<span class="w">    </span><span class="n">except</span><span class="w"> </span><span class="n">ImportError</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Could not import &#39;scipy&#39; -&gt; scipy failed&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">None</span>
+<span class="w">    </span>#<span class="w"> </span><span class="n">Simple</span><span class="w"> </span><span class="n">test</span>
+<span class="w">    </span><span class="nb">import</span><span class="w"> </span><span class="n">scipy</span><span class="p">.</span><span class="n">integrate</span>
+<span class="w">    </span><span class="nb">assert</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">scipy</span><span class="p">.</span><span class="n">integrate</span><span class="p">.</span><span class="n">quad</span><span class="p">(</span><span class="n">lambda</span><span class="w"> </span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">72.0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1e-6</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Testing scipy ...     -&gt; scipy OK&quot;</span><span class="p">)</span>
+
+
+<span class="n">def</span><span class="w"> </span><span class="s">test_pylab():</span>
+<span class="w">    </span><span class="s">&quot;&quot;&quot;Actually testing matplotlib, as pylab is part of matplotlib.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="k">try</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">import</span><span class="w"> </span><span class="n">pylab</span>
+<span class="w">    </span><span class="n">except</span><span class="w"> </span><span class="n">ImportError</span><span class="p">:</span>
+<span class="w">            </span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Could not import &#39;matplotlib/pylab&#39; -&gt; failed&quot;</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">None</span>
+<span class="w">    </span>#<span class="w"> </span><span class="n">Creata</span><span class="w"> </span><span class="nb">plot</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">testing</span><span class="w"> </span><span class="n">purposes</span>
+<span class="w">    </span><span class="n">xvalues</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="nb">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="w">    </span><span class="n">yvalues</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="n">math</span><span class="p">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">xvalues</span><span class="p">]</span>
+<span class="w">    </span><span class="n">pylab</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xvalues</span><span class="p">,</span><span class="w"> </span><span class="n">yvalues</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;-o&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="p">=</span><span class="s">&quot;sin(x)&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">pylab</span><span class="p">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="w">    </span><span class="n">pylab</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">testfilename</span><span class="p">=</span><span class="s">&#39;pylab-testfigure.png&#39;</span>
+
+<span class="w">    </span>#<span class="w"> </span><span class="n">check</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="nb">exist</span><span class="w"> </span><span class="n">yet</span><span class="p">:</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">exists</span><span class="p">(</span><span class="n">testfilename</span><span class="p">):</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Skipping plotting to file as file {} exists already.&quot;</span><span class="o">\</span>
+<span class="w">            </span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">testfilename</span><span class="p">))</span>
+<span class="w">    </span><span class="k">else</span><span class="p">:</span>
+<span class="w">        </span>#<span class="w"> </span><span class="n">Write</span><span class="w"> </span><span class="nb">plot</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">file</span>
+<span class="w">        </span><span class="n">pylab</span><span class="p">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">testfilename</span><span class="p">)</span>
+<span class="w">        </span>#<span class="w"> </span><span class="n">Then</span><span class="w"> </span><span class="n">check</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">exists</span>
+<span class="w">        </span><span class="nb">assert</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">exists</span><span class="p">(</span><span class="n">testfilename</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Testing matplotlib... -&gt; pylab OK&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">os</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">testfilename</span><span class="p">)</span>
+
+
+<span class="n">def</span><span class="w"> </span><span class="s">test_sympy():</span>
+<span class="w">    </span><span class="k">try</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">import</span><span class="w"> </span><span class="n">sympy</span>
+<span class="w">    </span><span class="n">except</span><span class="w"> </span><span class="n">ImportError</span><span class="p">:</span>
+<span class="w">            </span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Could not import &#39;sympy&#39; -&gt; fail&quot;</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">None</span>
+<span class="w">    </span>#<span class="w"> </span><span class="n">simple</span><span class="w"> </span><span class="n">test</span>
+<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sympy</span><span class="p">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">my_f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nb">assert</span><span class="w"> </span><span class="n">sympy</span><span class="p">.</span><span class="n">diff</span><span class="p">(</span><span class="n">my_f</span><span class="p">,</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Testing sympy         -&gt; sympy OK&quot;</span><span class="p">)</span>
+
+
+<span class="n">def</span><span class="w"> </span><span class="s">test_pytest():</span>
+<span class="w">    </span><span class="k">try</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">import</span><span class="w"> </span><span class="n">pytest</span>
+<span class="w">    </span><span class="n">except</span><span class="w"> </span><span class="n">ImportError</span><span class="p">:</span>
+<span class="w">            </span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Could not import &#39;pytest&#39; -&gt; fail&quot;</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">None</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Testing pytest        -&gt; pytest OK&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Error: Invalid expression. Check for missing or extra characters.</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Running using Python {}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">version</span><span class="p">))</span>
+<span class="n">test_is_python_35</span><span class="p">()</span>
+<span class="n">test_numpy</span><span class="p">()</span>
+<span class="n">test_scipy</span><span class="p">()</span>
+<span class="n">test_pylab</span><span class="p">()</span>
+<span class="n">test_sympy</span><span class="p">()</span>
+<span class="n">test_pytest</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Invalid use of operator.</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">matlabroot</span><span class="p">=</span><span class="s">&#39;/Applications/MATLAB_R2023b.app&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matlabroot =
+
+    &#39;/Applications/MATLAB_R2023b.app&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%cd {matlabroot}/extern/engines/python</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">[Errno 2] No such file or directory: &#39;{matlabroot}/extern/engines/python&#39;</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">matlabroot</span><span class="p">=</span><span class="s">&#39;/mnt/c/Program\ Files/MATLAB/R2023a&#39;</span>
+<span class="c">%cd {matlabroot}/extern/engines/python</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matlabroot =
+
+    &#39;/mnt/c/Program\ Files/MATLAB/R2023a&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">matlabroot</span><span class="p">=</span><span class="s">&#39;C:\Program Files\MATLAB\R202a&#39;</span>
+<span class="c">%cd {matlabroot}\extern\engines\python</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matlabroot =
+
+    &#39;C:\Program Files\MATLAB\R202a&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="sx">!python --version</span>
+#<span class="c">%shell</span>
+<span class="sx">!python -m pip install . </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Python 3.11.6
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Error: Invalid text character. Check for unsupported symbol, invisible character, or pasting of non-ASCII characters.</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">import</span><span class="w"> </span><span class="n">matlab</span><span class="p">.</span><span class="n">engine</span>
+<span class="n">eng</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">matlab.engine.start_matlab</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Error: Unable to find or import &#39;matlab.engine&#39;. Imported names must end with &#39;.*&#39; or be fully qualified.</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">eng</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">matlab.engine.connect_matlab</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Unable to resolve the name &#39;matlab.engine.connect_matlab&#39;.</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">eng</span><span class="p">.</span><span class="n">magic</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Unable to resolve the name &#39;eng.magic&#39;.</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Error using eval</span>
+<span class=" -Color -Color-Red">Unrecognized function or variable &#39;m&#39;.</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">eng</span><span class="p">.</span><span class="n">quit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Unable to resolve the name &#39;eng.quit&#39;.</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="sx">!python3 -m pip install jupyter-matlab-proxy</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-matlab-proxy in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (0.10.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-contrib-nbextensions in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-matlab-proxy) (0.7.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-server-proxy in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-matlab-proxy) (4.1.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: matlab-proxy&gt;=0.10.0 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-matlab-proxy) (0.10.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: psutil in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-matlab-proxy) (5.9.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: requests in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-matlab-proxy) (2.31.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: simpervisor&gt;=1.0.0 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-matlab-proxy) (1.0.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: aiohttp&gt;=3.7.4 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from matlab-proxy&gt;=0.10.0-&gt;jupyter-matlab-proxy) (3.8.5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: aiohttp-session[secure] in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from matlab-proxy&gt;=0.10.0-&gt;jupyter-matlab-proxy) (2.12.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: ipython-genutils in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-contrib-core&gt;=0.3.3 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.4.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-core in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (5.5.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-highlight-selected-word&gt;=0.1.1 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-nbextensions-configurator&gt;=0.4.0 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.6.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nbconvert&gt;=6.0 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (7.10.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: notebook&gt;=6.0 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (6.5.6)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: tornado in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (6.3.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: traitlets&gt;=4.1 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (5.7.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: lxml in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (4.9.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-server&gt;=1.0 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-server-proxy-&gt;jupyter-matlab-proxy) (1.24.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from requests-&gt;jupyter-matlab-proxy) (2.0.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: idna&lt;4,&gt;=2.5 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from requests-&gt;jupyter-matlab-proxy) (3.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from requests-&gt;jupyter-matlab-proxy) (1.26.18)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: certifi&gt;=2017.4.17 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from requests-&gt;jupyter-matlab-proxy) (2023.11.17)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: attrs&gt;=17.3.0 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from aiohttp&gt;=3.7.4-&gt;matlab-proxy&gt;=0.10.0-&gt;jupyter-matlab-proxy) (23.1.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from aiohttp&gt;=3.7.4-&gt;matlab-proxy&gt;=0.10.0-&gt;jupyter-matlab-proxy) (6.0.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from aiohttp&gt;=3.7.4-&gt;matlab-proxy&gt;=0.10.0-&gt;jupyter-matlab-proxy) (4.0.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from aiohttp&gt;=3.7.4-&gt;matlab-proxy&gt;=0.10.0-&gt;jupyter-matlab-proxy) (1.8.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: frozenlist&gt;=1.1.1 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from aiohttp&gt;=3.7.4-&gt;matlab-proxy&gt;=0.10.0-&gt;jupyter-matlab-proxy) (1.4.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: aiosignal&gt;=1.1.2 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from aiohttp&gt;=3.7.4-&gt;matlab-proxy&gt;=0.10.0-&gt;jupyter-matlab-proxy) (1.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: setuptools in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-contrib-core&gt;=0.3.3-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (68.0.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyyaml in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-nbextensions-configurator&gt;=0.4.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (6.0.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: anyio&lt;4,&gt;=3.1.0 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (3.5.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: argon2-cffi in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (21.3.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jinja2 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (3.1.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-client&gt;=6.1.12 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (7.4.9)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nbformat&gt;=5.2.0 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (5.9.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: packaging in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (23.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: prometheus-client in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (0.14.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyzmq&gt;=17 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (24.0.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: Send2Trash in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (1.8.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: terminado&gt;=0.8.3 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (0.17.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: websocket-client in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (0.58.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: platformdirs&gt;=2.5 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-core-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (3.10.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: beautifulsoup4 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from nbconvert&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (4.12.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: bleach!=5.0.0 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from nbconvert&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (4.1.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: defusedxml in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from nbconvert&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.7.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyterlab-pygments in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from nbconvert&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.1.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: markupsafe&gt;=2.0 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from nbconvert&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (2.1.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mistune&lt;4,&gt;=2.0.3 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from nbconvert&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (2.0.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nbclient&gt;=0.5.0 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from nbconvert&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.7.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pandocfilters&gt;=1.4.1 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from nbconvert&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (1.5.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pygments&gt;=2.4.1 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from nbconvert&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (2.15.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: tinycss2 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from nbconvert&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (1.2.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nest-asyncio&gt;=1.5 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (1.5.6)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: ipykernel in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (6.25.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nbclassic&gt;=0.4.7 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (1.0.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cryptography in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from aiohttp-session[secure]-&gt;matlab-proxy&gt;=0.10.0-&gt;jupyter-matlab-proxy) (41.0.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: sniffio&gt;=1.1 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from anyio&lt;4,&gt;=3.1.0-&gt;jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (1.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six&gt;=1.9.0 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from bleach!=5.0.0-&gt;nbconvert&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (1.16.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: webencodings in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from bleach!=5.0.0-&gt;nbconvert&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.5.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: entrypoints in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-client&gt;=6.1.12-&gt;jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (0.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: python-dateutil&gt;=2.8.2 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jupyter-client&gt;=6.1.12-&gt;jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (2.8.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: notebook-shim&gt;=0.2.3 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from nbclassic&gt;=0.4.7-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.2.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: fastjsonschema in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from nbformat&gt;=5.2.0-&gt;jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (2.16.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jsonschema&gt;=2.6 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from nbformat&gt;=5.2.0-&gt;jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (4.19.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: ptyprocess in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from terminado&gt;=0.8.3-&gt;jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (0.7.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: argon2-cffi-bindings in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from argon2-cffi-&gt;jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (21.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: soupsieve&gt;1.2 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from beautifulsoup4-&gt;nbconvert&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (2.5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cffi&gt;=1.12 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from cryptography-&gt;aiohttp-session[secure]-&gt;matlab-proxy&gt;=0.10.0-&gt;jupyter-matlab-proxy) (1.16.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: appnope in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.1.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: comm&gt;=0.1.1 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.1.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: debugpy&gt;=1.6.5 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (1.6.7)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: ipython&gt;=7.23.1 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (8.15.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: matplotlib-inline&gt;=0.1 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.1.6)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pycparser in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from cffi&gt;=1.12-&gt;cryptography-&gt;aiohttp-session[secure]-&gt;matlab-proxy&gt;=0.10.0-&gt;jupyter-matlab-proxy) (2.21)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: backcall in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: decorator in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (5.1.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jedi&gt;=0.16 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.18.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pickleshare in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.7.5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: prompt-toolkit!=3.0.37,&lt;3.1.0,&gt;=3.0.30 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (3.0.36)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: stack-data in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pexpect&gt;4.3 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (4.8.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jsonschema-specifications&gt;=2023.03.6 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=5.2.0-&gt;jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (2023.7.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: referencing&gt;=0.28.4 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=5.2.0-&gt;jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (0.30.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: rpds-py&gt;=0.7.1 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=5.2.0-&gt;jupyter-server&gt;=1.0-&gt;jupyter-server-proxy-&gt;jupyter-matlab-proxy) (0.10.6)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.0 in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from jedi&gt;=0.16-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.8.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: wcwidth in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from prompt-toolkit!=3.0.37,&lt;3.1.0,&gt;=3.0.30-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.2.5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: executing in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from stack-data-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.8.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: asttokens in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from stack-data-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (2.0.5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pure-eval in /Users/eechris/anaconda3/envs/eg-150-textbook/lib/python3.11/site-packages (from stack-data-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;notebook&gt;=6.0-&gt;jupyter-contrib-nbextensions-&gt;jupyter-matlab-proxy) (0.2.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="sx">!python3 -m pip install &#39;jupyterlab&gt;=3.0.0,&lt;4.0.0a0&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: 4.0.0a0: No such file or directory
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">magic</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
+
+    92    99     1     8    15    67    74    51    58    40
+    98    80     7    14    16    73    55    57    64    41
+     4    81    88    20    22    54    56    63    70    47
+    85    87    19    21     3    60    62    69    71    28
+    86    93    25     2     9    61    68    75    52    34
+    17    24    76    83    90    42    49    26    33    65
+    23     5    82    89    91    48    30    32    39    66
+    79     6    13    95    97    29    31    38    45    72
+    10    12    94    96    78    35    37    44    46    53
+    11    18   100    77    84    36    43    50    27    59
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%%html</span>
+<span class="o">&lt;</span><span class="n">iframe</span><span class="w"> </span><span class="nb">width</span><span class="p">=</span><span class="s">&quot;560&quot;</span><span class="w"> </span><span class="nb">height</span><span class="p">=</span><span class="s">&quot;315&quot;</span><span class="w"> </span><span class="n">src</span><span class="p">=</span><span class="s">&quot;https://www.youtube.com/embed/HW29067qVWk&quot;</span><span class="w"> </span><span class="n">frameborder</span><span class="p">=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="n">allow</span><span class="p">=</span><span class="s">&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot;</span><span class="w"> </span><span class="n">allowfullscreen</span><span class="o">&gt;&lt;/</span><span class="n">iframe</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe width="560" height="315" src="https://www.youtube.com/embed/HW29067qVWk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "matlab"
+        },
+        kernelOptions: {
+            name: "matlab",
+            path: "./_build/.jupyter_cache/executed/2e0cc1f5eeb78e6b34bbf4a4632f2907"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'matlab'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Chris P. Jobling
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Swansea University (2023-2024).
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  This page was created by 
+<a href="https://www.swansea.ac.uk/staff/c.p.jobling/" />
+  Dr Chris P. Jobling
+</a> 
+for 
+<a href="https://www.swansea.ac.uk">
+  Swansea University
+</a>.
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

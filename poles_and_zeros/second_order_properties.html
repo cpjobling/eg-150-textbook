@@ -217,11 +217,23 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../takeaways.html">Unit take aways</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../exercises.html">List of Unit Exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../homework.html">List of Homework Problems</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../homework/index.html">Homework Problems</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../homework/hw1.html">Homework 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../homework/hw2.html">Homework 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../homework/hw3.html">Homework 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../homework/hw4.html">Homework 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../homework/hw5.html">Homework 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../homework/hw6.html">Homework 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../homework/hw7.html">Homework 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../homework/hw8.html">Homework 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../homework/hw9.html">Homework 9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../homework/hw10.html">Homework 10</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../laplace_transform/1/lt_props.html">Properties of the Laplace Transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../laplace_transform/1/lt_table.html">Common Laplace Transform Pairs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../setup/polling_setup.html">Set Up In-Class Polling</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../setup/jupyter.html">About Jupyter notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/python.html">Installing Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
@@ -500,8 +512,7 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-exploration">Further exploration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#still-to-come">Still to come</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-5-2-further-exploration">Unit 5.2: Further exploration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
 </ul>
@@ -1431,13 +1442,9 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 </section>
 </section>
-<section id="further-exploration">
-<h2>Further exploration<a class="headerlink" href="#further-exploration" title="Permalink to this heading">#</a></h2>
+<section id="unit-5-2-further-exploration">
+<span id="unit5-2-hw"></span><h2>Unit 5.2: Further exploration<a class="headerlink" href="#unit-5-2-further-exploration" title="Permalink to this heading">#</a></h2>
 <p>If you have access to MATLAB (desktop of online), you can install the MATLAB curriculum module <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems">Transfer Function Analysis of Dynamic Systems</a> <span id="id7">[<a class="reference internal" href="../zbib.html#id17" title="Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0.">Allie, 2024</a>]</span> and further explore the concepts given here. The MATLAB Live Script <strong>PoleZeroAnalysis.mlx</strong> provides some interactive tools that enable you to interactively explore second order system response and includes the impact of <em>zeros</em> which we have not covered here.</p>
-</section>
-<section id="still-to-come">
-<h2>Still to come<a class="headerlink" href="#still-to-come" title="Permalink to this heading">#</a></h2>
-<p>We will the conclude this module by considering frequency response analysis of signals and systems defined by rational polynomials in <span class="math notranslate nohighlight">\(s\)</span>.</p>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
@@ -1587,8 +1594,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-exploration">Further exploration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#still-to-come">Still to come</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-5-2-further-exploration">Unit 5.2: Further exploration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
 </ul>

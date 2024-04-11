@@ -397,7 +397,7 @@ slideshow:
 ```
 
 (unit6.1.5)=
-## Self directed study
+## Unit 6.1: Homework
 
 1. Install the MathWorks curriculum module [Transfer Function Analysis of Dynamic Systems](https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems) {cite}`tfads` and open the MATLAB Live Script **FrequencyDomainAnalysis.mlx**. Explore the Exercises and Activities we have reviewed in the unit.
 
