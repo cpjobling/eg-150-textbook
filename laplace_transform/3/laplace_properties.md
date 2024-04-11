@@ -292,7 +292,8 @@ For full solution see [Example 2.4.5](https://ebookcentral.proquest.com/lib/swan
 
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "notes"}}
 
-## Homework
+(unit4.3:hw)=
+## Unit 4.3: Homework
 
 Attempt at least one of the end-of-chapter exercises from each question 1-7 of [Section 2.7](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=75#ppg=71) of {cite}`karris`. Don't look at the answers until you have attempted the problems.
 

@@ -1029,15 +1029,10 @@ $$G(s) = \frac{K}{s^2 + 2\zeta\omega_n s + \omega_n^2} $$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-## Further exploration
+(unit5.2:hw)=
+## Unit 5.2: Further exploration
 
 If you have access to MATLAB (desktop of online), you can install the MATLAB curriculum module [Transfer Function Analysis of Dynamic Systems](https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems) {cite}`tfads` and further explore the concepts given here. The MATLAB Live Script **PoleZeroAnalysis.mlx** provides some interactive tools that enable you to interactively explore second order system response and includes the impact of *zeros* which we have not covered here.
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-## Still to come
-
-We will the conclude this module by considering frequency response analysis of signals and systems defined by rational polynomials in $s$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

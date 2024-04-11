@@ -68,8 +68,6 @@ parts:
       title: Unit 6.1 Frequency Response of a Transfer Function
     - file: freq_resp/bode_plots
       title: Unit 6.2 Bode Plots
-  - file: homework/index
-      - file: hw
   - file: zbib
     title: Bibliography
 #- caption: Lab Exercises
@@ -82,8 +80,18 @@ parts:
     title: Unit take aways
   - file: exercises
     title: List of Unit Exercises
-  - file: homework
-    title: List of Homework Problems
+  - file: homework/index
+    sections: 
+      - file: homework/hw1
+      - file: homework/hw2
+      - file: homework/hw3
+      - file: homework/hw4
+      - file: homework/hw5
+      - file: homework/hw6
+      - file: homework/hw7
+      - file: homework/hw8
+      - file: homework/hw9
+      - file: homework/hw10
   - file: laplace_transform/1/lt_props
     title: Properties of the Laplace Transform
   - file: laplace_transform/1/lt_table
