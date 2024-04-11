@@ -342,9 +342,9 @@ Time Domain Model of a Capacitive Network.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Examples
+## Exercises 12
 
-Do examples 12.1 and 12.2 Now
+Do exercises 12.1 and 12.2 Now
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -513,14 +513,14 @@ $Y(s)$ is complex and is known as the *complex input admittance* of this GLC par
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (examples12)=
-## Examples 12
+## Exercises 12
 
 We will work through these in class.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:12.1)=
-### Example 12.1
+### Exercise 12.1: RC circuit solved by KCL
 
 ::::{note}
 This is based on [Example 4.1](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=102) from {cite}`karris`.
@@ -539,7 +539,7 @@ Circuit for Example 12.1
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:12.2)=
-### Example 12.2
+### Exercise 12.2: RC circuit solved by KVL
 
 ::::{note}
 This is based on [Example 4.2](https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&ppg=104) from {cite}`karris`.
@@ -556,7 +556,7 @@ Circuit for Example 12.2
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:12.3)=
-### Example 12.3
+### Exercise 12.3: A complex RLC circuit with initial conditions
 
 `````{admonition} MATLAB Example
 :class: tip
@@ -716,14 +716,16 @@ impulse(Vout)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Example 12.4
+(ex:12.4)=
+
+### Exercise 12.4: RLC circuit
 
 Consider {numref}`fig:complex_imp` and give an expression for $V_c(s)$.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:12.5)=
-### Example 12.5
+### Exercise 12.5: Complex Impedance
 
 
 `````{admonition} MATLAB Example
@@ -759,7 +761,7 @@ Find $Z(s)$ using:
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:12.6)=
-### Example 12.6
+### Exercise 12.6: Complex admittance
 
 ````{admonition} MATLAB Example
 :class: tip
@@ -843,8 +845,8 @@ y10 = 1/z10;
 pretty(y10)
 ```
 
-(ex12.7)=
-### Example 12.7
+(ex:12.7)=
+### Exercise 12.7: Admittance and time response
 
 ````{admonition} MATLAB Example
 :class: tip
@@ -892,7 +894,10 @@ In this section we have looked at the application of the Laplace transform to ci
 
 * {ref}`examples12`
 
-## Take Aways
++++ {"slideshow": {"slide_type": "notes"}}
+
+(unit4.5:takeaways)=
+## Unit 4.5: Take Aways
 
 Circuit analysis can be performed using Laplace transforms by using the Laplace transform equivalents of the component impedence or admittance. In particular, for impedence, we use $R$, $sL$ and $1/sC$; for admittance we use $G = 1/R$, $1/sL$, $sC$. Once the circuit has been reduced to a rational polynomial in $s$, the inverse laplace transform can be used to determine the time response of the circuit.
 
@@ -921,13 +926,9 @@ We move on to consider
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (matlab_solutions12)=
-## Matlab Solutions
+## MATLAB Solutions
 
 For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-247-textbook/tree/master/laplace_transform/matlab) folder in the [GitHub repository](https://github.com/cpjobling/eg-247-textbook).
 
 * Solution 12.3 [[solution12_3.mlx](https://raw.githubusercontent.com/cpjobling/eg-150-textbook/main/laplace_transform/matlab/solution12_3.mlx)]
 * Solution 12.6 [[solution12_6.mlx](https://raw.githubusercontent.com/cpjobling/eg-150-textbook/main/laplace_transform/matlab/solution12_6.mlx)]
-
-```{code-cell}
-
-```

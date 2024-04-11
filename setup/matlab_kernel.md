@@ -7,15 +7,15 @@ jupyter:
       format_version: '1.3'
       jupytext_version: 1.14.1
   kernelspec:
-    display_name: Matlab
+    display_name: MATLAB
     language: matlab
     name: matlab
 ---
 
-Testing the Jupyter Matlab Kernel
+Testing the Jupyter MATLAB Kernel
 ============
 
-Interact with Matlab in Notebook the using the [Matlab engine for Python](https://www.mathworks.com/help/matlab/matlab-engine-for-python.html).  All commands are interpreted by Matlab.  Since this is a [MetaKernel](https://github.com/Calysto/metakernel), a standard set of magics are available.  Help on commands is available using the `%help` magic or using `?` with a command.
+Interact with MATLAB in Notebook the using the [MATLAB engine for Python](https://www.mathworks.com/help/matlab/matlab-engine-for-python.html).  All commands are interpreted by MATLAB.  Since this is a [MetaKernel](https://github.com/Calysto/metakernel), a standard set of magics are available.  Help on commands is available using the `%help` magic or using `?` with a command.
 
 ```matlab
 % Use inline SVG graphics

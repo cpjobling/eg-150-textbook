@@ -187,7 +187,7 @@ To install this, we first have to install MATLAB. I'm assuming that this has bee
 
 Now we install the Python-MATLAB bridge. 
 
-Here we've adapted the instructions given in the official Matlab documentation [MATLAB API for Python](https://uk.mathworks.com/help/matlab/matlab-engine-for-python.html).
+Here we've adapted the instructions given in the official MATLAB documentation [MATLAB API for Python](https://uk.mathworks.com/help/matlab/matlab-engine-for-python.html).
 
 I ran this on my Mac. The equivalent Windows and Linux commands are given in the comments.
 
@@ -295,7 +295,7 @@ jupyter notebook setup.ipynb --debug
 
 ## Test MATLAB Kernel
 
-From the `Kernel` menu you should be able to navigate to `Change kernel` and `Matlab` should now be listed (Fig. 1).
+From the `Kernel` menu you should be able to navigate to `Change kernel` and `MATLAB` should now be listed (Fig. 1).
 
 ![Figure 1: The Kernel Menu](fig1.png)
 
@@ -303,9 +303,9 @@ Figure 1: The Kernel Menu
 
 Go ahead and switch to the MATLAB kernel.
 
-If all is well, you should see the Kernel indicator (top right) change to 'Matlab' (Fig. 2)
+If all is well, you should see the Kernel indicator (top right) change to 'MATLAB' (Fig. 2)
 
-![Figure 2: Matlab kernel indicator](fig2.png)
+![Figure 2: MATLAB kernel indicator](fig2.png)
 
 Figure 2: The MATLAB kernel indicator
 
@@ -337,7 +337,7 @@ Go ahead and execute the next code cell.
 magic(10)
 ```
 
-If you wish to further test the Matlab interface, download this file from the `Calysto/matlab_kernel` repository [matlab_kernel.ipynb](https://github.com/Calysto/matlab_kernel/blob/master/matlab_kernel.ipynb), open it in Jupyter and run the whole notebook.
+If you wish to further test the MATLAB interface, download this file from the `Calysto/matlab_kernel` repository [matlab_kernel.ipynb](https://github.com/Calysto/matlab_kernel/blob/master/matlab_kernel.ipynb), open it in Jupyter and run the whole notebook.
 
 If *you* have any problems, send me a message through the Teams page for the EG-247 Course.
 
@@ -356,7 +356,7 @@ For a quick introduction, I particularly recommend Corey Schafer's YouTube tutor
 
 Both Jupyter and MATLAB Live Script trace their origins -- or at least their inspiration -- to the <a href="https://en.wikipedia.org/wiki/Wolfram_Mathematica_(software)#The_Notebook_interface">Mathematica Notebook interface</a>. All allow the mixing of code with output, the running of code in sections, and the ability to add formatted text, images, and equations to tell a story and provide a repeatable record of a computation. 
 
-The Mathworks claims some [advantages for the MATLAB Live Script interface](https://uk.mathworks.com/matlabcentral/answers/329935-jupyter-notebook-vs-live-scripts#answer_259207) due to its close integration with the MATLAB desktop and the new MATLAB Online product. Other teachers have also advocated the use of Live Script in teaching, e.g. [Teaching with Matlab Live Scripts](https://bastibe.de/2016-06-15-matlab-live-scripts.html). The main issue though is that MATLAB is an expensive, licensed product. It's free to use while you are a student or a teacher at Swansea University. It is extremely expensive once you graduate!
+The Mathworks claims some [advantages for the MATLAB Live Script interface](https://uk.mathworks.com/matlabcentral/answers/329935-jupyter-notebook-vs-live-scripts#answer_259207) due to its close integration with the MATLAB desktop and the new MATLAB Online product. Other teachers have also advocated the use of Live Script in teaching, e.g. [Teaching with MATLAB Live Scripts](https://bastibe.de/2016-06-15-matlab-live-scripts.html). The main issue though is that MATLAB is an expensive, licensed product. It's free to use while you are a student or a teacher at Swansea University. It is extremely expensive once you graduate!
 
 For me, the main advantage of Jupyter notebooks is that it is language independent, well supported, open source and free! It also has some features, mentioned at the top of this document, that make it particularly attractive as a support tool for the teaching on this course. 
 

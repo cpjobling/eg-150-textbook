@@ -227,13 +227,13 @@ Two systems in parallel. (a) Time-domain representation; (b) s-domain representa
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (examples13)=
-## Examples 13: Transfer functions
+## Exercises 13: Transfer functions
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:13.1)=
 
-### Example 13.1
+### Exercise 13.1: RC circuit
 
 Find the transfer function $H(s)$ and the impulse reponse $h(t)$ of the RC circuit in {numref}`fig:rc_circuit` ({ref}`ex4.1`).
 
@@ -244,7 +244,7 @@ For the answer, refer to the lecture recording or see solved problem 3.23 in in 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:13.2)=
-### Example 13.2
+### Exercise 13.2: Step response
 
 Use the Laplace transform to redo {ref}`ex5_5`.
 
@@ -255,7 +255,7 @@ For the answer, refer to the lecture recording or see solved problem 3.24 in in 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:13.3)=
-### Example 13.3
+### Exercise 13.3: Impulse response from step response
 
 The output $y(t)$ of a continuous-time LTI system is found to be $2e^{-3t}u_0(t)$ when the input $x(t)$ is $u_0(t)$.
 
@@ -270,7 +270,7 @@ For the answer, refer to the lecture recording or see solved problem 3.25 in in 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:13.4)=
-### Example 13.4
+### Exercise 13.4: Convolution
 
 Use the Laplace transform to redo {ref}`ex6_6`.
 
@@ -281,7 +281,7 @@ For the answer, refer to the lecture recording or see solved problem 3.27 in in 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:13.5)=
-### Example 13.5
+### Exercise 13.5: Differential equation 1
 
 Use the Laplace transform to redo {ref}`ex8_6`.
 
@@ -292,7 +292,7 @@ For the answer, refer to the lecture recording or see solved problem 3.28 in in 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:13.6)=
-### Example 13.6
+### Exercise 13.6: Differential equation 2
 
 Use the Laplace transform to redo {ref}`ex8_8`.
 
@@ -303,7 +303,7 @@ For the answer, refer to the lecture recording or see solved problem 3.29 in in 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:13.7)=
-### Example 13.7
+### Exercise 13.7: Differential equation 3
 
 Consider a continuous-time LTI system for which the input $x(t)$ and output $y(t)$ are related by
 
@@ -320,7 +320,7 @@ For the answer, refer to the lecture recording or see solved problem 3.30 in in 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (ex:13.8)=
-### Example 13.8
+### Exercise 13.8: Feedback
 
 The feedback interconnection of two causal subsytems with transfer functions $F(s)$ and $G(s)$ is shown in {numref}`fig:ex13.8`. Find the overall system function $H(s)$ for this feedback system.
 
@@ -363,10 +363,13 @@ In this unit we have presented the idea of a *transfer function* (or *system fun
 
 * {ref}`examples13`
 
++++ {"slideshow": {"slide_type": "notes"}}
+
+(unit4.6:takeaways)=
+
+### Unit 4.6: Take Aways
+
 **My main message to you is that, as an engineer faced with a LCCODE to solve, you should use Laplace transforms!**
-
-
-### Take Aways
 
 #### Transfer function
 

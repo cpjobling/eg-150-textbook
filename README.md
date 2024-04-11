@@ -3,7 +3,7 @@
 A collection of resources created and distributed by
 Dr Chris Jobling, College of Engineering, Swansea University.
 
-This is a GitHub hosted source code repository. It contains the Jupyter notebooks and Markdown source code for the notes, slides and web pages, Matlab scripts and Simulink models used in the module. If you just want to view the slides, or the printable version of the notes you should visit the GitHub hosted Web Site [EG-150 Signals and Systems](http://cpjobling.github.io/eg-150-textbook) instead. Read-only links to the notes and slides are provided on the Blackboard site for EG-150.
+This is a GitHub hosted source code repository. It contains the Jupyter notebooks and Markdown source code for the notes, slides and web pages, MATLAB scripts and Simulink models used in the module. If you just want to view the slides, or the printable version of the notes you should visit the GitHub hosted Web Site [EG-150 Signals and Systems](http://cpjobling.github.io/eg-150-textbook) instead. Read-only links to the notes and slides are provided on the Blackboard site for EG-150.
 
 
 ## Using this Repository

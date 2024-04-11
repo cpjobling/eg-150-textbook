@@ -39,7 +39,3 @@ This page links to the unit takeaways. Please use these to focus your revision.
 * {ref}`unit6.2:takeaways` for {ref}`unit6.2`
 
 <!-- #endregion -->
-
-```python
-
-```

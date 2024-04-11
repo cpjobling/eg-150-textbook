@@ -100,7 +100,7 @@ parts:
     - file: setup/setup
       title: Setting up your Own Jupyter-MATLAB Computing Environment
     - file: setup/matlab_kernel
-      title: Testing the Jupyter Matlab Kernel
+      title: Testing the Jupyter MATLAB Kernel
     - file: setup/advanced-setup
       title: Quick Start - For Experienced Users
     - file: setup/jupyter-book

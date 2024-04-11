@@ -118,15 +118,62 @@ Has no  exercises.
 * {ref}`ex10.5`
 
 
-### {ref}`Response_of_a_Continuous_Time_LTI_System_and_the_Convolution_Integral`
+### {ref}`unit4.4`
 
-{ref}`examples_5_Responses_of_a_Continuous_Time_LTI_System_and_Convolution` covers 
-* {ref}`ex5_1`
-* {ref}`ex5_2` 
-* {ref}`ex5_3`
-* {ref}`ex5_4` 
-* {ref}`ex5_5` and
-* {ref}`ex5_6`
+{ref}`examples11` covers 
+* {ref}`ex11.1`
+* {ref}`ex:11.2` 
+* {ref}`ex:11.3`
+* {ref}`ex11.4` and 
+* {ref}`ex11.5`
+
+
+### {ref}`unit4.5`
+
+{ref}`examples12` covers 
+* {ref}`ex:12.1`
+* {ref}`ex:12.2` 
+* {ref}`ex:12.3`
+* {ref}`ex:12.4`
+* {ref}`ex:12.5`
+* {ref}`ex:12.6` and 
+* {ref}`ex:12.7`
+
+
+### {ref}`unit4.6`
+
+{ref}`examples13` covers 
+* {ref}`ex:13.1`
+* {ref}`ex:13.2` 
+* {ref}`ex:13.3`
+* {ref}`ex:13.4`
+* {ref}`ex:13.5`
+* {ref}`ex:13.6`
+* {ref}`ex:13.7` and
+* {ref}`ex:13.8`
+
+
+### {ref}`unit4.7`
+
+{ref}`examples14` covers 
+* {ref}`ex:14.1` and
+* {ref}`ex:14.2` 
+
+
+### {ref}`unit4.8`
+
+{ref}`examples15` covers 
+* {ref}`ex:15.1`
+* {ref}`ex15.2` 
+* {ref}`15.3` and
+* {ref}`15.4`
+
+
+## {ref}`poles_and_zeros`
+
+
+### {ref}`unit5.1`
+There are no exercises in this unit.
 
 
 ### {ref}`unit5.2`
@@ -135,6 +182,15 @@ Has no  exercises.
 * {ref}`ex16.2`
 * {ref}`ex16.3`
 
-```python
 
-```
+## {ref}`unit6`
+
+
+### {ref}`unit6.1`
+
+There are no exercises in this unit.
+
+
+### {ref}`unit6.2`
+
+There are no exercises in this unit.

@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+(unit6)=
 # Unit 6: Frequency Response Analysis
 
 If you have a LTI system $h(t)$ and your input $x(t) = a\sin(\omega t)$ is a sinusoid, the steady-state output y(t), after any initial transient has died away, will be another sinusoid whose magitude and phase depends only on the frequency of the input signal and the poles and zeros of the system.
@@ -32,7 +33,3 @@ In this final unit of EG-150 Signals and Systems we will explore this concept us
 
 * {ref}`unit6.1`
 * {ref}`unit6.2`
-
-```{code-cell} ipython3
-
-```

@@ -335,7 +335,7 @@ We move on to consider
 
 +++ {"nbpresent": {"id": "f49c045e-0507-4c62-8cb2-9389df04b6b9"}, "slideshow": {"slide_type": "subslide"}}
 
-## Answers to Exercise 10
+## Answers to Exercises 10
 
 {ref}`ex10.1`
 
@@ -356,7 +356,3 @@ $$f_R(t)\Leftrightarrow \frac{A}{s}\tanh \left(\frac{As}{2}\right).$$
 {ref}`ex10.5`
 
 $$f_{HW}(t) \Leftrightarrow \frac{1}{\left(s^2 + 1\right)\left(1-e^{-\pi s}\right)}.$$
-
-```{code-cell} ipython3
-
-```

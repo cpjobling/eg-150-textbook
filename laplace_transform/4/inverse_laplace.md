@@ -212,7 +212,7 @@ and then $N(s)/D(s)$ will be a proper rational polynomial.
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (examples11)=
-## Examples 11: Inverse Laplace Transforms
+## Exercises 11: Inverse Laplace Transforms
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -230,7 +230,7 @@ format compact
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (ex11.1)=
-### Example 11.1
+### Exercise 11.1: Real Poles
 
 Use the PFE method to simplify $F_1(s)$ below and find the time domain function $f_1(t)$ corresponding to $F_1(s)$
 
@@ -285,7 +285,7 @@ fplot(ft,[0,5])
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (ex:11.2)=
-### Example 11.2
+### Exercise 11.2: Cubic with Real Poles
 
 Determine the Inverse Laplace Transform of
 
@@ -330,7 +330,7 @@ which we will solve in class
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (ex:11.3)=
-### Example 11.3
+### Exercise 11.3: System with Complex Poles
 
 Rework Example 3-2 from the {cite}`karris` using quadratic factors.
 
@@ -418,7 +418,7 @@ You can use trig. identities to simplify this further if you wish.
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (ex11.4)=
-### Example 11.4
+### Exercise 11.4: Repeated Real Poles
 
 Find the inverse Laplace Transform of 
 
@@ -458,7 +458,9 @@ $$F_4(s) = \frac{s+3}{(s+2)(s+1)^2}$$
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (ex11.5)=
-### Example 11.5 - and some new transform pairs.
+### Exercise 11.5: Non-proper rational polynomial
+
+Introduces some new transform pairs!
 
 $$F_6(s)= \frac{s^2 + 2s + 2}{s+1}$$
 
@@ -552,7 +554,10 @@ In this section we have looked at the inverse Laplace transform. In particular, 
 * {ref}`ilap_by_pfe`
 * {ref}`examples11`
 
-## Take Aways
++++ {"slideshow": {"slide_type": "notes"}}
+
+(unit4.4:takeaways)=
+## Unit 4.4: Take Aways
 
 For causal signals and continuous-time LTI systems, the Laplace transform usually takes the form of a rational polynomial with general form $F(s)$ as shown in equation {eq}`eq:4.4:2`. The denominator of $F(s)$, $D(s)$, can always be factorised, and the factors (zeros of D(s), poles of F(s)) will be real $(s - p_k)$, real and repeated, such as $(s - p_k)^n$ or complex conjugate pairs $(s - \sigma_k - j\omega_k)(s - \sigma_k + j\omega_k)^1$, or a combination of these. 
 
