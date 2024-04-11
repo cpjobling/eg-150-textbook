@@ -68,6 +68,8 @@ parts:
       title: Unit 6.1 Frequency Response of a Transfer Function
     - file: freq_resp/bode_plots
       title: Unit 6.2 Bode Plots
+  - file: homework/index
+      - file: hw
   - file: zbib
     title: Bibliography
 #- caption: Lab Exercises
