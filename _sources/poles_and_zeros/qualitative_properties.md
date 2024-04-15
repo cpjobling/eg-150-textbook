@@ -38,7 +38,7 @@ format compact
 cd matlab
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 ## Agenda
 
@@ -165,7 +165,7 @@ Quantifying the response for $f(t) = e^{\sigma t}\cos\left(\omega t\right)$: row
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: '-'
 ---
 example1
 ```
@@ -177,7 +177,7 @@ The MATLAB code to reproduce this figure is given in [example1.mlx](matlab/examp
 ```{code-cell}
 ---
 slideshow:
-  slide_type: fragment
+  slide_type: '-'
 ---
 open example1
 ```
@@ -187,7 +187,7 @@ open example1
 ### Qualitative analysis from the pole-zero map
 
 By plotting the poles and zeros on the $s$-plane we can say quite a lot about the expected response.
-These ideas ares summarized in {numref}`fig:pz:1`.
+These ideas are summarized in {numref}`fig:pz:1`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -206,7 +206,7 @@ Illustrating the quantitive properties of the terms $f(t)$ resulting from the po
 
 For a pole at $s = \lambda = \sigma + j\omega$ (hence also at $\bar{\lambda}$) with $\sigma < 0$:
 
-$$F(s) = \frac{r}{s-\lambda} + \frac{\bar{r}}{s+\lambda}$$
+$$F(s) = \frac{r}{s+\sigma + j\omega} + \frac{\bar{r}}{s+\sigma - j\omega}$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -216,9 +216,9 @@ $$F(s) =\frac{2\mathbf{Re}\left(r\right)s-2\mathbf{Re}\left(r\lambda\right)}{s^2
 
 which resolves to
 
-$$f(t) = ae^{\sigma t}\cos\left(\omega t + \phi\right)$$
+$$f(t) = ae^{-\sigma t}\cos\left(\omega t + \phi\right)$$
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 There are two measures of the decay rate per cycle of oscillation:
 
@@ -297,7 +297,7 @@ and
 
 $$C\frac{dv(t)}{dt}= i(t) - \frac{v(t)}{R}$$ (eq:pz:c2)
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Integrating both sides of {eq}`eq:pz:c1` we get
 
@@ -309,7 +309,7 @@ We rewrite {eq}`eq:pz:c3` as
 
 $$i(t) = - \frac{1}{L} \int_0^tv(\tau)\,d\tau$$  (eq:pz:c4)
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Substituting {eq}`eq:pz:c4` into {eq}`eq:pz:c2` we eliminate $i(t)$ and obtain
 
@@ -335,7 +335,7 @@ Assuming $v'(0) = 0$, then {eq}`eq:pz:7` becomes
 
 $$\left(s^2 + \frac{1}{RC}s + \frac{1}{LC} \right)V(s) = \left(s + \frac{1}{RC}\right)v(0)$$ (eq:pz:8)
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Let $v(0) = k$ (a constant), we can represent {eq}`eq:pz:8` as the rational function
 
@@ -375,7 +375,7 @@ The four types are discussed below
 * {ref}`pz:underdamped`
 * {ref}`pz:undamped`
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (pz:overdamped)=
 ##### Type 1: Overdamped response
@@ -390,7 +390,7 @@ $$v(t) = r_1 e^{-\lambda_1 t} + r_2 e^{-\lambda_2 t}$$
 
 where $r_1$ and $r_2$ are the residues of the partial-fraction expansion of {eq}`eq:pz:9`.
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (pz:criticallydamped)=
 ##### Type 2: Critically damped response
@@ -488,26 +488,28 @@ it is relatively easy to show that
 
 $$\sigma = \frac{\omega}{\sqrt{4Q^2 - 1}}$$
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
 So to plot this:
 
 ```{code-cell}
 ---
 slideshow:
-  slide_type: slide
+  slide_type: '-'
 ---
 omega = 2*pi;
 t = linspace(0,30,1000);
 Q = 20;
 sigma = omega/sqrt(4*Q^2 - 1);
 subplot(211)
-plot(t,exp(-sigma*t).*cos(omega*t)),title('Q = 20')
+plot(t,exp(-sigma*t).*cos(omega*t)),title('Q = 20'),grid on
 Q = 10;
 sigma = omega/sqrt(4*Q^2 - 1);
 subplot(212)
-plot(t,exp(-sigma*t).*cos(omega*t)),title('Q = 10')
+plot(t,exp(-sigma*t).*cos(omega*t)),title('Q = 10'), grid on
 ```
 
-+++ {"slideshow": {"slide_type": "notes"}}
++++ {"slideshow": {"slide_type": "-"}}
 
 The MATLAB code to reproduce this figure is given in [example3.mlx](matlab/example3.mlx)
 
@@ -790,7 +792,7 @@ Knowledge of the dominant poles, the quantative properties, damping ratio $\zeta
 
 The initial value and final value properties of the Laplace transform allow us to compute the initial value and final value of $f(t)$ using knowledge of the transform $F(s)$.
 
-+++ {"slideshow": {"slide_type": "notes"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Still to come
 

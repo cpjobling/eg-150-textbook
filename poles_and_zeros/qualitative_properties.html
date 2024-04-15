@@ -643,7 +643,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/02e31f29fe70f556de64c06625b6ae96156193d04f996d80ac6f1ba9ae8527cc.png" src="../_images/02e31f29fe70f556de64c06625b6ae96156193d04f996d80ac6f1ba9ae8527cc.png" />
+<img alt="../_images/53cbcaf0566657ea60cfcba93022619002d1ce243b86ff9334490bde625eed70.png" src="../_images/53cbcaf0566657ea60cfcba93022619002d1ce243b86ff9334490bde625eed70.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this figure is given in <a class="reference download internal" download="" href="../_downloads/556b332fedd14b129e4b084e6cc38943/example1.mlx"><span class="xref download myst">example1.mlx</span></a></p>
@@ -658,7 +658,7 @@ document.write(`
 <section id="qualitative-analysis-from-the-pole-zero-map">
 <h3>Qualitative analysis from the pole-zero map<a class="headerlink" href="#qualitative-analysis-from-the-pole-zero-map" title="Permalink to this heading">#</a></h3>
 <p>By plotting the poles and zeros on the <span class="math notranslate nohighlight">\(s\)</span>-plane we can say quite a lot about the expected response.
-These ideas ares summarized in <a class="reference internal" href="#fig-pz-1"><span class="std std-numref">Fig. 75</span></a>.</p>
+These ideas are summarized in <a class="reference internal" href="#fig-pz-1"><span class="std std-numref">Fig. 75</span></a>.</p>
 <figure class="align-default" id="fig-pz-1">
 <a class="reference internal image-reference" href="../_images/quant.png"><img alt="A figure illustrating the quantitive properties of terms f(t) resulting from the poles of F(s)." src="../_images/quant.png" style="width: 50%;" /></a>
 <figcaption>
@@ -671,12 +671,12 @@ These ideas ares summarized in <a class="reference internal" href="#fig-pz-1"><s
 <span id="unit5-1-4"></span><h2>Complex poles: Damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> and quality factor <span class="math notranslate nohighlight">\(Q\)</span><a class="headerlink" href="#complex-poles-damping-ratio-zeta-and-quality-factor-q" title="Permalink to this heading">#</a></h2>
 <p>For a pole at <span class="math notranslate nohighlight">\(s = \lambda = \sigma + j\omega\)</span> (hence also at <span class="math notranslate nohighlight">\(\bar{\lambda}\)</span>) with <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[F(s) = \frac{r}{s-\lambda} + \frac{\bar{r}}{s+\lambda}\]</div>
+\[F(s) = \frac{r}{s+\sigma + j\omega} + \frac{\bar{r}}{s+\sigma - j\omega}\]</div>
 <div class="math notranslate nohighlight">
 \[F(s) =\frac{2\mathbf{Re}\left(r\right)s-2\mathbf{Re}\left(r\lambda\right)}{s^2 - 2\sigma s +\left(\sigma^2 + \omega^2\right)}\]</div>
 <p>which resolves to</p>
 <div class="math notranslate nohighlight">
-\[f(t) = ae^{\sigma t}\cos\left(\omega t + \phi\right)\]</div>
+\[f(t) = ae^{-\sigma t}\cos\left(\omega t + \phi\right)\]</div>
 <p>There are two measures of the decay rate per cycle of oscillation:</p>
 <ul class="simple">
 <li><p><strong>damping ratio</strong></p></li>
@@ -853,16 +853,16 @@ These ideas ares summarized in <a class="reference internal" href="#fig-pz-1"><s
 <span class="n">Q</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
 <span class="n">sigma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">Q</span>^<span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 <span class="nb">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">.*</span><span class="nb">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Q = 20&#39;</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">.*</span><span class="nb">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Q = 20&#39;</span><span class="p">),</span><span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
 <span class="n">Q</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 <span class="n">sigma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">Q</span>^<span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 <span class="nb">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">.*</span><span class="nb">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Q = 10&#39;</span><span class="p">)</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">.*</span><span class="nb">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Q = 10&#39;</span><span class="p">),</span><span class="w"> </span><span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/33ab406ff3e63c5092718535dd3fa5b23accd6c3c3ff1797824cadd654040041.png" src="../_images/33ab406ff3e63c5092718535dd3fa5b23accd6c3c3ff1797824cadd654040041.png" />
+<img alt="../_images/2defee1fb096caced3de3fcdebdb56811cad57d649fad21bdec801e929954f08.png" src="../_images/2defee1fb096caced3de3fcdebdb56811cad57d649fad21bdec801e929954f08.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this figure is given in <a class="reference download internal" download="" href="../_downloads/ca764614d8c4659036585882462f6043/example3.mlx"><span class="xref download myst">example3.mlx</span></a></p>
@@ -914,7 +914,7 @@ These ideas ares summarized in <a class="reference internal" href="#fig-pz-1"><s
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/785998fcfcc65e8b38e426b730c4fa8ac1cfe09663a463309f27978d65c20fe3.png" src="../_images/785998fcfcc65e8b38e426b730c4fa8ac1cfe09663a463309f27978d65c20fe3.png" />
+<img alt="../_images/a4299a5245fcde9fb1079e5f988d03edc26e4c70c0f0870a7dfb2837db392783.png" src="../_images/a4299a5245fcde9fb1079e5f988d03edc26e4c70c0f0870a7dfb2837db392783.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this figure is given in <a class="reference download internal" download="" href="../_downloads/1fe868b12b17534de36b4602d2468a37/example4.mlx"><span class="xref download myst">example4.mlx</span></a></p>
