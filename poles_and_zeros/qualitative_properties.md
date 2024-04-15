@@ -29,6 +29,15 @@ Follow along at [cpjobling.github.io/eg-150-textbook/poles_and_zeros/qualitative
 
 The notes for this section have been adapted from [Qualitative properties of signals & Laplace transforms](https://web.stanford.edu/~boyd/ee102/qualitative.pdf) {cite}`boyd93` and was also partly influenced by the MATLAB LiveScript **PoleZeroAnalysis.mlx** from the MathWorks curriculum module [Transfer Function Analysis of Dynamic Systems](https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems) {cite}`tfads`.
 
+```{code-cell}
+---
+slideshow:
+  slide_type: notes
+---
+format compact
+cd matlab
+```
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## Agenda
@@ -127,7 +136,7 @@ $$\mathcal{L}^{-1}\left\{\frac{1}{\left(s-\lambda\right)^k} \right\} = \frac{1}{
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-The pole $\lambda_1 = \sigma + j\omega$ and its conjugate pair $\bar{\lambda} = \overline{\left(\sigma - j\omega\right)} = \sigma - j\omega$[^pz:note3]
+The pole $\lambda_1 = \sigma + j\omega$ and its conjugate pair $\bar{\lambda} = \overline{\left(\sigma + j\omega\right)} = \sigma - j\omega$[^pz:note3]
 
 $$\mathbf{Re}\lambda=\sigma,\qquad\mathbf{Im}\lambda = \omega$$
 
@@ -158,9 +167,19 @@ Quantifying the response for $f(t) = e^{\sigma t}\cos\left(\omega t\right)$: row
 slideshow:
   slide_type: subslide
 ---
-format compact
-cd matlab
 example1
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+The MATLAB code to reproduce this figure is given in [example1.mlx](matlab/example1.mlx)
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+open example1
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -180,18 +199,6 @@ These ideas ares summarized in {numref}`fig:pz:1`.
 Illustrating the quantitive properties of the terms $f(t)$ resulting from the poles of $F(s)$
 :::
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-The MATLAB code to reproduce this figure is given in [example1.mlx](matlab/example1.mlx)
-
-```{code-cell}
----
-slideshow:
-  slide_type: fragment
----
-open example1
-```
-
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (unit5.1.4)=
@@ -199,7 +206,7 @@ open example1
 
 For a pole at $s = \lambda = \sigma + j\omega$ (hence also at $\bar{\lambda}$) with $\sigma < 0$:
 
-$$F(s) = \frac{r}{s-\lambda} + \frac{\bar{r}}{s-\lambda}$$
+$$F(s) = \frac{r}{s-\lambda} + \frac{\bar{r}}{s+\lambda}$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -442,7 +449,7 @@ $$\zeta = \frac{\sqrt{L/C}}{2R}$$
 (pz:undamped)=
 ##### Type 4: Undamped response
 
-If the resistance $R$ is infinite, the real part $\sigma = $ and the poles $\lambda_1$ and $\lambda_2$ are imaginry. The energy in the circuit will continually flow backwards and forwards between the inductor and the capacitor. This will result in a sinusoidal response $v(t) = \alpha(\omega t + \phi)$. The actual values of amplitude $\alpha$ and phase $\phi$ again depend on the residues of the partial expansion of {eq}`eq:pz:9`.
+If the resistance $R$ is infinite, the real part $\sigma = $ and the poles $\lambda_1$ and $\lambda_2$ are imaginary. The energy in the circuit will continually flow backwards and forwards between the inductor and the capacitor. This will result in a sinusoidal response $v(t) = \alpha\cos(\omega t + \phi)$. The actual values of amplitude $\alpha$ and phase $\phi$ again depend on the residues of the partial expansion of {eq}`eq:pz:9`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
