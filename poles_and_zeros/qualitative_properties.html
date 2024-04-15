@@ -541,6 +541,14 @@ document.write(`
 <section id="acknowledgements">
 <h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">#</a></h2>
 <p>The notes for this section have been adapted from <a class="reference external" href="https://web.stanford.edu/~boyd/ee102/qualitative.pdf">Qualitative properties of signals &amp; Laplace transforms</a> <span id="id1">[<a class="reference internal" href="../zbib.html#id18" title="Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: https://web.stanford.edu/~boyd/ee102/.">Boyd, 1993</a>]</span> and was also partly influenced by the MATLAB LiveScript <strong>PoleZeroAnalysis.mlx</strong> from the MathWorks curriculum module <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems">Transfer Function Analysis of Dynamic Systems</a> <span id="id2">[<a class="reference internal" href="../zbib.html#id17" title="Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0.">Allie, 2024</a>]</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="w"> </span><span class="n">compact</span>
+<span class="nb">cd</span><span class="w"> </span><span class="n">matlab</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="agenda">
 <h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this heading">#</a></h2>
@@ -613,7 +621,7 @@ document.write(`
 </section>
 <section id="quantitative-properties-of-terms">
 <span id="unit5-1-3"></span><h2>Quantitative properties of terms<a class="headerlink" href="#quantitative-properties-of-terms" title="Permalink to this heading">#</a></h2>
-<p>The pole <span class="math notranslate nohighlight">\(\lambda_1 = \sigma + j\omega\)</span> and its conjugate pair <span class="math notranslate nohighlight">\(\bar{\lambda} = \overline{\left(\sigma - j\omega\right)} = \sigma - j\omega\)</span>[^pz:note3]</p>
+<p>The pole <span class="math notranslate nohighlight">\(\lambda_1 = \sigma + j\omega\)</span> and its conjugate pair <span class="math notranslate nohighlight">\(\bar{\lambda} = \overline{\left(\sigma + j\omega\right)} = \sigma - j\omega\)</span>[^pz:note3]</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{Re}\lambda=\sigma,\qquad\mathbf{Im}\lambda = \omega\]</div>
 <p>will yield a time domain term</p>
@@ -630,14 +638,20 @@ document.write(`
 <p>Quantifying the response for <span class="math notranslate nohighlight">\(f(t) = e^{\sigma t}\cos\left(\omega t\right)\)</span>: rows <span class="math notranslate nohighlight">\(\omega = 30, 15, 0\)</span>; columns: <span class="math notranslate nohighlight">\(\sigma = -1.5, 0.75, 0, 0.75, 1.5\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="w"> </span><span class="n">compact</span>
-<span class="nb">cd</span><span class="w"> </span><span class="n">matlab</span>
-<span class="n">example1</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">example1</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/df031ed194df5efacc17e38cb1d2c19c6eab77272044a0f94de9971824c80496.png" src="../_images/df031ed194df5efacc17e38cb1d2c19c6eab77272044a0f94de9971824c80496.png" />
+<img alt="../_images/02e31f29fe70f556de64c06625b6ae96156193d04f996d80ac6f1ba9ae8527cc.png" src="../_images/02e31f29fe70f556de64c06625b6ae96156193d04f996d80ac6f1ba9ae8527cc.png" />
+</div>
+</div>
+<p>The MATLAB code to reproduce this figure is given in <a class="reference download internal" download="" href="../_downloads/556b332fedd14b129e4b084e6cc38943/example1.mlx"><span class="xref download myst">example1.mlx</span></a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="w"> </span><span class="n">example1</span>
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -651,21 +665,13 @@ These ideas ares summarized in <a class="reference internal" href="#fig-pz-1"><s
 <p><span class="caption-number">Fig. 75 </span><span class="caption-text">Illustrating the quantitive properties of the terms <span class="math notranslate nohighlight">\(f(t)\)</span> resulting from the poles of <span class="math notranslate nohighlight">\(F(s)\)</span></span><a class="headerlink" href="#fig-pz-1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The MATLAB code to reproduce this figure is given in <a class="reference download internal" download="" href="../_downloads/556b332fedd14b129e4b084e6cc38943/example1.mlx"><span class="xref download myst">example1.mlx</span></a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="w"> </span><span class="n">example1</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 </section>
 <section id="complex-poles-damping-ratio-zeta-and-quality-factor-q">
 <span id="unit5-1-4"></span><h2>Complex poles: Damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> and quality factor <span class="math notranslate nohighlight">\(Q\)</span><a class="headerlink" href="#complex-poles-damping-ratio-zeta-and-quality-factor-q" title="Permalink to this heading">#</a></h2>
 <p>For a pole at <span class="math notranslate nohighlight">\(s = \lambda = \sigma + j\omega\)</span> (hence also at <span class="math notranslate nohighlight">\(\bar{\lambda}\)</span>) with <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[F(s) = \frac{r}{s-\lambda} + \frac{\bar{r}}{s-\lambda}\]</div>
+\[F(s) = \frac{r}{s-\lambda} + \frac{\bar{r}}{s+\lambda}\]</div>
 <div class="math notranslate nohighlight">
 \[F(s) =\frac{2\mathbf{Re}\left(r\right)s-2\mathbf{Re}\left(r\lambda\right)}{s^2 - 2\sigma s +\left(\sigma^2 + \omega^2\right)}\]</div>
 <p>which resolves to</p>
@@ -808,7 +814,7 @@ These ideas ares summarized in <a class="reference internal" href="#fig-pz-1"><s
 </section>
 <section id="type-4-undamped-response">
 <span id="pz-undamped"></span><h5>Type 4: Undamped response<a class="headerlink" href="#type-4-undamped-response" title="Permalink to this heading">#</a></h5>
-<p>If the resistance <span class="math notranslate nohighlight">\(R\)</span> is infinite, the real part <span class="math notranslate nohighlight">\(\sigma = \)</span> and the poles <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> are imaginry. The energy in the circuit will continually flow backwards and forwards between the inductor and the capacitor. This will result in a sinusoidal response <span class="math notranslate nohighlight">\(v(t) = \alpha(\omega t + \phi)\)</span>. The actual values of amplitude <span class="math notranslate nohighlight">\(\alpha\)</span> and phase <span class="math notranslate nohighlight">\(\phi\)</span> again depend on the residues of the partial expansion of <a class="reference internal" href="#equation-eq-pz-9">(59)</a>.</p>
+<p>If the resistance <span class="math notranslate nohighlight">\(R\)</span> is infinite, the real part <span class="math notranslate nohighlight">\(\sigma = \)</span> and the poles <span class="math notranslate nohighlight">\(\lambda_1\)</span> and <span class="math notranslate nohighlight">\(\lambda_2\)</span> are imaginary. The energy in the circuit will continually flow backwards and forwards between the inductor and the capacitor. This will result in a sinusoidal response <span class="math notranslate nohighlight">\(v(t) = \alpha\cos(\omega t + \phi)\)</span>. The actual values of amplitude <span class="math notranslate nohighlight">\(\alpha\)</span> and phase <span class="math notranslate nohighlight">\(\phi\)</span> again depend on the residues of the partial expansion of <a class="reference internal" href="#equation-eq-pz-9">(59)</a>.</p>
 </section>
 </section>
 </section>
@@ -856,7 +862,7 @@ These ideas ares summarized in <a class="reference internal" href="#fig-pz-1"><s
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/11ec0deeac1f139396d70a080428dc57b37337ae73b9392b1bda62e40b26d170.png" src="../_images/11ec0deeac1f139396d70a080428dc57b37337ae73b9392b1bda62e40b26d170.png" />
+<img alt="../_images/33ab406ff3e63c5092718535dd3fa5b23accd6c3c3ff1797824cadd654040041.png" src="../_images/33ab406ff3e63c5092718535dd3fa5b23accd6c3c3ff1797824cadd654040041.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this figure is given in <a class="reference download internal" download="" href="../_downloads/ca764614d8c4659036585882462f6043/example3.mlx"><span class="xref download myst">example3.mlx</span></a></p>
@@ -908,7 +914,7 @@ These ideas ares summarized in <a class="reference internal" href="#fig-pz-1"><s
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/bbc0c4b787b28e425f3c602207ba0f72f03d9f8c7d5a86d71e3530f393018a1f.png" src="../_images/bbc0c4b787b28e425f3c602207ba0f72f03d9f8c7d5a86d71e3530f393018a1f.png" />
+<img alt="../_images/785998fcfcc65e8b38e426b730c4fa8ac1cfe09663a463309f27978d65c20fe3.png" src="../_images/785998fcfcc65e8b38e426b730c4fa8ac1cfe09663a463309f27978d65c20fe3.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this figure is given in <a class="reference download internal" download="" href="../_downloads/1fe868b12b17534de36b4602d2468a37/example4.mlx"><span class="xref download myst">example4.mlx</span></a></p>
