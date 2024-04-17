@@ -210,7 +210,7 @@ $$F(s) = \frac{r}{s+\sigma + j\omega} + \frac{\bar{r}}{s+\sigma - j\omega}$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-$$F(s) =\frac{2\mathbf{Re}\left(r\right)s-2\mathbf{Re}\left(r\lambda\right)}{s^2 - 2\sigma s +\left(\sigma^2 + \omega^2\right)}$$
+$$F(s) =\frac{2\mathbf{Re}\left(r\right)s-2\mathbf{Re}\left(r\lambda\right)}{s^2 + 2\sigma s +\left(\sigma^2 + \omega^2\right)}$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
