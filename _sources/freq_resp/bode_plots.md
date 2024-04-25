@@ -72,7 +72,7 @@ Quoted from [Hendrik Wade Bode](https://en.wikipedia.org/wiki/Hendrik_Wade_Bode)
 
 > Hendrik Wade Bode (December 24, 1905 – June 21, 1982) was an American engineer, researcher, inventor, author and scientist, of Dutch ancestry.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 > He made important contributions to control systems theory and mathematical tools for the analysis of stability of linear systems.
 
@@ -295,7 +295,7 @@ K = 1; H1 = tf(K,1); bode(H1), grid on
 
 Increasing the gain causes a shift in the magnitude plot *up* by $20\log_{10} K$ dB for $K > 1$ or *down* for $K < 1$.
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (u62:int)=
 ### Asymptotic bode plot of an integrator
@@ -310,13 +310,13 @@ $$H(j\omega) = \frac{1}{j\omega} = -\frac{1}{\omega} j$$
 
 $$M = \left|H(j\omega)\right| = \frac{1}{\omega},\,\phi = -90^\circ$$
 
-$$$$
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Converting the magnitude into dB:
 
 $$M_\mathrm{dB} = 20\log_{10}(1) - 20\log_{10}({\omega})$$
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "fragment"}}
 
 At $\omega = 0$, $M = 1$, $M_\mathrm{dB} = 0$ dB. At $\omega = 10$, $M=1/10 = -20$ dB. The phase shift is $-90^\circ$ for all $\omega$. The bode plot is therefore:
 
@@ -332,7 +332,7 @@ H2 = tf(1,[1, 0]); bode(H2), grid on
 
 The roll-off rate is $-20$ dB/decade.
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (u62:diff)=
 ### Asymptotic bode plot of an differentiator
@@ -347,11 +347,13 @@ $$H(j\omega) = j\omega$$
 
 $$M = \left|H(j\omega)\right| = \omega,\,\phi = +90^\circ$$
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
 Converting the magnitude into dB:
 
 $$M_\mathrm{dB} = + 20\log_{10}({\omega})$$
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "fragment"}}
 
 At $\omega = 0$, $M = 1$, $M_\mathrm{dB} = 0$ dB. At $\omega = 10$, $M=10 = 20$ dB. The phase shift is $90^\circ$ for all $\omega$. The bode plot is therefore:
 
