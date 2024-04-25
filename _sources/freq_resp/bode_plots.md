@@ -459,7 +459,7 @@ Again, for most of the magnitude Bode plot, the computed plot is well matched by
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-### Demo: Using the interactive Bode analysis tool provided by MATLAB
+### Demo 1: Using the interactive Bode analysis tool provided by MATLAB
 
 This has to be done in MATLAB for desktop or MATLAB online.
 
@@ -652,11 +652,12 @@ controlSystemDesigner('bode',H)
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 After this exercise, the final transfer function is
+
 $$\frac{10\left(0.1s + 1\right)}{\left(0.01s + 1\right)\left(s^2 + 0.1s + 1\right)} $$
 
 So, using this concept of superposition we can easily construct any transfer function that we are interested in studying. 
 
-All we need to do is break down or factor the transfer function into smaller constructs, and then graphically add all of those traces together as shown in {numref}`unit6.2:6`.
+All we need to do is break down or factor the transfer function into smaller constructs, and then graphically add all of those traces together as shown in {numref}`fig:unit6.2:6`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -705,11 +706,11 @@ We covered the following topics
 
 #### Frequency response
 
-The steady-state output of a linear time-invariant system $H(s)$ subject to a waveform $x(t) = A_{\mathrm{in}}\left(\sin\omega t\right)$ is
+The steady-state output of a linear time-invariant system $H(s)$ subject to a waveform $x(t) = A_{\mathrm{in}}\sin\left(\omega t\right)$ is
 
-$$y(t) = \left|\frac{A_\mathrm{out}}{A_\mathrm{in}} \right|=\sin\left(\omega t + \phi\right)$$
+$$y(t) = M\sin\left(\omega t + \phi\right)$$
 
-where $M = \left|A_\mathrm{out}/A_\mathrm{in}\right| = \left|H(j\omega)\right|$ and $\phi = \angle H(j\omega)$ rad/s. Both $M$ and $\phi$ depend only in the system transfer function (Laplace transform of the impulse response).
+where $M = \left|A_\mathrm{out}/A_\mathrm{in}\right| = \left|H(j\omega)\right|$ and $\phi = \angle H(j\omega)$ rad/s. Both $M$ and $\phi$ depend only in the system transfer function (Laplace transform of the impulse response) and are functions of $\omega$.
 
 #### Bode plot
 

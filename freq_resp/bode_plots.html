@@ -478,7 +478,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plot-of-an-differentiator">Asymptotic bode plot of an differentiator</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plot-of-an-single-pole">Asymptotic bode plot of an single pole</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plot-of-an-single-zero">Asymptotic bode plot of an single zero</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#demo-using-the-interactive-bode-analysis-tool-provided-by-matlab">Demo: Using the interactive Bode analysis tool provided by MATLAB</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#demo-1-using-the-interactive-bode-analysis-tool-provided-by-matlab">Demo 1: Using the interactive Bode analysis tool provided by MATLAB</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aysymptotic-bode-plots-for-a-second-order-system">Aysymptotic bode plots for a second-order system</a><ul class="nav section-nav flex-column">
@@ -820,8 +820,8 @@ document.write(`
 <p><img alt="Bode plot of a single zero with asymptotes added" src="../_images/bode5.png" /></p>
 <p>Again, for most of the magnitude Bode plot, the computed plot is well matched by its asymptotes. The maximum error that at <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>, <span class="math notranslate nohighlight">\(M = \sqrt{2}\)</span>, <span class="math notranslate nohighlight">\(M_\mathrm{dB} = 3\)</span> dB, <span class="math notranslate nohighlight">\(\phi = 45^\circ\)</span>. The asymptotes used on the phase diagram are usually taken to be 0 at <span class="math notranslate nohighlight">\(\omega = (1/10)\tau\)</span> and <span class="math notranslate nohighlight">\(90^\circ = \omega = 10\tau\)</span>. In that case, the asymptotes and the actual plot are equal (<span class="math notranslate nohighlight">\(\phi = 45^\circ\)</span>) at the frequency <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>.</p>
 </section>
-<section id="demo-using-the-interactive-bode-analysis-tool-provided-by-matlab">
-<h3>Demo: Using the interactive Bode analysis tool provided by MATLAB<a class="headerlink" href="#demo-using-the-interactive-bode-analysis-tool-provided-by-matlab" title="Permalink to this heading">#</a></h3>
+<section id="demo-1-using-the-interactive-bode-analysis-tool-provided-by-matlab">
+<h3>Demo 1: Using the interactive Bode analysis tool provided by MATLAB<a class="headerlink" href="#demo-1-using-the-interactive-bode-analysis-tool-provided-by-matlab" title="Permalink to this heading">#</a></h3>
 <p>This has to be done in MATLAB for desktop or MATLAB online.</p>
 <ul class="simple">
 <li><p>Open MATLAB and select Bode designer</p></li>
@@ -942,10 +942,11 @@ document.write(`
 <li><p>Add a pole at <span class="math notranslate nohighlight">\(\omega = 100\)</span> rad/s. Note final magnitude slope retrurns to -40 db/decade and final phase returns to <span class="math notranslate nohighlight">\(-180^\circ\)</span>.</p></li>
 <li><p>Change damping to <span class="math notranslate nohighlight">\(1/\sqrt{2}\)</span> to illustrate what is called <em>ideal damping</em>. Here there is no overshoot and the magnitude is -3 dB at <span class="math notranslate nohighlight">\(\omega = \omega_n\)</span>.</p></li>
 </ul>
-<p>After this exercise, the final transfer function is
-$<span class="math notranslate nohighlight">\(\frac{10\left(0.1s + 1\right)}{\left(0.01s + 1\right)\left(s^2 + 0.1s + 1\right)} \)</span>$</p>
+<p>After this exercise, the final transfer function is</p>
+<div class="math notranslate nohighlight">
+\[\frac{10\left(0.1s + 1\right)}{\left(0.01s + 1\right)\left(s^2 + 0.1s + 1\right)} \]</div>
 <p>So, using this concept of superposition we can easily construct any transfer function that we are interested in studying.</p>
-<p>All we need to do is break down or factor the transfer function into smaller constructs, and then graphically add all of those traces together as shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">unit6.2:6</span></code>.</p>
+<p>All we need to do is break down or factor the transfer function into smaller constructs, and then graphically add all of those traces together as shown in <a class="reference internal" href="#fig-unit6-2-6"><span class="std std-numref">Fig. 89</span></a>.</p>
 <figure class="align-default" id="fig-unit6-2-6">
 <a class="reference internal image-reference" href="../_images/superposition.png"><img alt="Screenshot from the video How to Build Bode Plots for Complex Systems? (see caption) showing the idea of superpostion." src="../_images/superposition.png" style="width: 100%;" /></a>
 <figcaption>
@@ -980,10 +981,10 @@ $<span class="math notranslate nohighlight">\(\frac{10\left(0.1s + 1\right)}{\le
 <span id="unit6-2-takeaways"></span><h3>Unit 6.2: Take Aways<a class="headerlink" href="#unit-6-2-take-aways" title="Permalink to this heading">#</a></h3>
 <section id="id15">
 <h4>Frequency response<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h4>
-<p>The steady-state output of a linear time-invariant system <span class="math notranslate nohighlight">\(H(s)\)</span> subject to a waveform <span class="math notranslate nohighlight">\(x(t) = A_{\mathrm{in}}\left(\sin\omega t\right)\)</span> is</p>
+<p>The steady-state output of a linear time-invariant system <span class="math notranslate nohighlight">\(H(s)\)</span> subject to a waveform <span class="math notranslate nohighlight">\(x(t) = A_{\mathrm{in}}\sin\left(\omega t\right)\)</span> is</p>
 <div class="math notranslate nohighlight">
-\[y(t) = \left|\frac{A_\mathrm{out}}{A_\mathrm{in}} \right|=\sin\left(\omega t + \phi\right)\]</div>
-<p>where <span class="math notranslate nohighlight">\(M = \left|A_\mathrm{out}/A_\mathrm{in}\right| = \left|H(j\omega)\right|\)</span> and <span class="math notranslate nohighlight">\(\phi = \angle H(j\omega)\)</span> rad/s. Both <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span> depend only in the system transfer function (Laplace transform of the impulse response).</p>
+\[y(t) = M\sin\left(\omega t + \phi\right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(M = \left|A_\mathrm{out}/A_\mathrm{in}\right| = \left|H(j\omega)\right|\)</span> and <span class="math notranslate nohighlight">\(\phi = \angle H(j\omega)\)</span> rad/s. Both <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span> depend only in the system transfer function (Laplace transform of the impulse response) and are functions of <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
 </section>
 <section id="bode-plot">
 <h4>Bode plot<a class="headerlink" href="#bode-plot" title="Permalink to this heading">#</a></h4>
@@ -1160,7 +1161,7 @@ $<span class="math notranslate nohighlight">\(\frac{10\left(0.1s + 1\right)}{\le
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plot-of-an-differentiator">Asymptotic bode plot of an differentiator</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plot-of-an-single-pole">Asymptotic bode plot of an single pole</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymptotic-bode-plot-of-an-single-zero">Asymptotic bode plot of an single zero</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#demo-using-the-interactive-bode-analysis-tool-provided-by-matlab">Demo: Using the interactive Bode analysis tool provided by MATLAB</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#demo-1-using-the-interactive-bode-analysis-tool-provided-by-matlab">Demo 1: Using the interactive Bode analysis tool provided by MATLAB</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aysymptotic-bode-plots-for-a-second-order-system">Aysymptotic bode plots for a second-order system</a><ul class="nav section-nav flex-column">
