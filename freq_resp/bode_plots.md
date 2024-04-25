@@ -72,7 +72,7 @@ Quoted from [Hendrik Wade Bode](https://en.wikipedia.org/wiki/Hendrik_Wade_Bode)
 
 > Hendrik Wade Bode (December 24, 1905 – June 21, 1982) was an American engineer, researcher, inventor, author and scientist, of Dutch ancestry.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 > He made important contributions to control systems theory and mathematical tools for the analysis of stability of linear systems.
 
@@ -295,7 +295,7 @@ K = 1; H1 = tf(K,1); bode(H1), grid on
 
 Increasing the gain causes a shift in the magnitude plot *up* by $20\log_{10} K$ dB for $K > 1$ or *down* for $K < 1$.
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (u62:int)=
 ### Asymptotic bode plot of an integrator
@@ -310,13 +310,13 @@ $$H(j\omega) = \frac{1}{j\omega} = -\frac{1}{\omega} j$$
 
 $$M = \left|H(j\omega)\right| = \frac{1}{\omega},\,\phi = -90^\circ$$
 
-$$$$
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Converting the magnitude into dB:
 
 $$M_\mathrm{dB} = 20\log_{10}(1) - 20\log_{10}({\omega})$$
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "fragment"}}
 
 At $\omega = 0$, $M = 1$, $M_\mathrm{dB} = 0$ dB. At $\omega = 10$, $M=1/10 = -20$ dB. The phase shift is $-90^\circ$ for all $\omega$. The bode plot is therefore:
 
@@ -332,7 +332,7 @@ H2 = tf(1,[1, 0]); bode(H2), grid on
 
 The roll-off rate is $-20$ dB/decade.
 
-+++ {"slideshow": {"slide_type": "slide"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (u62:diff)=
 ### Asymptotic bode plot of an differentiator
@@ -347,11 +347,13 @@ $$H(j\omega) = j\omega$$
 
 $$M = \left|H(j\omega)\right| = \omega,\,\phi = +90^\circ$$
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
 Converting the magnitude into dB:
 
 $$M_\mathrm{dB} = + 20\log_{10}({\omega})$$
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "fragment"}}
 
 At $\omega = 0$, $M = 1$, $M_\mathrm{dB} = 0$ dB. At $\omega = 10$, $M=10 = 20$ dB. The phase shift is $90^\circ$ for all $\omega$. The bode plot is therefore:
 
@@ -459,7 +461,7 @@ Again, for most of the magnitude Bode plot, the computed plot is well matched by
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-### Demo: Using the interactive Bode analysis tool provided by MATLAB
+### Demo 1: Using the interactive Bode analysis tool provided by MATLAB
 
 This has to be done in MATLAB for desktop or MATLAB online.
 
@@ -652,11 +654,12 @@ controlSystemDesigner('bode',H)
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 After this exercise, the final transfer function is
+
 $$\frac{10\left(0.1s + 1\right)}{\left(0.01s + 1\right)\left(s^2 + 0.1s + 1\right)} $$
 
 So, using this concept of superposition we can easily construct any transfer function that we are interested in studying. 
 
-All we need to do is break down or factor the transfer function into smaller constructs, and then graphically add all of those traces together as shown in {numref}`unit6.2:6`.
+All we need to do is break down or factor the transfer function into smaller constructs, and then graphically add all of those traces together as shown in {numref}`fig:unit6.2:6`.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -705,11 +708,11 @@ We covered the following topics
 
 #### Frequency response
 
-The steady-state output of a linear time-invariant system $H(s)$ subject to a waveform $x(t) = A_{\mathrm{in}}\left(\sin\omega t\right)$ is
+The steady-state output of a linear time-invariant system $H(s)$ subject to a waveform $x(t) = A_{\mathrm{in}}\sin\left(\omega t\right)$ is
 
-$$y(t) = \left|\frac{A_\mathrm{out}}{A_\mathrm{in}} \right|=\sin\left(\omega t + \phi\right)$$
+$$y(t) = M\sin\left(\omega t + \phi\right)$$
 
-where $M = \left|A_\mathrm{out}/A_\mathrm{in}\right| = \left|H(j\omega)\right|$ and $\phi = \angle H(j\omega)$ rad/s. Both $M$ and $\phi$ depend only in the system transfer function (Laplace transform of the impulse response).
+where $M = \left|A_\mathrm{out}/A_\mathrm{in}\right| = \left|H(j\omega)\right|$ and $\phi = \angle H(j\omega)$ rad/s. Both $M$ and $\phi$ depend only in the system transfer function (Laplace transform of the impulse response) and are functions of $\omega$.
 
 #### Bode plot
 

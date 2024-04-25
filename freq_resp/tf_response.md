@@ -299,7 +299,7 @@ slideshow:
   slide_type: subslide
 ---
 figure
-semilogx(omega,Mdb)
+semilogx(omega,Mdb),grid on
 xlabel("Frequency (rad/s)")
 ylabel("Magnitude (dB)")
 ```
@@ -314,7 +314,7 @@ slideshow:
   slide_type: subslide
 ---
 figure
-semilogx(omega,phiDeg)
+semilogx(omega,phiDeg), grid on
 xlabel("Frequency (rad/s)")
 ylabel("Phase (degrees)")
 ```
