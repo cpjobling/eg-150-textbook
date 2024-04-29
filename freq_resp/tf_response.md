@@ -90,8 +90,10 @@ slideshow:
 ---
 % Write your code here
 
+Gs = tf(1,[1 0,1 1])
+
 % Record your answer in p
-p = NaN
+p = pole(Gs)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -106,7 +108,7 @@ slideshow:
 % Write your code here
 
 % Record your answer in freq
-freq = NaN
+[freq,zeta] = damp(Gs)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -135,7 +137,7 @@ slideshow:
   slide_type: subslide
 ---
 % min=0.1 max = 2; step=0.1; default = 0.5;
-omegau = 0.5; % Frequency of the forcing [rad/s]
+omegau = 1; % Frequency of the forcing [rad/s]
 figure
 t = linspace(0,100,1e3);   % Time variable array
 u = sin(omegau*t);         % Forcing function (as an array)
@@ -151,6 +153,8 @@ ylabel("x [m]")
 ## Constructing a Bode plot
 
 In general, the frequency response of a transfer function is analyzed by providing input sinusoids with different frequencies and identifying how the magnitude and phase of the steady output changes.
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ::: {figure-md} fig:unit6.1:2
 <img src="pictures/fr.png" alt="The steady response of a linear time-invariant system to a sine input will be a sine wave with the same frequency as the input. The response sine wave undergoes a phase shift and a change in magnitude that depend on the frequency of the input sine wave. This plot only shows the response to a single frequency." width="75%" />
@@ -207,7 +211,8 @@ slideshow:
   slide_type: subslide
 ---
 figure
-% Create your Bode plot here
+Gs = tf(1,[1, 0.1, 1])
+bode(Gs),grid
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -242,7 +247,7 @@ It is not necessary to compute the time-domain response to create a Bode plot as
 
 Generate a Bode plot for the mass-spring-damper system:
 
-$$G(s) = \frac{1}{s^2 + 0,1 s + 1}$$
+$$G(s) = \frac{1}{s^2 + 0.1 s + 1}$$
         
 by evaluating the complex transfer function.
 
@@ -250,7 +255,7 @@ by evaluating the complex transfer function.
 
 #### Solution. 
 
-The complex transfer function is created by setting $s = j\omega:
+The complex transfer function is created by setting $s = j\omega$:
 
 $$G(j \omega) = \frac{1}{  (j\omega)^2 + 0.1(j  \omega) + 1} = \frac{1}{ - \omega^2 + 0.1 j  \omega + 1}$$
 
@@ -264,7 +269,7 @@ slideshow:
   slide_type: fragment
 ---
 omega = linspace(0.1,10,500);                   % An array of frequencies
-Gjomega = 1./(-omega.^2 + 0.1*1i*omega + 1);     % Complex transfer function evaluated at many frequencies
+Gjomega = 1./(-omega.^2 + 0.1*j*omega + 1);     % Complex transfer function evaluated at many frequencies
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -328,11 +333,11 @@ In this exercise, you will analyze the transfer function
 
 $$H(s) = \frac{1}{s^2 + 9}$$
         
-This transfer function corresponds to a mass-spring system with parameters $m=1$, $c=0$ and $k=3$.
+This transfer function corresponds to a mass-spring system with parameters $m=1$, $c=0$ and $k=9$.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-(a) What are the natural frequencies of $H(s)$ in rad/s?
+**(a)** What are the natural frequencies of $H(s)$ in rad/s?
 
 ```{code-cell}
 ---
@@ -340,35 +345,35 @@ slideshow:
   slide_type: fragment
 ---
 % Write your code here
-
+Hs = tf(1,[1, 0, 9])
 % Record your answer in omegan
-omegan = NaN
+[omegan,zetan] = damp(Hs)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(b) Generate the Bode plot for $H(s)$ using the `bode` function.
+**(b)** Generate the Bode plot for $H(s)$ using the `bode` function.
 
 ```{code-cell}
 ---
 slideshow:
   slide_type: fragment
 ---
-% Write your code here
+bode(Hs)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(c) Write the expression for the complex transfer function by making the substitution $s=j\omega$. What is the value of the complex transfer function for $\omega = 0.5$?
+**(c)** Write the expression for the complex transfer function by making the substitution $s=j\omega$. What is the value of the complex transfer function for $\omega = 0.5$?
 
 ```{code-cell}
 % Record your answer in Hcomplex
-Hcomplex = NaN
+Hcomplex = 1./(-omegan(1)^2 + 9)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(d) What are the magnitude (in dB) and phase (in degrees) of the transfer function for $\omega = 0.5$? Can you identify this point on the Bode plot?
+**(d)** What are the magnitude (in dB) and phase (in degrees) of the transfer function for $\omega = 0.5$? Can you identify this point on the Bode plot?
 * Use the definition $y_{[\mathrm{dB}]} = 20 \log_{10}(y)$.
 
 ```{code-cell}
@@ -376,13 +381,14 @@ Hcomplex = NaN
 slideshow:
   slide_type: fragment
 ---
-MdB = NaN; % Calculate the magnitude in dB here
-phase = NaN; % Calculate the phase in degrees here
+w = 0.5;
+MdB = 20*log10(abs(1./(-w^2 + 9)))% Calculate the magnitude in dB here
+phase = angle(1./(-w^2 + 9))*180/pi % Calculate the phase in degrees herephase = angle(); % Calculate the phase in degrees here
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Use the [`lsim`](https://uk.mathworks.com/help/control/ref/dynamicsystem.lsim.html?searchHighlight=lsim) function to compute and plot the time-domain response of $H$ to a sinusoidal input function
+**(e)** Use the [`lsim`](https://uk.mathworks.com/help/control/ref/dynamicsystem.lsim.html?searchHighlight=lsim) function to compute and plot the time-domain response of $H$ to a sinusoidal input function
 
 $$u(t) = \sin(\omega_n t)$$
      
@@ -394,7 +400,13 @@ slideshow:
   slide_type: subslide
 ---
 % Write your code here
+t = linspace(0,100,1000);
+u = sin(3*t);
+lsim(Hs,u,t);
+ylabel('x [m]')
 ```
+
++++ {"slideshow": {"slide_type": "notes"}}
 
 (unit6.1.5)=
 ## Unit 6.1: Homework
@@ -403,7 +415,7 @@ slideshow:
 
 2. The remainder of the MATLAB Live Script **FrequencyDomainAnalysis.mlx** applies what we have looked at so far to a simple filtering problem based around a Buck Converter such as might be used in the DC-DC systems in an electric vehicle. Study the examples and try to complete the activities and exercises.
 
-3. The remaining Live Scripts in the curriculum module demostrate the cocepts of the Laplace transform, transfer functions and pole-zero analysis. You may find these useful. We will start EG-247 next year with these examples.
+3. The remaining Live Scripts in the curriculum module demonstrate the cocepts of the Laplace transform, transfer functions and pole-zero analysis. You may find these useful. We will start EG-247 next year with these examples.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

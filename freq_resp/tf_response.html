@@ -553,15 +553,40 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Write your code here</span>
 
+<span class="n">Gs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">1</span><span class="p">,[</span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span>
+
 <span class="c">% Record your answer in p</span>
-<span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span>
+<span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">pole</span><span class="p">(</span><span class="n">Gs</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gs =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + s + 1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p =
 
-   NaN
+   0.3412 + 1.1615i
+   0.3412 - 1.1615i
+  -0.6823 + 0.0000i
 </pre></div>
 </div>
 </div>
@@ -572,14 +597,23 @@ document.write(`
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Write your code here</span>
 
 <span class="c">% Record your answer in freq</span>
-<span class="n">freq</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span>
+<span class="p">[</span><span class="n">freq</span><span class="p">,</span><span class="n">zeta</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">damp</span><span class="p">(</span><span class="n">Gs</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>freq =
 
-   NaN
+    0.6823
+    1.2106
+    1.2106
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zeta =
+
+    1.0000
+   -0.2818
+   -0.2818
 </pre></div>
 </div>
 </div>
@@ -600,7 +634,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% min=0.1 max = 2; step=0.1; default = 0.5;</span>
-<span class="n">omegau</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"> </span><span class="c">% Frequency of the forcing [rad/s]</span>
+<span class="n">omegau</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c">% Frequency of the forcing [rad/s]</span>
 <span class="nb">figure</span>
 <span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mf">1e3</span><span class="p">);</span><span class="w">   </span><span class="c">% Time variable array</span>
 <span class="n">u</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">omegau</span><span class="o">*</span><span class="n">t</span><span class="p">);</span><span class="w">         </span><span class="c">% Forcing function (as an array)</span>
@@ -612,7 +646,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2ab8107f35385e0b0095c8350e185bd6437b536ac1c20f88729d58c71c9b0541.png" src="../_images/2ab8107f35385e0b0095c8350e185bd6437b536ac1c20f88729d58c71c9b0541.png" />
+<img alt="../_images/4bc2f56d01623869d612ca48a655cb6130277fe3232c7f0872ee452a2033e47d.png" src="../_images/4bc2f56d01623869d612ca48a655cb6130277fe3232c7f0872ee452a2033e47d.png" />
 </div>
 </div>
 </section>
@@ -656,12 +690,32 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">figure</span>
-<span class="c">% Create your Bode plot here</span>
+<span class="n">Gs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">1</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span>
+<span class="n">bode</span><span class="p">(</span><span class="n">Gs</span><span class="p">),</span><span class="nb">grid</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/accf84d89dffc163b8268952088437939218a00f379aaf4ec5245c94da8d90d1.png" src="../_images/accf84d89dffc163b8268952088437939218a00f379aaf4ec5245c94da8d90d1.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gs =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>         1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  ---------------
+  s^2 + 0.1 s + 1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<img alt="../_images/bd8a34501269605af08c710c41f1424779ed7f1b4f502fec5f676fc055f19fc0.png" src="../_images/bd8a34501269605af08c710c41f1424779ed7f1b4f502fec5f676fc055f19fc0.png" />
 </div>
 </div>
 <section id="id3">
@@ -689,18 +743,18 @@ document.write(`
 <h3>Example.<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
 <p>Generate a Bode plot for the mass-spring-damper system:</p>
 <div class="math notranslate nohighlight">
-\[G(s) = \frac{1}{s^2 + 0,1 s + 1}\]</div>
+\[G(s) = \frac{1}{s^2 + 0.1 s + 1}\]</div>
 <p>by evaluating the complex transfer function.</p>
 <section id="solution">
 <h4>Solution.<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h4>
-<p>The complex transfer function is created by setting $s = j\omega:</p>
+<p>The complex transfer function is created by setting <span class="math notranslate nohighlight">\(s = j\omega\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[G(j \omega) = \frac{1}{  (j\omega)^2 + 0.1(j  \omega) + 1} = \frac{1}{ - \omega^2 + 0.1 j  \omega + 1}\]</div>
 <p>Numerically evaluating the complex transfer function for many frequencies <span class="math notranslate nohighlight">\(\omega\)</span> can be accomplished using an array of frequencies.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">omega</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">500</span><span class="p">);</span><span class="w">                   </span><span class="c">% An array of frequencies</span>
-<span class="n">Gjomega</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="o">-</span><span class="n">omega</span><span class="o">.^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.1</span><span class="o">*</span>1<span class="nb">i</span><span class="o">*</span><span class="n">omega</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">     </span><span class="c">% Complex transfer function evaluated at many frequencies</span>
+<span class="n">Gjomega</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="o">-</span><span class="n">omega</span><span class="o">.^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.1</span><span class="o">*</span><span class="nb">j</span><span class="o">*</span><span class="n">omega</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">     </span><span class="c">% Complex transfer function evaluated at many frequencies</span>
 </pre></div>
 </div>
 </div>
@@ -733,7 +787,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/aabd617d5c1cd5a401a0b2999e2e0c5b848870a331ec9341b7704b2e2878ef03.png" src="../_images/aabd617d5c1cd5a401a0b2999e2e0c5b848870a331ec9341b7704b2e2878ef03.png" />
+<img alt="../_images/78cb677265238b3c55006c036d8d8651bbb0329d46c841a0195acffbac1835ee.png" src="../_images/78cb677265238b3c55006c036d8d8651bbb0329d46c841a0195acffbac1835ee.png" />
 </div>
 </div>
 <p>The second panel is constructed by graphing the phase in degrees against the input frequencies, <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
@@ -747,7 +801,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/27ce3fc48921bcbe34123ea91daebe187bccfa151c362eb22ebdcc756f0ef69b.png" src="../_images/27ce3fc48921bcbe34123ea91daebe187bccfa151c362eb22ebdcc756f0ef69b.png" />
+<img alt="../_images/a2c988af9f66633dbee22f8d58fc728b4070f3ca5c4e2ee5459465cdded16aca.png" src="../_images/a2c988af9f66633dbee22f8d58fc728b4070f3ca5c4e2ee5459465cdded16aca.png" />
 </div>
 </div>
 </section>
@@ -757,70 +811,121 @@ document.write(`
 <p>In this exercise, you will analyze the transfer function</p>
 <div class="math notranslate nohighlight">
 \[H(s) = \frac{1}{s^2 + 9}\]</div>
-<p>This transfer function corresponds to a mass-spring system with parameters <span class="math notranslate nohighlight">\(m=1\)</span>, <span class="math notranslate nohighlight">\(c=0\)</span> and <span class="math notranslate nohighlight">\(k=3\)</span>.</p>
-<p>(a) What are the natural frequencies of <span class="math notranslate nohighlight">\(H(s)\)</span> in rad/s?</p>
+<p>This transfer function corresponds to a mass-spring system with parameters <span class="math notranslate nohighlight">\(m=1\)</span>, <span class="math notranslate nohighlight">\(c=0\)</span> and <span class="math notranslate nohighlight">\(k=9\)</span>.</p>
+<p><strong>(a)</strong> What are the natural frequencies of <span class="math notranslate nohighlight">\(H(s)\)</span> in rad/s?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Write your code here</span>
-
+<span class="n">Hs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">1</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">])</span>
 <span class="c">% Record your answer in omegan</span>
-<span class="n">omegan</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span>
+<span class="p">[</span><span class="n">omegan</span><span class="p">,</span><span class="n">zetan</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">damp</span><span class="p">(</span><span class="n">Hs</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hs =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + 9
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>omegan =
 
-   NaN
+     3
+     3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zetan =
+
+     0
+     0
 </pre></div>
 </div>
 </div>
 </div>
-<p>(b) Generate the Bode plot for <span class="math notranslate nohighlight">\(H(s)\)</span> using the <code class="docutils literal notranslate"><span class="pre">bode</span></code> function.</p>
+<p><strong>(b)</strong> Generate the Bode plot for <span class="math notranslate nohighlight">\(H(s)\)</span> using the <code class="docutils literal notranslate"><span class="pre">bode</span></code> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Write your code here</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">Hs</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/37dbfff285430a4ee4f6ac758412e60b7687dc96db95639536476146cf7389ab.png" src="../_images/37dbfff285430a4ee4f6ac758412e60b7687dc96db95639536476146cf7389ab.png" />
 </div>
-<p>(c) Write the expression for the complex transfer function by making the substitution <span class="math notranslate nohighlight">\(s=j\omega\)</span>. What is the value of the complex transfer function for <span class="math notranslate nohighlight">\(\omega = 0.5\)</span>?</p>
+</div>
+<p><strong>(c)</strong> Write the expression for the complex transfer function by making the substitution <span class="math notranslate nohighlight">\(s=j\omega\)</span>. What is the value of the complex transfer function for <span class="math notranslate nohighlight">\(\omega = 0.5\)</span>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Record your answer in Hcomplex</span>
-<span class="n">Hcomplex</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span>
+<span class="n">Hcomplex</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="o">-</span><span class="n">omegan</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>^<span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">9</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hcomplex =
 
-   NaN
+   Inf
 </pre></div>
 </div>
 </div>
 </div>
-<p>(d) What are the magnitude (in dB) and phase (in degrees) of the transfer function for <span class="math notranslate nohighlight">\(\omega = 0.5\)</span>? Can you identify this point on the Bode plot?</p>
+<p><strong>(d)</strong> What are the magnitude (in dB) and phase (in degrees) of the transfer function for <span class="math notranslate nohighlight">\(\omega = 0.5\)</span>? Can you identify this point on the Bode plot?</p>
 <ul class="simple">
 <li><p>Use the definition <span class="math notranslate nohighlight">\(y_{[\mathrm{dB}]} = 20 \log_{10}(y)\)</span>.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">MdB</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span><span class="p">;</span><span class="w"> </span><span class="c">% Calculate the magnitude in dB here</span>
-<span class="n">phase</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span><span class="p">;</span><span class="w"> </span><span class="c">% Calculate the phase in degrees here</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span>
+<span class="n">MdB</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">20</span><span class="o">*</span><span class="nb">log10</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="o">-</span><span class="n">w</span>^<span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">9</span><span class="p">)))</span><span class="c">% Calculate the magnitude in dB here</span>
+<span class="n">phase</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">angle</span><span class="p">(</span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="o">-</span><span class="n">w</span>^<span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">9</span><span class="p">))</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="nb">pi</span><span class="w"> </span><span class="c">% Calculate the phase in degrees herephase = angle(); % Calculate the phase in degrees here</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MdB =
+
+  -18.8402
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>phase =
+
+     0
 </pre></div>
 </div>
 </div>
 </div>
-<p>Use the <a class="reference external" href="https://uk.mathworks.com/help/control/ref/dynamicsystem.lsim.html?searchHighlight=lsim"><code class="docutils literal notranslate"><span class="pre">lsim</span></code></a> function to compute and plot the time-domain response of <span class="math notranslate nohighlight">\(H\)</span> to a sinusoidal input function</p>
+<p><strong>(e)</strong> Use the <a class="reference external" href="https://uk.mathworks.com/help/control/ref/dynamicsystem.lsim.html?searchHighlight=lsim"><code class="docutils literal notranslate"><span class="pre">lsim</span></code></a> function to compute and plot the time-domain response of <span class="math notranslate nohighlight">\(H\)</span> to a sinusoidal input function</p>
 <div class="math notranslate nohighlight">
 \[u(t) = \sin(\omega_n t)\]</div>
 <p>where <span class="math notranslate nohighlight">\(\omega_n\)</span> is the natural frequency you computed in <strong>(a)</strong>. Simulate until a final time of 100 seconds.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Write your code here</span>
+<span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">1000</span><span class="p">);</span>
+<span class="n">u</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">t</span><span class="p">);</span>
+<span class="n">lsim</span><span class="p">(</span><span class="n">Hs</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">t</span><span class="p">);</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;x [m]&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/78117710c6439bdac52c2ff8bb57df8ed768bcfcd7715b0deacf4689ccceef3c.png" src="../_images/78117710c6439bdac52c2ff8bb57df8ed768bcfcd7715b0deacf4689ccceef3c.png" />
 </div>
 </div>
 </section>
@@ -830,7 +935,7 @@ document.write(`
 <ol class="arabic simple">
 <li><p>Install the MathWorks curriculum module <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems">Transfer Function Analysis of Dynamic Systems</a> <span id="id4">[<a class="reference internal" href="../zbib.html#id17" title="Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0.">Allie, 2024</a>]</span> and open the MATLAB Live Script <strong>FrequencyDomainAnalysis.mlx</strong>. Explore the Exercises and Activities we have reviewed in the unit.</p></li>
 <li><p>The remainder of the MATLAB Live Script <strong>FrequencyDomainAnalysis.mlx</strong> applies what we have looked at so far to a simple filtering problem based around a Buck Converter such as might be used in the DC-DC systems in an electric vehicle. Study the examples and try to complete the activities and exercises.</p></li>
-<li><p>The remaining Live Scripts in the curriculum module demostrate the cocepts of the Laplace transform, transfer functions and pole-zero analysis. You may find these useful. We will start EG-247 next year with these examples.</p></li>
+<li><p>The remaining Live Scripts in the curriculum module demonstrate the cocepts of the Laplace transform, transfer functions and pole-zero analysis. You may find these useful. We will start EG-247 next year with these examples.</p></li>
 </ol>
 </section>
 <section id="summary">
