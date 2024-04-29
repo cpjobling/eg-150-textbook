@@ -153,7 +153,7 @@ $$\phi = \angle H(j\omega)$$
 ``` {note}
 The magnitude and phase are usually plotted against $\omega$ on a logarithmic scale with magnitude defined in *decibels*:
 
-$$\left|H(j\omega\right|_{\mathrm{dB}} = 20\log{10} \left|H(j\omega)\right|$$
+$$\left|H(j\omega)\right|_{\mathrm{dB}} = 20\log{10} \left|H(j\omega)\right|$$
 
 and phase in *degrees*: 
 
@@ -248,11 +248,11 @@ Above the *bandwidth frequency* the RMS value of the system is below the RMS val
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (unit6.2.6)=
-## Aysymptotic bode plots for first-order systems
+## Aysymptotic Bode plots for first-order systems
 
-In the remainder of this Unit, we will rely on the explanations given by Carlos Osorio in Parts 3 and 4 of {cite}`osorio93`. This material is also covered in Worked Problem 5.47 from {cite}`schaum`. 
+In the remainder of this unit, we will rely on the explanations given by Carlos Osorio in Parts 3 and 4 of {cite}`osorio93`. This material is also covered in Worked Problem 5.47 from {cite}`schaum`. 
 
-You can always produce a bode plot for a system by use of the tools provided in MATLAB. 
+You can always produce a Bode plot for a system by use of the tools provided in MATLAB. 
 
 However, a knowledge of the asymptotic behaviour of first and second order poles (the insight gained by Bode in 1938), provides a powerful tool for analysis and design of systems in the frequency domain.
 
@@ -298,7 +298,7 @@ Increasing the gain causes a shift in the magnitude plot *up* by $20\log_{10} K$
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (u62:int)=
-### Asymptotic bode plot of an integrator
+### Asymptotic Bode plot of an integrator
 
 If
 
@@ -335,7 +335,7 @@ The roll-off rate is $-20$ dB/decade.
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (u62:diff)=
-### Asymptotic bode plot of an differentiator
+### Asymptotic Bode plot of an differentiator
 
 If
 
@@ -372,7 +372,7 @@ The magnification increases by 20 dB per decade and there is no limit! This is a
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (u62:pole)=
-### Asymptotic bode plot of an single pole
+### Asymptotic Bode plot of an single pole
 
 If 
 
@@ -419,7 +419,7 @@ For most of the magnitude Bode plot, the computed plot is well matched by its as
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (u62:zero)=
-### Asymptotic bode plot of an single zero
+### Asymptotic Bode plot of an single zero
 
 If 
 
@@ -487,7 +487,7 @@ controlSystemDesigner('bode',H)
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (unit6.2.7)=
-## Aysymptotic bode plots for a second-order system
+## Aysymptotic Bode plots for a second-order system
 
 The model second order system is given by the transfer function
 
