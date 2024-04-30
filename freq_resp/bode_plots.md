@@ -117,7 +117,7 @@ Plot of magnitude v phase plotted against frequency interpolated from individual
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-The plot of *amplfication* ($M$) and phase ($\phi$), usually plotted against the *log of frequency* $\omega$ rad/s, is called a Bode plot.
+The plot of *amplification* ($M$) and *phase* ($\phi$), usually plotted against the *log of frequency* $\omega$ rad/s, is called a Bode plot.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -237,7 +237,7 @@ In the bode-plot, at low frequency, the gain is 0 dB (or 1). Above the cross-ove
 
 ## Bandwidth frequency
 
-Above the *bandwidth frequency* the RMS value of the system is below the RMS value of the input. This so-called *half-power frequency* occurs when $M = \sqrt{2}/2$ or $-3$ dB[^u62:note:3]. 
+Above the *bandwidth frequency* the RMS value of the system is below the RMS value of the input. This so-called *half-power frequency* occurs when $M = \sqrt{2}/2 = 1/\sqrt{2} \approx 0.707$ or $20\log_{10}\left(0.707\right) \approx -3$ dB[^u62:note:3]. 
 
 <img src="pictures/bandwidth_freq.png" alt="illustration of the bandwidth frequency in a Bode plot" width="75%" />
 
@@ -252,7 +252,11 @@ Above the *bandwidth frequency* the RMS value of the system is below the RMS val
 
 In the remainder of this unit, we will rely on the explanations given by Carlos Osorio in Parts 3 and 4 of {cite}`osorio93`. This material is also covered in Worked Problem 5.47 from {cite}`schaum`. 
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 You can always produce a Bode plot for a system by use of the tools provided in MATLAB. 
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 However, a knowledge of the asymptotic behaviour of first and second order poles (the insight gained by Bode in 1938), provides a powerful tool for analysis and design of systems in the frequency domain.
 
@@ -318,7 +322,7 @@ $$M_\mathrm{dB} = 20\log_{10}(1) - 20\log_{10}({\omega})$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-At $\omega = 0$, $M = 1$, $M_\mathrm{dB} = 0$ dB. At $\omega = 10$, $M=1/10 = -20$ dB. The phase shift is $-90^\circ$ for all $\omega$. The bode plot is therefore:
+At $\omega = 1$, $M = 1$, $M_\mathrm{dB} = 0$ dB. At $\omega = 10$, $M=1/10 = -20$ dB. The phase shift is $-90^\circ$ for all $\omega$. The bode plot is therefore:
 
 ```{code-cell}
 ---
@@ -355,7 +359,7 @@ $$M_\mathrm{dB} = + 20\log_{10}({\omega})$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-At $\omega = 0$, $M = 1$, $M_\mathrm{dB} = 0$ dB. At $\omega = 10$, $M=10 = 20$ dB. The phase shift is $90^\circ$ for all $\omega$. The bode plot is therefore:
+At $\omega = 1$, $M = 1$, $M_\mathrm{dB} = 0$ dB. At $\omega = 10$, $M=10 = 20$ dB. The phase shift is $90^\circ$ for all $\omega$. The bode plot is therefore:
 
 ```{code-cell}
 ---
@@ -482,7 +486,7 @@ controlSystemDesigner('bode',H)
 
 * Add another pole close the first pole and note the roll-off is -20 dB/decade.
 
-* Add a third pole and note attenuation becomes -240 dB/decade.
+* Add a third pole and note attenuation becomes -40 dB/decade.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -495,7 +499,7 @@ $$H(s) = \frac{\omega^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}$$
 
 where $\omega_n$ is the undamped natural frequency and $\zeta$ is the damping ratio.
 
-As we will see, the shape of the frequency response of this system depends only on $\zeta$ and $\omega_n$. Hence knowledge of this plot allows us to easily analysis a system which has factors that are quadratic polynomials in $s$.
+As we will see, the shape of the frequency response of this system depends only on $\zeta$ and $\omega_n$. Hence knowledge of this plot allows us to easily analyze a system which has factors that are quadratic polynomials in $s$.
 
 Once again, we will rely on the explanation given by Carlos Osorio in Parts 4 of {cite}`osorio93`.
 
@@ -643,11 +647,11 @@ controlSystemDesigner('bode',H)
 
 * Change damping to $\zeta=0.05$. Peak gain is $|1/2\zeta|=10=20$ dB. If you change the natural frequency, you change the location of the peak, not the size of the peak. Change $\omega_n = 1$ rad/s.
 
-* Change the gain to 10. Note that the magnitude plot shits up 20 dB. This illustrates the additive properties of the bode diagram. Because the phase of a gain is 0, the phase is unaffected. 
+* Change the gain to 10. Note that the magnitude plot shifts up 20 dB. This illustrates the additive properties of the bode diagram. Because the phase of a gain is 0, the phase is unaffected. 
 
-* Add a zero at $\omega = 10$ rad/s. Note the roll-off slope changes from -40 dB/decade to -20 dB/decade. The final phase changes from $-180^\circ$ to $-90^\circ$ another pole close the first pole and note the roll-off is -20 dB/decade.
+* Add a zero at $\omega = 10$ rad/s. Note the roll-off slope changes from -40 dB/decade to -20 dB/decade. The final phase changes from $-180^\circ$ to $-90^\circ$. Add another pole close the first pole and note the roll-off is -20 dB/decade.
 
-* Add a pole at $\omega = 100$ rad/s. Note final magnitude slope retrurns to -40 db/decade and final phase returns to $-180^\circ$.
+* Change the thrird pole to $\omega = 100$ rad/s ($\tau = 0.01$). Note final magnitude slope retrurns to -40 db/decade and final phase returns to $-180^\circ$.
 
 * Change damping to $1/\sqrt{2}$ to illustrate what is called *ideal damping*. Here there is no overshoot and the magnitude is -3 dB at $\omega = \omega_n$.
 
