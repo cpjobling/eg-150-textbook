@@ -443,7 +443,7 @@ For $\omega \ll 1/\tau$, $\tau^2\omega^2 \ll 1$, $M \approx 1 = 0$ dB, $\phi \ap
 
 For $\omega \gg 1/\tau$, $\tau^2\omega^2 \gg 1$, $M_\mathrm{dB} = 20\log_{10} \sqrt{\tau^2\omega^2} = 20\log_{10} \left(\tau\omega\right)$ dB, $\phi \approx +90^\circ$.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
  We can plot this as shown below:
 
@@ -454,6 +454,8 @@ slideshow:
 ---
 tau = 1; H5 = tf([tau, 1],1); bode(H5),grid on
 ```
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Adding the assymptotes gives
 
@@ -495,7 +497,7 @@ controlSystemDesigner('bode',H)
 
 The model second order system is given by the transfer function
 
-$$H(s) = \frac{\omega^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}$$
+$$H(s) = \frac{\omega_n^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}$$
 
 where $\omega_n$ is the undamped natural frequency and $\zeta$ is the damping ratio.
 
@@ -538,7 +540,7 @@ $$H(s) = \frac{X(s)}{F(s)} = \frac{\frac{1}{m} }{s^2 + \left(\frac{c}{m}\right)s
 
 and the natural frequency is
 
-$$\omega_n = \sqrt{\frac{k}{M}}.$$
+$$\omega_n = \sqrt{\frac{k}{m}}.$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -579,7 +581,7 @@ To evaluate the asymptotes, we will look at the tendences for frequencies before
 
 For $\omega \ll \omega_n$ the +1 term in the denominator will dominate and
 
-$$\left|H(j\omega\right|_\mathrm{dB} \approx 0\,\mathrm{dB}$$
+$$\left|H(j\omega\right)|_\mathrm{dB} \approx 0\,\mathrm{dB}$$
 
 $$\angle H(j\omega = 0^\circ$$
 
@@ -587,9 +589,9 @@ $$\angle H(j\omega = 0^\circ$$
 
 When $\omega = \omega_n$ the square term will cancel the +1 term and the denominator will become
 
-$$\left|H(j\omega\right|_\mathrm{dB} = 20\log_{10}\left(\frac{1}{2\zeta} \right)\,\mathrm{dB}$$
+$$\left|H(j\omega)\right|_\mathrm{dB} = 20\log_{10}\left(\frac{1}{2\zeta} \right)\,\mathrm{dB}$$
 
-$$\angle H(j\omega =  -90^\circ$$
+$$\angle H(j\omega) =  -90^\circ$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -684,7 +686,7 @@ With MATLAB and the Control System Designer tool is is very easy to explore the 
 
 It is also a very useful tool for examining the stability, gain and phase margin for feedback control systems. 
 
-You acan also use the superposition properties of the Bode plot to facilitae the design of PID, lead and lag controllers in control system design. 
+You can also use the superposition properties of the Bode plot to facilitae the design of PID, lead and lag controllers in control system design. 
 
 You will study the latter two applications in EG-243 next year.
 

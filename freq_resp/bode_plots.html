@@ -842,7 +842,7 @@ document.write(`
 <span id="unit6-2-7"></span><h2>Aysymptotic Bode plots for a second-order system<a class="headerlink" href="#aysymptotic-bode-plots-for-a-second-order-system" title="Permalink to this heading">#</a></h2>
 <p>The model second order system is given by the transfer function</p>
 <div class="math notranslate nohighlight">
-\[H(s) = \frac{\omega^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}\]</div>
+\[H(s) = \frac{\omega_n^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\omega_n\)</span> is the undamped natural frequency and <span class="math notranslate nohighlight">\(\zeta\)</span> is the damping ratio.</p>
 <p>As we will see, the shape of the frequency response of this system depends only on <span class="math notranslate nohighlight">\(\zeta\)</span> and <span class="math notranslate nohighlight">\(\omega_n\)</span>. Hence knowledge of this plot allows us to easily analyze a system which has factors that are quadratic polynomials in <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <p>Once again, we will rely on the explanation given by Carlos Osorio in Parts 4 of <span id="id11">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span>.</p>
@@ -865,7 +865,7 @@ document.write(`
 \[H(s) = \frac{X(s)}{F(s)} = \frac{\frac{1}{m} }{s^2 + \left(\frac{c}{m}\right)s + \left(\frac{k}{m} \right)}\]</div>
 <p>and the natural frequency is</p>
 <div class="math notranslate nohighlight">
-\[\omega_n = \sqrt{\frac{k}{M}}.\]</div>
+\[\omega_n = \sqrt{\frac{k}{m}}.\]</div>
 <p>For the RLC circuit</p>
 <div class="math notranslate nohighlight">
 \[H(s) = \frac{V_\mathrm{out}(s)}{V_\mathrm{in}(s)} = \frac{\left(\frac{R}{L}\right)s }{s^2 + \left(\frac{R}{L}\right)s + \left(\frac{1}{LC} \right)}\]</div>
@@ -884,14 +884,14 @@ document.write(`
 <p>To evaluate the asymptotes, we will look at the tendences for frequencies before and after <span class="math notranslate nohighlight">\(\omega_n\)</span>.</p>
 <p>For <span class="math notranslate nohighlight">\(\omega \ll \omega_n\)</span> the +1 term in the denominator will dominate and</p>
 <div class="math notranslate nohighlight">
-\[\left|H(j\omega\right|_\mathrm{dB} \approx 0\,\mathrm{dB}\]</div>
+\[\left|H(j\omega\right)|_\mathrm{dB} \approx 0\,\mathrm{dB}\]</div>
 <div class="math notranslate nohighlight">
 \[\angle H(j\omega = 0^\circ\]</div>
 <p>When <span class="math notranslate nohighlight">\(\omega = \omega_n\)</span> the square term will cancel the +1 term and the denominator will become</p>
 <div class="math notranslate nohighlight">
-\[\left|H(j\omega\right|_\mathrm{dB} = 20\log_{10}\left(\frac{1}{2\zeta} \right)\,\mathrm{dB}\]</div>
+\[\left|H(j\omega)\right|_\mathrm{dB} = 20\log_{10}\left(\frac{1}{2\zeta} \right)\,\mathrm{dB}\]</div>
 <div class="math notranslate nohighlight">
-\[\angle H(j\omega =  -90^\circ\]</div>
+\[\angle H(j\omega) =  -90^\circ\]</div>
 <p>When <span class="math notranslate nohighlight">\(\omega \gg \omega_n\)</span> the squared term will dominate, and</p>
 <div class="math notranslate nohighlight">
 \[\left|H(j\omega\right|_\mathrm{dB} \approx -40\log_{10}\left(\frac{\omega}{\omega_n} \right)\,\mathrm{dB}\]</div>
@@ -958,7 +958,7 @@ document.write(`
 <p>As we have seen, the Bode plot is a useful system analysis tool.</p>
 <p>With MATLAB and the Control System Designer tool is is very easy to explore the behaviour of indiviual poles and zeros and see how the combination of poles and zeros impact the overall frquency response.</p>
 <p>It is also a very useful tool for examining the stability, gain and phase margin for feedback control systems.</p>
-<p>You acan also use the superposition properties of the Bode plot to facilitae the design of PID, lead and lag controllers in control system design.</p>
+<p>You can also use the superposition properties of the Bode plot to facilitae the design of PID, lead and lag controllers in control system design.</p>
 <p>You will study the latter two applications in EG-243 next year.</p>
 </section>
 <section id="summary">
