@@ -597,7 +597,7 @@ $$\angle H(j\omega) =  -90^\circ$$
 
 When $\omega \gg \omega_n$ the squared term will dominate, and
 
-$$\left|H(j\omega\right|_\mathrm{dB} \approx -40\log_{10}\left(\frac{\omega}{\omega_n} \right)\,\mathrm{dB}$$
+$$\left|H(j\omega)\right|_\mathrm{dB} \approx -40\log_{10}\left(\frac{\omega}{\omega_n} \right)\,\mathrm{dB}$$
 
 $$\angle H(j\omega = -180^\circ$$
 
