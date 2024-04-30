@@ -250,11 +250,11 @@ Above the *bandwidth frequency* the RMS value of the system is below the RMS val
 (unit6.2.6)=
 ## Aysymptotic Bode plots for first-order systems
 
-In the remainder of this unit, we will rely on the explanations given by Carlos Osorio in Parts 3 and 4 of {cite}`osorio93`. This material is also covered in Worked Problem 5.47 from {cite}`schaum`. 
+In the remainder of this unit, we will rely on the explanations given by Carlos Osorio in Parts 3 and 4 of {cite}`osorio93`. This material is also covered in Worked Problem 5.47 from {cite}`schaum`.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-You can always produce a Bode plot for a system by use of the tools provided in MATLAB. 
+You can always produce a Bode plot for a system by use of the tools provided in MATLAB.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -490,6 +490,8 @@ controlSystemDesigner('bode',H)
 
 * Add a third pole and note attenuation becomes -40 dB/decade.
 
+To see the results of this demo, visit the shared MATLAB Drive folder **Week 11** in [EG-150 Signals and Systems](https://drive.mathworks.com/sharing/8cfcd775-d7a3-41f3-ac12-737fae79aba9) and open demo1.mat from inside the controlSystem designer.
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (unit6.2.7)=
@@ -666,6 +668,8 @@ $$\frac{10\left(0.1s + 1\right)}{\left(0.01s + 1\right)\left(s^2 + 0.1s + 1\righ
 So, using this concept of superposition we can easily construct any transfer function that we are interested in studying. 
 
 All we need to do is break down or factor the transfer function into smaller constructs, and then graphically add all of those traces together as shown in {numref}`fig:unit6.2:6`.
+
+To see the results of this demo, visit the shared MATLAB Drive folder **Week 11** in [EG-150 Signals and Systems](https://drive.mathworks.com/sharing/8cfcd775-d7a3-41f3-ac12-737fae79aba9) and open demo2.mat from inside the controlSystem designer.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
