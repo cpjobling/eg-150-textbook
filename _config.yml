@@ -9,7 +9,7 @@
 title: EG-150 Signals and Systems
 author: Dr Chris P. Jobling
 email: c.p.jobling@swansea.ac.uk
-copyright: "Swansea University (2023-2024)"
+copyright: "Swansea University (2023-2025)"
 description: >-
   Notes and example programmes to accompany the module EG-150 Signals and Systems.
 
@@ -47,7 +47,7 @@ html:
         Jupyter Book
       </a>
     comments:
-      hypothesis: true
+      hypothesis: false
       utterences: false
 
 colab_default: false

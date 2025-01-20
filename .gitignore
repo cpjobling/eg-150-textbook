@@ -1,4 +1,5 @@
 .DS_Store
+setup*
 _assets/
 _slides/
 _videos/
