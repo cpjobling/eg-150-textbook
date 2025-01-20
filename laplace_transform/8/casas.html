@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Unit 4.8: Computer-Aided Systems Analysis and Simulation &#8212; EG-150 Signals and Systems</title>
   
@@ -54,7 +54,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -785,6 +784,60 @@ symbolically.</p>
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 6 s^2 + 8 s
+ 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+</div>
+</div>
+<p>and the zeros and poles similarly extracted:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nb">zeros</span><span class="p">,</span><span class="n">poles</span><span class="p">,</span><span class="n">gain</span><span class="p">]=</span><span class="n">zpkdata</span><span class="p">(</span><span class="n">G2</span><span class="p">,</span><span class="s">&#39;v&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zeros =
+    -3
+    -1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>poles =
+     0
+    -4
+    -2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gain =
+     1
+</pre></div>
+</div>
+</div>
+</div>
+<p>LTI system objects can also be created from the expanded form of a transfer function directly:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G2</span><span class="p">=</span><span class="n">tf</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">den</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G2 =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    s^2 + 4 s + 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 6 s^2 + 8 s
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
@@ -813,60 +866,6 @@ symbolically.</p>
     -4
     -2
 gain =
-     1
-</pre></div>
-</div>
-</div>
-</div>
-<p>LTI system objects can also be created from the expanded form of a transfer function directly:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G2</span><span class="p">=</span><span class="n">tf</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">den</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G2 =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    s^2 + 4 s + 3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
-  s^3 + 6 s^2 + 8 s
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
-</pre></div>
-</div>
-</div>
-</div>
-<p>and the zeros and poles similarly extracted:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nb">zeros</span><span class="p">,</span><span class="n">poles</span><span class="p">,</span><span class="n">gain</span><span class="p">]=</span><span class="n">zpkdata</span><span class="p">(</span><span class="n">G2</span><span class="p">,</span><span class="s">&#39;v&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zeros =
-    -3
-    -1
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>poles =
-     0
-    -4
-    -2
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gain =
      1
 </pre></div>
 </div>
@@ -907,7 +906,9 @@ gain =
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------
-  s (s+2) (s+4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s (s+2) (s+4)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
@@ -1230,7 +1231,7 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d5e40001425aa51d02132f53cb4c3dcfd8a20ba8ec6cd9766077dad4d16d538a.png" src="../../_images/d5e40001425aa51d02132f53cb4c3dcfd8a20ba8ec6cd9766077dad4d16d538a.png" />
+<img alt="../../_images/6cd173cf12ea69f93eaf9a68aa26a69ba3f50bc16597a88964bbc26dfcc65164.png" src="../../_images/6cd173cf12ea69f93eaf9a68aa26a69ba3f50bc16597a88964bbc26dfcc65164.png" />
 </div>
 </div>
 </section>
@@ -1243,7 +1244,7 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/af4bc02f6103fae94828b36cc28a3e622d024ec54065123730aba96ad5a3d792.png" src="../../_images/af4bc02f6103fae94828b36cc28a3e622d024ec54065123730aba96ad5a3d792.png" />
+<img alt="../../_images/2ba7a0ec1115b32eaecc0619308bbb0a98d5ee59d980bd3ce7e2778ea139500a.png" src="../../_images/2ba7a0ec1115b32eaecc0619308bbb0a98d5ee59d980bd3ce7e2778ea139500a.png" />
 </div>
 </div>
 </section>
@@ -1256,7 +1257,7 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/288f669453e7a5998b6c30bde03e257a621c8f313c8a9e36a96de31e03c90442.png" src="../../_images/288f669453e7a5998b6c30bde03e257a621c8f313c8a9e36a96de31e03c90442.png" />
+<img alt="../../_images/e5d493477988dc3568049494cfd48318123d71bde4cb6f34391281090fc9914d.png" src="../../_images/e5d493477988dc3568049494cfd48318123d71bde4cb6f34391281090fc9914d.png" />
 </div>
 </div>
 </section>
@@ -1269,7 +1270,7 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/7f1c3ebc64f4de2dd242d7668a3846e12650bb0c0ebf81e9cb19b01482d8977e.png" src="../../_images/7f1c3ebc64f4de2dd242d7668a3846e12650bb0c0ebf81e9cb19b01482d8977e.png" />
+<img alt="../../_images/1333edfa62978863f3ba4bac1fab3abe7ab0283457aef053e2a69adaee9e3450.png" src="../../_images/1333edfa62978863f3ba4bac1fab3abe7ab0283457aef053e2a69adaee9e3450.png" />
 </div>
 </div>
 </section>
@@ -1282,7 +1283,7 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/aae24c01f0d5ca11c69d5702b5b88a49a1f7ea5c7e95373765088503f6edf643.png" src="../../_images/aae24c01f0d5ca11c69d5702b5b88a49a1f7ea5c7e95373765088503f6edf643.png" />
+<img alt="../../_images/90858cd211959e8424daa6b0fd7fe1703cfbd9d559984504426bd771b31994ba.png" src="../../_images/90858cd211959e8424daa6b0fd7fe1703cfbd9d559984504426bd771b31994ba.png" />
 </div>
 </div>
 </section>
@@ -1295,7 +1296,7 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/36da374978796a71696a7034074dc265f9e3eb0423c90cd1576b99a52808a02f.png" src="../../_images/36da374978796a71696a7034074dc265f9e3eb0423c90cd1576b99a52808a02f.png" />
+<img alt="../../_images/59bf228cec44cca6d99291e20576c6ee14334b7f1c495f7830ab880f07850656.png" src="../../_images/59bf228cec44cca6d99291e20576c6ee14334b7f1c495f7830ab880f07850656.png" />
 </div>
 </div>
 <p>MATLAB also provides two interactive graphical tools that work with LTI system objects</p>
@@ -1405,7 +1406,7 @@ gain =
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
 </pre></div>
 </div>
-<img alt="../../_images/494c04ff2137664602b2871ad04777289878a7841c135f5ad945355f9e04bda3.png" src="../../_images/494c04ff2137664602b2871ad04777289878a7841c135f5ad945355f9e04bda3.png" />
+<img alt="../../_images/dd3cb3f85978f607ff782835305dc2a70db89f3506f3c6d80559b987b3908dce.png" src="../../_images/dd3cb3f85978f607ff782835305dc2a70db89f3506f3c6d80559b987b3908dce.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1417,7 +1418,7 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/f405df1c8c580da43d3fecad2d135a36a3f89de73f246c98013201a8f9f5701c.png" src="../../_images/f405df1c8c580da43d3fecad2d135a36a3f89de73f246c98013201a8f9f5701c.png" />
+<img alt="../../_images/d922e42257d739b79ee9ba24ff4988dc8fee96e023588e95dfff64c6e35d8a05.png" src="../../_images/d922e42257d739b79ee9ba24ff4988dc8fee96e023588e95dfff64c6e35d8a05.png" />
 </div>
 </div>
 <p>Completing the problem using the Symbolic toolbox is left as an exercise for the reader.</p>
@@ -1483,9 +1484,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + 3 s + 1
+  s^2 + 3 s + 1
  
 </pre></div>
 </div>
@@ -1502,7 +1501,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/a3eab46b024888cd70bbfadd5e009adb54c88675c66e2ef5fb4b60614bfa4b71.png" src="../../_images/a3eab46b024888cd70bbfadd5e009adb54c88675c66e2ef5fb4b60614bfa4b71.png" />
+<img alt="../../_images/dd4c3ab775ed35212637735cef6b18891e0c3124080d7f45f5c78871a0ee19b6.png" src="../../_images/dd4c3ab775ed35212637735cef6b18891e0c3124080d7f45f5c78871a0ee19b6.png" />
 </div>
 </div>
 </section>
@@ -1531,7 +1530,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/0dad0d8ffdd58c7762f4367d1061568edfd9b8f221787d347df32bec1f54f8b5.png" src="../../_images/0dad0d8ffdd58c7762f4367d1061568edfd9b8f221787d347df32bec1f54f8b5.png" />
+<img alt="../../_images/e37ead53085a96698c5b19a60efdce9185e553712597b63f0649a22bdc6ab4b5.png" src="../../_images/e37ead53085a96698c5b19a60efdce9185e553712597b63f0649a22bdc6ab4b5.png" />
 </div>
 </div>
 <div class="admonition note">
@@ -1605,13 +1604,13 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <p>The MATLAB commands discussed in this section are summarized in the table given below.</p>
 <section id="quick-reference-to-matlab-objects-and-functions">
 <h4>Quick Reference to MATLAB objects and functions<a class="headerlink" href="#quick-reference-to-matlab-objects-and-functions" title="Permalink to this heading">#</a></h4>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head text-left"><p>Name</p></th>
-<th class="head text-left"><p>Purpose</p></th>
-<th class="head text-left"><p>Usage</p></th>
-<th class="head text-left"><p>Reference</p></th>
-<th class="head text-left"><p>Notes</p></th>
+<tr class="row-odd"><th class="text-left head"><p>Name</p></th>
+<th class="text-left head"><p>Purpose</p></th>
+<th class="text-left head"><p>Usage</p></th>
+<th class="text-left head"><p>Reference</p></th>
+<th class="text-left head"><p>Notes</p></th>
 </tr>
 </thead>
 <tbody>
@@ -1744,12 +1743,11 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id9">
-<div class="citation" id="id24" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>EDWT16<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>,<a role="doc-backlink" href="#id4">3</a>,<a role="doc-backlink" href="#id5">4</a>,<a role="doc-backlink" href="#id7">5</a>,<a role="doc-backlink" href="#id8">6</a>)</span>
-<p>Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. <em>EG-152 Analogue Design Laboratory</em>. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.</p>
-</div>
-</div>
+<dl class="citation">
+<dt class="label" id="id24"><span class="brackets">EDWT16</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id4">3</a>,<a href="#id5">4</a>,<a href="#id7">5</a>,<a href="#id8">6</a>)</span></dt>
+<dd><p>Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. <em>EG-152 Analogue Design Laboratory</em>. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.</p>
+</dd>
+</dl>
 </div>
 </section>
 <section id="matlab-solutions">
@@ -1898,7 +1896,7 @@ By Dr Chris P. Jobling
 
   <p class="copyright">
     
-      © Copyright Swansea University (2023-2024).
+      © Copyright Swansea University (2023-2025).
       <br/>
     
   </p>
