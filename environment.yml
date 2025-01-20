@@ -1,4 +1,4 @@
-name: eg-150-textbook
+name: eg-247-textbook
 channels:
   - defaults
   - conda-forge
@@ -57,8 +57,8 @@ dependencies:
   - bzip2=1.0.8=h620ffc9_4
   - c-ares=1.19.1=h80987f9_0
   - c-blosc2=2.10.5=h7df6c2f_0
-  - ca-certificates=2024.12.31=hca03da5_0
-  - certifi=2024.12.14=py311hca03da5_0
+  - ca-certificates=2023.11.17=hf0a4a13_0
+  - certifi=2023.11.17=pyhd8ed1ab_0
   - cffi=1.16.0=py311h80987f9_0
   - cfitsio=3.470=h7f6438f_7
   - chardet=4.0.0=py311hca03da5_1003
@@ -69,8 +69,6 @@ dependencies:
   - colorama=0.4.6=py311hca03da5_0
   - colorcet=3.0.1=py311hca03da5_0
   - comm=0.1.2=py311hca03da5_0
-  - conda=23.10.0=py311hca03da5_0
-  - conda-libmamba-solver=23.11.1=py311hca03da5_0
   - conda-package-handling=2.2.0=py311hca03da5_0
   - conda-package-streaming=0.9.0=py311hca03da5_0
   - constantly=15.1.0=py311hca03da5_0
@@ -143,7 +141,6 @@ dependencies:
   - intervaltree=3.1.0=pyhd3eb1b0_0
   - ipykernel=6.25.0=py311hb6e6a13_0
   - ipython=8.15.0=py311hca03da5_0
-  - ipython_genutils=0.2.0=pyhd3eb1b0_1
   - ipywidgets=8.0.4=py311hca03da5_0
   - isort=5.9.3=pyhd3eb1b0_0
   - itemadapter=0.3.0=pyhd3eb1b0_0
@@ -166,16 +163,14 @@ dependencies:
   - jupyter-book=0.15.1=pyhd8ed1ab_0
   - jupyter-cache=0.6.1=pyhd8ed1ab_0
   - jupyter-lsp=2.2.0=py311hca03da5_0
-  - jupyter_client=7.4.9=py311hca03da5_0
   - jupyter_console=6.6.3=py311hca03da5_0
   - jupyter_core=5.5.0=py311hca03da5_0
   - jupyter_events=0.8.0=py311hca03da5_0
-  - jupyter_server=1.13.5=pyhd3eb1b0_0
   - jupyter_server_terminals=0.4.4=py311hca03da5_1
   - jupyterlab_pygments=0.1.2=py_0
-  - jupyterlab_server=2.10.3=pyhd3eb1b0_1
+  - jupyterlab_server=2.25.1=py311hca03da5_0
   - jupyterlab_widgets=3.0.9=py311hca03da5_0
-  - jupytext=1.16.1=py311hca03da5_1
+  - jupytext=1.15.2=pyh5da7574_0
   - jxrlib=1.1=h1a28f6b_2
   - kaleido-core=0.2.1=h80987f9_0
   - keyring=23.13.1=py311hca03da5_0
@@ -275,7 +270,7 @@ dependencies:
   - oniguruma=6.9.7.1=h1a28f6b_0
   - openjpeg=2.3.0=h7a6adac_2
   - openpyxl=3.0.10=py311h80987f9_0
-  - openssl=3.4.0=h81ee809_1
+  - openssl=3.2.0=h0d3ecfb_0
   - orc=1.7.4=hdca1487_1
   - overrides=7.4.0=py311hca03da5_0
   - packaging=23.1=py311hca03da5_0
@@ -361,7 +356,6 @@ dependencies:
   - pyviz_comms=2.3.0=py311hca03da5_0
   - pywavelets=1.4.1=py311h80987f9_0
   - pyyaml=6.0.1=py311h80987f9_0
-  - pyzmq=24.0.1=py311h0f351f6_1
   - qdarkstyle=3.2=pyhd8ed1ab_0
   - qstylizer=0.2.2=py311hca03da5_0
   - qt-main=5.15.2=h0917680_10
@@ -499,7 +493,9 @@ dependencies:
       - docutils==0.17.1
       - fqdn==1.5.1
       - ghp-import==2.1.0
+      - ipython-genutils==0.2.0
       - isoduration==20.11.0
+      - jupyter-client==7.4.9
       - jupyter-contrib-core==0.4.2
       - jupyter-contrib-nbextensions==0.7.0
       - jupyter-highlight-selected-word==0.2.0
@@ -515,11 +511,13 @@ dependencies:
       - matlab-proxy==0.10.0
       - matlabengine==23.2
       - metakernel==0.30.1
+      - mystmd==1.2.5
       - nbclassic==1.0.0
       - notebook==6.5.6
+      - pyzmq==24.0.1
       - simpervisor==1.0.0
       - uri-template==1.3.0
       - webcolors==1.13
       - y-py==0.6.2
       - ypy-websocket==0.8.4
-prefix: /Users/eechris/anaconda3/envs/eg-150-textbook
+prefix: /Users/eechris/anaconda3/envs/eg-247-textbook
