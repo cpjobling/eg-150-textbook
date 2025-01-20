@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Unit 5.2: More on the Qualitative and Quantitative Response of First- and Second-Order Poles &#8212; EG-150 Signals and Systems</title>
   
@@ -649,7 +649,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <p>(c) The time at which the current decays to 1% of <span class="math notranslate nohighlight">\(i(0)\)</span>.</p>
 <section id="solution-to-example-8">
 <h4>Solution to example 8<a class="headerlink" href="#solution-to-example-8" title="Permalink to this heading">#</a></h4>
-<p>(a) The initial current is given by<a class="footnote-reference brackets" href="#unit5-2-1" id="id4">1</a></p>
+<p>(a) The initial current is given by<a class="footnote-reference brackets" href="#unit5-2-1" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <div class="math notranslate nohighlight">
 \[\lim_{s\to\infty} sI(s) = \lim_{s\to\infty}s\frac{1/RC}{s + 1/RC} = 1/RC.\]</div>
 <p>Given the component values of <span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(i(0) = 1/RC = 100\)</span> mA.</p>
@@ -935,7 +935,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 <section id="useful-quantifiers-that-result-from-step-response">
 <span id="unit-5-2-4"></span><h2>Useful quantifiers that result from step response<a class="headerlink" href="#useful-quantifiers-that-result-from-step-response" title="Permalink to this heading">#</a></h2>
-<p>The relationship between the pole locations and the step response are summarized in <a class="reference internal" href="#fig-unit5-2-2"><span class="std std-numref">Fig. 80</span></a> <a class="footnote-reference brackets" href="#unit5-1-note-4" id="id5">2</a></p>
+<p>The relationship between the pole locations and the step response are summarized in <a class="reference internal" href="#fig-unit5-2-2"><span class="std std-numref">Fig. 80</span></a> <a class="footnote-reference brackets" href="#unit5-1-note-4" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
 <figure class="align-default" id="fig-unit5-2-2">
 <a class="reference internal image-reference" href="../_images/resppole.png"><img alt="Relationship between poles and step response" src="../_images/resppole.png" style="width: 100%;" /></a>
 <figcaption>
@@ -1449,27 +1449,29 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id8">
-<dl class="citation">
-<dt class="label" id="id24"><span class="brackets">All24</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id7">2</a>)</span></dt>
-<dd><p>Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: <a class="github reference external" href="https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0">MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems</a>.</p>
-</dd>
-<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id2">Boy93</a></span></dt>
-<dd><p>Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: <a class="reference external" href="https://web.stanford.edu/~boyd/ee102/">https://web.stanford.edu/~boyd/ee102/</a>.</p>
-</dd>
-</dl>
+<div class="citation" id="id24" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>All24<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id7">2</a>)</span>
+<p>Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: <a class="github reference external" href="https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0">MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems</a>.</p>
+</div>
+<div class="citation" id="id25" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Boy93</a><span class="fn-bracket">]</span></span>
+<p>Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: <a class="reference external" href="https://web.stanford.edu/~boyd/ee102/">https://web.stanford.edu/~boyd/ee102/</a>.</p>
+</div>
+</div>
 </div>
 </section>
 <section id="footnotes">
 <h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this heading">#</a></h2>
 <hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="unit5-2-1"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
-<dd><p>This is easily determined from <span class="math notranslate nohighlight">\(\left.f(t)\right|_{t\to 0} = \left.\frac{1}{RC} e^{-t/RC}\right|_{t\to 0} = 1/RC\)</span>.</p>
-</dd>
-<dt class="label" id="unit5-1-note-4"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
-<dd><p>In the diagram we use a slightly changed notation: <span class="math notranslate nohighlight">\(\omega_d = \omega\)</span> is the <em>damped natural frequency</em> given by the <em>imaginary part of the pole</em> and <span class="math notranslate nohighlight">\(\sigma_d = \sigma\)</span> is the <em>real part of the pole</em>.</p>
-</dd>
-</dl>
+<aside class="footnote brackets" id="unit5-2-1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">1</a><span class="fn-bracket">]</span></span>
+<p>This is easily determined from <span class="math notranslate nohighlight">\(\left.f(t)\right|_{t\to 0} = \left.\frac{1}{RC} e^{-t/RC}\right|_{t\to 0} = 1/RC\)</span>.</p>
+</aside>
+<aside class="footnote brackets" id="unit5-1-note-4" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">2</a><span class="fn-bracket">]</span></span>
+<p>In the diagram we use a slightly changed notation: <span class="math notranslate nohighlight">\(\omega_d = \omega\)</span> is the <em>damped natural frequency</em> given by the <em>imaginary part of the pole</em> and <span class="math notranslate nohighlight">\(\sigma_d = \sigma\)</span> is the <em>real part of the pole</em>.</p>
+</aside>
 </section>
 </section>
 

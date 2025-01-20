@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Unit 6.2: Bode Plots &#8212; EG-150 Signals and Systems</title>
   
@@ -665,7 +665,7 @@ document.write(`
 <img src="pictures/dc_gain.png" alt="illustration of DC gain" width="75%" /></section>
 <section id="roll-off-rate">
 <h3>Roll-off rate<a class="headerlink" href="#roll-off-rate" title="Permalink to this heading">#</a></h3>
-<p>The <em>roll-off rate</em> refers to the slope of the magnitude plot as the magnitude drops off at high-frequency. It is usually quoted in <em>dB per decade</em><a class="footnote-reference brackets" href="#u62-note-1" id="id6">1</a>, where a <em>decade</em> is a ten-fold increase in frequency.</p>
+<p>The <em>roll-off rate</em> refers to the slope of the magnitude plot as the magnitude drops off at high-frequency. It is usually quoted in <em>dB per decade</em><a class="footnote-reference brackets" href="#u62-note-1" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, where a <em>decade</em> is a ten-fold increase in frequency.</p>
 <img src="pictures/roll-off.png" alt="illustration of roll-off rate" width="75%" /></section>
 </section>
 <section id="natural-frequency">
@@ -674,11 +674,11 @@ document.write(`
 <img src="pictures/natural_freq.png" alt="illustration of natural frequencies indicated by peaks in the magnitude response" width="75%" /></section>
 <section id="cross-over-frequency">
 <h2>Cross-over frequency<a class="headerlink" href="#cross-over-frequency" title="Permalink to this heading">#</a></h2>
-<p>In the bode-plot, at low frequency, the gain is 0 dB (or 1). Above the cross-over frequency<a class="footnote-reference brackets" href="#u62-note-2" id="id7">2</a> the gain is less than 1 and the system starts to <em>attenuate</em> the input signal.</p>
+<p>In the bode-plot, at low frequency, the gain is 0 dB (or 1). Above the cross-over frequency<a class="footnote-reference brackets" href="#u62-note-2" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> the gain is less than 1 and the system starts to <em>attenuate</em> the input signal.</p>
 <img src="pictures/cross_over_freq.png" alt="illustration of the cross-over frequency in a Bode plot" width="75%" /></section>
 <section id="bandwidth-frequency">
 <h2>Bandwidth frequency<a class="headerlink" href="#bandwidth-frequency" title="Permalink to this heading">#</a></h2>
-<p>Above the <em>bandwidth frequency</em> the RMS value of the system is below the RMS value of the input. This so-called <em>half-power frequency</em> occurs when <span class="math notranslate nohighlight">\(M = \sqrt{2}/2 = 1/\sqrt{2} \approx 0.707\)</span> or <span class="math notranslate nohighlight">\(20\log_{10}\left(0.707\right) \approx -3\)</span> dB<a class="footnote-reference brackets" href="#u62-note-3" id="id8">3</a>.</p>
+<p>Above the <em>bandwidth frequency</em> the RMS value of the system is below the RMS value of the input. This so-called <em>half-power frequency</em> occurs when <span class="math notranslate nohighlight">\(M = \sqrt{2}/2 = 1/\sqrt{2} \approx 0.707\)</span> or <span class="math notranslate nohighlight">\(20\log_{10}\left(0.707\right) \approx -3\)</span> dB<a class="footnote-reference brackets" href="#u62-note-3" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
 <img src="pictures/bandwidth_freq.png" alt="illustration of the bandwidth frequency in a Bode plot" width="75%" /></section>
 <section id="aysymptotic-bode-plots-for-first-order-systems">
 <span id="unit6-2-6"></span><h2>Aysymptotic Bode plots for first-order systems<a class="headerlink" href="#aysymptotic-bode-plots-for-first-order-systems" title="Permalink to this heading">#</a></h2>
@@ -873,7 +873,7 @@ document.write(`
 <p>and the natural frequency is</p>
 <div class="math notranslate nohighlight">
 \[\omega_n = \sqrt{\frac{1}{LC}}.\]</div>
-<p>Providing that <span class="math notranslate nohighlight">\(0 &lt; \zeta \le 1\)</span>, the poles of the system will be complex and of the form<a class="footnote-reference brackets" href="#u62-note-10" id="id13">4</a>:</p>
+<p>Providing that <span class="math notranslate nohighlight">\(0 &lt; \zeta \le 1\)</span>, the poles of the system will be complex and of the form<a class="footnote-reference brackets" href="#u62-note-10" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>:</p>
 <div class="math notranslate nohighlight">
 \[p_{1,2} = -\zeta\omega_n \pm j\omega_n \sqrt{1 - \zeta^2}\]</div>
 </section>
@@ -1044,33 +1044,38 @@ document.write(`
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id16">
-<dl class="citation">
-<dt class="label" id="id26"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id10">2</a>)</span></dt>
-<dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
-</dd>
-<dt class="label" id="id34"><span class="brackets">Oso13</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id4">3</a>,<a href="#id5">4</a>,<a href="#id9">5</a>,<a href="#id11">6</a>,<a href="#id12">7</a>,<a href="#id14">8</a>)</span></dt>
-<dd><p>Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: <a class="reference external" href="https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html">https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html</a>.</p>
-</dd>
-</dl>
+<div class="citation" id="id26" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Hsu20<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id10">2</a>)</span>
+<p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
+</div>
+<div class="citation" id="id34" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Oso13<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id3">2</a>,<a role="doc-backlink" href="#id4">3</a>,<a role="doc-backlink" href="#id5">4</a>,<a role="doc-backlink" href="#id9">5</a>,<a role="doc-backlink" href="#id11">6</a>,<a role="doc-backlink" href="#id12">7</a>,<a role="doc-backlink" href="#id14">8</a>)</span>
+<p>Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: <a class="reference external" href="https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html">https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html</a>.</p>
+</div>
+</div>
 </div>
 </section>
 <section id="footnotes">
 <h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this heading">#</a></h2>
 <hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="u62-note-1"><span class="brackets"><a class="fn-backref" href="#id6">1</a></span></dt>
-<dd><p>Audio engineers quote roll-off in <em>dB per octave</em>, where an octave is a doubling of frequency.</p>
-</dd>
-<dt class="label" id="u62-note-2"><span class="brackets"><a class="fn-backref" href="#id7">2</a></span></dt>
-<dd><p>The cross-over refers to the change in response from a <em>gain</em> (<span class="math notranslate nohighlight">\(M \ge 1\)</span>) to an <em>attenuation</em> <span class="math notranslate nohighlight">\(M &lt; 1\)</span>. Above the cross-over frequency the system starts to act like a low-pass filter.</p>
-</dd>
-<dt class="label" id="u62-note-3"><span class="brackets"><a class="fn-backref" href="#id8">3</a></span></dt>
-<dd><p>In filter terms, the bandwidth frequency marks the transition between the <em>pass-band</em> and the <em>stop-band</em>. In control system terms, the bandwidth gives a limit on the frequencies that you can influence with contollers.</p>
-</dd>
-<dt class="label" id="u62-note-10"><span class="brackets"><a class="fn-backref" href="#id13">4</a></span></dt>
-<dd><p>If <span class="math notranslate nohighlight">\(\zeta = 1\)</span> there will be two real and equal poles at <span class="math notranslate nohighlight">\(s = -\zeta\omega_n\)</span>. If <span class="math notranslate nohighlight">\(\zeta &gt; 1\)</span> there will be two real poles at <span class="math notranslate nohighlight">\(p_{1,2} = -\zeta\omega_n \pm \omega_n\sqrt{\zeta^2 - 1}\)</span>. These cases are already covered in <span class="xref std std-ref">unit:6.2.6</span>. You would just add the Bode plots for the real poles (or their asymptotes) together.</p>
-</dd>
-</dl>
+<aside class="footnote brackets" id="u62-note-1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">1</a><span class="fn-bracket">]</span></span>
+<p>Audio engineers quote roll-off in <em>dB per octave</em>, where an octave is a doubling of frequency.</p>
+</aside>
+<aside class="footnote brackets" id="u62-note-2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">2</a><span class="fn-bracket">]</span></span>
+<p>The cross-over refers to the change in response from a <em>gain</em> (<span class="math notranslate nohighlight">\(M \ge 1\)</span>) to an <em>attenuation</em> <span class="math notranslate nohighlight">\(M &lt; 1\)</span>. Above the cross-over frequency the system starts to act like a low-pass filter.</p>
+</aside>
+<aside class="footnote brackets" id="u62-note-3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">3</a><span class="fn-bracket">]</span></span>
+<p>In filter terms, the bandwidth frequency marks the transition between the <em>pass-band</em> and the <em>stop-band</em>. In control system terms, the bandwidth gives a limit on the frequencies that you can influence with contollers.</p>
+</aside>
+<aside class="footnote brackets" id="u62-note-10" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">4</a><span class="fn-bracket">]</span></span>
+<p>If <span class="math notranslate nohighlight">\(\zeta = 1\)</span> there will be two real and equal poles at <span class="math notranslate nohighlight">\(s = -\zeta\omega_n\)</span>. If <span class="math notranslate nohighlight">\(\zeta &gt; 1\)</span> there will be two real poles at <span class="math notranslate nohighlight">\(p_{1,2} = -\zeta\omega_n \pm \omega_n\sqrt{\zeta^2 - 1}\)</span>. These cases are already covered in <span class="xref std std-ref">unit:6.2.6</span>. You would just add the Bode plots for the real poles (or their asymptotes) together.</p>
+</aside>
 </section>
 </section>
 
