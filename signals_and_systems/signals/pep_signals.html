@@ -516,14 +516,14 @@ document.write(`
 <p>A continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span> is said to be <em>periodic</em> with <em>period</em> <span class="math notranslate nohighlight">\(T\)</span> if there is a positive nonzero value of <span class="math notranslate nohighlight">\(T\)</span> for which</p>
 <div class="math notranslate nohighlight">
 \[x(t + T) = x(t)\;\mathrm{all}\;t\]</div>
-<p>An example of such a signal is given in <a class="reference internal" href="#periodic-signal"><span class="std std-numref">Fig. 18</span></a>.</p>
+<p>An example of such a signal is given in <a class="reference internal" href="#periodic-signal"><span class="std std-numref">Fig. 17</span></a>.</p>
 <figure class="align-default" id="periodic-signal">
 <a class="reference internal image-reference" href="../../_images/periodic.png"><img alt="An example of a periodic signal." src="../../_images/periodic.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">An example of a periodic signal.</span><a class="headerlink" href="#periodic-signal" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">An example of a periodic signal.</span><a class="headerlink" href="#periodic-signal" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>We can use the periodicity to synthesize a periodic signal such as that shown in <a class="reference internal" href="#periodic-signal"><span class="std std-numref">Fig. 18</span></a>.</p>
+<p>We can use the periodicity to synthesize a periodic signal such as that shown in <a class="reference internal" href="#periodic-signal"><span class="std std-numref">Fig. 17</span></a>.</p>
 <p>Let’s first define the signal over one period. We will use MATLAB and the <em>symbolic math toolbox</em> for this example:</p>
 <p>Let one period of the periodic signal be defined by</p>
 <div class="math notranslate nohighlight">
@@ -691,11 +691,11 @@ t &amp; 0\le t\le 1\\
 <section id="dc-signals">
 <span id="dc-signal"></span><h3>DC signals<a class="headerlink" href="#dc-signals" title="Permalink to this heading">#</a></h3>
 <p>Note that the definition of the <em>fundamental period</em>  does not hold for a constant signal <span class="math notranslate nohighlight">\(x(t)\)</span> (known as a DC signal).</p>
-<p>For a constant signal <span class="math notranslate nohighlight">\(x(t) = c\)</span> the fundamental period is undefined since <span class="math notranslate nohighlight">\(x(t)\)</span> is periodic for any choice of <span class="math notranslate nohighlight">\(T\)</span> (and so there is no smallest postive value). See <a class="reference internal" href="#fig-dc-signal"><span class="std std-numref">Fig. 19</span></a>.</p>
+<p>For a constant signal <span class="math notranslate nohighlight">\(x(t) = c\)</span> the fundamental period is undefined since <span class="math notranslate nohighlight">\(x(t)\)</span> is periodic for any choice of <span class="math notranslate nohighlight">\(T\)</span> (and so there is no smallest postive value). See <a class="reference internal" href="#fig-dc-signal"><span class="std std-numref">Fig. 18</span></a>.</p>
 <figure class="align-default" id="fig-dc-signal">
 <a class="reference internal image-reference" href="../../_images/dc_signal.png"><img alt="A DC signal" src="../../_images/dc_signal.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">A DC signal</span><a class="headerlink" href="#fig-dc-signal" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">A DC signal</span><a class="headerlink" href="#fig-dc-signal" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -705,22 +705,22 @@ t &amp; 0\le t\le 1\\
 </section>
 <section id="nonperiodic-signals">
 <span id="id3"></span><h3>Nonperiodic signals<a class="headerlink" href="#nonperiodic-signals" title="Permalink to this heading">#</a></h3>
-<p>Any continuous-time signal which is not periodic is called a <em>nonperiodic</em> (or <em>aperiodic</em>) signal. For example see <a class="reference internal" href="#aperiodic-signal"><span class="std std-numref">Fig. 20</span></a></p>
+<p>Any continuous-time signal which is not periodic is called a <em>nonperiodic</em> (or <em>aperiodic</em>) signal. For example see <a class="reference internal" href="#aperiodic-signal"><span class="std std-numref">Fig. 19</span></a></p>
 <figure class="align-default" id="aperiodic-signal">
 <a class="reference internal image-reference" href="../../_images/aperiodic_signal.png"><img alt="A nonperiodic signal" src="../../_images/aperiodic_signal.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">A nonperiodic signal</span><a class="headerlink" href="#aperiodic-signal" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">A nonperiodic signal</span><a class="headerlink" href="#aperiodic-signal" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="energy-and-power-signals">
 <span id="e-n-p"></span><h2>Energy and Power Signals<a class="headerlink" href="#energy-and-power-signals" title="Permalink to this heading">#</a></h2>
-<p>Consider <span class="math notranslate nohighlight">\(v(t)\)</span> to be the voltage across a resistor <span class="math notranslate nohighlight">\(R\)</span> producing a current <span class="math notranslate nohighlight">\(i(t)\)</span>. (<a class="reference internal" href="#resistor-circuit"><span class="std std-numref">Fig. 21</span></a>)</p>
+<p>Consider <span class="math notranslate nohighlight">\(v(t)\)</span> to be the voltage across a resistor <span class="math notranslate nohighlight">\(R\)</span> producing a current <span class="math notranslate nohighlight">\(i(t)\)</span>. (<a class="reference internal" href="#resistor-circuit"><span class="std std-numref">Fig. 20</span></a>)</p>
 <figure class="align-default" id="resistor-circuit">
 <a class="reference internal image-reference" href="../../_images/res_circuit.png"><img alt="A simple resistor circuit." src="../../_images/res_circuit.png" style="width: 40%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 21 </span><span class="caption-text">A simple resistor circuit.</span><a class="headerlink" href="#resistor-circuit" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">A simple resistor circuit.</span><a class="headerlink" href="#resistor-circuit" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The instantaneous power <span class="math notranslate nohighlight">\(p(t)\)</span> per ohm is defined as</p>

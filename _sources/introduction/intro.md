@@ -24,29 +24,22 @@ Follow along at [cpjobling.github.io/eg-150-textbook/introduction/intro](https:/
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Pingo
+## Slido
 
-(change this to Slido?)
-
-We will be using a web-based audience response system called Pingo for in-class quizzes and informal surveys.
+We will be using a web-based audience response system called Slido for in-class quizzes and informal surveys.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Setup
 
-Browse to: [pingo.coactum.de](https://pingo.coactum.de).
+Browse to: [slido.com](https://www.slido.com).
 
 
-:::{figure-md} pingo-qr
-<img alt="QR Code for Pingo" src="pictures/qr-code.png" width="75%" />
-
-QR Code for Pingo
-:::
+<img alt="QR Code for Pingo" src="pictures/qr-code-slido.svg" width="25%" alt="QR Code for Slido session # 2885587" />
 
 When prompted: enter the session ID
 
-The Session ID for this Course is: **804079**
-<!-- #endregion -->
+The Session ID for this Session is: **# 288 5587**
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -68,11 +61,11 @@ The Session ID for this Course is: **804079**
 
 ## What are signals?
 
-What comes to mind when I say "What is a signal?"
+What comes to mind in response to the question "What is a signal?"
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-**-> Poll**
+**-> Open Poll Question 1 **
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -94,7 +87,7 @@ What comes to mind when I say "What is a system?"
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-**-> Poll**
+**-> Open Poll Question 2 **
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
