@@ -35,11 +35,11 @@ We will be using a web-based audience response system called Slido for in-class 
 Browse to: [slido.com](https://www.slido.com).
 
 
-<img alt="QR Code for Pingo" src="pictures/qr-code-slido.svg" width="25%" alt="QR Code for Slido session # 2885587" />
+<img alt="QR Code for Pingo" src="pictures/qr-code-slido.svg" width="25%" alt="QR Code for Slido session # 2885588" />
 
 When prompted: enter the session ID
 
-The Session ID for this Session is: **# 288 5587**
+The Session ID for this Session is: **# 288 5588**
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -104,6 +104,8 @@ The definition given in the [Signals and Systems wikibook](http://en.wikibooks.o
 ## A Short Video Introduction
 
 Darryl Morrell, educator and producer of a series of short instructional videos on [Signals and Systems](https://sites.google.com/a/asu.edu/signals-and-systems/) ({cite}`morrell`) provides this useful [Signals and Systems Introduction](https://youtu.be/YBMGMF-DAVU) (YouTube).
+
+See [this page in course notes](https://cpjobling.github.io/eg-150-textbook/introduction/intro.html#a-short-video-introduction)
 
 %%HTML
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YBMGMF-DAVU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

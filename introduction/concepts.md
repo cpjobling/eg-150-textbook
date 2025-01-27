@@ -262,7 +262,7 @@ Block diagram of a smart phone
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-### Poll question 3(b) 
+### Poll question 3(b)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -272,7 +272,7 @@ Block diagram of a smart phone
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-### Poll question 3(c) 
+### Poll question 3(c)
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -397,6 +397,6 @@ We looked at
 
 ## Coming Next
 
-In the following sections, we introduce the mathematical description and representation of signals and systems and their classifications. We also define several important basic signals essesntial to your studies.
+In the following sections, we introduce the mathematical description and representation of signals and systems and their classifications. We also define several important basic signals essential to your studies.
 
 The first of these will be {ref}`sig_intro`.
