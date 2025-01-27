@@ -246,6 +246,10 @@ Some example systems
 
 Block diagram of an MP3 music player
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
+### Poll question 3(a)
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 #### System 2
@@ -256,19 +260,23 @@ Block diagram of an MP3 music player
 
 Block diagram of a smart phone
 
-+++
++++ {"slideshow": {"slide_type": "fragment"}}
+
+### Poll question 3(b)
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 #### System 3
 
 ![System 3](pictures/cruise-control.png)
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
+### Poll question 3(c)
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 Block diagram of an automobile cruise control system
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-**-> Poll**
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -324,7 +332,7 @@ But	the	implementation	is	(almost	always) complicated:
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-* how to deal with mobility and nodes leaving and arriving?
+* how to deal with mobility and nodes leaving and arriving on the network?
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -389,6 +397,6 @@ We looked at
 
 ## Coming Next
 
-In the following sections, we introduce the mathematical description and representation of signals and systems and their classifications. We also define several important basic signals essesntial to your studies.
+In the following sections, we introduce the mathematical description and representation of signals and systems and their classifications. We also define several important basic signals essential to your studies.
 
 The first of these will be {ref}`sig_intro`.

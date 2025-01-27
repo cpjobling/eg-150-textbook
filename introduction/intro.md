@@ -24,29 +24,22 @@ Follow along at [cpjobling.github.io/eg-150-textbook/introduction/intro](https:/
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
-## Pingo
+## Slido
 
-(change this to Slido?)
-
-We will be using a web-based audience response system called Pingo for in-class quizzes and informal surveys.
+We will be using a web-based audience response system called Slido for in-class quizzes and informal surveys.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Setup
 
-Browse to: [pingo.coactum.de](https://pingo.coactum.de).
+Browse to: [slido.com](https://www.slido.com).
 
 
-:::{figure-md} pingo-qr
-<img alt="QR Code for Pingo" src="pictures/qr-code.png" width="75%" />
-
-QR Code for Pingo
-:::
+<img alt="QR Code for Pingo" src="pictures/qr-code-slido.svg" width="25%" alt="QR Code for Slido session # 2885588" />
 
 When prompted: enter the session ID
 
-The Session ID for this Course is: **804079**
-<!-- #endregion -->
+The Session ID for this Session is: **# 288 5588**
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -68,11 +61,11 @@ The Session ID for this Course is: **804079**
 
 ## What are signals?
 
-What comes to mind when I say "What is a signal?"
+What comes to mind in response to the question "What is a signal?"
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-**-> Poll**
+**-> Open Poll Question 1 **
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -94,7 +87,7 @@ What comes to mind when I say "What is a system?"
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-**-> Poll**
+**-> Open Poll Question 2 **
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -111,6 +104,8 @@ The definition given in the [Signals and Systems wikibook](http://en.wikibooks.o
 ## A Short Video Introduction
 
 Darryl Morrell, educator and producer of a series of short instructional videos on [Signals and Systems](https://sites.google.com/a/asu.edu/signals-and-systems/) ({cite}`morrell`) provides this useful [Signals and Systems Introduction](https://youtu.be/YBMGMF-DAVU) (YouTube).
+
+See [this page in course notes](https://cpjobling.github.io/eg-150-textbook/introduction/intro.html#a-short-video-introduction)
 
 %%HTML
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YBMGMF-DAVU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
