@@ -47,7 +47,7 @@ html:
         Jupyter Book
       </a>
     comments:
-      hypothesis: false
+      hypothesis: true
       utterences: false
 
 colab_default: false
