@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Unit 4.1: The Laplace Transformation &#8212; EG-150 Signals and Systems</title>
   
@@ -15,54 +14,53 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'laplace_transform/1/laplace';</script>
@@ -73,6 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Unit 4: Laplace Transforms and their Applications" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -80,32 +79,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -113,7 +96,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -121,16 +103,25 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -145,6 +136,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../../index.html">
   
@@ -156,7 +149,14 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">EG-150 Signals and Systems</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -168,27 +168,27 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Online notes</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../introduction/index.html">Unit 1 Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../introduction/index.html">Unit 1 Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/intro.html">Unit 1.1 Setting the Scene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/thecourse.html">Unit 1.2 About this Course</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/concepts.html">Unit 1.3 Introduction to the Concepts to be Studied</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../signals_and_systems/index.html">Unit 2 Signals and Systems</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../signals_and_systems/index.html">Unit 2 Signals and Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/signals/index.html">Unit 2.1 Signals and Classification of Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/signals/pep_signals.html">Unit 2.2 Periodic, Energy and Power Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/elementary_signals/index.html">Unit 2.3 Elementary Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/elementary_signals/examples3.html">Examples 3 - Elementary Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/systems/index.html">Unit 2.4 Systems and Classification of Systems</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../lti_systems/index.html">Unit 3 Linear Time-Invariant Systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../lti_systems/index.html">Unit 3 Linear Time-Invariant Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti1.html">Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti2.html">Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti3.html">Unit 3.3 Systems Described by Differential Equations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Unit 4 Laplace Transforms and their Applications</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Unit 4 Laplace Transforms and their Applications</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit 4.1 The Laplace Transformation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2/laplace_of_common_signals.html">Unit 4.2 Laplace Transform of Some Common Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../3/laplace_properties.html">Unit 4.3 Properties of Laplace Transforms</a></li>
@@ -198,26 +198,26 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../7/tf_for_circuits.html">Unit 4.7 Transfer Functions for Circuit Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../8/casas.html">Unit 4.8 Computer-Aided Systems Analysis and Simulation</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../poles_and_zeros/index.html">Unit 5 Pole-Zero Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../poles_and_zeros/index.html">Unit 5 Pole-Zero Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../poles_and_zeros/qualitative_properties.html">Unit 5.1 Qualitative Properties of Signals and Transfer functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../poles_and_zeros/second_order_properties.html">Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../freq_resp/index.html">Unit 6 Frequency Response Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../freq_resp/index.html">Unit 6 Frequency Response Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../freq_resp/tf_response.html">Unit 6.1: Frequency Response of a Transfer Function</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../freq_resp/bode_plots.html">Unit 6.2: Bode Plots</a></li>
 
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../zbib.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../takeaways.html">Unit take aways</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises.html">List of Unit Exercises</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../homework/index.html">Homework Problems</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../homework/index.html">Homework Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../homework/hw1.html">Homework 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../homework/hw2.html">Homework 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../homework/hw3.html">Homework 3</a></li>
@@ -229,11 +229,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../homework/hw9.html">Homework 9</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../homework/hw10.html">Homework 10</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="lt_props.html">Properties of the Laplace Transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lt_table.html">Common Laplace Transform Pairs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../setup/polling_setup.html">Set Up In-Class Polling</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../setup/index.html">Setting up your own version of this book</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter.html">About Jupyter notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/python.html">Installing Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
@@ -241,7 +241,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter-book.html">Setting up jupyter-book</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 
     </div>
@@ -250,14 +250,19 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -266,14 +271,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -413,27 +418,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -505,16 +502,16 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="unit-4-1-the-laplace-transformation">
-<span id="unit4-1"></span><h1>Unit 4.1: The Laplace Transformation<a class="headerlink" href="#unit-4-1-the-laplace-transformation" title="Permalink to this heading">#</a></h1>
-<p>The preparatory reading for this section is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;ppg=43">Chapter 2</a> of  <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> and <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section1">Chapter 3</a> of <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<span id="unit4-1"></span><h1>Unit 4.1: The Laplace Transformation<a class="headerlink" href="#unit-4-1-the-laplace-transformation" title="Link to this heading">#</a></h1>
+<p>The preparatory reading for this section is <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197&amp;amp;ppg=43">Chapter 2</a> of  <span id="id1">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span> and <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section1">Chapter 3</a> of <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/1/laplace">cpjobling.github.io/eg-150-textbook//laplace_transform/1/laplace</a></p>
 <p><img alt="QR Code for this lecture" src="../../_images/qrcode_laplace.png" /></p>
 <p>In this unit we will present the Laplace transform and look at some important properties that go with it.</p>
 <section id="agenda">
-<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this heading">#</a></h2>
+<h2>Agenda<a class="headerlink" href="#agenda" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#laplace-laplace"><span class="std std-ref">The Laplace Transform</span></a></p></li>
 <li><p><a class="reference internal" href="#laplace-matlab"><span class="std std-ref">MATLAB Representation</span></a></p></li>
@@ -525,7 +522,7 @@ document.write(`
 </ul>
 </section>
 <section id="the-laplace-transform">
-<span id="laplace-laplace"></span><h2>The Laplace Transform<a class="headerlink" href="#the-laplace-transform" title="Permalink to this heading">#</a></h2>
+<span id="laplace-laplace"></span><h2>The Laplace Transform<a class="headerlink" href="#the-laplace-transform" title="Link to this heading">#</a></h2>
 <p>In <a class="reference internal" href="../../lti_systems/lti2.html#eigenfunctions-of-continuous-time-lti-systems"><span class="std std-ref">Eigenfunctions of Continuous-Time LTI Systems</span></a> we saw that for a continuous-time LTI system with impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>, the output of the system in response to a complex input of the form <span class="math notranslate nohighlight">\(x(t)=e^{st}\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[y(t) = \mathbf{T}\left\{x(t)\right\} = H(s)e^{st}\]</div>
@@ -533,7 +530,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[H(s) = \int_{-\infty}^{\infty}h(t)e^{-st}\,dt\]</div>
 <section id="definition">
-<span id="laplace-definition"></span><h3>Definition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h3>
+<span id="laplace-definition"></span><h3>Definition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h3>
 <p>The function <span class="math notranslate nohighlight">\(H(s)\)</span> above is referred to as the Laplace transform of <span class="math notranslate nohighlight">\(h(t)\)</span>.</p>
 <p>For a general continuous-time signal <span class="math notranslate nohighlight">\(x(t)\)</span>, the Laplace transform <span class="math notranslate nohighlight">\(X(s)\)</span> is defined as</p>
 <div class="math notranslate nohighlight">
@@ -560,7 +557,7 @@ document.write(`
 </div>
 </section>
 <section id="matlab-representation">
-<span id="laplace-matlab"></span><h3>MATLAB Representation<a class="headerlink" href="#matlab-representation" title="Permalink to this heading">#</a></h3>
+<span id="laplace-matlab"></span><h3>MATLAB Representation<a class="headerlink" href="#matlab-representation" title="Link to this heading">#</a></h3>
 <p>The Laplace transform operator is provided in the MATLAB symbolic math toolkit by the function <code class="docutils literal notranslate"><span class="pre">laplace</span></code> and can be used as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -582,21 +579,21 @@ document.write(`
 </section>
 </section>
 <section id="region-of-convergence">
-<span id="laplace-roc"></span><h2>Region of Convergence<a class="headerlink" href="#region-of-convergence" title="Permalink to this heading">#</a></h2>
+<span id="laplace-roc"></span><h2>Region of Convergence<a class="headerlink" href="#region-of-convergence" title="Link to this heading">#</a></h2>
 <p>For a Laplace transfomation to exist, the integral must be bounded. That is
 $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ - st}}dt} } \right| &lt; \infty \)</span>$</p>
 <p>The range of values for the complex variables <span class="math notranslate nohighlight">\(s\)</span> for which the Laplace tranform converges is called the <em>region of convergence</em> (ROC). To illustrate this concept, let us consider some examples.</p>
 <section id="solved-problem-1">
-<span id="laplace-ex1"></span><h3>Solved Problem 1<a class="headerlink" href="#solved-problem-1" title="Permalink to this heading">#</a></h3>
+<span id="laplace-ex1"></span><h3>Solved Problem 1<a class="headerlink" href="#solved-problem-1" title="Link to this heading">#</a></h3>
 <p>Consider the signal</p>
 <div class="math notranslate nohighlight">
 \[x(t) = e^{-at}u_0(t)\quad a\, \mathrm{real}\]</div>
 <section id="by-hand">
-<h4>By hand<a class="headerlink" href="#by-hand" title="Permalink to this heading">#</a></h4>
+<h4>By hand<a class="headerlink" href="#by-hand" title="Link to this heading">#</a></h4>
 <p>We will work through the analysis in class</p>
 </section>
 <section id="matlab-analysis">
-<h4>MATLAB analysis<a class="headerlink" href="#matlab-analysis" title="Permalink to this heading">#</a></h4>
+<h4>MATLAB analysis<a class="headerlink" href="#matlab-analysis" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% set up</span>
@@ -693,7 +690,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <figure class="align-default" id="roc1">
 <a class="reference internal image-reference" href="../../_images/roc1.png"><img alt="ROC for Example 1" src="../../_images/roc1.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 42 </span><span class="caption-text">ROC for Example 1</span><a class="headerlink" href="#roc1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 42 </span><span class="caption-text">ROC for Example 1</span><a class="headerlink" href="#roc1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>because <span class="math notranslate nohighlight">\(\lim_{t\to \infty}e^{-(s+a)t} = 0\)</span> only if <span class="math notranslate nohighlight">\(\mathrm{Re}(s + a)\gt 0\)</span> or <span class="math notranslate nohighlight">\(\mathrm{Re}(s)\gt -a\)</span>.</p>
@@ -702,12 +699,12 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </section>
 </section>
 <section id="solved-problem-2">
-<span id="laplace-ex2"></span><h3>Solved Problem 2<a class="headerlink" href="#solved-problem-2" title="Permalink to this heading">#</a></h3>
+<span id="laplace-ex2"></span><h3>Solved Problem 2<a class="headerlink" href="#solved-problem-2" title="Link to this heading">#</a></h3>
 <p>Consider the signal</p>
 <div class="math notranslate nohighlight">
 \[x(t) = -e^{-at}u_0(-t)\quad a\, \mathrm{real}\]</div>
 <section id="id3">
-<h4>MATLAB Analysis<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<h4>MATLAB Analysis<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
 <p>We will work through the analysis in class</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -782,7 +779,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </div>
 </section>
 <section id="by-hand-analysis">
-<h4>By hand analysis<a class="headerlink" href="#by-hand-analysis" title="Permalink to this heading">#</a></h4>
+<h4>By hand analysis<a class="headerlink" href="#by-hand-analysis" title="Link to this heading">#</a></h4>
 <p>See <a class="reference internal" href="#ex9-1"><span class="std std-ref">Exercise 9.1</span></a>.</p>
 <p>Its Laplace transform <span class="math notranslate nohighlight">\(X(s)\)</span> is given by <span class="xref std std-ref">ex:9.1</span></p>
 <div class="math notranslate nohighlight">
@@ -791,7 +788,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <figure class="align-default" id="roc2">
 <a class="reference internal image-reference" href="../../_images/roc2.png"><img alt="ROC for Example 2" src="../../_images/roc2.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 43 </span><span class="caption-text">ROC for Example 2</span><a class="headerlink" href="#roc2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 43 </span><span class="caption-text">ROC for Example 2</span><a class="headerlink" href="#roc2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Comparing the results of <a class="reference internal" href="#laplace-ex1"><span class="std std-ref">Solved Problem 1</span></a> and <a class="reference internal" href="#laplace-ex2"><span class="std std-ref">Solved Problem 2</span></a>, we see that that algebraic expressions for <span class="math notranslate nohighlight">\(X(s)\)</span> for these two signals are identical apart from the ROCs.</p>
@@ -800,7 +797,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </section>
 </section>
 <section id="poles-and-zeros-of-x-s">
-<span id="laplace-pandz"></span><h2>Poles and Zeros of X(s)<a class="headerlink" href="#poles-and-zeros-of-x-s" title="Permalink to this heading">#</a></h2>
+<span id="laplace-pandz"></span><h2>Poles and Zeros of X(s)<a class="headerlink" href="#poles-and-zeros-of-x-s" title="Link to this heading">#</a></h2>
 <p>Usually, <span class="math notranslate nohighlight">\(X(s)\)</span> will be a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span>; that is</p>
 <div class="math notranslate nohighlight">
 \[X(s)=\frac{b_ms^m+b_{m-1}s^{m-1}+\cdots b_1s + b_0}{a_ns^n+a_{n-1}s^{n-1}+\cdot a_1s + a_0}=\frac{b_m}{a_n}\,\frac{\left(s-z_1\right)\cdots\left(s-z_m\right)}{\left(s-p_1\right)\cdots\left(s-p_n\right)}\]</div>
@@ -819,11 +816,11 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <figure class="align-default" id="laplace-pzmap">
 <a class="reference internal image-reference" href="../../_images/pzmap.png"><img alt="s-plane representation of X(s)=(2s^2+4)(s^2+4s+3)" src="../../_images/pzmap.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 44 </span><span class="caption-text">s-plane representation of <span class="math notranslate nohighlight">\(X(s)=(2s^2+4)/(s^2+4s+3)\)</span></span><a class="headerlink" href="#laplace-pzmap" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 44 </span><span class="caption-text">s-plane representation of <span class="math notranslate nohighlight">\(X(s)=(2s^2+4)/(s^2+4s+3)\)</span></span><a class="headerlink" href="#laplace-pzmap" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="id4">
-<h3>MATLAB Analysis<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<h3>MATLAB Analysis<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p>In MATLAB we represent polynomials as vectors whose elements are the numerical values of the coeffients in decending order of <span class="math notranslate nohighlight">\(s\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -866,20 +863,20 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </section>
 </section>
 <section id="properties-of-the-roc">
-<span id="laplace-pops-roc"></span><h2>Properties of the ROC<a class="headerlink" href="#properties-of-the-roc" title="Permalink to this heading">#</a></h2>
+<span id="laplace-pops-roc"></span><h2>Properties of the ROC<a class="headerlink" href="#properties-of-the-roc" title="Link to this heading">#</a></h2>
 <p>[not examinable]</p>
 <p>The properties of the ROC are summarised in <strong>Section 3.1 D</strong> of <span class="xref std std-ref">schaum</span> and as they are <em><strong>not examinable</strong></em>, we leave their study to the interested student.</p>
 </section>
 <section id="exercises-9">
-<span id="laplace-examples"></span><h2>Exercises 9<a class="headerlink" href="#exercises-9" title="Permalink to this heading">#</a></h2>
+<span id="laplace-examples"></span><h2>Exercises 9<a class="headerlink" href="#exercises-9" title="Link to this heading">#</a></h2>
 <section id="exercise-9-1">
-<span id="ex9-1"></span><h3>Exercise 9.1<a class="headerlink" href="#exercise-9-1" title="Permalink to this heading">#</a></h3>
+<span id="ex9-1"></span><h3>Exercise 9.1<a class="headerlink" href="#exercise-9-1" title="Link to this heading">#</a></h3>
 <p>Find the Laplace transform of</p>
 <p>a). <span class="math notranslate nohighlight">\(x(t)=-e^{-at}u_0(-t)\)</span></p>
 <p>b). <span class="math notranslate nohighlight">\(x(t)= e^{at}u_0(-t)\)</span></p>
 </section>
 <section id="solution">
-<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h3>
+<h3>Solution<a class="headerlink" href="#solution" title="Link to this heading">#</a></h3>
 <p>a)</p>
 <div class="math notranslate nohighlight">
 \[X(s) = -\int_{-\infty}^{\infty}e^{-at}u_o(-t)e^{-st}\,dt=-\int_{-\infty}^{0^{-}}e^{-(s+a)t}\,dt\]</div>
@@ -899,7 +896,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </section>
 </section>
 <section id="summary">
-<span id="lap1-summary"></span><h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<span id="lap1-summary"></span><h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>In this unit we presented the Laplace transform and look at some important properties that go with it. The following topics were covered:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#laplace-laplace"><span class="std std-ref">The Laplace Transform</span></a></p></li>
@@ -910,9 +907,9 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <li><p><a class="reference internal" href="#laplace-examples"><span class="std std-ref">Exercises 9</span></a></p></li>
 </ul>
 <section id="unit-4-1-takeaways">
-<span id="unit4-1-takeaways"></span><h3>Unit 4.1: Takeaways<a class="headerlink" href="#unit-4-1-takeaways" title="Permalink to this heading">#</a></h3>
+<span id="unit4-1-takeaways"></span><h3>Unit 4.1: Takeaways<a class="headerlink" href="#unit-4-1-takeaways" title="Link to this heading">#</a></h3>
 <section id="id5">
-<h4>The Laplace transform<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<h4>The Laplace transform<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <p>The Laplace transform of a continuous-time signal or system is defined as</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{f}\left\{f(t)\right\} = F(s) = \int_{-\infty}^{\infty} f(t)e^{-st}\,dt\]</div>
@@ -925,7 +922,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 \[f(t)\Leftrightarrow F(s)\]</div>
 </section>
 <section id="id6">
-<h4>Region of convergence<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<h4>Region of convergence<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
 <p>The Laplace transform exists only if the integral is finite or</p>
 <div class="math notranslate nohighlight">
 \[\left| {\int_0^\infty  {f(t){e^{ - st}}dt} } \right| &lt; \infty \]</div>
@@ -933,7 +930,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <p>To be fully defined, the Laplace tranform of <span class="math notranslate nohighlight">\(f(t)\)</span> needs to specify the ROC. But in practice, for the systems and signals we are concerned about, we often neglect the ROC - although it is usually quoted in tables.</p>
 </section>
 <section id="poles-and-zeros">
-<h4>Poles and zeros<a class="headerlink" href="#poles-and-zeros" title="Permalink to this heading">#</a></h4>
+<h4>Poles and zeros<a class="headerlink" href="#poles-and-zeros" title="Link to this heading">#</a></h4>
 <p>For the signals and systems we are concerned about the Laplace transform takes the form of a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span> which has the general form</p>
 <div class="math notranslate nohighlight">
 \[F(s)=\frac{b_ms^m+b_{m-1}s^{m-1}+\cdots b_1s + b_0}{a_ns^n+a_{n-1}s^{n-1}+\cdot a_1s + a_0}\]</div>
@@ -948,7 +945,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <p>The structure of any <span class="math notranslate nohighlight">\(F(s)\)</span> can be represented on the <span class="math notranslate nohighlight">\(s\)</span>-plane as a pole-zero map, and knowledge of the behaviour of the poles and the impact of the zeros allows us to reason about what the overal system response will look like. We will explore this later in the module and it will be an important topic of study in <strong>EG-243 Control Systems</strong> next year.</p>
 </section>
 <section id="matlab">
-<h4>MATLAB<a class="headerlink" href="#matlab" title="Permalink to this heading">#</a></h4>
+<h4>MATLAB<a class="headerlink" href="#matlab" title="Link to this heading">#</a></h4>
 <p>The Laplace transform is available in the MATLAB Symbolic Math Toolbox as function <code class="docutils literal notranslate"><span class="pre">laplace</span></code>. To use it we usually specify the values <code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">s</span></code> as symbols:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -975,7 +972,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <p>Factored polynomials can be presented using the roots and the poles and zeros can be plotted on the <span class="math notranslate nohighlight">\(s\)</span>-plane using the pzmap function.</p>
 </section>
 <section id="example">
-<h4>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h4>
+<h4>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h4>
 <p>Factorise</p>
 <div class="math notranslate nohighlight">
 \[X(s) = \frac{3s+9}{s^3+4s^2+7s + 6}\]</div>
@@ -1012,23 +1009,25 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </section>
 </section>
 <section id="next-time">
-<h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this heading">#</a></h2>
+<h2>Next Time<a class="headerlink" href="#next-time" title="Link to this heading">#</a></h2>
 <p>We move on to consider</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../2/laplace_of_common_signals.html#unit4-2"><span class="std std-ref">Unit 4.2: Laplace Transform of Some Common Signals</span></a></p></li>
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id7">
-<dl class="citation">
-<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id2">Hsu20</a></span></dt>
-<dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
-</dd>
-<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id1">Kar12</a></span></dt>
-<dd><p>Steven T. Karris. <em>Signals and systems with MATLAB computing and Simulink modeling</em>. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197">https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197</a>.</p>
-</dd>
-</dl>
+<div role="list" class="citation-list">
+<div class="citation" id="id17" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Hsu20</a><span class="fn-bracket">]</span></span>
+<p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
+</div>
+<div class="citation" id="id13" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Kar12</a><span class="fn-bracket">]</span></span>
+<p>Steven T. Karris. <em>Signals and systems with MATLAB computing and Simulink modeling</em>. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197">https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197</a>.</p>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -1060,7 +1059,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1088,7 +1087,9 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1197,8 +1198,8 @@ for
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

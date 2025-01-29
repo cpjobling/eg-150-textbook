@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Unit 6.2: Bode Plots &#8212; EG-150 Signals and Systems</title>
   
@@ -15,54 +14,53 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'freq_resp/bode_plots';</script>
@@ -73,6 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Unit 6.1: Frequency Response of a Transfer Function" href="tf_response.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -80,32 +79,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -113,7 +96,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -121,16 +103,25 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -145,6 +136,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../index.html">
   
@@ -156,7 +149,14 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">EG-150 Signals and Systems</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -168,27 +168,27 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Online notes</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Unit 1 Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Unit 1 Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/intro.html">Unit 1.1 Setting the Scene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/thecourse.html">Unit 1.2 About this Course</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/concepts.html">Unit 1.3 Introduction to the Concepts to be Studied</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../signals_and_systems/index.html">Unit 2 Signals and Systems</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../signals_and_systems/index.html">Unit 2 Signals and Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/signals/index.html">Unit 2.1 Signals and Classification of Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/signals/pep_signals.html">Unit 2.2 Periodic, Energy and Power Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/elementary_signals/index.html">Unit 2.3 Elementary Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/elementary_signals/examples3.html">Examples 3 - Elementary Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/systems/index.html">Unit 2.4 Systems and Classification of Systems</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../lti_systems/index.html">Unit 3 Linear Time-Invariant Systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lti_systems/index.html">Unit 3 Linear Time-Invariant Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../lti_systems/lti1.html">Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lti_systems/lti2.html">Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lti_systems/lti3.html">Unit 3.3 Systems Described by Differential Equations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../laplace_transform/index.html">Unit 4 Laplace Transforms and their Applications</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../laplace_transform/index.html">Unit 4 Laplace Transforms and their Applications</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/1/laplace.html">Unit 4.1 The Laplace Transformation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/2/laplace_of_common_signals.html">Unit 4.2 Laplace Transform of Some Common Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/3/laplace_properties.html">Unit 4.3 Properties of Laplace Transforms</a></li>
@@ -198,26 +198,26 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/7/tf_for_circuits.html">Unit 4.7 Transfer Functions for Circuit Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/8/casas.html">Unit 4.8 Computer-Aided Systems Analysis and Simulation</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../poles_and_zeros/index.html">Unit 5 Pole-Zero Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../poles_and_zeros/index.html">Unit 5 Pole-Zero Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../poles_and_zeros/qualitative_properties.html">Unit 5.1 Qualitative Properties of Signals and Transfer functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../poles_and_zeros/second_order_properties.html">Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Unit 6 Frequency Response Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Unit 6 Frequency Response Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="tf_response.html">Unit 6.1: Frequency Response of a Transfer Function</a></li>
 
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit 6.2: Bode Plots</a></li>
 
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../zbib.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../takeaways.html">Unit take aways</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../exercises.html">List of Unit Exercises</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../homework/index.html">Homework Problems</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../homework/index.html">Homework Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../homework/hw1.html">Homework 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../homework/hw2.html">Homework 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../homework/hw3.html">Homework 3</a></li>
@@ -229,11 +229,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../homework/hw9.html">Homework 9</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../homework/hw10.html">Homework 10</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../laplace_transform/1/lt_props.html">Properties of the Laplace Transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../laplace_transform/1/lt_table.html">Common Laplace Transform Pairs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../setup/polling_setup.html">Set Up In-Class Polling</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../setup/index.html">Setting up your own version of this book</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../setup/jupyter.html">About Jupyter notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/python.html">Installing Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
@@ -241,7 +241,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/jupyter-book.html">Setting up jupyter-book</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 
     </div>
@@ -250,14 +250,19 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -266,14 +271,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -313,7 +318,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/freq_resp/bode_plots.md" target="_blank"
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/freq_resp/bode_plots.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -360,7 +365,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/freq_resp/bode_plots.md" target="_blank"
+      <li><a href="../_sources/freq_resp/bode_plots.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -370,7 +375,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -413,27 +418,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -518,20 +515,20 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="unit-6-2-bode-plots">
-<span id="unit6-2"></span><h1>Unit 6.2: Bode Plots<a class="headerlink" href="#unit-6-2-bode-plots" title="Permalink to this heading">#</a></h1>
+<span id="unit6-2"></span><h1>Unit 6.2: Bode Plots<a class="headerlink" href="#unit-6-2-bode-plots" title="Link to this heading">#</a></h1>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/freq_resp/bode_plots">cpjobling.github.io/eg-150-textbook/freq_resp/tf_response</a></p>
 <p><img alt="QR Code for this lecture" src="../_images/qr_code_for_unit62.png" /></p>
 <section id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">#</a></h2>
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h2>
 <p>This Unit is preparation for EG-247 Digital Signal Processing and EG-243 Modern Control Systems. It will not be examined for EG-150.</p>
 <p>The notes for this unit have been inspired by Carlos Osorio’s MATLAB Tech Talks series on <a class="reference external" href="https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html">Understanding Bode diagrams</a> <span id="id1">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span> with details adapted from the <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter5/section/section51">Example 5.47</a> in <span id="id2">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="agenda">
-<h1>Agenda<a class="headerlink" href="#agenda" title="Permalink to this heading">#</a></h1>
+<h1>Agenda<a class="headerlink" href="#agenda" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="#unit6-2-1"><span class="std std-ref">Introduction</span></a></p></li>
 <li><p><a class="reference internal" href="#unit6-2-2"><span class="std std-ref">A little history</span></a></p></li>
@@ -543,17 +540,17 @@ document.write(`
 <li><p><a class="reference internal" href="#unit6-2-8"><span class="std std-ref">Bode plots for analysis and design</span></a></p></li>
 </ul>
 <section id="introduction">
-<span id="unit6-2-1"></span><h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<span id="unit6-2-1"></span><h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>We introduce this section with a YouTube video <a class="reference external" href="https://uk.mathworks.com/videos/understanding-bode-plots-what-are-they-2-of-4-76212.html">What are Bode plots?</a> from Carlos Osorio of the MathWorks (publisher of MATLAB) <span id="id3">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/COzQwkeu8Ek?si=wz1Mxz_ISu6RuTfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <p>The remaining videos, the first of which introduced the previous unit, <a class="reference internal" href="tf_response.html#unit6-1"><span class="std std-ref">Unit 6.1: Frequency Response of a Transfer Function</span></a>, can also be viewed on the YouTube playlist <a class="reference external" href="https://www.youtube.com/playlist?list=PLn8PRpmsu08poVEWzpqKXpj_c7aSwVDdm">Understanding Bode Plots</a> also published on the <a class="reference external" href="https://www.youtube.com/&#64;MATLAB">MATLAB channel by the MathWorks</a>.</p>
 </section>
 <section id="a-little-history">
-<span id="unit6-2-2"></span><h2>A little history<a class="headerlink" href="#a-little-history" title="Permalink to this heading">#</a></h2>
+<span id="unit6-2-2"></span><h2>A little history<a class="headerlink" href="#a-little-history" title="Link to this heading">#</a></h2>
 <figure class="align-default" id="fig-unit6-2-1">
 <img alt="Hendrick Wade Bode" src="../_images/Hendrik_Wade_Bode.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 84 </span><span class="caption-text">Portrait of Hendrick Wade Bode (Public Domain <a class="reference external" href="https://en.wikipedia.org/wiki/File:Hendrik_Wade_Bode.png">Details</a>)</span><a class="headerlink" href="#fig-unit6-2-1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 84 </span><span class="caption-text">Portrait of Hendrick Wade Bode (Public Domain <a class="reference external" href="https://en.wikipedia.org/wiki/File:Hendrik_Wade_Bode.png">Details</a>)</span><a class="headerlink" href="#fig-unit6-2-1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Quoted from <a class="reference external" href="https://en.wikipedia.org/wiki/Hendrik_Wade_Bode">Hendrik Wade Bode</a>, Wikipedia:</p>
@@ -568,11 +565,11 @@ document.write(`
 </div></blockquote>
 </section>
 <section id="frequency-response">
-<span id="unit6-2-3"></span><h2>Frequency Response<a class="headerlink" href="#frequency-response" title="Permalink to this heading">#</a></h2>
+<span id="unit6-2-3"></span><h2>Frequency Response<a class="headerlink" href="#frequency-response" title="Link to this heading">#</a></h2>
 <figure class="align-default" id="fig-unit6-2-2">
 <a class="reference internal image-reference" href="../_images/ss-freq-response.png"><img alt="Screenshot from the video What are Bode Plots? (see caption) showing the steady state response of a linear LTI system to a simusoidal input" src="../_images/ss-freq-response.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 85 </span><span class="caption-text">Steady-state response of of a stable LTI system is <span class="math notranslate nohighlight">\(y(t) = M \sin\left(\omega t + \phi\right)\)</span>. Screenshot from video <a class="reference external" href="https://youtu.be/COzQwkeu8Ek?si=XC1h92VGAQWiHV7N&amp;t=28">What are Bode Plots?</a> [t=28 seconds] from <span id="id4">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span></span><a class="headerlink" href="#fig-unit6-2-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 85 </span><span class="caption-text">Steady-state response of of a stable LTI system is <span class="math notranslate nohighlight">\(y(t) = M \sin\left(\omega t + \phi\right)\)</span>. Screenshot from video <a class="reference external" href="https://youtu.be/COzQwkeu8Ek?si=XC1h92VGAQWiHV7N&amp;amp;t=28">What are Bode Plots?</a> [t=28 seconds] from <span id="id4">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span></span><a class="headerlink" href="#fig-unit6-2-2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In <a class="reference internal" href="tf_response.html#unit6-1"><span class="std std-ref">Unit 6.1: Frequency Response of a Transfer Function</span></a> we explored the idea of a frequency response and showed that, after the transient response of a stable LTI system, subjected to a sinusoidal input <span class="math notranslate nohighlight">\(x(t) = A_\mathrm{in} \sin\left(\omega t\right)\)</span> has died away, the steady-state output will be another sinusoid <span class="math notranslate nohighlight">\(y(t) = A_\mathrm{out} \sin\left(\omega t + \phi\right)\)</span>.</p>
@@ -584,14 +581,14 @@ document.write(`
 <figure class="align-default" id="fig-unit6-2-3">
 <a class="reference internal image-reference" href="../_images/bode_plot_1.png"><img alt="Screenshot from the video What are Bode Plots? (see caption) showing the steady state response of a linear LTI system to a simusoidal input" src="../_images/bode_plot_1.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 86 </span><span class="caption-text">Plot of magnitude v phase plotted against frequency interpolated from individual measurements. Screenshot from video <a class="reference external" href="https://youtu.be/COzQwkeu8Ek?si=XC1h92VGAQWiHV7N&amp;t=28">What are Bode Plots?</a> [t=1 minute 28 seconds] from <span id="id5">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span></span><a class="headerlink" href="#fig-unit6-2-3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 86 </span><span class="caption-text">Plot of magnitude v phase plotted against frequency interpolated from individual measurements. Screenshot from video <a class="reference external" href="https://youtu.be/COzQwkeu8Ek?si=XC1h92VGAQWiHV7N&amp;amp;t=28">What are Bode Plots?</a> [t=1 minute 28 seconds] from <span id="id5">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span></span><a class="headerlink" href="#fig-unit6-2-3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The plot of <em>amplification</em> (<span class="math notranslate nohighlight">\(M\)</span>) and <em>phase</em> (<span class="math notranslate nohighlight">\(\phi\)</span>), usually plotted against the <em>log of frequency</em> <span class="math notranslate nohighlight">\(\omega\)</span> rad/s, is called a Bode plot.</p>
 <p>If you are constructing one of these yourself, you need to be sure to use sufficient values of frequency to capture all the important features (such as <em>resonant peaks</em> and <em>corner frequencies</em>) of the response.</p>
 </section>
 <section id="calculation-of-frequency-response">
-<span id="unit6-2-4"></span><h2>Calculation of Frequency Response<a class="headerlink" href="#calculation-of-frequency-response" title="Permalink to this heading">#</a></h2>
+<span id="unit6-2-4"></span><h2>Calculation of Frequency Response<a class="headerlink" href="#calculation-of-frequency-response" title="Link to this heading">#</a></h2>
 <p>If we have a system with impulse response (transfer function) <span class="math notranslate nohighlight">\(H(s)\)</span>, the steady-state frequency response can be calulated by letting <span class="math notranslate nohighlight">\(s = j\omega\)</span>.</p>
 <p>That is the <em>system function</em></p>
 <div class="math notranslate nohighlight">
@@ -622,24 +619,12 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hsys =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        400
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  ----------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + 10 s + 400
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+ 
+        400
+  ----------------
+  s^2 + 10 s + 400
+ 
+Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
@@ -651,46 +636,46 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/44eb2d00a7c99c5032aec339479bf497329deea909df79c73d3a77981670c895.png" src="../_images/44eb2d00a7c99c5032aec339479bf497329deea909df79c73d3a77981670c895.png" />
+<img alt="../_images/b3e265801c5ae60fec61a7424a1de77ed635d29fb67f2560c5ccbc717e91a721.png" src="../_images/b3e265801c5ae60fec61a7424a1de77ed635d29fb67f2560c5ccbc717e91a721.png" />
 </div>
 </div>
 </section>
 <section id="terminology-used">
-<span id="unit6-2-5"></span><h2>Terminology used<a class="headerlink" href="#terminology-used" title="Permalink to this heading">#</a></h2>
+<span id="unit6-2-5"></span><h2>Terminology used<a class="headerlink" href="#terminology-used" title="Link to this heading">#</a></h2>
 <p>When discussing frequency responses in general, and Bode plots in particular, we need to define some terms that will be used.</p>
 <p>You should should make a note of these for future reference.</p>
 <section id="dc-gain">
-<h3>DC-gain<a class="headerlink" href="#dc-gain" title="Permalink to this heading">#</a></h3>
+<h3>DC-gain<a class="headerlink" href="#dc-gain" title="Link to this heading">#</a></h3>
 <p>Magnitude <span class="math notranslate nohighlight">\(M\)</span> at <span class="math notranslate nohighlight">\(\omega = 0\)</span> or DC.</p>
 <img src="pictures/dc_gain.png" alt="illustration of DC gain" width="75%" /></section>
 <section id="roll-off-rate">
-<h3>Roll-off rate<a class="headerlink" href="#roll-off-rate" title="Permalink to this heading">#</a></h3>
-<p>The <em>roll-off rate</em> refers to the slope of the magnitude plot as the magnitude drops off at high-frequency. It is usually quoted in <em>dB per decade</em><a class="footnote-reference brackets" href="#u62-note-1" id="id6">1</a>, where a <em>decade</em> is a ten-fold increase in frequency.</p>
+<h3>Roll-off rate<a class="headerlink" href="#roll-off-rate" title="Link to this heading">#</a></h3>
+<p>The <em>roll-off rate</em> refers to the slope of the magnitude plot as the magnitude drops off at high-frequency. It is usually quoted in <em>dB per decade</em><a class="footnote-reference brackets" href="#u62-note-1" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, where a <em>decade</em> is a ten-fold increase in frequency.</p>
 <img src="pictures/roll-off.png" alt="illustration of roll-off rate" width="75%" /></section>
 </section>
 <section id="natural-frequency">
-<h2>Natural-frequency<a class="headerlink" href="#natural-frequency" title="Permalink to this heading">#</a></h2>
+<h2>Natural-frequency<a class="headerlink" href="#natural-frequency" title="Link to this heading">#</a></h2>
 <p>Any peaks in the magnitude frequency response will be associated to some natural frequency in the poles of the system.</p>
 <img src="pictures/natural_freq.png" alt="illustration of natural frequencies indicated by peaks in the magnitude response" width="75%" /></section>
 <section id="cross-over-frequency">
-<h2>Cross-over frequency<a class="headerlink" href="#cross-over-frequency" title="Permalink to this heading">#</a></h2>
-<p>In the bode-plot, at low frequency, the gain is 0 dB (or 1). Above the cross-over frequency<a class="footnote-reference brackets" href="#u62-note-2" id="id7">2</a> the gain is less than 1 and the system starts to <em>attenuate</em> the input signal.</p>
+<h2>Cross-over frequency<a class="headerlink" href="#cross-over-frequency" title="Link to this heading">#</a></h2>
+<p>In the bode-plot, at low frequency, the gain is 0 dB (or 1). Above the cross-over frequency<a class="footnote-reference brackets" href="#u62-note-2" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> the gain is less than 1 and the system starts to <em>attenuate</em> the input signal.</p>
 <img src="pictures/cross_over_freq.png" alt="illustration of the cross-over frequency in a Bode plot" width="75%" /></section>
 <section id="bandwidth-frequency">
-<h2>Bandwidth frequency<a class="headerlink" href="#bandwidth-frequency" title="Permalink to this heading">#</a></h2>
-<p>Above the <em>bandwidth frequency</em> the RMS value of the system is below the RMS value of the input. This so-called <em>half-power frequency</em> occurs when <span class="math notranslate nohighlight">\(M = \sqrt{2}/2 = 1/\sqrt{2} \approx 0.707\)</span> or <span class="math notranslate nohighlight">\(20\log_{10}\left(0.707\right) \approx -3\)</span> dB<a class="footnote-reference brackets" href="#u62-note-3" id="id8">3</a>.</p>
+<h2>Bandwidth frequency<a class="headerlink" href="#bandwidth-frequency" title="Link to this heading">#</a></h2>
+<p>Above the <em>bandwidth frequency</em> the RMS value of the system is below the RMS value of the input. This so-called <em>half-power frequency</em> occurs when <span class="math notranslate nohighlight">\(M = \sqrt{2}/2 = 1/\sqrt{2} \approx 0.707\)</span> or <span class="math notranslate nohighlight">\(20\log_{10}\left(0.707\right) \approx -3\)</span> dB<a class="footnote-reference brackets" href="#u62-note-3" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
 <img src="pictures/bandwidth_freq.png" alt="illustration of the bandwidth frequency in a Bode plot" width="75%" /></section>
 <section id="aysymptotic-bode-plots-for-first-order-systems">
-<span id="unit6-2-6"></span><h2>Aysymptotic Bode plots for first-order systems<a class="headerlink" href="#aysymptotic-bode-plots-for-first-order-systems" title="Permalink to this heading">#</a></h2>
+<span id="unit6-2-6"></span><h2>Aysymptotic Bode plots for first-order systems<a class="headerlink" href="#aysymptotic-bode-plots-for-first-order-systems" title="Link to this heading">#</a></h2>
 <p>In the remainder of this unit, we will rely on the explanations given by Carlos Osorio in Parts 3 and 4 of <span id="id9">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span>. This material is also covered in Worked Problem 5.47 from <span id="id10">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <p>You can always produce a Bode plot for a system by use of the tools provided in MATLAB.</p>
 <p>However, a knowledge of the asymptotic behaviour of first and second order poles (the insight gained by Bode in 1938), provides a powerful tool for analysis and design of systems in the frequency domain.</p>
 <section id="exploring-bode-plots-for-simple-systems">
-<h3>Exploring Bode Plots for Simple Systems<a class="headerlink" href="#exploring-bode-plots-for-simple-systems" title="Permalink to this heading">#</a></h3>
+<h3>Exploring Bode Plots for Simple Systems<a class="headerlink" href="#exploring-bode-plots-for-simple-systems" title="Link to this heading">#</a></h3>
 <p>[See video in the notes]</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ums33HwVYyw?si=_Lvz5nyCt9VW100U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
 <section id="asymptotic-bode-plot-of-a-gain">
-<span id="u62-gain"></span><h3>Asymptotic bode plot of a gain<a class="headerlink" href="#asymptotic-bode-plot-of-a-gain" title="Permalink to this heading">#</a></h3>
+<span id="u62-gain"></span><h3>Asymptotic bode plot of a gain<a class="headerlink" href="#asymptotic-bode-plot-of-a-gain" title="Link to this heading">#</a></h3>
 <p>If <span class="math notranslate nohighlight">\(H(s) = K\)</span></p>
 <p>The frequency response is <span class="math notranslate nohighlight">\(H(j\omega)\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -706,13 +691,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/279f0821806f2db1d3fa16fec3bf241ed12f5d344cd60b65fe31a6a6f28d94c7.png" src="../_images/279f0821806f2db1d3fa16fec3bf241ed12f5d344cd60b65fe31a6a6f28d94c7.png" />
+<img alt="../_images/5dd4508ac42485d9b5417c06ed868453b0dfa890c20e081a557a078fa9192115.png" src="../_images/5dd4508ac42485d9b5417c06ed868453b0dfa890c20e081a557a078fa9192115.png" />
 </div>
 </div>
 <p>Increasing the gain causes a shift in the magnitude plot <em>up</em> by <span class="math notranslate nohighlight">\(20\log_{10} K\)</span> dB for <span class="math notranslate nohighlight">\(K &gt; 1\)</span> or <em>down</em> for <span class="math notranslate nohighlight">\(K &lt; 1\)</span>.</p>
 </section>
 <section id="asymptotic-bode-plot-of-an-integrator">
-<span id="u62-int"></span><h3>Asymptotic Bode plot of an integrator<a class="headerlink" href="#asymptotic-bode-plot-of-an-integrator" title="Permalink to this heading">#</a></h3>
+<span id="u62-int"></span><h3>Asymptotic Bode plot of an integrator<a class="headerlink" href="#asymptotic-bode-plot-of-an-integrator" title="Link to this heading">#</a></h3>
 <p>If</p>
 <div class="math notranslate nohighlight">
 \[H(s) = \frac{1}{s} \]</div>
@@ -732,13 +717,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/61e279261bafb512982f81762de4cc05d1892c5589f78a7f1c6c38a3c47d3b8f.png" src="../_images/61e279261bafb512982f81762de4cc05d1892c5589f78a7f1c6c38a3c47d3b8f.png" />
+<img alt="../_images/5bbee617338f8eee5cb0901c05458eaf606f5495cf0fddbdd1b6e50b62fb1a54.png" src="../_images/5bbee617338f8eee5cb0901c05458eaf606f5495cf0fddbdd1b6e50b62fb1a54.png" />
 </div>
 </div>
 <p>The roll-off rate is <span class="math notranslate nohighlight">\(-20\)</span> dB/decade.</p>
 </section>
 <section id="asymptotic-bode-plot-of-an-differentiator">
-<span id="u62-diff"></span><h3>Asymptotic Bode plot of an differentiator<a class="headerlink" href="#asymptotic-bode-plot-of-an-differentiator" title="Permalink to this heading">#</a></h3>
+<span id="u62-diff"></span><h3>Asymptotic Bode plot of an differentiator<a class="headerlink" href="#asymptotic-bode-plot-of-an-differentiator" title="Link to this heading">#</a></h3>
 <p>If</p>
 <div class="math notranslate nohighlight">
 \[H(s) = s \]</div>
@@ -758,13 +743,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/cdb5dc0d7c3346e17004acc3363d0ad55b69c8cbf6f08ed6ecd5fae90bfc4a88.png" src="../_images/cdb5dc0d7c3346e17004acc3363d0ad55b69c8cbf6f08ed6ecd5fae90bfc4a88.png" />
+<img alt="../_images/5c99b722dbc10fd16b3c4d43246f6a38b59865bb4cb7f25cb344bd39639cf7ea.png" src="../_images/5c99b722dbc10fd16b3c4d43246f6a38b59865bb4cb7f25cb344bd39639cf7ea.png" />
 </div>
 </div>
 <p>The magnification increases by 20 dB per decade and there is no limit! This is a bad thing as it will amplify high-frequencies.</p>
 </section>
 <section id="asymptotic-bode-plot-of-an-single-pole">
-<span id="u62-pole"></span><h3>Asymptotic Bode plot of an single pole<a class="headerlink" href="#asymptotic-bode-plot-of-an-single-pole" title="Permalink to this heading">#</a></h3>
+<span id="u62-pole"></span><h3>Asymptotic Bode plot of an single pole<a class="headerlink" href="#asymptotic-bode-plot-of-an-single-pole" title="Link to this heading">#</a></h3>
 <p>If</p>
 <div class="math notranslate nohighlight">
 \[H(s) = \frac{1}{\tau s + 1}\]</div>
@@ -784,7 +769,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f50deda58eee171d73d3ec21f5ab0a6c02f798a615481b74f12f412c2e92c98d.png" src="../_images/f50deda58eee171d73d3ec21f5ab0a6c02f798a615481b74f12f412c2e92c98d.png" />
+<img alt="../_images/a1f59101886afc05027ca99499e325a5717745b0156241d21c3363fa6ed430dc.png" src="../_images/a1f59101886afc05027ca99499e325a5717745b0156241d21c3363fa6ed430dc.png" />
 </div>
 </div>
 <p>Adding the assymptotes gives</p>
@@ -792,7 +777,7 @@ document.write(`
 <p>For most of the magnitude Bode plot, the computed plot is well matched by its asymptotes. The maximum error that at <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>, <span class="math notranslate nohighlight">\(M = 1/\sqrt{2}\)</span>, <span class="math notranslate nohighlight">\(M_\mathrm{dB} = -3\)</span> dB, <span class="math notranslate nohighlight">\(\phi = -45^\circ\)</span>. The asymptotes used on the phase diagram are usually taken to be 0 at <span class="math notranslate nohighlight">\(\omega = (1/10)\tau\)</span> and <span class="math notranslate nohighlight">\(-90^\circ = \omega = 10\tau\)</span>. In that case, the asymptotes and the actual plot are equal (<span class="math notranslate nohighlight">\(\phi = -45^\circ\)</span>) at the frequency <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>.</p>
 </section>
 <section id="asymptotic-bode-plot-of-an-single-zero">
-<span id="u62-zero"></span><h3>Asymptotic Bode plot of an single zero<a class="headerlink" href="#asymptotic-bode-plot-of-an-single-zero" title="Permalink to this heading">#</a></h3>
+<span id="u62-zero"></span><h3>Asymptotic Bode plot of an single zero<a class="headerlink" href="#asymptotic-bode-plot-of-an-single-zero" title="Link to this heading">#</a></h3>
 <p>If</p>
 <div class="math notranslate nohighlight">
 \[H(s) = \tau s + 1\]</div>
@@ -811,7 +796,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/047e5edd7a73cfea045a296ae78d00ca9dd8bdf5e6b1d2d09548d513178f4b38.png" src="../_images/047e5edd7a73cfea045a296ae78d00ca9dd8bdf5e6b1d2d09548d513178f4b38.png" />
+<img alt="../_images/a2bf043eb7b8e809094178205eecfb8256faa4872c9909da9c81e8412a87a877.png" src="../_images/a2bf043eb7b8e809094178205eecfb8256faa4872c9909da9c81e8412a87a877.png" />
 </div>
 </div>
 <p>Adding the assymptotes gives</p>
@@ -819,7 +804,7 @@ document.write(`
 <p>Again, for most of the magnitude Bode plot, the computed plot is well matched by its asymptotes. The maximum error that at <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>, <span class="math notranslate nohighlight">\(M = \sqrt{2}\)</span>, <span class="math notranslate nohighlight">\(M_\mathrm{dB} = 3\)</span> dB, <span class="math notranslate nohighlight">\(\phi = 45^\circ\)</span>. The asymptotes used on the phase diagram are usually taken to be 0 at <span class="math notranslate nohighlight">\(\omega = (1/10)\tau\)</span> and <span class="math notranslate nohighlight">\(90^\circ = \omega = 10\tau\)</span>. In that case, the asymptotes and the actual plot are equal (<span class="math notranslate nohighlight">\(\phi = 45^\circ\)</span>) at the frequency <span class="math notranslate nohighlight">\(\omega = 1/\tau\)</span>.</p>
 </section>
 <section id="demo-1-using-the-interactive-bode-analysis-tool-provided-by-matlab">
-<h3>Demo 1: Using the interactive Bode analysis tool provided by MATLAB<a class="headerlink" href="#demo-1-using-the-interactive-bode-analysis-tool-provided-by-matlab" title="Permalink to this heading">#</a></h3>
+<h3>Demo 1: Using the interactive Bode analysis tool provided by MATLAB<a class="headerlink" href="#demo-1-using-the-interactive-bode-analysis-tool-provided-by-matlab" title="Link to this heading">#</a></h3>
 <p>This has to be done in MATLAB for desktop or MATLAB online.</p>
 <ul class="simple">
 <li><p>Open MATLAB and select Bode designer</p></li>
@@ -840,7 +825,7 @@ document.write(`
 </section>
 </section>
 <section id="aysymptotic-bode-plots-for-a-second-order-system">
-<span id="unit6-2-7"></span><h2>Aysymptotic Bode plots for a second-order system<a class="headerlink" href="#aysymptotic-bode-plots-for-a-second-order-system" title="Permalink to this heading">#</a></h2>
+<span id="unit6-2-7"></span><h2>Aysymptotic Bode plots for a second-order system<a class="headerlink" href="#aysymptotic-bode-plots-for-a-second-order-system" title="Link to this heading">#</a></h2>
 <p>The model second order system is given by the transfer function</p>
 <div class="math notranslate nohighlight">
 \[H(s) = \frac{\omega_n^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}\]</div>
@@ -848,17 +833,17 @@ document.write(`
 <p>As we will see, the shape of the frequency response of this system depends only on <span class="math notranslate nohighlight">\(\zeta\)</span> and <span class="math notranslate nohighlight">\(\omega_n\)</span>. Hence knowledge of this plot allows us to easily analyze a system which has factors that are quadratic polynomials in <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <p>Once again, we will rely on the explanation given by Carlos Osorio in Parts 4 of <span id="id11">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span>.</p>
 <section id="how-to-build-bode-plots-for-complex-systems">
-<h3>How to Build Bode Plots for Complex Systems<a class="headerlink" href="#how-to-build-bode-plots-for-complex-systems" title="Permalink to this heading">#</a></h3>
+<h3>How to Build Bode Plots for Complex Systems<a class="headerlink" href="#how-to-build-bode-plots-for-complex-systems" title="Link to this heading">#</a></h3>
 <p>[See video in the notes]</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MQjdeGNZ4mY?si=02fMhH7QH8yWicSY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
 <section id="examples-of-2nd-order-systems">
-<h3>Examples of 2nd-order systems<a class="headerlink" href="#examples-of-2nd-order-systems" title="Permalink to this heading">#</a></h3>
+<h3>Examples of 2nd-order systems<a class="headerlink" href="#examples-of-2nd-order-systems" title="Link to this heading">#</a></h3>
 <p>We have already see examples of second order systems in the form of the mass-spring-damper system. Another example from electrical engineering would be the RLC circuit.</p>
 <p>Examples of these systems and the transfer functions that they represent are shown in <a class="reference internal" href="#fig-unit6-2-4"><span class="std std-numref">Fig. 87</span></a></p>
 <figure class="align-default" id="fig-unit6-2-4">
 <a class="reference internal image-reference" href="../_images/2nd_order_systems.png"><img alt="Screenshot from the video How to Build Bode Plots for Complex Systems? (see caption) showing a mass-spring damper system and an RLC circuit." src="../_images/2nd_order_systems.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 87 </span><span class="caption-text">Examples of second-order systems. Left: mass-spring-damper system. Right: RLC circuit. Screenshot from video <a class="reference external" href="https://youtu.be/MQjdeGNZ4mY?si=DdGiwbY3zQM_KDdZ&amp;t=47">How to Build Bode Plots for Complex Systems</a> [t=47 seconds] from <span id="id12">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span></span><a class="headerlink" href="#fig-unit6-2-4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 87 </span><span class="caption-text">Examples of second-order systems. Left: mass-spring-damper system. Right: RLC circuit. Screenshot from video <a class="reference external" href="https://youtu.be/MQjdeGNZ4mY?si=DdGiwbY3zQM_KDdZ&amp;amp;t=47">How to Build Bode Plots for Complex Systems</a> [t=47 seconds] from <span id="id12">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span></span><a class="headerlink" href="#fig-unit6-2-4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For the mass-spring-damper system</p>
@@ -873,12 +858,12 @@ document.write(`
 <p>and the natural frequency is</p>
 <div class="math notranslate nohighlight">
 \[\omega_n = \sqrt{\frac{1}{LC}}.\]</div>
-<p>Providing that <span class="math notranslate nohighlight">\(0 &lt; \zeta \le 1\)</span>, the poles of the system will be complex and of the form<a class="footnote-reference brackets" href="#u62-note-10" id="id13">4</a>:</p>
+<p>Providing that <span class="math notranslate nohighlight">\(0 &lt; \zeta \le 1\)</span>, the poles of the system will be complex and of the form<a class="footnote-reference brackets" href="#u62-note-10" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>:</p>
 <div class="math notranslate nohighlight">
 \[p_{1,2} = -\zeta\omega_n \pm j\omega_n \sqrt{1 - \zeta^2}\]</div>
 </section>
 <section id="asymptotes-for-a-second-oder-system">
-<span id="u62-2nd-resp"></span><h3>Asymptotes for a second-oder system<a class="headerlink" href="#asymptotes-for-a-second-oder-system" title="Permalink to this heading">#</a></h3>
+<span id="u62-2nd-resp"></span><h3>Asymptotes for a second-oder system<a class="headerlink" href="#asymptotes-for-a-second-oder-system" title="Link to this heading">#</a></h3>
 <p>So</p>
 <div class="math notranslate nohighlight">
 \[H(j\omega) = \frac{1}{-\left(\frac{\omega}{\omega_n}\right)^2 + j2\zeta\left(\frac{\omega}{\omega_n} \right)s + 1}\]</div>
@@ -903,14 +888,14 @@ document.write(`
 <p>Note that the actual peak is to the left of <span class="math notranslate nohighlight">\(\omega = \omega_n\)</span>. This is because the actual frequency, often called the <em>damped natural frequency</em>, is given by <span class="math notranslate nohighlight">\(\omega_d = \omega_n\sqrt{1 - \zeta^2}\)</span>.</p>
 </section>
 <section id="effect-of-damping-ratio-on-bode-plot">
-<span id="u62-effect-of-damping"></span><h3>Effect of damping ratio on Bode plot<a class="headerlink" href="#effect-of-damping-ratio-on-bode-plot" title="Permalink to this heading">#</a></h3>
+<span id="u62-effect-of-damping"></span><h3>Effect of damping ratio on Bode plot<a class="headerlink" href="#effect-of-damping-ratio-on-bode-plot" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">wn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 <span class="n">figure</span>
 <span class="s">hold</span><span class="w"> </span><span class="s">on</span>
 <span class="k">for</span><span class="w"> </span><span class="n">zeta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.05</span><span class="p">,</span><span class="w"> </span><span class="mf">0.16</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.75</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span>
-<span class="w">  </span><span class="n">bode</span><span class="p">([</span><span class="n">wn</span>^<span class="mi">2</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">zeta</span><span class="o">*</span><span class="n">wn</span><span class="p">,</span><span class="w"> </span><span class="n">wn</span>^<span class="mi">2</span><span class="p">]);</span>
+<span class="w">  </span><span class="n">bode</span><span class="p">([</span><span class="n">wn</span><span class="o">^</span><span class="mi">2</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">zeta</span><span class="o">*</span><span class="n">wn</span><span class="p">,</span><span class="w"> </span><span class="n">wn</span><span class="o">^</span><span class="mi">2</span><span class="p">]);</span>
 <span class="k">end</span>
 <span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
 <span class="nb">hold</span><span class="w"> </span><span class="n">off</span>
@@ -919,12 +904,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4e6f0f36a60323e4f328d2aa483921e985c7d935c07d24fe8f89f5aaebad4321.png" src="../_images/4e6f0f36a60323e4f328d2aa483921e985c7d935c07d24fe8f89f5aaebad4321.png" />
+<img alt="../_images/8c667e05085b49bb214e76d2c03fa8af375b5c6d9442fb38de4871a9d7001fa5.png" src="../_images/8c667e05085b49bb214e76d2c03fa8af375b5c6d9442fb38de4871a9d7001fa5.png" />
 </div>
 </div>
 </section>
 <section id="demo-2-complex-poles-and-their-bode-diagrams">
-<h3>Demo 2: Complex poles and their Bode diagrams<a class="headerlink" href="#demo-2-complex-poles-and-their-bode-diagrams" title="Permalink to this heading">#</a></h3>
+<h3>Demo 2: Complex poles and their Bode diagrams<a class="headerlink" href="#demo-2-complex-poles-and-their-bode-diagrams" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Open MATLAB and select Bode designer</p></li>
 </ul>
@@ -950,13 +935,13 @@ document.write(`
 <figure class="align-default" id="fig-unit6-2-6">
 <a class="reference internal image-reference" href="../_images/superposition.png"><img alt="Screenshot from the video How to Build Bode Plots for Complex Systems? (see caption) showing the idea of superpostion." src="../_images/superposition.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 88 </span><span class="caption-text">The idea of superpostion: a bode diagram can be obtained by adding the magnitude and phase of the component bode plots  <a class="reference external" href="https://youtu.be/MQjdeGNZ4mY?si=0KeRrQKVikU281JX&amp;t=413">What are Bode Plots?</a> [t=6 minute 53 seconds] from <span id="id14">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span></span><a class="headerlink" href="#fig-unit6-2-6" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 88 </span><span class="caption-text">The idea of superpostion: a bode diagram can be obtained by adding the magnitude and phase of the component bode plots  <a class="reference external" href="https://youtu.be/MQjdeGNZ4mY?si=0KeRrQKVikU281JX&amp;amp;t=413">What are Bode Plots?</a> [t=6 minute 53 seconds] from <span id="id14">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span></span><a class="headerlink" href="#fig-unit6-2-6" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="bode-plots-for-analysis-and-design">
-<span id="unit6-2-8"></span><h2>Bode plots for analysis and design<a class="headerlink" href="#bode-plots-for-analysis-and-design" title="Permalink to this heading">#</a></h2>
+<span id="unit6-2-8"></span><h2>Bode plots for analysis and design<a class="headerlink" href="#bode-plots-for-analysis-and-design" title="Link to this heading">#</a></h2>
 <p>As we have seen, the Bode plot is a useful system analysis tool.</p>
 <p>With MATLAB and the Control System Designer tool is is very easy to explore the behaviour of indiviual poles and zeros and see how the combination of poles and zeros impact the overall frquency response.</p>
 <p>It is also a very useful tool for examining the stability, gain and phase margin for feedback control systems.</p>
@@ -964,7 +949,7 @@ document.write(`
 <p>You will study the latter two applications in EG-243 next year.</p>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>In this unit we have explored the Bode plot and demonstrated its properties usful for the analysis of LTI systems.</p>
 <p>We covered the following topics</p>
 <ul class="simple">
@@ -978,25 +963,25 @@ document.write(`
 <li><p><a class="reference internal" href="#unit6-2-8"><span class="std std-ref">Bode plots for analysis and design</span></a></p></li>
 </ul>
 <section id="unit-6-2-take-aways">
-<span id="unit6-2-takeaways"></span><h3>Unit 6.2: Take Aways<a class="headerlink" href="#unit-6-2-take-aways" title="Permalink to this heading">#</a></h3>
+<span id="unit6-2-takeaways"></span><h3>Unit 6.2: Take Aways<a class="headerlink" href="#unit-6-2-take-aways" title="Link to this heading">#</a></h3>
 <section id="id15">
-<h4>Frequency response<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h4>
+<h4>Frequency response<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
 <p>The steady-state output of a linear time-invariant system <span class="math notranslate nohighlight">\(H(s)\)</span> subject to a waveform <span class="math notranslate nohighlight">\(x(t) = A_{\mathrm{in}}\sin\left(\omega t\right)\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[y(t) = M\sin\left(\omega t + \phi\right)\]</div>
 <p>where <span class="math notranslate nohighlight">\(M = \left|A_\mathrm{out}/A_\mathrm{in}\right| = \left|H(j\omega)\right|\)</span> and <span class="math notranslate nohighlight">\(\phi = \angle H(j\omega)\)</span> rad/s. Both <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span> depend only in the system transfer function (Laplace transform of the impulse response) and are functions of <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
 </section>
 <section id="bode-plot">
-<h4>Bode plot<a class="headerlink" href="#bode-plot" title="Permalink to this heading">#</a></h4>
+<h4>Bode plot<a class="headerlink" href="#bode-plot" title="Link to this heading">#</a></h4>
 <p>The Bode plot is a plot of <span class="math notranslate nohighlight">\(M_{\mathrm{dB}} = 20\log_{10} M\)</span> dB and phase <span class="math notranslate nohighlight">\(\phi_\mathrm{degree} = (180/\pi)\phi_{\mathrm{radian}}\)</span> plotted against <span class="math notranslate nohighlight">\(\log_{10} \omega\)</span>.</p>
 <p>A Bode plot magnitude and phase plots have the property of <em>superposition</em>. That is, to obtain the Bode plot of a complex transfer function, we add the Bode plots of the real and complex factors (poles and zeros) of the transfer function.</p>
 </section>
 <section id="key-definitions">
-<h4>Key definitions<a class="headerlink" href="#key-definitions" title="Permalink to this heading">#</a></h4>
+<h4>Key definitions<a class="headerlink" href="#key-definitions" title="Link to this heading">#</a></h4>
 <p>Terms used in the discussion of Bode plots are <em>DC-gain</em>, <em>roll-off rate</em>, <em>natural-frequency</em>, <em>cross-over frequency</em> and <em>bandwidth frequency</em> are defined in <a class="reference internal" href="#unit6-2-5"><span class="std std-ref">Terminology used</span></a>.</p>
 </section>
 <section id="asymptotic-bode-plots">
-<h4>Asymptotic bode plots<a class="headerlink" href="#asymptotic-bode-plots" title="Permalink to this heading">#</a></h4>
+<h4>Asymptotic bode plots<a class="headerlink" href="#asymptotic-bode-plots" title="Link to this heading">#</a></h4>
 <p>These are linear approximations to the magnitude and phase plots which are very useful is assessing the frequency response of a system without computing it mathematically.</p>
 <p>In summary these are:</p>
 <ul class="simple">
@@ -1008,7 +993,7 @@ document.write(`
 </ul>
 </section>
 <section id="second-order-systems">
-<h4>Second order-systems<a class="headerlink" href="#second-order-systems" title="Permalink to this heading">#</a></h4>
+<h4>Second order-systems<a class="headerlink" href="#second-order-systems" title="Link to this heading">#</a></h4>
 <p>The model is</p>
 <div class="math notranslate nohighlight">
 \[H(s) = \frac{\omega_n^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}\]</div>
@@ -1023,11 +1008,11 @@ document.write(`
 </ul>
 </section>
 <section id="applications-of-bode-diagrams">
-<h4>Applications of Bode diagrams<a class="headerlink" href="#applications-of-bode-diagrams" title="Permalink to this heading">#</a></h4>
+<h4>Applications of Bode diagrams<a class="headerlink" href="#applications-of-bode-diagrams" title="Link to this heading">#</a></h4>
 <p>Bode diagrams are primarily used in the analysis of stability of feedback systems. If the Bode plot respresents the frequency system of an <em>open-loop system</em>, concepts such as <em>phase- and gain-margin</em> can be developed and analysed using the Bode diagram. The superposition property is usefully used in the design of PID, lead and lag compensators and the use of tools like MATLAB’s Control System Design tool faciltates the design of such compensation schemes. You will explore these applications of Bode plots in EG-243 Control Systems next year.</p>
 </section>
 <section id="matlab-functions-introduced">
-<h4>MATLAB functions introduced<a class="headerlink" href="#matlab-functions-introduced" title="Permalink to this heading">#</a></h4>
+<h4>MATLAB functions introduced<a class="headerlink" href="#matlab-functions-introduced" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">tf</span></code>: defines a system model as a transfer function</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bode</span></code>: plots the Bode plot of a system</p></li>
@@ -1037,40 +1022,48 @@ document.write(`
 </section>
 </section>
 <section id="coming-next">
-<h2>Coming Next<a class="headerlink" href="#coming-next" title="Permalink to this heading">#</a></h2>
+<h2>Coming Next<a class="headerlink" href="#coming-next" title="Link to this heading">#</a></h2>
 <p>This concludes the course material for EG-150 Signals and Systems.</p>
 <p>We will build on the topics introduced in the follow-on module <em>EG-247 Digital Control Systems</em> which you can preview by visiting the online textbook <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook">eg-247-textbook</a>.</p>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id16">
-<dl class="citation">
-<dt class="label" id="id26"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id10">2</a>)</span></dt>
-<dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
-</dd>
-<dt class="label" id="id34"><span class="brackets">Oso13</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id4">3</a>,<a href="#id5">4</a>,<a href="#id9">5</a>,<a href="#id11">6</a>,<a href="#id12">7</a>,<a href="#id14">8</a>)</span></dt>
-<dd><p>Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: <a class="reference external" href="https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html">https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html</a>.</p>
-</dd>
-</dl>
+<div role="list" class="citation-list">
+<div class="citation" id="id26" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Hsu20<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id10">2</a>)</span>
+<p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
+</div>
+<div class="citation" id="id34" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Oso13<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id3">2</a>,<a role="doc-backlink" href="#id4">3</a>,<a role="doc-backlink" href="#id5">4</a>,<a role="doc-backlink" href="#id9">5</a>,<a role="doc-backlink" href="#id11">6</a>,<a role="doc-backlink" href="#id12">7</a>,<a role="doc-backlink" href="#id14">8</a>)</span>
+<p>Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: <a class="reference external" href="https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html">https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html</a>.</p>
+</div>
+</div>
 </div>
 </section>
 <section id="footnotes">
-<h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this heading">#</a></h2>
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Link to this heading">#</a></h2>
 <hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="u62-note-1"><span class="brackets"><a class="fn-backref" href="#id6">1</a></span></dt>
-<dd><p>Audio engineers quote roll-off in <em>dB per octave</em>, where an octave is a doubling of frequency.</p>
-</dd>
-<dt class="label" id="u62-note-2"><span class="brackets"><a class="fn-backref" href="#id7">2</a></span></dt>
-<dd><p>The cross-over refers to the change in response from a <em>gain</em> (<span class="math notranslate nohighlight">\(M \ge 1\)</span>) to an <em>attenuation</em> <span class="math notranslate nohighlight">\(M &lt; 1\)</span>. Above the cross-over frequency the system starts to act like a low-pass filter.</p>
-</dd>
-<dt class="label" id="u62-note-3"><span class="brackets"><a class="fn-backref" href="#id8">3</a></span></dt>
-<dd><p>In filter terms, the bandwidth frequency marks the transition between the <em>pass-band</em> and the <em>stop-band</em>. In control system terms, the bandwidth gives a limit on the frequencies that you can influence with contollers.</p>
-</dd>
-<dt class="label" id="u62-note-10"><span class="brackets"><a class="fn-backref" href="#id13">4</a></span></dt>
-<dd><p>If <span class="math notranslate nohighlight">\(\zeta = 1\)</span> there will be two real and equal poles at <span class="math notranslate nohighlight">\(s = -\zeta\omega_n\)</span>. If <span class="math notranslate nohighlight">\(\zeta &gt; 1\)</span> there will be two real poles at <span class="math notranslate nohighlight">\(p_{1,2} = -\zeta\omega_n \pm \omega_n\sqrt{\zeta^2 - 1}\)</span>. These cases are already covered in <span class="xref std std-ref">unit:6.2.6</span>. You would just add the Bode plots for the real poles (or their asymptotes) together.</p>
-</dd>
-</dl>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="u62-note-1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">1</a><span class="fn-bracket">]</span></span>
+<p>Audio engineers quote roll-off in <em>dB per octave</em>, where an octave is a doubling of frequency.</p>
+</aside>
+<aside class="footnote brackets" id="u62-note-2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">2</a><span class="fn-bracket">]</span></span>
+<p>The cross-over refers to the change in response from a <em>gain</em> (<span class="math notranslate nohighlight">\(M \ge 1\)</span>) to an <em>attenuation</em> <span class="math notranslate nohighlight">\(M &lt; 1\)</span>. Above the cross-over frequency the system starts to act like a low-pass filter.</p>
+</aside>
+<aside class="footnote brackets" id="u62-note-3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">3</a><span class="fn-bracket">]</span></span>
+<p>In filter terms, the bandwidth frequency marks the transition between the <em>pass-band</em> and the <em>stop-band</em>. In control system terms, the bandwidth gives a limit on the frequencies that you can influence with contollers.</p>
+</aside>
+<aside class="footnote brackets" id="u62-note-10" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">4</a><span class="fn-bracket">]</span></span>
+<p>If <span class="math notranslate nohighlight">\(\zeta = 1\)</span> there will be two real and equal poles at <span class="math notranslate nohighlight">\(s = -\zeta\omega_n\)</span>. If <span class="math notranslate nohighlight">\(\zeta &gt; 1\)</span> there will be two real poles at <span class="math notranslate nohighlight">\(p_{1,2} = -\zeta\omega_n \pm \omega_n\sqrt{\zeta^2 - 1}\)</span>. These cases are already covered in <span class="xref std std-ref">unit:6.2.6</span>. You would just add the Bode plots for the real poles (or their asymptotes) together.</p>
+</aside>
+</aside>
 </section>
 </section>
 
@@ -1101,7 +1094,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1129,7 +1122,9 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1251,8 +1246,8 @@ for
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

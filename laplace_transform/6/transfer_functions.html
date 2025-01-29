@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Unit 4.6: Transfer Functions &#8212; EG-150 Signals and Systems</title>
   
@@ -15,54 +14,53 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'laplace_transform/6/transfer_functions';</script>
@@ -73,6 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Unit 4.5: Using Laplace Transforms for Circuit Analysis" href="../5/circuit_analysis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -80,32 +79,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -113,7 +96,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -121,16 +103,25 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -145,6 +136,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../../index.html">
   
@@ -156,7 +149,14 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">EG-150 Signals and Systems</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -168,27 +168,27 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Online notes</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../introduction/index.html">Unit 1 Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../introduction/index.html">Unit 1 Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/intro.html">Unit 1.1 Setting the Scene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/thecourse.html">Unit 1.2 About this Course</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../introduction/concepts.html">Unit 1.3 Introduction to the Concepts to be Studied</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../signals_and_systems/index.html">Unit 2 Signals and Systems</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../signals_and_systems/index.html">Unit 2 Signals and Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/signals/index.html">Unit 2.1 Signals and Classification of Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/signals/pep_signals.html">Unit 2.2 Periodic, Energy and Power Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/elementary_signals/index.html">Unit 2.3 Elementary Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/elementary_signals/examples3.html">Examples 3 - Elementary Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../signals_and_systems/systems/index.html">Unit 2.4 Systems and Classification of Systems</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../lti_systems/index.html">Unit 3 Linear Time-Invariant Systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../lti_systems/index.html">Unit 3 Linear Time-Invariant Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti1.html">Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti2.html">Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../lti_systems/lti3.html">Unit 3.3 Systems Described by Differential Equations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Unit 4 Laplace Transforms and their Applications</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Unit 4 Laplace Transforms and their Applications</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../1/laplace.html">Unit 4.1 The Laplace Transformation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2/laplace_of_common_signals.html">Unit 4.2 Laplace Transform of Some Common Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../3/laplace_properties.html">Unit 4.3 Properties of Laplace Transforms</a></li>
@@ -198,26 +198,26 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../7/tf_for_circuits.html">Unit 4.7 Transfer Functions for Circuit Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../8/casas.html">Unit 4.8 Computer-Aided Systems Analysis and Simulation</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../poles_and_zeros/index.html">Unit 5 Pole-Zero Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../poles_and_zeros/index.html">Unit 5 Pole-Zero Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../poles_and_zeros/qualitative_properties.html">Unit 5.1 Qualitative Properties of Signals and Transfer functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../poles_and_zeros/second_order_properties.html">Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../freq_resp/index.html">Unit 6 Frequency Response Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../freq_resp/index.html">Unit 6 Frequency Response Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../freq_resp/tf_response.html">Unit 6.1: Frequency Response of a Transfer Function</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../freq_resp/bode_plots.html">Unit 6.2: Bode Plots</a></li>
 
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../zbib.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../takeaways.html">Unit take aways</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises.html">List of Unit Exercises</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../homework/index.html">Homework Problems</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../homework/index.html">Homework Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../homework/hw1.html">Homework 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../homework/hw2.html">Homework 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../homework/hw3.html">Homework 3</a></li>
@@ -229,11 +229,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../homework/hw9.html">Homework 9</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../homework/hw10.html">Homework 10</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../1/lt_props.html">Properties of the Laplace Transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../1/lt_table.html">Common Laplace Transform Pairs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../setup/polling_setup.html">Set Up In-Class Polling</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../setup/index.html">Setting up your own version of this book</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter.html">About Jupyter notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/python.html">Installing Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
@@ -241,7 +241,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../setup/jupyter-book.html">Setting up jupyter-book</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 
     </div>
@@ -250,14 +250,19 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -266,14 +271,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -413,27 +418,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -482,9 +479,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-4-6-take-aways">Unit 4.6: Take Aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#transfer-function">Transfer function</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Characterization of LTI Systems</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Characterization of LTI Systems</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#laplace-transforms-of-lccodes">Laplace transforms of LCCODEs</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Block diagrams</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Block diagrams</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#still-to-come">Still to come</a></li>
@@ -501,15 +498,15 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="unit-4-6-transfer-functions">
-<span id="unit4-6"></span><h1>Unit 4.6: Transfer Functions<a class="headerlink" href="#unit-4-6-transfer-functions" title="Permalink to this heading">#</a></h1>
+<span id="unit4-6"></span><h1>Unit 4.6: Transfer Functions<a class="headerlink" href="#unit-4-6-transfer-functions" title="Link to this heading">#</a></h1>
 <p>The preparatory reading for this section is <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246/toc-chapter/chapter3/section/section28">3.6 The System Function</a> from <span id="id1">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/6/transfer_functions">cpjobling.github.io/eg-150-textbook/laplace_transform/6/transfer_functions</a></p>
 <p><img alt="QR Code for this lecture" src="../../_images/qrcode_laplace6.png" /></p>
 <section id="agenda">
-<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this heading">#</a></h2>
+<h2>Agenda<a class="headerlink" href="#agenda" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#system-function"><span class="std std-ref">The Transfer Function</span></a></p></li>
 <li><p><a class="reference internal" href="#char-lti-systems"><span class="std std-ref">Characterization of LTI Systems</span></a></p></li>
@@ -519,37 +516,37 @@ document.write(`
 </ul>
 </section>
 <section id="the-transfer-function">
-<span id="system-function"></span><h2>The Transfer Function<a class="headerlink" href="#the-transfer-function" title="Permalink to this heading">#</a></h2>
+<span id="system-function"></span><h2>The Transfer Function<a class="headerlink" href="#the-transfer-function" title="Link to this heading">#</a></h2>
 <p>In <a class="reference internal" href="../../lti_systems/lti1.html#response-of-a-continuous-time-lti-system-and-the-convolution-integral"><span class="std std-ref">Unit 3.1: Response of a Continuous-Time LTI System and the Convolution Integral</span></a> we showed that the output <span class="math notranslate nohighlight">\(y(t)\)</span> of a continuous-time LTI system equals the convolution of the input <span class="math notranslate nohighlight">\(x(t)\)</span> with the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>; that is,</p>
 <div class="math notranslate nohighlight" id="equation-eq-335">
-<span class="eqno">(31)<a class="headerlink" href="#equation-eq-335" title="Permalink to this equation">#</a></span>\[y(t) = x(t) * h(t)\]</div>
+<span class="eqno">(31)<a class="headerlink" href="#equation-eq-335" title="Link to this equation">#</a></span>\[y(t) = x(t) * h(t)\]</div>
 <p>Applying the <a class="reference internal" href="../3/laplace_properties.html#lap3-conv"><span class="std std-ref">Convolution in the time domain</span></a> property, we obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-336">
-<span class="eqno">(32)<a class="headerlink" href="#equation-eq-336" title="Permalink to this equation">#</a></span>\[Y(s) = X(s)H(s)\]</div>
+<span class="eqno">(32)<a class="headerlink" href="#equation-eq-336" title="Link to this equation">#</a></span>\[Y(s) = X(s)H(s)\]</div>
 <p>where <span class="math notranslate nohighlight">\(Y(s)\)</span>, <span class="math notranslate nohighlight">\(X(s)\)</span>, and <span class="math notranslate nohighlight">\(H(s)\)</span> are the Laplace transforms of <span class="math notranslate nohighlight">\(y(t)\)</span>, <span class="math notranslate nohighlight">\(x(t)\)</span>, and <span class="math notranslate nohighlight">\(h(t)\)</span>, respectively.</p>
 <p>Equation <a class="reference internal" href="#equation-eq-336">(32)</a> can be expressed as</p>
 <div class="math notranslate nohighlight" id="equation-eq-337">
-<span class="eqno">(33)<a class="headerlink" href="#equation-eq-337" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)}\]</div>
+<span class="eqno">(33)<a class="headerlink" href="#equation-eq-337" title="Link to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)}\]</div>
 <p>The laplace transform <span class="math notranslate nohighlight">\(H(s)\)</span> of <span class="math notranslate nohighlight">\(h(t)\)</span> is called the <em>transfer function</em> (or <em>system function</em>) of the system.</p>
 <p>By <a class="reference internal" href="#equation-eq-337">(33)</a>, the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> can also be defined as the ratio of the Laplace transforms of the output <span class="math notranslate nohighlight">\(y(t)\)</span> and the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
 <p>The transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> completely characterizes the system because the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> completely characterizes the system.</p>
-<p><a class="reference internal" href="#fig-3-7"><span class="std std-numref">Fig. 64</span></a> illustrates the relationship of Equations <a href="#id2"><span class="problematic" id="id3">eq:335</span></a> and <a href="#id4"><span class="problematic" id="id5">eq:336</span></a>.</p>
+<p><a class="reference internal" href="#fig-3-7"><span class="std std-numref">Fig. 64</span></a> illustrates the relationship of Equations  and .</p>
 <figure class="align-default" id="fig-3-7">
 <a class="reference internal image-reference" href="../../_images/system_function.png"><img alt="Impulse response and system function." src="../../_images/system_function.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 64 </span><span class="caption-text">Impulse response and system function</span><a class="headerlink" href="#fig-3-7" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 64 </span><span class="caption-text">Impulse response and system function</span><a class="headerlink" href="#fig-3-7" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="characterization-of-lti-systems">
-<span id="char-lti-systems"></span><h2>Characterization of LTI Systems<a class="headerlink" href="#characterization-of-lti-systems" title="Permalink to this heading">#</a></h2>
+<span id="char-lti-systems"></span><h2>Characterization of LTI Systems<a class="headerlink" href="#characterization-of-lti-systems" title="Link to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This section is for reference only and is not examinable.</p>
 </div>
 <p>Many properties of continuous-time LTI systems can be closely associated with the characteristics of <span class="math notranslate nohighlight">\(H(s)\)</span> in the <span class="math notranslate nohighlight">\(s\)</span>-plane and in particular with the pole locations and the region of convergence (ROC).</p>
 <section id="causality">
-<span id="hs-casuality"></span><h3>Causality<a class="headerlink" href="#causality" title="Permalink to this heading">#</a></h3>
+<span id="hs-casuality"></span><h3>Causality<a class="headerlink" href="#causality" title="Link to this heading">#</a></h3>
 <p>Fot a causal continuous-time LTI system, we have</p>
 <div class="math notranslate nohighlight">
 \[h(t) = 0\qquad t&lt;0\]</div>
@@ -565,51 +562,51 @@ document.write(`
 <p>That is, the ROC is the region in the <span class="math notranslate nohighlight">\(s\)</span>-plane to the left of all the system poles.</p>
 </section>
 <section id="stability">
-<span id="hs-stability"></span><h3>Stability<a class="headerlink" href="#stability" title="Permalink to this heading">#</a></h3>
+<span id="hs-stability"></span><h3>Stability<a class="headerlink" href="#stability" title="Link to this heading">#</a></h3>
 <p>In <a class="reference internal" href="../../lti_systems/lti2.html#c-stability"><span class="std std-ref">C. Stability</span></a> we stated that a continuous-time LTI system is BIBO stable if and only if [Eq. <a class="reference internal" href="../../lti_systems/lti2.html#equation-eq-221">(1)</a>]</p>
 <div class="math notranslate nohighlight">
 \[\int_{-\infty}^{\infty}\left|h(\tau)\right|\,d\tau \lt \infty\]</div>
 <p>The corresponding requirement on <span class="math notranslate nohighlight">\(H(s)\)</span> is that the ROC of <span class="math notranslate nohighlight">\(H(s)\)</span> contains the <span class="math notranslate nohighlight">\(j\omega\)</span> axis (that is $s = j\omega). This is key result, proved in Prob. 3.26 in <span class="xref std std-ref">schaum</span>, that is fundamental to systems and control theory.</p>
 </section>
 <section id="causal-and-stable-systems">
-<span id="hs-causal-and-stable"></span><h3>Causal and stable systems<a class="headerlink" href="#causal-and-stable-systems" title="Permalink to this heading">#</a></h3>
+<span id="hs-causal-and-stable"></span><h3>Causal and stable systems<a class="headerlink" href="#causal-and-stable-systems" title="Link to this heading">#</a></h3>
 <p>If a system is both causal and stable then all the poles must be in the left-half of the <span class="math notranslate nohighlight">\(s\)</span>-plane: that is they all have negative real parts because the ROC is of the form <span class="math notranslate nohighlight">\(\mathrm{Re}(s) &gt; \sigma_\mathrm{max}\)</span> and since the <span class="math notranslate nohighlight">\(j\omega\)</span> axis is included in the ROC, we must have <span class="math notranslate nohighlight">\(\sigma_\mathrm{max} &lt; 0\)</span>.</p>
 <p>The conditions for which the closed-loop poles in continuous-time LTI systems with feedback are stable is a key underlyting principle of the control theory to be studied in <strong>EG-243 Control Systems</strong> next year.</p>
 </section>
 </section>
 <section id="transfer-functions-for-lti-system-described-by-linear-constant-coefficient-ordinary-differential-equations">
-<span id="tf-for-lccode"></span><h2>Transfer functions for LTI system described by Linear Constant-Coefficient Ordinary Differential Equations<a class="headerlink" href="#transfer-functions-for-lti-system-described-by-linear-constant-coefficient-ordinary-differential-equations" title="Permalink to this heading">#</a></h2>
+<span id="tf-for-lccode"></span><h2>Transfer functions for LTI system described by Linear Constant-Coefficient Ordinary Differential Equations<a class="headerlink" href="#transfer-functions-for-lti-system-described-by-linear-constant-coefficient-ordinary-differential-equations" title="Link to this heading">#</a></h2>
 <p>In <a class="reference internal" href="../../lti_systems/lti3.html#systems-described-by-differential-equations"><span class="std std-ref">Unit 3.3: Systems Described by Differential Equations</span></a> we considered a continuous-time LTI systemfor which input <span class="math notranslate nohighlight">\(x(t)\)</span> and output <span class="math notranslate nohighlight">\(y(t)\)</span> satisfy the general linear constant-coefficient ordinary differential equation (LCCODE) of the form</p>
 <div class="math notranslate nohighlight" id="equation-eq-338">
-<span class="eqno">(34)<a class="headerlink" href="#equation-eq-338" title="Permalink to this equation">#</a></span>\[\sum_{k=0}^N a_k \frac{d^k}{dt^k} y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)\]</div>
+<span class="eqno">(34)<a class="headerlink" href="#equation-eq-338" title="Link to this equation">#</a></span>\[\sum_{k=0}^N a_k \frac{d^k}{dt^k} y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)\]</div>
 <p>Applying the Laplace transform and using the <a class="reference internal" href="../3/laplace_properties.html#lap-diff-prop"><span class="std std-ref">Differentiation in the time domain</span></a> of the Laplace transform, we obtain</p>
 <div class="math notranslate nohighlight">
 \[\sum_{k=0}^N a_k s^k Y(s)=\sum_{k=0}^M b_k s^k X(s)\]</div>
 <p>or</p>
 <div class="math notranslate nohighlight" id="equation-eq-339">
-<span class="eqno">(35)<a class="headerlink" href="#equation-eq-339" title="Permalink to this equation">#</a></span>\[Y(s) \sum_{k=0}^N a_k s^k = X(s) \sum_{k=0}^M b_k s^k \]</div>
+<span class="eqno">(35)<a class="headerlink" href="#equation-eq-339" title="Link to this equation">#</a></span>\[Y(s) \sum_{k=0}^N a_k s^k = X(s) \sum_{k=0}^M b_k s^k \]</div>
 <p>Thus,</p>
 <div class="math notranslate nohighlight" id="equation-eq-340">
-<span class="eqno">(36)<a class="headerlink" href="#equation-eq-340" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)} = \frac{\displaystyle \sum_{k=0}^M b_k s^k}{\displaystyle\sum_{k=0}^N a_k s^k}\]</div>
+<span class="eqno">(36)<a class="headerlink" href="#equation-eq-340" title="Link to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)} = \frac{\displaystyle \sum_{k=0}^M b_k s^k}{\displaystyle\sum_{k=0}^N a_k s^k}\]</div>
 <p>Expanding <a class="reference internal" href="#equation-eq-340">(36)</a>, <span class="math notranslate nohighlight">\(H(s)\)</span> can be written in the more familiar form</p>
 <div class="math notranslate nohighlight" id="equation-eq-341">
-<span class="eqno">(37)<a class="headerlink" href="#equation-eq-341" title="Permalink to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}\]</div>
+<span class="eqno">(37)<a class="headerlink" href="#equation-eq-341" title="Link to this equation">#</a></span>\[H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}\]</div>
 <p>Hence, <span class="math notranslate nohighlight">\(H(s)\)</span> is always a rational polynomial in <span class="math notranslate nohighlight">\(s\)</span>.</p>
 <p>Note the ROC of <span class="math notranslate nohighlight">\(H(s)\)</span> is not specified by <a class="reference internal" href="#equation-eq-340">(36)</a> but must be inferred with additional requirements on the system such as causality and stability.</p>
 </section>
 <section id="block-diagrams-for-systems-interconnection">
-<span id="block-diagrams"></span><h2>Block diagrams for Systems Interconnection<a class="headerlink" href="#block-diagrams-for-systems-interconnection" title="Permalink to this heading">#</a></h2>
+<span id="block-diagrams"></span><h2>Block diagrams for Systems Interconnection<a class="headerlink" href="#block-diagrams-for-systems-interconnection" title="Link to this heading">#</a></h2>
 <p>For two LTI systems (with <span class="math notranslate nohighlight">\(h_1(t)\)</span> and <span class="math notranslate nohighlight">\(h_2(t)\)</span>, respectively) in cascade (<a class="reference internal" href="#fig-3-8"><span class="std std-numref">Fig. 65</span></a>(a)), the overall impulse response is given</p>
 <div class="math notranslate nohighlight">
 \[h(t) = h_1(t) * h_2(t)\]</div>
 <p>Thus, the corresponding transfer functions are related by the product</p>
 <div class="math notranslate nohighlight" id="equation-eq-3412">
-<span class="eqno">(38)<a class="headerlink" href="#equation-eq-3412" title="Permalink to this equation">#</a></span>\[H(s) = H_1(s)H_2(s)\]</div>
+<span class="eqno">(38)<a class="headerlink" href="#equation-eq-3412" title="Link to this equation">#</a></span>\[H(s) = H_1(s)H_2(s)\]</div>
 <p>This relationship is illustrated in <a class="reference internal" href="#fig-3-8"><span class="std std-numref">Fig. 65</span></a>(b)</p>
 <figure class="align-default" id="fig-3-8">
 <a class="reference internal image-reference" href="../../_images/bd1.png"><img alt="Two systems in cascade (a) Time-domain representation; (b) s-domain presentation." src="../../_images/bd1.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 65 </span><span class="caption-text">Two systems in cascade (a) Time-domain representation; (b) s-domain representation.</span><a class="headerlink" href="#fig-3-8" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 65 </span><span class="caption-text">Two systems in cascade (a) Time-domain representation; (b) s-domain representation.</span><a class="headerlink" href="#fig-3-8" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Similarly, the impulse response of a parallel combination of two LTI systems (<a class="reference internal" href="#fig-3-9"><span class="std std-numref">Fig. 66</span></a>(a)) is given by</p>
@@ -617,82 +614,82 @@ document.write(`
 \[h(t) = h_1(t) + h_2(t)\]</div>
 <p>Thus,</p>
 <div class="math notranslate nohighlight" id="equation-eq-342">
-<span class="eqno">(39)<a class="headerlink" href="#equation-eq-342" title="Permalink to this equation">#</a></span>\[H(s) = H_1(s) + H_2(s)\]</div>
+<span class="eqno">(39)<a class="headerlink" href="#equation-eq-342" title="Link to this equation">#</a></span>\[H(s) = H_1(s) + H_2(s)\]</div>
 <p>This relationship is illustrated in <a class="reference internal" href="#fig-3-9"><span class="std std-numref">Fig. 66</span></a>(b).</p>
 <figure class="align-default" id="fig-3-9">
 <a class="reference internal image-reference" href="../../_images/bd2.png"><img alt="Two systems in parallel. (a) Time-domain representation; (b) s-domain representation." src="../../_images/bd2.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 66 </span><span class="caption-text">Two systems in parallel. (a) Time-domain representation; (b) s-domain representation.</span><a class="headerlink" href="#fig-3-9" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 66 </span><span class="caption-text">Two systems in parallel. (a) Time-domain representation; (b) s-domain representation.</span><a class="headerlink" href="#fig-3-9" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="exercises-13-transfer-functions">
-<span id="examples13"></span><h2>Exercises 13: Transfer functions<a class="headerlink" href="#exercises-13-transfer-functions" title="Permalink to this heading">#</a></h2>
+<span id="examples13"></span><h2>Exercises 13: Transfer functions<a class="headerlink" href="#exercises-13-transfer-functions" title="Link to this heading">#</a></h2>
 <section id="exercise-13-1-rc-circuit">
-<span id="ex-13-1"></span><h3>Exercise 13.1: RC circuit<a class="headerlink" href="#exercise-13-1-rc-circuit" title="Permalink to this heading">#</a></h3>
+<span id="ex-13-1"></span><h3>Exercise 13.1: RC circuit<a class="headerlink" href="#exercise-13-1-rc-circuit" title="Link to this heading">#</a></h3>
 <p>Find the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span> and the impulse reponse <span class="math notranslate nohighlight">\(h(t)\)</span> of the RC circuit in <a class="reference internal" href="../../signals_and_systems/systems/index.html#fig-rc-circuit"><span class="std std-numref">Fig. 30</span></a> (<a class="reference internal" href="../../signals_and_systems/systems/index.html#ex4-1"><span class="std std-ref">Exercise 4.1: RC Circuit</span></a>).</p>
-<p>For the answer, refer to the lecture recording or see solved problem 3.23 in in <span id="id6">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 3.23 in in <span id="id2">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="exercise-13-2-step-response">
-<span id="ex-13-2"></span><h3>Exercise 13.2: Step response<a class="headerlink" href="#exercise-13-2-step-response" title="Permalink to this heading">#</a></h3>
+<span id="ex-13-2"></span><h3>Exercise 13.2: Step response<a class="headerlink" href="#exercise-13-2-step-response" title="Link to this heading">#</a></h3>
 <p>Use the Laplace transform to redo <a class="reference internal" href="../../lti_systems/lti1.html#ex5-5"><span class="std std-ref">Exercise 5.5</span></a>.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 3.24 in in <span id="id7">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 3.24 in in <span id="id3">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="exercise-13-3-impulse-response-from-step-response">
-<span id="ex-13-3"></span><h3>Exercise 13.3: Impulse response from step response<a class="headerlink" href="#exercise-13-3-impulse-response-from-step-response" title="Permalink to this heading">#</a></h3>
+<span id="ex-13-3"></span><h3>Exercise 13.3: Impulse response from step response<a class="headerlink" href="#exercise-13-3-impulse-response-from-step-response" title="Link to this heading">#</a></h3>
 <p>The output <span class="math notranslate nohighlight">\(y(t)\)</span> of a continuous-time LTI system is found to be <span class="math notranslate nohighlight">\(2e^{-3t}u_0(t)\)</span> when the input <span class="math notranslate nohighlight">\(x(t)\)</span> is <span class="math notranslate nohighlight">\(u_0(t)\)</span>.</p>
 <p>a). Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system.</p>
 <p>b). Find the output <span class="math notranslate nohighlight">\(y(t)\)</span> when the input is <span class="math notranslate nohighlight">\(e^{-t}u_0(t)\)</span>.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 3.25 in in <span id="id8">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 3.25 in in <span id="id4">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="exercise-13-4-convolution">
-<span id="ex-13-4"></span><h3>Exercise 13.4: Convolution<a class="headerlink" href="#exercise-13-4-convolution" title="Permalink to this heading">#</a></h3>
+<span id="ex-13-4"></span><h3>Exercise 13.4: Convolution<a class="headerlink" href="#exercise-13-4-convolution" title="Link to this heading">#</a></h3>
 <p>Use the Laplace transform to redo <a class="reference internal" href="../../lti_systems/lti2.html#ex6-6"><span class="std std-ref">Exercise 6.6</span></a>.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 3.27 in in <span id="id9">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 3.27 in in <span id="id5">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="exercise-13-5-differential-equation-1">
-<span id="ex-13-5"></span><h3>Exercise 13.5: Differential equation 1<a class="headerlink" href="#exercise-13-5-differential-equation-1" title="Permalink to this heading">#</a></h3>
+<span id="ex-13-5"></span><h3>Exercise 13.5: Differential equation 1<a class="headerlink" href="#exercise-13-5-differential-equation-1" title="Link to this heading">#</a></h3>
 <p>Use the Laplace transform to redo <a class="reference internal" href="../../lti_systems/lti3.html#ex8-6"><span class="std std-ref">Exercise 8.6</span></a>.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 3.28 in in <span id="id10">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 3.28 in in <span id="id6">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="exercise-13-6-differential-equation-2">
-<span id="ex-13-6"></span><h3>Exercise 13.6: Differential equation 2<a class="headerlink" href="#exercise-13-6-differential-equation-2" title="Permalink to this heading">#</a></h3>
+<span id="ex-13-6"></span><h3>Exercise 13.6: Differential equation 2<a class="headerlink" href="#exercise-13-6-differential-equation-2" title="Link to this heading">#</a></h3>
 <p>Use the Laplace transform to redo <a class="reference internal" href="../../lti_systems/lti3.html#ex8-8"><span class="std std-ref">Exercise 8.8</span></a>.</p>
-<p>For the answer, refer to the lecture recording or see solved problem 3.29 in in <span id="id11">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 3.29 in in <span id="id7">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="exercise-13-7-differential-equation-3">
-<span id="ex-13-7"></span><h3>Exercise 13.7: Differential equation 3<a class="headerlink" href="#exercise-13-7-differential-equation-3" title="Permalink to this heading">#</a></h3>
+<span id="ex-13-7"></span><h3>Exercise 13.7: Differential equation 3<a class="headerlink" href="#exercise-13-7-differential-equation-3" title="Link to this heading">#</a></h3>
 <p>Consider a continuous-time LTI system for which the input <span class="math notranslate nohighlight">\(x(t)\)</span> and output <span class="math notranslate nohighlight">\(y(t)\)</span> are related by</p>
 <div class="math notranslate nohighlight" id="equation-eq-386">
-<span class="eqno">(40)<a class="headerlink" href="#equation-eq-386" title="Permalink to this equation">#</a></span>\[\frac{d^2 y(t)}{dt^2} + \frac{dy(t)}{dt} - 2y(t) = x(t)\]</div>
+<span class="eqno">(40)<a class="headerlink" href="#equation-eq-386" title="Link to this equation">#</a></span>\[\frac{d^2 y(t)}{dt^2} + \frac{dy(t)}{dt} - 2y(t) = x(t)\]</div>
 <p>a) Find the transfer function <span class="math notranslate nohighlight">\(H(s)\)</span></p>
 <p>b) Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span></p>
-<p>For the answer, refer to the lecture recording or see solved problem 3.30 in in <span id="id12">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 3.30 in in <span id="id8">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="exercise-13-8-feedback">
-<span id="ex-13-8"></span><h3>Exercise 13.8: Feedback<a class="headerlink" href="#exercise-13-8-feedback" title="Permalink to this heading">#</a></h3>
+<span id="ex-13-8"></span><h3>Exercise 13.8: Feedback<a class="headerlink" href="#exercise-13-8-feedback" title="Link to this heading">#</a></h3>
 <p>The feedback interconnection of two causal subsytems with transfer functions <span class="math notranslate nohighlight">\(F(s)\)</span> and <span class="math notranslate nohighlight">\(G(s)\)</span> is shown in <a class="reference internal" href="#fig-ex13-8"><span class="std std-numref">Fig. 67</span></a>. Find the overall system function <span class="math notranslate nohighlight">\(H(s)\)</span> for this feedback system.</p>
 <figure class="align-default" id="fig-ex13-8">
 <a class="reference internal image-reference" href="../../_images/figex13_8.png"><img alt="Feedback system" src="../../_images/figex13_8.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 67 </span><span class="caption-text">Feedback system</span><a class="headerlink" href="#fig-ex13-8" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 67 </span><span class="caption-text">Feedback system</span><a class="headerlink" href="#fig-ex13-8" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>For the answer, refer to the lecture recording or see solved problem 3.31 in in <span id="id13">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For the answer, refer to the lecture recording or see solved problem 3.31 in in <span id="id9">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 </section>
 <section id="unit-4-6-homework">
-<span id="unit4-6-hw"></span><h2>Unit 4.6: Homework<a class="headerlink" href="#unit-4-6-homework" title="Permalink to this heading">#</a></h2>
+<span id="unit4-6-hw"></span><h2>Unit 4.6: Homework<a class="headerlink" href="#unit-4-6-homework" title="Link to this heading">#</a></h2>
 <p>Attempt any of the questions in <a class="reference internal" href="../5/circuit_analysis.html#examples12"><span class="std std-ref">Exercises 12</span></a> of these course notes that have not been covered in the examples class.</p>
-<p>The solutions for Unit 4.6 are in <strong>Section 3.8 Solved Problems</strong> <span id="id14">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span> starting at 3.23. (The actual numbers are listed with the examples above.)</p>
+<p>The solutions for Unit 4.6 are in <strong>Section 3.8 Solved Problems</strong> <span id="id10">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span> starting at 3.23. (The actual numbers are listed with the examples above.)</p>
 <p>We will do some problems from these sets in Examples Class 4.</p>
 <section id="supplementary-problems">
-<h3>Supplementary Problems<a class="headerlink" href="#supplementary-problems" title="Permalink to this heading">#</a></h3>
-<p>Supplementary problems 3.52-3.55 in <span id="id15">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span> are related to the content covered in this unit.</p>
+<h3>Supplementary Problems<a class="headerlink" href="#supplementary-problems" title="Link to this heading">#</a></h3>
+<p>Supplementary problems 3.52-3.55 in <span id="id11">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span> are related to the content covered in this unit.</p>
 </section>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>In this unit we have presented the idea of a <em>transfer function</em> (or <em>system function</em>) that allows us to represent the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> by the Laplace transform <span class="math notranslate nohighlight">\(H(s)\)</span>. We also looked at the characteristics of the Laplace transform, transform functions for LCCODEs and series and parallel combination of transfer functions.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#system-function"><span class="std std-ref">The Transfer Function</span></a></p></li>
@@ -702,22 +699,22 @@ document.write(`
 <li><p><a class="reference internal" href="#examples13"><span class="std std-ref">Exercises 13: Transfer functions</span></a></p></li>
 </ul>
 <section id="unit-4-6-take-aways">
-<span id="unit4-6-takeaways"></span><h3>Unit 4.6: Take Aways<a class="headerlink" href="#unit-4-6-take-aways" title="Permalink to this heading">#</a></h3>
+<span id="unit4-6-takeaways"></span><h3>Unit 4.6: Take Aways<a class="headerlink" href="#unit-4-6-take-aways" title="Link to this heading">#</a></h3>
 <p><strong>My main message to you is that, as an engineer faced with a LCCODE to solve, you should use Laplace transforms!</strong></p>
 <section id="transfer-function">
-<h4>Transfer function<a class="headerlink" href="#transfer-function" title="Permalink to this heading">#</a></h4>
+<h4>Transfer function<a class="headerlink" href="#transfer-function" title="Link to this heading">#</a></h4>
 <p>The summary of the time-domain and s-domain transforms are illustrated in <a class="reference internal" href="#fig-3-7"><span class="std std-numref">Fig. 64</span></a>. The key result is <span class="math notranslate nohighlight">\(Y(s) = H(s)X(s)\)</span> which simplifies the computation of the system response <span class="math notranslate nohighlight">\(y(t) = h(t)*x(t)\)</span> which has to be done using time-convolution.</p>
 <p>If we know <span class="math notranslate nohighlight">\(Y(s)\)</span> and <span class="math notranslate nohighlight">\(X(s)\)</span> we can determine <span class="math notranslate nohighlight">\(H(s)\)</span> using</p>
 <div class="math notranslate nohighlight">
 \[H(s) = \frac{Y(s)}{X(s)}\]</div>
 <p>and <span class="math notranslate nohighlight">\(h(t) = \mathcal{L}^{-1}\left\{H(s)\right\}\)</span></p>
 </section>
-<section id="id16">
-<h4>Characterization of LTI Systems<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h4>
+<section id="id12">
+<h4>Characterization of LTI Systems<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
 <p>For continuous-time LTI systems the causality and stabilty of a system is guaranteed if all the poles of the transfer function are in the left-half of the <span class="math notranslate nohighlight">\(s\)</span>-plane and the <span class="math notranslate nohighlight">\(j\omega\)</span> axis is included in the region of convergence. That is, if the poles of the system <span class="math notranslate nohighlight">\(H(s)\)</span>, <span class="math notranslate nohighlight">\(s_k\)</span> have real part <span class="math notranslate nohighlight">\(-\sigma_k\)</span>, the system will be causal and stable if <span class="math notranslate nohighlight">\(\sigma_k &lt; 0\)</span> for all <span class="math notranslate nohighlight">\(k\)</span>.</p>
 </section>
 <section id="laplace-transforms-of-lccodes">
-<h4>Laplace transforms of LCCODEs<a class="headerlink" href="#laplace-transforms-of-lccodes" title="Permalink to this heading">#</a></h4>
+<h4>Laplace transforms of LCCODEs<a class="headerlink" href="#laplace-transforms-of-lccodes" title="Link to this heading">#</a></h4>
 <p>The linear constant coefficient ordinary differential equation (LLCODE) of a system involving input signal <span class="math notranslate nohighlight">\(x(t)\)</span> and output signal <span class="math notranslate nohighlight">\(y(t)\)</span> is given in <a class="reference internal" href="#equation-eq-338">(34)</a>. When we take Laplace transforms of this differential equation, ignoring initial conditions, we get the polynomial equation <a class="reference internal" href="#equation-eq-339">(35)</a> from which we can determine the transfer function:</p>
 <div class="math notranslate nohighlight">
 \[H(s) = \frac{Y(s)}{X(s)} = \frac{b_M s^M + b_{M-1}s^{M-1}+ \cdots + b_1 s + b_0}{a_{N} s^N + b_{N-1}s^{N-1}+ \cdots + a_1 s + a_0}\]</div>
@@ -727,32 +724,34 @@ document.write(`
 <p>and taking inverse Laplace transforms using the Partial Fraction Expansion method discussed in <a class="reference internal" href="../5/circuit_analysis.html#unit4-5"><span class="std std-ref">Unit 4.5: Using Laplace Transforms for Circuit Analysis</span></a>.</p>
 <p>Several examples are given in <a class="reference internal" href="../5/circuit_analysis.html#examples12"><span class="std std-ref">Exercises 12</span></a> in which the problems given in <span class="xref std std-ref">examples8</span> of <span class="xref std std-ref">unit3.3</span> are redone as Laplace transform problems.</p>
 </section>
-<section id="id17">
-<h4>Block diagrams<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h4>
+<section id="id13">
+<h4>Block diagrams<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
 <p>Complex systems can be broken down into subsystems which may be represented by block diagrams which have either series or parallel connections (see <a class="reference internal" href="#fig-3-8"><span class="std std-numref">Fig. 65</span></a> and <a class="reference internal" href="#fig-3-9"><span class="std std-numref">Fig. 66</span></a> and feedback (See <a class="reference internal" href="#ex-13-8"><span class="std std-ref">Exercise 13.8: Feedback</span></a>)</p>
 </section>
 </section>
 <section id="still-to-come">
-<h3>Still to come<a class="headerlink" href="#still-to-come" title="Permalink to this heading">#</a></h3>
+<h3>Still to come<a class="headerlink" href="#still-to-come" title="Link to this heading">#</a></h3>
 <p>We will use transfer functions to solve circuit problems in <a class="reference internal" href="../7/tf_for_circuits.html#unit4-7"><span class="std std-ref">Unit 4.7: Transfer Functions for Circuit Analysis</span></a> and conclude our study of Laplace transforms in <a class="reference internal" href="../8/casas.html#unit4-8"><span class="std std-ref">Unit 4.8: Computer-Aided Systems Analysis and Simulation</span></a> with a look at the use of Transfer functions in the MATLAB control systems toolbox and the simulation tool Simulink. We will also look at some of the problems you have studied in <strong>EG-152 Analogue Design</strong> hopefully confirming some of the results you have observed in the lab.</p>
 <p>In <strong>EG-247 Digital Signal Processing</strong> we will start from the knowledge gained in <span class="xref std std-ref">Unit 4</span> developing transform ideas further via the Fourier Transform, Z-Transform and the design of systems for signal processing. In <strong>EG-243 Control Systems</strong> you will model feedback control signals using block diagrams and transfer functions. You will also study how knowledge of poles and zeros can be exploited in the design of systems with stable responses.</p>
 </section>
 </section>
 <section id="next-time">
-<h2>Next time<a class="headerlink" href="#next-time" title="Permalink to this heading">#</a></h2>
+<h2>Next time<a class="headerlink" href="#next-time" title="Link to this heading">#</a></h2>
 <p>We move on to consider</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../7/tf_for_circuits.html#unit4-7"><span class="std std-ref">Unit 4.7: Transfer Functions for Circuit Analysis</span></a></p></li>
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id18">
-<dl class="citation">
-<dt class="label" id="id28"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id6">2</a>,<a href="#id7">3</a>,<a href="#id8">4</a>,<a href="#id9">5</a>,<a href="#id10">6</a>,<a href="#id11">7</a>,<a href="#id12">8</a>,<a href="#id13">9</a>,<a href="#id14">10</a>,<a href="#id15">11</a>)</span></dt>
-<dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
-</dd>
-</dl>
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id14">
+<div role="list" class="citation-list">
+<div class="citation" id="id24" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Hsu20<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>,<a role="doc-backlink" href="#id3">3</a>,<a role="doc-backlink" href="#id4">4</a>,<a role="doc-backlink" href="#id5">5</a>,<a role="doc-backlink" href="#id6">6</a>,<a role="doc-backlink" href="#id7">7</a>,<a role="doc-backlink" href="#id8">8</a>,<a role="doc-backlink" href="#id9">9</a>,<a role="doc-backlink" href="#id10">10</a>,<a role="doc-backlink" href="#id11">11</a>)</span>
+<p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -784,7 +783,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -812,7 +811,9 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -848,9 +849,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-4-6-take-aways">Unit 4.6: Take Aways</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#transfer-function">Transfer function</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Characterization of LTI Systems</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Characterization of LTI Systems</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#laplace-transforms-of-lccodes">Laplace transforms of LCCODEs</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Block diagrams</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Block diagrams</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#still-to-come">Still to come</a></li>
@@ -917,8 +918,8 @@ for
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

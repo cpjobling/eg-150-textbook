@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Unit 3.3: Systems Described by Differential Equations &#8212; EG-150 Signals and Systems</title>
   
@@ -15,54 +14,53 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lti_systems/lti3';</script>
@@ -73,6 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Unit 3.2: Properties and Eigenfunctions of Continuous-Time LTI Systems" href="lti2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -80,32 +79,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -113,7 +96,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -121,16 +103,25 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -145,6 +136,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../index.html">
   
@@ -156,7 +149,14 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">EG-150 Signals and Systems</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -168,27 +168,27 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Online notes</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Unit 1 Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Unit 1 Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/intro.html">Unit 1.1 Setting the Scene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/thecourse.html">Unit 1.2 About this Course</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/concepts.html">Unit 1.3 Introduction to the Concepts to be Studied</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../signals_and_systems/index.html">Unit 2 Signals and Systems</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../signals_and_systems/index.html">Unit 2 Signals and Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/signals/index.html">Unit 2.1 Signals and Classification of Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/signals/pep_signals.html">Unit 2.2 Periodic, Energy and Power Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/elementary_signals/index.html">Unit 2.3 Elementary Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/elementary_signals/examples3.html">Examples 3 - Elementary Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/systems/index.html">Unit 2.4 Systems and Classification of Systems</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Unit 3 Linear Time-Invariant Systems</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Unit 3 Linear Time-Invariant Systems</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="lti1.html">Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lti2.html">Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit 3.3 Systems Described by Differential Equations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../laplace_transform/index.html">Unit 4 Laplace Transforms and their Applications</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../laplace_transform/index.html">Unit 4 Laplace Transforms and their Applications</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/1/laplace.html">Unit 4.1 The Laplace Transformation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/2/laplace_of_common_signals.html">Unit 4.2 Laplace Transform of Some Common Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/3/laplace_properties.html">Unit 4.3 Properties of Laplace Transforms</a></li>
@@ -198,26 +198,26 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/7/tf_for_circuits.html">Unit 4.7 Transfer Functions for Circuit Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/8/casas.html">Unit 4.8 Computer-Aided Systems Analysis and Simulation</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../poles_and_zeros/index.html">Unit 5 Pole-Zero Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../poles_and_zeros/index.html">Unit 5 Pole-Zero Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../poles_and_zeros/qualitative_properties.html">Unit 5.1 Qualitative Properties of Signals and Transfer functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../poles_and_zeros/second_order_properties.html">Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../freq_resp/index.html">Unit 6 Frequency Response Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../freq_resp/index.html">Unit 6 Frequency Response Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../freq_resp/tf_response.html">Unit 6.1: Frequency Response of a Transfer Function</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../freq_resp/bode_plots.html">Unit 6.2: Bode Plots</a></li>
 
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../zbib.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../takeaways.html">Unit take aways</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../exercises.html">List of Unit Exercises</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../homework/index.html">Homework Problems</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../homework/index.html">Homework Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../homework/hw1.html">Homework 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../homework/hw2.html">Homework 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../homework/hw3.html">Homework 3</a></li>
@@ -229,11 +229,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../homework/hw9.html">Homework 9</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../homework/hw10.html">Homework 10</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../laplace_transform/1/lt_props.html">Properties of the Laplace Transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../laplace_transform/1/lt_table.html">Common Laplace Transform Pairs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../setup/polling_setup.html">Set Up In-Class Polling</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../setup/index.html">Setting up your own version of this book</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../setup/jupyter.html">About Jupyter notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/python.html">Installing Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
@@ -241,7 +241,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/jupyter-book.html">Setting up jupyter-book</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 
     </div>
@@ -250,14 +250,19 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -266,14 +271,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -413,27 +418,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -511,15 +508,15 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="unit-3-3-systems-described-by-differential-equations">
-<span id="systems-described-by-differential-equations"></span><h1>Unit 3.3: Systems Described by Differential Equations<a class="headerlink" href="#unit-3-3-systems-described-by-differential-equations" title="Permalink to this heading">#</a></h1>
+<span id="systems-described-by-differential-equations"></span><h1>Unit 3.3: Systems Described by Differential Equations<a class="headerlink" href="#unit-3-3-systems-described-by-differential-equations" title="Link to this heading">#</a></h1>
 <p>This section is based on Section 2.5 of <span id="id1">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span></p>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/lti_systems/lti3">cpjobling.github.io/eg-150-textbook/lti_systems/lti3</a></p>
 <p><img alt="QR Code for this lecture" src="../_images/qrcode_lti3.png" /></p>
 <section id="subjects-to-be-covered">
-<h2>Subjects to be covered<a class="headerlink" href="#subjects-to-be-covered" title="Permalink to this heading">#</a></h2>
+<h2>Subjects to be covered<a class="headerlink" href="#subjects-to-be-covered" title="Link to this heading">#</a></h2>
 <p>We conclude our introduction to continuous-time LTI system by considering</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#continuous-time-lti-systems-described-by-differential-equations"><span class="std std-ref">Continuous-time LTI systems described by differential equations</span></a></p></li>
@@ -527,7 +524,7 @@ document.write(`
 </ul>
 </section>
 <section id="continuous-time-lti-systems-described-by-differential-equations">
-<span id="id2"></span><h2>Continuous-time LTI systems described by differential equations<a class="headerlink" href="#continuous-time-lti-systems-described-by-differential-equations" title="Permalink to this heading">#</a></h2>
+<span id="id2"></span><h2>Continuous-time LTI systems described by differential equations<a class="headerlink" href="#continuous-time-lti-systems-described-by-differential-equations" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#ccde-a-linear-constant-coefficient-differential-equations"><span class="std std-ref">A. Linear constant-coefficient differential equations</span></a></p></li>
 <li><p><a class="reference internal" href="#ccde-b-linearity"><span class="std std-ref">B. Linearity</span></a></p></li>
@@ -536,7 +533,7 @@ document.write(`
 <li><p><a class="reference internal" href="#ccde-e-impulse-response"><span class="std std-ref">E. Impulse response</span></a></p></li>
 </ul>
 <section id="a-linear-constant-coefficient-differential-equations">
-<span id="ccde-a-linear-constant-coefficient-differential-equations"></span><h3>A. Linear constant-coefficient differential equations<a class="headerlink" href="#a-linear-constant-coefficient-differential-equations" title="Permalink to this heading">#</a></h3>
+<span id="ccde-a-linear-constant-coefficient-differential-equations"></span><h3>A. Linear constant-coefficient differential equations<a class="headerlink" href="#a-linear-constant-coefficient-differential-equations" title="Link to this heading">#</a></h3>
 <p>A general <span class="math notranslate nohighlight">\(N\)</span>th-order linear constant-coefficient ordinary differential (LCCODE) equation is given by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}a_N\frac{d^N}{dt^N}y(t) + a_{N-1}\frac{d^{N-1}}{dt^{N-1}} y(t) + \cdots + a_1\frac{d}{dt} y(t) +a_0 y(t) + a_0 y(t)\\
@@ -547,19 +544,19 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\sum_{k=0}^N a_k \frac{d^k}{dt^k} y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)\]</div>
 <section id="applications-of-linear-constant-coefficient-differential-equations">
-<h4>Applications of linear constant-coefficient differential equations<a class="headerlink" href="#applications-of-linear-constant-coefficient-differential-equations" title="Permalink to this heading">#</a></h4>
+<h4>Applications of linear constant-coefficient differential equations<a class="headerlink" href="#applications-of-linear-constant-coefficient-differential-equations" title="Link to this heading">#</a></h4>
 <p>LCCODEs play a central role in describing the input-output relationships of a wide variety of electrical, mechanical, chemical and biological systems.</p>
 <p>{un3.3:rc}=</p>
 </section>
 <section id="illustration-an-rc-circuit">
-<h4>Illustration: An RC Circuit<a class="headerlink" href="#illustration-an-rc-circuit" title="Permalink to this heading">#</a></h4>
+<h4>Illustration: An RC Circuit<a class="headerlink" href="#illustration-an-rc-circuit" title="Link to this heading">#</a></h4>
 <p>For instance, in the RC circuit considered in <a class="reference internal" href="../signals_and_systems/systems/index.html#ex4-1"><span class="std std-ref">Exercise 4.1: RC Circuit</span></a>, the input <span class="math notranslate nohighlight">\(x(t)=v_s(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t)=v_c(t)\)</span> are related by a first-order constant-coefficient differential equation</p>
 <div class="math notranslate nohighlight">
 \[\frac{dy(t)}{dt}+\frac{1}{RC}y(t)=\frac{1}{RC}x(t)\]</div>
 <p>So, by inspection, <span class="math notranslate nohighlight">\(N=1\)</span>, <span class="math notranslate nohighlight">\(a_1 = 1\)</span>, <span class="math notranslate nohighlight">\(a_0 = b_0 = 1/RC\)</span>.</p>
 </section>
 <section id="general-solution-of-the-general-linear-constant-coefficient-differential-equation">
-<h4>General solution of the general linear constant-coefficient differential equation<a class="headerlink" href="#general-solution-of-the-general-linear-constant-coefficient-differential-equation" title="Permalink to this heading">#</a></h4>
+<h4>General solution of the general linear constant-coefficient differential equation<a class="headerlink" href="#general-solution-of-the-general-linear-constant-coefficient-differential-equation" title="Link to this heading">#</a></h4>
 <p>The general solution of the general linear constant-coefficient differential equation for a particular input <span class="math notranslate nohighlight">\(x(t)\)</span> is given by</p>
 <div class="math notranslate nohighlight">
 \[y(t)=y_p(t)+y_h(t)\]</div>
@@ -577,7 +574,7 @@ document.write(`
 </section>
 </section>
 <section id="b-linearity">
-<span id="ccde-b-linearity"></span><h3>B. Linearity<a class="headerlink" href="#b-linearity" title="Permalink to this heading">#</a></h3>
+<span id="ccde-b-linearity"></span><h3>B. Linearity<a class="headerlink" href="#b-linearity" title="Link to this heading">#</a></h3>
 <p>The system defined by</p>
 <div class="math notranslate nohighlight">
 \[\sum_{k=0}^N a_k \frac{d^k}{dt^k}y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)\]</div>
@@ -590,13 +587,13 @@ document.write(`
 <figure class="align-default" id="fig-zs-and-zi-responses">
 <a class="reference internal image-reference" href="../_images/zi_and_zs.png"><img alt="Zero-state and zero-input responses" src="../_images/zi_and_zs.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 38 </span><span class="caption-text">Zero-state and zero-input responses</span><a class="headerlink" href="#fig-zs-and-zi-responses" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text">Zero-state and zero-input responses</span><a class="headerlink" href="#fig-zs-and-zi-responses" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Note that <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t) \neq y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t) \neq y_p(t)\)</span> and that in general <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t)\)</span> contains <span class="math notranslate nohighlight">\(y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t)\)</span> contains both <span class="math notranslate nohighlight">\(y_h(t)\)</span> and <span class="math notranslate nohighlight">\(y_p(t)\)</span> (see <a class="reference internal" href="#ex8-3"><span class="std std-ref">Exercise 8.3</span></a>).</p>
 </section>
 <section id="c-causality">
-<span id="ccde-c-causality"></span><h3>C. Causality<a class="headerlink" href="#c-causality" title="Permalink to this heading">#</a></h3>
+<span id="ccde-c-causality"></span><h3>C. Causality<a class="headerlink" href="#c-causality" title="Link to this heading">#</a></h3>
 <p>In order for the linear system described by a linear constant-coefficient differential equation</p>
 <div class="math notranslate nohighlight">
 \[\sum_{k=0}^N a_k \frac{d^k}{dt^k}y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k}x(t)\]</div>
@@ -611,11 +608,11 @@ document.write(`
 <p>Clearly, at initial rest, <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t)=0\)</span>.</p>
 </section>
 <section id="d-time-invariance">
-<span id="ccde-d-time-invariance"></span><h3>D. Time-invariance<a class="headerlink" href="#d-time-invariance" title="Permalink to this heading">#</a></h3>
+<span id="ccde-d-time-invariance"></span><h3>D. Time-invariance<a class="headerlink" href="#d-time-invariance" title="Link to this heading">#</a></h3>
 <p>For a linear causal system, initial rest also implies time-invariance (<a class="reference internal" href="#ex8-6"><span class="std std-ref">Exercise 8.6</span></a>).</p>
 </section>
 <section id="e-impulse-response">
-<span id="ccde-e-impulse-response"></span><h3>E. Impulse response<a class="headerlink" href="#e-impulse-response" title="Permalink to this heading">#</a></h3>
+<span id="ccde-e-impulse-response"></span><h3>E. Impulse response<a class="headerlink" href="#e-impulse-response" title="Link to this heading">#</a></h3>
 <p>The impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of a linear constant-coefficient differential equation satisfies the differential equation</p>
 <div class="math notranslate nohighlight">
 \[\sum_{k=0}^N a_k \frac{d^k}{dt^k}y(t) = \sum_{k=0}^M b_k \frac{d^k}{dt^k} \delta(t)\]</div>
@@ -623,24 +620,24 @@ document.write(`
 <p>Examples of finding impulse responses are given in <a class="reference internal" href="#ex8-6"><span class="std std-ref">Exercise 8.6</span></a> to <a class="reference internal" href="#ex8-8"><span class="std std-ref">Exercise 8.8</span></a>.</p>
 </section>
 <section id="a-peek-into-the-future">
-<h3>A peek into the future<a class="headerlink" href="#a-peek-into-the-future" title="Permalink to this heading">#</a></h3>
+<h3>A peek into the future<a class="headerlink" href="#a-peek-into-the-future" title="Link to this heading">#</a></h3>
 <p>Later in this course, and probably for the rest of your career, you will find the impulse and other responses by using the Laplace transform.</p>
 </section>
 </section>
 <section id="exercises-8-systems-described-by-differential-equations">
-<span id="examples-8"></span><h2>Exercises 8: Systems described by differential equations<a class="headerlink" href="#exercises-8-systems-described-by-differential-equations" title="Permalink to this heading">#</a></h2>
+<span id="examples-8"></span><h2>Exercises 8: Systems described by differential equations<a class="headerlink" href="#exercises-8-systems-described-by-differential-equations" title="Link to this heading">#</a></h2>
 <section id="exercise-8-1">
-<span id="ex8-1"></span><h3>Exercise 8.1<a class="headerlink" href="#exercise-8-1" title="Permalink to this heading">#</a></h3>
+<span id="ex8-1"></span><h3>Exercise 8.1<a class="headerlink" href="#exercise-8-1" title="Link to this heading">#</a></h3>
 <p>The continuous-time system shown in <a class="reference internal" href="#fig-ex-8-1"><span class="std std-numref">Fig. 39</span></a> consists of one integrator and one scalar multiplier. Write the differential equation that relates the output <span class="math notranslate nohighlight">\(y(t)\)</span> to the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
 <figure class="align-default" id="fig-ex-8-1">
 <a class="reference internal image-reference" href="../_images/ex8_1.png"><img alt="A one-integrator linear system" src="../_images/ex8_1.png" style="width: 40%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 39 </span><span class="caption-text">A one-integrator linear system</span><a class="headerlink" href="#fig-ex-8-1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text">A one-integrator linear system</span><a class="headerlink" href="#fig-ex-8-1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For the answer, refer to the lecture recording or see solved problem 2.18 in <span id="id3">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <section id="matlab-solution">
-<h4>MATLAB Solution<a class="headerlink" href="#matlab-solution" title="Permalink to this heading">#</a></h4>
+<h4>MATLAB Solution<a class="headerlink" href="#matlab-solution" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="n">matlab</span>
@@ -663,17 +660,17 @@ document.write(`
 </section>
 </section>
 <section id="exercise-8-2">
-<span id="ex8-2"></span><h3>Exercise 8.2<a class="headerlink" href="#exercise-8-2" title="Permalink to this heading">#</a></h3>
+<span id="ex8-2"></span><h3>Exercise 8.2<a class="headerlink" href="#exercise-8-2" title="Link to this heading">#</a></h3>
 <p>The continuous-time system shown in <a class="reference internal" href="#fig-ex-8-2"><span class="std std-numref">Fig. 40</span></a> consists of two integrators and two scalar multipliers. Write the differential equation that relates the output <span class="math notranslate nohighlight">\(y(t)\)</span> to the input <span class="math notranslate nohighlight">\(x(t)\)</span>.</p>
 <figure class="align-default" id="fig-ex-8-2">
 <a class="reference internal image-reference" href="../_images/ex8_2.png"><img alt="A two-integrator linear system" src="../_images/ex8_2.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 40 </span><span class="caption-text">A two-integrator linear system</span><a class="headerlink" href="#fig-ex-8-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">A two-integrator linear system</span><a class="headerlink" href="#fig-ex-8-2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For the answer, refer to the lecture recording or see solved problem 2.19 in in <span id="id4">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 <section id="id5">
-<h4>MATLAB Solution<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<h4>MATLAB Solution<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Simulink model <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/blob/main/lti_systems/matlab/example8_2.slx?raw=true">example8_2.slx</a></p></li>
 </ul>
@@ -684,7 +681,7 @@ document.write(`
 </section>
 </section>
 <section id="exercise-8-3">
-<span id="ex8-3"></span><h3>Exercise 8.3<a class="headerlink" href="#exercise-8-3" title="Permalink to this heading">#</a></h3>
+<span id="ex8-3"></span><h3>Exercise 8.3<a class="headerlink" href="#exercise-8-3" title="Link to this heading">#</a></h3>
 <p>Consider a continuous-time system whose input <span class="math notranslate nohighlight">\(x(t)\)</span> and output <span class="math notranslate nohighlight">\(y(t)\)</span> are related by</p>
 <div class="math notranslate nohighlight">
 \[\frac{dy(t)}{dt}+ay(t)=x(t)\]</div>
@@ -694,7 +691,7 @@ document.write(`
 \[x(t) = Ke^{-bt}u_0(t)\]</div>
 <p>(b) Express <span class="math notranslate nohighlight">\(y(t)\)</span> in terms of the zero-input and zero-state responses.</p>
 <section id="solution">
-<h4>Solution<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h4>
+<h4>Solution<a class="headerlink" href="#solution" title="Link to this heading">#</a></h4>
 <p>This is an example of how a first-order LCCODE would be solved. We provide as an instructional example but will assume that you will be tested on this in other modules.</p>
 <p>a) Given that</p>
 <div class="math notranslate nohighlight">
@@ -747,24 +744,24 @@ document.write(`
 </section>
 </section>
 <section id="exercise-8-4">
-<span id="ex8-4"></span><h3>Exercise 8.4<a class="headerlink" href="#exercise-8-4" title="Permalink to this heading">#</a></h3>
+<span id="ex8-4"></span><h3>Exercise 8.4<a class="headerlink" href="#exercise-8-4" title="Link to this heading">#</a></h3>
 <p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Exercise 8.3</span></a>.</p>
 <p>(a) Show that the system is not linear if <span class="math notranslate nohighlight">\(y(0)=y_0\neq 0\)</span>.</p>
 <p>(b) Show that the system is linear if <span class="math notranslate nohighlight">\(y(0) = 0\)</span>.</p>
 <p>For the answer, see the solved problem 2.21 in <span id="id6">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="exercise-8-5">
-<span id="ex8-5"></span><h3>Exercise 8.5<a class="headerlink" href="#exercise-8-5" title="Permalink to this heading">#</a></h3>
+<span id="ex8-5"></span><h3>Exercise 8.5<a class="headerlink" href="#exercise-8-5" title="Link to this heading">#</a></h3>
 <p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Exercise 8.3</span></a>. Show that the initial rest condition <span class="math notranslate nohighlight">\(y(0) = 0\)</span> also implies that the system is time-invariant.</p>
 <p>For the answer, see the solved problem 2.22 in <span id="id7">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="exercise-8-6">
-<span id="ex8-6"></span><h3>Exercise 8.6<a class="headerlink" href="#exercise-8-6" title="Permalink to this heading">#</a></h3>
+<span id="ex8-6"></span><h3>Exercise 8.6<a class="headerlink" href="#exercise-8-6" title="Link to this heading">#</a></h3>
 <p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Exercise 8.3</span></a>. Find the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system.</p>
 <p>For the answer, see the solved problem 2.23 in <span id="id8">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="exercise-8-7">
-<span id="ex8-7"></span><h3>Exercise 8.7<a class="headerlink" href="#exercise-8-7" title="Permalink to this heading">#</a></h3>
+<span id="ex8-7"></span><h3>Exercise 8.7<a class="headerlink" href="#exercise-8-7" title="Link to this heading">#</a></h3>
 <p>Consider the system in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Exercise 8.3</span></a> with <span class="math notranslate nohighlight">\(y(0)=0\)</span>.</p>
 <p>(a) Find the step response <span class="math notranslate nohighlight">\(s(t)\)</span> of the system without using the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span>.</p>
 <p>(b) Find the step response <span class="math notranslate nohighlight">\(s(t)\)</span> of the system with the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> obtained in <a class="reference internal" href="#ex8-6"><span class="std std-ref">Exercise 8.6</span></a>.</p>
@@ -772,7 +769,7 @@ document.write(`
 <p>For the answer, see the solved problem 2.24 in <span id="id9">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="exercise-8-8">
-<span id="ex8-8"></span><h3>Exercise 8.8<a class="headerlink" href="#exercise-8-8" title="Permalink to this heading">#</a></h3>
+<span id="ex8-8"></span><h3>Exercise 8.8<a class="headerlink" href="#exercise-8-8" title="Link to this heading">#</a></h3>
 <p>Consider the system described by</p>
 <div class="math notranslate nohighlight">
 \[\frac{dy(t)}{dt} + 2y(t) = x(t) + \frac{dx(t)}{dt}\]</div>
@@ -781,12 +778,12 @@ document.write(`
 </section>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>In this lecture we have concluded our introduction to LTI systems by looking at linear constant-coefficient differential equations.</p>
 <section id="unit-3-3-take-aways">
-<span id="unit3-3-takeaways"></span><h3>Unit 3.3: Take aways<a class="headerlink" href="#unit-3-3-take-aways" title="Permalink to this heading">#</a></h3>
+<span id="unit3-3-takeaways"></span><h3>Unit 3.3: Take aways<a class="headerlink" href="#unit-3-3-take-aways" title="Link to this heading">#</a></h3>
 <section id="lccodes">
-<h4>LCCODEs<a class="headerlink" href="#lccodes" title="Permalink to this heading">#</a></h4>
+<h4>LCCODEs<a class="headerlink" href="#lccodes" title="Link to this heading">#</a></h4>
 <p>Continuous-time LTI systems are often modelled as linear constant coefficient ordinary differential equations (LCCODEs). The solution of such equations has wide application in engineering and science.</p>
 <p>The general description of a LCCODE is given in compact form as:</p>
 <div class="math notranslate nohighlight">
@@ -795,24 +792,24 @@ document.write(`
 <p>We illustrated in <span class="xref std std-ref">un3.3:rc</span> that the simple RC circuit can be represented as such an LCCODE.</p>
 </section>
 <section id="solution-of-lccodes">
-<h4>Solution of LCCODEs<a class="headerlink" href="#solution-of-lccodes" title="Permalink to this heading">#</a></h4>
+<h4>Solution of LCCODEs<a class="headerlink" href="#solution-of-lccodes" title="Link to this heading">#</a></h4>
 <p>The solution of LCCODEs requires the determination and combination of the <em>homegenious solution</em> which is due only to the output <span class="math notranslate nohighlight">\(y(t)\)</span> and its derivatives, and a <em>particular solution</em> which takes account of the input <span class="math notranslate nohighlight">\(x(t)\)</span>, its derivatives, and the initial values of <span class="math notranslate nohighlight">\(y(t)\)</span> and its derivatives.</p>
 <p>We were told that continuous-time LTI systems defined by LCCODEs are only <em>causal</em> and <em>time invariant</em> if they are initially at rest.</p>
 <p>The output of the continuous-time LTI system with input <span class="math notranslate nohighlight">\(x(t)\)</span> that is at rest and has zero initial conditions is called the <em>zero-state</em> output <span class="math notranslate nohighlight">\(y_\mathrm{zs}(t)\)</span>. The outputs due to the inital conditions can be computed from the system with zero input which is named <span class="math notranslate nohighlight">\(y_\mathrm{zi}(t)\)</span>. The total response of such a system is given by <span class="math notranslate nohighlight">\(y(t) = y_\mathrm{zs}(t) + y_\mathrm{zi}(t)\)</span>.</p>
 <p>For reference, a fully worked solution of a first-order LCCODE is provided in <a class="reference internal" href="#ex8-3"><span class="std std-ref">Exercise 8.3</span></a>. <strong>You will not be expected to solve such problems in the assessments for this module</strong>.</p>
 </section>
 <section id="analogue-computer-models">
-<h4>Analogue computer models<a class="headerlink" href="#analogue-computer-models" title="Permalink to this heading">#</a></h4>
+<h4>Analogue computer models<a class="headerlink" href="#analogue-computer-models" title="Link to this heading">#</a></h4>
 <p>In <a class="reference internal" href="#examples-8"><span class="std std-ref">Exercises 8: Systems described by differential equations</span></a> we were introduced to the representation of an LCCODE as a block diagram constructed from integral, gain and summing blocks. Such models were the basis of <em>analogue computation</em> which was used widely by engineers before the widespread adoption of digital computers. Models based on integration are still the basis of modern numerical digital system simulation tools like Multisim and Simulink.</p>
 <p>Examples of the solution of <a class="reference internal" href="#ex8-1"><span class="std std-ref">Exercise 8.1</span></a> and <a class="reference internal" href="#ex8-2"><span class="std std-ref">Exercise 8.2</span></a> have been provided in MATLAB and Simulink.</p>
 </section>
 </section>
 <section id="looking-ahead">
-<h3>Looking ahead<a class="headerlink" href="#looking-ahead" title="Permalink to this heading">#</a></h3>
+<h3>Looking ahead<a class="headerlink" href="#looking-ahead" title="Link to this heading">#</a></h3>
 <p>Any continuous-time LTI system that can be represented by an LCCODE can be solved by taking the <em>Laplace transform</em> of the differential equation. The derivative terms like <span class="math notranslate nohighlight">\(a_k d^n y(t)/dt^n\)</span> become polynomial terms like <span class="math notranslate nohighlight">\(a_k s^n Y(s)\)</span>, where <span class="math notranslate nohighlight">\(Y(s)\)</span> is the Laplace transform of <span class="math notranslate nohighlight">\(y(t)\)</span>. As we shall see in <span class="xref std std-ref">unit4</span>, such systems are then representable as rational polynomials in <span class="math notranslate nohighlight">\(s\)</span> and are easily solved using algebraic techniques such as <em>polynomial factorization</em> and <em>partial fraction expansion</em>.</p>
 </section>
 <section id="id11">
-<h3>Continuous-Time LTI Systems Described by Differential Equations<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<h3>Continuous-Time LTI Systems Described by Differential Equations<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="#ccde-a-linear-constant-coefficient-differential-equations"><span class="std std-ref">A. Linear constant-coefficient differential equations</span></a></p></li>
 <li><p><a class="reference internal" href="#ccde-b-linearity"><span class="std std-ref">B. Linearity</span></a></p></li>
@@ -823,20 +820,22 @@ document.write(`
 </section>
 </section>
 <section id="next-time">
-<h2>Next Time<a class="headerlink" href="#next-time" title="Permalink to this heading">#</a></h2>
+<h2>Next Time<a class="headerlink" href="#next-time" title="Link to this heading">#</a></h2>
 <p>We move on to consider</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../laplace_transform/index.html#laplace"><span class="std std-ref">Unit 4: Laplace Transforms and their Applications</span></a></p></li>
 </ul>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id12">
-<dl class="citation">
-<dt class="label" id="id22"><span class="brackets">Hsu20</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id4">3</a>,<a href="#id6">4</a>,<a href="#id7">5</a>,<a href="#id8">6</a>,<a href="#id9">7</a>,<a href="#id10">8</a>)</span></dt>
-<dd><p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
-</dd>
-</dl>
+<div role="list" class="citation-list">
+<div class="citation" id="id22" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Hsu20<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id3">2</a>,<a role="doc-backlink" href="#id4">3</a>,<a role="doc-backlink" href="#id6">4</a>,<a role="doc-backlink" href="#id7">5</a>,<a role="doc-backlink" href="#id8">6</a>,<a role="doc-backlink" href="#id9">7</a>,<a role="doc-backlink" href="#id10">8</a>)</span>
+<p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -868,7 +867,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -896,7 +895,9 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1011,8 +1012,8 @@ for
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

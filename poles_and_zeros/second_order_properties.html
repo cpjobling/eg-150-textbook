@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Unit 5.2: More on the Qualitative and Quantitative Response of First- and Second-Order Poles &#8212; EG-150 Signals and Systems</title>
   
@@ -15,54 +14,53 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'poles_and_zeros/second_order_properties';</script>
@@ -73,6 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Unit 5.1: Qualitative Properties of Signals and Transfer functions" href="qualitative_properties.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -80,32 +79,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -113,7 +96,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -121,16 +103,25 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -145,6 +136,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../index.html">
   
@@ -156,7 +149,14 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">EG-150 Signals and Systems</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -168,27 +168,27 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Online notes</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Unit 1 Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Unit 1 Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/intro.html">Unit 1.1 Setting the Scene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/thecourse.html">Unit 1.2 About this Course</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/concepts.html">Unit 1.3 Introduction to the Concepts to be Studied</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../signals_and_systems/index.html">Unit 2 Signals and Systems</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../signals_and_systems/index.html">Unit 2 Signals and Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/signals/index.html">Unit 2.1 Signals and Classification of Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/signals/pep_signals.html">Unit 2.2 Periodic, Energy and Power Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/elementary_signals/index.html">Unit 2.3 Elementary Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/elementary_signals/examples3.html">Examples 3 - Elementary Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../signals_and_systems/systems/index.html">Unit 2.4 Systems and Classification of Systems</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../lti_systems/index.html">Unit 3 Linear Time-Invariant Systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lti_systems/index.html">Unit 3 Linear Time-Invariant Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../lti_systems/lti1.html">Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lti_systems/lti2.html">Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lti_systems/lti3.html">Unit 3.3 Systems Described by Differential Equations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../laplace_transform/index.html">Unit 4 Laplace Transforms and their Applications</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../laplace_transform/index.html">Unit 4 Laplace Transforms and their Applications</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/1/laplace.html">Unit 4.1 The Laplace Transformation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/2/laplace_of_common_signals.html">Unit 4.2 Laplace Transform of Some Common Signals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/3/laplace_properties.html">Unit 4.3 Properties of Laplace Transforms</a></li>
@@ -198,26 +198,26 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/7/tf_for_circuits.html">Unit 4.7 Transfer Functions for Circuit Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../laplace_transform/8/casas.html">Unit 4.8 Computer-Aided Systems Analysis and Simulation</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Unit 5 Pole-Zero Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Unit 5 Pole-Zero Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="qualitative_properties.html">Unit 5.1 Qualitative Properties of Signals and Transfer functions</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../freq_resp/index.html">Unit 6 Frequency Response Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../freq_resp/index.html">Unit 6 Frequency Response Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../freq_resp/tf_response.html">Unit 6.1: Frequency Response of a Transfer Function</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../freq_resp/bode_plots.html">Unit 6.2: Bode Plots</a></li>
 
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../zbib.html">Bibliography</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../takeaways.html">Unit take aways</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../exercises.html">List of Unit Exercises</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../homework/index.html">Homework Problems</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../homework/index.html">Homework Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../homework/hw1.html">Homework 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../homework/hw2.html">Homework 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../homework/hw3.html">Homework 3</a></li>
@@ -229,11 +229,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../homework/hw9.html">Homework 9</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../homework/hw10.html">Homework 10</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../laplace_transform/1/lt_props.html">Properties of the Laplace Transform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../laplace_transform/1/lt_table.html">Common Laplace Transform Pairs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../setup/polling_setup.html">Set Up In-Class Polling</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../setup/index.html">Setting up your own version of this book</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../setup/index.html">Setting up your own version of this book</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../setup/jupyter.html">About Jupyter notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/python.html">Installing Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
@@ -241,7 +241,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../setup/jupyter-book.html">Setting up jupyter-book</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 
     </div>
@@ -250,14 +250,19 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -266,14 +271,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -413,27 +418,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -524,20 +521,20 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="unit-5-2-more-on-the-qualitative-and-quantitative-response-of-first-and-second-order-poles">
-<span id="unit5-2"></span><h1>Unit 5.2: More on the Qualitative and Quantitative Response of First- and Second-Order Poles<a class="headerlink" href="#unit-5-2-more-on-the-qualitative-and-quantitative-response-of-first-and-second-order-poles" title="Permalink to this heading">#</a></h1>
+<span id="unit5-2"></span><h1>Unit 5.2: More on the Qualitative and Quantitative Response of First- and Second-Order Poles<a class="headerlink" href="#unit-5-2-more-on-the-qualitative-and-quantitative-response-of-first-and-second-order-poles" title="Link to this heading">#</a></h1>
 <p>Follow along at <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/poles_and_zeros/second_order_properties">cpjobling.github.io/eg-150-textbook/poles_and_zeros/second_order_properties</a></p>
 <p><img alt="QR Code for this lecture" src="../_images/qr_code_for_unit52.png" /></p>
 <section id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">#</a></h2>
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h2>
 <p>The notes for this unit have been influenced by the MATLAB LiveScript <strong>PoleZeroAnalysis.mlx</strong> from the MathWorks curriculum module <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems">Transfer Function Analysis of Dynamic Systems</a> <span id="id1">[<a class="reference internal" href="../zbib.html#id17" title="Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0.">Allie, 2024</a>]</span>. You will find some useful interactive applications with which you can explore the concepts presented here. Some of these will be deomostrated in the lecture.</p>
 <p>The examples have been inspired by the recording of the second half of the video recording of Stephen Boyd’s 1999 lecture 10 (delivered at Stanford University) which itself is based on <a class="reference external" href="https://web.stanford.edu/~boyd/ee102/qualitative.pdf">Qualitative properties of signals &amp; Laplace transforms</a> <span id="id2">[<a class="reference internal" href="../zbib.html#id18" title="Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: https://web.stanford.edu/~boyd/ee102/.">Boyd, 1993</a>]</span>.</p>
 <p>You can watch the video on YouTube here:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/I3DZM0rarTA?si=hSVhhDofHEw1y-rV&amp;start=1407" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
 <section id="agenda">
-<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this heading">#</a></h2>
+<h2>Agenda<a class="headerlink" href="#agenda" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#unit-5-2-1"><span class="std std-ref">Quantitative behaviour of real poles</span></a></p></li>
 <li><p><a class="reference internal" href="#unit-5-2-2"><span class="std std-ref">Natural frequency</span></a></p></li>
@@ -547,11 +544,11 @@ document.write(`
 </ul>
 </section>
 <section id="quantitative-behaviour-of-real-poles">
-<span id="unit-5-2-1"></span><h2>Quantitative behaviour of real poles<a class="headerlink" href="#quantitative-behaviour-of-real-poles" title="Permalink to this heading">#</a></h2>
+<span id="unit-5-2-1"></span><h2>Quantitative behaviour of real poles<a class="headerlink" href="#quantitative-behaviour-of-real-poles" title="Link to this heading">#</a></h2>
 <p>In <a class="reference internal" href="qualitative_properties.html#unit5-1-2"><span class="std std-ref">Qualitative properties of terms</span></a> we stated that a response term that corresponds to a real pole <span class="math notranslate nohighlight">\(s = \sigma\)</span> will result in a growing expontial if <span class="math notranslate nohighlight">\(\sigma &gt; 0\)</span> and a decaying exponential if <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span>.</p>
 <p>We didn’t quantify these effects, so it is useful to do so here.</p>
 <section id="rate-of-exponential-growth">
-<h3>Rate of exponential growth<a class="headerlink" href="#rate-of-exponential-growth" title="Permalink to this heading">#</a></h3>
+<h3>Rate of exponential growth<a class="headerlink" href="#rate-of-exponential-growth" title="Link to this heading">#</a></h3>
 <p>Given that the rational polynomial <span class="math notranslate nohighlight">\(F(s)\)</span> representing the Laplace transfer of a signal or system has a pole <span class="math notranslate nohighlight">\(s = \sigma\)</span>, one of the terms in the partial fraction expansion will be</p>
 <div class="math notranslate nohighlight">
 \[\frac{r_\sigma}{s-\sigma}\]</div>
@@ -570,13 +567,13 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 \end{split}\]</div>
 </section>
 <section id="example-7">
-<span id="unit5-2-ex7"></span><h3>Example 7<a class="headerlink" href="#example-7" title="Permalink to this heading">#</a></h3>
+<span id="unit5-2-ex7"></span><h3>Example 7<a class="headerlink" href="#example-7" title="Link to this heading">#</a></h3>
 <p>Plot the response of the pole</p>
 <div class="math notranslate nohighlight">
 \[\frac{10}{s - 0.1}\]</div>
 <p>and confirm that the doubling time is around 7 seconds.</p>
 <section id="solution-to-example-7">
-<h4>Solution to example 7<a class="headerlink" href="#solution-to-example-7" title="Permalink to this heading">#</a></h4>
+<h4>Solution to example 7<a class="headerlink" href="#solution-to-example-7" title="Link to this heading">#</a></h4>
 <p>Done in MATLAB</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -616,7 +613,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 </section>
 <section id="rate-of-exponential-decay">
-<h3>Rate of exponential decay<a class="headerlink" href="#rate-of-exponential-decay" title="Permalink to this heading">#</a></h3>
+<h3>Rate of exponential decay<a class="headerlink" href="#rate-of-exponential-decay" title="Link to this heading">#</a></h3>
 <p>If <span class="math notranslate nohighlight">\(F(s)\)</span> has a pole <span class="math notranslate nohighlight">\(s = -\sigma\)</span>, one of the terms in the partial fraction expansion will be</p>
 <div class="math notranslate nohighlight">
 \[\frac{r_\sigma}{s+\sigma}\]</div>
@@ -639,7 +636,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 \end{split}\]</div>
 </section>
 <section id="example-8">
-<span id="id3"></span><h3>Example 8<a class="headerlink" href="#example-8" title="Permalink to this heading">#</a></h3>
+<span id="id3"></span><h3>Example 8<a class="headerlink" href="#example-8" title="Link to this heading">#</a></h3>
 <p>The current in the RC circuit shown in <a class="reference external" href="https://cpjobling.github.io/eg-150-textbook/laplace_transform/index.html#rc-circuit-l">Fig. 41</a> has the transform</p>
 <div class="math notranslate nohighlight">
 \[i(t) = \frac{1/RC}{s+ 1/RC}\]</div>
@@ -648,8 +645,8 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <p>(b) The time constant <span class="math notranslate nohighlight">\(\tau\)</span>.</p>
 <p>(c) The time at which the current decays to 1% of <span class="math notranslate nohighlight">\(i(0)\)</span>.</p>
 <section id="solution-to-example-8">
-<h4>Solution to example 8<a class="headerlink" href="#solution-to-example-8" title="Permalink to this heading">#</a></h4>
-<p>(a) The initial current is given by<a class="footnote-reference brackets" href="#unit5-2-1" id="id4">1</a></p>
+<h4>Solution to example 8<a class="headerlink" href="#solution-to-example-8" title="Link to this heading">#</a></h4>
+<p>(a) The initial current is given by<a class="footnote-reference brackets" href="#unit5-2-1" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <div class="math notranslate nohighlight">
 \[\lim_{s\to\infty} sI(s) = \lim_{s\to\infty}s\frac{1/RC}{s + 1/RC} = 1/RC.\]</div>
 <p>Given the component values of <span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(i(0) = 1/RC = 100\)</span> mA.</p>
@@ -692,13 +689,13 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 </section>
 <section id="natural-frequency">
-<span id="unit-5-2-2"></span><h2>Natural frequency<a class="headerlink" href="#natural-frequency" title="Permalink to this heading">#</a></h2>
+<span id="unit-5-2-2"></span><h2>Natural frequency<a class="headerlink" href="#natural-frequency" title="Link to this heading">#</a></h2>
 <p>The locations of the poles in the <span class="math notranslate nohighlight">\(s\)</span>-plane determine the natural oscillation frequencies present in the system.</p>
 <p>Consider a pole in the complex plane illustrated in <a class="reference internal" href="#fig-unit5-2-1"><span class="std std-numref">Fig. 78</span></a></p>
 <figure class="align-default" id="fig-unit5-2-1">
 <a class="reference internal image-reference" href="../_images/complex_pole.png"><img alt="Phase phi and magnitude r of pole p shown in the complex plane" src="../_images/complex_pole.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 78 </span><span class="caption-text">Phase <span class="math notranslate nohighlight">\(\phi\)</span> and magnitude <span class="math notranslate nohighlight">\(r\)</span> of pole <span class="math notranslate nohighlight">\(p\)</span> shown in the complex plane</span><a class="headerlink" href="#fig-unit5-2-1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 78 </span><span class="caption-text">Phase <span class="math notranslate nohighlight">\(\phi\)</span> and magnitude <span class="math notranslate nohighlight">\(r\)</span> of pole <span class="math notranslate nohighlight">\(p\)</span> shown in the complex plane</span><a class="headerlink" href="#fig-unit5-2-1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -707,7 +704,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </ul>
 </section>
 <section id="analysis-of-a-second-order-system">
-<h2>Analysis of a second-order system<a class="headerlink" href="#analysis-of-a-second-order-system" title="Permalink to this heading">#</a></h2>
+<h2>Analysis of a second-order system<a class="headerlink" href="#analysis-of-a-second-order-system" title="Link to this heading">#</a></h2>
 <p>Second-order systems with a pair of conjugate poles and no zeros are useful for illustrating the natural frequency response analytically. It is helpful to write this type of system in the form:</p>
 <div class="math notranslate nohighlight">
 \[G(s) = \frac{K}{s^2 + 2\zeta\omega_n s + \omega_n^2 }\]</div>
@@ -719,7 +716,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </ul>
 <p>These parameters are helpful for drawing a connection between the natural response of the system and the properties of the poles. In this section, the poles of the second-order system will be analytically computed and related to the natural response of the system.</p>
 <section id="pole-analysis">
-<h3>Pole analysis<a class="headerlink" href="#pole-analysis" title="Permalink to this heading">#</a></h3>
+<h3>Pole analysis<a class="headerlink" href="#pole-analysis" title="Link to this heading">#</a></h3>
 <p>The poles of the system occur when the denominator is zero:</p>
 <div class="math notranslate nohighlight">
 \[p_{1,2} = -\zeta\omega_n \pm \omega_n \sqrt{\zeta^2 - 1}\]</div>
@@ -746,7 +743,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <p>The gain coefficient <span class="math notranslate nohighlight">\(K\)</span> affects the magnitude of the response, not the time-dependent behavior.</p>
 </section>
 <section id="natural-response">
-<h3>Natural response<a class="headerlink" href="#natural-response" title="Permalink to this heading">#</a></h3>
+<h3>Natural response<a class="headerlink" href="#natural-response" title="Link to this heading">#</a></h3>
 <p>The impulse response of a system <span class="math notranslate nohighlight">\(H(s)\)</span> is also called the <em>natural response</em>. The natural response <span class="math notranslate nohighlight">\(y(t)\)</span> is computed by taking the inverse Laplace transform of</p>
 <div class="math notranslate nohighlight">
 \[\frac{Y(s)}{X(s)} = \frac{Y(s)}{1} = \frac{ K }{s^2 + 2 \zeta \omega_n s  + \omega_n^2}\]</div>
@@ -755,7 +752,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="w"> </span><span class="s">t</span><span class="w"> </span><span class="s">zeta</span><span class="w"> </span><span class="s">omega_n</span><span class="w"> </span><span class="s">K</span><span class="w"> </span><span class="s">Y(s)</span><span class="w"> </span><span class="s">y(t)</span><span class="w"> </span>
 <span class="n">assume</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="n">Y</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">K</span><span class="o">/</span><span class="p">(</span><span class="n">s</span>^<span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">zeta</span><span class="o">*</span><span class="n">omega_n</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">omega_n</span>^<span class="mi">2</span><span class="p">)</span>
+<span class="n">Y</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">K</span><span class="o">/</span><span class="p">(</span><span class="n">s</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">zeta</span><span class="o">*</span><span class="n">omega_n</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">omega_n</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -777,7 +774,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 <p>Gives the result</p>
 <div class="math notranslate nohighlight" id="equation-eq-unit5-1-1">
-<span class="eqno">(60)<a class="headerlink" href="#equation-eq-unit5-1-1" title="Permalink to this equation">#</a></span>\[y(t) = \frac{K\,{\mathrm{e}}^{-\zeta\, \omega_n \,t } \,\sin \left(\omega_n \,t\,\sqrt{1-\zeta^2 }\right)}{\omega_n \,\sqrt{1-\zeta^2 }}\]</div>
+<span class="eqno">(60)<a class="headerlink" href="#equation-eq-unit5-1-1" title="Link to this equation">#</a></span>\[y(t) = \frac{K\,{\mathrm{e}}^{-\zeta\, \omega_n \,t } \,\sin \left(\omega_n \,t\,\sqrt{1-\zeta^2 }\right)}{\omega_n \,\sqrt{1-\zeta^2 }}\]</div>
 <p>Notice that the impulse response is a product of an exponential and sine function. From these functions observe that:</p>
 <ul class="simple">
 <li><p>The sine function frequency (in rads/s) is <span class="math notranslate nohighlight">\(\omega_n \,\sqrt{1-\zeta^2 }\)</span>. If the damping <span class="math notranslate nohighlight">\(\zeta=0\)</span>, then the frequency is <span class="math notranslate nohighlight">\(\omega_n\)</span>. This is the reason <span class="math notranslate nohighlight">\(\omega_n\)</span>  is often referred to as the <em>undamped natural frequency</em>.</p></li>
@@ -787,14 +784,14 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 </section>
 <section id="step-response-of-a-second-order-system">
-<span id="unit-5-2-3"></span><h2>Step-response of a second-order system<a class="headerlink" href="#step-response-of-a-second-order-system" title="Permalink to this heading">#</a></h2>
+<span id="unit-5-2-3"></span><h2>Step-response of a second-order system<a class="headerlink" href="#step-response-of-a-second-order-system" title="Link to this heading">#</a></h2>
 <p>The step response of a system <span class="math notranslate nohighlight">\(H(s)\)</span> is often computed. The step response <span class="math notranslate nohighlight">\(y_s(t)\)</span> is determined by taking the inverse Laplace transform of</p>
 <div class="math notranslate nohighlight">
 \[Y(s) = \frac{1}{s} \left(\frac{ \omega_n^2 }{s^2 + 2 \zeta \omega_n s  + \omega_n^2}\right)\]</div>
 <p>because the step function <span class="math notranslate nohighlight">\(x(t)=u_0(t)\)</span> has a Laplace transform <span class="math notranslate nohighlight">\(1/s\)</span>. You can find the response’s analytic form by taking partial fraction expansion of <span class="math notranslate nohighlight">\(Y(s)\)</span> and then referring to a table of Laplace transforms.</p>
 <p>Here we will state, without proof, that the step response will be</p>
 <div class="math notranslate nohighlight" id="equation-eq-unit5-1-2">
-<span class="eqno">(61)<a class="headerlink" href="#equation-eq-unit5-1-2" title="Permalink to this equation">#</a></span>\[y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\omega}\sin\left(\omega t\right)
+<span class="eqno">(61)<a class="headerlink" href="#equation-eq-unit5-1-2" title="Link to this equation">#</a></span>\[y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\omega}\sin\left(\omega t\right)
 \right)\right)u_o(t)\]</div>
 <p>where :</p>
 <ul class="simple">
@@ -809,35 +806,35 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 \[\left(s^2 + 2\zeta\omega_n + \omega_n^2\right)=\left(s + \zeta\omega_n\right)^2 + \left(\omega_n^2\left(1 - \zeta^2\right)\right)\]</div>
 <p>Then take the PFE of the terms assuming that the complex poles will yield terms:</p>
 <div class="math notranslate nohighlight" id="equation-eq-unit5-1-10">
-<span class="eqno">(62)<a class="headerlink" href="#equation-eq-unit5-1-10" title="Permalink to this equation">#</a></span>\[r_1\frac{s+\zeta\omega_n}{\left(s + \zeta\omega_n\right)^2 +  \left(\omega_n\sqrt{1 - \zeta^2}\right)^2} + r_2\frac{\omega_n\sqrt{1 - \zeta^2}}{\left(s + \zeta\omega_n\right)^2 + \left(\omega_n\sqrt{1 - \zeta^2}\right)^2}\]</div>
+<span class="eqno">(62)<a class="headerlink" href="#equation-eq-unit5-1-10" title="Link to this equation">#</a></span>\[r_1\frac{s+\zeta\omega_n}{\left(s + \zeta\omega_n\right)^2 +  \left(\omega_n\sqrt{1 - \zeta^2}\right)^2} + r_2\frac{\omega_n\sqrt{1 - \zeta^2}}{\left(s + \zeta\omega_n\right)^2 + \left(\omega_n\sqrt{1 - \zeta^2}\right)^2}\]</div>
 <p>Making the substitutions <span class="math notranslate nohighlight">\(\sigma = \zeta\omega_n\)</span> and <span class="math notranslate nohighlight">\(\omega = \omega_n \sqrt{1 - \zeta^2}\)</span> we can simplify
 <a class="reference internal" href="#equation-eq-unit5-1-10">(62)</a> to</p>
 <div class="math notranslate nohighlight" id="equation-eq-unit5-1-11">
-<span class="eqno">(63)<a class="headerlink" href="#equation-eq-unit5-1-11" title="Permalink to this equation">#</a></span>\[r_1\frac{s+\sigma}{\left(s + \sigma\right)^2 +  \omega^2} + r_2\frac{\omega}{\left(s + \sigma\right)^2 + \omega^2}\]</div>
+<span class="eqno">(63)<a class="headerlink" href="#equation-eq-unit5-1-11" title="Link to this equation">#</a></span>\[r_1\frac{s+\sigma}{\left(s + \sigma\right)^2 +  \omega^2} + r_2\frac{\omega}{\left(s + \sigma\right)^2 + \omega^2}\]</div>
 <p>The step-response terms will then be</p>
 <div class="math notranslate nohighlight">
 \[r_1 e^{-\sigma t}\sin(\omega t) + r_2 e^{-\sigma t}\cos(\omega t)\]</div>
 <p>Having computed the residues <span class="math notranslate nohighlight">\(r_1\)</span> and <span class="math notranslate nohighlight">\(r_2\)</span> the sine and cosine terms can be combined to give the final <span class="math notranslate nohighlight">\(e^{-\sigma t}\cos(\omega t + \phi)\)</span> expression.</p>
 </div>
 <section id="example-9">
-<span id="ex-unit5-2-9"></span><h3>Example 9<a class="headerlink" href="#example-9" title="Permalink to this heading">#</a></h3>
+<span id="ex-unit5-2-9"></span><h3>Example 9<a class="headerlink" href="#example-9" title="Link to this heading">#</a></h3>
 <p>Determine the step response for a second order system with <span class="math notranslate nohighlight">\(\omega_n = 10\)</span> rad/s and <span class="math notranslate nohighlight">\(\zeta = 0.5\)</span>. Confirm your result using <a class="reference internal" href="#equation-eq-unit5-1-2">(61)</a> and the <a class="reference external" href="https://uk.mathworks.com/help/control/ref/tf.html"><code class="docutils literal notranslate"><span class="pre">tf</span></code></a> and <a class="reference external" href="https://uk.mathworks.com/help/control/ref/dynamicsystem.step.html"><code class="docutils literal notranslate"><span class="pre">step</span></code></a> functions.</p>
 <section id="solution-to-example-9">
-<h4>Solution to example 9<a class="headerlink" href="#solution-to-example-9" title="Permalink to this heading">#</a></h4>
+<h4>Solution to example 9<a class="headerlink" href="#solution-to-example-9" title="Link to this heading">#</a></h4>
 <p>Analytical solution using the symbolic math toolbox</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">Y_s(s)</span><span class="w"> </span><span class="s">y_s(t)</span>
 <span class="n">zeta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"> </span><span class="n">omega_n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 <span class="n">X</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">s</span><span class="p">;</span>
-<span class="n">H</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega_n</span>^<span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">s</span>^<span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">zeta</span><span class="o">*</span><span class="n">omega_n</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">omega_n</span>^<span class="mi">2</span><span class="p">);</span>
+<span class="n">H</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega_n</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">s</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">zeta</span><span class="o">*</span><span class="n">omega_n</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">omega_n</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span>
 <span class="n">Y_s</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">H</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">*</span><span class="n">X</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="math notranslate nohighlight" id="equation-eq-unit5-1-3">
-<span class="eqno">(64)<a class="headerlink" href="#equation-eq-unit5-1-3" title="Permalink to this equation">#</a></span>\[Y_s(s) = \frac{100}{s\,{\left(s^2 +10\,s+100\right)}}\]</div>
+<span class="eqno">(64)<a class="headerlink" href="#equation-eq-unit5-1-3" title="Link to this equation">#</a></span>\[Y_s(s) = \frac{100}{s\,{\left(s^2 +10\,s+100\right)}}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% step response </span>
@@ -848,7 +845,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 <p>Gives the result</p>
 <div class="math notranslate nohighlight" id="equation-eq-unit5-1-4">
-<span class="eqno">(65)<a class="headerlink" href="#equation-eq-unit5-1-4" title="Permalink to this equation">#</a></span>\[y_s(t) = 1-{\mathrm{e}}^{-5\,t} \,{\left(\cos \left(5\,\sqrt{3}\,t\right)+\frac{\sqrt{3}\,\sin \left(5\,\sqrt{3}\,t\right)}{3}\right)}\]</div>
+<span class="eqno">(65)<a class="headerlink" href="#equation-eq-unit5-1-4" title="Link to this equation">#</a></span>\[y_s(t) = 1-{\mathrm{e}}^{-5\,t} \,{\left(\cos \left(5\,\sqrt{3}\,t\right)+\frac{\sqrt{3}\,\sin \left(5\,\sqrt{3}\,t\right)}{3}\right)}\]</div>
 <p>Plot the solution</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -866,7 +863,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">sigma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">zeta</span><span class="o">*</span><span class="n">omega_n</span><span class="p">;</span>
-<span class="n">omega</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega_n</span><span class="o">*</span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zeta</span>^<span class="mi">2</span><span class="p">);</span>
+<span class="n">omega</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega_n</span><span class="o">*</span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zeta</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span>
 <span class="c">% Compute response using the formula</span>
 <span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
 <span class="n">yst</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">.*</span><span class="p">(</span><span class="nb">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">sigma</span><span class="o">/</span><span class="n">omega</span><span class="p">)</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)));</span>
@@ -890,7 +887,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <p>Using the <code class="docutils literal notranslate"><span class="pre">tf</span></code> and <code class="docutils literal notranslate"><span class="pre">step</span></code> functions we get:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">num</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega_n</span>^<span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">den</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">zeta</span><span class="o">*</span><span class="n">omega_n</span><span class="p">,</span><span class="n">omega_n</span>^<span class="mi">2</span><span class="p">];</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">num</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega_n</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">den</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">zeta</span><span class="o">*</span><span class="n">omega_n</span><span class="p">,</span><span class="n">omega_n</span><span class="o">^</span><span class="mi">2</span><span class="p">];</span>
 <span class="n">Hs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">den</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -934,18 +931,18 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 </section>
 <section id="useful-quantifiers-that-result-from-step-response">
-<span id="unit-5-2-4"></span><h2>Useful quantifiers that result from step response<a class="headerlink" href="#useful-quantifiers-that-result-from-step-response" title="Permalink to this heading">#</a></h2>
-<p>The relationship between the pole locations and the step response are summarized in <a class="reference internal" href="#fig-unit5-2-2"><span class="std std-numref">Fig. 79</span></a> <a class="footnote-reference brackets" href="#unit5-1-note-4" id="id5">2</a></p>
+<span id="unit-5-2-4"></span><h2>Useful quantifiers that result from step response<a class="headerlink" href="#useful-quantifiers-that-result-from-step-response" title="Link to this heading">#</a></h2>
+<p>The relationship between the pole locations and the step response are summarized in <a class="reference internal" href="#fig-unit5-2-2"><span class="std std-numref">Fig. 79</span></a> <a class="footnote-reference brackets" href="#unit5-1-note-4" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
 <figure class="align-default" id="fig-unit5-2-2">
 <a class="reference internal image-reference" href="../_images/resppole.png"><img alt="Relationship between poles and step response" src="../_images/resppole.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 79 </span><span class="caption-text">Relationship between poles and step response</span><a class="headerlink" href="#fig-unit5-2-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 79 </span><span class="caption-text">Relationship between poles and step response</span><a class="headerlink" href="#fig-unit5-2-2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Knowledge of the location of the poles and their damping ratio and natural frequency are useful for qualtitaive anaysis of the response of a complex pole pair. There are also a number of parameters that quantively define the features of the step response which we may be interested in. These are shown in the right-hand picture of <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 80</span></a>. Knowledge of the poles allows us to predict the step response. But also, usefully for many design problems, knowledge of the step response allows us to predict the location of the poles.</p>
 <p>We will explore these ideas in the following sections.</p>
 <section id="poles">
-<h3>Poles<a class="headerlink" href="#poles" title="Permalink to this heading">#</a></h3>
+<h3>Poles<a class="headerlink" href="#poles" title="Link to this heading">#</a></h3>
 <p>The location of the system poles is important and can be obtained by factorizing the denominator of <span class="math notranslate nohighlight">\(H(s)\)</span> either symbolically or numerically. There is also a handy function <a class="reference external" href="https://uk.mathworks.com/help/ident/ref/dynamicsystem.pole.html"><code class="docutils literal notranslate"><span class="pre">pole</span></code></a> which will take these values from a transfer function.</p>
 <p>We will illustrate these with the example used in <a class="reference internal" href="#ex-unit5-2-9"><span class="std std-ref">Example 9</span></a>.</p>
 <p>First we set up the system function <span class="math notranslate nohighlight">\(H(s)\)</span></p>
@@ -953,7 +950,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="w"> </span><span class="s">t</span>
 <span class="n">zeta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"> </span><span class="n">omega_n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-<span class="n">H</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega_n</span>^<span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">s</span>^<span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">zeta</span><span class="o">*</span><span class="n">omega_n</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">omega_n</span>^<span class="mi">2</span><span class="p">)</span>
+<span class="n">H</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega_n</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">s</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">zeta</span><span class="o">*</span><span class="n">omega_n</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">omega_n</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1034,7 +1031,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </section>
 <section id="damping-ratio-and-natural-frequencies">
-<h3>Damping ratio and natural frequencies<a class="headerlink" href="#damping-ratio-and-natural-frequencies" title="Permalink to this heading">#</a></h3>
+<h3>Damping ratio and natural frequencies<a class="headerlink" href="#damping-ratio-and-natural-frequencies" title="Link to this heading">#</a></h3>
 <p>These are most conveniently obtained from the transfer function using the <a class="reference external" href="https://uk.mathworks.com/help/control/ref/dynamicsystem.damp.html"><code class="docutils literal notranslate"><span class="pre">damp</span></code></a> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1082,13 +1079,13 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </section>
 <section id="rise-tme">
-<h3>Rise-tme<a class="headerlink" href="#rise-tme" title="Permalink to this heading">#</a></h3>
+<h3>Rise-tme<a class="headerlink" href="#rise-tme" title="Link to this heading">#</a></h3>
 <p>The <em>rise time</em> <span class="math notranslate nohighlight">\(T_r\)</span> is a measure of the speed of response of a system. It is usually taken to be the time taken to transition from 10% to 90% of the final value in the initial rise of the response. It is shown in <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 80</span></a>.</p>
 <p>The rise-time depends on <span class="math notranslate nohighlight">\(\omega_n\)</span> but its actual value is also dependent on the damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> so we rely on a calibration curve such as that shown in <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 80</span></a>.</p>
 <figure class="align-default" id="id6">
 <a class="reference internal image-reference" href="../_images/trcurve.png"><img alt="Damping ratio as a function of normalised rise-time for a second-order underdamped response" src="../_images/trcurve.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 80 </span><span class="caption-text">Damping ratio as a function of normalised rise-time for a second-order underdamped response</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 80 </span><span class="caption-text">Damping ratio as a function of normalised rise-time for a second-order underdamped response</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For the problem being considered <span class="math notranslate nohighlight">\(\zeta = 0.5\)</span>, so <span class="math notranslate nohighlight">\(\omega_n T_r \approx 1.65\)</span> giving</p>
@@ -1106,7 +1103,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </section>
 <section id="settling-time">
-<h3>Settling time<a class="headerlink" href="#settling-time" title="Permalink to this heading">#</a></h3>
+<h3>Settling time<a class="headerlink" href="#settling-time" title="Link to this heading">#</a></h3>
 <p>The <em>settling time</em> <span class="math notranslate nohighlight">\(T_s\)</span> is defined as the time taken for the peaks of the oscillations in the step response to be bounded by some arbitrary limit. In <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 80</span></a> the bounds have been set to 2%.</p>
 <p>The actual setting time is related to the real part of the poles and, for this case,</p>
 <div class="math notranslate nohighlight">
@@ -1138,7 +1135,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <p>The value looks about right!</p>
 </section>
 <section id="peak-overshoot">
-<h3>Peak overshoot<a class="headerlink" href="#peak-overshoot" title="Permalink to this heading">#</a></h3>
+<h3>Peak overshoot<a class="headerlink" href="#peak-overshoot" title="Link to this heading">#</a></h3>
 <p>The peak overshoot is a measure of damping in a system and is the height of the first peak (<span class="math notranslate nohighlight">\(C_\max\)</span> in <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 80</span></a>). It is usually quoted as a percentage of the final value.</p>
 <div class="math notranslate nohighlight">
 \[\%\mathrm{OS} = \exp\left(\frac{-\zeta\pi}{\sqrt{1-\zeta^2}}\right)\times 100\]</div>
@@ -1148,7 +1145,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <p>For our example</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">POS</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">zeta</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zeta</span>^<span class="mi">2</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">POS</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">zeta</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zeta</span><span class="o">^</span><span class="mi">2</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span>
 </pre></div>
 </div>
 </div>
@@ -1172,7 +1169,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <p>Reverse formula check</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="nb">log</span><span class="p">(</span><span class="n">POS</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">(</span><span class="nb">pi</span>^<span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">log</span><span class="p">(</span><span class="n">POS</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>^<span class="mi">2</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="nb">log</span><span class="p">(</span><span class="n">POS</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">(</span><span class="nb">pi</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">log</span><span class="p">(</span><span class="n">POS</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1185,14 +1182,14 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </section>
 <section id="peak-time">
-<h3>Peak time<a class="headerlink" href="#peak-time" title="Permalink to this heading">#</a></h3>
+<h3>Peak time<a class="headerlink" href="#peak-time" title="Link to this heading">#</a></h3>
 <p>We sometimes compute the <em>peak time</em> <span class="math notranslate nohighlight">\(T_p\)</span>, which is the time at which the first peak occurs. It depends on the damped natural frequency:</p>
 <div class="math notranslate nohighlight">
 \[T_p = \frac{\pi}{\omega_d}  = \frac{\pi}{\omega_n\sqrt{1-\zeta^2}}\]</div>
 <p>For our example</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Tp</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">pi</span><span class="o">/</span><span class="p">(</span><span class="n">omega_n</span><span class="o">*</span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zeta</span>^<span class="mi">2</span><span class="p">))</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Tp</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">pi</span><span class="o">/</span><span class="p">(</span><span class="n">omega_n</span><span class="o">*</span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">zeta</span><span class="o">^</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1215,7 +1212,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </section>
 <section id="list-all-properties">
-<h3>List all properties<a class="headerlink" href="#list-all-properties" title="Permalink to this heading">#</a></h3>
+<h3>List all properties<a class="headerlink" href="#list-all-properties" title="Link to this heading">#</a></h3>
 <p>MATLAB provides a useful function <a class="reference external" href="https://uk.mathworks.com/help/control/ref/dynamicsystem.stepinfo.html">stepinfo</a> that computes a step response for a system and takes measurements of the response to summarize the useful quantitative data defined above as well as a few more quantities.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1244,18 +1241,18 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 </section>
 <section id="exercises-16">
-<span id="examples16"></span><h2>Exercises 16<a class="headerlink" href="#exercises-16" title="Permalink to this heading">#</a></h2>
+<span id="examples16"></span><h2>Exercises 16<a class="headerlink" href="#exercises-16" title="Link to this heading">#</a></h2>
 <section id="exercise-16-1-qualitative-analysis">
-<span id="ex16-1"></span><h3>Exercise 16.1: Qualitative analysis<a class="headerlink" href="#exercise-16-1-qualitative-analysis" title="Permalink to this heading">#</a></h3>
+<span id="ex16-1"></span><h3>Exercise 16.1: Qualitative analysis<a class="headerlink" href="#exercise-16-1-qualitative-analysis" title="Link to this heading">#</a></h3>
 <p>A signal or system response <span class="math notranslate nohighlight">\(f(t)\)</span> contains the terms</p>
 <div class="math notranslate nohighlight" id="equation-eq-ex16-1">
-<span class="eqno">(66)<a class="headerlink" href="#equation-eq-ex16-1" title="Permalink to this equation">#</a></span>\[\cdots - e^{-2t} - 0.1 t^2 \cos(3t + 5) \cdots\]</div>
+<span class="eqno">(66)<a class="headerlink" href="#equation-eq-ex16-1" title="Link to this equation">#</a></span>\[\cdots - e^{-2t} - 0.1 t^2 \cos(3t + 5) \cdots\]</div>
 <p>(a) How many poles are there in <span class="math notranslate nohighlight">\(F(s)\)</span>?</p>
 <p>(b) What is the nature of the response due to the terms given in <a class="reference internal" href="#equation-eq-ex16-1">(66)</a>?</p>
 <p>(c) Which are the dominant poles?</p>
 </section>
 <section id="exercise-16-2-qualitative-and-quantitative-analysis">
-<span id="ex16-2"></span><h3>Exercise 16.2: Qualitative and quantitative analysis<a class="headerlink" href="#exercise-16-2-qualitative-and-quantitative-analysis" title="Permalink to this heading">#</a></h3>
+<span id="ex16-2"></span><h3>Exercise 16.2: Qualitative and quantitative analysis<a class="headerlink" href="#exercise-16-2-qualitative-and-quantitative-analysis" title="Link to this heading">#</a></h3>
 <p>A system has poles <span class="math notranslate nohighlight">\(s = 0,\,1\pm j,\,-1,\, -2\pm j2,\,-3\)</span> and zeros at <span class="math notranslate nohighlight">\(s = -1.5,\,-3\pm j3\)</span>.</p>
 <p>(a) Give the transfer function <span class="math notranslate nohighlight">\(F(s)=b(s)/a(a)\)</span></p>
 <p>(b) Plot the poles on a pole zero map</p>
@@ -1264,7 +1261,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <p>(e) Which is the dominant pole?</p>
 <p>(f) Will the system be stable or unstable?</p>
 <section id="partial-solution-to-exercise-16-2">
-<h4>Partial solution to Exercise 16.2<a class="headerlink" href="#partial-solution-to-exercise-16-2" title="Permalink to this heading">#</a></h4>
+<h4>Partial solution to Exercise 16.2<a class="headerlink" href="#partial-solution-to-exercise-16-2" title="Link to this heading">#</a></h4>
 <p>The poles and zeros can be entered into MATLAB</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1355,12 +1352,12 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 </section>
 <section id="exercise-16-3-spring-mass-damper-system">
-<span id="ex16-3"></span><h3>Exercise 16.3: Spring-Mass-Damper System<a class="headerlink" href="#exercise-16-3-spring-mass-damper-system" title="Permalink to this heading">#</a></h3>
+<span id="ex16-3"></span><h3>Exercise 16.3: Spring-Mass-Damper System<a class="headerlink" href="#exercise-16-3-spring-mass-damper-system" title="Link to this heading">#</a></h3>
 <p>You can analyze a mass-spring-damper system (<a class="reference internal" href="#fig-unit5-2-3"><span class="std std-numref">Fig. 81</span></a>) by looking at the poles of its transfer function.</p>
 <figure class="align-default" id="fig-unit5-2-3">
 <a class="reference internal image-reference" href="../_images/smd1.png"><img alt="Diagram of a spring-mass-damper system" src="../_images/smd1.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 81 </span><span class="caption-text">Diagram of a spring-mass-damper system</span><a class="headerlink" href="#fig-unit5-2-3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 81 </span><span class="caption-text">Diagram of a spring-mass-damper system</span><a class="headerlink" href="#fig-unit5-2-3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Consider a mass-spring-damper that</p>
@@ -1392,18 +1389,18 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <section id="unit-5-2-take-aways">
-<span id="unit5-2-takeaways"></span><h3>Unit 5.2: Take aways<a class="headerlink" href="#unit-5-2-take-aways" title="Permalink to this heading">#</a></h3>
+<span id="unit5-2-takeaways"></span><h3>Unit 5.2: Take aways<a class="headerlink" href="#unit-5-2-take-aways" title="Link to this heading">#</a></h3>
 <section id="real-pole-s-sigma">
-<h4>Real pole <span class="math notranslate nohighlight">\(s=\sigma\)</span>:<a class="headerlink" href="#real-pole-s-sigma" title="Permalink to this heading">#</a></h4>
+<h4>Real pole <span class="math notranslate nohighlight">\(s=\sigma\)</span>:<a class="headerlink" href="#real-pole-s-sigma" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Growth rate: <span class="math notranslate nohighlight">\(\sigma &gt; 0\)</span>, the exponential signal doubles every <span class="math notranslate nohighlight">\(T\approx 0.7/\sigma\)</span> s.</p></li>
 <li><p>Time constant: <span class="math notranslate nohighlight">\(\sigma &lt; 0\)</span>, the exponential signal decays to <span class="math notranslate nohighlight">\(37\%\)</span> of it’s original value in <span class="math notranslate nohighlight">\(\tau = 1/\sigma\)</span> s. The exponential signal reaches <span class="math notranslate nohighlight">\(1\%\)</span> of it’s original value in <span class="math notranslate nohighlight">\(t\approx 4.6\tau\)</span> s.</p></li>
 </ul>
 </section>
 <section id="complex-pole-pair-s-sigma-pm-j-omega">
-<h4>Complex pole pair <span class="math notranslate nohighlight">\(s = -\sigma \pm j\omega\)</span>:<a class="headerlink" href="#complex-pole-pair-s-sigma-pm-j-omega" title="Permalink to this heading">#</a></h4>
+<h4>Complex pole pair <span class="math notranslate nohighlight">\(s = -\sigma \pm j\omega\)</span>:<a class="headerlink" href="#complex-pole-pair-s-sigma-pm-j-omega" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Representation of denominator: <span class="math notranslate nohighlight">\((s + \sigma + j\omega_n)(s - \sigma + j\omega) = s^2 + 2\sigma s + \left(\sigma^2 + \omega_n^2\right)\)</span></p></li>
 <li><p>Natural frequency: <span class="math notranslate nohighlight">\(\omega_n = \sqrt{\sigma^2 + \omega^2}\)</span></p></li>
@@ -1411,7 +1408,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </ul>
 </section>
 <section id="standard-second-order-system-transfer-function">
-<h4>Standard second-order system transfer function<a class="headerlink" href="#standard-second-order-system-transfer-function" title="Permalink to this heading">#</a></h4>
+<h4>Standard second-order system transfer function<a class="headerlink" href="#standard-second-order-system-transfer-function" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Transfer function:</p></li>
 </ul>
@@ -1422,7 +1419,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </ul>
 </section>
 <section id="performance-parameters-for-second-order-system">
-<h4>Performance parameters for second-order system<a class="headerlink" href="#performance-parameters-for-second-order-system" title="Permalink to this heading">#</a></h4>
+<h4>Performance parameters for second-order system<a class="headerlink" href="#performance-parameters-for-second-order-system" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Rise time: <span class="math notranslate nohighlight">\(T_r\)</span> is estimated from graph of normaized rise-time <span class="math notranslate nohighlight">\(\omega_n T_r\)</span> v <span class="math notranslate nohighlight">\(\zeta\)</span> shown in <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 80</span></a>.</p></li>
 <li><p>2% Setting time: <span class="math notranslate nohighlight">\(T_s \approx 4/\sigma\)</span></p></li>
@@ -1431,7 +1428,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </ul>
 </section>
 <section id="useful-matlab-commands">
-<h4>Useful MATLAB commands<a class="headerlink" href="#useful-matlab-commands" title="Permalink to this heading">#</a></h4>
+<h4>Useful MATLAB commands<a class="headerlink" href="#useful-matlab-commands" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">tf</span></code>: defines a system as a transfer function <span class="math notranslate nohighlight">\(n(s)/d(s)\)</span></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">step</span></code>: plots the step response of a system</p></li>
@@ -1443,33 +1440,38 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </section>
 </section>
 <section id="unit-5-2-further-exploration">
-<span id="unit5-2-hw"></span><h2>Unit 5.2: Further exploration<a class="headerlink" href="#unit-5-2-further-exploration" title="Permalink to this heading">#</a></h2>
+<span id="unit5-2-hw"></span><h2>Unit 5.2: Further exploration<a class="headerlink" href="#unit-5-2-further-exploration" title="Link to this heading">#</a></h2>
 <p>If you have access to MATLAB (desktop of online), you can install the MATLAB curriculum module <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems">Transfer Function Analysis of Dynamic Systems</a> <span id="id7">[<a class="reference internal" href="../zbib.html#id17" title="Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0.">Allie, 2024</a>]</span> and further explore the concepts given here. The MATLAB Live Script <strong>PoleZeroAnalysis.mlx</strong> provides some interactive tools that enable you to interactively explore second order system response and includes the impact of <em>zeros</em> which we have not covered here.</p>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id8">
-<dl class="citation">
-<dt class="label" id="id24"><span class="brackets">All24</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id7">2</a>)</span></dt>
-<dd><p>Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: <a class="github reference external" href="https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0">MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems</a>.</p>
-</dd>
-<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id2">Boy93</a></span></dt>
-<dd><p>Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: <a class="reference external" href="https://web.stanford.edu/~boyd/ee102/">https://web.stanford.edu/~boyd/ee102/</a>.</p>
-</dd>
-</dl>
+<div role="list" class="citation-list">
+<div class="citation" id="id24" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>All24<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id7">2</a>)</span>
+<p>Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: <a class="github reference external" href="https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0">MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems</a>.</p>
+</div>
+<div class="citation" id="id25" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Boy93</a><span class="fn-bracket">]</span></span>
+<p>Stephen Boyd. Ee-102: introduction to signals and systems. 1993. Retrieved April 3, 2024. URL: <a class="reference external" href="https://web.stanford.edu/~boyd/ee102/">https://web.stanford.edu/~boyd/ee102/</a>.</p>
+</div>
+</div>
 </div>
 </section>
 <section id="footnotes">
-<h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this heading">#</a></h2>
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Link to this heading">#</a></h2>
 <hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="unit5-2-1"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
-<dd><p>This is easily determined from <span class="math notranslate nohighlight">\(\left.f(t)\right|_{t\to 0} = \left.\frac{1}{RC} e^{-t/RC}\right|_{t\to 0} = 1/RC\)</span>.</p>
-</dd>
-<dt class="label" id="unit5-1-note-4"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
-<dd><p>In the diagram we use a slightly changed notation: <span class="math notranslate nohighlight">\(\omega_d = \omega\)</span> is the <em>damped natural frequency</em> given by the <em>imaginary part of the pole</em> and <span class="math notranslate nohighlight">\(\sigma_d = \sigma\)</span> is the <em>real part of the pole</em>.</p>
-</dd>
-</dl>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="unit5-2-1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">1</a><span class="fn-bracket">]</span></span>
+<p>This is easily determined from <span class="math notranslate nohighlight">\(\left.f(t)\right|_{t\to 0} = \left.\frac{1}{RC} e^{-t/RC}\right|_{t\to 0} = 1/RC\)</span>.</p>
+</aside>
+<aside class="footnote brackets" id="unit5-1-note-4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">2</a><span class="fn-bracket">]</span></span>
+<p>In the diagram we use a slightly changed notation: <span class="math notranslate nohighlight">\(\omega_d = \omega\)</span> is the <em>damped natural frequency</em> given by the <em>imaginary part of the pole</em> and <span class="math notranslate nohighlight">\(\sigma_d = \sigma\)</span> is the <em>real part of the pole</em>.</p>
+</aside>
+</aside>
 </section>
 </section>
 
@@ -1500,7 +1502,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1528,7 +1530,9 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1656,8 +1660,8 @@ for
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>
