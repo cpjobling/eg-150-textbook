@@ -8,6 +8,7 @@ dependencies = [
     "ghp-import>=2.1.0",
     "jupyter>=1.1.1",
     "jupyter-book>=1.0.3",
+    "jupyter-matlab-proxy>=0.16.3",
     "jupytext>=1.16.6",
     "matplotlib>=3.10.0",
     "mkernel>=0.2.0",
