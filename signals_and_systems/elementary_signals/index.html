@@ -451,7 +451,10 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#slido-poll-1">Slido poll 1</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-unit-step-function">The Unit Step Function</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-matlab">In MATLAB</a></li>
 </ul>
@@ -475,6 +478,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sampling-property">Sampling Property</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sifting-property">Sifting Property</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#higher-order-delta-fuctions">Higher Order Delta Fuctions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-and-take-aways">Quiz and take aways</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
@@ -512,6 +516,8 @@
 <p>Consider the network shown in below where the switch is closed at time <span class="math notranslate nohighlight">\(t=T\)</span> and all components are ideal.</p>
 <p><img alt="Network with a switch which is closed at t = T." src="../../_images/circuit2.png" /></p>
 <p>Express the output voltage <span class="math notranslate nohighlight">\(V_{\mathrm{out}}\)</span> as a function of the unit step function, and sketch the appropriate waveform.</p>
+<section id="slido-poll-1">
+<h3>Slido poll 1<a class="headerlink" href="#slido-poll-1" title="Link to this heading">#</a></h3>
 <p><strong>Solution</strong></p>
 <p>Before the switch is closed at <span class="math notranslate nohighlight">\(t &lt; T\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -522,6 +528,9 @@
 <p>We imagine that the voltage jumps instantaneously from 0 to <span class="math notranslate nohighlight">\(V_s\)</span> volts at <span class="math notranslate nohighlight">\(t = T\)</span> seconds as shown below.</p>
 <img src="./pictures/step.png" width = "30%"  alt="The step function" />
 <p>We call this type of signal a step function.</p>
+<p>What is happening at <span class="math notranslate nohighlight">\(t=0\)</span>?</p>
+<p>Mathematically, the value of the signal at <span class="math notranslate nohighlight">\(t=0\)</span> is <em>undefined</em> and the time derivative is infinite. In practice, we could imagine that the signal will be somewhere on the dotted line. But, we don’t know where.</p>
+</section>
 </section>
 <section id="the-unit-step-function">
 <span id="heaviside"></span><h2>The Unit Step Function<a class="headerlink" href="#the-unit-step-function" title="Link to this heading">#</a></h2>
@@ -533,19 +542,10 @@
 <p><img alt="The unit step function" src="../../_images/unitstep.png" /></p>
 <section id="in-matlab">
 <h3>In MATLAB<a class="headerlink" href="#in-matlab" title="Link to this heading">#</a></h3>
-<p>In MATLAB, we use the <code class="docutils literal notranslate"><span class="pre">heaviside</span></code> function (named after <a class="reference external" href="https://en.wikipedia.org/wiki/Oliver_Heaviside">Oliver Heaviside</a>).</p>
+<p>In MATLAB, we use the <code class="docutils literal notranslate"><span class="pre">heaviside</span></code> function (named after <a class="reference external" href="https://en.wikipedia.org/wiki/Oliver_Heaviside">Oliver Heaviside</a>) to model the unit step signal.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%%file plot_heaviside.m</span>
-<span class="n">syms</span><span class="w"> </span><span class="s">t</span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="w"> </span><span class="mf">1.25</span><span class="p">]),</span><span class="k">...</span>
-<span class="nb">title</span><span class="p">(</span><span class="s">&#39;The Heaviside function $$u_0(t)$$&#39;</span><span class="p">,</span><span class="s">&#39;interpreter&#39;</span><span class="p">,</span><span class="s">&#39;latex&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
-<span class="n">heaviside</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Created file &#39;/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/signals_and_systems/elementary_signals/plot_heaviside.m&#39;.
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">edit</span><span class="w"> </span><span class="n">plot_heaviside</span>
 </pre></div>
 </div>
 </div>
@@ -562,7 +562,7 @@
      1
 </pre></div>
 </div>
-<img alt="../../_images/3acb9922c6cd2a20655ced74db5d743c7d4036911e759619e84f0b18309d1ad0.png" src="../../_images/3acb9922c6cd2a20655ced74db5d743c7d4036911e759619e84f0b18309d1ad0.png" />
+<img alt="../../_images/0ef440da0e087e98c03809f97c01461587b73fe89cc7c31607d586f2eb323458.png" src="../../_images/0ef440da0e087e98c03809f97c01461587b73fe89cc7c31607d586f2eb323458.png" />
 </div>
 </div>
 <p>Note that, so that it can be plotted, MATLAB defines the <em>Heaviside function</em> slightly differently from the mathematically ideal unit step:</p>
@@ -589,7 +589,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/31e68967a4ca6ada480463a6646a25b742720ab8fe0ff65553ee6f49afb35597.png" src="../../_images/31e68967a4ca6ada480463a6646a25b742720ab8fe0ff65553ee6f49afb35597.png" />
+<img alt="../../_images/7479000b489896d7db65b44805c1f06bef36adfaa054ddf1bc568779bc7ae34d.png" src="../../_images/7479000b489896d7db65b44805c1f06bef36adfaa054ddf1bc568779bc7ae34d.png" />
 </div>
 </div>
 <p>Note that the signal is scaled in the <span class="math notranslate nohighlight">\(y\)</span> direction.</p>
@@ -602,7 +602,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/64c0bbb1e9636cbff4a1bfb735caefda514ba4c6ed834ac8202a6a0017026c54.png" src="../../_images/64c0bbb1e9636cbff4a1bfb735caefda514ba4c6ed834ac8202a6a0017026c54.png" />
+<img alt="../../_images/766d57f48106516a8de8cace8222f63b126e8709443cfdf7876769a11e01d8da.png" src="../../_images/766d57f48106516a8de8cace8222f63b126e8709443cfdf7876769a11e01d8da.png" />
 </div>
 </div>
 <p>Note that, because of the sign, the signal is mirrored about the <span class="math notranslate nohighlight">\(x\)</span> axis as well as being scaled by 2.</p>
@@ -617,7 +617,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/feeaf073c6dbb3b5405a0ab4df8d3b0f29c2cfa1415f008a6d2676b4240b3a85.png" src="../../_images/feeaf073c6dbb3b5405a0ab4df8d3b0f29c2cfa1415f008a6d2676b4240b3a85.png" />
+<img alt="../../_images/d4345f861386000964f1feec5eab9900b82e0b37c444284259d2737698f9b156.png" src="../../_images/d4345f861386000964f1feec5eab9900b82e0b37c444284259d2737698f9b156.png" />
 </div>
 </div>
 <p>The sign on the function argument <span class="math notranslate nohighlight">\(-t\)</span> causes the whole signal to be reversed in time. Note that another way of looking at this is that the signal is mirrored about the <span class="math notranslate nohighlight">\(y\)</span> axis.</p>
@@ -633,7 +633,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/02776a2addc1b4d4cde541b0c4ce33deda5bcb186289f0f3dcec0953582c2d37.png" src="../../_images/02776a2addc1b4d4cde541b0c4ce33deda5bcb186289f0f3dcec0953582c2d37.png" />
+<img alt="../../_images/7c4f83d858217a2fbe7a21071bd7aa35977446318cfe7fe0e5b9d624ac5a9a4d.png" src="../../_images/7c4f83d858217a2fbe7a21071bd7aa35977446318cfe7fe0e5b9d624ac5a9a4d.png" />
 </div>
 </div>
 <p>This is a <em>time delay</em> … note for <span class="math notranslate nohighlight">\(u_0(t - T)\)</span> the step change occurs T seconds <strong>later</strong> than it does for <span class="math notranslate nohighlight">\(u_o(t)\)</span>.</p>
@@ -644,14 +644,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/beefd8146f4a34d74941db9572215d1e1eecb5831ec652441b756d4592b64527.png" src="../../_images/beefd8146f4a34d74941db9572215d1e1eecb5831ec652441b756d4592b64527.png" />
+<img alt="../../_images/26112964cf951a2a0302fa5f35ab88d4f30e100c800865d6c09dd628faf05a02.png" src="../../_images/26112964cf951a2a0302fa5f35ab88d4f30e100c800865d6c09dd628faf05a02.png" />
 </div>
 </div>
 <p>This is a <em>time advance</em> … note for <span class="math notranslate nohighlight">\(u_0(t + T)\)</span> the step change occurs T seconds <strong>earlier</strong> than it does for <span class="math notranslate nohighlight">\(u_o(t)\)</span>.</p>
 </section>
 <section id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
-<p>We will work through some examples in class. See <a class="reference internal" href="#worksheet3"><span class="xref myst">Examples 3</span></a>.</p>
+<p>We will work through some examples in class. See <a class="reference internal" href="#examples3.html"><span class="xref myst">Examples 3</span></a>.</p>
 </section>
 </section>
 <section id="synthesis-of-signals-from-the-unit-step">
@@ -686,7 +686,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/4422aa3a5754da9c66c31daa9a16f1efe2fe3f7a36dd3f9d20f6eceb7d22c449.png" src="../../_images/4422aa3a5754da9c66c31daa9a16f1efe2fe3f7a36dd3f9d20f6eceb7d22c449.png" />
+<img alt="../../_images/f69b622532e8d422c8105572c0f88ab3d20e98ca52854bd68faf4409eea53f3d.png" src="../../_images/f69b622532e8d422c8105572c0f88ab3d20e98ca52854bd68faf4409eea53f3d.png" />
 </div>
 </div>
 <p>This type of signal is called a <strong>ramp function</strong>. Note that it is the <em>integral</em> of the step function (the resistor-capacitor circuit implements a simple integrator circuit).</p>
@@ -707,7 +707,7 @@
 <p>For future reference, you should determine <span class="math notranslate nohighlight">\(u_2(t)\)</span>, <span class="math notranslate nohighlight">\(u_3(t)\)</span> and <span class="math notranslate nohighlight">\(u_n(t)\)</span> for yourself and make a note of the general rule:</p>
 <div class="math notranslate nohighlight">
 \[u_{n-1} = \frac{1}{n}\frac{d}{dt}u_n(t)\]</div>
-<p>Details are given in equations 1.26—1.29 in Karris.</p>
+<p>Details are given in equations 1.26—1.29 in <span id="id3">[<a class="reference internal" href="../../zbib.html#id7" title="Steven T. Karris. Signals and systems with MATLAB computing and Simulink modeling. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197.">Karris, 2012</a>]</span>.</p>
 </section>
 <section id="the-dirac-delta-function">
 <span id="es-dirac-delta"></span><h2>The Dirac Delta Function<a class="headerlink" href="#the-dirac-delta-function" title="Link to this heading">#</a></h2>
@@ -767,16 +767,10 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>vL(t) =
+vL(t) =
  
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>L*is*dirac(t)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+L*is*dirac(t)
+ 
 </pre></div>
 </div>
 </div>
@@ -790,7 +784,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/b62a400c4c9474fb8b0790f069a348b41e2fe7e6a9adcbc408c0863e6c84bdd1.png" src="../../_images/b62a400c4c9474fb8b0790f069a348b41e2fe7e6a9adcbc408c0863e6c84bdd1.png" />
+<img alt="../../_images/5ce342436202438636279178e3e85c993e2677a3b5ad70eb4ba5dc169dfc11c9.png" src="../../_images/5ce342436202438636279178e3e85c993e2677a3b5ad70eb4ba5dc169dfc11c9.png" />
 </div>
 </div>
 </section>
@@ -810,7 +804,7 @@
 <p><em>You should work through the proof</em> for youself.</p>
 </section>
 <section id="sifting-property">
-<span id="id3"></span><h3>Sifting Property<a class="headerlink" href="#sifting-property" title="Link to this heading">#</a></h3>
+<span id="id4"></span><h3>Sifting Property<a class="headerlink" href="#sifting-property" title="Link to this heading">#</a></h3>
 <p>The <em>sifting property</em> of the delta function states that</p>
 <div class="math notranslate nohighlight">
 \[\int_{-\infty}^{\infty}f(t)\delta(t-\alpha)dt=f(\alpha)\]</div>
@@ -830,6 +824,9 @@
 <div class="math notranslate nohighlight">
 \[\int_{-\infty}^{\infty}f(t)\delta^n(t-\alpha)dt = \left. ( - 1)^n\frac{d^n}{dt^n}[f(t)] \right|_{t = \alpha }\]</div>
 </section>
+<section id="quiz-and-take-aways">
+<h3>Quiz and take aways<a class="headerlink" href="#quiz-and-take-aways" title="Link to this heading">#</a></h3>
+</section>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
@@ -847,18 +844,19 @@
 </section>
 <section id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
-<p>We will do some of these in class. See <a class="reference internal" href="examples3.html"><span class="doc std std-doc">Exercises 3</span></a>.</p>
+<p>We will do some of these in class. See <a class="reference internal" href="#examples3.html"><span class="xref myst">Examples 3</span></a>.</p>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id4">
+<div class="docutils container" id="id5">
 <div role="list" class="citation-list">
-<div class="citation" id="id14" role="doc-biblioentry">
+<div class="citation" id="id15" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Hsu20</a><span class="fn-bracket">]</span></span>
 <p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
 </div>
-<div class="citation" id="id10" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Kar12</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id11" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Kar12<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id3">2</a>)</span>
 <p>Steven T. Karris. <em>Signals and systems with MATLAB computing and Simulink modeling</em>. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197">https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197</a>.</p>
 </div>
 </div>
@@ -890,16 +888,16 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "matlab"
+            mode: "mkernel"
         },
         kernelOptions: {
-            name: "matlab",
+            name: "mkernel",
             path: "./signals_and_systems/elementary_signals"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'matlab'</script>
+    <script>kernelName = 'mkernel'</script>
 
                 </article>
               
@@ -946,7 +944,10 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#slido-poll-1">Slido poll 1</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-unit-step-function">The Unit Step Function</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-matlab">In MATLAB</a></li>
 </ul>
@@ -970,6 +971,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sampling-property">Sampling Property</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sifting-property">Sifting Property</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#higher-order-delta-fuctions">Higher Order Delta Fuctions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz-and-take-aways">Quiz and take aways</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a><ul class="nav section-nav flex-column">
