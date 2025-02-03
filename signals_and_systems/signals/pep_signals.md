@@ -7,9 +7,9 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.16.6
 kernelspec:
-  display_name: MATLAB Kernel
+  display_name: MKernel
   language: matlab
-  name: jupyter_matlab_kernel
+  name: mkernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
