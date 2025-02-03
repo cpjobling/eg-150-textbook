@@ -47,6 +47,10 @@ Express the output voltage $V_{\mathrm{out}}$ as a function of the unit step fun
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+### Slido poll 1
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
 **Solution**
 
 Before the switch is closed at $t < T$:
@@ -65,6 +69,14 @@ We imagine that the voltage jumps instantaneously from 0 to $V_s$ volts at $t = 
 
 We call this type of signal a step function.
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+What is happening at $t=0$?
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Mathematically, the value of the signal at $t=0$ is *undefined* and the time derivative is infinite. In practice, we could imagine that the signal will be somewhere on the dotted line. But, we don't know where.
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (heaviside)=
@@ -81,18 +93,14 @@ $${u_0}(t) = \left\{ {\begin{array}{*{20}{c}}
 
 ### In MATLAB
 
-In MATLAB, we use the `heaviside` function (named after [Oliver Heaviside](https://en.wikipedia.org/wiki/Oliver_Heaviside)).
+In MATLAB, we use the `heaviside` function (named after [Oliver Heaviside](https://en.wikipedia.org/wiki/Oliver_Heaviside)) to model the unit step signal.
 
 ```{code-cell}
 ---
 slideshow:
   slide_type: fragment
 ---
-%%file plot_heaviside.m
-syms t
-fplot(heaviside(t),[-1,1],'LineWidth',2),grid,ylim([0 1.25]),...
-title('The Heaviside function $$u_0(t)$$','interpreter','latex'),xlabel('t')
-heaviside(0)
+edit plot_heaviside
 ```
 
 ```{code-cell}
@@ -206,7 +214,7 @@ This is a *time advance* ... note for $u_0(t + T)$ the step change occurs T seco
 
 ### Examples
 
-We will work through some examples in class. See [Examples 3](worksheet3).
+We will work through some examples in class. See [Examples 3](examples3.html).
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -297,7 +305,7 @@ For future reference, you should determine $u_2(t)$, $u_3(t)$ and $u_n(t)$ for y
 
 $$u_{n-1} = \frac{1}{n}\frac{d}{dt}u_n(t)$$
 
-Details are given in equations 1.26&mdash;1.29 in Karris.
+Details are given in equations 1.26&mdash;1.29 in {cite}`karris`.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -468,6 +476,10 @@ $$\int_{-\infty}^{\infty}f(t)\delta^n(t-\alpha)dt = \left. ( - 1)^n\frac{d^n}{dt
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
+### Quiz and take aways
+
++++ {"slideshow": {"slide_type": "slide"}}
+
 ## Summary
 
 In this chapter we have looked at some elementary signals and the theoretical circuits that can be used to generate them.
@@ -485,7 +497,7 @@ In this chapter we have looked at some elementary signals and the theoretical ci
 
 ## Exercises
 
-We will do some of these in class. See [Exercises 3](examples3).
+We will do some of these in class. See [Examples 3](examples3.html).
 
 
 ## References
