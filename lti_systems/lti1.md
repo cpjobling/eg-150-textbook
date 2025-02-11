@@ -5,11 +5,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.15.2
+    jupytext_version: 1.16.6
 kernelspec:
-  display_name: Matlab
+  display_name: MATLAB Kernel
   language: matlab
-  name: matlab
+  name: jupyter_matlab_kernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -96,7 +96,7 @@ The equation
 
 $$y(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau$$ 
 
-defines the *convolution* of two continuous-time signals $x(\tau)$ and $h(t)$ denoted by
+defines the *convolution* of two continuous-time signals $x(t)$ and $h(t)$ denoted by
 
 $$y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau$$
 
@@ -183,8 +183,8 @@ We will then work through the examples again in the examples class.
 slideshow:
   slide_type: fragment
 ---
-cd matlab/convolution_demo
-dir
+%cd matlab/convolution_demo
+%dir
 convolutiondemo
 ```
 
@@ -389,6 +389,7 @@ Plot the result for $\alpha = 1$
 slideshow:
   slide_type: fragment
 ---
+clf
 ya(t) = subs(y(t),alpha,1)
 fplot(ya(t))
 ```
@@ -439,6 +440,7 @@ Plot the result for $\alpha = 1$
 slideshow:
   slide_type: fragment
 ---
+clf
 yb(t) = subs(y(t),alpha,1)
 fplot(yb(t))
 ```
@@ -572,6 +574,7 @@ Plot the result
 slideshow:
   slide_type: fragment
 ---
+clf
 fplot(y(t),[-3,6]),grid,ylim([0,2.5]),ylabel('h(t)'),xlabel('t')
 ```
 
