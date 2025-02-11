@@ -5,11 +5,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.15.2
+    jupytext_version: 1.16.6
 kernelspec:
-  display_name: Matlab
+  display_name: MATLAB Kernel
   language: matlab
-  name: matlab
+  name: jupyter_matlab_kernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -75,7 +75,7 @@ LCCODEs play a central role in describing the input-output relationships of a wi
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-{un3.3:rc}=
+(un3.3:rc)=
 #### Illustration: An RC Circuit
 
 For instance, in the RC circuit considered in {ref}`ex4.1`, the input $x(t)=v_s(t)$ and the output $y(t)=v_c(t)$ are related by a first-order constant-coefficient differential equation
@@ -305,7 +305,7 @@ $$x(t) = Ke^{-bt}u_0(t)$$
 
 #### Solution
 
-This is an example of how a first-order LCCODE would be solved. We provide as an instructional example but will assume that you will be tested on this in other modules.
+This is an example of how a first-order LCCODE would be solved. We provide this as an instructional example but will assume that you will be tested on this in other modules.
 
 a) Given that 
 

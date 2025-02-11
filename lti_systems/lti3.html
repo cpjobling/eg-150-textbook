@@ -546,10 +546,9 @@
 <section id="applications-of-linear-constant-coefficient-differential-equations">
 <h4>Applications of linear constant-coefficient differential equations<a class="headerlink" href="#applications-of-linear-constant-coefficient-differential-equations" title="Link to this heading">#</a></h4>
 <p>LCCODEs play a central role in describing the input-output relationships of a wide variety of electrical, mechanical, chemical and biological systems.</p>
-<p>{un3.3:rc}=</p>
 </section>
 <section id="illustration-an-rc-circuit">
-<h4>Illustration: An RC Circuit<a class="headerlink" href="#illustration-an-rc-circuit" title="Link to this heading">#</a></h4>
+<span id="un3-3-rc"></span><h4>Illustration: An RC Circuit<a class="headerlink" href="#illustration-an-rc-circuit" title="Link to this heading">#</a></h4>
 <p>For instance, in the RC circuit considered in <a class="reference internal" href="../signals_and_systems/systems/index.html#ex4-1"><span class="std std-ref">Exercise 4.1: RC Circuit</span></a>, the input <span class="math notranslate nohighlight">\(x(t)=v_s(t)\)</span> and the output <span class="math notranslate nohighlight">\(y(t)=v_c(t)\)</span> are related by a first-order constant-coefficient differential equation</p>
 <div class="math notranslate nohighlight">
 \[\frac{dy(t)}{dt}+\frac{1}{RC}y(t)=\frac{1}{RC}x(t)\]</div>
@@ -692,7 +691,7 @@
 <p>(b) Express <span class="math notranslate nohighlight">\(y(t)\)</span> in terms of the zero-input and zero-state responses.</p>
 <section id="solution">
 <h4>Solution<a class="headerlink" href="#solution" title="Link to this heading">#</a></h4>
-<p>This is an example of how a first-order LCCODE would be solved. We provide as an instructional example but will assume that you will be tested on this in other modules.</p>
+<p>This is an example of how a first-order LCCODE would be solved. We provide this as an instructional example but will assume that you will be tested on this in other modules.</p>
 <p>a) Given that</p>
 <div class="math notranslate nohighlight">
 \[\frac{d}{dt}y(t)+ay(t)=x(t)\]</div>
@@ -789,7 +788,7 @@
 <div class="math notranslate nohighlight">
 \[\sum_{k=0}^N a_k \frac{d^k}{dt^k} y(t)=\sum_{k=0}^M b_k \frac{d^k}{dt^k} x(t)\]</div>
 <p>where the coefficients <span class="math notranslate nohighlight">\(a_k\)</span> and <span class="math notranslate nohighlight">\(b_k\)</span> are real constants and <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(m\)</span> are integers.</p>
-<p>We illustrated in <span class="xref std std-ref">un3.3:rc</span> that the simple RC circuit can be represented as such an LCCODE.</p>
+<p>We illustrated in <a class="reference internal" href="#un3-3-rc"><span class="std std-ref">Illustration: An RC Circuit</span></a> that the simple RC circuit can be represented as such an LCCODE.</p>
 </section>
 <section id="solution-of-lccodes">
 <h4>Solution of LCCODEs<a class="headerlink" href="#solution-of-lccodes" title="Link to this heading">#</a></h4>
@@ -849,16 +848,16 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "matlab"
+            mode: "jupyter_matlab_kernel"
         },
         kernelOptions: {
-            name: "matlab",
+            name: "jupyter_matlab_kernel",
             path: "./lti_systems"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'matlab'</script>
+    <script>kernelName = 'jupyter_matlab_kernel'</script>
 
                 </article>
               
