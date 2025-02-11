@@ -629,10 +629,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>convolutiondemo is not found in the current folder or on the MATLAB path, but exists in:
-    /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/lti_systems/matlab/convolution_demo
-
-Change the MATLAB current folder or add its folder to the MATLAB path.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unrecognized function or variable &#39;convolutiondemo&#39;.
 </pre></div>
 </div>
 </div>
@@ -644,10 +641,7 @@ Change the MATLAB current folder or add its folder to the MATLAB path.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>convolutiondemo is not found in the current folder or on the MATLAB path, but exists in:
-    /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/lti_systems/matlab/convolution_demo
-
-Change the MATLAB current folder or add its folder to the MATLAB path.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unrecognized function or variable &#39;convolutiondemo&#39;.
 </pre></div>
 </div>
 </div>
@@ -758,7 +752,7 @@ Change the MATLAB current folder or add its folder to the MATLAB path.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/df3e3c79a315b95f1e4a7af8ad8e246c9b581ea78a2301170f07783417b315f2.png" src="../_images/df3e3c79a315b95f1e4a7af8ad8e246c9b581ea78a2301170f07783417b315f2.png" />
+<img alt="../_images/0c4ebe88bef7fd84a97dac1f3552e711cabfbbbff90cf0087c6313ef2d2f8828.png" src="../_images/0c4ebe88bef7fd84a97dac1f3552e711cabfbbbff90cf0087c6313ef2d2f8828.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the MATLAB function <code class="docutils literal notranslate"><span class="pre">int</span></code> to compute the convolution integral symbolically.</p>
@@ -769,8 +763,13 @@ Change the MATLAB current folder or add its folder to the MATLAB path.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[y(t) =-\frac{2\,{\mathrm{e}}^{-\frac{\alpha \,t}{2}} \,{\left(\frac{{\mathrm{e}}^{-\frac{\alpha \,t}{2}} }{2}-\frac{{\mathrm{e}}^{\frac{\alpha \,t}{2}} }{2}\right)}\,{\left(\frac{\textrm{sign}\left(t\right)}{2}+\frac{1}{2}\right)}}{\alpha }\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+y(t) =
+ 
+-(2*exp(-(alpha*t)/2)*(exp(-(alpha*t)/2)/2 - exp((alpha*t)/2)/2)*(sign(t)/2 + 1/2))/alpha
+ 
+</pre></div>
+</div>
 </div>
 </div>
 <p>Plot the result for <span class="math notranslate nohighlight">\(\alpha = 1\)</span></p>
@@ -783,9 +782,14 @@ Change the MATLAB current folder or add its folder to the MATLAB path.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c5d8ab219e64f4cb48cedc8db6f29607146f565b03026e6b0a613e979ca9eb9f.png" src="../_images/c5d8ab219e64f4cb48cedc8db6f29607146f565b03026e6b0a613e979ca9eb9f.png" />
-<div class="output text_latex math notranslate nohighlight">
-\[ya(t) =-2\,{\mathrm{e}}^{-\frac{t}{2}} \,{\left(\frac{{\mathrm{e}}^{-\frac{t}{2}} }{2}-\frac{{\mathrm{e}}^{t/2} }{2}\right)}\,{\left(\frac{\textrm{sign}\left(t\right)}{2}+\frac{1}{2}\right)}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+ya(t) =
+ 
+-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
+ 
+</pre></div>
+</div>
+<img alt="../_images/9580d436913effd5b87cfa242754b21087f973bc577da576441411b801ff8584.png" src="../_images/9580d436913effd5b87cfa242754b21087f973bc577da576441411b801ff8584.png" />
 </div>
 </div>
 </section>
@@ -810,7 +814,7 @@ Change the MATLAB current folder or add its folder to the MATLAB path.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/34ba81e0c8d7fd007ede88ee58212ebd351c085e0854381a9a1ba39f1582a8d4.png" src="../_images/34ba81e0c8d7fd007ede88ee58212ebd351c085e0854381a9a1ba39f1582a8d4.png" />
+<img alt="../_images/cf3e1e725427474af0c186a611522fa13286332cfa716a52cacd6aa3d919e874.png" src="../_images/cf3e1e725427474af0c186a611522fa13286332cfa716a52cacd6aa3d919e874.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -820,8 +824,13 @@ Change the MATLAB current folder or add its folder to the MATLAB path.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[y(t) =-\frac{2\,{\mathrm{e}}^{-\frac{\alpha \,t}{2}} \,{\left(\frac{{\mathrm{e}}^{-\frac{\alpha \,t}{2}} }{2}-\frac{{\mathrm{e}}^{\frac{\alpha \,t}{2}} }{2}\right)}\,{\left(\frac{\textrm{sign}\left(t\right)}{2}+\frac{1}{2}\right)}}{\alpha }\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+y(t) =
+ 
+-(2*exp(-(alpha*t)/2)*(exp(-(alpha*t)/2)/2 - exp((alpha*t)/2)/2)*(sign(t)/2 + 1/2))/alpha
+ 
+</pre></div>
+</div>
 </div>
 </div>
 <p>Plot the result for <span class="math notranslate nohighlight">\(\alpha = 1\)</span></p>
@@ -834,9 +843,14 @@ Change the MATLAB current folder or add its folder to the MATLAB path.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a75d3a948a90aca1a23ecb900d006255b62e7bc76735e83702a3ef574af02c86.png" src="../_images/a75d3a948a90aca1a23ecb900d006255b62e7bc76735e83702a3ef574af02c86.png" />
-<div class="output text_latex math notranslate nohighlight">
-\[yb(t) =-2\,{\mathrm{e}}^{-\frac{t}{2}} \,{\left(\frac{{\mathrm{e}}^{-\frac{t}{2}} }{2}-\frac{{\mathrm{e}}^{t/2} }{2}\right)}\,{\left(\frac{\textrm{sign}\left(t\right)}{2}+\frac{1}{2}\right)}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+yb(t) =
+ 
+-2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
+ 
+</pre></div>
+</div>
+<img alt="../_images/8007462e74032f8cc1ee846f19d21e155bf428eba0e35abf72725ad1e4efab65.png" src="../_images/8007462e74032f8cc1ee846f19d21e155bf428eba0e35abf72725ad1e4efab65.png" />
 </div>
 </div>
 <p>Go back to <a class="reference internal" href="#step-response"><span class="std std-ref">F. Step Response</span></a></p>
@@ -873,7 +887,7 @@ Change the MATLAB current folder or add its folder to the MATLAB path.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f38ed1070169312895937af11b23ce0df2901939897e9e47579d65eb4140087d.png" src="../_images/f38ed1070169312895937af11b23ce0df2901939897e9e47579d65eb4140087d.png" />
+<img alt="../_images/85d8e6ccf2a58756bc0fd3daac667066047bb3e7b49647bb1b8e07276043ae1d.png" src="../_images/85d8e6ccf2a58756bc0fd3daac667066047bb3e7b49647bb1b8e07276043ae1d.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the convolution integral</p>
@@ -884,11 +898,13 @@ Change the MATLAB current folder or add its folder to the MATLAB path.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\begin{split}y(t) =\left\lbrace \begin{array}{cl}
-\frac{{\mathrm{e}}^{-t} }{2} &amp; \;\textrm{if}\;\;0\le t\\
-\frac{{\mathrm{e}}^t }{2} &amp; \;\textrm{if}\;\;t\le 0
-\end{array}\right.\end{split}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+y(t) =
+ 
+piecewise(0 &lt;= t, exp(-t)/2, t &lt;= 0, exp(t)/2)
+ 
+</pre></div>
+</div>
 </div>
 </div>
 <p>Plot the result for <span class="math notranslate nohighlight">\(\alpha = 1\)</span></p>
@@ -899,7 +915,7 @@ Change the MATLAB current folder or add its folder to the MATLAB path.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/30bd2b9e893afbbd4a29c5fc07a5016768d520c985a707ea29e61cbf4c40b8fb.png" src="../_images/30bd2b9e893afbbd4a29c5fc07a5016768d520c985a707ea29e61cbf4c40b8fb.png" />
+<img alt="../_images/59d5cf4485f0680b65f78ef54ce8a907d558e367189f7061455fc08181ca54c6.png" src="../_images/59d5cf4485f0680b65f78ef54ce8a907d558e367189f7061455fc08181ca54c6.png" />
 </div>
 </div>
 </section>
@@ -936,7 +952,7 @@ Change the MATLAB current folder or add its folder to the MATLAB path.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5a93070da4d9a8c3b0dc4138b2e5590507258a404eda5a4ce04d4d00d682a0ed.png" src="../_images/5a93070da4d9a8c3b0dc4138b2e5590507258a404eda5a4ce04d4d00d682a0ed.png" />
+<img alt="../_images/e90b9867b5c294f4d5b40e694140f50b5e521243d83009751bad8f06719ca327.png" src="../_images/e90b9867b5c294f4d5b40e694140f50b5e521243d83009751bad8f06719ca327.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span></p>
@@ -947,8 +963,13 @@ Change the MATLAB current folder or add its folder to the MATLAB path.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[y(t) =\textrm{heaviside}\left(t-5\right)\,{\left(t-5\right)}-\textrm{heaviside}\left(t-3\right)\,{\left(t-3\right)}-\textrm{heaviside}\left(t-2\right)\,{\left(t-2\right)}+t\,\textrm{heaviside}\left(t\right)\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+y(t) =
+ 
+heaviside(t - 5)*(t - 5) - heaviside(t - 3)*(t - 3) - heaviside(t - 2)*(t - 2) + t*heaviside(t)
+ 
+</pre></div>
+</div>
 </div>
 </div>
 <p>Plot the result</p>
@@ -960,7 +981,7 @@ Change the MATLAB current folder or add its folder to the MATLAB path.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3ba028c097a0e18476c574d7da20b8f78e7a26e52812a8c860ad71355d210e82.png" src="../_images/3ba028c097a0e18476c574d7da20b8f78e7a26e52812a8c860ad71355d210e82.png" />
+<img alt="../_images/72bcf2151735b47ada3abce5132d48b7ac430a1e1eb37bc2c100056d9541a5a5.png" src="../_images/72bcf2151735b47ada3abce5132d48b7ac430a1e1eb37bc2c100056d9541a5a5.png" />
 </div>
 </div>
 </section>
@@ -1034,16 +1055,16 @@ Change the MATLAB current folder or add its folder to the MATLAB path.
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jupyter_matlab_kernel"
+            mode: "mkernel"
         },
         kernelOptions: {
-            name: "jupyter_matlab_kernel",
+            name: "mkernel",
             path: "./lti_systems"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jupyter_matlab_kernel'</script>
+    <script>kernelName = 'mkernel'</script>
 
                 </article>
               
