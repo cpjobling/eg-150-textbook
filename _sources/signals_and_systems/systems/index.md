@@ -510,27 +510,41 @@ where $s$ is a complex variable and $\lambda$ is a complex constant.
 The solution to this problem is part of a journey that leads us from continuous-time LTI systems to the Laplace transform. I have therefore included the solution in full.
 ```
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
 #### Solution
 
 Let $y(t)$ be the output of the system with input $x(t)=e^{st}$. Then
 
 $$\mathbf{T}\left\{e^{st}\right\} = y(t)$$
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 Since the system is time-invariant, we have
 
 $$\mathbf{T}\left\{e^{s\left(t + t_0\right)}\right\} = y(t + t_0)$$
 
-for arbitrary real $t_0$. Since the system is linear, we have
+for arbitrary real $t_0$. 
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Since the system is linear, we have
 
 $$\mathbf{T}\left\{e^{s\left(t+t_0\right)}\right\} = \mathbf{T}\left\{e^{st}e^{st_0}\right\} = e^{st_0}\mathbf{T}\left\{s^{st}\right\} = e^{st_0}y(t)$$
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 Hence,
 
 $$y(t + t_0) = e^{st_0}y(t)$$
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 Setting $t=0$, we obtain
 
 $$y(t_0) = y(0)e^{st_0}$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Since $t_0$ is arbitrary, by changing $t_0$ to $t$, we can rewrite $y(t_0) = y(0)e^{st_0}$ as
 
@@ -541,6 +555,19 @@ or
 $$\mathbf{T}\left\{e^{st}\right\}=\lambda e^{st}$$
 
 where $\lambda = y(0)$.
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+
+:::{important}
+:::{note}
+In mathematical language, a function $x(\cdot)$ satisfying the equation
+
+$$\mathbf{T}\left\{x(\cdot)\right\}=\lambda x(\cdot)$$
+
+is called an *eigenfunction* (or *characteristic function*) corresponding to the *eigenvalue* $x(\cdot)$. Thus, the solution to the previous example indicates that the complex exponential function is an eigenfunction of an LTI system.
+:::
+:::
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

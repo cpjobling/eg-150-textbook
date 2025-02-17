@@ -121,7 +121,7 @@ $$x(t)=0\quad t \gt 0$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Combining the definition of a causal signal with a causal system, when the input $x(t)$ is causal, the output of a causal continuous-time LTI system is given by
+Combining the definition of a *causal signal* with a *causal system*, when the input $x(t)$ is causal, the output of a causal continuous-time LTI system is given by
 
 $$y(t) = \int_{0}^{t}h(\tau)x(t-\tau)\,d\tau =  \int_{0}^{t}x(\tau)h(t-\tau)\,d\tau$$
 
@@ -176,7 +176,7 @@ $$\lambda = H(s) = \int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-Thus, the eigenvalue of a continuous-time LTI system associated with the eigenfunction $e^{st}$ is given by $H(s)$ which is a complex constant whose value is determined by the value of $s$ via the equation
+Thus, the *eigenvalue* of a continuous-time LTI system associated with the *eigenfunction* $e^{st}$ is given by $H(s)$ which is a complex constant whose value is determined by the value of $s$ via the equation
 
 $$H(s) = \int_{-\infty}^{\infty}h(\tau)e^{-s\tau}\,d\tau.$$
 
