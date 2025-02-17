@@ -565,7 +565,9 @@ In mathematical language, a function $x(\cdot)$ satisfying the equation
 
 $$\mathbf{T}\left\{x(\cdot)\right\}=\lambda x(\cdot)$$
 
-is called an *eigenfunction* (or *characteristic function*) corresponding to the *eigenvalue* $x(\cdot)$. Thus, the solution to the previous example indicates that the complex exponential function is an eigenfunction of an LTI system.
+is called an *eigenfunction* (or *characteristic function*) corresponding to the *eigenvalue* $x(\cdot)$. 
+
+Thus, the solution to the previous example indicates that the complex exponential function is an eigenfunction of an LTI system.
 :::
 :::
 
