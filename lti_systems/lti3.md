@@ -319,7 +319,7 @@ $$-bAe^{-bt}+aAe^{-bt} = Ke^{-bt}$$
 
 from which, after cancelling the common term $e^{-bt}$, gives
 
-$$A = K(a -b)$$
+$$A = \frac{K}{a -b}$$
 
 and 
 
@@ -331,7 +331,7 @@ $$y_h(t) = Be^{st}$$
 
 Substituting for $y_h(t)$ in the differential equation we have
 
-$$sBe^{st} + aBe^{st} =\left( s + a\right)e^{st} = 0$$
+$$sBe^{st} + aBe^{st} =\left( s + a\right)Be^{st} = 0$$
 
 so $s=-a$ and
 
