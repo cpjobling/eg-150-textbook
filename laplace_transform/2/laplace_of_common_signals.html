@@ -571,16 +571,10 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
+ans =
  
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-(exp(-a*t)*(a*t + 1))/a^2
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+-(exp(-a*t)*(a*t + 1))/a^2
+ 
 </pre></div>
 </div>
 </div>
@@ -721,9 +715,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+1
 </pre></div>
 </div>
 </div>
@@ -739,9 +731,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>exp(-a*s)
+exp(-a*s)
 </pre></div>
 </div>
 </div>
@@ -757,9 +747,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/s
+1/s
 </pre></div>
 </div>
 </div>
@@ -773,9 +761,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+0
 </pre></div>
 </div>
 </div>
@@ -789,9 +775,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/s
+1/s
 </pre></div>
 </div>
 </div>
@@ -807,9 +791,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/s^2
+1/s^2
 </pre></div>
 </div>
 </div>
@@ -827,9 +809,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gamma(n + 1)/s^(n + 1)
+gamma(n + 1)/s^(n + 1)
 </pre></div>
 </div>
 </div>
@@ -845,9 +825,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/(a + s)
+1/(a + s)
 </pre></div>
 </div>
 </div>
@@ -860,9 +838,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+0
 </pre></div>
 </div>
 </div>
@@ -877,9 +853,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/(a + s)
+1/(a + s)
 </pre></div>
 </div>
 </div>
@@ -892,9 +866,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/(a + s)^2
+1/(a + s)^2
 </pre></div>
 </div>
 </div>
@@ -909,12 +881,27 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>piecewise(0 &lt;= n, gamma(n + 1)/(a + s)^(n + 1))
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> GAMMA  Symbolic gamma function.
+piecewise(0 &lt;= n, gamma(n + 1)/(a + s)^(n + 1))
+ sym/gamma - Gamma function
+    This MATLAB function returns the gamma function of a symbolic variable
+    or symbolic expression X.
+
+    Syntax
+      gamma(X)
+
+    Input Arguments
+      X - Input
+        symbolic number | symbolic variable | symbolic expression |
+        symbolic function | symbolic vector | symbolic matrix
+
+    Examples
+      openExample(&#39;symbolic/GammaPlotTheGammaFunctionvExample&#39;)
+
+    See also beta, factorial, igamma, gammaln, nchoosek, pochhammer, psi
+
+    Introduced in Symbolic Math Toolbox before R2006a
+    Documentation for sym/gamma
+       doc sym/gamma
 </pre></div>
 </div>
 </div>
@@ -931,15 +918,9 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>s/(omega^2 + s^2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>omega/(omega^2 + s^2)
+s/(omega^2 + s^2)
+ans =
+omega/(omega^2 + s^2)
 </pre></div>
 </div>
 </div>
@@ -956,15 +937,9 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(a + s)/((a + s)^2 + omega^2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>omega/((a + s)^2 + omega^2)
+(a + s)/((a + s)^2 + omega^2)
+ans =
+omega/((a + s)^2 + omega^2)
 </pre></div>
 </div>
 </div>
@@ -1031,16 +1006,16 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "matlab"
+            mode: "mkernel"
         },
         kernelOptions: {
-            name: "matlab",
+            name: "mkernel",
             path: "./laplace_transform/2"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'matlab'</script>
+    <script>kernelName = 'mkernel'</script>
 
                 </article>
               

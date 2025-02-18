@@ -5,11 +5,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.15.2
+    jupytext_version: 1.16.6
 kernelspec:
-  display_name: Matlab
+  display_name: MKernel
   language: matlab
-  name: matlab
+  name: mkernel
 ---
 
 +++ {"nbpresent": {"id": "90f3c07d-3646-44b0-a549-7020fc10d16f"}, "slideshow": {"slide_type": "slide"}}
@@ -143,6 +143,7 @@ X(s) = laplace(x(t))
 +++ {"nbpresent": {"id": "4ad52fcd-e2e8-4d41-8827-511753bd1148"}, "slideshow": {"slide_type": "fragment"}}
 
 For a Laplace transfomation to exist, the integral must be bounded. That is
+
 $$\left| {\int_0^\infty  {f(t){e^{ - st}}dt} } \right| < \infty $$
 
 +++ {"nbpresent": {"id": "4ad52fcd-e2e8-4d41-8827-511753bd1148"}, "slideshow": {"slide_type": "fragment"}}
@@ -162,7 +163,7 @@ $$x(t) = e^{-at}u_0(t)\quad a\, \mathrm{real}$$
 
 #### By hand
 
-We will work through the analysis in class
+We will work through the analysis in class.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -328,7 +329,7 @@ $$X(s)=\frac{1}{s+a}\quad \mathrm{Re}(s)\lt -a$$
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Thus the ROC for {ref}`laplace:ex2` is specified as $\mathrm{Re}(s)\lt -a$ and is illustrated in the complex plane as showm in {numref}`ROC2` by the shaded area to the left of the line $\mathrm{Re}(s)=-a$.
+Thus the ROC for {ref}`laplace:ex2` is specified as $\mathrm{Re}(s)\lt -a$ and is illustrated in the complex plane as shown in {numref}`ROC2` by the shaded area to the left of the line $\mathrm{Re}(s)=-a$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

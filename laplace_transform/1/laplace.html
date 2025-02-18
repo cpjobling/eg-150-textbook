@@ -569,9 +569,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X(s) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>laplace(x(t), t, s)
+laplace(x(t), t, s)
 </pre></div>
 </div>
 </div>
@@ -580,8 +578,9 @@
 </section>
 <section id="region-of-convergence">
 <span id="laplace-roc"></span><h2>Region of Convergence<a class="headerlink" href="#region-of-convergence" title="Link to this heading">#</a></h2>
-<p>For a Laplace transfomation to exist, the integral must be bounded. That is
-$<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ - st}}dt} } \right| &lt; \infty \)</span>$</p>
+<p>For a Laplace transfomation to exist, the integral must be bounded. That is</p>
+<div class="math notranslate nohighlight">
+\[\left| {\int_0^\infty  {f(t){e^{ - st}}dt} } \right| &lt; \infty \]</div>
 <p>The range of values for the complex variables <span class="math notranslate nohighlight">\(s\)</span> for which the Laplace tranform converges is called the <em>region of convergence</em> (ROC). To illustrate this concept, let us consider some examples.</p>
 <section id="solved-problem-1">
 <span id="laplace-ex1"></span><h3>Solved Problem 1<a class="headerlink" href="#solved-problem-1" title="Link to this heading">#</a></h3>
@@ -590,7 +589,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 \[x(t) = e^{-at}u_0(t)\quad a\, \mathrm{real}\]</div>
 <section id="by-hand">
 <h4>By hand<a class="headerlink" href="#by-hand" title="Link to this heading">#</a></h4>
-<p>We will work through the analysis in class</p>
+<p>We will work through the analysis in class.</p>
 </section>
 <section id="matlab-analysis">
 <h4>MATLAB analysis<a class="headerlink" href="#matlab-analysis" title="Link to this heading">#</a></h4>
@@ -613,9 +612,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x(t) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>exp(-a*t)*heaviside(t)
+exp(-a*t)*heaviside(t)
 </pre></div>
 </div>
 </div>
@@ -627,7 +624,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/621dbc0bd625ab0588e4158369aa5b1c0f05a745af5421a2d385e42b801fe8bd.png" src="../../_images/621dbc0bd625ab0588e4158369aa5b1c0f05a745af5421a2d385e42b801fe8bd.png" />
+<img alt="../../_images/849b520fa6e17db895bcdd1a876f310463d1ee29f2687ccf9ab2b63d4e2b6bbd.png" src="../../_images/849b520fa6e17db895bcdd1a876f310463d1ee29f2687ccf9ab2b63d4e2b6bbd.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -638,9 +635,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>piecewise(in(s, &#39;real&#39;) &amp; a + s &lt; 0, Inf, a + real(s) ~= 0 &amp; ~in(s, &#39;real&#39;), 1/(a + s) - limit(exp(- t*a - t*s), t, Inf)/(a + s), in(s, &#39;real&#39;) &amp; 0 &lt; a + s | angle(s) in Dom::Interval(-pi/2, pi/2) &amp; 0 &lt; a &amp; s ~= 0, 1/(a + s), (~in(s, &#39;real&#39;) | 0 &lt;= a + s) &amp; (~in(s, &#39;real&#39;) | a + s &lt;= 0) &amp; (a + real(s) == 0 | in(s, &#39;real&#39;)) &amp; (~angle(s) in Dom::Interval(-pi/2, pi/2) | a &lt;= 0 | s == 0), int(exp(-t*a)*exp(-t*s), t, 0, Inf))
+piecewise(in(s, &#39;real&#39;) &amp; a + s &lt; 0, Inf, a + real(s) ~= 0 &amp; ~in(s, &#39;real&#39;), 1/(a + s) - limit(exp(- t*a - t*s), t, Inf)/(a + s), in(s, &#39;real&#39;) &amp; 0 &lt; a + s | angle(s) in Dom::Interval(-pi/2, pi/2) &amp; 0 &lt; a &amp; s ~= 0, 1/(a + s), (~in(s, &#39;real&#39;) | 0 &lt;= a + s) &amp; (~in(s, &#39;real&#39;) | a + s &lt;= 0) &amp; (a + real(s) == 0 | in(s, &#39;real&#39;)) &amp; (~angle(s) in Dom::Interval(-pi/2, pi/2) | a &lt;= 0 | s == 0), int(exp(-t*a)*exp(-t*s), t, 0, Inf))
 </pre></div>
 </div>
 </div>
@@ -660,9 +655,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/(a + s)
+1/(a + s)
 </pre></div>
 </div>
 </div>
@@ -675,9 +668,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X(s) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/(a + s)
+1/(a + s)
 </pre></div>
 </div>
 </div>
@@ -714,9 +705,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x(t) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-heaviside(-t)*exp(-a*t)
+-heaviside(-t)*exp(-a*t)
 </pre></div>
 </div>
 </div>
@@ -728,7 +717,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c0aa81d1daa953d9bc53a74d504b779e20ab4be5ba20a41f992cb76a4604fe4f.png" src="../../_images/c0aa81d1daa953d9bc53a74d504b779e20ab4be5ba20a41f992cb76a4604fe4f.png" />
+<img alt="../../_images/e6a248440a28a93a4392f4ac7b0668fa117eabf772b46cda62992a612a24b3b2.png" src="../../_images/e6a248440a28a93a4392f4ac7b0668fa117eabf772b46cda62992a612a24b3b2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -739,9 +728,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-Inf
+-Inf
 </pre></div>
 </div>
 </div>
@@ -754,9 +741,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X(s) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+0
 </pre></div>
 </div>
 </div>
@@ -770,9 +755,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/(a + s)
+1/(a + s)
 </pre></div>
 </div>
 </div>
@@ -784,7 +767,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <p>Its Laplace transform <span class="math notranslate nohighlight">\(X(s)\)</span> is given by <span class="xref std std-ref">ex:9.1</span></p>
 <div class="math notranslate nohighlight">
 \[X(s)=\frac{1}{s+a}\quad \mathrm{Re}(s)\lt -a\]</div>
-<p>Thus the ROC for <a class="reference internal" href="#laplace-ex2"><span class="std std-ref">Solved Problem 2</span></a> is specified as <span class="math notranslate nohighlight">\(\mathrm{Re}(s)\lt -a\)</span> and is illustrated in the complex plane as showm in <a class="reference internal" href="#roc2"><span class="std std-numref">Fig. 43</span></a> by the shaded area to the left of the line <span class="math notranslate nohighlight">\(\mathrm{Re}(s)=-a\)</span>.</p>
+<p>Thus the ROC for <a class="reference internal" href="#laplace-ex2"><span class="std std-ref">Solved Problem 2</span></a> is specified as <span class="math notranslate nohighlight">\(\mathrm{Re}(s)\lt -a\)</span> and is illustrated in the complex plane as shown in <a class="reference internal" href="#roc2"><span class="std std-numref">Fig. 43</span></a> by the shaded area to the left of the line <span class="math notranslate nohighlight">\(\mathrm{Re}(s)=-a\)</span>.</p>
 <figure class="align-default" id="roc2">
 <a class="reference internal image-reference" href="../../_images/roc2.png"><img alt="ROC for Example 2" src="../../_images/roc2.png" style="width: 60%;" /></a>
 <figcaption>
@@ -839,9 +822,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z =
     -2
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p =
+p =
     -3
     -1
 </pre></div>
@@ -856,7 +837,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/1eb2f707c24bec8ec75eed25d68cdd722577d1b6eefec9d5bb1676b62c2d2130.png" src="../../_images/1eb2f707c24bec8ec75eed25d68cdd722577d1b6eefec9d5bb1676b62c2d2130.png" />
+<img alt="../../_images/64d8a098e88679e23733ac27da97af7db6e093de8fcb81d837108b11d986b7cb.png" src="../../_images/64d8a098e88679e23733ac27da97af7db6e093de8fcb81d837108b11d986b7cb.png" />
 </div>
 </div>
 <p>Note that <span class="math notranslate nohighlight">\(X(s)\)</span> has one zero at <span class="math notranslate nohighlight">\(s=-2\)</span> and two poles at <span class="math notranslate nohighlight">\(s=-1\)</span> and <span class="math notranslate nohighlight">\(s=-3\)</span> with scale factor 2. The ROC is <span class="math notranslate nohighlight">\(\mathrm{Re}(s)&gt;-1\)</span>.</p>
@@ -956,9 +937,7 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>F(s) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>laplace(f(t), t, s)
+laplace(f(t), t, s)
 </pre></div>
 </div>
 </div>
@@ -990,19 +969,15 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Zeros =
     -3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Poles =
+Poles =
   -2.0000 + 0.0000i
   -1.0000 + 1.4142i
   -1.0000 - 1.4142i
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>K =
+K =
      3
 </pre></div>
 </div>
-<img alt="../../_images/43fee57628362d5187f1a50a14646dfed3f15b08bbf0031daf7fcffecbad5570.png" src="../../_images/43fee57628362d5187f1a50a14646dfed3f15b08bbf0031daf7fcffecbad5570.png" />
+<img alt="../../_images/18a090f600e7255318835052b516615cf6315ff0a0da10521c487a071c9d8e90.png" src="../../_images/18a090f600e7255318835052b516615cf6315ff0a0da10521c487a071c9d8e90.png" />
 </div>
 </div>
 </section>
@@ -1041,16 +1016,16 @@ $<span class="math notranslate nohighlight">\(\left| {\int_0^\infty  {f(t){e^{ -
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "matlab"
+            mode: "mkernel"
         },
         kernelOptions: {
-            name: "matlab",
+            name: "mkernel",
             path: "./laplace_transform/1"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'matlab'</script>
+    <script>kernelName = 'mkernel'</script>
 
                 </article>
               
