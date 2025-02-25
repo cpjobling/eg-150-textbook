@@ -5,11 +5,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.15.2
+    jupytext_version: 1.16.6
 kernelspec:
-  display_name: MATLAB
-  language: matlab
-  name: matlab
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -50,9 +50,9 @@ We will sketch the solution in our OneNote notebook
 
 The Laplace Transformation (named after [Pierre-Simon Laplace](https://en.wikipedia.org/wiki/Pierre-Simon_Laplace)) is a useful mathematical tool that is used in many branches of engineering including signals and systems theory, control theory, communications, mechanical engineering, etc.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
-Its principle benefits are: 
+### The principle benefits of the Laplace transformation: 
 
 * it enables us to represent differential equations that model the behaviour of systems in the time domain as polynomials in $s$ which facilitates their solution as we will now demonstrate.
 
@@ -68,7 +68,9 @@ Its principle benefits are:
 
 * block diagram analysis allows us to readily compute system responses to complex signals and facilitates system simulation and system analysis.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Downside of the Laplace transformation
 
 The only downside is that time $t$ is a real value whereas the Laplace transformation operator $s$ is a complex exponential $s = \sigma + j\omega$.
 

@@ -128,9 +128,18 @@ The Laplace transform operator is provided in the MATLAB symbolic math toolkit b
 ```{code-cell}
 ---
 slideshow:
+  slide_type: '-'
+---
+% set up
+format compact
+setappdata(0, "MKernel_plot_format", 'svg')
+```
+
+```{code-cell}
+---
+slideshow:
   slide_type: fragment
 ---
-format compact
 syms s t x(t) % define Laplace transform variable and time as symbols
 X(s) = laplace(x(t))
 ```
@@ -174,8 +183,6 @@ We will work through the analysis in class.
 slideshow:
   slide_type: fragment
 ---
-% set up
-format compact
 syms s t a
 assume(a,'real')
 u0(t) = heaviside(t);
@@ -466,7 +473,7 @@ The properties of the ROC are summarised in **Section 3.1 D** of {ref}`schaum` a
 
 
 
-(ex9.1)=
+(ex:9.1)=
 ### Exercise 9.1
 
 Find the Laplace transform of

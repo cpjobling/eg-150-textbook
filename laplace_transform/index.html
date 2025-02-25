@@ -452,7 +452,11 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-example">Motivating example</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-the-laplace-transformation">About the Laplace Transformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-the-laplace-transformation">About the Laplace Transformation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-principle-benefits-of-the-laplace-transformation">The principle benefits of the Laplace transformation:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downside-of-the-laplace-transformation">Downside of the Laplace transformation</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
 </ul>
             </nav>
@@ -485,7 +489,8 @@
 <section id="about-the-laplace-transformation">
 <h2>About the Laplace Transformation<a class="headerlink" href="#about-the-laplace-transformation" title="Link to this heading">#</a></h2>
 <p>The Laplace Transformation (named after <a class="reference external" href="https://en.wikipedia.org/wiki/Pierre-Simon_Laplace">Pierre-Simon Laplace</a>) is a useful mathematical tool that is used in many branches of engineering including signals and systems theory, control theory, communications, mechanical engineering, etc.</p>
-<p>Its principle benefits are:</p>
+<section id="the-principle-benefits-of-the-laplace-transformation">
+<h3>The principle benefits of the Laplace transformation:<a class="headerlink" href="#the-principle-benefits-of-the-laplace-transformation" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>it enables us to represent differential equations that model the behaviour of systems in the time domain as polynomials in <span class="math notranslate nohighlight">\(s\)</span> which facilitates their solution as we will now demonstrate.</p></li>
 </ul>
@@ -498,7 +503,11 @@
 <ul class="simple">
 <li><p>block diagram analysis allows us to readily compute system responses to complex signals and facilitates system simulation and system analysis.</p></li>
 </ul>
+</section>
+<section id="downside-of-the-laplace-transformation">
+<h3>Downside of the Laplace transformation<a class="headerlink" href="#downside-of-the-laplace-transformation" title="Link to this heading">#</a></h3>
 <p>The only downside is that time <span class="math notranslate nohighlight">\(t\)</span> is a real value whereas the Laplace transformation operator <span class="math notranslate nohighlight">\(s\)</span> is a complex exponential <span class="math notranslate nohighlight">\(s = \sigma + j\omega\)</span>.</p>
+</section>
 </section>
 <section id="table-of-contents">
 <h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
@@ -527,16 +536,16 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "matlab"
+            mode: "python"
         },
         kernelOptions: {
-            name: "matlab",
+            name: "python3",
             path: "./laplace_transform"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'matlab'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -584,7 +593,11 @@
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivating-example">Motivating example</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-the-laplace-transformation">About the Laplace Transformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-the-laplace-transformation">About the Laplace Transformation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-principle-benefits-of-the-laplace-transformation">The principle benefits of the Laplace transformation:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downside-of-the-laplace-transformation">Downside of the Laplace transformation</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
 </ul>
   </nav></div>
