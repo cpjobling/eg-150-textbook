@@ -468,9 +468,23 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-step-u-0-t">Unit step <span class="math notranslate nohighlight">\(u_0(t)\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-ramp-u-1-t-tu-0-t">Unit ramp <span class="math notranslate nohighlight">\(u_1(t)=tu_0(t)\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#powers-of-t">Powers of <span class="math notranslate nohighlight">\(t\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponentials">Exponentials</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinusoids">Sinusoids</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decaying-sinusoids">Decaying sinusoids</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponentials">Exponentials</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#e-at-u-0-t"><span class="math notranslate nohighlight">\(e^{-at}u_0(t)\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><span class="math notranslate nohighlight">\(-e^{-at}u_0(-t)\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#te-at-u-0-t"><span class="math notranslate nohighlight">\(te^{-at}u_0(t)\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#t-ne-at-u-0-t"><span class="math notranslate nohighlight">\(t^ne^{-at}u_0(t)\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinusoids">Sinusoids</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cos-left-omega-t-right-u-0-t"><span class="math notranslate nohighlight">\(\cos \left(\omega t\right) u_0(t)\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sin-left-omega-t-right-u-0-t"><span class="math notranslate nohighlight">\(\sin \left(\omega t\right) u_0(t)\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decaying-sinusoids">Decaying sinusoids</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#e-at-cos-left-omega-t-right-u-0-t"><span class="math notranslate nohighlight">\(e^{-at}\cos\left(\omega t\right)u_0(t)\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#e-at-sin-left-omega-t-right-u-0-t"><span class="math notranslate nohighlight">\(e^{-at}\sin\left(\omega t\right)u_0(t)\)</span></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>
@@ -799,6 +813,7 @@ exp(-a*s)
 </section>
 <section id="powers-of-t">
 <h3>Powers of <span class="math notranslate nohighlight">\(t\)</span><a class="headerlink" href="#powers-of-t" title="Link to this heading">#</a></h3>
+<p><span class="math notranslate nohighlight">\(t^n u_0(t)\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">n</span><span class="w"> </span><span class="s">integer</span>
@@ -814,9 +829,44 @@ gamma(n + 1)/s^(n + 1)
 </div>
 </div>
 </div>
+<p>What is the <span class="math notranslate nohighlight">\(\Gamma\)</span> function <code class="docutils literal notranslate"><span class="pre">sym/gamma</span></code>?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">help</span><span class="w"> </span><span class="n">sym</span><span class="o">/</span><span class="nb">gamma</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> sym/gamma - Gamma function
+    This MATLAB function returns the gamma function of a symbolic variable
+    or symbolic expression X.
+
+    Syntax
+      gamma(X)
+
+    Input Arguments
+      X - Input
+        symbolic number | symbolic variable | symbolic expression |
+        symbolic function | symbolic vector | symbolic matrix
+
+    Examples
+      openExample(&#39;symbolic/GammaPlotTheGammaFunctionvExample&#39;)
+
+    See also beta, factorial, igamma, gammaln, nchoosek, pochhammer, psi
+
+    Introduced in Symbolic Math Toolbox before R2006a
+    Documentation for sym/gamma
+       doc sym/gamma
+</pre></div>
+</div>
+</div>
+</div>
+<p>So, in this context, <span class="math notranslate nohighlight">\(\Gamma(n+1) = n!\)</span></p>
 </section>
 <section id="exponentials">
 <h3>Exponentials<a class="headerlink" href="#exponentials" title="Link to this heading">#</a></h3>
+<section id="e-at-u-0-t">
+<h4><span class="math notranslate nohighlight">\(e^{-at}u_0(t)\)</span><a class="headerlink" href="#e-at-u-0-t" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">laplace</span><span class="p">(</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
@@ -830,6 +880,9 @@ gamma(n + 1)/s^(n + 1)
 </div>
 </div>
 </div>
+</section>
+<section id="id7">
+<h4><span class="math notranslate nohighlight">\(-e^{-at}u_0(-t)\)</span><a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">laplace</span><span class="p">(</span><span class="o">-</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">))</span>
@@ -858,6 +911,9 @@ gamma(n + 1)/s^(n + 1)
 </div>
 </div>
 </div>
+</section>
+<section id="te-at-u-0-t">
+<h4><span class="math notranslate nohighlight">\(te^{-at}u_0(t)\)</span><a class="headerlink" href="#te-at-u-0-t" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">laplace</span><span class="p">(</span><span class="n">t</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
@@ -871,74 +927,88 @@ gamma(n + 1)/s^(n + 1)
 </div>
 </div>
 </div>
+</section>
+<section id="t-ne-at-u-0-t">
+<h4><span class="math notranslate nohighlight">\(t^ne^{-at}u_0(t)\)</span><a class="headerlink" href="#t-ne-at-u-0-t" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">n</span><span class="w"> </span><span class="s">integer</span>
 <span class="n">laplace</span><span class="p">(</span><span class="n">t</span><span class="o">^</span><span class="n">n</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
-<span class="nb">help</span><span class="w"> </span><span class="n">sym</span><span class="o">/</span><span class="nb">gamma</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
 piecewise(0 &lt;= n, gamma(n + 1)/(a + s)^(n + 1))
- sym/gamma - Gamma function
-    This MATLAB function returns the gamma function of a symbolic variable
-    or symbolic expression X.
-
-    Syntax
-      gamma(X)
-
-    Input Arguments
-      X - Input
-        symbolic number | symbolic variable | symbolic expression |
-        symbolic function | symbolic vector | symbolic matrix
-
-    Examples
-      openExample(&#39;symbolic/GammaPlotTheGammaFunctionvExample&#39;)
-
-    See also beta, factorial, igamma, gammaln, nchoosek, pochhammer, psi
-
-    Introduced in Symbolic Math Toolbox before R2006a
-    Documentation for sym/gamma
-       doc sym/gamma
 </pre></div>
 </div>
 </div>
 </div>
 </section>
+</section>
 <section id="sinusoids">
 <h3>Sinusoids<a class="headerlink" href="#sinusoids" title="Link to this heading">#</a></h3>
+<section id="cos-left-omega-t-right-u-0-t">
+<h4><span class="math notranslate nohighlight">\(\cos \left(\omega t\right) u_0(t)\)</span><a class="headerlink" href="#cos-left-omega-t-right-u-0-t" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">laplace</span><span class="p">(</span><span class="nb">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
-<span class="n">laplace</span><span class="p">(</span><span class="nb">sin</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
 s/(omega^2 + s^2)
-ans =
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="sin-left-omega-t-right-u-0-t">
+<h4><span class="math notranslate nohighlight">\(\sin \left(\omega t\right) u_0(t)\)</span><a class="headerlink" href="#sin-left-omega-t-right-u-0-t" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">laplace</span><span class="p">(</span><span class="nb">sin</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
 omega/(omega^2 + s^2)
 </pre></div>
 </div>
 </div>
 </div>
 </section>
+</section>
 <section id="decaying-sinusoids">
 <h3>Decaying sinusoids<a class="headerlink" href="#decaying-sinusoids" title="Link to this heading">#</a></h3>
+<section id="e-at-cos-left-omega-t-right-u-0-t">
+<h4><span class="math notranslate nohighlight">\(e^{-at}\cos\left(\omega t\right)u_0(t)\)</span><a class="headerlink" href="#e-at-cos-left-omega-t-right-u-0-t" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">laplace</span><span class="p">(</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="nb">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
-<span class="n">laplace</span><span class="p">(</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
 (a + s)/((a + s)^2 + omega^2)
-ans =
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="e-at-sin-left-omega-t-right-u-0-t">
+<h4><span class="math notranslate nohighlight">\(e^{-at}\sin\left(\omega t\right)u_0(t)\)</span><a class="headerlink" href="#e-at-sin-left-omega-t-right-u-0-t" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">laplace</span><span class="p">(</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">u0</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
 omega/((a + s)^2 + omega^2)
 </pre></div>
 </div>
@@ -947,10 +1017,11 @@ omega/((a + s)^2 + omega^2)
 <p>lap2:homework</p>
 </section>
 </section>
+</section>
 <section id="homework">
 <h2>Homework<a class="headerlink" href="#homework" title="Link to this heading">#</a></h2>
-<p>For week 5, you should complete <a class="reference internal" href="../1/laplace.html#ex-9-1"><span class="std std-ref">Exercise 9.1</span></a> from <a class="reference internal" href="../1/laplace.html#unit4-1"><span class="std std-ref">Unit 4.1: The Laplace Transformation</span></a> and study Solved Problems 3.2—3.6 of <span id="id7">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
-<p>If you want more practice, try to solve Supplementary Problems 3.43—3.46 of <span id="id8">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>For week 5, you should complete <a class="reference internal" href="../1/laplace.html#ex-9-1"><span class="std std-ref">Exercise 9.1</span></a> from <a class="reference internal" href="../1/laplace.html#unit4-1"><span class="std std-ref">Unit 4.1: The Laplace Transformation</span></a> and study Solved Problems 3.2—3.6 of <span id="id8">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
+<p>If you want more practice, try to solve Supplementary Problems 3.43—3.46 of <span id="id9">[<a class="reference internal" href="../../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
 </section>
 <section id="summary">
 <span id="lap2-summary"></span><h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
@@ -980,14 +1051,14 @@ omega/((a + s)^2 + omega^2)
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id9">
+<div class="docutils container" id="id10">
 <div role="list" class="citation-list">
-<div class="citation" id="id19" role="doc-biblioentry">
+<div class="citation" id="id20" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Hsu20<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id4">2</a>,<a role="doc-backlink" href="#id5">3</a>,<a role="doc-backlink" href="#id7">4</a>,<a role="doc-backlink" href="#id8">5</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id4">2</a>,<a role="doc-backlink" href="#id5">3</a>,<a role="doc-backlink" href="#id8">4</a>,<a role="doc-backlink" href="#id9">5</a>)</span>
 <p>Hwei P. Hsu. <em>Schaums outlines signals and systems</em>. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: <a class="reference external" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">https://www.accessengineeringlibrary.com/content/book/9781260454246</a>.</p>
 </div>
-<div class="citation" id="id15" role="doc-biblioentry">
+<div class="citation" id="id16" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>Kar12<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id3">2</a>,<a role="doc-backlink" href="#id6">3</a>)</span>
 <p>Steven T. Karris. <em>Signals and systems with MATLAB computing and Simulink modeling</em>. Orchard Publishing, Fremont, CA., 2012. ISBN 9781934404232. Library call number: TK5102.9 K37 2012. URL: <a class="reference external" href="https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197">https://ebookcentral.proquest.com/lib/swansea-ebooks/reader.action?docID=3384197</a>.</p>
@@ -1079,9 +1150,23 @@ omega/((a + s)^2 + omega^2)
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-step-u-0-t">Unit step <span class="math notranslate nohighlight">\(u_0(t)\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-ramp-u-1-t-tu-0-t">Unit ramp <span class="math notranslate nohighlight">\(u_1(t)=tu_0(t)\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#powers-of-t">Powers of <span class="math notranslate nohighlight">\(t\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponentials">Exponentials</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinusoids">Sinusoids</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decaying-sinusoids">Decaying sinusoids</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exponentials">Exponentials</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#e-at-u-0-t"><span class="math notranslate nohighlight">\(e^{-at}u_0(t)\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><span class="math notranslate nohighlight">\(-e^{-at}u_0(-t)\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#te-at-u-0-t"><span class="math notranslate nohighlight">\(te^{-at}u_0(t)\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#t-ne-at-u-0-t"><span class="math notranslate nohighlight">\(t^ne^{-at}u_0(t)\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinusoids">Sinusoids</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cos-left-omega-t-right-u-0-t"><span class="math notranslate nohighlight">\(\cos \left(\omega t\right) u_0(t)\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sin-left-omega-t-right-u-0-t"><span class="math notranslate nohighlight">\(\sin \left(\omega t\right) u_0(t)\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decaying-sinusoids">Decaying sinusoids</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#e-at-cos-left-omega-t-right-u-0-t"><span class="math notranslate nohighlight">\(e^{-at}\cos\left(\omega t\right)u_0(t)\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#e-at-sin-left-omega-t-right-u-0-t"><span class="math notranslate nohighlight">\(e^{-at}\sin\left(\omega t\right)u_0(t)\)</span></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">Homework</a></li>

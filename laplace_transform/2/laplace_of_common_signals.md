@@ -322,6 +322,8 @@ laplace(t*u0(t))
 
 ### Powers of $t$
 
+$t^n u_0(t)$
+
 ```{code-cell}
 ---
 slideshow:
@@ -332,9 +334,29 @@ assume(n > 1)
 laplace(t^n*u0(t))
 ```
 
++++ {"slideshow": {"slide_type": "notes"}}
+
+What is the $\Gamma$ function `sym/gamma`?
+
+```{code-cell}
+---
+slideshow:
+  slide_type: notes
+---
+help sym/gamma
+```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+So, in this context, $\Gamma(n+1) = n!$
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Exponentials
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### $e^{-at}u_0(t)$
 
 ```{code-cell}
 ---
@@ -343,6 +365,10 @@ slideshow:
 ---
 laplace(exp(-a*t)*u0(t))
 ```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### $-e^{-at}u_0(-t)$
 
 ```{code-cell}
 ---
@@ -365,13 +391,19 @@ assume(s + a < 0)
 int(-exp(-a*t)*u0(-t)*exp(-s*t),t,-inf,0)
 ```
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### $te^{-at}u_0(t)$
+
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: fragment
 ---
 laplace(t*exp(-a*t)*u0(t))
 ```
+
+#### $t^ne^{-at}u_0(t)$
 
 ```{code-cell}
 ---
@@ -380,12 +412,15 @@ slideshow:
 ---
 syms n integer
 laplace(t^n*exp(-a*t)*u0(t))
-help sym/gamma
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Sinusoids
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+#### $\cos \left(\omega t\right) u_0(t)$
 
 ```{code-cell}
 ---
@@ -393,6 +428,17 @@ slideshow:
   slide_type: fragment
 ---
 laplace(cos(omega*t)*u0(t))
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### $\sin \left(\omega t\right) u_0(t)$
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
 laplace(sin(omega*t)*u0(t))
 ```
 
@@ -400,12 +446,25 @@ laplace(sin(omega*t)*u0(t))
 
 ### Decaying sinusoids
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### $e^{-at}\cos\left(\omega t\right)u_0(t)$
+
 ```{code-cell}
 ---
 slideshow:
   slide_type: fragment
 ---
 laplace(exp(-a*t)*cos(omega*t)*u0(t))
+```
+
+#### $e^{-at}\sin\left(\omega t\right)u_0(t)$
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
 laplace(exp(-a*t)*sin(omega*t)*u0(t))
 ```
 
