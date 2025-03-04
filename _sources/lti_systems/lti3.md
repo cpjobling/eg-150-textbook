@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.6
+    jupytext_version: 1.16.7
 kernelspec:
   display_name: MKernel
   language: matlab
@@ -237,7 +237,7 @@ For the answer, refer to the lecture recording or see solved problem 2.18 in {ci
 slideshow:
   slide_type: notes
 ---
-cd matlab
+cd '/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/lti_systems/matlab'
 ```
 
 ```{code-cell}

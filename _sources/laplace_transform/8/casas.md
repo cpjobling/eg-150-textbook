@@ -5,11 +5,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.15.2
+    jupytext_version: 1.16.7
 kernelspec:
-  display_name: Matlab
+  display_name: MKernel
   language: matlab
-  name: matlab
+  name: mkernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -787,6 +787,7 @@ See [example_15_1.slx](https://github.com/cpjobling/eg-150-textbook/raw/main/lap
 slideshow:
   slide_type: fragment
 ---
+cd('/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/laplace_transform/matlab')
 open example_15_1
 ```
 

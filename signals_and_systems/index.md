@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.15.2
+    jupytext_version: 1.16.7
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -16,12 +16,6 @@ kernelspec:
 
 (sig_intro)=
 # Unit 2: Signals and Systems
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems](https://cpjobling.github.io/eg-150-textbook/signals_and_systems)
-
-![QR Code](qr-code-unit2.png)
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

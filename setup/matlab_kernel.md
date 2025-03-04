@@ -5,11 +5,11 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.14.1
+      jupytext_version: 1.16.7
   kernelspec:
-    display_name: MATLAB
+    display_name: MKernel
     language: matlab
-    name: matlab
+    name: mkernel
 ---
 
 Testing the Jupyter MATLAB Kernel
@@ -56,4 +56,8 @@ disp(b)
 
 ```python
 print('Hello, world!')
+```
+
+```matlab
+
 ```

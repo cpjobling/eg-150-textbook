@@ -5,11 +5,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.15.2
+    jupytext_version: 1.16.7
 kernelspec:
-  display_name: Matlab
+  display_name: MKernel
   language: matlab
-  name: matlab
+  name: mkernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -483,8 +483,4 @@ The Bode plot is a form of frequency response diagram for which the magnitude (i
 
 ```{bibliography}
 :filter: docname in docnames
-```
-
-```{code-cell}
-
 ```

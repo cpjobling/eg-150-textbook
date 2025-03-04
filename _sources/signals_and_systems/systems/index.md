@@ -5,11 +5,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.6
+    jupytext_version: 1.16.7
 kernelspec:
-  display_name: MKernel
-  language: matlab
-  name: mkernel
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -524,7 +524,7 @@ Since the system is time-invariant, we have
 
 $$\mathbf{T}\left\{e^{s\left(t + t_0\right)}\right\} = y(t + t_0)$$
 
-for arbitrary real $t_0$. 
+for arbitrary real $t_0$.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -557,7 +557,6 @@ $$\mathbf{T}\left\{e^{st}\right\}=\lambda e^{st}$$
 where $\lambda = y(0)$.
 
 +++ {"slideshow": {"slide_type": "notes"}}
-
 
 :::{important}
 :::{note}

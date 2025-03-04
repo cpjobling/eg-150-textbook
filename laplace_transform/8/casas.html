@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -71,7 +68,6 @@
     <link rel="prev" title="Unit 4.7: Transfer Functions for Circuit Analysis" href="../7/tf_for_circuits.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -87,8 +83,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -96,6 +103,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -103,8 +111,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,8 +128,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -151,11 +158,15 @@
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -250,14 +261,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -418,16 +424,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -587,9 +601,7 @@ symbolically.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G(s) =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(s^2 + 2*s + 3)/(s^3 + 4*s^2 + 5*s + 6)
+(s^2 + 2*s + 3)/(s^3 + 4*s^2 + 5*s + 6)
 </pre></div>
 </div>
 </div>
@@ -603,15 +615,9 @@ symbolically.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Num =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>s^2 + 2*s + 3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Den =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>s^3 + 4*s^2 + 5*s + 6
+s^2 + 2*s + 3
+Den =
+s^3 + 4*s^2 + 5*s + 6
 </pre></div>
 </div>
 </div>
@@ -626,9 +632,7 @@ symbolically.</p>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nNum =
      1     2     3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nDen =
+nDen =
      1     4     5     6
 </pre></div>
 </div>
@@ -643,9 +647,7 @@ symbolically.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>s^2 + 2*s + 3
+s^2 + 2*s + 3
 </pre></div>
 </div>
 </div>
@@ -691,24 +693,12 @@ symbolically.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   (s+1) (s+3)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s (s+2) (s+4)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+ 
+   (s+1) (s+3)
+  -------------
+  s (s+2) (s+4)
+ 
+Continuous-time zero/pole/gain model.
 </pre></div>
 </div>
 </div>
@@ -723,9 +713,7 @@ symbolically.</p>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>num =
      0     1     4     3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>den =
+den =
      1     6     8     0
 </pre></div>
 </div>
@@ -740,24 +728,12 @@ symbolically.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G2 =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    s^2 + 4 s + 3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 6 s^2 + 8 s
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+ 
+    s^2 + 4 s + 3
+  -----------------
+  s^3 + 6 s^2 + 8 s
+ 
+Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
@@ -770,22 +746,12 @@ symbolically.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G2 =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    s^2 + 4 s + 3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 6 s^2 + 8 s
  
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+    s^2 + 4 s + 3
+  -----------------
+  s^3 + 6 s^2 + 8 s
+ 
+Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
@@ -801,15 +767,11 @@ symbolically.</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zeros =
     -3
     -1
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>poles =
+poles =
      0
     -4
     -2
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gain =
+gain =
      1
 </pre></div>
 </div>
@@ -824,24 +786,12 @@ symbolically.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G2 =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    s^2 + 4 s + 3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 6 s^2 + 8 s
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+ 
+    s^2 + 4 s + 3
+  -----------------
+  s^3 + 6 s^2 + 8 s
+ 
+Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
@@ -857,9 +807,7 @@ symbolically.</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zeros =
     -3
     -1
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>poles =
+poles =
      0
     -4
     -2
@@ -892,27 +840,13 @@ gain =
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G3 =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  From input &quot;Armature Voltage (V)&quot; to output &quot;Load Shaft Position (rad)&quot;:
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   (s+1) (s+3)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s (s+2) (s+4)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+ 
+  From input &quot;Armature Voltage (V)&quot; to output &quot;Load Shaft Position (rad)&quot;:
+   (s+1) (s+3)
+  -------------
+  s (s+2) (s+4)
+ 
+Continuous-time zero/pole/gain model.
 </pre></div>
 </div>
 </div>
@@ -926,7 +860,7 @@ gain =
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-  1x1 cell array
+  1×1 cell array
     {&#39;An armature voltage controlled servomechanism&#39;}
 </pre></div>
 </div>
@@ -941,12 +875,10 @@ gain =
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>in =
-  1x1 cell array
+  1×1 cell array
     {&#39;Armature Voltage (V)&#39;}
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>out =
-  1x1 cell array
+out =
+  1×1 cell array
     {&#39;Load Shaft Position (rad)&#39;}
 </pre></div>
 </div>
@@ -960,8 +892,8 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                Z: {[2x1 double]}
-                P: {[3x1 double]}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                Z: {[2×1 double]}
+                P: {[3×1 double]}
                 K: 1
     DisplayFormat: &#39;roots&#39;
          Variable: &#39;s&#39;
@@ -970,16 +902,16 @@ gain =
       OutputDelay: 0
         InputName: {&#39;Armature Voltage (V)&#39;}
         InputUnit: {&#39;&#39;}
-       InputGroup: [1x1 struct]
+       InputGroup: [1×1 struct]
        OutputName: {&#39;Load Shaft Position (rad)&#39;}
        OutputUnit: {&#39;&#39;}
-      OutputGroup: [1x1 struct]
+      OutputGroup: [1×1 struct]
             Notes: {&#39;An armature voltage controlled servomechanism&#39;}
          UserData: []
              Name: &#39;&#39;
                Ts: 0
          TimeUnit: &#39;seconds&#39;
-     SamplingGrid: [1x1 struct]
+     SamplingGrid: [1×1 struct]
 </pre></div>
 </div>
 </div>
@@ -996,24 +928,12 @@ gain =
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G4 =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   (s+3) (s+1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s (s+4) (s+2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+ 
+   (s+3) (s+1)
+  -------------
+  s (s+4) (s+2)
+ 
+Continuous-time zero/pole/gain model.
 </pre></div>
 </div>
 </div>
@@ -1027,27 +947,13 @@ gain =
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G5 =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  From input &quot;Voltage&quot; to output &quot;Angular Position&quot;:
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    s^2 + 4 s + 3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 6 s^2 + 8 s
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+ 
+  From input &quot;Voltage&quot; to output &quot;Angular Position&quot;:
+    s^2 + 4 s + 3
+  -----------------
+  s^3 + 6 s^2 + 8 s
+ 
+Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
@@ -1076,24 +982,12 @@ gain =
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gs =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      10 s + 10
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 5 s^2 + 6 s
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+ 
+      10 s + 10
+  -----------------
+  s^3 + 5 s^2 + 6 s
+ 
+Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
@@ -1108,15 +1002,11 @@ gain =
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zeros =
     -1
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>poles =
+poles =
          0
    -3.0000
    -2.0000
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>K =
+K =
     10
 </pre></div>
 </div>
@@ -1134,24 +1024,12 @@ gain =
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gp =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 3 s^2 + 12 s + 30
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     s^3 + 5 s^2 + 6 s
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+ 
+  s^3 + 3 s^2 + 12 s + 30
+  -----------------------
+     s^3 + 5 s^2 + 6 s
+ 
+Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
@@ -1188,27 +1066,13 @@ gain =
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gc =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  From input &quot;torque&quot; to output &quot;velocity&quot;:
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.18182 (s+0.2192) (s+2.281) (s+10)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------------------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   (s+3.419) (s^2 + 1.763s + 1.064)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+ 
+  From input &quot;torque&quot; to output &quot;velocity&quot;:
+  0.18182 (s+0.2192) (s+2.281) (s+10)
+  -----------------------------------
+   (s+3.419) (s^2 + 1.763s + 1.064)
+ 
+Continuous-time zero/pole/gain model.
 </pre></div>
 </div>
 </div>
@@ -1229,7 +1093,7 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/6cd173cf12ea69f93eaf9a68aa26a69ba3f50bc16597a88964bbc26dfcc65164.png" src="../../_images/6cd173cf12ea69f93eaf9a68aa26a69ba3f50bc16597a88964bbc26dfcc65164.png" />
+<img alt="../../_images/f6827fe28b98c6dbd9675e0beae2caa60e74cedd2e379c4803011f0f7d2b2260.png" src="../../_images/f6827fe28b98c6dbd9675e0beae2caa60e74cedd2e379c4803011f0f7d2b2260.png" />
 </div>
 </div>
 </section>
@@ -1242,7 +1106,7 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2ba7a0ec1115b32eaecc0619308bbb0a98d5ee59d980bd3ce7e2778ea139500a.png" src="../../_images/2ba7a0ec1115b32eaecc0619308bbb0a98d5ee59d980bd3ce7e2778ea139500a.png" />
+<img alt="../../_images/13810469056cc7a1447decfa45204ab82e030d621de4bcbb7b903ff3f4ea1f5c.png" src="../../_images/13810469056cc7a1447decfa45204ab82e030d621de4bcbb7b903ff3f4ea1f5c.png" />
 </div>
 </div>
 </section>
@@ -1255,7 +1119,7 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e5d493477988dc3568049494cfd48318123d71bde4cb6f34391281090fc9914d.png" src="../../_images/e5d493477988dc3568049494cfd48318123d71bde4cb6f34391281090fc9914d.png" />
+<img alt="../../_images/88c3d30f334f71e71549b979a952e33c9b03c0ea5789e49e026ffe75ba99b08d.png" src="../../_images/88c3d30f334f71e71549b979a952e33c9b03c0ea5789e49e026ffe75ba99b08d.png" />
 </div>
 </div>
 </section>
@@ -1268,7 +1132,7 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/1333edfa62978863f3ba4bac1fab3abe7ab0283457aef053e2a69adaee9e3450.png" src="../../_images/1333edfa62978863f3ba4bac1fab3abe7ab0283457aef053e2a69adaee9e3450.png" />
+<img alt="../../_images/e882884a3efb9d16c15595d1d7c9e1e4fa66f27a9be6a90af72d744760dd0bed.png" src="../../_images/e882884a3efb9d16c15595d1d7c9e1e4fa66f27a9be6a90af72d744760dd0bed.png" />
 </div>
 </div>
 </section>
@@ -1281,7 +1145,7 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/90858cd211959e8424daa6b0fd7fe1703cfbd9d559984504426bd771b31994ba.png" src="../../_images/90858cd211959e8424daa6b0fd7fe1703cfbd9d559984504426bd771b31994ba.png" />
+<img alt="../../_images/e020abafd314d8a2566a55f1c4b4b4f06624c826c6c319cc6e60f9b62e7a0c4f.png" src="../../_images/e020abafd314d8a2566a55f1c4b4b4f06624c826c6c319cc6e60f9b62e7a0c4f.png" />
 </div>
 </div>
 </section>
@@ -1294,7 +1158,7 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/59bf228cec44cca6d99291e20576c6ee14334b7f1c495f7830ab880f07850656.png" src="../../_images/59bf228cec44cca6d99291e20576c6ee14334b7f1c495f7830ab880f07850656.png" />
+<img alt="../../_images/02b0414e5599fadb3d5bb3d0d67ccfceb9367054c6d46e08ac02f9a581fb77e0.png" src="../../_images/02b0414e5599fadb3d5bb3d0d67ccfceb9367054c6d46e08ac02f9a581fb77e0.png" />
 </div>
 </div>
 <p>MATLAB also provides two interactive graphical tools that work with LTI system objects</p>
@@ -1333,9 +1197,7 @@ gain =
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>num =
      0     0     5    10
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>den =
+den =
      1    13    30     0
 </pre></div>
 </div>
@@ -1352,15 +1214,11 @@ gain =
    -0.5714
     0.2381
     0.3333
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p =
+p =
    -10
     -3
      0
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>k =
+k =
      []
 </pre></div>
 </div>
@@ -1386,25 +1244,15 @@ gain =
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>newC =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     5 s + 10
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  ---------------
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + 13 s + 30
  
+     5 s + 10
+  ---------------
+  s^2 + 13 s + 30
+ 
+Continuous-time transfer function.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
-</pre></div>
-</div>
-<img alt="../../_images/dd3cb3f85978f607ff782835305dc2a70db89f3506f3c6d80559b987b3908dce.png" src="../../_images/dd3cb3f85978f607ff782835305dc2a70db89f3506f3c6d80559b987b3908dce.png" />
+<img alt="../../_images/01d005a1d116c39c935622c8f99ab4bdce96cb1cf11c36f65c6cab422716bbf0.png" src="../../_images/01d005a1d116c39c935622c8f99ab4bdce96cb1cf11c36f65c6cab422716bbf0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1416,7 +1264,7 @@ gain =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d922e42257d739b79ee9ba24ff4988dc8fee96e023588e95dfff64c6e35d8a05.png" src="../../_images/d922e42257d739b79ee9ba24ff4988dc8fee96e023588e95dfff64c6e35d8a05.png" />
+<img alt="../../_images/abe74656f82eb16c2af8f2e9cf3dd88e9f6d09395cf464e65d3f5b8d6e4f5261.png" src="../../_images/abe74656f82eb16c2af8f2e9cf3dd88e9f6d09395cf464e65d3f5b8d6e4f5261.png" />
 </div>
 </div>
 <p>Completing the problem using the Symbolic toolbox is left as an exercise for the reader.</p>
@@ -1473,20 +1321,12 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       -1
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------
+ 
+       -1
+  -------------
   s^2 + 3 s + 1
  
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
@@ -1499,7 +1339,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/dd4c3ab775ed35212637735cef6b18891e0c3124080d7f45f5c78871a0ee19b6.png" src="../../_images/dd4c3ab775ed35212637735cef6b18891e0c3124080d7f45f5c78871a0ee19b6.png" />
+<img alt="../../_images/a1f86d1ea848138a75a7a26bfdd2b75513fe55a74ec631417a1f6f7111d99fa0.png" src="../../_images/a1f86d1ea848138a75a7a26bfdd2b75513fe55a74ec631417a1f6f7111d99fa0.png" />
 </div>
 </div>
 </section>
@@ -1512,7 +1352,8 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <p>See <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/example_15_1.slx">example_15_1.slx</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="w"> </span><span class="n">example_15_1</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="p">(</span><span class="s">&#39;/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/laplace_transform/matlab&#39;</span><span class="p">)</span>
+<span class="nb">open</span><span class="w"> </span><span class="n">example_15_1</span>
 </pre></div>
 </div>
 </div>
@@ -1528,7 +1369,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e37ead53085a96698c5b19a60efdce9185e553712597b63f0649a22bdc6ab4b5.png" src="../../_images/e37ead53085a96698c5b19a60efdce9185e553712597b63f0649a22bdc6ab4b5.png" />
+<img alt="../../_images/dabc6789178a086e168afd496742d1ca539e98e74ee33ee2cc6556acd00de277.png" src="../../_images/dabc6789178a086e168afd496742d1ca539e98e74ee33ee2cc6556acd00de277.png" />
 </div>
 </div>
 <div class="admonition note">
@@ -1541,7 +1382,8 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <span id="ex15-2"></span><h3>Exercise 15.2: Periodic Excitation<a class="headerlink" href="#exercise-15-2-periodic-excitation" title="Link to this heading">#</a></h3>
 <p>Consider the RC circuit shown in <a class="reference internal" href="#fig-ex15-2"><span class="std std-numref">Fig. 71</span></a>(b). The circuit is subjected to the periodic signal <span class="math notranslate nohighlight">\(x(t) = v_1(t)\)</span> shown in <a class="reference internal" href="#fig-ex15-2"><span class="std std-numref">Fig. 71</span></a>(a).</p>
 <figure class="align-default" id="fig-ex15-2">
-<a class="reference internal image-reference" href="../../_images/eg-152-3.1.png"><img alt="Circuit for Investigating Recurrent Boundary Conditions." src="../../_images/eg-152-3.1.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../../_images/eg-152-3.1.png"><img alt="Circuit for Investigating Recurrent Boundary Conditions." src="../../_images/eg-152-3.1.png" style="width: 80%;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 71 </span><span class="caption-text">Circuit for Investigating Recurrent Boundary Conditions (Figure 3.0 of <span id="id2">[<a class="reference internal" href="../../zbib.html#id16" title="Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. EG-152 Analogue Design Laboratory. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.">Evans <em>et al.</em>, 2016</a>]</span>)</span><a class="headerlink" href="#fig-ex15-2" title="Link to this image">#</a></p>
 </figcaption>
@@ -1558,7 +1400,8 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <div class="math notranslate nohighlight">
 \[v_2(t) = -R i(t) = -RC \frac{d}{dt}v_1(t)\]</div>
 <figure class="align-default" id="fig-15-3">
-<a class="reference internal image-reference" href="../../_images/eg-152-3.4.png"><img alt="Schematic of Operational Differentiator." src="../../_images/eg-152-3.4.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../../_images/eg-152-3.4.png"><img alt="Schematic of Operational Differentiator." src="../../_images/eg-152-3.4.png" style="width: 60%;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 72 </span><span class="caption-text">Schematic of Operational Differentiator (Figure 3.4 of <span id="id5">[<a class="reference internal" href="../../zbib.html#id16" title="Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. EG-152 Analogue Design Laboratory. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.">Evans <em>et al.</em>, 2016</a>]</span>)</span><a class="headerlink" href="#fig-15-3" title="Link to this image">#</a></p>
 </figcaption>
@@ -1573,7 +1416,8 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <div class="math notranslate nohighlight">
 \[v_2(t) = -\frac{1}{RC} \int_0^t v_1(\tau)\, d\tau.\]</div>
 <figure class="align-default" id="fig-15-4">
-<a class="reference internal image-reference" href="../../_images/eg-152-3.7.png"><img alt="Schematic of Operational Integrator." src="../../_images/eg-152-3.7.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../../_images/eg-152-3.7.png"><img alt="Schematic of Operational Integrator." src="../../_images/eg-152-3.7.png" style="width: 60%;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 73 </span><span class="caption-text">Schematic of Operational Integrator (Figure 3.7 of <span id="id8">[<a class="reference internal" href="../../zbib.html#id16" title="Alun Evans, Timothy Davies, Stephen Wilks, and Vincent Teng. EG-152 Analogue Design Laboratory. Swansea University, Swansea, UK, 2016. Accessed: 16 March 2023.">Evans <em>et al.</em>, 2016</a>]</span>)</span><a class="headerlink" href="#fig-15-4" title="Link to this image">#</a></p>
 </figcaption>
@@ -1770,16 +1614,16 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "matlab"
+            mode: "mkernel"
         },
         kernelOptions: {
-            name: "matlab",
+            name: "mkernel",
             path: "./laplace_transform/8"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'matlab'</script>
+    <script>kernelName = 'mkernel'</script>
 
                 </article>
               
@@ -1816,8 +1660,7 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1934,8 +1777,8 @@ for
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

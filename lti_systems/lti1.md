@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.6
+    jupytext_version: 1.16.7
 kernelspec:
   display_name: MKernel
   language: matlab
@@ -183,9 +183,7 @@ We will then work through the examples again in the examples class.
 slideshow:
   slide_type: fragment
 ---
-%cd matlab/convolution_demo
-%dir
-convolutiondemo
+cd matlab/convolution_demo
 ```
 
 ```{code-cell}
@@ -550,9 +548,9 @@ slideshow:
 x(t) = heaviside(t)-heaviside(t-3);
 h(t) = heaviside(t)-heaviside(t-2);
 subplot(121)
-fplot(x(t),[-3,6]),grid,ylim([0,3]),ylabel('x(t)'),xlabel('t')
+fplot(x(t),[-3,6]),grid,ylim([0,1.5]),ylabel('x(t)'),xlabel('t')
 subplot(122)
-fplot(h(t),[-3,6]),grid,ylim([0,3]),ylabel('h(t)'),xlabel('t')
+fplot(h(t),[-3,6]),grid,ylim([0,1.5]),ylabel('h(t)'),xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}

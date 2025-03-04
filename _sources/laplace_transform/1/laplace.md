@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.6
+    jupytext_version: 1.16.7
 kernelspec:
   display_name: MKernel
   language: matlab
@@ -132,7 +132,7 @@ slideshow:
 ---
 % set up
 format compact
-setappdata(0, "MKernel_plot_format", 'svg')
+%setappdata(0, "MKernel_plot_format", 'svg')
 ```
 
 ```{code-cell}

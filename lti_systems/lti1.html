@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -71,7 +68,6 @@
     <link rel="prev" title="Unit 3: Linear Time-Invariant Systems" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -87,8 +83,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -96,6 +103,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -103,8 +111,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,8 +128,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -151,11 +158,15 @@
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -250,14 +261,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -418,16 +424,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -582,7 +596,8 @@
 <p><em>the output of any continuous-time LTI system is the convolution of the input <span class="math notranslate nohighlight">\(x(t)\)</span> with the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> of the system</em>.</p>
 <p><a class="reference internal" href="#fig-ct-lti-system"><span class="std std-numref">Fig. 33</span></a> illustrates the definition of the impulse response <span class="math notranslate nohighlight">\(h(t)\)</span> and the convolution integral.</p>
 <figure class="align-default" id="fig-ct-lti-system">
-<a class="reference internal image-reference" href="../_images/ct_lti_system.png"><img alt="Continuous-time LTI system" src="../_images/ct_lti_system.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../_images/ct_lti_system.png"><img alt="Continuous-time LTI system" src="../_images/ct_lti_system.png" style="width: 60%;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 33 </span><span class="caption-text">Continuous-time LTI system</span><a class="headerlink" href="#fig-ct-lti-system" title="Link to this image">#</a></p>
 </figcaption>
@@ -622,14 +637,7 @@
 <p>We will then work through the examples again in the examples class.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%cd matlab/convolution_demo</span>
-<span class="c">%dir</span>
-<span class="n">convolutiondemo</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unrecognized function or variable &#39;convolutiondemo&#39;.
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="n">matlab</span><span class="o">/</span><span class="n">convolution_demo</span>
 </pre></div>
 </div>
 </div>
@@ -641,7 +649,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unrecognized function or variable &#39;convolutiondemo&#39;.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
+&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 398)
+In convolutiondemo&gt;gui_mainfcn (line 1181)
+In convolutiondemo (line 44)
 </pre></div>
 </div>
 </div>
@@ -752,7 +763,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0c4ebe88bef7fd84a97dac1f3552e711cabfbbbff90cf0087c6313ef2d2f8828.png" src="../_images/0c4ebe88bef7fd84a97dac1f3552e711cabfbbbff90cf0087c6313ef2d2f8828.png" />
+<img alt="../_images/6c04b365d5a4e70db36ded815fe3f819af6b07d81585f4f4b1ef2cee8ebd2217.png" src="../_images/6c04b365d5a4e70db36ded815fe3f819af6b07d81585f4f4b1ef2cee8ebd2217.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the MATLAB function <code class="docutils literal notranslate"><span class="pre">int</span></code> to compute the convolution integral symbolically.</p>
@@ -789,7 +800,7 @@ ya(t) =
  
 </pre></div>
 </div>
-<img alt="../_images/9580d436913effd5b87cfa242754b21087f973bc577da576441411b801ff8584.png" src="../_images/9580d436913effd5b87cfa242754b21087f973bc577da576441411b801ff8584.png" />
+<img alt="../_images/0a99177a5c4d764c8fe847d8741b702f5bd42c9a533f313046a78486cfd97a5d.png" src="../_images/0a99177a5c4d764c8fe847d8741b702f5bd42c9a533f313046a78486cfd97a5d.png" />
 </div>
 </div>
 </section>
@@ -814,7 +825,7 @@ ya(t) =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/cf3e1e725427474af0c186a611522fa13286332cfa716a52cacd6aa3d919e874.png" src="../_images/cf3e1e725427474af0c186a611522fa13286332cfa716a52cacd6aa3d919e874.png" />
+<img alt="../_images/5fe35a650414df41d099bb179765960de6130dcaba8596bec3d383b15ad4ed15.png" src="../_images/5fe35a650414df41d099bb179765960de6130dcaba8596bec3d383b15ad4ed15.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -850,7 +861,7 @@ yb(t) =
  
 </pre></div>
 </div>
-<img alt="../_images/8007462e74032f8cc1ee846f19d21e155bf428eba0e35abf72725ad1e4efab65.png" src="../_images/8007462e74032f8cc1ee846f19d21e155bf428eba0e35abf72725ad1e4efab65.png" />
+<img alt="../_images/9aa17f7976bd1d7c55d7fc5dfe2e84bd73e9a382abc1910b1e70d3b1986a6c15.png" src="../_images/9aa17f7976bd1d7c55d7fc5dfe2e84bd73e9a382abc1910b1e70d3b1986a6c15.png" />
 </div>
 </div>
 <p>Go back to <a class="reference internal" href="#step-response"><span class="std std-ref">F. Step Response</span></a></p>
@@ -887,7 +898,7 @@ yb(t) =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/85d8e6ccf2a58756bc0fd3daac667066047bb3e7b49647bb1b8e07276043ae1d.png" src="../_images/85d8e6ccf2a58756bc0fd3daac667066047bb3e7b49647bb1b8e07276043ae1d.png" />
+<img alt="../_images/dd01839a469955db808f9fa49f88e61f984e0f1be36161ccc4d00bb7ad587bed.png" src="../_images/dd01839a469955db808f9fa49f88e61f984e0f1be36161ccc4d00bb7ad587bed.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the convolution integral</p>
@@ -915,7 +926,7 @@ piecewise(0 &lt;= t, exp(-t)/2, t &lt;= 0, exp(t)/2)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/59d5cf4485f0680b65f78ef54ce8a907d558e367189f7061455fc08181ca54c6.png" src="../_images/59d5cf4485f0680b65f78ef54ce8a907d558e367189f7061455fc08181ca54c6.png" />
+<img alt="../_images/a1dc28418cce4966a75d1fb3e97edc2cf15e3e19678e4c673c0a5f1552a60339.png" src="../_images/a1dc28418cce4966a75d1fb3e97edc2cf15e3e19678e4c673c0a5f1552a60339.png" />
 </div>
 </div>
 </section>
@@ -925,7 +936,8 @@ piecewise(0 &lt;= t, exp(-t)/2, t &lt;= 0, exp(t)/2)
 <span id="ex5-6"></span><h3>Exercise 5.6<a class="headerlink" href="#exercise-5-6" title="Link to this heading">#</a></h3>
 <p>Evaluate <span class="math notranslate nohighlight">\(y(t) = x(t) * h(t)\)</span>, where <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(h(t)\)</span> are shown in <a class="reference internal" href="#fig-ex-5-6"><span class="std std-numref">Fig. 34</span></a>, by an alalytical technique, and (b) by a graphical method.</p>
 <figure class="align-default" id="fig-ex-5-6">
-<a class="reference internal image-reference" href="../_images/ex5_6.png"><img alt="Signal and system for example 5.6" src="../_images/ex5_6.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../_images/ex5_6.png"><img alt="Signal and system for example 5.6" src="../_images/ex5_6.png" style="width: 60%;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig. 34 </span><span class="caption-text">Signal and system for example 5.6</span><a class="headerlink" href="#fig-ex-5-6" title="Link to this image">#</a></p>
 </figcaption>
@@ -945,14 +957,14 @@ piecewise(0 &lt;= t, exp(-t)/2, t &lt;= 0, exp(t)/2)
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">3</span><span class="p">);</span>
 <span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">heaviside</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span>
 <span class="nb">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.5</span><span class="p">]),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;x(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
 <span class="nb">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
-<span class="nb">fplot</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;h(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
+<span class="nb">fplot</span><span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.5</span><span class="p">]),</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;h(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e90b9867b5c294f4d5b40e694140f50b5e521243d83009751bad8f06719ca327.png" src="../_images/e90b9867b5c294f4d5b40e694140f50b5e521243d83009751bad8f06719ca327.png" />
+<img alt="../_images/ae1fd66eb6ece272ce2f260122dd0256ce9294cbf1bf6f742ed4e88f3964eaad.png" src="../_images/ae1fd66eb6ece272ce2f260122dd0256ce9294cbf1bf6f742ed4e88f3964eaad.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span></p>
@@ -981,7 +993,7 @@ heaviside(t - 5)*(t - 5) - heaviside(t - 3)*(t - 3) - heaviside(t - 2)*(t - 2) +
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/72bcf2151735b47ada3abce5132d48b7ac430a1e1eb37bc2c100056d9541a5a5.png" src="../_images/72bcf2151735b47ada3abce5132d48b7ac430a1e1eb37bc2c100056d9541a5a5.png" />
+<img alt="../_images/0e704c230bad044afa15afa0456758674cab40110ac5335b4237b2cbc109b3f9.png" src="../_images/0e704c230bad044afa15afa0456758674cab40110ac5335b4237b2cbc109b3f9.png" />
 </div>
 </div>
 </section>
@@ -1101,8 +1113,7 @@ heaviside(t - 5)*(t - 5) - heaviside(t - 3)*(t - 3) - heaviside(t - 2)*(t - 2) +
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1230,8 +1241,8 @@ for
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
