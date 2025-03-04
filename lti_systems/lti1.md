@@ -5,11 +5,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.6
+    jupytext_version: 1.16.7
 kernelspec:
-  display_name: MATLAB Kernel
+  display_name: MKernel
   language: matlab
-  name: jupyter_matlab_kernel
+  name: mkernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -183,9 +183,7 @@ We will then work through the examples again in the examples class.
 slideshow:
   slide_type: fragment
 ---
-cd /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/lti_systems/matlab/convolution_demo
-pwd
-dir
+cd matlab/convolution_demo
 ```
 
 ```{code-cell}

@@ -5,16 +5,17 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.15.2
+    jupytext_version: 1.16.7
 kernelspec:
-  display_name: Matlab
+  display_name: MKernel
   language: matlab
-  name: matlab
+  name: mkernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (unit5.2)=
+
 # Unit 5.2: More on the Qualitative and Quantitative Response of First- and Second-Order Poles
 
 +++ {"slideshow": {"slide_type": "notes"}}
@@ -41,15 +42,16 @@ You can watch the video on YouTube here:
 
 ## Agenda
 
-* {ref}`unit.5.2.1`
-* {ref}`unit.5.2.2`
-* {ref}`unit.5.2.3`
-* {ref}`unit.5.2.4`
-* {ref}`examples16`
+- {ref}`unit.5.2.1`
+- {ref}`unit.5.2.2`
+- {ref}`unit.5.2.3`
+- {ref}`unit.5.2.4`
+- {ref}`examples16`
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (unit.5.2.1)=
+
 ## Quantitative behaviour of real poles
 
 In {ref}`unit5.1.2` we stated that a response term that corresponds to a real pole $s = \sigma$ will result in a growing expontial if $\sigma > 0$ and a decaying exponential if $\sigma < 0$.
@@ -68,7 +70,7 @@ where $r_\sigma$ is the residue of the pole.
 
 The corresponding term in $f(t)$ will be $r_\sigma e^{\sigma t}$.
 
-This will be a growing exponential for which the *doubling time* is a useful measure of the growth rate.
+This will be a growing exponential for which the _doubling time_ is a useful measure of the growth rate.
 
 Given that at time $t=0$, $r_\sigma e^{0} = r_\sigma$, the doubling time $T$ is the time for which
 
@@ -84,6 +86,7 @@ $$
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (unit5.2:ex7)=
+
 ### Example 7
 
 Plot the response of the pole
@@ -114,7 +117,7 @@ plot(t,10*exp(sigma*t)),ylim([0,50]),grid
 % Plot and label lines: first doubling
 line([T,T],[0,20],'Color','r','LineStyle','--')
 line([0,T],[20,20],'Color','r','LineStyle','--')
-hold on 
+hold on
 plot(T,20,'o')
 text(3,22,'First doubling')
 % Plot and label lines: second doubling
@@ -174,6 +177,7 @@ $$
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (unit5.2:ex7)=
+
 ### Example 8
 
 The current in the RC circuit shown in [Fig. 41](https://cpjobling.github.io/eg-150-textbook/laplace_transform/index.html#rc-circuit-l) has the transform
@@ -232,7 +236,7 @@ plot(t,i0*exp(sigma*t)),grid
 line([tau,tau],[0,i0*exp(-1)],'Color','r','LineStyle','--')
 line([0,tau],[i0*exp(-1),i0*exp(-1)],'Color','r','LineStyle','--')
 text(tau+1,i0*exp(-1),'Time constant: 37% of i0 in 10 seconds')
-hold on 
+hold on
 plot(tau,i0*exp(-1),'o')
 % Plot and label lines: 1% point
 line([4.6*tau,4.6*tau],[0,0.01*i0],'Color','g','LineStyle','--')
@@ -252,6 +256,7 @@ The MATLAB code to reproduce this result is given in [example8.mlx](matlab/examp
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (unit.5.2.2)=
+
 ## Natural frequency
 
 The locations of the poles in the $s$-plane determine the natural oscillation frequencies present in the system.
@@ -263,15 +268,15 @@ Consider a pole in the complex plane illustrated in {numref}`fig:unit5.2:1`
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 :::{figure-md} fig:unit5.2:1
-<img src="pictures/complex_pole.png" alt="Phase phi and magnitude r of pole p shown in the complex plane" width="50%" />  
+<img src="pictures/complex_pole.png" alt="Phase phi and magnitude r of pole p shown in the complex plane" width="50%" />
 
 Phase $\phi$ and magnitude $r$ of pole $p$ shown in the complex plane
 :::
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-* The natural (undamped) frequency (in rad/s) contributed by a pole $p$ is the pole magnitude, $r=\left|p\right|$.
-* The phase, $\phi=\arg p$, determines the relative strength of the oscillatory component.
+- The natural (undamped) frequency (in rad/s) contributed by a pole $p$ is the pole magnitude, $r=\left|p\right|$.
+- The phase, $\phi=\arg p$, determines the relative strength of the oscillatory component.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -279,13 +284,13 @@ Phase $\phi$ and magnitude $r$ of pole $p$ shown in the complex plane
 
 Second-order systems with a pair of conjugate poles and no zeros are useful for illustrating the natural frequency response analytically. It is helpful to write this type of system in the form:
 
-$$G(s) = \frac{K}{s^2 + 2\zeta\omega_n s + \omega_n^2 }$$ 
+$$G(s) = \frac{K}{s^2 + 2\zeta\omega_n s + \omega_n^2 }$$
 
-where 
+where
 
-* $K$ is the gain coefficient
-* $\zeta$ is the damping ratio already introduced in {ref}`unit5.1.4`
-* and $\omega_n$ is the (undamped) natural frequency.
+- $K$ is the gain coefficient
+- $\zeta$ is the damping ratio already introduced in {ref}`unit5.1.4`
+- and $\omega_n$ is the (undamped) natural frequency.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -302,7 +307,7 @@ $$p_{1,2} = -\zeta\omega_n \pm \omega_n \sqrt{\zeta^2 - 1}$$
 +++ {"slideshow": {"slide_type": "fragment"}}
 
 For simplicity, consider $\zeta \in [0,1)$. In this case, the poles are
-    
+
 $$p_{1,2} = -\zeta\omega_n \pm j \omega_n \sqrt{1 - \zeta^2}$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -320,9 +325,9 @@ Using the definitions illustrated in [Fig. 76](https://cpjobling.github.io/eg-15
 $$
 \begin{array}{rl} |p|
  &= \sqrt{\sigma^2 + \omega^2} \\
- &= \sqrt{ (-\zeta \omega_n)^2 + ( \pm \omega_n \sqrt{1-\zeta^2})^2 } \\ 
- &= \sqrt{ \zeta^2 \omega_n^2 + \omega_n^2 (1-\zeta^2) } \\ 
- &= |\omega_n|\ 
+ &= \sqrt{ (-\zeta \omega_n)^2 + ( \pm \omega_n \sqrt{1-\zeta^2})^2 } \\
+ &= \sqrt{ \zeta^2 \omega_n^2 + \omega_n^2 (1-\zeta^2) } \\
+ &= |\omega_n|\
 \end{array}
 $$
 
@@ -350,10 +355,10 @@ The gain coefficient $K$ affects the magnitude of the response, not the time-dep
 
 ### Natural response
 
-The impulse response of a system $H(s)$ is also called the *natural response*. The natural response $y(t)$ is computed by taking the inverse Laplace transform of
+The impulse response of a system $H(s)$ is also called the _natural response_. The natural response $y(t)$ is computed by taking the inverse Laplace transform of
 
 $$\frac{Y(s)}{X(s)} = \frac{Y(s)}{1} = \frac{ K }{s^2 + 2 \zeta \omega_n s  + \omega_n^2}$$
-        
+
 because the impulse $x(t)=\delta(t)$ has a Laplace transform $1$. You can find the response's analytic form by referring to a table or using the MATLAB [ilaplace](https://uk.mathworks.com/help/symbolic/sym.ilaplace.html) function.
 
 ```{code-cell}
@@ -361,7 +366,7 @@ because the impulse $x(t)=\delta(t)$ has a Laplace transform $1$. You can find t
 slideshow:
   slide_type: subslide
 ---
-syms s t zeta omega_n K Y(s) y(t) 
+syms s t zeta omega_n K Y(s) y(t)
 assume(t > 0)
 Y(s) = K/(s^2 + 2*zeta*omega_n*s + omega_n^2)
 ```
@@ -383,26 +388,29 @@ $$y(t) = \frac{K\,{\mathrm{e}}^{-\zeta\, \omega_n \,t } \,\sin \left(\omega_n \,
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 Notice that the impulse response is a product of an exponential and sine function. From these functions observe that:
-* The sine function frequency (in rads/s) is $\omega_n \,\sqrt{1-\zeta^2 }$. If the damping $\zeta=0$, then the frequency is $\omega_n$. This is the reason $\omega_n$  is often referred to as the *undamped natural frequency*.
-* The rate of decay of the exponential damping function is $\zeta\omega_n$. 
-* The gain parameter $K$ only contributes as a constant multiplier to the magnitude of the response.
+
+- The sine function frequency (in rads/s) is $\omega_n \,\sqrt{1-\zeta^2 }$. If the damping $\zeta=0$, then the frequency is $\omega_n$. This is the reason $\omega_n$ is often referred to as the _undamped natural frequency_.
+- The rate of decay of the exponential damping function is $\zeta\omega_n$.
+- The gain parameter $K$ only contributes as a constant multiplier to the magnitude of the response.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (unit.5.2.3)=
+
 ## Step-response of a second-order system
 
 The step response of a system $H(s)$ is often computed. The step response $y_s(t)$ is determined by taking the inverse Laplace transform of
 
 $$Y(s) = \frac{1}{s} \left(\frac{ \omega_n^2 }{s^2 + 2 \zeta \omega_n s  + \omega_n^2}\right)$$
-        
+
 because the step function $x(t)=u_0(t)$ has a Laplace transform $1/s$. You can find the response's analytic form by taking partial fraction expansion of $Y(s)$ and then referring to a table of Laplace transforms.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 Here we will state, without proof, that the step response will be
 
-$$y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\omega}\sin\left(\omega t\right)
+$$
+y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\omega}\sin\left(\omega t\right)
 \right)\right)u_o(t)$$ (eq:unit5.1:2)
 
 where :
@@ -468,7 +476,7 @@ $$Y_s(s) = \frac{100}{s\,{\left(s^2 +10\,s+100\right)}}$$ (eq:unit5.1:3)
 slideshow:
   slide_type: fragment
 ---
-% step response 
+% step response
 y_s(t) = ilaplace(Y_s(s));
 ```
 
@@ -945,7 +953,7 @@ Diagram of a spring-mass-damper system
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 Consider a mass-spring-damper that
-* is dynamically forced by an arbitrary function 
+* is dynamically forced by an arbitrary function
 * has zero initial conditions: $x(0)=0$ and $x'(0)=0$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
@@ -956,8 +964,8 @@ $$G(s) = \frac{X(s)}{U(s)} = \frac{1}{ms^2 + cs + k} $$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(a) Write the mass-spring-damper transfer function in the form 
-         
+(a) Write the mass-spring-damper transfer function in the form
+
 $$G(s) = \frac{ K }{s^2 + 2 \zeta \omega_n s  + \omega_n^2}$$
 
 and solve for the expressions of the gain $K$, damping ratio $\zeta$, and natural frequency $\omega_n$ in terms of the mass-spring-damper parameters. Write your answers using the symbolic variables $c$, $m$, and $k$.
@@ -1041,7 +1049,3 @@ If you have access to MATLAB (desktop of online), you can install the MATLAB cur
 ```{bibliography}
 :filter: docname in docnames
 ```
-
-+++ {"slideshow": {"slide_type": "notes"}}
-
-## Footnotes

@@ -5,11 +5,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.6
+    jupytext_version: 1.16.7
 kernelspec:
-  display_name: MATLAB Kernel
+  display_name: MKernel
   language: matlab
-  name: jupyter_matlab_kernel
+  name: mkernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -31,10 +31,6 @@ Additional information has been adapted from [Section 1.4]() of {cite}`schaum`.
 Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals)
 
 ![QR Code](pictures/qrcode_unit2.3.png)
-
-```{code-cell}
-
-```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -104,6 +100,7 @@ In MATLAB, we use the `heaviside` function (named after [Oliver Heaviside](https
 slideshow:
   slide_type: fragment
 ---
+cd('/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/signals_and_systems/elementary_signals')
 edit plot_heaviside
 ```
 
@@ -144,7 +141,7 @@ slideshow:
 syms t;
 u0(t) = heaviside(t); % rename heaviside function for ease of use
 A = 2; % so signal can be plotted
-fplot(A*u0(t),[-1,1],'LineWidth',2),grid,title('Amplitude scaling $$Au_0(t)$$','interpreter','latex')
+fplot(A*u0(t),[-1,1],'LineWidth',2),ylim([-0.2,2.2]),grid,title('Amplitude scaling $$Au_0(t)$$','interpreter','latex')
 ```
 
 +++ {"slideshow": {"slide_type": "notes"}}
@@ -156,7 +153,7 @@ Note that the signal is scaled in the $y$ direction.
 slideshow:
   slide_type: subslide
 ---
-fplot(-A*u0(t),[-1,1],'LineWidth',2),grid,...
+fplot(-A*u0(t),[-1,1],'LineWidth',2),ylim([-2.2,0.2]),grid,...
 title('Amplitude scaling and mirroring $$-Au_0(t)$$','interpreter','latex'),...
 xlabel('t')
 ```
@@ -176,7 +173,7 @@ Sketch $u_0(-t)$
 slideshow:
   slide_type: subslide
 ---
-fplot(A*u0(-t),[-1,1],'LineWidth',2),grid,title('Time reversal $$Au_0(-t)$$','interpreter','latex'),xlabel('t')
+fplot(A*u0(-t),[-1,1],'LineWidth',2),ylim([-0.2,2.2]),grid,title('Time reversal $$Au_0(-t)$$','interpreter','latex'),xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "notes"}}
@@ -195,7 +192,7 @@ slideshow:
   slide_type: subslide
 ---
 T = 1; % again to make the signal plottable.
-fplot(u0(t - T),[-1,2],'LineWidth',2),grid,title('Time delay $$u_0(t - T)$$','interpreter','latex'),xlabel('t')
+fplot(u0(t - T),[-1,2],'LineWidth',2),ylim([-0.2,1.2]),grid,title('Time delay $$u_0(t - T)$$','interpreter','latex'),xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "notes"}}
@@ -207,7 +204,7 @@ This is a *time delay* ... note for $u_0(t - T)$ the step change occurs T second
 slideshow:
   slide_type: subslide
 ---
-fplot(u0(t + T),[-2,1],'LineWidth',2),grid,title('Time advance $$u_0(t + T)$$','interpreter','latex'),xlabel('t')
+fplot(u0(t + T),[-2,1],'LineWidth',2),ylim([-0.2,1.2]),grid,title('Time advance $$u_0(t + T)$$','interpreter','latex'),xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "notes"}}
@@ -413,7 +410,7 @@ Note that we can't plot dirac(t) in MATLAB with `fplot`. The best we can do is a
 
 ```{code-cell}
 L = 1; is = 2;
-stem(0,L*is),title('Impulse $$v_L(t) = L*i_s*\delta(t)$$','interpreter','latex'),grid,xlabel('t')
+stem(0,L*is),ylim([-0.2,2.2]),title('Impulse $$v_L(t) = L*i_s*\delta(t)$$','interpreter','latex'),grid,xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}

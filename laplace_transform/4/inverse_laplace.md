@@ -5,11 +5,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.6
+    jupytext_version: 1.16.7
 kernelspec:
-  display_name: MATLAB Kernel
+  display_name: MKernel
   language: matlab
-  name: jupyter_matlab_kernel
+  name: mkernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -606,7 +606,7 @@ slideshow:
 ---
 syms s;
 F_6(s) = (s^2 + 2*s + 2)/(s + 1);
-f_6(t) = ilaplace(F6s)
+f_6(t) = ilaplace(F_6(s))
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
