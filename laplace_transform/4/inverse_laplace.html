@@ -664,7 +664,7 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clear</span><span class="w"> </span><span class="nb">all</span>
-<span class="nb">setappdata</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MKernel_plot_format&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;svg&#39;</span><span class="p">)</span>
+<span class="c">% setappdata(0, &quot;MKernel_plot_format&quot;, &#39;svg&#39;)</span>
 <span class="nb">format</span><span class="w"> </span><span class="n">compact</span>
 </pre></div>
 </div>
@@ -690,13 +690,13 @@ F(s) = \frac{r_{11}}{(s - {p_1})^m} + \frac{r_{12}}{(s - {p_1})^{m - 1}} + \frac
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>r =
+<div class="output text_html"><html><body><pre>r = 2×1 double
     1.0000
     1.0000
-p =
+</pre></body></html></div><div class="output text_html"><html><body><pre>p = 2×1 double
    -3.0000
    -2.0000
-k =
+</pre></body></html></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>k =
      []
 </pre></div>
 </div>
@@ -716,15 +716,15 @@ k =
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="w"> </span><span class="s">t</span><span class="p">;</span>
 <span class="n">F1s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">s</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
-<span class="n">f1t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ilaplace</span><span class="p">(</span><span class="n">Fs</span><span class="p">)</span>
+<span class="n">f1t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ilaplace</span><span class="p">(</span><span class="n">F1s</span><span class="p">)</span>
 <span class="nb">fplot</span><span class="p">(</span><span class="n">f1t</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">]),</span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Solution to Exercise 11.1&#39;</span><span class="p">),</span><span class="nb">grid</span><span class="p">,</span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;f_1(t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;t [s]&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unrecognized function or variable &#39;Fs&#39;.
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[f1t ={\mathrm{e}}^{-2\,t} +{\mathrm{e}}^{-3\,t}\]</div>
+<img alt="../../_images/fa6f4ab3f733fd0bda209dc4ab409807373a9135471e2685168fa8de5b334e8e.png" src="../../_images/fa6f4ab3f733fd0bda209dc4ab409807373a9135471e2685168fa8de5b334e8e.png" />
 </div>
 </div>
 </section>
@@ -746,10 +746,10 @@ k =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-[s + 3, s + 5, s + 1]
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[ans =\left(\begin{array}{ccc}
+s+3 &amp; s+5 &amp; s+1
+\end{array}\right)\]</div>
 </div>
 </div>
 <p>In an exam you’d be given the factors</p>
@@ -776,12 +776,11 @@ k =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>F2s =
-(3*s^2 + 2*s + 5)/((s + 1)*(s + 3)*(s + 5))
-f2t =
-(3*exp(-t))/4 - (13*exp(-3*t))/2 + (35*exp(-5*t))/4
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[F2s =\frac{3\,s^2 +2\,s+5}{{\left(s+1\right)}\,{\left(s+3\right)}\,{\left(s+5\right)}}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[f2t =\frac{3\,{\mathrm{e}}^{-t} }{4}-\frac{13\,{\mathrm{e}}^{-3\,t} }{2}+\frac{35\,{\mathrm{e}}^{-5\,t} }{4}\]</div>
+<img alt="../../_images/c7fd8be194dd7e0f997988c78275b6ca90a6501d568d3ff43d456969ecdf1616.png" src="../../_images/c7fd8be194dd7e0f997988c78275b6ca90a6501d568d3ff43d456969ecdf1616.png" />
 </div>
 </div>
 </section>
@@ -801,6 +800,20 @@ f2t =
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Ns</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">3</span><span class="p">];</span><span class="w"> </span><span class="n">Ds</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">conv</span><span class="p">([</span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">8</span><span class="p">])</span><span class="w"> </span><span class="c">% conv of two vectors is polynomial multiplication</span>
 <span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">k</span><span class="p">]=</span><span class="nb">residue</span><span class="p">(</span><span class="n">Ns</span><span class="p">,</span><span class="n">Ds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>Ds = 1×4 double
+     1     5    12     8
+</pre></body></html></div><div class="output text_html"><html><body><pre>r = 
+  -0.2000 - 0.1500i
+  -0.2000 + 0.1500i
+   0.4000 + 0.0000i</pre></body></html></div><div class="output text_html"><html><body><pre>p = 
+  -2.0000 + 2.0000i
+  -2.0000 - 2.0000i
+  -1.0000 + 0.0000i</pre></body></html></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>k =
+     []
 </pre></div>
 </div>
 </div>
@@ -842,6 +855,13 @@ f2t =
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[F3s =\frac{s+3}{{\left(s+1\right)}\,{\left(s^2 +4\,s+8\right)}}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[f3t =\frac{2\,{\mathrm{e}}^{-t} }{5}-\frac{2\,{\mathrm{e}}^{-2\,t} \,{\left(\cos \left(2\,t\right)-\frac{3\,\sin \left(2\,t\right)}{4}\right)}}{5}\]</div>
+<img alt="../../_images/355fc133fecd035992dcd50158f0c27c436700acaeeb8be2590e57d2f48eeb43.png" src="../../_images/355fc133fecd035992dcd50158f0c27c436700acaeeb8be2590e57d2f48eeb43.png" />
+</div>
 </div>
 </section>
 </section>
@@ -876,6 +896,13 @@ f2t =
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[F4s =\frac{s+3}{{{\left(s+1\right)}}^2 \,{\left(s+2\right)}}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[f4t ={\mathrm{e}}^{-2\,t} -{\mathrm{e}}^{-t} +2\,t\,{\mathrm{e}}^{-t}\]</div>
+<img alt="../../_images/c3efe0882faaf7aa0ea40d10d5e6ea22541548e0dd7cdb9f1be81102329ed654.png" src="../../_images/c3efe0882faaf7aa0ea40d10d5e6ea22541548e0dd7cdb9f1be81102329ed654.png" />
+</div>
 </div>
 </section>
 <section id="numerical-solution">
@@ -887,6 +914,24 @@ f2t =
 <span class="n">Ds</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">conv</span><span class="p">([</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="nb">conv</span><span class="p">([</span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="p">]))</span><span class="w"> </span><span class="c">% (s + 2)*(s + 1)*(s + 1)</span>
 <span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">residue</span><span class="p">(</span><span class="n">Ns</span><span class="p">,</span><span class="n">Ds</span><span class="p">)</span>
 <span class="nb">doc</span><span class="w"> </span><span class="nb">residue</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>Ns = 1×2 double
+     1     3
+</pre></body></html></div><div class="output text_html"><html><body><pre>Ds = 1×4 double
+     1     4     5     2
+</pre></body></html></div><div class="output text_html"><html><body><pre>r = 3×1 double
+    1.0000
+   -1.0000
+    2.0000
+</pre></body></html></div><div class="output text_html"><html><body><pre>p = 3×1 double
+   -2.0000
+   -1.0000
+   -1.0000
+</pre></body></html></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>k =
+     []
 </pre></div>
 </div>
 </div>
@@ -948,14 +993,22 @@ f2t =
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>r = 1</pre></body></html></div><div class="output text_html"><html><body><pre>p = -1</pre></body></html></div><div class="output text_html"><html><body><pre>k = 1×2 double
+     1     1
+</pre></body></html></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="p">;</span>
 <span class="n">F6s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<span class="n">f6t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ilaplace</span><span class="p">(</span><span class="n">F6</span><span class="p">)</span>
+<span class="n">f6t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ilaplace</span><span class="p">(</span><span class="n">F6s</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[f6t ={\mathrm{e}}^{-t} +{\delta }\left(t\right)+{{\delta }}^{\prime } \left(t\right)\]</div>
 </div>
 </div>
 </section>
@@ -1056,16 +1109,16 @@ f2t =
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "mkernel"
+            mode: "jupyter_matlab_kernel"
         },
         kernelOptions: {
-            name: "mkernel",
+            name: "jupyter_matlab_kernel",
             path: "./laplace_transform/4"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'mkernel'</script>
+    <script>kernelName = 'jupyter_matlab_kernel'</script>
 
                 </article>
               

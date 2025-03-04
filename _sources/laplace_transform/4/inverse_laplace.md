@@ -7,9 +7,9 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.16.6
 kernelspec:
-  display_name: MKernel
+  display_name: MATLAB Kernel
   language: matlab
-  name: mkernel
+  name: jupyter_matlab_kernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -224,7 +224,7 @@ slideshow:
   slide_type: fragment
 ---
 clear all
-setappdata(0, "MKernel_plot_format", 'svg')
+% setappdata(0, "MKernel_plot_format", 'svg')
 format compact
 ```
 
@@ -286,7 +286,7 @@ slideshow:
 ---
 syms s t;
 F1s = (2*s + 5)/(s^2 + 5*s + 6);
-f1t = ilaplace(Fs)
+f1t = ilaplace(F1s)
 fplot(f1t,[0,5]),title('Solution to Exercise 11.1'),grid,ylabel('f_1(t)'),xlabel('t [s]')
 ```
 
@@ -445,7 +445,6 @@ You can use trig. identities to simplify this further if you wish.
 
 (mat_sym:11.3)=
 #### Symbolic solution
-
 
 ```{code-cell}
 F3s = (s+3)/((s+1)*(s^2 + 4*s + 8))
@@ -607,7 +606,7 @@ slideshow:
 ---
 syms s;
 F6s = (s^2 + 2*s + 2)/(s + 1);
-f6t = ilaplace(F6)
+f6t = ilaplace(F6s)
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
