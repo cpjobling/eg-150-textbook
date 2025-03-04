@@ -7,9 +7,9 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.16.6
 kernelspec:
-  display_name: MKernel
+  display_name: MATLAB Kernel
   language: matlab
-  name: mkernel
+  name: jupyter_matlab_kernel
 ---
 
 +++ {"nbpresent": {"id": "90f3c07d-3646-44b0-a549-7020fc10d16f"}, "slideshow": {"slide_type": "slide"}}
@@ -132,7 +132,7 @@ slideshow:
 ---
 % set up
 format compact
-setappdata(0, "MKernel_plot_format", 'svg')
+%setappdata(0, "MKernel_plot_format", 'svg')
 ```
 
 ```{code-cell}

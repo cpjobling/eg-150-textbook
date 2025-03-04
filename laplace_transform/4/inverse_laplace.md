@@ -285,9 +285,9 @@ slideshow:
   slide_type: fragment
 ---
 syms s t;
-F1s = (2*s + 5)/(s^2 + 5*s + 6);
-f1t = ilaplace(F1s)
-fplot(f1t,[0,5]),title('Solution to Exercise 11.1'),grid,ylabel('f_1(t)'),xlabel('t [s]')
+F_1(s) = (2*s + 5)/(s^2 + 5*s + 6);
+f_1(t) = ilaplace(F1s)
+fplot(f_1(t),[0,5]),title('Solution to Exercise 11.1'),grid,ylabel('f_1(t)'),xlabel('t [s]')
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -348,9 +348,9 @@ $$f_1(t) = \frac{3}{4}e^{-t} - \frac{13}{2}e^{-3t} + \frac{35}{4}e^{-5t}$$
 #### Symbolic Solution
 
 ```{code-cell}
-F2s = (3*s^2 + 2*s + 5)/((s+1)*(s+3)*(s+5))
-f2t = ilaplace(F2s)
-fplot(f2t,[0,5]),grid,title('Solution to Exercise 11.2'),ylabel('f_2(t)'),xlabel('t [s]')
+F_2(s) = (3*s^2 + 2*s + 5)/((s+1)*(s+3)*(s+5))
+f_2(t) = ilaplace(F2s)
+fplot(f_2(t),[0,5]),grid,title('Solution to Exercise 11.2'),ylabel('f_2(t)'),xlabel('t [s]')
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -447,9 +447,9 @@ You can use trig. identities to simplify this further if you wish.
 #### Symbolic solution
 
 ```{code-cell}
-F3s = (s+3)/((s+1)*(s^2 + 4*s + 8))
-f3t = ilaplace(F3s)
-fplot(f3t,[0,10]),ylim([0,0.3]),grid,title('Solution to Exercise 11.3'),ylabel('f_3(t)'),xlabel('t [s]')
+F_3(s) = (s+3)/((s+1)*(s^2 + 4*s + 8))
+f_3(t) = ilaplace(F3s)
+fplot(f_3(t),[0,10]),ylim([0,0.3]),grid,title('Solution to Exercise 11.3'),ylabel('f_3(t)'),xlabel('t [s]')
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -501,9 +501,9 @@ $$F_4(s) = \frac{s+3}{(s+2)(s+1)^2}$$
 slideshow:
   slide_type: fragment
 ---
-F4s = (s + 3)/((s+2)*(s+1)^2)
-f4t = ilaplace(F4s)
-fplot(f4t,[0,10]),grid,ylim([0,0.6]),title('Solution to Exercise 11.4'),ylabel('f_4(t)'),xlabel('t [s]')
+F_4(s) = (s + 3)/((s+2)*(s+1)^2)
+f_4(t) = ilaplace(F4s)
+fplot(f_4(t),[0,10]),grid,ylim([0,0.6]),title('Solution to Exercise 11.4'),ylabel('f_4(t)'),xlabel('t [s]')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -605,8 +605,8 @@ slideshow:
   slide_type: fragment
 ---
 syms s;
-F6s = (s^2 + 2*s + 2)/(s + 1);
-f6t = ilaplace(F6s)
+F_6(s) = (s^2 + 2*s + 2)/(s + 1);
+f_6(t) = ilaplace(F6s)
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}

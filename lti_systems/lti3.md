@@ -7,9 +7,9 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.16.6
 kernelspec:
-  display_name: MKernel
+  display_name: MATLAB Kernel
   language: matlab
-  name: mkernel
+  name: jupyter_matlab_kernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -237,7 +237,7 @@ For the answer, refer to the lecture recording or see solved problem 2.18 in {ci
 slideshow:
   slide_type: notes
 ---
-cd matlab
+cd '/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/lti_systems/matlab'
 ```
 
 ```{code-cell}

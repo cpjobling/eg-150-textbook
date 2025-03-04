@@ -7,9 +7,9 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.16.6
 kernelspec:
-  display_name: MKernel
+  display_name: MATLAB Kernel
   language: matlab
-  name: mkernel
+  name: jupyter_matlab_kernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -31,6 +31,10 @@ Additional information has been adapted from [Section 1.4]() of {cite}`schaum`.
 Follow along at [cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals](https://cpjobling.github.io/eg-150-textbook/signals_and_systems/elementary_signals)
 
 ![QR Code](pictures/qrcode_unit2.3.png)
+
+```{code-cell}
+
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

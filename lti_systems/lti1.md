@@ -7,9 +7,9 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.16.6
 kernelspec:
-  display_name: MKernel
+  display_name: MATLAB Kernel
   language: matlab
-  name: mkernel
+  name: jupyter_matlab_kernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -183,9 +183,9 @@ We will then work through the examples again in the examples class.
 slideshow:
   slide_type: fragment
 ---
-%cd matlab/convolution_demo
-%dir
-convolutiondemo
+cd /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/lti_systems/matlab/convolution_demo
+pwd
+dir
 ```
 
 ```{code-cell}
@@ -550,9 +550,9 @@ slideshow:
 x(t) = heaviside(t)-heaviside(t-3);
 h(t) = heaviside(t)-heaviside(t-2);
 subplot(121)
-fplot(x(t),[-3,6]),grid,ylim([0,3]),ylabel('x(t)'),xlabel('t')
+fplot(x(t),[-3,6]),grid,ylim([0,1.5]),ylabel('x(t)'),xlabel('t')
 subplot(122)
-fplot(h(t),[-3,6]),grid,ylim([0,3]),ylabel('h(t)'),xlabel('t')
+fplot(h(t),[-3,6]),grid,ylim([0,1.5]),ylabel('h(t)'),xlabel('t')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
