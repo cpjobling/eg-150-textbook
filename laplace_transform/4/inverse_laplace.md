@@ -5,11 +5,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.15.2
+    jupytext_version: 1.16.6
 kernelspec:
-  display_name: Matlab
+  display_name: MATLAB Kernel
   language: matlab
-  name: matlab
+  name: jupyter_matlab_kernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -76,7 +76,7 @@ Quite often the Laplace Transform we start off with is a *rational polynomial* i
 
 $$F(s) = \frac{N(s)}{D(s)} = \frac{b_ms^m + b_{m-1}s^{m-1}+b_{m-2}s^{m-2}+ \cdots +b_{1}s+b_{0}}{a_ns^n + a_{n-1}s^{n-1}+a_{n-2}s^{n-2}+ \cdots +a_{1}s+a_{0}}$$ (eq:4.4:2)
 
-The coefficients $a_k$ and $b_k$ are real for $k = 1, 2, 3, \ldots$
+The coefficients $a_n$ and $b_n$ are real for $n = 1, 2, 3, \ldots$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -224,6 +224,7 @@ slideshow:
   slide_type: fragment
 ---
 clear all
+% setappdata(0, "MKernel_plot_format", 'svg')
 format compact
 ```
 
@@ -237,6 +238,13 @@ Use the PFE method to simplify $F_1(s)$ below and find the time domain function 
 $$F_1(s) = \frac{2s+5}{s^2 + 5s + 6}$$
 
 (Quick solution: [Wolfram Alpha](https://www.wolframalpha.com/input/?i=inverse+laplace+transform+%7B(2s+%2B+5)%2F(s%5E2+%2B+5s+%2B+6)%7D))
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(mat_hand:11.1)=
+#### Paper Solution
+
+See OneNote class notebook: [Unit 4.4: The Inverse Transform](https://swanseauniversity-my.sharepoint.com/personal/c_p_jobling_swansea_ac_uk/_layouts/15/Doc.aspx?sourcedoc={34a55801-0fba-4ce2-8b37-c499c1df83c3}&action=edit&wd=target%28_Content%20Library%2FVirtual%20Whiteboard.one%7Cd116af2c-1310-234d-91a6-4f1631dbf5db%2FUnit%204.4%20The%20Inverse%20Transform%7C1fe268d6-ec91-41fb-89a0-bfd9b8d7a6f5%2F%29&wdorigin=703).
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -277,9 +285,9 @@ slideshow:
   slide_type: fragment
 ---
 syms s t;
-Fs = (2*s + 5)/(s^2 + 5*s + 6);
-ft = ilaplace(Fs)
-fplot(ft,[0,5])
+F1s = (2*s + 5)/(s^2 + 5*s + 6);
+f1t = ilaplace(F1s)
+fplot(f1t,[0,5]),title('Solution to Exercise 11.1'),grid,ylabel('f_1(t)'),xlabel('t [s]')
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -315,17 +323,35 @@ In an exam you'd be given the factors
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-We can now use the previous technique to find the solution which according to MATLAB should be
-
-$$f_1(t) = \frac{3}{4}e^{-t} - \frac{13}{2}e^{-3t} + \frac{35}{4}e^{-5t}$$
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
 The problem becomes: determine the Inverse Laplace Transform of
 
 $$F_2(s) = \frac{3s^2+2s+5}{(s+1)(s+3)(s+5)}$$
 
-which we will solve in class
+which we will solve in class.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(mat_hand:11.2)=
+#### Paper Solution
+
+See OneNote class notebook: [Unit 4.4: The Inverse Transform](https://swanseauniversity-my.sharepoint.com/personal/c_p_jobling_swansea_ac_uk/_layouts/15/Doc.aspx?sourcedoc={34a55801-0fba-4ce2-8b37-c499c1df83c3}&action=edit&wd=target%28_Content%20Library%2FVirtual%20Whiteboard.one%7Cd116af2c-1310-234d-91a6-4f1631dbf5db%2FUnit%204.4%20The%20Inverse%20Transform%7C1fe268d6-ec91-41fb-89a0-bfd9b8d7a6f5%2F%29&wdorigin=703).
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+The solution checked with MATLAB should be
+
+$$f_1(t) = \frac{3}{4}e^{-t} - \frac{13}{2}e^{-3t} + \frac{35}{4}e^{-5t}$$
+
++++
+
+(mat_sym:11.2)=
+#### Symbolic Solution
+
+```{code-cell}
+F2s = (3*s^2 + 2*s + 5)/((s+1)*(s+3)*(s+5))
+f2t = ilaplace(F2s)
+fplot(f2t,[0,5]),grid,title('Solution to Exercise 11.2'),ylabel('f_2(t)'),xlabel('t [s]')
+```
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -415,6 +441,17 @@ $$f_3(t) = \frac{2}{5}e^{-t} + \frac{3}{10} e^{-2t}\sin 2t - \frac{2}{5} e^{-2t}
 
 You can use trig. identities to simplify this further if you wish.
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+(mat_sym:11.3)=
+#### Symbolic solution
+
+```{code-cell}
+F3s = (s+3)/((s+1)*(s^2 + 4*s + 8))
+f3t = ilaplace(F3s)
+fplot(f3t,[0,10]),ylim([0,0.3]),grid,title('Solution to Exercise 11.3'),ylabel('f_3(t)'),xlabel('t [s]')
+```
+
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (ex11.4)=
@@ -449,11 +486,52 @@ In class we will illustrate the slightly simpler approach also presented in the 
 
 For exam preparation, I would recommend that you use whatever method you find most comfortable.
 
-+++ {"slideshow": {"slide_type": "notes"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Find the inverse Laplace Transform of 
 
 $$F_4(s) = \frac{s+3}{(s+2)(s+1)^2}$$
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+##### Symbolic solution
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+F4s = (s + 3)/((s+2)*(s+1)^2)
+f4t = ilaplace(F4s)
+fplot(f4t,[0,10]),grid,ylim([0,0.6]),title('Solution to Exercise 11.4'),ylabel('f_4(t)'),xlabel('t [s]')
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+##### Numerical solution
+
+We use function `conv` to perform polynomial mul
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+Ns = [1 3]
+Ds = conv([1 2],conv([1 1],[1 1])) % (s + 2)*(s + 1)*(s + 1)
+[r,p,k] = residue(Ns,Ds)
+doc residue
+```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+To interpret this we refer to the MATLAB documentation `doc residue` which tells us, that for the pole at $s = -1$, the first residue (here $r_2 = -1$) is for the term $1/(s + 1)$ and the second (here $r_3 = 2$) is for $1/(s + 1)^2$. Thus the PFE is
+
+$$F_4(s) = \frac{1}{s+2} - \frac{1}{s+1} + \frac{2}{(s+1)^2}$$
+
+hence
+
+$$f_4(t) = e^{-2t}u_0(t) - e^{-t}u_0(t) + 2te^{-t}u_0(t)$$
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -527,8 +605,8 @@ slideshow:
   slide_type: fragment
 ---
 syms s;
-F6 = (s^2 + 2*s + 2)/(s + 1);
-f6 = ilaplace(F6)
+F6s = (s^2 + 2*s + 2)/(s + 1);
+f6t = ilaplace(F6s)
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
