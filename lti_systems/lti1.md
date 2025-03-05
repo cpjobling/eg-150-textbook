@@ -7,9 +7,9 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.16.7
 kernelspec:
-  display_name: MKernel
+  display_name: MATLAB Kernel
   language: matlab
-  name: mkernel
+  name: jupyter_matlab_kernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -183,7 +183,8 @@ We will then work through the examples again in the examples class.
 slideshow:
   slide_type: fragment
 ---
-cd matlab/convolution_demo
+cd /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/lti_systems/matlab/convolution_demo
+pwd
 ```
 
 ```{code-cell}
