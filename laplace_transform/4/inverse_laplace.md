@@ -7,9 +7,9 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.16.7
 kernelspec:
-  display_name: MKernel
+  display_name: MATLAB Kernel
   language: matlab
-  name: mkernel
+  name: jupyter_matlab_kernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -262,7 +262,7 @@ Ns = [2, 5]; Ds = [1, 5, 6];
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-The previous resuly should be interpreted as:
+This result should be interpreted as:
 
 $$F_1(s) = \frac{1}{s + 3} + \frac{1}{s + 2}$$
 
@@ -286,8 +286,19 @@ slideshow:
 ---
 syms s t;
 F_1(s) = (2*s + 5)/(s^2 + 5*s + 6);
-f_1(t) = ilaplace(F1s)
-fplot(f_1(t),[0,5]),title('Solution to Exercise 11.1'),grid,ylabel('f_1(t)'),xlabel('t [s]')
+f_1(t) = ilaplace(F_1(s))
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Which we can plot using the `fplot` function:
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+fplot(f_1(t),[0,8]),title('Solution to Exercise 11.1'),ylim([-0.5,2.0]),grid,ylabel('f_1(t)'),xlabel('t [s]')
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -314,7 +325,7 @@ slideshow:
   slide_type: subslide
 ---
 syms s;
-factor(s^3 + 9*s^2 + 23*s + 15)
+factors = factor(s^3 + 9*s^2 + 23*s + 15)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -329,28 +340,43 @@ $$F_2(s) = \frac{3s^2+2s+5}{(s+1)(s+3)(s+5)}$$
 
 which we will solve in class.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 (mat_hand:11.2)=
 #### Paper Solution
 
 See OneNote class notebook: [Unit 4.4: The Inverse Transform](https://swanseauniversity-my.sharepoint.com/personal/c_p_jobling_swansea_ac_uk/_layouts/15/Doc.aspx?sourcedoc={34a55801-0fba-4ce2-8b37-c499c1df83c3}&action=edit&wd=target%28_Content%20Library%2FVirtual%20Whiteboard.one%7Cd116af2c-1310-234d-91a6-4f1631dbf5db%2FUnit%204.4%20The%20Inverse%20Transform%7C1fe268d6-ec91-41fb-89a0-bfd9b8d7a6f5%2F%29&wdorigin=703).
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "fragment"}}
 
 The solution checked with MATLAB should be
 
 $$f_1(t) = \frac{3}{4}e^{-t} - \frac{13}{2}e^{-3t} + \frac{35}{4}e^{-5t}$$
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 (mat_sym:11.2)=
 #### Symbolic Solution
 
 ```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
 F_2(s) = (3*s^2 + 2*s + 5)/((s+1)*(s+3)*(s+5))
-f_2(t) = ilaplace(F2s)
-fplot(f_2(t),[0,5]),grid,title('Solution to Exercise 11.2'),ylabel('f_2(t)'),xlabel('t [s]')
+f_2(t) = ilaplace(F_2(s))
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Which can be plotted using `fplot`. Note that it is good practice to adjust the scale and label your plots.
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+fplot(f_2(t),[0,5]),ylim([-0.5,3.5]),grid,title('Solution to Exercise 11.2'),ylabel('f_2(t)'),xlabel('t [s]')
 ```
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -364,7 +390,7 @@ Find the Inverse Laplace Transform of
 
 $$F_3(s) = \frac{s + 3}{(s+1)(s^2 + 4s + 8)}$$ (pfe1)
 
-(Quick solution: [Wolfram Alpha](https://www.wolframalpha.com/input/?i=inverse+laplace+transform+%28s%2B3%29%2F%28%28s+%2B+1%29%28s%5E2+%2B+4s+%2B+8%29%29) &ndash; Shows that the computer is not always best!)
+(Quick solution: [Wolfram Alpha](https://www.wolframalpha.com/input/?i=inverse+laplace+transform+%28s%2B3%29%2F%28%28s+%2B+1%29%28s%5E2+%2B+4s+%2B+8%29%29) &ndash; Shows that the computer will not always give the expected answer!)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -448,7 +474,7 @@ You can use trig. identities to simplify this further if you wish.
 
 ```{code-cell}
 F_3(s) = (s+3)/((s+1)*(s^2 + 4*s + 8))
-f_3(t) = ilaplace(F3s)
+f_3(t) = ilaplace(F_3(s))
 fplot(f_3(t),[0,10]),ylim([0,0.3]),grid,title('Solution to Exercise 11.3'),ylabel('f_3(t)'),xlabel('t [s]')
 ```
 
@@ -502,7 +528,7 @@ slideshow:
   slide_type: fragment
 ---
 F_4(s) = (s + 3)/((s+2)*(s+1)^2)
-f_4(t) = ilaplace(F4s)
+f_4(t) = ilaplace(F_4(s))
 fplot(f_4(t),[0,10]),grid,ylim([0,0.6]),title('Solution to Exercise 11.4'),ylabel('f_4(t)'),xlabel('t [s]')
 ```
 
@@ -510,7 +536,7 @@ fplot(f_4(t),[0,10]),grid,ylim([0,0.6]),title('Solution to Exercise 11.4'),ylabe
 
 ##### Numerical solution
 
-We use function `conv` to perform polynomial mul
+We use function `conv` to perform polynomial multiplication
 
 ```{code-cell}
 ---
@@ -696,8 +722,8 @@ We move on to consider
 
 For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab) folder.
 
-* Example 1 - Real poles [[ex11_1.m](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/ex11_1.m)]
-* Example 2 - Real poles cubic denominator [[ex11_2.m](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/ex11_2.m)]
-* Example 3 - Complex poles [[ex11_3.m](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/ex11_3.m)]
-* Example 4 - Repeated real poles [[ex11_4.m](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/ex11_4.m)]
-* Example 5 - Non proper rational polynomial [[ex11_5.m](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/ex11_5.m)]
+* Example 1 - Real poles [[ex11_1.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/ex11_1.mlx)]
+* Example 2 - Real poles cubic denominator [[ex11_2.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/ex11_2.mlx)]
+* Example 3 - Complex poles [[ex11_3.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/ex11_3.mlx)]
+* Example 4 - Repeated real poles [[ex11_4.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/ex11_4.mlx)]
+* Example 5 - Non proper rational polynomial [[ex11_5.mlx](https://cpjobling.github.io/eg-150-textbook/laplace_transform/matlab/ex11_5.mlx)]

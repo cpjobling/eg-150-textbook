@@ -590,10 +590,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X(s) =
-laplace(x(t), t, s)
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[X(s) =\textrm{laplace}\left(x\left(t\right),t,s\right)\]</div>
 </div>
 </div>
 </section>
@@ -631,10 +629,8 @@ laplace(x(t), t, s)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x(t) =
-exp(-a*t)*heaviside(t)
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[x(t) ={\mathrm{e}}^{-a\,t} \,\textrm{heaviside}\left(t\right)\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -644,7 +640,7 @@ exp(-a*t)*heaviside(t)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/362776e769c3d2053f0da1472fb285879891f79d113cffe2374718c655cc5f28.png" src="../../_images/362776e769c3d2053f0da1472fb285879891f79d113cffe2374718c655cc5f28.png" />
+<img alt="../../_images/7edde2301f9bf76bd8a52ed8307673e1ee0f09b19468e1021a84aa9adb317667.png" src="../../_images/7edde2301f9bf76bd8a52ed8307673e1ee0f09b19468e1021a84aa9adb317667.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -654,10 +650,13 @@ exp(-a*t)*heaviside(t)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-piecewise(in(s, &#39;real&#39;) &amp; a + s &lt; 0, Inf, a + real(s) ~= 0 &amp; ~in(s, &#39;real&#39;), 1/(a + s) - limit(exp(- t*a - t*s), t, Inf)/(a + s), in(s, &#39;real&#39;) &amp; 0 &lt; a + s | angle(s) in Dom::Interval(-pi/2, pi/2) &amp; 0 &lt; a &amp; s ~= 0, 1/(a + s), (~in(s, &#39;real&#39;) | 0 &lt;= a + s) &amp; (~in(s, &#39;real&#39;) | a + s &lt;= 0) &amp; (a + real(s) == 0 | in(s, &#39;real&#39;)) &amp; (~angle(s) in Dom::Interval(-pi/2, pi/2) | a &lt;= 0 | s == 0), int(exp(-t*a)*exp(-t*s), t, 0, Inf))
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}ans =\left\lbrace \begin{array}{cl}
+\infty  &amp; \;\textrm{if}\;\;s\in \mathbb{R}\wedge a+s&lt;0\\
+\frac{1}{a+s}-\frac{\lim_{t\to \infty } \;{\mathrm{e}}^{-t\,a-t\,s} }{a+s} &amp; \;\textrm{if}\;\;a+\textrm{real}\left(s\right)\not= 0\wedge s\not\in \mathbb{R}\\
+\frac{1}{a+s} &amp; \;\textrm{if}\;\;{\left(s\in \mathbb{R}\wedge 0&lt;a+s\right)}\vee {\left(\textrm{angle}\left(s\right)\in \left(-\frac{\pi }{2},\frac{\pi }{2}\right)\wedge 0&lt;a\wedge s\not= 0\right)}\\
+\int_0^{\infty } {\mathrm{e}}^{-t\,a} \,{\mathrm{e}}^{-t\,s} \;\textrm{d}t &amp; \;\textrm{if}\;\;{\left(s\not\in \mathbb{R}\vee 0\le a+s\right)}\wedge {\left(s\not\in \mathbb{R}\vee a+s\le 0\right)}\wedge {\left(a+\textrm{real}\left(s\right)=0\vee s\in \mathbb{R}\right)}\wedge {\left(\textrm{angle}\left(s\right)\not\in \left(-\frac{\pi }{2},\frac{\pi }{2}\right)\vee a\le 0\vee s=0\right)}
+\end{array}\right.\end{split}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -674,10 +673,8 @@ piecewise(in(s, &#39;real&#39;) &amp; a + s &lt; 0, Inf, a + real(s) ~= 0 &amp; 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-1/(a + s)
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[ans =\frac{1}{a+s}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -687,10 +684,8 @@ piecewise(in(s, &#39;real&#39;) &amp; a + s &lt; 0, Inf, a + real(s) ~= 0 &amp; 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X(s) =
-1/(a + s)
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[X(s) =\frac{1}{a+s}\]</div>
 </div>
 </div>
 <p>The Laplace transform of <span class="math notranslate nohighlight">\(x(t)\)</span></p>
@@ -725,10 +720,8 @@ piecewise(in(s, &#39;real&#39;) &amp; a + s &lt; 0, Inf, a + real(s) ~= 0 &amp; 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x(t) =
--heaviside(-t)*exp(-a*t)
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[x(t) =-\textrm{heaviside}\left(-t\right)\,{\mathrm{e}}^{-a\,t}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -738,7 +731,7 @@ piecewise(in(s, &#39;real&#39;) &amp; a + s &lt; 0, Inf, a + real(s) ~= 0 &amp; 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/458207e1bd19a795872907ac544154073d52b20f0770956555d59b0229d9c553.png" src="../../_images/458207e1bd19a795872907ac544154073d52b20f0770956555d59b0229d9c553.png" />
+<img alt="../../_images/3ed19c94508eb277c6cd1b58543d9f3e3fcf3da9e191f594a2e21b9c04542e08.png" src="../../_images/3ed19c94508eb277c6cd1b58543d9f3e3fcf3da9e191f594a2e21b9c04542e08.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -748,10 +741,8 @@ piecewise(in(s, &#39;real&#39;) &amp; a + s &lt; 0, Inf, a + real(s) ~= 0 &amp; 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
--Inf
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[ans =-\infty\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -761,10 +752,8 @@ piecewise(in(s, &#39;real&#39;) &amp; a + s &lt; 0, Inf, a + real(s) ~= 0 &amp; 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X(s) =
-0
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[X(s) =0\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -775,10 +764,8 @@ piecewise(in(s, &#39;real&#39;) &amp; a + s &lt; 0, Inf, a + real(s) ~= 0 &amp; 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
-1/(a + s)
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[ans =\frac{1}{a+s}\]</div>
 </div>
 </div>
 </section>
@@ -843,14 +830,10 @@ piecewise(in(s, &#39;real&#39;) &amp; a + s &lt; 0, Inf, a + real(s) ~= 0 &amp; 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z =
-    -2
-p =
+<div class="output text_html"><html><body><pre>z = -2</pre></body></html></div><div class="output text_html"><html><body><pre>p = 2×1 double
     -3
     -1
-</pre></div>
-</div>
-</div>
+</pre></body></html></div></div>
 </div>
 <p>We can plot these on the <span class="math notranslate nohighlight">\(s\)</span>-plane using the function <code class="docutils literal notranslate"><span class="pre">pzmap</span></code>:</p>
 <div class="cell docutils container">
@@ -860,7 +843,7 @@ p =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/8a24741fec4acec5d7954ed7a9849cea665aa2e959d548f6c3f16d38ba8e81cd.png" src="../../_images/8a24741fec4acec5d7954ed7a9849cea665aa2e959d548f6c3f16d38ba8e81cd.png" />
+<img alt="../../_images/f4096ef471e2a11c6f5ec5335a7e76c6b9e52901a10a5374ff16b36077f3d27b.png" src="../../_images/f4096ef471e2a11c6f5ec5335a7e76c6b9e52901a10a5374ff16b36077f3d27b.png" />
 </div>
 </div>
 <p>Note that <span class="math notranslate nohighlight">\(X(s)\)</span> has one zero at <span class="math notranslate nohighlight">\(s=-2\)</span> and two poles at <span class="math notranslate nohighlight">\(s=-1\)</span> and <span class="math notranslate nohighlight">\(s=-3\)</span> with scale factor 2. The ROC is <span class="math notranslate nohighlight">\(\mathrm{Re}(s)&gt;-1\)</span>.</p>
@@ -959,10 +942,8 @@ p =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>F(s) =
-laplace(f(t), t, s)
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[F(s) =\textrm{laplace}\left(f\left(t\right),t,s\right)\]</div>
 </div>
 </div>
 <div class="admonition warning">
@@ -990,17 +971,10 @@ laplace(f(t), t, s)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Zeros =
-    -3
-Poles =
+<div class="output text_html"><html><body><pre>Zeros = -3</pre></body></html></div><div class="output text_html"><html><body><pre>Poles = 
   -2.0000 + 0.0000i
   -1.0000 + 1.4142i
-  -1.0000 - 1.4142i
-K =
-     3
-</pre></div>
-</div>
-<img alt="../../_images/d717fe475263fb051e1533ef36d8d31d7f8fb82a41d127e55e7eb4b35f136cc1.png" src="../../_images/d717fe475263fb051e1533ef36d8d31d7f8fb82a41d127e55e7eb4b35f136cc1.png" />
+  -1.0000 - 1.4142i</pre></body></html></div><div class="output text_html"><html><body><pre>K = 3</pre></body></html></div><img alt="../../_images/baa03ef52d724c68a197c7d3114249b391705542d4fa1f29d582dcd89be4b666.png" src="../../_images/baa03ef52d724c68a197c7d3114249b391705542d4fa1f29d582dcd89be4b666.png" />
 </div>
 </div>
 </section>
@@ -1039,16 +1013,16 @@ K =
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "mkernel"
+            mode: "jupyter_matlab_kernel"
         },
         kernelOptions: {
-            name: "mkernel",
+            name: "jupyter_matlab_kernel",
             path: "./laplace_transform/1"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'mkernel'</script>
+    <script>kernelName = 'jupyter_matlab_kernel'</script>
 
                 </article>
               
