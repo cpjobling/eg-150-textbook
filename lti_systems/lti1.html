@@ -637,10 +637,13 @@ document.write(`
 <p>We will then work through the examples again in the examples class.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="n">matlab</span><span class="o">/</span><span class="n">convolution_demo</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">eechris</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">cpjobling</span><span class="o">/</span><span class="n">eg</span><span class="o">-</span><span class="mi">150</span><span class="o">-</span><span class="n">textbook</span><span class="o">/</span><span class="n">lti_systems</span><span class="o">/</span><span class="n">matlab</span><span class="o">/</span><span class="n">convolution_demo</span>
+<span class="nb">pwd</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = '/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/lti_systems/matlab/convolution_demo'</pre></body></html></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -649,10 +652,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
-&gt; In convolutiondemo&gt;convolutiondemo_LayoutFcn (line 398)
-In convolutiondemo&gt;gui_mainfcn (line 1181)
-In convolutiondemo (line 44)
+<img alt="../_images/44fbbdad4ec6e7faf3c5ddaeb755e0507e54d0ae51d068c6adbf6430fe598e34.png" src="../_images/44fbbdad4ec6e7faf3c5ddaeb755e0507e54d0ae51d068c6adbf6430fe598e34.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: The EraseMode property is no longer supported and will error in a future release.
 </pre></div>
 </div>
 </div>
@@ -763,7 +764,7 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6c04b365d5a4e70db36ded815fe3f819af6b07d81585f4f4b1ef2cee8ebd2217.png" src="../_images/6c04b365d5a4e70db36ded815fe3f819af6b07d81585f4f4b1ef2cee8ebd2217.png" />
+<img alt="../_images/416485b01a940b48a87dfabb3d367d45d553eb800b2ade2e3c43d8dc0b3ea9b8.png" src="../_images/416485b01a940b48a87dfabb3d367d45d553eb800b2ade2e3c43d8dc0b3ea9b8.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the MATLAB function <code class="docutils literal notranslate"><span class="pre">int</span></code> to compute the convolution integral symbolically.</p>
@@ -774,13 +775,8 @@ In convolutiondemo (line 44)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-y(t) =
- 
--(2*exp(-(alpha*t)/2)*(exp(-(alpha*t)/2)/2 - exp((alpha*t)/2)/2)*(sign(t)/2 + 1/2))/alpha
- 
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[y(t) =-\frac{2\,{\mathrm{e}}^{-\frac{\alpha \,t}{2}} \,{\left(\frac{{\mathrm{e}}^{-\frac{\alpha \,t}{2}} }{2}-\frac{{\mathrm{e}}^{\frac{\alpha \,t}{2}} }{2}\right)}\,{\left(\frac{\textrm{sign}\left(t\right)}{2}+\frac{1}{2}\right)}}{\alpha }\]</div>
 </div>
 </div>
 <p>Plot the result for <span class="math notranslate nohighlight">\(\alpha = 1\)</span></p>
@@ -793,14 +789,9 @@ y(t) =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-ya(t) =
- 
--2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
- 
-</pre></div>
-</div>
-<img alt="../_images/0a99177a5c4d764c8fe847d8741b702f5bd42c9a533f313046a78486cfd97a5d.png" src="../_images/0a99177a5c4d764c8fe847d8741b702f5bd42c9a533f313046a78486cfd97a5d.png" />
+<img alt="../_images/335c9d715abfd594d364195985852eb319368995049beb5567dd52f74414c68b.png" src="../_images/335c9d715abfd594d364195985852eb319368995049beb5567dd52f74414c68b.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[ya(t) =-2\,{\mathrm{e}}^{-\frac{t}{2}} \,{\left(\frac{{\mathrm{e}}^{-\frac{t}{2}} }{2}-\frac{{\mathrm{e}}^{t/2} }{2}\right)}\,{\left(\frac{\textrm{sign}\left(t\right)}{2}+\frac{1}{2}\right)}\]</div>
 </div>
 </div>
 </section>
@@ -825,7 +816,7 @@ ya(t) =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5fe35a650414df41d099bb179765960de6130dcaba8596bec3d383b15ad4ed15.png" src="../_images/5fe35a650414df41d099bb179765960de6130dcaba8596bec3d383b15ad4ed15.png" />
+<img alt="../_images/7672481a84de4d7fdc1f471ed4b8c7c96136cf71948b965fdd53c9d1b05d4822.png" src="../_images/7672481a84de4d7fdc1f471ed4b8c7c96136cf71948b965fdd53c9d1b05d4822.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -835,13 +826,8 @@ ya(t) =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-y(t) =
- 
--(2*exp(-(alpha*t)/2)*(exp(-(alpha*t)/2)/2 - exp((alpha*t)/2)/2)*(sign(t)/2 + 1/2))/alpha
- 
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[y(t) =-\frac{2\,{\mathrm{e}}^{-\frac{\alpha \,t}{2}} \,{\left(\frac{{\mathrm{e}}^{-\frac{\alpha \,t}{2}} }{2}-\frac{{\mathrm{e}}^{\frac{\alpha \,t}{2}} }{2}\right)}\,{\left(\frac{\textrm{sign}\left(t\right)}{2}+\frac{1}{2}\right)}}{\alpha }\]</div>
 </div>
 </div>
 <p>Plot the result for <span class="math notranslate nohighlight">\(\alpha = 1\)</span></p>
@@ -854,14 +840,9 @@ y(t) =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-yb(t) =
- 
--2*exp(-t/2)*(exp(-t/2)/2 - exp(t/2)/2)*(sign(t)/2 + 1/2)
- 
-</pre></div>
-</div>
-<img alt="../_images/9aa17f7976bd1d7c55d7fc5dfe2e84bd73e9a382abc1910b1e70d3b1986a6c15.png" src="../_images/9aa17f7976bd1d7c55d7fc5dfe2e84bd73e9a382abc1910b1e70d3b1986a6c15.png" />
+<img alt="../_images/ca3d95107763280a9097989c0ff425059c2ff98b129941623aa1fee34154d300.png" src="../_images/ca3d95107763280a9097989c0ff425059c2ff98b129941623aa1fee34154d300.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[yb(t) =-2\,{\mathrm{e}}^{-\frac{t}{2}} \,{\left(\frac{{\mathrm{e}}^{-\frac{t}{2}} }{2}-\frac{{\mathrm{e}}^{t/2} }{2}\right)}\,{\left(\frac{\textrm{sign}\left(t\right)}{2}+\frac{1}{2}\right)}\]</div>
 </div>
 </div>
 <p>Go back to <a class="reference internal" href="#step-response"><span class="std std-ref">F. Step Response</span></a></p>
@@ -898,7 +879,7 @@ yb(t) =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/dd01839a469955db808f9fa49f88e61f984e0f1be36161ccc4d00bb7ad587bed.png" src="../_images/dd01839a469955db808f9fa49f88e61f984e0f1be36161ccc4d00bb7ad587bed.png" />
+<img alt="../_images/f98a6f31f13939d81e7a2a3b6ca5b3cd880210e1bcb750444f94ea76f6a8ffbc.png" src="../_images/f98a6f31f13939d81e7a2a3b6ca5b3cd880210e1bcb750444f94ea76f6a8ffbc.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span> using the convolution integral</p>
@@ -909,13 +890,11 @@ yb(t) =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-y(t) =
- 
-piecewise(0 &lt;= t, exp(-t)/2, t &lt;= 0, exp(t)/2)
- 
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}y(t) =\left\lbrace \begin{array}{cl}
+\frac{{\mathrm{e}}^{-t} }{2} &amp; \;\textrm{if}\;\;0\le t\\
+\frac{{\mathrm{e}}^t }{2} &amp; \;\textrm{if}\;\;t\le 0
+\end{array}\right.\end{split}\]</div>
 </div>
 </div>
 <p>Plot the result for <span class="math notranslate nohighlight">\(\alpha = 1\)</span></p>
@@ -926,7 +905,7 @@ piecewise(0 &lt;= t, exp(-t)/2, t &lt;= 0, exp(t)/2)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a1dc28418cce4966a75d1fb3e97edc2cf15e3e19678e4c673c0a5f1552a60339.png" src="../_images/a1dc28418cce4966a75d1fb3e97edc2cf15e3e19678e4c673c0a5f1552a60339.png" />
+<img alt="../_images/1e7fcc983bd21a0cad3f05cbf820c2e41c43970ca0d0052f38294b81ae2d24ae.png" src="../_images/1e7fcc983bd21a0cad3f05cbf820c2e41c43970ca0d0052f38294b81ae2d24ae.png" />
 </div>
 </div>
 </section>
@@ -964,7 +943,7 @@ piecewise(0 &lt;= t, exp(-t)/2, t &lt;= 0, exp(t)/2)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ae1fd66eb6ece272ce2f260122dd0256ce9294cbf1bf6f742ed4e88f3964eaad.png" src="../_images/ae1fd66eb6ece272ce2f260122dd0256ce9294cbf1bf6f742ed4e88f3964eaad.png" />
+<img alt="../_images/dd54ff7f4d13e9120c9b5d042cfeb90c980a34ea3c77d00b5a605e506f9f967a.png" src="../_images/dd54ff7f4d13e9120c9b5d042cfeb90c980a34ea3c77d00b5a605e506f9f967a.png" />
 </div>
 </div>
 <p>Compute <span class="math notranslate nohighlight">\(y(t)\)</span></p>
@@ -975,13 +954,8 @@ piecewise(0 &lt;= t, exp(-t)/2, t &lt;= 0, exp(t)/2)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-y(t) =
- 
-heaviside(t - 5)*(t - 5) - heaviside(t - 3)*(t - 3) - heaviside(t - 2)*(t - 2) + t*heaviside(t)
- 
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[y(t) =\textrm{heaviside}\left(t-5\right)\,{\left(t-5\right)}-\textrm{heaviside}\left(t-3\right)\,{\left(t-3\right)}-\textrm{heaviside}\left(t-2\right)\,{\left(t-2\right)}+t\,\textrm{heaviside}\left(t\right)\]</div>
 </div>
 </div>
 <p>Plot the result</p>
@@ -993,7 +967,7 @@ heaviside(t - 5)*(t - 5) - heaviside(t - 3)*(t - 3) - heaviside(t - 2)*(t - 2) +
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0e704c230bad044afa15afa0456758674cab40110ac5335b4237b2cbc109b3f9.png" src="../_images/0e704c230bad044afa15afa0456758674cab40110ac5335b4237b2cbc109b3f9.png" />
+<img alt="../_images/b3b275878c576ea0891841b6034348fe3979102cff0334071cefe36937ba7726.png" src="../_images/b3b275878c576ea0891841b6034348fe3979102cff0334071cefe36937ba7726.png" />
 </div>
 </div>
 </section>
@@ -1067,16 +1041,16 @@ heaviside(t - 5)*(t - 5) - heaviside(t - 3)*(t - 3) - heaviside(t - 2)*(t - 2) +
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "mkernel"
+            mode: "jupyter_matlab_kernel"
         },
         kernelOptions: {
-            name: "mkernel",
+            name: "jupyter_matlab_kernel",
             path: "./lti_systems"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'mkernel'</script>
+    <script>kernelName = 'jupyter_matlab_kernel'</script>
 
                 </article>
               
