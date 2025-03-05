@@ -605,10 +605,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqvrt =
-v_R(t) == R*i_R(t)
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[eqvrt =v_R \left(t\right)=R\,i_R \left(t\right)\]</div>
 </div>
 </div>
 <p>The current flowing through the resistor is inversely proportional to the voltage across the resistor. This is easily confirmed by rewriting <a class="reference internal" href="#equation-eq-vrt">(18)</a> to isolate <span class="math notranslate nohighlight">\(i_R(t)\)</span></p>
@@ -619,10 +617,8 @@ v_R(t) == R*i_R(t)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqirt =
-i_R(t) == v_R(t)/R
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[eqirt =i_R \left(t\right)=\frac{v_R \left(t\right)}{R}\]</div>
 </div>
 </div>
 <p>Rewritten nicely as</p>
@@ -637,7 +633,7 @@ i_R(t) == v_R(t)/R
 \[V_R(s) = \frac{I_R(s)}{R}\]</div>
 <div class="math notranslate nohighlight">
 \[I_R(s) = RV_R(s)\]</div>
-<p><strong>-&gt; Open poll</strong></p>
+<p><strong>-&gt; Open poll Q1</strong></p>
 </section>
 <section id="in-the-complex-frequency-domain">
 <h4>In the complex frequency domain<a class="headerlink" href="#in-the-complex-frequency-domain" title="Link to this heading">#</a></h4>
@@ -685,10 +681,8 @@ i_R(t) == v_R(t)/R
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqvlt =
-v_L(t) == L*diff(i_L(t), t)
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[eqvlt =v_L \left(t\right)=L\,\frac{\partial }{\partial t}\;i_L \left(t\right)\]</div>
 </div>
 </div>
 <p>The current flowing through the inductor is inversely proportional to the integral of the voltage across the inductor which is easily confirmed by taking the integral of both sides of <a class="reference internal" href="#equation-eq-vlt">(22)</a> and rewriting the equation to isolate <span class="math notranslate nohighlight">\(i_L(t)\)</span></p>
@@ -700,10 +694,8 @@ v_L(t) == L*diff(i_L(t), t)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqilt =
-i_L(t) == int(v_L(t), t)/L
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[eqilt =i_L \left(t\right)=\frac{\int v_L \left(t\right)\;\textrm{d}t}{L}\]</div>
 </div>
 </div>
 <p>Rewritten nicely as</p>
@@ -718,7 +710,7 @@ i_L(t) == int(v_L(t), t)/L
 \[V_L(s) = sLI_L(s) - i_L(0^-)\]</div>
 <div class="math notranslate nohighlight">
 \[V_L(s)=\frac{I_L(s)}{sL} + \frac{i_L(0^-)}{s}\]</div>
-<p><strong>-&gt; Open poll</strong></p>
+<p><strong>-&gt; Open poll Q2</strong></p>
 </section>
 </section>
 <section id="complex-frequency-domain-model-of-an-inductive-network">
@@ -766,10 +758,8 @@ i_L(t) == int(v_L(t), t)/L
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqict =
-i_C(t) == C*diff(v_C(t), t)
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[eqict =i_C \left(t\right)=C\,\frac{\partial }{\partial t}\;v_C \left(t\right)\]</div>
 </div>
 </div>
 <p>The voltage across the capacitor is inversely proportional to the integral of the current flowing into the capacitor which is easily confirmed by taking the integral of both sides of <a class="reference internal" href="#equation-eq-ict">(26)</a> and rewriting the equation to isolate <span class="math notranslate nohighlight">\(v_C(t)\)</span></p>
@@ -781,10 +771,8 @@ i_C(t) == C*diff(v_C(t), t)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>eqvct =
-v_C(t) == int(i_C(t), t)/C
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[eqvct =v_C \left(t\right)=\frac{\int i_C \left(t\right)\;\textrm{d}t}{C}\]</div>
 </div>
 </div>
 <p>Which can be rwritten nicely as</p>
@@ -799,7 +787,7 @@ v_C(t) == int(i_C(t), t)/C
 \[V_c(s) = \frac{I_C(s)}{sC} + \frac{i_C(0^-)}{s}\]</div>
 <div class="math notranslate nohighlight">
 \[I_c(s)=\frac{V_C(s)}{sC} + \frac{v_C(0^-)}{s}\]</div>
-<p><strong>-&gt; Open poll</strong></p>
+<p><strong>-&gt; Open poll Q3</strong></p>
 </section>
 <section id="id6">
 <h4>In the complex frequency domain<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
@@ -853,7 +841,7 @@ v_C(t) == int(i_C(t), t)/C
 \[\frac{1}{sL}\]</div>
 <div class="math notranslate nohighlight">
 \[R\]</div>
-<p><strong>-&gt; Open Poll</strong></p>
+<p><strong>-&gt; Open Poll Q4</strong></p>
 <p>Consider the <span class="math notranslate nohighlight">\(s\)</span>-domain RLC series circuit shown in <a class="reference internal" href="#fig-complex-imp"><span class="std std-numref">Fig. 56</span></a>, where the initial conditions are assumed to be zero.</p>
 <figure class="align-default" id="fig-complex-imp">
 <a class="reference internal image-reference" href="../../_images/impedence.png"><img alt="RLC series circuit." src="../../_images/impedence.png" style="width: 60%;" />
@@ -905,7 +893,7 @@ v_C(t) == int(i_C(t), t)/C
 \[\frac{1}{sL}\]</div>
 <div class="math notranslate nohighlight">
 \[R\]</div>
-<p><strong>-&gt; Open Poll</strong></p>
+<p><strong>-&gt; Open Poll Q5</strong></p>
 <p>Consider the <span class="math notranslate nohighlight">\(s\)</span>-domain GLC parallel circuit shown in <a class="reference internal" href="#fig-comp-adm"><span class="std std-numref">Fig. 57</span></a> where the initial conditions are zero.</p>
 <figure class="align-default" id="fig-comp-adm">
 <a class="reference internal image-reference" href="../../_images/admittance.png"><img alt="A GLC parallel circuit" src="../../_images/admittance.png" style="width: 60%;" />
@@ -1274,16 +1262,16 @@ into a linear and a quadratic factor.</p>
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "mkernel"
+            mode: "jupyter_matlab_kernel"
         },
         kernelOptions: {
-            name: "mkernel",
+            name: "jupyter_matlab_kernel",
             path: "./laplace_transform/5"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'mkernel'</script>
+    <script>kernelName = 'jupyter_matlab_kernel'</script>
 
                 </article>
               
