@@ -7,9 +7,9 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.16.7
 kernelspec:
-  display_name: MKernel
+  display_name: MATLAB Kernel
   language: matlab
-  name: mkernel
+  name: jupyter_matlab_kernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -121,7 +121,7 @@ $$I_R(s) = RV_R(s)$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-**-> Open poll**
+**-> Open poll Q1**
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -215,7 +215,7 @@ $$V_L(s)=\frac{I_L(s)}{sL} + \frac{i_L(0^-)}{s}$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-**-> Open poll**
+**-> Open poll Q2**
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -310,7 +310,7 @@ $$I_c(s)=\frac{V_C(s)}{sC} + \frac{v_C(0^-)}{s}$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-**-> Open poll**
+**-> Open poll Q3**
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -382,7 +382,7 @@ $$R$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-**-> Open Poll**
+**-> Open Poll Q4**
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -467,7 +467,7 @@ $$R$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
-**-> Open Poll**
+**-> Open Poll Q5**
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
