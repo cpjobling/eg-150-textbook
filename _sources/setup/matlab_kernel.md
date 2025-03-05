@@ -57,7 +57,3 @@ disp(b)
 ```python
 print('Hello, world!')
 ```
-
-```matlab
-
-```

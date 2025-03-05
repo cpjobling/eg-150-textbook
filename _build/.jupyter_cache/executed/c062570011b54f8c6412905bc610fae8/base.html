@@ -1,0 +1,1225 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; EG-150 Signals and Systems</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_build/.jupyter_cache/executed/c062570011b54f8c6412905bc610fae8/base';</script>
+    <link rel="canonical" href="https://cpjobling.github.io/eg-150-textbook/_build/.jupyter_cache/executed/c062570011b54f8c6412905bc610fae8/base.html" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">EG-150 Signals and Systems</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../index.html">
+                    EG-150 Signals and Systems
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Online notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../introduction/index.html">Unit 1 Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction/intro.html">Unit 1.1 Setting the Scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction/thecourse.html">Unit 1.2 About this Course</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction/concepts.html">Unit 1.3 Introduction to the Concepts to be Studied</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../signals_and_systems/index.html">Unit 2 Signals and Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../signals_and_systems/signals/index.html">Unit 2.1 Signals and Classification of Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../signals_and_systems/signals/pep_signals.html">Unit 2.2 Periodic, Energy and Power Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../signals_and_systems/elementary_signals/index.html">Unit 2.3 Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../signals_and_systems/elementary_signals/examples3.html">Examples 3 - Elementary Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../signals_and_systems/systems/index.html">Unit 2.4 Systems and Classification of Systems</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../lti_systems/index.html">Unit 3 Linear Time-Invariant Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../lti_systems/lti1.html">Unit 3.1 Response of a Continuous-Time LTI System and the Convolution Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../lti_systems/lti2.html">Unit 3.2 Properties and Eigenfunctions of Continuous-Time LTI Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../lti_systems/lti3.html">Unit 3.3 Systems Described by Differential Equations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../laplace_transform/index.html">Unit 4 Laplace Transforms and their Applications</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../laplace_transform/1/laplace.html">Unit 4.1 The Laplace Transformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../laplace_transform/2/laplace_of_common_signals.html">Unit 4.2 Laplace Transform of Some Common Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../laplace_transform/3/laplace_properties.html">Unit 4.3 Properties of Laplace Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../laplace_transform/4/inverse_laplace.html">Unit 4.4 The Inverse Laplace Transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../laplace_transform/5/circuit_analysis.html">Unit 4.5 Using Laplace Transforms for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../laplace_transform/6/transfer_functions.html">Unit 4.6 Transfer Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../laplace_transform/7/tf_for_circuits.html">Unit 4.7 Transfer Functions for Circuit Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../laplace_transform/8/casas.html">Unit 4.8 Computer-Aided Systems Analysis and Simulation</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../poles_and_zeros/index.html">Unit 5 Pole-Zero Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../poles_and_zeros/qualitative_properties.html">Unit 5.1 Qualitative Properties of Signals and Transfer functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../poles_and_zeros/second_order_properties.html">Unit 5.2 More on the Qualitative and Quantitative Response of First- and Second-Order Poles</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../freq_resp/index.html">Unit 6 Frequency Response Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../freq_resp/tf_response.html">Unit 6.1: Frequency Response of a Transfer Function</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../../../freq_resp/bode_plots.html">Unit 6.2: Bode Plots</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../zbib.html">Bibliography</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../takeaways.html">Unit take aways</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../exercises.html">List of Unit Exercises</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../homework/index.html">Homework Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw1.html">Homework 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw2.html">Homework 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw3.html">Homework 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw4.html">Homework 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw5.html">Homework 5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw6.html">Homework 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw7.html">Homework 7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw8.html">Homework 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw9.html">Homework 9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../homework/hw10.html">Homework 10</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../laplace_transform/1/lt_props.html">Properties of the Laplace Transform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../laplace_transform/1/lt_table.html">Common Laplace Transform Pairs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/polling_setup.html">Set Up In-Class Polling</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../setup/index.html">Setting up your own version of this book</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../setup/jupyter.html">About Jupyter notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../setup/python.html">Installing Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../setup/setup.html">Setting up your Own Jupyter-MATLAB Computing Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../setup/matlab_kernel.html">Testing the Jupyter MATLAB Kernel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../setup/advanced-setup.html">Quick Start - For Experienced Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../setup/jupyter-book.html">Setting up jupyter-book</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/edit/master/_build/.jupyter_cache/executed/c062570011b54f8c6412905bc610fae8/base.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cpjobling/eg-150-textbook/issues/new?title=Issue%20on%20page%20%2F_build/.jupyter_cache/executed/c062570011b54f8c6412905bc610fae8/base.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/_build/.jupyter_cache/executed/c062570011b54f8c6412905bc610fae8/base.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_is_python_35</span><span class="p">():</span>
+    <span class="n">major</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="o">.</span><span class="n">major</span>
+    <span class="n">minor</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="o">.</span><span class="n">minor</span>
+    <span class="k">if</span> <span class="n">major</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">pass</span> 
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You are running Python </span><span class="si">{}</span><span class="s2">, but we need Python </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">major</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Download and install the Anaconda distribution for Python 3.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stopping here.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Let&#39;s stop here</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+        <span class="c1"># assert major == 3, &quot;Stopping here - we need Python 3.&quot;</span>
+
+    <span class="k">if</span> <span class="n">minor</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Testing Python version-&gt; py</span><span class="si">{}</span><span class="s2">.</span><span class="si">{}</span><span class="s2"> OK&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">major</span><span class="p">,</span> <span class="n">minor</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Warning: You should be running Python 3.5 or newer, &quot;</span> <span class="o">+</span>
+              <span class="s2">&quot;you have Python </span><span class="si">{}</span><span class="s2">.</span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">major</span><span class="p">,</span> <span class="n">minor</span><span class="p">))</span>
+        
+        
+<span class="k">def</span><span class="w"> </span><span class="nf">test_numpy</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Could not import numpy -&gt; numpy failed&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="c1"># Simple test</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Testing numpy...      -&gt; numpy OK&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_scipy</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Could not import &#39;scipy&#39; -&gt; scipy failed&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="c1"># Simple test</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">scipy.integrate</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">72.0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-6</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Testing scipy ...     -&gt; scipy OK&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_pylab</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Actually testing matplotlib, as pylab is part of matplotlib.&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">pylab</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Could not import &#39;matplotlib/pylab&#39; -&gt; failed&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">None</span>
+    <span class="c1"># Creata plot for testing purposes</span>
+    <span class="n">xvalues</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="mf">0.1</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+    <span class="n">yvalues</span> <span class="o">=</span> <span class="p">[</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xvalues</span><span class="p">]</span>
+    <span class="n">pylab</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xvalues</span><span class="p">,</span> <span class="n">yvalues</span><span class="p">,</span> <span class="s2">&quot;-o&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;sin(x)&quot;</span><span class="p">)</span>
+    <span class="n">pylab</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">pylab</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+    <span class="n">testfilename</span><span class="o">=</span><span class="s1">&#39;pylab-testfigure.png&#39;</span>
+
+    <span class="c1"># check that file does not exist yet:</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">testfilename</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Skipping plotting to file as file </span><span class="si">{}</span><span class="s2"> exists already.&quot;</span>\
+            <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">testfilename</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Write plot to file</span>
+        <span class="n">pylab</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">testfilename</span><span class="p">)</span>
+        <span class="c1"># Then check that file exists</span>
+        <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">testfilename</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Testing matplotlib... -&gt; pylab OK&quot;</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">testfilename</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_sympy</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Could not import &#39;sympy&#39; -&gt; fail&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">None</span>
+    <span class="c1"># simple test</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+    <span class="n">my_f</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="k">assert</span> <span class="n">sympy</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">my_f</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Testing sympy         -&gt; sympy OK&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_pytest</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Could not import &#39;pytest&#39; -&gt; fail&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">None</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Testing pytest        -&gt; pytest OK&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Running using Python </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version</span><span class="p">))</span>
+<span class="n">test_is_python_35</span><span class="p">()</span>
+<span class="n">test_numpy</span><span class="p">()</span>
+<span class="n">test_scipy</span><span class="p">()</span>
+<span class="n">test_pylab</span><span class="p">()</span>
+<span class="n">test_sympy</span><span class="p">()</span>
+<span class="n">test_pytest</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running using Python 3.12.8 (main, Jan 14 2025, 23:36:58) [Clang 19.1.6 ]
+Testing Python version-&gt; py3.12 OK
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Testing numpy...      -&gt; numpy OK
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Testing scipy ...     -&gt; scipy OK
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Testing matplotlib... -&gt; pylab OK
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Testing sympy         -&gt; sympy OK
+Testing pytest        -&gt; pytest OK
+</pre></div>
+</div>
+<img alt="../../../../_images/4af2196f28d3ff83c0613f14e711593451b8452e6a46b40d7a5aff5b2f67eb0c.png" src="../../../../_images/4af2196f28d3ff83c0613f14e711593451b8452e6a46b40d7a5aff5b2f67eb0c.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matlabroot</span><span class="o">=</span><span class="s1">&#39;/Applications/MATLAB_R2023b.app&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> {matlabroot}/extern/engines/python
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Errno 2] No such file or directory: &#39;/Applications/MATLAB_R2023b.app/extern/engines/python&#39;
+/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/setup
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matlabroot</span><span class="o">=</span><span class="s1">&#39;/mnt/c/Program\ Files/MATLAB/R2023a&#39;</span>
+<span class="o">%</span><span class="k">cd</span> {matlabroot}/extern/engines/python
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Errno 2] No such file or directory: &#39;/mnt/c/Program Files/MATLAB/R2023a/extern/engines/python&#39;
+/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/setup
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:1: SyntaxWarning: invalid escape sequence &#39;\ &#39;
+&lt;&gt;:1: SyntaxWarning: invalid escape sequence &#39;\ &#39;
+/var/folders/nr/qcbm4tg56d7_34s40jk00rg80000gn/T/ipykernel_44688/2768956452.py:1: SyntaxWarning: invalid escape sequence &#39;\ &#39;
+  matlabroot=&#39;/mnt/c/Program\ Files/MATLAB/R2023a&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matlabroot</span><span class="o">=</span><span class="s1">&#39;C:\Program Files\MATLAB\R202a&#39;</span>
+<span class="o">%</span><span class="k">cd</span> {matlabroot}\extern\engines\python
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Errno 2] No such file or directory: &#39;C:Program FilesMATLABR202aexternenginespython&#39;
+/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/setup
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:1: SyntaxWarning: invalid escape sequence &#39;\P&#39;
+&lt;&gt;:1: SyntaxWarning: invalid escape sequence &#39;\P&#39;
+/var/folders/nr/qcbm4tg56d7_34s40jk00rg80000gn/T/ipykernel_44688/946551368.py:1: SyntaxWarning: invalid escape sequence &#39;\P&#39;
+  matlabroot=&#39;C:\Program Files\MATLAB\R202a&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python<span class="w"> </span>--version
+<span class="c1">#%shell</span>
+<span class="o">!</span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>.<span class="w"> </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Python 3.12.8
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: Directory &#39;.&#39; is not installable. Neither &#39;setup.py&#39; nor &#39;pyproject.toml&#39; found.</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matlab.engine</span>
+<span class="n">eng</span> <span class="o">=</span> <span class="n">matlab</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">start_matlab</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eng</span> <span class="o">=</span> <span class="n">matlab</span><span class="o">.</span><span class="n">engine</span><span class="o">.</span><span class="n">connect_matlab</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">eng</span><span class="o">.</span><span class="n">magic</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[92.0,99.0,1.0,8.0,15.0,67.0,74.0,51.0,58.0,40.0],[98.0,80.0,7.0,14.0,16.0,73.0,55.0,57.0,64.0,41.0],[4.0,81.0,88.0,20.0,22.0,54.0,56.0,63.0,70.0,47.0],[85.0,87.0,19.0,21.0,3.0,60.0,62.0,69.0,71.0,28.0],[86.0,93.0,25.0,2.0,9.0,61.0,68.0,75.0,52.0,34.0],[17.0,24.0,76.0,83.0,90.0,42.0,49.0,26.0,33.0,65.0],[23.0,5.0,82.0,89.0,91.0,48.0,30.0,32.0,39.0,66.0],[79.0,6.0,13.0,95.0,97.0,29.0,31.0,38.0,45.0,72.0],[10.0,12.0,94.0,96.0,78.0,35.0,37.0,44.0,46.0,53.0],[11.0,18.0,100.0,77.0,84.0,36.0,43.0,50.0,27.0,59.0]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eng</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>jupyter-matlab-proxy
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">DEPRECATION: Loading egg at /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages/matlabengine-24.2-py3.12.egg is deprecated. pip 25.1 will enforce this behaviour change. A possible replacement is to use pip for package installation. Discussion can be found at https://github.com/pypa/pip/issues/12330</span>
+Requirement already satisfied: jupyter-matlab-proxy in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (0.16.3)
+Requirement already satisfied: aiohttp in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-matlab-proxy) (3.10.5)
+Requirement already satisfied: ipykernel in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-matlab-proxy) (6.29.5)
+Requirement already satisfied: jupyter-client in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-matlab-proxy) (8.6.3)
+Requirement already satisfied: jupyter-server-proxy&gt;=4.1.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-matlab-proxy) (4.4.0)
+Requirement already satisfied: matlab-proxy&gt;=0.23.3 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-matlab-proxy) (0.24.1)
+Requirement already satisfied: psutil in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-matlab-proxy) (7.0.0)
+Requirement already satisfied: requests in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-matlab-proxy) (2.32.3)
+Requirement already satisfied: jupyter-server&gt;=1.24.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (2.15.0)
+Requirement already satisfied: simpervisor&gt;=1.0.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (1.0.0)
+Requirement already satisfied: tornado&gt;=6.1.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (6.4.2)
+Requirement already satisfied: traitlets&gt;=5.1.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (5.14.3)
+Requirement already satisfied: aiohttp-session[secure] in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from matlab-proxy&gt;=0.23.3-&gt;jupyter-matlab-proxy) (2.12.1)
+Requirement already satisfied: importlib-metadata in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from matlab-proxy&gt;=0.23.3-&gt;jupyter-matlab-proxy) (8.6.1)
+Requirement already satisfied: importlib-resources in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from matlab-proxy&gt;=0.23.3-&gt;jupyter-matlab-proxy) (6.5.2)
+Requirement already satisfied: watchdog in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from matlab-proxy&gt;=0.23.3-&gt;jupyter-matlab-proxy) (6.0.0)
+Requirement already satisfied: aiohappyeyeballs&gt;=2.3.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from aiohttp-&gt;jupyter-matlab-proxy) (2.4.8)
+Requirement already satisfied: aiosignal&gt;=1.1.2 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from aiohttp-&gt;jupyter-matlab-proxy) (1.3.2)
+Requirement already satisfied: attrs&gt;=17.3.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from aiohttp-&gt;jupyter-matlab-proxy) (25.1.0)
+Requirement already satisfied: frozenlist&gt;=1.1.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from aiohttp-&gt;jupyter-matlab-proxy) (1.5.0)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from aiohttp-&gt;jupyter-matlab-proxy) (6.1.0)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from aiohttp-&gt;jupyter-matlab-proxy) (1.18.3)
+Requirement already satisfied: appnope in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipykernel-&gt;jupyter-matlab-proxy) (0.1.4)
+Requirement already satisfied: comm&gt;=0.1.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipykernel-&gt;jupyter-matlab-proxy) (0.2.2)
+Requirement already satisfied: debugpy&gt;=1.6.5 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipykernel-&gt;jupyter-matlab-proxy) (1.8.12)
+Requirement already satisfied: ipython&gt;=7.23.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipykernel-&gt;jupyter-matlab-proxy) (9.0.1)
+Requirement already satisfied: jupyter-core!=5.0.*,&gt;=4.12 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipykernel-&gt;jupyter-matlab-proxy) (5.7.2)
+Requirement already satisfied: matplotlib-inline&gt;=0.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipykernel-&gt;jupyter-matlab-proxy) (0.1.7)
+Requirement already satisfied: nest-asyncio in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipykernel-&gt;jupyter-matlab-proxy) (1.6.0)
+Requirement already satisfied: packaging in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipykernel-&gt;jupyter-matlab-proxy) (24.2)
+Requirement already satisfied: pyzmq&gt;=24 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipykernel-&gt;jupyter-matlab-proxy) (26.2.1)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-client-&gt;jupyter-matlab-proxy) (2.9.0.post0)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from requests-&gt;jupyter-matlab-proxy) (3.4.1)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from requests-&gt;jupyter-matlab-proxy) (3.10)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from requests-&gt;jupyter-matlab-proxy) (2.3.0)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from requests-&gt;jupyter-matlab-proxy) (2025.1.31)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: decorator in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-matlab-proxy) (5.2.1)
+Requirement already satisfied: ipython-pygments-lexers in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-matlab-proxy) (1.1.1)
+Requirement already satisfied: jedi&gt;=0.16 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-matlab-proxy) (0.19.2)
+Requirement already satisfied: pexpect&gt;4.3 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-matlab-proxy) (4.9.0)
+Requirement already satisfied: prompt_toolkit&lt;3.1.0,&gt;=3.0.41 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-matlab-proxy) (3.0.50)
+Requirement already satisfied: pygments&gt;=2.4.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-matlab-proxy) (2.19.1)
+Requirement already satisfied: stack_data in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-matlab-proxy) (0.6.3)
+Requirement already satisfied: platformdirs&gt;=2.5 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-core!=5.0.*,&gt;=4.12-&gt;ipykernel-&gt;jupyter-matlab-proxy) (4.2.2)
+Requirement already satisfied: anyio&gt;=3.1.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (4.8.0)
+Requirement already satisfied: argon2-cffi&gt;=21.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (23.1.0)
+Requirement already satisfied: jinja2&gt;=3.0.3 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (3.1.5)
+Requirement already satisfied: jupyter-events&gt;=0.11.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (0.12.0)
+Requirement already satisfied: jupyter-server-terminals&gt;=0.4.4 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (0.5.3)
+Requirement already satisfied: nbconvert&gt;=6.4.4 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (7.16.6)
+Requirement already satisfied: nbformat&gt;=5.3.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (5.10.4)
+Requirement already satisfied: overrides&gt;=5.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (7.7.0)
+Requirement already satisfied: prometheus-client&gt;=0.9 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (0.21.1)
+Requirement already satisfied: send2trash&gt;=1.8.2 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (1.8.3)
+Requirement already satisfied: terminado&gt;=0.8.3 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (0.18.1)
+Requirement already satisfied: websocket-client&gt;=1.7 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (1.8.0)
+Requirement already satisfied: six&gt;=1.5 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from python-dateutil&gt;=2.8.2-&gt;jupyter-client-&gt;jupyter-matlab-proxy) (1.17.0)
+Requirement already satisfied: propcache&gt;=0.2.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;jupyter-matlab-proxy) (0.3.0)
+Requirement already satisfied: cryptography in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from aiohttp-session[secure]-&gt;matlab-proxy&gt;=0.23.3-&gt;jupyter-matlab-proxy) (44.0.2)
+Requirement already satisfied: zipp&gt;=3.20 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from importlib-metadata-&gt;matlab-proxy&gt;=0.23.3-&gt;jupyter-matlab-proxy) (3.21.0)
+Requirement already satisfied: sniffio&gt;=1.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from anyio&gt;=3.1.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (1.3.1)
+Requirement already satisfied: typing_extensions&gt;=4.5 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from anyio&gt;=3.1.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (4.12.2)
+Requirement already satisfied: argon2-cffi-bindings in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from argon2-cffi&gt;=21.1-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (21.2.0)
+Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.4 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jedi&gt;=0.16-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-matlab-proxy) (0.8.4)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jinja2&gt;=3.0.3-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (3.0.2)
+Requirement already satisfied: jsonschema&gt;=4.18.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (4.23.0)
+Requirement already satisfied: python-json-logger&gt;=2.0.4 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-events&gt;=0.11.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (3.2.1)
+Requirement already satisfied: pyyaml&gt;=5.3 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-events&gt;=0.11.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (6.0.2)
+Requirement already satisfied: referencing in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-events&gt;=0.11.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (0.36.2)
+Requirement already satisfied: rfc3339-validator in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-events&gt;=0.11.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (0.1.4)
+Requirement already satisfied: rfc3986-validator&gt;=0.1.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-events&gt;=0.11.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (0.1.1)
+Requirement already satisfied: beautifulsoup4 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (4.13.3)
+Requirement already satisfied: bleach!=5.0.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from bleach[css]!=5.0.0-&gt;nbconvert&gt;=6.4.4-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (6.2.0)
+Requirement already satisfied: defusedxml in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (0.7.1)
+Requirement already satisfied: jupyterlab-pygments in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (0.3.0)
+Requirement already satisfied: mistune&lt;4,&gt;=2.0.3 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (3.1.2)
+Requirement already satisfied: nbclient&gt;=0.5.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (0.10.2)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (1.5.1)
+Requirement already satisfied: fastjsonschema&gt;=2.15 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from nbformat&gt;=5.3.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (2.21.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: ptyprocess&gt;=0.5 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from pexpect&gt;4.3-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-matlab-proxy) (0.7.0)
+Requirement already satisfied: wcwidth in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from prompt_toolkit&lt;3.1.0,&gt;=3.0.41-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-matlab-proxy) (0.2.13)
+Requirement already satisfied: cffi&gt;=1.12 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from cryptography-&gt;aiohttp-session[secure]-&gt;matlab-proxy&gt;=0.23.3-&gt;jupyter-matlab-proxy) (1.17.1)
+Requirement already satisfied: executing&gt;=1.2.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from stack_data-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-matlab-proxy) (2.2.0)
+Requirement already satisfied: asttokens&gt;=2.1.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from stack_data-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-matlab-proxy) (3.0.0)
+Requirement already satisfied: pure-eval in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from stack_data-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter-matlab-proxy) (0.2.3)
+Requirement already satisfied: webencodings in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from bleach!=5.0.0-&gt;bleach[css]!=5.0.0-&gt;nbconvert&gt;=6.4.4-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (0.5.1)
+Requirement already satisfied: tinycss2&lt;1.5,&gt;=1.1.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from bleach[css]!=5.0.0-&gt;nbconvert&gt;=6.4.4-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (1.4.0)
+Requirement already satisfied: pycparser in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from cffi&gt;=1.12-&gt;cryptography-&gt;aiohttp-session[secure]-&gt;matlab-proxy&gt;=0.23.3-&gt;jupyter-matlab-proxy) (2.22)
+Requirement already satisfied: jsonschema-specifications&gt;=2023.03.6 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema&gt;=4.18.0-&gt;jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (2024.10.1)
+Requirement already satisfied: rpds-py&gt;=0.7.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema&gt;=4.18.0-&gt;jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (0.23.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: fqdn in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (1.5.1)
+Requirement already satisfied: isoduration in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (20.11.0)
+Requirement already satisfied: jsonpointer&gt;1.13 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (3.0.0)
+Requirement already satisfied: uri-template in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (1.3.0)
+Requirement already satisfied: webcolors&gt;=24.6.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (24.11.1)
+Requirement already satisfied: soupsieve&gt;1.2 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from beautifulsoup4-&gt;nbconvert&gt;=6.4.4-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (2.6)
+Requirement already satisfied: arrow&gt;=0.15.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from isoduration-&gt;jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (1.3.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: types-python-dateutil&gt;=2.8.10 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from arrow&gt;=0.15.0-&gt;isoduration-&gt;jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&gt;=1.24.0-&gt;jupyter-server-proxy&gt;=4.1.0-&gt;jupyter-matlab-proxy) (2.9.0.20241206)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;jupyterlab&gt;=3.0.0,&lt;4.0.0a0&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">DEPRECATION: Loading egg at /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages/matlabengine-24.2-py3.12.egg is deprecated. pip 25.1 will enforce this behaviour change. A possible replacement is to use pip for package installation. Discussion can be found at https://github.com/pypa/pip/issues/12330</span>
+
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting jupyterlab&lt;4.0.0a0,&gt;=3.0.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading jupyterlab-3.6.8-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: ipython in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (9.0.1)
+Requirement already satisfied: packaging in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (24.2)
+Requirement already satisfied: tornado&gt;=6.1.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (6.4.2)
+Requirement already satisfied: jupyter-core in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (5.7.2)
+Requirement already satisfied: jupyterlab-server~=2.19 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (2.27.3)
+Requirement already satisfied: jupyter-server&lt;3,&gt;=1.16.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (2.15.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting jupyter-ydoc~=0.2.4 (from jupyterlab&lt;4.0.0a0,&gt;=3.0.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading jupyter_ydoc-0.2.5-py3-none-any.whl.metadata (2.2 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting jupyter-server-ydoc~=0.8.0 (from jupyterlab&lt;4.0.0a0,&gt;=3.0.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading jupyter_server_ydoc-0.8.0-py3-none-any.whl.metadata (5.3 kB)
+Requirement already satisfied: nbclassic in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (1.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting notebook&lt;7 (from jupyterlab&lt;4.0.0a0,&gt;=3.0.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading notebook-6.5.7-py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: jinja2&gt;=2.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (3.1.5)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jinja2&gt;=2.1-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (3.0.2)
+Requirement already satisfied: anyio&gt;=3.1.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (4.8.0)
+Requirement already satisfied: argon2-cffi&gt;=21.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (23.1.0)
+Requirement already satisfied: jupyter-client&gt;=7.4.4 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (8.6.3)
+Requirement already satisfied: jupyter-events&gt;=0.11.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.12.0)
+Requirement already satisfied: jupyter-server-terminals&gt;=0.4.4 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.5.3)
+Requirement already satisfied: nbconvert&gt;=6.4.4 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (7.16.6)
+Requirement already satisfied: nbformat&gt;=5.3.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (5.10.4)
+Requirement already satisfied: overrides&gt;=5.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (7.7.0)
+Requirement already satisfied: prometheus-client&gt;=0.9 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.21.1)
+Requirement already satisfied: pyzmq&gt;=24 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (26.2.1)
+Requirement already satisfied: send2trash&gt;=1.8.2 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (1.8.3)
+Requirement already satisfied: terminado&gt;=0.8.3 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.18.1)
+Requirement already satisfied: traitlets&gt;=5.6.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (5.14.3)
+Requirement already satisfied: websocket-client&gt;=1.7 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (1.8.0)
+Requirement already satisfied: platformdirs&gt;=2.5 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-core-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (4.2.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting jupyter-server-fileid&lt;1,&gt;=0.6.0 (from jupyter-server-ydoc~=0.8.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading jupyter_server_fileid-0.9.3-py3-none-any.whl.metadata (4.7 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting ypy-websocket&lt;0.9.0,&gt;=0.8.2 (from jupyter-server-ydoc~=0.8.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading ypy_websocket-0.8.4-py3-none-any.whl.metadata (2.5 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting y-py&lt;0.7.0,&gt;=0.6.0 (from jupyter-ydoc~=0.2.4-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading y_py-0.6.2-cp312-cp312-macosx_10_9_x86_64.macosx_11_0_arm64.macosx_10_9_universal2.whl.metadata (5.6 kB)
+Requirement already satisfied: babel&gt;=2.10 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyterlab-server~=2.19-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (2.17.0)
+Requirement already satisfied: json5&gt;=0.9.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyterlab-server~=2.19-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.10.0)
+Requirement already satisfied: jsonschema&gt;=4.18.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyterlab-server~=2.19-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (4.23.0)
+Requirement already satisfied: requests&gt;=2.31 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyterlab-server~=2.19-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (2.32.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting jupyter-client&gt;=7.4.4 (from jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading jupyter_client-7.4.9-py3-none-any.whl.metadata (8.5 kB)
+Requirement already satisfied: ipython-genutils in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from notebook&lt;7-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.2.0)
+Requirement already satisfied: nest-asyncio&gt;=1.5 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from notebook&lt;7-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (1.6.0)
+Requirement already satisfied: ipykernel in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from notebook&lt;7-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (6.29.5)
+Requirement already satisfied: notebook-shim&gt;=0.2.3 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from nbclassic-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.2.4)
+Requirement already satisfied: decorator in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipython-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (5.2.1)
+Requirement already satisfied: ipython-pygments-lexers in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipython-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (1.1.1)
+Requirement already satisfied: jedi&gt;=0.16 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipython-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.19.2)
+Requirement already satisfied: matplotlib-inline in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipython-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.1.7)
+Requirement already satisfied: pexpect&gt;4.3 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipython-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (4.9.0)
+Requirement already satisfied: prompt_toolkit&lt;3.1.0,&gt;=3.0.41 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipython-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (3.0.50)
+Requirement already satisfied: pygments&gt;=2.4.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipython-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (2.19.1)
+Requirement already satisfied: stack_data in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipython-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.6.3)
+Requirement already satisfied: idna&gt;=2.8 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from anyio&gt;=3.1.0-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (3.10)
+Requirement already satisfied: sniffio&gt;=1.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from anyio&gt;=3.1.0-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (1.3.1)
+Requirement already satisfied: typing_extensions&gt;=4.5 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from anyio&gt;=3.1.0-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (4.12.2)
+Requirement already satisfied: argon2-cffi-bindings in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from argon2-cffi&gt;=21.1-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (21.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.4 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jedi&gt;=0.16-&gt;ipython-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.8.4)
+Requirement already satisfied: attrs&gt;=22.2.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema&gt;=4.18.0-&gt;jupyterlab-server~=2.19-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (25.1.0)
+Requirement already satisfied: jsonschema-specifications&gt;=2023.03.6 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema&gt;=4.18.0-&gt;jupyterlab-server~=2.19-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (2024.10.1)
+Requirement already satisfied: referencing&gt;=0.28.4 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema&gt;=4.18.0-&gt;jupyterlab-server~=2.19-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.36.2)
+Requirement already satisfied: rpds-py&gt;=0.7.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema&gt;=4.18.0-&gt;jupyterlab-server~=2.19-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.23.1)
+Collecting entrypoints (from jupyter-client&gt;=7.4.4-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading entrypoints-0.4-py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-client&gt;=7.4.4-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (2.9.0.post0)
+Requirement already satisfied: python-json-logger&gt;=2.0.4 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (3.2.1)
+Requirement already satisfied: pyyaml&gt;=5.3 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (6.0.2)
+Requirement already satisfied: rfc3339-validator in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.1.4)
+Requirement already satisfied: rfc3986-validator&gt;=0.1.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.1.1)
+Requirement already satisfied: beautifulsoup4 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (4.13.3)
+Requirement already satisfied: bleach!=5.0.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from bleach[css]!=5.0.0-&gt;nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (6.2.0)
+Requirement already satisfied: defusedxml in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.7.1)
+Requirement already satisfied: jupyterlab-pygments in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.3.0)
+Requirement already satisfied: mistune&lt;4,&gt;=2.0.3 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (3.1.2)
+Requirement already satisfied: nbclient&gt;=0.5.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.10.2)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (1.5.1)
+Requirement already satisfied: fastjsonschema&gt;=2.15 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from nbformat&gt;=5.3.0-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (2.21.1)
+Requirement already satisfied: ptyprocess&gt;=0.5 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from pexpect&gt;4.3-&gt;ipython-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.7.0)
+Requirement already satisfied: wcwidth in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from prompt_toolkit&lt;3.1.0,&gt;=3.0.41-&gt;ipython-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.2.13)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from requests&gt;=2.31-&gt;jupyterlab-server~=2.19-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (3.4.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from requests&gt;=2.31-&gt;jupyterlab-server~=2.19-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (2.3.0)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from requests&gt;=2.31-&gt;jupyterlab-server~=2.19-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (2025.1.31)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting aiofiles&lt;23,&gt;=22.1.0 (from ypy-websocket&lt;0.9.0,&gt;=0.8.2-&gt;jupyter-server-ydoc~=0.8.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0)
+  Downloading aiofiles-22.1.0-py3-none-any.whl.metadata (8.0 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting aiosqlite&lt;1,&gt;=0.17.0 (from ypy-websocket&lt;0.9.0,&gt;=0.8.2-&gt;jupyter-server-ydoc~=0.8.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0)
+  Downloading aiosqlite-0.21.0-py3-none-any.whl.metadata (4.3 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: appnope in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipykernel-&gt;notebook&lt;7-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.1.4)
+Requirement already satisfied: comm&gt;=0.1.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipykernel-&gt;notebook&lt;7-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.2.2)
+Requirement already satisfied: debugpy&gt;=1.6.5 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipykernel-&gt;notebook&lt;7-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (1.8.12)
+Requirement already satisfied: psutil in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from ipykernel-&gt;notebook&lt;7-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (7.0.0)
+Requirement already satisfied: executing&gt;=1.2.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from stack_data-&gt;ipython-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (2.2.0)
+Requirement already satisfied: asttokens&gt;=2.1.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from stack_data-&gt;ipython-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (3.0.0)
+Requirement already satisfied: pure-eval in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from stack_data-&gt;ipython-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.2.3)
+Requirement already satisfied: webencodings in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from bleach!=5.0.0-&gt;bleach[css]!=5.0.0-&gt;nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (0.5.1)
+Requirement already satisfied: tinycss2&lt;1.5,&gt;=1.1.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from bleach[css]!=5.0.0-&gt;nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (1.4.0)
+Requirement already satisfied: fqdn in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (1.5.1)
+Requirement already satisfied: isoduration in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (20.11.0)
+Requirement already satisfied: jsonpointer&gt;1.13 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (3.0.0)
+Requirement already satisfied: uri-template in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (1.3.0)
+Requirement already satisfied: webcolors&gt;=24.6.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (24.11.1)
+Requirement already satisfied: six&gt;=1.5 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from python-dateutil&gt;=2.8.2-&gt;jupyter-client&gt;=7.4.4-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (1.17.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cffi&gt;=1.0.1 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from argon2-cffi-bindings-&gt;argon2-cffi&gt;=21.1-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (1.17.1)
+Requirement already satisfied: soupsieve&gt;1.2 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from beautifulsoup4-&gt;nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (2.6)
+Requirement already satisfied: pycparser in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from cffi&gt;=1.0.1-&gt;argon2-cffi-bindings-&gt;argon2-cffi&gt;=21.1-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (2.22)
+Requirement already satisfied: arrow&gt;=0.15.0 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from isoduration-&gt;jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (1.3.0)
+Requirement already satisfied: types-python-dateutil&gt;=2.8.10 in /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/.venv/lib/python3.12/site-packages (from arrow&gt;=0.15.0-&gt;isoduration-&gt;jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=1.16.0-&gt;jupyterlab&lt;4.0.0a0,&gt;=3.0.0) (2.9.0.20241206)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading jupyterlab-3.6.8-py3-none-any.whl (8.9 MB)
+?25l   <span class=" -Color -Color-C237">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">0.0/8.9 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━<span class=" -Color -Color-C237">╺━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">2.9/8.9 MB</span> <span class=" -Color -Color-Red">21.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   <span class=" -Color -Color-Red">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">8.9/8.9 MB</span> <span class=" -Color -Color-Red">29.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hDownloading jupyter_server_ydoc-0.8.0-py3-none-any.whl (11 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading jupyter_ydoc-0.2.5-py3-none-any.whl (6.2 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading notebook-6.5.7-py3-none-any.whl (529 kB)
+?25l   <span class=" -Color -Color-C237">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">0.0/529.8 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+   <span class=" -Color -Color-Red">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">529.8/529.8 kB</span> <span class=" -Color -Color-Red">16.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading jupyter_client-7.4.9-py3-none-any.whl (133 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading jupyter_server_fileid-0.9.3-py3-none-any.whl (16 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading y_py-0.6.2-cp312-cp312-macosx_10_9_x86_64.macosx_11_0_arm64.macosx_10_9_universal2.whl (1.5 MB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25l   <span class=" -Color -Color-C237">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">0.0/1.5 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   <span class=" -Color -Color-Red">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">1.5/1.5 MB</span> <span class=" -Color -Color-Red">11.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hDownloading ypy_websocket-0.8.4-py3-none-any.whl (10 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading aiofiles-22.1.0-py3-none-any.whl (14 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading aiosqlite-0.21.0-py3-none-any.whl (15 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading entrypoints-0.4-py3-none-any.whl (5.3 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: y-py, jupyter-ydoc, entrypoints, aiosqlite, aiofiles, ypy-websocket, jupyter-client, jupyter-server-fileid, jupyter-server-ydoc, notebook, jupyterlab
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Attempting uninstall: jupyter-client
+    Found existing installation: jupyter_client 8.6.3
+    Uninstalling jupyter_client-8.6.3:
+      Successfully uninstalled jupyter_client-8.6.3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Attempting uninstall: notebook
+    Found existing installation: notebook 7.3.2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    Uninstalling notebook-7.3.2:
+      Successfully uninstalled notebook-7.3.2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Attempting uninstall: jupyterlab
+    Found existing installation: jupyterlab 4.3.5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    Uninstalling jupyterlab-4.3.5:
+      Successfully uninstalled jupyterlab-4.3.5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed aiofiles-22.1.0 aiosqlite-0.21.0 entrypoints-0.4 jupyter-client-7.4.9 jupyter-server-fileid-0.9.3 jupyter-server-ydoc-0.8.0 jupyter-ydoc-0.2.5 jupyterlab-3.6.8 notebook-6.5.7 y-py-0.6.2 ypy-websocket-0.8.4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">magic</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.youtube.com/embed/HW29067qVWk&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe width="560" height="315" src="https://www.youtube.com/embed/HW29067qVWk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./_build/.jupyter_cache/executed/c062570011b54f8c6412905bc610fae8"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr Chris P. Jobling
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright Swansea University (2023-2025).
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  This page was created by 
+<a href="https://www.swansea.ac.uk/staff/c.p.jobling/" />
+  Dr Chris P. Jobling
+</a> 
+for 
+<a href="https://www.swansea.ac.uk">
+  Swansea University
+</a>.
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

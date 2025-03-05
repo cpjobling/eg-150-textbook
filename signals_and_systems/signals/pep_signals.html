@@ -577,7 +577,7 @@ t &amp; 0\le t\le 1\\
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d2c9c1e9df1cf3b261ae6213479ade6e6d8342769fe02f6e7b2b0de1d71a6fba.png" src="../../_images/d2c9c1e9df1cf3b261ae6213479ade6e6d8342769fe02f6e7b2b0de1d71a6fba.png" />
+<img alt="../../_images/8dd847ec823be702f6a7d6ff881e8ce3839a4902741d1a9036cf2104c12afa42.png" src="../../_images/8dd847ec823be702f6a7d6ff881e8ce3839a4902741d1a9036cf2104c12afa42.png" />
 </div>
 </div>
 <p>One period earlier:</p>
@@ -590,13 +590,8 @@ t &amp; 0\le t\le 1\\
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-signal1 =
- 
-(t + 1)*(heaviside(t + 1) - heaviside(t))
- 
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[signal1 ={\left(t+1\right)}\,{\left(\textrm{heaviside}\left(t+1\right)-\textrm{heaviside}\left(t\right)\right)}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -606,7 +601,7 @@ signal1 =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/f38bb1201beabc8b547037178545de1251223916f522d53cdf0fab375e70bf82.png" src="../../_images/f38bb1201beabc8b547037178545de1251223916f522d53cdf0fab375e70bf82.png" />
+<img alt="../../_images/61f6e65dcdad166342be74dafa334506052a293e3280e8700fb10c814681ae6e.png" src="../../_images/61f6e65dcdad166342be74dafa334506052a293e3280e8700fb10c814681ae6e.png" />
 </div>
 </div>
 <p>Two periods later:</p>
@@ -619,13 +614,8 @@ signal1 =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-signal2 =
- 
-(heaviside(t - 2) - heaviside(t - 3))*(t - 2)
- 
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[signal2 ={\left(\textrm{heaviside}\left(t-2\right)-\textrm{heaviside}\left(t-3\right)\right)}\,{\left(t-2\right)}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -635,7 +625,7 @@ signal2 =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/31a189c5fc3bbf9b009f2dcd8866da487b45e96d0f8466cd9ea0c17553c880d0.png" src="../../_images/31a189c5fc3bbf9b009f2dcd8866da487b45e96d0f8466cd9ea0c17553c880d0.png" />
+<img alt="../../_images/51b3b85a655578f04c0567d0b65b5af37eb8543b05a274a9e352986a71f7ea8e.png" src="../../_images/51b3b85a655578f04c0567d0b65b5af37eb8543b05a274a9e352986a71f7ea8e.png" />
 </div>
 </div>
 <p>It follows that</p>
@@ -654,13 +644,8 @@ signal2 =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
-periodic_signal =
- 
-(t + 1)*(heaviside(t + 1) - heaviside(t)) + (heaviside(t - 1) - heaviside(t - 2))*(t - 1) - (heaviside(t + 1) - heaviside(t + 2))*(t + 2) + (heaviside(t - 2) - heaviside(t - 3))*(t - 2) - (heaviside(t + 2) - heaviside(t + 3))*(t + 3) + (heaviside(t - 3) - heaviside(t - 4))*(t - 3) - (heaviside(t + 3) - heaviside(t + 4))*(t + 4) + (heaviside(t - 4) - heaviside(t - 5))*(t - 4) - (heaviside(t + 4) - heaviside(t + 5))*(t + 5) + (heaviside(t - 5) - heaviside(t - 6))*(t - 5) - t*(heaviside(t - 1) - heaviside(t))
- 
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[periodic_signal ={\left(t+1\right)}\,{\left(\textrm{heaviside}\left(t+1\right)-\textrm{heaviside}\left(t\right)\right)}+{\left(\textrm{heaviside}\left(t-1\right)-\textrm{heaviside}\left(t-2\right)\right)}\,{\left(t-1\right)}-{\left(\textrm{heaviside}\left(t+1\right)-\textrm{heaviside}\left(t+2\right)\right)}\,{\left(t+2\right)}+{\left(\textrm{heaviside}\left(t-2\right)-\textrm{heaviside}\left(t-3\right)\right)}\,{\left(t-2\right)}-{\left(\textrm{heaviside}\left(t+2\right)-\textrm{heaviside}\left(t+3\right)\right)}\,{\left(t+3\right)}+{\left(\textrm{heaviside}\left(t-3\right)-\textrm{heaviside}\left(t-4\right)\right)}\,{\left(t-3\right)}-{\left(\textrm{heaviside}\left(t+3\right)-\textrm{heaviside}\left(t+4\right)\right)}\,{\left(t+4\right)}+{\left(\textrm{heaviside}\left(t-4\right)-\textrm{heaviside}\left(t-5\right)\right)}\,{\left(t-4\right)}-{\left(\textrm{heaviside}\left(t+4\right)-\textrm{heaviside}\left(t+5\right)\right)}\,{\left(t+5\right)}+{\left(\textrm{heaviside}\left(t-5\right)-\textrm{heaviside}\left(t-6\right)\right)}\,{\left(t-5\right)}-t\,{\left(\textrm{heaviside}\left(t-1\right)-\textrm{heaviside}\left(t\right)\right)}\]</div>
 </div>
 </div>
 <p>Now we plot the result</p>
@@ -674,7 +659,7 @@ periodic_signal =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/cd17bff57112aa65f05cccad825604a54c8b203ab521cebcefaad930a997cc66.png" src="../../_images/cd17bff57112aa65f05cccad825604a54c8b203ab521cebcefaad930a997cc66.png" />
+<img alt="../../_images/5fc97e1a96fdc78f8e39508746883483ef1b0332ba82a21e96cdb3ba2117143f.png" src="../../_images/5fc97e1a96fdc78f8e39508746883483ef1b0332ba82a21e96cdb3ba2117143f.png" />
 </div>
 </div>
 </section>
@@ -948,16 +933,16 @@ periodic_signal =
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "mkernel"
+            mode: "jupyter_matlab_kernel"
         },
         kernelOptions: {
-            name: "mkernel",
+            name: "jupyter_matlab_kernel",
             path: "./signals_and_systems/signals"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'mkernel'</script>
+    <script>kernelName = 'jupyter_matlab_kernel'</script>
 
                 </article>
               
