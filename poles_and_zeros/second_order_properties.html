@@ -617,7 +617,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/169bfc6bdea11ba54b2ab46aca1301f369e38a48a7d7f25dd55e1ba49f2df36f.png" src="../_images/169bfc6bdea11ba54b2ab46aca1301f369e38a48a7d7f25dd55e1ba49f2df36f.png" />
+<img alt="../_images/7508bbee44187a6d12114b9fe496e2b77b8b520b8154a070cf95ef27b82cde63.png" src="../_images/7508bbee44187a6d12114b9fe496e2b77b8b520b8154a070cf95ef27b82cde63.png" />
 </div>
 </div>
 <p>Given that <span class="math notranslate nohighlight">\(\sigma = 0.1\)</span>, the doubling time <span class="math notranslate nohighlight">\(T \approx 0.7/\sigma = 7\)</span> s. The initial value is <span class="math notranslate nohighlight">\(10\)</span> at <span class="math notranslate nohighlight">\(t=0\)</span> s. It has doubled to <span class="math notranslate nohighlight">\(20\)</span> at <span class="math notranslate nohighlight">\(t\approx 7\)</span> s, and has doubled again to <span class="math notranslate nohighlight">\(40\)</span> at <span class="math notranslate nohighlight">\(t\approx 14\)</span>.</p>
@@ -694,7 +694,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/69c0ada7f518dc382cf40a342908ee0f65cc6115182b4312dcb7fc11a2e912d9.png" src="../_images/69c0ada7f518dc382cf40a342908ee0f65cc6115182b4312dcb7fc11a2e912d9.png" />
+<img alt="../_images/bd7d47786482492a44ea02fa096d4bb351aca64ebe776950ecc3591f7238a3ca.png" src="../_images/bd7d47786482492a44ea02fa096d4bb351aca64ebe776950ecc3591f7238a3ca.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this result is given in <a class="reference download internal" download="" href="../_downloads/b2296fa173d1562d6258c6ffcbe8592d/example8.mlx"><span class="xref download myst">example8.mlx</span></a></p>
@@ -771,10 +771,8 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Y(s) =
-K/(omega_n^2 + 2*zeta*omega_n*s + s^2)
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[Y(s) =\frac{K}{{\omega_n }^2 +2\,\zeta \,\omega_n \,s+s^2 }\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -869,7 +867,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e5c29f5b834e26e7e08b67aad97a31519a4e4e87a91d154348b641f43f085974.png" src="../_images/e5c29f5b834e26e7e08b67aad97a31519a4e4e87a91d154348b641f43f085974.png" />
+<img alt="../_images/985859f2aa34f1acd10f53cad5ce7aca6691d3f27f2a3f53f6b996220d06e360.png" src="../_images/985859f2aa34f1acd10f53cad5ce7aca6691d3f27f2a3f53f6b996220d06e360.png" />
 </div>
 </div>
 <p>Confirming the result with <a class="reference internal" href="#equation-eq-unit5-1-2">(61)</a> we get:</p>
@@ -894,7 +892,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/51284d522df4fbb82f916ea95e1ea4d2925cad616b173e22cf7c338b52ca3d59.png" src="../_images/51284d522df4fbb82f916ea95e1ea4d2925cad616b173e22cf7c338b52ca3d59.png" />
+<img alt="../_images/ed16a956505f17fe0239a73689666f00ed4277526544fd79f2a38fecc288b1f5.png" src="../_images/ed16a956505f17fe0239a73689666f00ed4277526544fd79f2a38fecc288b1f5.png" />
 </div>
 </div>
 <p>Using the <code class="docutils literal notranslate"><span class="pre">tf</span></code> and <code class="docutils literal notranslate"><span class="pre">step</span></code> functions we get:</p>
@@ -906,13 +904,34 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hs =
- 
-        100
-  ----------------
-  s^2 + 10 s + 100
- 
-Continuous-time transfer function.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hs
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        100
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  ----------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + 10 s + 100
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -924,7 +943,7 @@ Continuous-time transfer function.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/26a0a6a0fe328092d6bc04a61d66c14be11f6e4f43f530daa42ed8184c04f0f8.png" src="../_images/26a0a6a0fe328092d6bc04a61d66c14be11f6e4f43f530daa42ed8184c04f0f8.png" />
+<img alt="../_images/ea63e3b71f438cddd5bd51b38efdb824758e7fd2e54f5f2461e968a85919b15c.png" src="../_images/ea63e3b71f438cddd5bd51b38efdb824758e7fd2e54f5f2461e968a85919b15c.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this result is given in <a class="reference download internal" download="" href="../_downloads/3ba053ad62f7b263884af00ba1ace7eb/example9.mlx"><span class="xref download myst">example9.mlx</span></a></p>
@@ -957,10 +976,8 @@ Continuous-time transfer function.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>H =
-100/(s^2 + 10*s + 100)
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[H =\frac{100}{s^2 +10\,s+100}\]</div>
 </div>
 </div>
 <p>Find the poles symbolically</p>
@@ -972,10 +989,10 @@ Continuous-time transfer function.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sym_poles =
-[s + 5 + 3^(1/2)*5i, s + 5 - 3^(1/2)*5i]
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[sym_poles =\left(\begin{array}{cc}
+s+5+5\,\sqrt{3}\,\mathrm{i} &amp; s+5-5\,\sqrt{3}\,\mathrm{i}
+\end{array}\right)\]</div>
 </div>
 </div>
 <p>Factors interpreted as</p>
@@ -998,12 +1015,9 @@ Continuous-time transfer function.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>den_poles =
+<div class="output text_html"><html><body><pre>den_poles = 
   -5.0000 + 8.6603i
-  -5.0000 - 8.6603i
-</pre></div>
-</div>
-</div>
+  -5.0000 - 8.6603i</pre></body></html></div></div>
 </div>
 <p>FInally from the transfer function model</p>
 <div class="cell docutils container">
@@ -1020,12 +1034,9 @@ Continuous-time transfer function.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>poles =
+<div class="output text_html"><html><body><pre>poles = 
   -5.0000 + 8.6603i
-  -5.0000 - 8.6603i
-</pre></div>
-</div>
-</div>
+  -5.0000 - 8.6603i</pre></body></html></div></div>
 </div>
 </section>
 <section id="damping-ratio-and-natural-frequencies">
@@ -1038,15 +1049,13 @@ Continuous-time transfer function.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>wn =
+<div class="output text_html"><html><body><pre>wn = 2×1 double
    10.0000
    10.0000
-z =
+</pre></body></html></div><div class="output text_html"><html><body><pre>z = 2×1 double
     0.5000
     0.5000
-</pre></div>
-</div>
-</div>
+</pre></body></html></div></div>
 </div>
 <p>The function <code class="docutils literal notranslate"><span class="pre">damp</span></code> can also return the poles</p>
 <div class="cell docutils container">
@@ -1056,18 +1065,15 @@ z =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>wn =
+<div class="output text_html"><html><body><pre>wn = 2×1 double
    10.0000
    10.0000
-z =
+</pre></body></html></div><div class="output text_html"><html><body><pre>z = 2×1 double
     0.5000
     0.5000
-p =
+</pre></body></html></div><div class="output text_html"><html><body><pre>p = 
   -5.0000 + 8.6603i
-  -5.0000 - 8.6603i
-</pre></div>
-</div>
-</div>
+  -5.0000 - 8.6603i</pre></body></html></div></div>
 </div>
 </section>
 <section id="rise-tme">
@@ -1091,7 +1097,7 @@ p =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a1b03318109a5146eda53708c7fe518a862ac8ede78dd4023102d65b81846486.png" src="../_images/a1b03318109a5146eda53708c7fe518a862ac8ede78dd4023102d65b81846486.png" />
+<img alt="../_images/89eb14dcc0549e3c2f68add41e254d4fb94d4fdd3b4b8234a6ffb5606d244b36.png" src="../_images/89eb14dcc0549e3c2f68add41e254d4fb94d4fdd3b4b8234a6ffb5606d244b36.png" />
 </div>
 </div>
 </section>
@@ -1109,11 +1115,7 @@ p =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ts =
-    0.8000
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>Ts = 0.8000</pre></body></html></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1122,7 +1124,7 @@ p =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c20c07f6025a55228a48cb80fab226177b7d480645bcb59d7082ccf250d35f4d.png" src="../_images/c20c07f6025a55228a48cb80fab226177b7d480645bcb59d7082ccf250d35f4d.png" />
+<img alt="../_images/de99a290517195c879ff43847c4066ce8926c64eb02859ad0e3cad7cb5f1ee21.png" src="../_images/de99a290517195c879ff43847c4066ce8926c64eb02859ad0e3cad7cb5f1ee21.png" />
 </div>
 </div>
 <p>The value looks about right!</p>
@@ -1143,11 +1145,7 @@ p =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>POS =
-   16.3034
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>POS = 16.3034</pre></body></html></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1156,7 +1154,7 @@ p =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0c8596a9c4acff84c0f336f33dd682bf60ec25baa0c7547bba8ff3e324d5696c.png" src="../_images/0c8596a9c4acff84c0f336f33dd682bf60ec25baa0c7547bba8ff3e324d5696c.png" />
+<img alt="../_images/5c29b87a16bce026ec57af4c1af2ab803e2d72591fa9e190b1e7e39bd6743ee7.png" src="../_images/5c29b87a16bce026ec57af4c1af2ab803e2d72591fa9e190b1e7e39bd6743ee7.png" />
 </div>
 </div>
 <p>Reverse formula check</p>
@@ -1167,11 +1165,7 @@ p =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z =
-    0.5000
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>z = 0.5000</pre></body></html></div></div>
 </div>
 </section>
 <section id="peak-time">
@@ -1187,11 +1181,7 @@ p =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tp =
-    0.3628
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>Tp = 0.3628</pre></body></html></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1200,7 +1190,7 @@ p =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/324bf93cbcb82b3be1839f4e1cc3bfccc737b542ec682e5b64cdd9b59ad33d7a.png" src="../_images/324bf93cbcb82b3be1839f4e1cc3bfccc737b542ec682e5b64cdd9b59ad33d7a.png" />
+<img alt="../_images/f020c747ff3e7c5daf357be09d535b6eaf099977a4356ae7fc891189e687d49d.png" src="../_images/f020c747ff3e7c5daf357be09d535b6eaf099977a4356ae7fc891189e687d49d.png" />
 </div>
 </div>
 </section>
@@ -1214,9 +1204,7 @@ p =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans = 
-  struct with fields:
-
+<div class="output text_html"><html><body><pre>ans = struct with fields:
          RiseTime: 0.1639
     TransientTime: 0.8076
      SettlingTime: 0.8076
@@ -1225,10 +1213,7 @@ p =
         Overshoot: 16.2929
        Undershoot: 0
              Peak: 1.1629
-         PeakTime: 0.3592
-</pre></div>
-</div>
-</div>
+         PeakTime: 0.3592</pre></body></html></div></div>
 </div>
 <p>You should compare the values computed with the approximations given in this section.</p>
 </section>
@@ -1266,13 +1251,34 @@ p =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fs =
- 
-            (s+1.5) (s^2 + 6s + 18)
-  -------------------------------------------
-  s (s+1) (s+3) (s^2 - 2s + 2) (s^2 + 4s + 8)
- 
-Continuous-time zero/pole/gain model.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fs
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            (s+1.5) (s^2 + 6s + 18)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------------------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s (s+1) (s+3) (s^2 - 2s + 2) (s^2 + 4s + 8)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -1285,13 +1291,34 @@ Continuous-time zero/pole/gain model.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans =
- 
-                s^3 + 7.5 s^2 + 27 s + 27
-  -----------------------------------------------------
-  s^7 + 6 s^6 + 13 s^5 + 6 s^4 - 10 s^3 + 40 s^2 + 48 s
- 
-Continuous-time transfer function.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                s^3 + 7.5 s^2 + 27 s + 27
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------------------------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^7 + 6 s^6 + 13 s^5 + 6 s^4 - 10 s^3 + 40 s^2 + 48 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -1304,7 +1331,7 @@ Continuous-time transfer function.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/289e4cc9e71088bf5d0abb168d4fc159b9c533b9876f6045d8c0168c3c10aaf9.png" src="../_images/289e4cc9e71088bf5d0abb168d4fc159b9c533b9876f6045d8c0168c3c10aaf9.png" />
+<img alt="../_images/74e1203732ea3bc6ab4ba5397fe9e75371eccba8ab02d3fbf727465d1f0eee99.png" src="../_images/74e1203732ea3bc6ab4ba5397fe9e75371eccba8ab02d3fbf727465d1f0eee99.png" />
 </div>
 </div>
 <p><strong>Bonus</strong>: the step response is</p>
@@ -1315,7 +1342,7 @@ Continuous-time transfer function.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f9227320756bd08c1724cc5cb1c8da5f948eeb98ec3822c0dc8df56415082cde.png" src="../_images/f9227320756bd08c1724cc5cb1c8da5f948eeb98ec3822c0dc8df56415082cde.png" />
+<img alt="../_images/0dd19c34625a247464fdd93bb5626e3ce5ac448f6a485dd7821fe2ebf985963c.png" src="../_images/0dd19c34625a247464fdd93bb5626e3ce5ac448f6a485dd7821fe2ebf985963c.png" />
 </div>
 </div>
 </section>
@@ -1451,16 +1478,16 @@ Continuous-time transfer function.
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "mkernel"
+            mode: "jupyter_matlab_kernel"
         },
         kernelOptions: {
-            name: "mkernel",
+            name: "jupyter_matlab_kernel",
             path: "./poles_and_zeros"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'mkernel'</script>
+    <script>kernelName = 'jupyter_matlab_kernel'</script>
 
                 </article>
               
