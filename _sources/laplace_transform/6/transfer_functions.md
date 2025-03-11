@@ -125,7 +125,7 @@ In {ref}`c_Stability` we stated that a continuous-time LTI system is BIBO stable
 
 $$\int_{-\infty}^{\infty}\left|h(\tau)\right|\,d\tau \lt \infty$$
 
-The corresponding requirement on $H(s)$ is that the ROC of $H(s)$ contains the $j\omega$ axis (that is $s = j\omega). This is key result, proved in Prob. 3.26 in {ref}`schaum`, that is fundamental to systems and control theory. 
+The corresponding requirement on $H(s)$ is that the ROC of $H(s)$ contains the $j\omega$ axis (that is $s = j\omega$). This is key result, proved in Prob. 3.26 in {ref}`schaum`, that is fundamental to systems and control theory. 
 
 (hs_causal_and_stable)=
 ### Causal and stable systems
