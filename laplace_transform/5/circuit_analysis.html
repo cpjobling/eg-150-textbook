@@ -466,6 +466,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-matlab">Initialize MATLAB</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-for-slido-polling">Initialize for Slido Polling</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuit-transformation-from-time-to-complex-frequency">Circuit Transformation from Time to Complex Frequency</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-domain-model-of-a-resistive-network">Time Domain Model of a Resistive Network</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-time-domain">In the time domain</a></li>
@@ -510,10 +512,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-solution-in-matlab">4. Complete solution in MATLAB</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#find-roots-of-denominator-d-s">Find roots of Denominator D(s)</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#find-quadratic-form">Find quadratic form</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#simplify-coefficients-of-s">Simplify coefficients of s</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-the-square">Complete the Square</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-the-residues">Compute the Residues</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#take-inverse-laplace-transform">Take inverse Laplace transform</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-result">Plot result</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-solution-using-transfer-functions">Alternative solution using transfer functions</a></li>
 </ul>
@@ -569,9 +572,12 @@ document.write(`
 <li><p><a class="reference internal" href="#complex-admittance"><span class="std std-ref">Complex Admittance Y(s)</span></a></p></li>
 <li><p><a class="reference internal" href="#examples12"><span class="std std-ref">Exercises 12</span></a></p></li>
 </ul>
+</section>
+<section id="initialize-matlab">
+<h2>Initialize MATLAB<a class="headerlink" href="#initialize-matlab" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% initialize MATLAB</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">eechris</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">cpjobling</span><span class="o">/</span><span class="n">eg</span><span class="o">-</span><span class="mi">150</span><span class="o">-</span><span class="n">textbook</span><span class="o">/</span><span class="n">laplace_transform</span><span class="o">/</span><span class="n">matlab</span><span class="o">/</span>
 <span class="nb">clearvars</span>
 <span class="nb">format</span><span class="w"> </span><span class="n">compact</span>
 <span class="n">syms</span><span class="w"> </span><span class="s">t</span><span class="w"> </span><span class="s">L</span><span class="w"> </span><span class="s">R</span><span class="w"> </span><span class="s">C</span><span class="w"> </span><span class="s">i_R(t)</span><span class="w"> </span><span class="s">v_R(t)</span><span class="w"> </span><span class="s">i_L(t)</span><span class="w"> </span><span class="s">v_L(t)</span><span class="w"> </span><span class="s">v_C(t)</span><span class="w"> </span><span class="s">i_C(t)</span>
@@ -579,6 +585,10 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
+<section id="initialize-for-slido-polling">
+<h2>Initialize for Slido Polling<a class="headerlink" href="#initialize-for-slido-polling" title="Link to this heading">#</a></h2>
+<p>Open <a class="reference external" href="http://slido.com">slido.com</a> connect to session <strong>ID # 1205 320</strong></p>
 </section>
 <section id="circuit-transformation-from-time-to-complex-frequency">
 <span id="circuit-transforms"></span><h2>Circuit Transformation from Time to Complex Frequency<a class="headerlink" href="#circuit-transformation-from-time-to-complex-frequency" title="Link to this heading">#</a></h2>
@@ -967,10 +977,19 @@ document.write(`
 <p><span class="caption-number">Fig. 60 </span><span class="caption-text">Circuit for Example 12.3</span><a class="headerlink" href="#fig-ex12-3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>We can show how with the assistance of MATLAB (See <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/solution12_3.mlx">solution12_3.mlx</a>) that the solution is</p>
-<div class="math notranslate nohighlight" id="equation-sol-12-3">
-<span class="eqno">(30)<a class="headerlink" href="#equation-sol-12-3" title="Link to this equation">#</a></span>\[V_{\mathrm{out}}=\left(1.36e^{-6.57t}+0.64e^{-0.715t}\cos 0.316t - 1.84e^{-0.715t}\sin 0.316t\right)u_0(t)\]</div>
+<p>We can show how with the assistance of MATLAB (See <a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/solution12_3.mlx">solution12_3.mlx</a>) that the solution is the inverse Laplace transform of</p>
+<div class="math notranslate nohighlight" id="equation-sol-12-3-1">
+<span class="eqno">(30)<a class="headerlink" href="#equation-sol-12-3-1" title="Link to this equation">#</a></span>\[V_{\mathrm{out}}(s)=\frac{2(s+3)}{s^3 + 8s^2 + 10s + 4}\]</div>
+<p>Which is
+$<span class="math notranslate nohighlight">\(v_{\mathrm{out}}(t)=\left(1.36e^{-6.57t}+0.64e^{-0.715t}\cos 0.316t - 1.84e^{-0.715t}\sin 0.316t\right)u_0(t)\)</span>$ (sol:12.3)</p>
 <p>and we can plot the result (see <a class="reference internal" href="#sol-mat12-3"><span class="std std-ref">4. Complete solution in MATLAB</span></a>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="w"> </span><span class="n">solution12_3</span>
+</pre></div>
+</div>
+</div>
+</div>
 <section id="worked-solution-ex-12-3">
 <h4>Worked Solution: <a class="reference internal" href="#ex-12-3"><span class="std std-ref">Exercise 12.3: A complex RLC circuit with initial conditions</span></a><a class="headerlink" href="#worked-solution-ex-12-3" title="Link to this heading">#</a></h4>
 <p>File Pencast: <a class="reference external" href="https://cpjobling.github.io/eg-247-textbook/laplace_transform/worked_examples/example3.pdf">example12_3.pdf</a> - Download and open in Adobe Acrobat Reader.</p>
@@ -981,40 +1000,94 @@ document.write(`
 <p>We will use a combination of pen-and-paper and MATLAB to solve this.</p>
 <section id="equivalent-circuit">
 <h5>1. Equivalent Circuit<a class="headerlink" href="#equivalent-circuit" title="Link to this heading">#</a></h5>
-<p>Draw equivalent circuit at <span class="math notranslate nohighlight">\(t=0\)</span></p>
+<p>Draw equivalent circuit at <span class="math notranslate nohighlight">\(t = 0\)</span></p>
+<p><img alt="Equivalent circuit at t=0" src="../../_images/example_12_3_a.png" /></p>
 </section>
 <section id="transform-model">
 <h5>2. Transform model<a class="headerlink" href="#transform-model" title="Link to this heading">#</a></h5>
 <p>Convert to transforms</p>
+<p><img alt="Equivalent circuit at t=0" src="../../_images/example_12_3_b.png" /></p>
 </section>
 <section id="determine-equation">
 <h5>3. Determine equation<a class="headerlink" href="#determine-equation" title="Link to this heading">#</a></h5>
 <p>Determine equation for <span class="math notranslate nohighlight">\(V_{\rm out}(s)\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="w"> </span><span class="s">t</span><span class="w"> </span><span class="s">vout</span><span class="w"> </span><span class="s">Vout</span>
+
+<span class="n">eq45</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">Vout</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">3</span><span class="o">/</span><span class="n">s</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Vout</span><span class="o">/</span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Vout</span><span class="o">/</span><span class="p">(</span><span class="n">s</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span>
+
+<span class="n">Vout</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">solve</span><span class="p">(</span><span class="n">eq45</span><span class="p">,</span><span class="w"> </span><span class="n">Vout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[eq45 =\textrm{Vout}-\frac{\frac{3}{s}-\textrm{Vout}+1}{\frac{s}{2}+\frac{1}{s}+2}+\frac{2\,\textrm{Vout}}{s}=0\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[Vout =\frac{2\,s^2 +6\,s}{s^3 +8\,s^2 +10\,s+4}\]</div>
+</div>
+</div>
 </section>
 </section>
 <section id="complete-solution-in-matlab">
 <span id="sol-mat12-3"></span><h4>4. Complete solution in MATLAB<a class="headerlink" href="#complete-solution-in-matlab" title="Link to this heading">#</a></h4>
-<p>In the lecture we showed that after simplification for <a class="reference internal" href="#ex-12-3"><span class="std std-ref">Exercise 12.3: A complex RLC circuit with initial conditions</span></a></p>
+<p>In the lecture we showed that after simplification for <span class="xref std std-ref">ex:12.3.1</span></p>
 <div class="math notranslate nohighlight">
 \[V_{\mathrm{out}}(s)=\frac{2s(s+3)}{s^3 + 8s^2 + 10s + 4}\]</div>
 <p>We will use MATLAB to factorize the denominator <span class="math notranslate nohighlight">\(D(s)\)</span> of the equation
 into a linear and a quadratic factor.</p>
-<section id="find-roots-of-denominator-d-s">
-<h5>Find roots of Denominator D(s)<a class="headerlink" href="#find-roots-of-denominator-d-s" title="Link to this heading">#</a></h5>
+<p>Declare the denominator of <span class="math notranslate nohighlight">\(V_{\mathrm{out}}(s)\)</span> to be a polynomial in <span class="math notranslate nohighlight">\(s\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Ds</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">s</span><span class="o">^</span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">8</span><span class="o">*</span><span class="n">s</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Ds =s^3 +8\,s^2 +10\,s+4\]</div>
+</div>
+</div>
+<p>Convert <code class="docutils literal notranslate"><span class="pre">Ds</span></code> to a MATLAB polynomial using <code class="docutils literal notranslate"><span class="pre">sym2poly</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sym2poly</span><span class="p">(</span><span class="n">Ds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>d = 1×4 double
+     1     8    10     4
+</pre></body></html></div></div>
+</div>
+<p>Find roots of <span class="math notranslate nohighlight">\(D(s)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="w"> </span><span class="n">long</span>
+<span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">roots</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>p = 
+ -6.570750563722639 + 0.000000000000000i
+ -0.714624718138679 + 0.313161257350729i
+ -0.714624718138679 - 0.313161257350729i</pre></body></html></div></div>
+</div>
+<p>Store real pole as <code class="docutils literal notranslate"><span class="pre">p1</span></code></p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">roots</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">])</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">p</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
 <section id="find-quadratic-form">
 <h5>Find quadratic form<a class="headerlink" href="#find-quadratic-form" title="Link to this heading">#</a></h5>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">syms</span><span class="w"> </span><span class="s">s</span><span class="w"> </span><span class="s">t</span>
-<span class="n">y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">expand</span><span class="p">((</span><span class="n">s</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p</span><span class="p">(</span><span class="mi">3</span><span class="p">)))</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">qs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">expand</span><span class="p">((</span><span class="n">s</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p</span><span class="p">(</span><span class="mi">3</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
@@ -1024,7 +1097,7 @@ into a linear and a quadratic factor.</p>
 <h5>Simplify coefficients of s<a class="headerlink" href="#simplify-coefficients-of-s" title="Link to this heading">#</a></h5>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sym2poly</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sym2poly</span><span class="p">(</span><span class="n">qs</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1032,19 +1105,77 @@ into a linear and a quadratic factor.</p>
 </section>
 <section id="complete-the-square">
 <h5>Complete the Square<a class="headerlink" href="#complete-the-square" title="Link to this heading">#</a></h5>
+<p>Left as an exercise for the reader</p>
+</section>
+<section id="compute-the-residues">
+<h5>Compute the Residues<a class="headerlink" href="#compute-the-residues" title="Link to this heading">#</a></h5>
+<p>Left as an exercise for the reader</p>
+</section>
+<section id="take-inverse-laplace-transform">
+<h5>Take inverse Laplace transform<a class="headerlink" href="#take-inverse-laplace-transform" title="Link to this heading">#</a></h5>
+<p>Numerator <code class="docutils literal notranslate"><span class="pre">Ns</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Ns</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">s</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Ns =2\,s\,{\left(s+3\right)}\]</div>
+</div>
+</div>
+<p>Denominator ‘Ds’ with quadratic factor</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Ds</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p1</span><span class="p">)</span><span class="o">*</span><span class="n">qs</span><span class="w"> </span>
+<span class="n">Vout</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Ns</span><span class="o">/</span><span class="n">Ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Ds ={\left(s+\frac{3699003723790719}{562949953421312}\right)}\,{\left(s^2 +\frac{804595903579775\,s}{562949953421312}+\frac{3086772113315577969665007046981}{5070602400912917605986812821504}\right)}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[Vout =\frac{2\,s\,{\left(s+3\right)}}{{\left(s+\frac{3699003723790719}{562949953421312}\right)}\,{\left(s^2 +\frac{804595903579775\,s}{562949953421312}+\frac{3086772113315577969665007046981}{5070602400912917605986812821504}\right)}}\]</div>
+</div>
+</div>
+<p>Exact solution</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">vout</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ilaplace</span><span class="p">(</span><span class="n">Vout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[vout =\frac{237938132050491874560868586463264\,{\mathrm{e}}^{-\frac{3699003723790719\,t}{562949953421312}} }{174389576995383734106207237906757}+\frac{110841021940275593651545889350250\,{\mathrm{e}}^{-\frac{804595903579775\,t}{1125899906842624}} \,{\left(\cos \left(\frac{705176460955809\,t}{2251799813685248}\right)-\frac{114001779759373874310224037861047984203122362242\,\sin \left(\frac{705176460955809\,t}{2251799813685248}\right)}{39081239790284360447654239336025710034486551125}\right)}}{174389576995383734106207237906757}\]</div>
+</div>
+</div>
+<p>Approximate solution to 3 places of decimals</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">var</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">vpa</span><span class="p">(</span><span class="n">vout</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[var =1.36\,{\mathrm{e}}^{-6.57\,t} +0.636\,{\mathrm{e}}^{-0.715\,t} \,{\left(\cos \left(0.313\,t\right)-2.92\,\sin \left(0.313\,t\right)\right)}\]</div>
+</div>
+</div>
 </section>
 <section id="plot-result">
 <h5>Plot result<a class="headerlink" href="#plot-result" title="Link to this heading">#</a></h5>
-<p>From equation <a class="reference internal" href="#equation-sol-12-3">(30)</a></p>
+<p>From equation <code class="xref eq docutils literal notranslate"><span class="pre">sol:12.3</span></code></p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="p">=</span><span class="mi">0</span><span class="p">:</span><span class="mf">0.01</span><span class="p">:</span><span class="mi">10</span><span class="p">;</span>
-<span class="n">Vout</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.36</span><span class="o">.*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">6.57</span><span class="o">.*</span><span class="n">t</span><span class="p">)</span><span class="k">...</span>
-<span class="w">   </span><span class="o">+</span><span class="mf">0.64</span><span class="o">.*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.715</span><span class="o">.*</span><span class="n">t</span><span class="p">)</span><span class="o">.*</span><span class="nb">cos</span><span class="p">(</span><span class="mf">0.316</span><span class="o">.*</span><span class="n">t</span><span class="p">)</span><span class="k">...</span>
-<span class="w">   </span><span class="o">-</span><span class="mf">1.84</span><span class="o">.*</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.715</span><span class="o">.*</span><span class="n">t</span><span class="p">)</span><span class="o">.*</span><span class="nb">sin</span><span class="p">(</span><span class="mf">0.316</span><span class="o">.*</span><span class="n">t</span><span class="p">);</span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">Vout</span><span class="p">);</span><span class="w"> </span><span class="n">grid</span>
-<span class="s">title(&#39;Plot of Vout(t) for the circuit of Example 3&#39;)</span>
-<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Vout(t) V&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time t s&#39;</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">vout</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">]),</span><span class="k">...</span>
+<span class="w">    </span><span class="nb">ylim</span><span class="p">([</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">2</span><span class="p">]),</span><span class="k">...</span>
+<span class="w">    </span><span class="nb">grid</span><span class="p">,</span><span class="k">...</span>
+<span class="w">    </span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Plot of Vout(t) for the circuit of Example 3&#39;</span><span class="p">),</span><span class="k">...</span>
+<span class="w">    </span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Vout(t) V&#39;</span><span class="p">),</span><span class="k">...</span>
+<span class="w">    </span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time t s&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1318,6 +1449,8 @@ into a linear and a quadratic factor.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-matlab">Initialize MATLAB</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-for-slido-polling">Initialize for Slido Polling</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuit-transformation-from-time-to-complex-frequency">Circuit Transformation from Time to Complex Frequency</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-domain-model-of-a-resistive-network">Time Domain Model of a Resistive Network</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-time-domain">In the time domain</a></li>
@@ -1362,10 +1495,11 @@ into a linear and a quadratic factor.</p>
 </ul>
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-solution-in-matlab">4. Complete solution in MATLAB</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#find-roots-of-denominator-d-s">Find roots of Denominator D(s)</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#find-quadratic-form">Find quadratic form</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#simplify-coefficients-of-s">Simplify coefficients of s</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#complete-the-square">Complete the Square</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-the-residues">Compute the Residues</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#take-inverse-laplace-transform">Take inverse Laplace transform</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-result">Plot result</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative-solution-using-transfer-functions">Alternative solution using transfer functions</a></li>
 </ul>

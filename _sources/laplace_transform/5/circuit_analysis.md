@@ -41,16 +41,26 @@ We look at applications of the Laplace Transform for circuit analysis. In partic
 
 * {ref}`examples12`
 
++++ {"slideshow": {"slide_type": "slide"}}
+
+## Initialize MATLAB
+
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: '-'
 ---
-% initialize MATLAB
+cd /Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/laplace_transform/matlab/
 clearvars
 format compact
 syms t L R C i_R(t) v_R(t) i_L(t) v_L(t) v_C(t) i_C(t)
 ```
+
++++ {"slideshow": {"slide_type": "slide"}}
+
+## Initialize for Slido Polling
+
+Open slido.com connect to session **ID # 1205 320**
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -567,6 +577,8 @@ We will solve this example by hand in **Examples class 4** and then review the s
 
 In the circuit shown in {numref}`fig:ex12.3`, switch $S_1$ closes at $t=0$, while at the same time, switch $S_2$ opens. Use the Laplace transform method to find $v_{\mathrm{out}}(t)$ for $t > 0$.
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
 :::{figure-md} Fig:ex12.3
 <img src="pictures/example3.png" alt="Circuit for Example 12.3" width="1000%">
 
@@ -575,11 +587,20 @@ Circuit for Example 12.3
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-We can show how with the assistance of MATLAB (See [solution12_3.mlx](https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/solution12_3.mlx)) that the solution is
+We can show how with the assistance of MATLAB (See [solution12_3.mlx](https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/solution12_3.mlx)) that the solution is the inverse Laplace transform of
 
-$$V_{\mathrm{out}}=\left(1.36e^{-6.57t}+0.64e^{-0.715t}\cos 0.316t - 1.84e^{-0.715t}\sin 0.316t\right)u_0(t)$$ (sol:12.3)
+$$V_{\mathrm{out}}(s)=\frac{2(s+3)}{s^3 + 8s^2 + 10s + 4}$$ (sol:12.3.1)
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Which is 
+$$v_{\mathrm{out}}(t)=\left(1.36e^{-6.57t}+0.64e^{-0.715t}\cos 0.316t - 1.84e^{-0.715t}\sin 0.316t\right)u_0(t)$$ (sol:12.3)
 
 and we can plot the result (see {ref}`sol:mat12.3`)
+
+```{code-cell}
+open solution12_3
+```
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -590,86 +611,198 @@ File Pencast: [example12_3.pdf](https://cpjobling.github.io/eg-247-textbook/lapl
 
 The attached PDF gives the solution to {ref}`ex:12.3` by hand. It's quite a complex, error-prone (as you can see by the crosssings out!) calculation that needs careful attention to detail. This in itself gives justification to my belief that you should use computers wherever possible.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 (sol:12.3)=
 #### Solution to Example 12.3
 
 We will use a combination of pen-and-paper and MATLAB to solve this.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 ##### 1. Equivalent Circuit
 
-Draw equivalent circuit at $t=0$
+Draw equivalent circuit at $t = 0$
 
-+++ {"slideshow": {"slide_type": "subslide"}}
+![Equivalent circuit at t=0](pictures/example_12_3_a.png)
+
++++ {"slideshow": {"slide_type": "notes"}}
 
 ##### 2. Transform model
 
 Convert to transforms
 
-+++ {"slideshow": {"slide_type": "subslide"}}
+![Equivalent circuit at t=0](pictures/example_12_3_b.png)
+
++++ {"slideshow": {"slide_type": "notes"}}
 
 ##### 3. Determine equation
 
 Determine equation for $V_{\rm out}(s)$.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
+```{code-cell}
+---
+slideshow:
+  slide_type: notes
+---
+syms s t vout Vout
+
+eq45 = (Vout - 1 - 3/s)/(1/s + 2 + s/2) + Vout/1 + Vout/(s/2) == 0
+
+Vout = solve(eq45, Vout)
+```
+
++++ {"slideshow": {"slide_type": "notes"}}
 
 (sol:mat12.3)=
 #### 4. Complete solution in MATLAB
 
-In the lecture we showed that after simplification for {ref}`ex:12.3`
+In the lecture we showed that after simplification for {ref}`ex:12.3.1`
 
 $$V_{\mathrm{out}}(s)=\frac{2s(s+3)}{s^3 + 8s^2 + 10s + 4}$$
 
 We will use MATLAB to factorize the denominator $D(s)$ of the equation
 into a linear and a quadratic factor.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
-##### Find roots of Denominator D(s)
+Declare the denominator of $V_{\mathrm{out}}(s)$ to be a polynomial in $s$
 
 ```{code-cell}
 ---
 slideshow:
-  slide_type: fragment
-tags: [remove-output]
+  slide_type: notes
 ---
-p = roots([1, 8, 10, 4])
+Ds = s^3 + 8*s^2 + 10*s + 4
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
+
+Convert `Ds` to a MATLAB polynomial using `sym2poly`
+
+```{code-cell}
+---
+slideshow:
+  slide_type: notes
+---
+d = sym2poly(Ds)
+```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Find roots of $D(s)$
+
+```{code-cell}
+---
+slideshow:
+  slide_type: notes
+---
+format long
+p = roots(d)
+```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Store real pole as `p1`
+
+```{code-cell}
+---
+slideshow:
+  slide_type: notes
+tags: [remove-output]
+---
+p1 = p(1)
+```
+
++++ {"slideshow": {"slide_type": "notes"}}
 
 ##### Find quadratic form
 
 ```{code-cell}
 ---
 slideshow:
-  slide_type: fragment
+  slide_type: notes
 tags: [remove-output]
 ---
-syms s t
-y = expand((s - p(2))*(s - p(3)))
+qs = expand((s - p(2))*(s - p(3)))
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 ##### Simplify coefficients of s
 
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: notes
 tags: [remove-output]
 ---
-y = sym2poly(y)
+q = sym2poly(qs)
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 ##### Complete the Square
+
+Left as an exercise for the reader
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+##### Compute the Residues
+
+
+Left as an exercise for the reader
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+##### Take inverse Laplace transform
+
+Numerator `Ns` 
+
+```{code-cell}
+---
+slideshow:
+  slide_type: notes
+---
+Ns = 2*s*(s + 3)
+```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Denominator 'Ds' with quadratic factor
+
+```{code-cell}
+---
+slideshow:
+  slide_type: notes
+---
+Ds = (s - p1)*qs 
+Vout = Ns/Ds
+```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Exact solution
+
+```{code-cell}
+---
+slideshow:
+  slide_type: notes
+---
+vout = ilaplace(Vout)
+```
+
++++ {"slideshow": {"slide_type": "notes"}}
+
+Approximate solution to 3 places of decimals
+
+```{code-cell}
+---
+slideshow:
+  slide_type: notes
+---
+var = vpa(vout,3)
+```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -683,13 +816,12 @@ slideshow:
   slide_type: subslide
 tags: [remove-output]
 ---
-t=0:0.01:10;
-Vout = 1.36.*exp(-6.57.*t)...
-   +0.64.*exp(-0.715.*t).*cos(0.316.*t)...
-   -1.84.*exp(-0.715.*t).*sin(0.316.*t);
-plot(t, Vout); grid
-title('Plot of Vout(t) for the circuit of Example 3')
-ylabel('Vout(t) V'),xlabel('Time t s')
+fplot(vout,[0,10]),...
+    ylim([-0.5,2]),...
+    grid,...
+    title('Plot of Vout(t) for the circuit of Example 3'),...
+    ylabel('Vout(t) V'),...
+    xlabel('Time t s')
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
