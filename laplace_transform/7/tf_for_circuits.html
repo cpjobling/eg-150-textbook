@@ -648,12 +648,12 @@ document.write(`
 <p>Now define the values of the components</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">R1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">200</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">3</span><span class="p">;</span><span class="w"> </span>
-<span class="n">R2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">40</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">3</span><span class="p">;</span>
-<span class="n">R3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">50</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">3</span><span class="p">;</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">R1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">200</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c">% 200 kOhm</span>
+<span class="n">R2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">40</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">3</span><span class="p">;</span><span class="w">  </span><span class="c">%  40 kOhm</span>
+<span class="n">R3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">50</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="mi">3</span><span class="p">;</span><span class="w">  </span><span class="c">%  50 kOhm</span>
 
-<span class="n">C1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">25</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">);</span>
-<span class="n">C2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">);</span>
+<span class="n">C1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">25</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">);</span><span class="w"> </span><span class="c">% 25 nF</span>
+<span class="n">C2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="mi">10</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">);</span><span class="w"> </span><span class="c">% 10 nF</span>
 </pre></div>
 </div>
 </div>
@@ -699,8 +699,16 @@ document.write(`
 <p>For convenience, define coefficients <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">denH</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">denH</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">denH</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">denH</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =
+     2.500000000000000e-06
+b =
+   0.005000000000000
 </pre></div>
 </div>
 </div>
@@ -727,12 +735,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/b9d44d983de6df259b79b829380d1acce4a8dc7ddf0df2f8bb122d28acfa8bd8.png" src="../../_images/b9d44d983de6df259b79b829380d1acce4a8dc7ddf0df2f8bb122d28acfa8bd8.png" />
+<img alt="../../_images/e3a9f322cc9cd48917022b2ae219036e979fd40d5bd52cfcf04f827108766cf5.png" src="../../_images/e3a9f322cc9cd48917022b2ae219036e979fd40d5bd52cfcf04f827108766cf5.png" />
 </div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Note that this is a low-pass filter. Sinusoids at low frequencies are passed with a gain of 0.2. For frequencies above around 100 rad/s, the filter starts to increase the attenuation of the passed signal. At 10,000 rad/s, the attenuation is 1/10 of the attenuation at 1 rad/s.</p>
+<p>Note that this is a low-pass filter. Sinusoids at low frequencies are passed with a gain of 0.2. For frequencies above around 100 rad/s, the filter starts to increase the attenuation of the passed signal. At 10,000 rad/s, the attenuation is 1/10 of the attenuation at 1,000 rad/s.</p>
 </div>
 </section>
 </section>
@@ -743,6 +751,13 @@ document.write(`
 <ul class="simple">
 <li><p><a class="reference internal" href="#ex-14-2"><span class="std std-ref">Exercise 14.2</span></a> [<a class="reference external" href="https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/example_14_2.mlx">example_14.2.mlx</a>]</p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="w"> </span><span class="n">example_14_2</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>

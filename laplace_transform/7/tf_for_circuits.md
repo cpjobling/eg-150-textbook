@@ -243,12 +243,12 @@ Now define the values of the components
 slideshow:
   slide_type: fragment
 ---
-R1 = 200*10^3; 
-R2 = 40*10^3;
-R3 = 50*10^3;
+R1 = 200*10^3; % 200 kOhm
+R2 = 40*10^3;  %  40 kOhm
+R3 = 50*10^3;  %  50 kOhm
 
-C1 = 25*10^(-9);
-C2 = 10*10^(-9);
+C1 = 25*10^(-9); % 25 nF
+C2 = 10*10^(-9); % 10 nF
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -301,8 +301,8 @@ For convenience, define coefficients $a$ and $b$:
 slideshow:
   slide_type: fragment
 ---
-a = denH(1);
-b = denH(2);
+a = denH(1)
+b = denH(2)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -337,7 +337,7 @@ grid
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ```{note}
-Note that this is a low-pass filter. Sinusoids at low frequencies are passed with a gain of 0.2. For frequencies above around 100 rad/s, the filter starts to increase the attenuation of the passed signal. At 10,000 rad/s, the attenuation is 1/10 of the attenuation at 1 rad/s.
+Note that this is a low-pass filter. Sinusoids at low frequencies are passed with a gain of 0.2. For frequencies above around 100 rad/s, the filter starts to increase the attenuation of the passed signal. At 10,000 rad/s, the attenuation is 1/10 of the attenuation at 1,000 rad/s.
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -347,6 +347,14 @@ Note that this is a low-pass filter. Sinusoids at low frequencies are passed wit
 For convenience, single script MATLAB solutions to the examples are provided and can be downloaded from the accompanying [MATLAB](https://github.com/cpjobling/eg-150-textbook/tree/master/laplace_transform/matlab) folder.
 
 * {ref}`ex:14.2` [[example_14.2.mlx](https://github.com/cpjobling/eg-150-textbook/raw/main/laplace_transform/matlab/example_14_2.mlx)]
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+open example_14_2
+```
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
