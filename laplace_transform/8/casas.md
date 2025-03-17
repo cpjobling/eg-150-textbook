@@ -944,9 +944,9 @@ The MATLAB commands discussed in this section are summarized in the table given 
 
 ## Next time
 
-We will complete this course with an introduction to Frequency response analysis of periodic signals via the Fourier series.
+We will futher our study of system response by examining the effect of poles and zeros on system response.
 
-* {ref}`unit5`
+* {ref}`poles_and_zeros`
 
 ## References
 
