@@ -7,9 +7,9 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.16.7
 kernelspec:
-  display_name: MKernel
+  display_name: MATLAB Kernel
   language: matlab
-  name: mkernel
+  name: jupyter_matlab_kernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -625,7 +625,7 @@ slideshow:
 
 which we interpret to mean
 
-$$C(s) = \frac{0.3333}{s} + \frac{0.2381}{s + 3} - \frac{0.5714}{s + 5}.$$
+$$C(s) = \frac{0.3333}{s} + \frac{0.2381}{s + 3} - \frac{0.5714}{s + 10}.$$
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -666,6 +666,69 @@ plot(t,c),grid
 +++ {"slideshow": {"slide_type": "notes"}}
 
 Completing the problem using the Symbolic toolbox is left as an exercise for the reader.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+### Symbolic partial fraction expansion
+
+Define system transfer function $H(s)$
+
+```{code-cell}
+Hs = 5*(s+2)/((s + 3)*(s+10))
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Step input
+
+```{code-cell}
+syms t
+u_0(t) = heaviside(t);
+Xs = laplace(u_0(t))
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Step response
+
+```{code-cell}
+Ys = Hs*Xs
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Partial fraction expansion `partfrac`
+
+```{code-cell}
+Ys = partfrac(Ys)
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+yt = ilaplace(Ys)
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Plot
+
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+fplot(yt*u_0(t),[0,1.5]),ylim([0,0.45]),grid
+```
+
+### Solve directly
+
+
+```{code-cell}
+ilaplace(Hs*laplace(u_0(t)))
+```
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
