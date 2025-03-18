@@ -666,10 +666,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>den =
-100*s*((7555786372591433*s)/302231454903657293676544 + 1/20000) + 5
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[den =100\,s\,{\left(\frac{7555786372591433\,s}{302231454903657293676544}+\frac{1}{20000}\right)}+5\]</div>
 </div>
 </div>
 <p>Simplify coefficients of <span class="math notranslate nohighlight">\(s\)</span> in the denominator. Note <code class="docutils literal notranslate"><span class="pre">sym2poly</span></code> converts a symbolic polynomial with numerical coeficients into a MATLAB polynomial.</p>
@@ -681,11 +679,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>denH =
+<div class="output text_html"><html><body><pre>denH = 1×3 double
    0.000002500000000   0.005000000000000   5.000000000000000
-</pre></div>
-</div>
-</div>
+</pre></body></html></div></div>
 </div>
 <p>Now define the numerator</p>
 <div class="cell docutils container">
@@ -705,13 +701,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a =
-     2.500000000000000e-06
-b =
-   0.005000000000000
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>a =      2.500000000000000e-06</pre></body></html></div><div class="output text_html"><html><body><pre>b =    0.005000000000000</pre></body></html></div></div>
 </div>
 <div class="math notranslate nohighlight">
 \[G(j\omega) = \frac{-1}{a\omega^2 - jb\omega + 5}\]</div>
@@ -735,7 +725,7 @@ b =
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e3a9f322cc9cd48917022b2ae219036e979fd40d5bd52cfcf04f827108766cf5.png" src="../../_images/e3a9f322cc9cd48917022b2ae219036e979fd40d5bd52cfcf04f827108766cf5.png" />
+<img alt="../../_images/0e28b7317f9e929757bbb0345a7aeb8c66a86108177dee39641cfc0a25608acb.png" src="../../_images/0e28b7317f9e929757bbb0345a7aeb8c66a86108177dee39641cfc0a25608acb.png" />
 </div>
 </div>
 <div class="admonition note">
@@ -811,16 +801,16 @@ b =
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "mkernel"
+            mode: "jupyter_matlab_kernel"
         },
         kernelOptions: {
-            name: "mkernel",
+            name: "jupyter_matlab_kernel",
             path: "./laplace_transform/7"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'mkernel'</script>
+    <script>kernelName = 'jupyter_matlab_kernel'</script>
 
                 </article>
               
