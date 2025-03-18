@@ -248,6 +248,7 @@ G2=tf(num,den)
 slideshow:
   slide_type: subslide
 ---
+G
 G2 = tf(G)
 ```
 
@@ -407,8 +408,8 @@ Then the series combination of the two transfer functions ($G_1(s)G_2(s)$) is ob
 slideshow:
   slide_type: fragment
 ---
-G1=tf([1 1],[1 3]);
-G2=tf(10,conv([1 0],[1 2])); % conv is polynomial multiplication
+G1=tf([1 1],[1 3])
+G2=tf(10,conv([1 0],[1 2])) % conv is polynomial multiplication
 Gs=G1*G2 % series connection of two LTI objects
 ```
 
@@ -671,6 +672,14 @@ Completing the problem using the Symbolic toolbox is left as an exercise for the
 
 ### Symbolic partial fraction expansion
 
++++ {"slideshow": {"slide_type": "subslide"}}
+
+#### Numeric partial fraction expansion
+
+This uses the `residue` function.
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
 Define system transfer function $H(s)$
 
 ```{code-cell}
@@ -722,6 +731,8 @@ slideshow:
 ---
 fplot(yt*u_0(t),[0,1.5]),ylim([0,0.45]),grid
 ```
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Solve directly
 
@@ -879,7 +890,7 @@ bode(G),grid
 +++ {"slideshow": {"slide_type": "notes"}}
 
 ```{note}
-The following examples have been adapted from *Session 3: RC Networks and the Op-Amp in the Time-Domain*, from **EG-152 Analogue Design** ({cite}`eg152`).
+The following examples have been adapted from *Session 3: RC Networks and the Op-Amp in the Time-Domain*, from **EG-152 Analogue Design** ({cite}`eg152`). You may find it beneficial to include your solutions to these problems in the reporting of this exercise.
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -1002,6 +1013,7 @@ The MATLAB commands discussed in this section are summarized in the table given 
 | `factor` | Computes the factors of a symbolic polynomial | `fact(s^2 + 2*s + 4)` | [factor](https://uk.mathworks.com/help/symbolic/factor.html) | This function can also find prime factors or numbers.  |
 | `expand` | Expands a factorised polynomial | `q = expand((s + 1 + 2*j)*(s + 1 -2 *j)` | [expand](https://uk.mathworks.com/help/symbolic/sym.expand.html) | This function is useful for converting systems that have pairs of complex poles into quadratic factors |
 |`lsim` | Plots simulated time response of dynamic system to arbitrary inputs | `lsim(H,t,x)` | [lsim](https://uk.mathworks.com/help/control/ref/dynamicsystem.lsim.html?searchHighlight=lsim&s_tid=srchtitle_lsim_1) | `t` is time vector; `x` is the system input $x(t)$ and is an arbitrary function. |
+|`partfrac` | Finds the partial fraction decomposition of `expr` with respect to `var`. | `partfrac(expr,var)` | [partfrac](https://uk.mathworks.com/help/symbolic/sym.partfrac.html?searchHighlight=partfrac&s_tid=srchtitle_support_results_1_partfrac) | `expr` is (usually) a rational polynomial in `var`. |
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
