@@ -68,11 +68,19 @@ $$\frac{r_\sigma}{s-\sigma}$$
 
 where $r_\sigma$ is the residue of the pole.
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 The corresponding term in $f(t)$ will be $r_\sigma e^{\sigma t}$.
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 This will be a growing exponential for which the _doubling time_ is a useful measure of the growth rate.
 
-Given that at time $t=0$, $r_\sigma e^{0} = r_\sigma$, the doubling time $T$ is the time for which
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Given that at time $t=0$, $r_\sigma e^{0} = r_\sigma$, the doubling time $T$ is the time for which:
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 $$
 \begin{align}
@@ -104,15 +112,29 @@ Done in MATLAB
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: notes
 ---
 format compact
 clear variables
-t = linspace(0,15,100);
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
 sigma = 0.1;
 % Doubling time
-T = log(2)/sigma;
+T = log(2)/sigma
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
 % Plot
+t = linspace(0,15,100);
 plot(t,10*exp(sigma*t)),ylim([0,50]),grid
 % Plot and label lines: first doubling
 line([T,T],[0,20],'Color','r','LineStyle','--')
@@ -151,15 +173,23 @@ $$\frac{r_\sigma}{s+\sigma}$$
 
 where $r_\sigma$ is the residue of the pole.
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 The corresponding term in $f(t)$ will be $r_\sigma e^{-\sigma t}$.
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 This will be a decaying exponential for which the time constant $\tau = 1/|\sigma|$ is a useful measure of the decay rate.
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Putting the time constant into the response equation
 
 $$r_\sigma e^{-\sigma \tau} = r_\sigma e^{-1} = 0.367879441171442r_\sigma \approx 0.37r_\sigma.$$
 
-Thus the response reaches around $37\%$ of it's initial value in $\tau = 1/|\sigma|$ s.
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Thus the response reaches around $37\%$ of its initial value in $\tau = 1/|\sigma|$ s.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -376,10 +406,11 @@ Y(s) = K/(s^2 + 2*zeta*omega_n*s + omega_n^2)
 slideshow:
   slide_type: fragment
 ---
-y(t) = ilaplace(Y); % The impulse response in the time domain
+y(t) = ilaplace(Y) % The impulse response in the time domain
 ```
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "notes"}}
+
 
 Gives the result
 
@@ -464,10 +495,10 @@ syms Y_s(s) y_s(t)
 zeta = 0.5; omega_n = 10;
 X(s) = 1/s;
 H(s) = omega_n^2/(s^2 + 2*zeta*omega_n*s + omega_n^2);
-Y_s(s) = H(s)*X(s);
+Y_s(s) = H(s)*X(s)
 ```
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 $$Y_s(s) = \frac{100}{s\,{\left(s^2 +10\,s+100\right)}}$$ (eq:unit5.1:3)
 
@@ -477,7 +508,7 @@ slideshow:
   slide_type: fragment
 ---
 % step response
-y_s(t) = ilaplace(Y_s(s));
+y_s(t) = ilaplace(Y_s(s))
 ```
 
 +++ {"slideshow": {"slide_type": "fragment"}}
@@ -612,7 +643,7 @@ slideshow:
   slide_type: fragment
 ---
 [num,den] = numden(H);
-sym_poles = factor(den,'FactorMode','full') % FactorMode needed to reduce quadratic
+symbolicPoles = factor(den,'FactorMode','full') % FactorMode needed to reduce quadratic
 ```
 
 +++ {"slideshow": {"slide_type": "fragment"}}
@@ -645,7 +676,7 @@ den_poles = roots(d)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-FInally from the transfer function model
+FInally, from the transfer function model
 
 ```{code-cell}
 ---
@@ -776,7 +807,7 @@ For our example
 slideshow:
   slide_type: fragment
 ---
-POS = exp(-zeta*pi/sqrt(1 - zeta^2))*100
+POS = exp(-zeta*pi/sqrt(1 - zeta^2))*100 % OS
 ```
 
 ```{code-cell}
@@ -784,7 +815,8 @@ POS = exp(-zeta*pi/sqrt(1 - zeta^2))*100
 slideshow:
   slide_type: fragment
 ---
-step(Hs),line([0,1.2],[POS/100,POS/100])
+OS = 1 + POS/100; % OS 
+step(Hs),line([0,1.2],[OS,OS])
 ```
 
 +++ {"slideshow": {"slide_type": "fragment"}}
