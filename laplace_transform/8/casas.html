@@ -554,10 +554,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting MATLAB ...
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>ans = '/Users/eechris/code/src/github.com/cpjobling/eg-150-textbook/laplace_transform/matlab'</pre></body></html></div></div>
 </div>
 </section>
 <section id="defining-transfer-functions-in-matlab">
@@ -602,6 +599,10 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[G(s) =\frac{s^2 +2\,s+3}{s^3 +4\,s^2 +5\,s+6}\]</div>
+</div>
 </div>
 <p>Extract numerator and denominator polynomials</p>
 <div class="cell docutils container">
@@ -609,6 +610,12 @@ symbolically.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Num</span><span class="p">,</span><span class="n">Den</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">numden</span><span class="p">(</span><span class="n">G</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Num =s^2 +2\,s+3\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[Den =s^3 +4\,s^2 +5\,s+6\]</div>
 </div>
 </div>
 <p>Providing that the  the coefficients are numeric, we can convert back and forth between symbolic polynomials and numeric polynomials using the functions <code class="docutils literal notranslate"><span class="pre">sym2poly</span></code> and <code class="docutils literal notranslate"><span class="pre">poly2sym</span></code>:</p>
@@ -618,6 +625,12 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>nNum = 1×3 double
+     1     2     3
+</pre></body></html></div><div class="output text_html"><html><body><pre>nDen = 1×4 double
+     1     4     5     6
+</pre></body></html></div></div>
 </div>
 <p>Convert from numerical polynomial to symbolic. The second argument is the polynomial variable. The default is x.</p>
 <div class="cell docutils container">
@@ -625,6 +638,10 @@ symbolically.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">poly2sym</span><span class="p">(</span><span class="n">nNum</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[ans =s^2 +2\,s+3\]</div>
 </div>
 </div>
 </section>
@@ -666,6 +683,38 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   (s+1) (s+3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s (s+2) (s+4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 <p>The expanded numerator and denominator form of the transfer function is readily obtained by using the <em>data extraction function</em> <code class="docutils literal notranslate"><span class="pre">tfdata</span></code>:</p>
 <div class="cell docutils container">
@@ -674,11 +723,49 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>num = 1×4 double
+     0     1     4     3
+</pre></body></html></div><div class="output text_html"><html><body><pre>den = 1×4 double
+     1     6     8     0
+</pre></body></html></div></div>
 </div>
 <p>LTI system objects can also be created from the expanded form of a transfer function directly:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G2</span><span class="p">=</span><span class="n">tf</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">den</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    s^2 + 4 s + 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 6 s^2 + 8 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -690,6 +777,68 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   (s+1) (s+3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s (s+2) (s+4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    s^2 + 4 s + 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 6 s^2 + 8 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 <p>and the zeros and poles similarly extracted:</p>
 <div class="cell docutils container">
@@ -698,6 +847,15 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>zeros = 2×1 double
+    -3
+    -1
+</pre></body></html></div><div class="output text_html"><html><body><pre>poles = 3×1 double
+     0
+    -4
+    -2
+</pre></body></html></div><div class="output text_html"><html><body><pre>gain = 1</pre></body></html></div></div>
 </div>
 <p>LTI system objects can also be created from the expanded form of a transfer function directly:</p>
 <div class="cell docutils container">
@@ -706,6 +864,38 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    s^2 + 4 s + 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 6 s^2 + 8 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 <p>and the zeros and poles similarly extracted:</p>
 <div class="cell docutils container">
@@ -714,6 +904,15 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>zeros = 2×1 double
+    -3
+    -1
+</pre></body></html></div><div class="output text_html"><html><body><pre>poles = 3×1 double
+     0
+    -4
+    -2
+</pre></body></html></div><div class="output text_html"><html><body><pre>gain = 1</pre></body></html></div></div>
 </div>
 </section>
 <section id="setting-lti-properties">
@@ -736,6 +935,41 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  From input &quot;Armature Voltage (V)&quot; to output &quot;Load Shaft Position (rad)&quot;:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   (s+1) (s+3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s (s+2) (s+4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 <p>Once the LTI object has been documented, the documentation can be extracted using commands like:</p>
 <div class="cell docutils container">
@@ -744,6 +978,9 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>ans = 1x1 cell array
+    {'An armature voltage controlled servomechanism'}</pre></body></html></div></div>
 </div>
 <p>One can also access the documentation using an <em>object reference</em> notation</p>
 <div class="cell docutils container">
@@ -752,11 +989,39 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>in = 1x1 cell array
+    {'Armature Voltage (V)'}</pre></body></html></div><div class="output text_html"><html><body><pre>out = 1x1 cell array
+    {'Load Shaft Position (rad)'}</pre></body></html></div></div>
 </div>
 <p>All the documentation available on an LTI system object may be extracted with a single command:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">get</span><span class="p">(</span><span class="n">G3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                Z: {[2x1 double]}
+                P: {[3x1 double]}
+                K: 1
+    DisplayFormat: &#39;roots&#39;
+         Variable: &#39;s&#39;
+          IODelay: 0
+       InputDelay: 0
+      OutputDelay: 0
+        InputName: {&#39;Armature Voltage (V)&#39;}
+        InputUnit: {&#39;&#39;}
+       InputGroup: [1x1 struct]
+       OutputName: {&#39;Load Shaft Position (rad)&#39;}
+       OutputUnit: {&#39;&#39;}
+      OutputGroup: [1x1 struct]
+            Notes: {&#39;An armature voltage controlled servomechanism&#39;}
+         UserData: []
+             Name: &#39;&#39;
+               Ts: 0
+         TimeUnit: &#39;seconds&#39;
+     SamplingGrid: [1x1 struct]
 </pre></div>
 </div>
 </div>
@@ -771,11 +1036,78 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   (s+3) (s+1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s (s+4) (s+2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 <p>To convert from zero-pole-gain form to expanded form we use the function <code class="docutils literal notranslate"><span class="pre">tf</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">G5</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  From input &quot;Voltage&quot; to output &quot;Angular Position&quot;:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    s^2 + 4 s + 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 6 s^2 + 8 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -802,6 +1134,98 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s + 1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s + 3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     10
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  ---------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + 2 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gs
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      10 s + 10
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 5 s^2 + 6 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 <p>We can extract the poles and zeros of the combined systems using the <code class="docutils literal notranslate"><span class="pre">zpdata</span></code> function</p>
 <div class="cell docutils container">
@@ -810,6 +1234,12 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>zeros = -1</pre></body></html></div><div class="output text_html"><html><body><pre>poles = 3×1 double
+         0
+   -3.0000
+   -2.0000
+</pre></body></html></div><div class="output text_html"><html><body><pre>K = 10</pre></body></html></div></div>
 </div>
 </section>
 <section id="systems-in-parallel">
@@ -818,6 +1248,38 @@ symbolically.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Gp</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">G1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">G2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gp
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^3 + 3 s^2 + 12 s + 30
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     s^3 + 5 s^2 + 6 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -852,6 +1314,41 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gc
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  From input &quot;torque&quot; to output &quot;velocity&quot;:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0.18182 (s+0.2192) (s+2.281) (s+10)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   (s+3.419) (s^2 + 1.763s + 1.064)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -868,6 +1365,9 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/4b69a8bbbec03b16eaca237980ef3bf6e4606d741f09d6c5d6b1fa38c19fe7d8.png" src="../../_images/4b69a8bbbec03b16eaca237980ef3bf6e4606d741f09d6c5d6b1fa38c19fe7d8.png" />
+</div>
 </div>
 </section>
 <section id="open-loop-frequency-response">
@@ -877,6 +1377,9 @@ symbolically.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">H</span><span class="p">),</span><span class="nb">grid</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/8c471c9382eca5a99c57e834f465d18ba1cd641afd6427d804416e9f6e35fc71.png" src="../../_images/8c471c9382eca5a99c57e834f465d18ba1cd641afd6427d804416e9f6e35fc71.png" />
 </div>
 </div>
 </section>
@@ -888,6 +1391,9 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/e91c93f3b91cbe138ec5f10cb4b40526b88075599846816b2df8f4739c6b76f2.png" src="../../_images/e91c93f3b91cbe138ec5f10cb4b40526b88075599846816b2df8f4739c6b76f2.png" />
+</div>
 </div>
 </section>
 <section id="closed-loop-frequency-response">
@@ -897,6 +1403,9 @@ symbolically.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">Gc</span><span class="p">),</span><span class="nb">grid</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/b5c10707fc09acab75fd2773f6a441d158909c3af54f74cf5fdd6a5c2b8fb4a0.png" src="../../_images/b5c10707fc09acab75fd2773f6a441d158909c3af54f74cf5fdd6a5c2b8fb4a0.png" />
 </div>
 </div>
 </section>
@@ -908,6 +1417,9 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../../_images/7bc1417442fbcf7504041380a2df43ac3d3be6cea095787647bf6bd4a76cb781.png" src="../../_images/7bc1417442fbcf7504041380a2df43ac3d3be6cea095787647bf6bd4a76cb781.png" />
+</div>
 </div>
 </section>
 <section id="nyquist-diagram">
@@ -917,6 +1429,9 @@ symbolically.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">nyquist</span><span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">H</span><span class="p">),</span><span class="nb">grid</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/cbdc97d591200f26c73851302c9f17dbd45d2e9c983591d48513fabb5c02b8f6.png" src="../../_images/cbdc97d591200f26c73851302c9f17dbd45d2e9c983591d48513fabb5c02b8f6.png" />
 </div>
 </div>
 <p>MATLAB also provides two interactive graphical tools that work with LTI system objects</p>
@@ -952,10 +1467,30 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>num = 1×4 double
+     0     0     5    10
+</pre></body></html></div><div class="output text_html"><html><body><pre>den = 1×4 double
+     1    13    30     0
+</pre></body></html></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">r</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">residue</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="n">den</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>r = 3×1 double
+   -0.5714
+    0.2381
+    0.3333
+</pre></body></html></div><div class="output text_html"><html><body><pre>p = 3×1 double
+   -10
+    -3
+     0
+</pre></body></html></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>k =
+     []
 </pre></div>
 </div>
 </div>
@@ -978,6 +1513,39 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>newC
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     5 s + 10
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  ---------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + 13 s + 30
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<img alt="../../_images/79a3b6eaf528f26ec85579c74e8923e6b2f3950006a43db099cf6a5d1d3a9fb6.png" src="../../_images/79a3b6eaf528f26ec85579c74e8923e6b2f3950006a43db099cf6a5d1d3a9fb6.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -986,6 +1554,9 @@ symbolically.</p>
 <span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">c</span><span class="p">),</span><span class="nb">grid</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/d06981e1ddf342d8c3e9fe320466571f97d3fd6fe8e646bab6df1810a69128ae.png" src="../../_images/d06981e1ddf342d8c3e9fe320466571f97d3fd6fe8e646bab6df1810a69128ae.png" />
 </div>
 </div>
 <p>Completing the problem using the Symbolic toolbox is left as an exercise for the reader.</p>
@@ -1002,6 +1573,10 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Hs =\frac{5\,s+10}{{\left(s+3\right)}\,{\left(s+10\right)}}\]</div>
+</div>
 </div>
 <p>Step input</p>
 <div class="cell docutils container">
@@ -1012,6 +1587,10 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Xs =\frac{1}{s}\]</div>
+</div>
 </div>
 <p>Step response</p>
 <div class="cell docutils container">
@@ -1019,6 +1598,10 @@ symbolically.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Ys</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Hs</span><span class="o">*</span><span class="n">Xs</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Ys =\frac{5\,s+10}{s\,{\left(s+3\right)}\,{\left(s+10\right)}}\]</div>
 </div>
 </div>
 <p>Partial fraction expansion <code class="docutils literal notranslate"><span class="pre">partfrac</span></code></p>
@@ -1028,12 +1611,20 @@ symbolically.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Ys =\frac{5}{21\,{\left(s+3\right)}}-\frac{4}{7\,{\left(s+10\right)}}+\frac{1}{3\,s}\]</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">yt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ilaplace</span><span class="p">(</span><span class="n">Ys</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[yt =\frac{5\,{\mathrm{e}}^{-3\,t} }{21}-\frac{4\,{\mathrm{e}}^{-10\,t} }{7}+\frac{1}{3}\]</div>
 </div>
 </div>
 <p>Plot</p>
@@ -1042,6 +1633,9 @@ symbolically.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fplot</span><span class="p">(</span><span class="n">yt</span><span class="o">*</span><span class="n">u_0</span><span class="p">(</span><span class="n">t</span><span class="p">),[</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.5</span><span class="p">]),</span><span class="nb">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.45</span><span class="p">]),</span><span class="nb">grid</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/46e72cd9e03cf850fe335be90f81f7c70919951bc6cbdbfdea35b076cc119ec3.png" src="../../_images/46e72cd9e03cf850fe335be90f81f7c70919951bc6cbdbfdea35b076cc119ec3.png" />
 </div>
 </div>
 </section>
@@ -1053,6 +1647,10 @@ symbolically.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">ilaplace</span><span class="p">(</span><span class="n">Hs</span><span class="o">*</span><span class="n">laplace</span><span class="p">(</span><span class="n">u_0</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[ans =\frac{5\,{\mathrm{e}}^{-3\,t} }{21}-\frac{4\,{\mathrm{e}}^{-10\,t} }{7}+\frac{1}{3}\]</div>
 </div>
 </div>
 <p>There are numerous other documentation features provided for LTI system objects. Please consult the <a class="reference external" href="https://uk.mathworks.com/help/control/getstart/linear-lti-models.html">on-line help</a> for full details.</p>
@@ -1106,6 +1704,38 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       -1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + 3 s + 1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 <p>step response is then:</p>
 <div class="cell docutils container">
@@ -1113,6 +1743,9 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">step</span><span class="p">(</span><span class="n">G</span><span class="p">),</span><span class="nb">grid</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/864939ffb2549c4f7984b99e76d0e1fc78d9226885514fab45406eadaf3c2641.png" src="../../_images/864939ffb2549c4f7984b99e76d0e1fc78d9226885514fab45406eadaf3c2641.png" />
 </div>
 </div>
 </section>
@@ -1140,6 +1773,9 @@ as is done in the text book with the help of MATLAB’s <code class="docutils li
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">G</span><span class="p">),</span><span class="nb">grid</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/ace275f4071c324d62489a7edbbeaaba8dca8f851250d5d95855f89b30cc7191.png" src="../../_images/ace275f4071c324d62489a7edbbeaaba8dca8f851250d5d95855f89b30cc7191.png" />
 </div>
 </div>
 <div class="admonition note">

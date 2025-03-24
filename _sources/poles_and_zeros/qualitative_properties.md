@@ -7,9 +7,9 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.16.7
 kernelspec:
-  display_name: MKernel
+  display_name: MATLAB Kernel
   language: matlab
-  name: mkernel
+  name: jupyter_matlab_kernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -160,7 +160,7 @@ $$ae^{\sigma t}\cos\left(\omega t + \phi\right).$$ (eq:pz:3)
 
 ### Example 1
 
-Quantifying the response for $f(t) = e^{\sigma t}\cos\left(\omega t\right)$: rows $\omega = 30, 15, 0$; columns: $\sigma = -1.5, 0.75, 0, 0.75, 1.5$
+Quantifying the response for $f(t) = e^{\sigma t}\cos\left(\omega t\right)$: rows $\omega = 30, 15, 0$; columns: $\sigma = -1.5, -0.75, 0, 0.75, 1.5$
 
 ```{code-cell}
 ---
@@ -543,7 +543,7 @@ As an example, see {numref}`fig:pz:4`. Although this system has six poles, the p
 Dominant poles in a transform $F(s)$
 :::
 
-+++
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ### Example 4
 
