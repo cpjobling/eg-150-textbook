@@ -784,7 +784,7 @@ POS = exp(-zeta*pi/sqrt(1 - zeta^2))*100
 slideshow:
   slide_type: fragment
 ---
-step(Hs),line([0,1.2],[1.16304,1.16304])
+step(Hs),line([0,1.2],[POS/100,POS/100])
 ```
 
 +++ {"slideshow": {"slide_type": "fragment"}}
