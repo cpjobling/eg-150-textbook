@@ -136,6 +136,7 @@ slideshow:
 % Plot
 t = linspace(0,15,100);
 plot(t,10*exp(sigma*t)),ylim([0,50]),grid
+
 % Plot and label lines: first doubling
 line([T,T],[0,20],'Color','r','LineStyle','--')
 line([0,T],[20,20],'Color','r','LineStyle','--')
@@ -149,11 +150,11 @@ line([0,2*T],[40,40],'Color','g','LineStyle','--')
 text(10,42,'Second doubling')
 % Label graph
 title('Exponential growth'),
-ylabel('f(t) = 10*exp(-0.1*t)'),xlabel('Time t [s]')
+ylabel('f(t) = 10*exp(0.1*t)'),xlabel('Time t [s]')
 hold off
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Given that $\sigma = 0.1$, the doubling time $T \approx 0.7/\sigma = 7$ s. The initial value is $10$ at $t=0$ s. It has doubled to $20$ at $t\approx 7$ s, and has doubled again to $40$ at $t\approx 14$.
 
@@ -212,7 +213,7 @@ $$
 
 The current in the RC circuit shown in [Fig. 41](https://cpjobling.github.io/eg-150-textbook/laplace_transform/index.html#rc-circuit-l) has the transform
 
-$$i(t) = \frac{1/RC}{s+ 1/RC}$$
+$$I(s) = \frac{1/RC}{s+ 1/RC}$$
 
 If $R = 1$ M$\Omega$ and $C = 10$ $\mu$F, determine:
 
@@ -246,14 +247,14 @@ Given the component values of $R$ and $C$, $i(0) = 1/RC = 100$ mA.
 
 (c) The time at which the current decays to 1% of $i(0)$ is 46 s.
 
-+++ {"slideshow": {"slide_type": "notes"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 MATLAB confirmation
 
 ```{code-cell}
 ---
 slideshow:
-  slide_type: notes
+  slide_type: fragment
 ---
 t = linspace(0,50,100);
 R = 1e6; C = 10e-6;
@@ -411,7 +412,6 @@ y(t) = ilaplace(Y) % The impulse response in the time domain
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-
 Gives the result
 
 $$y(t) = \frac{K\,{\mathrm{e}}^{-\zeta\, \omega_n \,t } \,\sin \left(\omega_n \,t\,\sqrt{1-\zeta^2 }\right)}{\omega_n \,\sqrt{1-\zeta^2 }}$$ (eq:unit5.1:1)
@@ -511,7 +511,7 @@ slideshow:
 y_s(t) = ilaplace(Y_s(s))
 ```
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Gives the result
 
@@ -593,6 +593,8 @@ The MATLAB code to reproduce this result is given in [example9.mlx](matlab/examp
 
 The relationship between the pole locations and the step response are summarized in {numref}`fig:unit5_2:2` [^unit5.1:note:4]
 
++++ {"slideshow": {"slide_type": "slide"}}
+
 :::{figure-md} fig:unit5_2:2
 <img src="pictures/resppole.png" alt="Relationship between poles and step response" width="100%" />
 
@@ -646,7 +648,7 @@ slideshow:
 symbolicPoles = factor(den,'FactorMode','full') % FactorMode needed to reduce quadratic
 ```
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Factors interpreted as
 
@@ -722,7 +724,7 @@ slideshow:
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Rise-tme
+### Rise-time
 
 The *rise time* $T_r$ is a measure of the speed of response of a system. It is usually taken to be the time taken to transition from 10% to 90% of the final value in the initial rise of the response. It is shown in {numref}`fig:unit5.2:2`.
 
@@ -745,7 +747,7 @@ $$T_r \approx \frac{1.65}{\omega_n} = \frac{1.65}{10} = 0.165\,\mathrm{s}.$$
 ```{code-cell}
 ---
 slideshow:
-  slide_type: fragment
+  slide_type: subslide
 ---
 step(Hs),line([0,0.1],[0.1,0.1]),line([0,0.25],[0.9,0.9])
 ```
@@ -780,7 +782,7 @@ slideshow:
 step(Hs),line([0,1.2],[1.02,1.02]),line([0,1.2],[0.98,0.98])
 ```
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 The value looks about right!
 
@@ -899,6 +901,25 @@ $$\cdots - e^{-2t} - 0.1 t^2 \cos(3t + 5) \cdots$$ (eq:ex16:1)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+MATLAB visualization
+
+```{code-cell}
+syms t
+x_1 = -exp(-2*t)
+x_2 = -0.1*t^2*cos(3*t + 5)
+x_3 = x_1 + x_2
+T = 2*pi/3; % Period of sinusoidal term
+fplot(x_1,[0,3*T])
+hold on
+fplot(x_2,[0,3*T])
+fplot(x_3,[0,3*T])
+grid, title('Visualization of dominant poles from Exercise 16.1'),ylabel('x(t)')
+legend('x_1(t)','x_2(t)','x_3(t)')
+hold off
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
 (ex16.2)=
 ### Exercise 16.2: Qualitative and quantitative analysis
 
@@ -957,6 +978,10 @@ slideshow:
 pzmap(Fs),xlim([-4,1]),ylim([-4,4]),title('Pole zero map for Example 16.2')
 ```
 
+```{code-cell}
+damp(Fs)
+```
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 **Bonus**: the step response is
@@ -1010,18 +1035,69 @@ slideshow:
 % Use these symbolic variables
 syms m c k
 % Replace the NaNs with your expressions
-K = NaN;
-omega_n = NaN;
-zeta = NaN;
+K = 1/m
+omega_n = sqrt(k/m)
+zeta = (c/m)/(2*omega_n)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (b)  Solve for the symbolic expressions of the poles of $G$ in terms of the mass-spring-damper parameters $m$, $c$, and $k$. Store the expressions below in `pplus` and `pminus` where `pplus` stores the positive root.
 
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+% Your solution here
+poles = solve(s^2 + (c/m)*s + (k/m) == 0);
+pplus = poles(1), pminus = poles(2)
+```
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(c) Plot the step response of the system $G$ starting with $k = m = 1$ and $c=0$. Note the values of the poles, damping ratio, and natural frequency obtained. Observe the step-response parameters obtained using `sysinfo`. Adjust the values of $k$, $m$ and $c$ and comment on the effects on the step response observed.
+(c) Plot the step response of the system $G$ starting with $k = m = c = 1$. Note the values of the poles, damping ratio, and natural frequency obtained. Observer the performance parameters returned by `stepinfo`. Adjust the values of $k$, $m$ and $c$ and comment on the effects on the step response observed.
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+k = 1; m = 1; c = 1;
+Gs = tf(1/m, [1 c/m k/m])
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+step(Gs)
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+p = pole(Gs)
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+[Wn,Z]=damp(Gs)
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+stepinfo(Gs)
+```
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
