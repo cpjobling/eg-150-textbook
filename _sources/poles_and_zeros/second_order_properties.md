@@ -68,11 +68,19 @@ $$\frac{r_\sigma}{s-\sigma}$$
 
 where $r_\sigma$ is the residue of the pole.
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 The corresponding term in $f(t)$ will be $r_\sigma e^{\sigma t}$.
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 This will be a growing exponential for which the _doubling time_ is a useful measure of the growth rate.
 
-Given that at time $t=0$, $r_\sigma e^{0} = r_\sigma$, the doubling time $T$ is the time for which
++++ {"slideshow": {"slide_type": "subslide"}}
+
+Given that at time $t=0$, $r_\sigma e^{0} = r_\sigma$, the doubling time $T$ is the time for which:
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 $$
 \begin{align}
@@ -104,16 +112,31 @@ Done in MATLAB
 ```{code-cell}
 ---
 slideshow:
-  slide_type: subslide
+  slide_type: notes
 ---
 format compact
 clear variables
-t = linspace(0,15,100);
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
 sigma = 0.1;
 % Doubling time
-T = log(2)/sigma;
+T = log(2)/sigma
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
 % Plot
+t = linspace(0,15,100);
 plot(t,10*exp(sigma*t)),ylim([0,50]),grid
+
 % Plot and label lines: first doubling
 line([T,T],[0,20],'Color','r','LineStyle','--')
 line([0,T],[20,20],'Color','r','LineStyle','--')
@@ -131,7 +154,7 @@ ylabel('f(t) = 10*exp(-0.1*t)'),xlabel('Time t [s]')
 hold off
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Given that $\sigma = 0.1$, the doubling time $T \approx 0.7/\sigma = 7$ s. The initial value is $10$ at $t=0$ s. It has doubled to $20$ at $t\approx 7$ s, and has doubled again to $40$ at $t\approx 14$.
 
@@ -151,15 +174,23 @@ $$\frac{r_\sigma}{s+\sigma}$$
 
 where $r_\sigma$ is the residue of the pole.
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 The corresponding term in $f(t)$ will be $r_\sigma e^{-\sigma t}$.
 
++++ {"slideshow": {"slide_type": "fragment"}}
+
 This will be a decaying exponential for which the time constant $\tau = 1/|\sigma|$ is a useful measure of the decay rate.
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Putting the time constant into the response equation
 
 $$r_\sigma e^{-\sigma \tau} = r_\sigma e^{-1} = 0.367879441171442r_\sigma \approx 0.37r_\sigma.$$
 
-Thus the response reaches around $37\%$ of it's initial value in $\tau = 1/|\sigma|$ s.
++++ {"slideshow": {"slide_type": "fragment"}}
+
+Thus the response reaches around $37\%$ of its initial value in $\tau = 1/|\sigma|$ s.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -182,7 +213,7 @@ $$
 
 The current in the RC circuit shown in [Fig. 41](https://cpjobling.github.io/eg-150-textbook/laplace_transform/index.html#rc-circuit-l) has the transform
 
-$$i(t) = \frac{1/RC}{s+ 1/RC}$$
+$$I(s) = \frac{1/RC}{s+ 1/RC}$$
 
 If $R = 1$ M$\Omega$ and $C = 10$ $\mu$F, determine:
 
@@ -216,14 +247,14 @@ Given the component values of $R$ and $C$, $i(0) = 1/RC = 100$ mA.
 
 (c) The time at which the current decays to 1% of $i(0)$ is 46 s.
 
-+++ {"slideshow": {"slide_type": "notes"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 MATLAB confirmation
 
 ```{code-cell}
 ---
 slideshow:
-  slide_type: notes
+  slide_type: fragment
 ---
 t = linspace(0,50,100);
 R = 1e6; C = 10e-6;
@@ -376,10 +407,11 @@ Y(s) = K/(s^2 + 2*zeta*omega_n*s + omega_n^2)
 slideshow:
   slide_type: fragment
 ---
-y(t) = ilaplace(Y); % The impulse response in the time domain
+y(t) = ilaplace(Y) % The impulse response in the time domain
 ```
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "notes"}}
+
 
 Gives the result
 
@@ -464,10 +496,10 @@ syms Y_s(s) y_s(t)
 zeta = 0.5; omega_n = 10;
 X(s) = 1/s;
 H(s) = omega_n^2/(s^2 + 2*zeta*omega_n*s + omega_n^2);
-Y_s(s) = H(s)*X(s);
+Y_s(s) = H(s)*X(s)
 ```
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 $$Y_s(s) = \frac{100}{s\,{\left(s^2 +10\,s+100\right)}}$$ (eq:unit5.1:3)
 
@@ -477,10 +509,10 @@ slideshow:
   slide_type: fragment
 ---
 % step response
-y_s(t) = ilaplace(Y_s(s));
+y_s(t) = ilaplace(Y_s(s))
 ```
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Gives the result
 
@@ -562,6 +594,8 @@ The MATLAB code to reproduce this result is given in [example9.mlx](matlab/examp
 
 The relationship between the pole locations and the step response are summarized in {numref}`fig:unit5_2:2` [^unit5.1:note:4]
 
++++ {"slideshow": {"slide_type": "slide"}}
+
 :::{figure-md} fig:unit5_2:2
 <img src="pictures/resppole.png" alt="Relationship between poles and step response" width="100%" />
 
@@ -612,10 +646,10 @@ slideshow:
   slide_type: fragment
 ---
 [num,den] = numden(H);
-sym_poles = factor(den,'FactorMode','full') % FactorMode needed to reduce quadratic
+symbolicPoles = factor(den,'FactorMode','full') % FactorMode needed to reduce quadratic
 ```
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 Factors interpreted as
 
@@ -645,7 +679,7 @@ den_poles = roots(d)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-FInally from the transfer function model
+FInally, from the transfer function model
 
 ```{code-cell}
 ---
@@ -714,7 +748,7 @@ $$T_r \approx \frac{1.65}{\omega_n} = \frac{1.65}{10} = 0.165\,\mathrm{s}.$$
 ```{code-cell}
 ---
 slideshow:
-  slide_type: fragment
+  slide_type: subslide
 ---
 step(Hs),line([0,0.1],[0.1,0.1]),line([0,0.25],[0.9,0.9])
 ```
@@ -749,7 +783,7 @@ slideshow:
 step(Hs),line([0,1.2],[1.02,1.02]),line([0,1.2],[0.98,0.98])
 ```
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 The value looks about right!
 
@@ -776,7 +810,7 @@ For our example
 slideshow:
   slide_type: fragment
 ---
-POS = exp(-zeta*pi/sqrt(1 - zeta^2))*100
+POS = exp(-zeta*pi/sqrt(1 - zeta^2))*100 % OS
 ```
 
 ```{code-cell}
@@ -784,7 +818,8 @@ POS = exp(-zeta*pi/sqrt(1 - zeta^2))*100
 slideshow:
   slide_type: fragment
 ---
-step(Hs),line([0,1.2],[1.16304,1.16304])
+OS = 1 + POS/100; % OS 
+step(Hs),line([0,1.2],[OS,OS])
 ```
 
 +++ {"slideshow": {"slide_type": "fragment"}}
@@ -867,6 +902,25 @@ $$\cdots - e^{-2t} - 0.1 t^2 \cos(3t + 5) \cdots$$ (eq:ex16:1)
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
+MATLAB visualization
+
+```{code-cell}
+syms t
+x_1 = -exp(-2*t)
+x_2 = -0.1*t^2*cos(3*t + 5)
+x_3 = x_1 + x_2
+T = 2*pi/3; % Period of sinusoidal term
+fplot(x_1,[0,3*T])
+hold on
+fplot(x_2,[0,3*T])
+fplot(x_3,[0,3*T])
+grid, title('Visualization of dominant poles from Exercise 16.1'),ylabel('x(t)')
+legend('x_1(t)','x_2(t)','x_3(t)')
+hold off
+```
+
++++ {"slideshow": {"slide_type": "subslide"}}
+
 (ex16.2)=
 ### Exercise 16.2: Qualitative and quantitative analysis
 
@@ -925,6 +979,10 @@ slideshow:
 pzmap(Fs),xlim([-4,1]),ylim([-4,4]),title('Pole zero map for Example 16.2')
 ```
 
+```{code-cell}
+damp(Fs)
+```
+
 +++ {"slideshow": {"slide_type": "notes"}}
 
 **Bonus**: the step response is
@@ -978,18 +1036,67 @@ slideshow:
 % Use these symbolic variables
 syms m c k
 % Replace the NaNs with your expressions
-K = NaN;
-omega_n = NaN;
-zeta = NaN;
+K = NaN
+omega_n = NaN
+zeta = NaN
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (b)  Solve for the symbolic expressions of the poles of $G$ in terms of the mass-spring-damper parameters $m$, $c$, and $k$. Store the expressions below in `pplus` and `pminus` where `pplus` stores the positive root.
 
+```{code-cell}
+---
+slideshow:
+  slide_type: fragment
+---
+% Your solution here
+```
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-(c) Plot the step response of the system $G$ starting with $k = m = 1$ and $c=0$. Note the values of the poles, damping ratio, and natural frequency obtained. Observe the step-response parameters obtained using `sysinfo`. Adjust the values of $k$, $m$ and $c$ and comment on the effects on the step response observed.
+(c) Plot the step response of the system $G$ starting with $k = m = c = 1$. Note the values of the poles, damping ratio, and natural frequency obtained. Observer the performance parameters returned by `stepinfo`. Adjust the values of $k$, $m$ and $c$ and comment on the effects on the step response observed.
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+k = 1; m = 1; c = 1;
+Gs = tf(1/m, [1 c/m k/m])
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+step(Gs)
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+p = pole(Gs)
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+[Wn,Z]=damp(Gs)
+```
+
+```{code-cell}
+---
+slideshow:
+  slide_type: subslide
+---
+stepinfo(Gs)
+```
 
 +++ {"slideshow": {"slide_type": "notes"}}
 

@@ -170,6 +170,10 @@ slideshow:
 example1
 ```
 
+```{code-cell}
+
+```
+
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 The MATLAB code to reproduce this figure is given in [example1.mlx](matlab/example1.mlx)
@@ -352,7 +356,7 @@ And we can now take the partial fraction expansion of $V(s)$ and take the invers
 The roots of the denominator of {eq}`eq:pz:9` are given by
 
 $$\begin{align}
-\lambda &= \frac{-\frac{1}{RC}  \pm \sqrt{\frac{1}{RC}^2 - \frac{4}{LC}}}{2}\\
+\lambda &= \frac{-\frac{1}{RC}  \pm \sqrt{\left(\frac{1}{RC}\right)^2 - \frac{4}{LC}}}{2}\\
 &= -\frac{1}{2RC}  \pm \sqrt{\frac{1}{4R^2C^2} - \frac{1}{LC}}\\
 \end{align}$$
 
@@ -784,7 +788,7 @@ An LTI system can be represented as an LCCODE.
 
 #### Consequences of what we have learned
 
-Knowledge of the dominant poles, the quantative properties, damping ratio $\zeta$ and quality factor $Q$ enable us to evaluate the stability and possible response of a system without needing to compute the actual response.
+Knowledge of the dominant poles, the quantative properties, damping ratio $\zeta$ and quality factor $Q$ enable us to evaluate the stability and likely response of a system without needing to compute the actual response.
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
