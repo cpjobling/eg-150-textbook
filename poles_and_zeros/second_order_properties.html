@@ -496,7 +496,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-quantifiers-that-result-from-step-response">Useful quantifiers that result from step response</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poles">Poles</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#damping-ratio-and-natural-frequencies">Damping ratio and natural frequencies</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rise-tme">Rise-tme</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rise-time">Rise-time</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#settling-time">Settling time</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peak-overshoot">Peak overshoot</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peak-time">Peak time</a></li>
@@ -595,14 +595,6 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting MATLAB ...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -613,10 +605,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>T = 6.9315</pre></body></html></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -637,15 +626,13 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 <span class="nb">text</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="s">&#39;Second doubling&#39;</span><span class="p">)</span>
 <span class="c">% Label graph</span>
 <span class="nb">title</span><span class="p">(</span><span class="s">&#39;Exponential growth&#39;</span><span class="p">),</span>
-<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;f(t) = 10*exp(-0.1*t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time t [s]&#39;</span><span class="p">)</span>
+<span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;f(t) = 10*exp(0.1*t)&#39;</span><span class="p">),</span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Time t [s]&#39;</span><span class="p">)</span>
 <span class="nb">hold</span><span class="w"> </span><span class="n">off</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<img alt="../_images/2002a560448c8b92003989bfef3a43a47a0c02ed487dbb38bfd8310cc2f2105a.png" src="../_images/2002a560448c8b92003989bfef3a43a47a0c02ed487dbb38bfd8310cc2f2105a.png" />
 </div>
 </div>
 <p>Given that <span class="math notranslate nohighlight">\(\sigma = 0.1\)</span>, the doubling time <span class="math notranslate nohighlight">\(T \approx 0.7/\sigma = 7\)</span> s. The initial value is <span class="math notranslate nohighlight">\(10\)</span> at <span class="math notranslate nohighlight">\(t=0\)</span> s. It has doubled to <span class="math notranslate nohighlight">\(20\)</span> at <span class="math notranslate nohighlight">\(t\approx 7\)</span> s, and has doubled again to <span class="math notranslate nohighlight">\(40\)</span> at <span class="math notranslate nohighlight">\(t\approx 14\)</span>.</p>
@@ -722,9 +709,7 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<img alt="../_images/6ee5b0ca8def1168b1a32d57f724055b6d7592e4051d1b7693ddbc0caca1978b.png" src="../_images/6ee5b0ca8def1168b1a32d57f724055b6d7592e4051d1b7693ddbc0caca1978b.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this result is given in <a class="reference download internal" download="" href="../_downloads/b2296fa173d1562d6258c6ffcbe8592d/example8.mlx"><span class="xref download myst">example8.mlx</span></a></p>
@@ -801,9 +786,8 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[Y(s) =\frac{K}{{\omega_n }^2 +2\,\zeta \,\omega_n \,s+s^2 }\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -813,9 +797,8 @@ T &amp;= \frac{\log_e 2}{\sigma} = \frac{0.693147180559945}{\sigma} \approx \fra
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[y(t) =\frac{K\,{\mathrm{e}}^{-\omega_n \,t\,\zeta } \,\sin \left(\omega_n \,t\,\sqrt{1-\zeta^2 }\right)}{\omega_n \,\sqrt{1-\zeta^2 }}\]</div>
 </div>
 </div>
 <p>Gives the result</p>
@@ -880,9 +863,8 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[Y_s(s) =\frac{100}{s\,{\left(s^2 +10\,s+100\right)}}\]</div>
 </div>
 </div>
 <div class="math notranslate nohighlight" id="equation-eq-unit5-1-3">
@@ -895,9 +877,8 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[y_s(t) =1-{\mathrm{e}}^{-5\,t} \,{\left(\cos \left(5\,\sqrt{3}\,t\right)+\frac{\sqrt{3}\,\sin \left(5\,\sqrt{3}\,t\right)}{3}\right)}\]</div>
 </div>
 </div>
 <p>Gives the result</p>
@@ -913,9 +894,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<img alt="../_images/34d0bcf3c2cd33ba5b13fdfe735a021ed006d16fd3a25fd947785c9486d4fba7.png" src="../_images/34d0bcf3c2cd33ba5b13fdfe735a021ed006d16fd3a25fd947785c9486d4fba7.png" />
 </div>
 </div>
 <p>Confirming the result with <a class="reference internal" href="#equation-eq-unit5-1-2">(61)</a> we get:</p>
@@ -926,11 +905,6 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 <span class="c">% Compute response using the formula</span>
 <span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
 <span class="n">yst</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">sigma</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">.*</span><span class="p">(</span><span class="nb">cos</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">sigma</span><span class="o">/</span><span class="n">omega</span><span class="p">)</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)));</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
 </pre></div>
 </div>
 </div>
@@ -945,9 +919,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<img alt="../_images/04ae2173e52357d8fbe6214baf743eb2ec72c47b589212b6309386368b34f349.png" src="../_images/04ae2173e52357d8fbe6214baf743eb2ec72c47b589212b6309386368b34f349.png" />
 </div>
 </div>
 <p>Using the <code class="docutils literal notranslate"><span class="pre">tf</span></code> and <code class="docutils literal notranslate"><span class="pre">step</span></code> functions we get:</p>
@@ -959,7 +931,34 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hs
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        100
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  ----------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + 10 s + 100
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -971,9 +970,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<img alt="../_images/246077ea6c1a97d17a4a6da4ba0ce2341038d3cf6cc191c7e6da650313fc78a5.png" src="../_images/246077ea6c1a97d17a4a6da4ba0ce2341038d3cf6cc191c7e6da650313fc78a5.png" />
 </div>
 </div>
 <p>The MATLAB code to reproduce this result is given in <a class="reference download internal" download="" href="../_downloads/3ba053ad62f7b263884af00ba1ace7eb/example9.mlx"><span class="xref download myst">example9.mlx</span></a></p>
@@ -1006,9 +1003,8 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[H =\frac{100}{s^2 +10\,s+100}\]</div>
 </div>
 </div>
 <p>Find the poles symbolically</p>
@@ -1020,9 +1016,10 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[symbolicPoles =\left(\begin{array}{cc}
+s+5+5\,\sqrt{3}\,\mathrm{i} &amp; s+5-5\,\sqrt{3}\,\mathrm{i}
+\end{array}\right)\]</div>
 </div>
 </div>
 <p>Factors interpreted as</p>
@@ -1036,11 +1033,6 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1050,20 +1042,14 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>den_poles = 
+  -5.0000 + 8.6603i
+  -5.0000 - 8.6603i</pre></body></html></div></div>
 </div>
 <p>FInally, from the transfer function model</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">Hs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">d</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
 </pre></div>
 </div>
 </div>
@@ -1075,10 +1061,9 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>poles = 
+  -5.0000 + 8.6603i
+  -5.0000 - 8.6603i</pre></body></html></div></div>
 </div>
 </section>
 <section id="damping-ratio-and-natural-frequencies">
@@ -1091,10 +1076,13 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>wn = 2×1 double
+   10.0000
+   10.0000
+</pre></body></html></div><div class="output text_html"><html><body><pre>z = 2×1 double
+    0.5000
+    0.5000
+</pre></body></html></div></div>
 </div>
 <p>The function <code class="docutils literal notranslate"><span class="pre">damp</span></code> can also return the poles</p>
 <div class="cell docutils container">
@@ -1104,14 +1092,19 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>wn = 2×1 double
+   10.0000
+   10.0000
+</pre></body></html></div><div class="output text_html"><html><body><pre>z = 2×1 double
+    0.5000
+    0.5000
+</pre></body></html></div><div class="output text_html"><html><body><pre>p = 
+  -5.0000 + 8.6603i
+  -5.0000 - 8.6603i</pre></body></html></div></div>
 </div>
 </section>
-<section id="rise-tme">
-<h3>Rise-tme<a class="headerlink" href="#rise-tme" title="Link to this heading">#</a></h3>
+<section id="rise-time">
+<h3>Rise-time<a class="headerlink" href="#rise-time" title="Link to this heading">#</a></h3>
 <p>The <em>rise time</em> <span class="math notranslate nohighlight">\(T_r\)</span> is a measure of the speed of response of a system. It is usually taken to be the time taken to transition from 10% to 90% of the final value in the initial rise of the response. It is shown in <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 80</span></a>.</p>
 <p>The rise-time depends on <span class="math notranslate nohighlight">\(\omega_n\)</span> but its actual value is also dependent on the damping ratio <span class="math notranslate nohighlight">\(\zeta\)</span> so we rely on a calibration curve such as that shown in <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 80</span></a>.</p>
 <figure class="align-default" id="id6">
@@ -1131,9 +1124,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<img alt="../_images/4cee22c7123b7767395bb1a79c772ffba79315e53b7257e811fddc5acb0590dd.png" src="../_images/4cee22c7123b7767395bb1a79c772ffba79315e53b7257e811fddc5acb0590dd.png" />
 </div>
 </div>
 </section>
@@ -1151,10 +1142,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>Ts = 0.8000</pre></body></html></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1163,9 +1151,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<img alt="../_images/9e7e581815f81abe19389f5486ea856433b56f3db163078858a17daabafb26de.png" src="../_images/9e7e581815f81abe19389f5486ea856433b56f3db163078858a17daabafb26de.png" />
 </div>
 </div>
 <p>The value looks about right!</p>
@@ -1186,10 +1172,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>POS = 16.3034</pre></body></html></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1199,9 +1182,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<img alt="../_images/e516a3d367f7dfe84d38034879be75a6c95c02561a935b8093cc24354411198c.png" src="../_images/e516a3d367f7dfe84d38034879be75a6c95c02561a935b8093cc24354411198c.png" />
 </div>
 </div>
 <p>Reverse formula check</p>
@@ -1212,10 +1193,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>z = 0.5000</pre></body></html></div></div>
 </div>
 </section>
 <section id="peak-time">
@@ -1231,10 +1209,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>Tp = 0.3628</pre></body></html></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1243,9 +1218,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<img alt="../_images/28f17bde19aaff45afad32696d7304f1e8dacbbaf9075e5b87fa373df0b6681c.png" src="../_images/28f17bde19aaff45afad32696d7304f1e8dacbbaf9075e5b87fa373df0b6681c.png" />
 </div>
 </div>
 </section>
@@ -1259,10 +1232,16 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>ans = struct with fields:
+         RiseTime: 0.1639
+    TransientTime: 0.8076
+     SettlingTime: 0.8076
+      SettlingMin: 0.9315
+      SettlingMax: 1.1629
+        Overshoot: 16.2929
+       Undershoot: 0
+             Peak: 1.1629
+         PeakTime: 0.3592</pre></body></html></div></div>
 </div>
 <p>You should compare the values computed with the approximations given in this section.</p>
 </section>
@@ -1296,9 +1275,13 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[x_1 =-{\mathrm{e}}^{-2\,t}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[x_2 =-\frac{t^2 \,\cos \left(3\,t+5\right)}{10}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[x_3 =-{\mathrm{e}}^{-2\,t} -\frac{t^2 \,\cos \left(3\,t+5\right)}{10}\]</div>
+<img alt="../_images/052bea78fd0ae1af5c9cccaaf480dd1b5e235e33383fc61b441b57a5d65fdd8f.png" src="../_images/052bea78fd0ae1af5c9cccaaf480dd1b5e235e33383fc61b441b57a5d65fdd8f.png" />
 </div>
 </div>
 </section>
@@ -1324,7 +1307,34 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fs
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            (s+1.5) (s^2 + 6s + 18)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -------------------------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s (s+1) (s+3) (s^2 - 2s + 2) (s^2 + 4s + 8)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time zero/pole/gain model.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -1337,7 +1347,34 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                s^3 + 7.5 s^2 + 27 s + 27
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------------------------------------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^7 + 6 s^6 + 13 s^5 + 6 s^4 - 10 s^3 + 40 s^2 + 48 s
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -1350,9 +1387,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<img alt="../_images/454954c2a2b4f88469f2e495f78b845247f47e97e92907e11141af05b5f83254.png" src="../_images/454954c2a2b4f88469f2e495f78b845247f47e97e92907e11141af05b5f83254.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1362,7 +1397,17 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                       
+         Pole              Damping       Frequency      Time Constant  
+                                       (rad/seconds)      (seconds)    
+                                                                       
+  0.00e+00                -1.00e+00       0.00e+00              Inf    
+ -1.00e+00                 1.00e+00       1.00e+00         1.00e+00    
+  1.00e+00 + 1.00e+00i    -7.07e-01       1.41e+00        -1.00e+00    
+  1.00e+00 - 1.00e+00i    -7.07e-01       1.41e+00        -1.00e+00    
+ -2.00e+00 + 2.00e+00i     7.07e-01       2.83e+00         5.00e-01    
+ -2.00e+00 - 2.00e+00i     7.07e-01       2.83e+00         5.00e-01    
+ -3.00e+00                 1.00e+00       3.00e+00         3.33e-01    
 </pre></div>
 </div>
 </div>
@@ -1375,9 +1420,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<img alt="../_images/f2d9b59500fe17dfac4cf1b3b85aa814cce4af2ac5de56eab9abdd06f5bd210d.png" src="../_images/f2d9b59500fe17dfac4cf1b3b85aa814cce4af2ac5de56eab9abdd06f5bd210d.png" />
 </div>
 </div>
 </section>
@@ -1409,29 +1452,35 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Use these symbolic variables</span>
 <span class="n">syms</span><span class="w"> </span><span class="s">m</span><span class="w"> </span><span class="s">c</span><span class="w"> </span><span class="s">k</span>
 <span class="c">% Replace the NaNs with your expressions</span>
-<span class="n">K</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span>
-<span class="n">omega_n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span>
-<span class="n">zeta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">NaN</span>
+<span class="n">K</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="o">/</span><span class="n">m</span>
+<span class="n">omega_n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="n">k</span><span class="o">/</span><span class="n">m</span><span class="p">)</span>
+<span class="n">zeta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="o">/</span><span class="n">m</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">omega_n</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[K =\frac{1}{m}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[omega_n =\sqrt{\frac{k}{m}}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[zeta =\frac{c}{2\,m\,\sqrt{\frac{k}{m}}}\]</div>
 </div>
 </div>
 <p>(b)  Solve for the symbolic expressions of the poles of <span class="math notranslate nohighlight">\(G\)</span> in terms of the mass-spring-damper parameters <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(c\)</span>, and <span class="math notranslate nohighlight">\(k\)</span>. Store the expressions below in <code class="docutils literal notranslate"><span class="pre">pplus</span></code> and <code class="docutils literal notranslate"><span class="pre">pminus</span></code> where <code class="docutils literal notranslate"><span class="pre">pplus</span></code> stores the positive root.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Your solution here</span>
+<span class="n">poles</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">solve</span><span class="p">(</span><span class="n">s</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="o">/</span><span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="o">/</span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="n">pplus</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">poles</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">pminus</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">poles</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[pplus =-\frac{c-\sqrt{c^2 -4\,k\,m}}{2\,m}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[pminus =-\frac{c+\sqrt{c^2 -4\,k\,m}}{2\,m}\]</div>
 </div>
 </div>
 <p>(c) Plot the step response of the system <span class="math notranslate nohighlight">\(G\)</span> starting with <span class="math notranslate nohighlight">\(k = m = c = 1\)</span>. Note the values of the poles, damping ratio, and natural frequency obtained. Observer the performance parameters returned by <code class="docutils literal notranslate"><span class="pre">stepinfo</span></code>. Adjust the values of <span class="math notranslate nohighlight">\(k\)</span>, <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(c\)</span> and comment on the effects on the step response observed.</p>
@@ -1443,7 +1492,34 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gs
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  -----------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  s^2 + s + 1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Continuous-time transfer function.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -1455,9 +1531,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
+<img alt="../_images/3e21683f3640ff7e24b0e0f267b4f422d7ae97389e25dca8301fde11d6b395b6.png" src="../_images/3e21683f3640ff7e24b0e0f267b4f422d7ae97389e25dca8301fde11d6b395b6.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1467,10 +1541,9 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>p = 
+  -0.5000 + 0.8660i
+  -0.5000 - 0.8660i</pre></body></html></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1479,10 +1552,13 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>Wn = 2×1 double
+    1.0000
+    1.0000
+</pre></body></html></div><div class="output text_html"><html><body><pre>Z = 2×1 double
+    0.5000
+    0.5000
+</pre></body></html></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1491,10 +1567,16 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error connecting to MATLAB. Check the status of MATLAB by clicking the &quot;Open MATLAB&quot; button. Retry after ensuring MATLAB is running successfully
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>ans = struct with fields:
+         RiseTime: 1.6390
+    TransientTime: 8.0759
+     SettlingTime: 8.0759
+      SettlingMin: 0.9315
+      SettlingMax: 1.1629
+        Overshoot: 16.2929
+       Undershoot: 0
+             Peak: 1.1629
+         PeakTime: 3.5920</pre></body></html></div></div>
 </div>
 </section>
 </section>
@@ -1677,7 +1759,7 @@ y_s(t) = \left(1 - e^{-\sigma t}\left(\cos\left(\omega t\right)+\frac{\sigma}{\o
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-quantifiers-that-result-from-step-response">Useful quantifiers that result from step response</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poles">Poles</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#damping-ratio-and-natural-frequencies">Damping ratio and natural frequencies</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rise-tme">Rise-tme</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rise-time">Rise-time</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#settling-time">Settling time</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peak-overshoot">Peak overshoot</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peak-time">Peak time</a></li>

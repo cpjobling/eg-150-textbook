@@ -150,7 +150,7 @@ line([0,2*T],[40,40],'Color','g','LineStyle','--')
 text(10,42,'Second doubling')
 % Label graph
 title('Exponential growth'),
-ylabel('f(t) = 10*exp(-0.1*t)'),xlabel('Time t [s]')
+ylabel('f(t) = 10*exp(0.1*t)'),xlabel('Time t [s]')
 hold off
 ```
 
@@ -411,7 +411,6 @@ y(t) = ilaplace(Y) % The impulse response in the time domain
 ```
 
 +++ {"slideshow": {"slide_type": "notes"}}
-
 
 Gives the result
 
@@ -725,7 +724,7 @@ slideshow:
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-### Rise-tme
+### Rise-time
 
 The *rise time* $T_r$ is a measure of the speed of response of a system. It is usually taken to be the time taken to transition from 10% to 90% of the final value in the initial rise of the response. It is shown in {numref}`fig:unit5.2:2`.
 
@@ -1036,9 +1035,9 @@ slideshow:
 % Use these symbolic variables
 syms m c k
 % Replace the NaNs with your expressions
-K = NaN
-omega_n = NaN
-zeta = NaN
+K = 1/m
+omega_n = sqrt(k/m)
+zeta = (c/m)/(2*omega_n)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
@@ -1051,6 +1050,8 @@ slideshow:
   slide_type: fragment
 ---
 % Your solution here
+poles = solve(s^2 + (c/m)*s + (k/m) == 0);
+pplus = poles(1), pminus = poles(2)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
