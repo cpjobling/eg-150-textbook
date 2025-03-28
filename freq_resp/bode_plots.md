@@ -7,9 +7,9 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.16.7
 kernelspec:
-  display_name: MKernel
+  display_name: MATLAB Kernel
   language: matlab
-  name: mkernel
+  name: jupyter_matlab_kernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -376,7 +376,7 @@ The magnification increases by 20 dB per decade and there is no limit! This is a
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 (u62:pole)=
-### Asymptotic Bode plot of an single pole
+### Asymptotic Bode plot of a single pole
 
 If 
 
@@ -423,7 +423,7 @@ For most of the magnitude Bode plot, the computed plot is well matched by its as
 +++ {"slideshow": {"slide_type": "slide"}}
 
 (u62:zero)=
-### Asymptotic Bode plot of an single zero
+### Asymptotic Bode plot of a single zero
 
 If 
 
