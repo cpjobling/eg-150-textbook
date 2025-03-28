@@ -7,9 +7,9 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.16.7
 kernelspec:
-  display_name: MKernel
+  display_name: MATLAB Kernel
   language: matlab
-  name: mkernel
+  name: jupyter_matlab_kernel
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
@@ -90,7 +90,7 @@ slideshow:
 ---
 % Write your code here
 
-Gs = tf(1,[1 0,1 1])
+Gs = tf(1,[1 0.1 1])
 
 % Record your answer in p
 p = pole(Gs)
@@ -137,7 +137,7 @@ slideshow:
   slide_type: subslide
 ---
 % min=0.1 max = 2; step=0.1; default = 0.5;
-omegau = 1; % Frequency of the forcing [rad/s]
+omegau = 1.0; % Frequency of the forcing [rad/s]
 figure
 t = linspace(0,100,1e3);   % Time variable array
 u = sin(omegau*t);         % Forcing function (as an array)

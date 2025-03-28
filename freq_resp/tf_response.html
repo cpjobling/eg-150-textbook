@@ -565,7 +565,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Write your code here</span>
 
-<span class="n">Gs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">1</span><span class="p">,[</span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span>
+<span class="n">Gs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">1</span><span class="p">,[</span><span class="mi">1</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span>
 
 <span class="c">% Record your answer in p</span>
 <span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">pole</span><span class="p">(</span><span class="n">Gs</span><span class="p">)</span>
@@ -575,20 +575,17 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gs =
  
-       1
-  -----------
-  s^3 + s + 1
+         1
+  ---------------
+  s^2 + 0.1 s + 1
  
 Continuous-time transfer function.
-
-p =
-
-   0.3412 + 1.1615i
-   0.3412 - 1.1615i
-  -0.6823 + 0.0000i
 </pre></div>
 </div>
-</div>
+<div class="output text_html"><html><body><pre>p = 
+  -0.0500 + 0.9987i
+  -0.0500 - 0.9987i
+</pre></body></html></div></div>
 </div>
 <p>(b) What is the undamped natural frequency of the function in rad/s?</p>
 <div class="cell docutils container">
@@ -601,21 +598,13 @@ p =
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>freq =
-
-    0.6823
-    1.2106
-    1.2106
-
-
-zeta =
-
-    1.0000
-   -0.2818
-   -0.2818
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><html><body><pre>freq = 2×1 double
+     1
+     1
+</pre></body></html></div><div class="output text_html"><html><body><pre>zeta = 2×1 double
+    0.0500
+    0.0500
+</pre></body></html></div></div>
 </div>
 <p>(c) The simulation below drives the function <span class="math notranslate nohighlight">\(G\)</span> with an input function <span class="math notranslate nohighlight">\(U = \sin( \omega_u t )\)</span> which has a frequency of <span class="math notranslate nohighlight">\(\omega_u\)</span> rad/s. The input and output signals are plotted by simulating the response with the <a class="reference external" href="https://uk.mathworks.com/help/control/ref/dynamicsystem.lsim.html"><code class="docutils literal notranslate"><span class="pre">lsim</span></code></a> function.</p>
 <ul class="simple">
@@ -633,7 +622,7 @@ zeta =
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% min=0.1 max = 2; step=0.1; default = 0.5;</span>
-<span class="n">omegau</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c">% Frequency of the forcing [rad/s]</span>
+<span class="n">omegau</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"> </span><span class="c">% Frequency of the forcing [rad/s]</span>
 <span class="nb">figure</span>
 <span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mf">1e3</span><span class="p">);</span><span class="w">   </span><span class="c">% Time variable array</span>
 <span class="n">u</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">omegau</span><span class="o">*</span><span class="n">t</span><span class="p">);</span><span class="w">         </span><span class="c">% Forcing function (as an array)</span>
@@ -643,9 +632,6 @@ zeta =
 <span class="nb">ylabel</span><span class="p">(</span><span class="s">&quot;x [m]&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/2b6be9ffac4c1c65a158b6a5798beb9b49f1cec212dbb527606f88852d6ba79a.png" src="../_images/2b6be9ffac4c1c65a158b6a5798beb9b49f1cec212dbb527606f88852d6ba79a.png" />
 </div>
 </div>
 </section>
@@ -694,18 +680,6 @@ zeta =
 <span class="n">bode</span><span class="p">(</span><span class="n">Gs</span><span class="p">),</span><span class="nb">grid</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gs =
- 
-         1
-  ---------------
-  s^2 + 0.1 s + 1
- 
-Continuous-time transfer function.
-</pre></div>
-</div>
-<img alt="../_images/da61d2e55112433362d1f06f2ba2729a4c7c3004ad5a6249789086c1b3688904.png" src="../_images/da61d2e55112433362d1f06f2ba2729a4c7c3004ad5a6249789086c1b3688904.png" />
 </div>
 </div>
 <section id="id3">
@@ -776,9 +750,6 @@ Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/bd13594e2e8ef0e02a01585d3c83d05a995c1926fc585f7f2ef7d8d0e0f4de88.png" src="../_images/bd13594e2e8ef0e02a01585d3c83d05a995c1926fc585f7f2ef7d8d0e0f4de88.png" />
-</div>
 </div>
 <p>The second panel is constructed by graphing the phase in degrees against the input frequencies, <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
 <div class="cell docutils container">
@@ -789,9 +760,6 @@ Continuous-time transfer function.
 <span class="nb">ylabel</span><span class="p">(</span><span class="s">&quot;Phase (degrees)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/88d953e1bc11a7d760cf85914549c6cbfd430374bb684f3f3cee32f5706c545b.png" src="../_images/88d953e1bc11a7d760cf85914549c6cbfd430374bb684f3f3cee32f5706c545b.png" />
 </div>
 </div>
 </section>
@@ -812,28 +780,6 @@ Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hs =
- 
-     1
-  -------
-  s^2 + 9
- 
-Continuous-time transfer function.
-
-omegan =
-
-     3
-     3
-
-
-zetan =
-
-     0
-     0
-</pre></div>
-</div>
-</div>
 </div>
 <p><strong>(b)</strong> Generate the Bode plot for <span class="math notranslate nohighlight">\(H(s)\)</span> using the <code class="docutils literal notranslate"><span class="pre">bode</span></code> function.</p>
 <div class="cell docutils container">
@@ -842,22 +788,12 @@ zetan =
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/566c2acd2c8a9562ffd775294748dbde566114493d3a3482883a10f1cd811121.png" src="../_images/566c2acd2c8a9562ffd775294748dbde566114493d3a3482883a10f1cd811121.png" />
-</div>
 </div>
 <p><strong>(c)</strong> Write the expression for the complex transfer function by making the substitution <span class="math notranslate nohighlight">\(s=j\omega\)</span>. What is the value of the complex transfer function for <span class="math notranslate nohighlight">\(\omega = 0.5\)</span>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Record your answer in Hcomplex</span>
 <span class="n">Hcomplex</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="o">-</span><span class="n">omegan</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">9</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hcomplex =
-
-   Inf
 </pre></div>
 </div>
 </div>
@@ -871,18 +807,6 @@ zetan =
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span>
 <span class="n">MdB</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">20</span><span class="o">*</span><span class="nb">log10</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="o">-</span><span class="n">w</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">9</span><span class="p">)))</span><span class="c">% Calculate the magnitude in dB here</span>
 <span class="n">phase</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">angle</span><span class="p">(</span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="o">-</span><span class="n">w</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">9</span><span class="p">))</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="nb">pi</span><span class="w"> </span><span class="c">% Calculate the phase in degrees herephase = angle(); % Calculate the phase in degrees here</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MdB =
-
-  -18.8402
-
-
-phase =
-
-     0
 </pre></div>
 </div>
 </div>
@@ -900,9 +824,6 @@ phase =
 <span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;x [m]&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/601964b2412d4469edc4c4dc454de49f5aa7ddb4bb0fc9365129d0e4c21c35ad.png" src="../_images/601964b2412d4469edc4c4dc454de49f5aa7ddb4bb0fc9365129d0e4c21c35ad.png" />
 </div>
 </div>
 </section>
@@ -990,16 +911,16 @@ phase =
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "mkernel"
+            mode: "jupyter_matlab_kernel"
         },
         kernelOptions: {
-            name: "mkernel",
+            name: "jupyter_matlab_kernel",
             path: "./freq_resp"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'mkernel'</script>
+    <script>kernelName = 'jupyter_matlab_kernel'</script>
 
                 </article>
               
