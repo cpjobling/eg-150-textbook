@@ -53,7 +53,7 @@ We introduce this section with a YouTube video [What are Bode plots?](https://uk
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/COzQwkeu8Ek?si=wz1Mxz_ISu6RuTfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-The remaining videos, the first of which introduced the previous unit, {ref}`unit6.1`, can also be viewed on the YouTube playlist [Understanding Bode Plots](https://www.youtube.com/playlist?list=PLn8PRpmsu08poVEWzpqKXpj_c7aSwVDdm) also published on the [MATLAB channel by the MathWorks](https://www.youtube.com/@MATLAB).
+The remaining videos, the first of which introduced the previous unit, {ref}`unit6.1.0`, can also be viewed on the YouTube playlist [Understanding Bode Plots](https://www.youtube.com/playlist?list=PLn8PRpmsu08poVEWzpqKXpj_c7aSwVDdm) also published on the [MATLAB channel by the MathWorks](https://www.youtube.com/@MATLAB).
 
 +++ {"slideshow": {"slide_type": "slide"}}
 

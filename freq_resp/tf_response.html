@@ -470,6 +470,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-response-of-a-transfer-function">Frequency response of a transfer function</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
 </ul>
@@ -479,8 +480,8 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reflect">Reflect</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercise</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Reflect</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exercise</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Reflect</a></li>
 </ul>
 </li>
 </ul>
@@ -534,12 +535,17 @@ document.write(`
 <section class="tex2jax_ignore mathjax_ignore" id="agenda">
 <h1>Agenda<a class="headerlink" href="#agenda" title="Link to this heading">#</a></h1>
 <ul class="simple">
+<li><p><a class="reference internal" href="#unit6-1-0"><span class="std std-ref">Introduction</span></a></p></li>
 <li><p><a class="reference internal" href="#unit6-1-1"><span class="std std-ref">Frequency response of a transfer function</span></a></p></li>
 <li><p><a class="reference internal" href="#unit6-1-2"><span class="std std-ref">Constructing a Bode plot</span></a></p></li>
 <li><p><a class="reference internal" href="#unit6-1-3"><span class="std std-ref">Numerical evaluation of the frequency response</span></a></p></li>
 <li><p><a class="reference internal" href="#unit6-1-4"><span class="std std-ref">Concluding Exercise</span></a></p></li>
 <li><p><a class="reference internal" href="#unit6-1-5"><span class="std std-ref">Unit 6.1: Homework</span></a></p></li>
 </ul>
+<section id="introduction">
+<span id="unit6-1-0"></span><h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>We introduce this section with a YouTube video <a class="reference external" href="https://uk.mathworks.com/videos/understanding-bode-plots-why-use-them-1-of-4-76194.html">Why Use Bode Plots for Designing Control Systems?</a> from Carlos Osorio of the MathWorks (publisher of MATLAB) <span id="id2">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F6-EaZobHNk?si=fGUlHt3glFCIfOq6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
 <section id="frequency-response-of-a-transfer-function">
 <span id="unit6-1-1"></span><h2>Frequency response of a transfer function<a class="headerlink" href="#frequency-response-of-a-transfer-function" title="Link to this heading">#</a></h2>
 <p>A transfer function with complex poles has undamped natural frequencies given by the magnitudes of the poles: <span class="math notranslate nohighlight">\(\omega_n = |p|\)</span>. If an input force drives a system at or near its natural frequency, the solution can grow rapidly in magnitude.</p>
@@ -669,8 +675,8 @@ Continuous-time transfer function.
 </ul>
 </section>
 </section>
-<section id="id2">
-<h3>Exercise<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<section id="id3">
+<h3>Exercise<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>Consider the transfer function used in the previous activity:</p>
 <div class="math notranslate nohighlight">
 \[G(s) = \frac{1}{ s^2 + 0.1 s + 1}\]</div>
@@ -696,8 +702,8 @@ Continuous-time transfer function.
 </div>
 </div>
 </div>
-<section id="id3">
-<h4>Reflect<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<section id="id4">
+<h4>Reflect<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>How does this Bode diagram differ from the one created in the previous activity?</p></li>
 <li><p>How do you think the phase and magnitude of the response are computed “under the hood?”</p></li>
@@ -878,7 +884,7 @@ Continuous-time transfer function.
 <section id="unit-6-1-homework">
 <span id="unit6-1-5"></span><h2>Unit 6.1: Homework<a class="headerlink" href="#unit-6-1-homework" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Install the MathWorks curriculum module <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems">Transfer Function Analysis of Dynamic Systems</a> <span id="id4">[<a class="reference internal" href="../zbib.html#id17" title="Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0.">Allie, 2024</a>]</span> and open the MATLAB Live Script <strong>FrequencyDomainAnalysis.mlx</strong>. Explore the Exercises and Activities we have reviewed in the unit.</p></li>
+<li><p>Install the MathWorks curriculum module <a class="reference external" href="https://uk.mathworks.com/matlabcentral/fileexchange/94635-transfer-function-analysis-of-dynamic-systems">Transfer Function Analysis of Dynamic Systems</a> <span id="id5">[<a class="reference internal" href="../zbib.html#id17" title="Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0.">Allie, 2024</a>]</span> and open the MATLAB Live Script <strong>FrequencyDomainAnalysis.mlx</strong>. Explore the Exercises and Activities we have reviewed in the unit.</p></li>
 <li><p>The remainder of the MATLAB Live Script <strong>FrequencyDomainAnalysis.mlx</strong> applies what we have looked at so far to a simple filtering problem based around a Buck Converter such as might be used in the DC-DC systems in an electric vehicle. Study the examples and try to complete the activities and exercises.</p></li>
 <li><p>The remaining Live Scripts in the curriculum module demonstrate the cocepts of the Laplace transform, transfer functions and pole-zero analysis. You may find these useful. We will start EG-247 next year with these examples.</p></li>
 </ol>
@@ -937,12 +943,16 @@ Continuous-time transfer function.
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id5">
+<div class="docutils container" id="id6">
 <div role="list" class="citation-list">
-<div class="citation" id="id21" role="doc-biblioentry">
+<div class="citation" id="id22" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>All24<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id4">2</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id5">2</a>)</span>
 <p>Chad Allie. Transfer function analysis of dynamic systems. 2024. Retrieved April 3, 2024. URL: <a class="github reference external" href="https://github.com/MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems/releases/tag/v2.0.0">MathWorks-Teaching-Resources/Transfer-Function-Analysis-of-Dynamic-Systems</a>.</p>
+</div>
+<div class="citation" id="id24" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Oso13</a><span class="fn-bracket">]</span></span>
+<p>Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: <a class="reference external" href="https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html">https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html</a>.</p>
 </div>
 </div>
 </div>
@@ -1018,6 +1028,7 @@ Continuous-time transfer function.
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#agenda">Agenda</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-response-of-a-transfer-function">Frequency response of a transfer function</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
 </ul>
@@ -1027,8 +1038,8 @@ Continuous-time transfer function.
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reflect">Reflect</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercise</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Reflect</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Exercise</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Reflect</a></li>
 </ul>
 </li>
 </ul>
