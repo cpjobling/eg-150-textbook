@@ -632,6 +632,9 @@ Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/47558e71f2859a24f5bc9be1008fd6bd37596954e25c77bc5806275b0e5986ea.png" src="../_images/47558e71f2859a24f5bc9be1008fd6bd37596954e25c77bc5806275b0e5986ea.png" />
+</div>
 </div>
 </section>
 </section>
@@ -677,6 +680,18 @@ Continuous-time transfer function.
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">figure</span>
 <span class="n">Gs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">1</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span>
 <span class="n">bode</span><span class="p">(</span><span class="n">Gs</span><span class="p">),</span><span class="nb">grid</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/290f676864af8fc239b3d23b96eda119abb978bb1d0399cb7b4da4e36bef7180.png" src="../_images/290f676864af8fc239b3d23b96eda119abb978bb1d0399cb7b4da4e36bef7180.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Gs =
+ 
+         1
+  ---------------
+  s^2 + 0.1 s + 1
+ 
+Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
@@ -749,6 +764,9 @@ Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/9518e24f54923bd7b84807e448374b5d4027225d3fb9e2a3916d3cb883e824a9.png" src="../_images/9518e24f54923bd7b84807e448374b5d4027225d3fb9e2a3916d3cb883e824a9.png" />
+</div>
 </div>
 <p>The second panel is constructed by graphing the phase in degrees against the input frequencies, <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
 <div class="cell docutils container">
@@ -759,6 +777,9 @@ Continuous-time transfer function.
 <span class="nb">ylabel</span><span class="p">(</span><span class="s">&quot;Phase (degrees)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/888c4f4eacef27b8ab3bc6f60864467e578d9cf1203a7ed5df8d6b0e177a4f51.png" src="../_images/888c4f4eacef27b8ab3bc6f60864467e578d9cf1203a7ed5df8d6b0e177a4f51.png" />
 </div>
 </div>
 </section>
@@ -779,6 +800,23 @@ Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hs =
+ 
+     1
+  -------
+  s^2 + 9
+ 
+Continuous-time transfer function.
+</pre></div>
+</div>
+<div class="output text_html"><html><body><pre>omegan = 2×1 double
+     3
+     3
+</pre></body></html></div><div class="output text_html"><html><body><pre>zetan = 2×1 double
+     0
+     0
+</pre></body></html></div></div>
 </div>
 <p><strong>(b)</strong> Generate the Bode plot for <span class="math notranslate nohighlight">\(H(s)\)</span> using the <code class="docutils literal notranslate"><span class="pre">bode</span></code> function.</p>
 <div class="cell docutils container">
@@ -786,6 +824,9 @@ Continuous-time transfer function.
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">Hs</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/01255ae769f8f49d0e6b2bf44d1a7240ff1a84561311983c0c0c47d2d48dc17f.png" src="../_images/01255ae769f8f49d0e6b2bf44d1a7240ff1a84561311983c0c0c47d2d48dc17f.png" />
 </div>
 </div>
 <p><strong>(c)</strong> Write the expression for the complex transfer function by making the substitution <span class="math notranslate nohighlight">\(s=j\omega\)</span>. What is the value of the complex transfer function for <span class="math notranslate nohighlight">\(\omega = 0.5\)</span>?</p>
@@ -796,6 +837,8 @@ Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>Hcomplex = Inf</pre></body></html></div></div>
 </div>
 <p><strong>(d)</strong> What are the magnitude (in dB) and phase (in degrees) of the transfer function for <span class="math notranslate nohighlight">\(\omega = 0.5\)</span>? Can you identify this point on the Bode plot?</p>
 <ul class="simple">
@@ -809,6 +852,8 @@ Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><html><body><pre>MdB = -18.8402</pre></body></html></div><div class="output text_html"><html><body><pre>phase = 0</pre></body></html></div></div>
 </div>
 <p><strong>(e)</strong> Use the <a class="reference external" href="https://uk.mathworks.com/help/control/ref/dynamicsystem.lsim.html?searchHighlight=lsim"><code class="docutils literal notranslate"><span class="pre">lsim</span></code></a> function to compute and plot the time-domain response of <span class="math notranslate nohighlight">\(H\)</span> to a sinusoidal input function</p>
 <div class="math notranslate nohighlight">
@@ -823,6 +868,9 @@ Continuous-time transfer function.
 <span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;x [m]&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/473283bf7746ddf7e17dc7b6065c5c5d4d20661f514ddcdd36e3bd9c97032004.png" src="../_images/473283bf7746ddf7e17dc7b6065c5c5d4d20661f514ddcdd36e3bd9c97032004.png" />
 </div>
 </div>
 </section>
