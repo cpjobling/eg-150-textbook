@@ -633,26 +633,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hsys =
- 
-        400
-  ----------------
-  s^2 + 10 s + 400
- 
-Continuous-time transfer function.
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">Hsys</span><span class="p">),</span><span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/cb0d1d3e1f4ef5780983a239e9634e315a7de90f238403698841aec59b3550d3.png" src="../_images/cb0d1d3e1f4ef5780983a239e9634e315a7de90f238403698841aec59b3550d3.png" />
 </div>
 </div>
 </section>
@@ -706,9 +692,6 @@ Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/dc305845745f8e15876b80a80445dad89442aa9c596a32e1401ebff3b790f0cd.png" src="../_images/dc305845745f8e15876b80a80445dad89442aa9c596a32e1401ebff3b790f0cd.png" />
-</div>
 </div>
 <p>Increasing the gain causes a shift in the magnitude plot <em>up</em> by <span class="math notranslate nohighlight">\(20\log_{10} K\)</span> dB for <span class="math notranslate nohighlight">\(K &gt; 1\)</span> or <em>down</em> for <span class="math notranslate nohighlight">\(K &lt; 1\)</span>.</p>
 </section>
@@ -731,9 +714,6 @@ Continuous-time transfer function.
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">H2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">1</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]);</span><span class="w"> </span><span class="n">bode</span><span class="p">(</span><span class="n">H2</span><span class="p">),</span><span class="w"> </span><span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/a8efd3d653cabb263bec4f75c8e48b48bb0f5fb5e3c6d001827b8939dbd63d28.png" src="../_images/a8efd3d653cabb263bec4f75c8e48b48bb0f5fb5e3c6d001827b8939dbd63d28.png" />
 </div>
 </div>
 <p>The roll-off rate is <span class="math notranslate nohighlight">\(-20\)</span> dB/decade.</p>
@@ -758,9 +738,6 @@ Continuous-time transfer function.
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/30938986fab8bacb51233bc8942dfb8c9499f65bf60684a91f9fabbea809c4f4.png" src="../_images/30938986fab8bacb51233bc8942dfb8c9499f65bf60684a91f9fabbea809c4f4.png" />
-</div>
 </div>
 <p>The magnification increases by 20 dB per decade and there is no limit! This is a bad thing as it will amplify high-frequencies.</p>
 </section>
@@ -783,9 +760,6 @@ Continuous-time transfer function.
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">tau</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">H4</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">1</span><span class="p">,[</span><span class="n">tau</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]);</span><span class="w"> </span><span class="n">bode</span><span class="p">(</span><span class="n">H4</span><span class="p">),</span><span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/9ef9afb0b3575fb4aadcf736cac51b6c3cf1d753b9ca8c507717b49c4e8fe4a7.png" src="../_images/9ef9afb0b3575fb4aadcf736cac51b6c3cf1d753b9ca8c507717b49c4e8fe4a7.png" />
 </div>
 </div>
 <p>Adding the assymptotes gives</p>
@@ -810,9 +784,6 @@ Continuous-time transfer function.
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">tau</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">H5</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">([</span><span class="n">tau</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">bode</span><span class="p">(</span><span class="n">H5</span><span class="p">),</span><span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/31b006607ca21658cae093beb3739f983729f3fea30893348168760134840c05.png" src="../_images/31b006607ca21658cae093beb3739f983729f3fea30893348168760134840c05.png" />
 </div>
 </div>
 <p>Adding the assymptotes gives</p>
@@ -919,9 +890,6 @@ Continuous-time transfer function.
 <span class="nb">legend</span><span class="p">(</span><span class="s">&#39;zeta = 0.05&#39;</span><span class="p">,</span><span class="s">&#39;zeta = 0.16&#39;</span><span class="p">,</span><span class="s">&#39;zeta = 0.5&#39;</span><span class="p">,</span><span class="s">&#39;zeta = 0.75&#39;</span><span class="p">,</span><span class="s">&#39;zeta = 1&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/b30965edefcea4e732ed4ad558bc3c5dfcba12975fac51ec7372b5d52f9bbade.png" src="../_images/b30965edefcea4e732ed4ad558bc3c5dfcba12975fac51ec7372b5d52f9bbade.png" />
 </div>
 </div>
 </section>
