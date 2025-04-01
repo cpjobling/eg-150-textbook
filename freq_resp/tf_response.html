@@ -838,13 +838,14 @@ Continuous-time transfer function.
 <p><strong>(c)</strong> Write the expression for the complex transfer function by making the substitution <span class="math notranslate nohighlight">\(s=j\omega\)</span>. What is the value of the complex transfer function for <span class="math notranslate nohighlight">\(\omega = 0.5\)</span>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Record your answer in Hcomplex</span>
-<span class="n">Hcomplex</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="o">-</span><span class="n">omegan</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">9</span><span class="p">)</span>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omegan</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c">% Record your answer in Hcomplex</span>
+<span class="n">Hcomplex</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="o">./</span><span class="p">(</span><span class="o">-</span><span class="n">w</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">9</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><html><body><pre>Hcomplex = Inf</pre></body></html></div></div>
+<div class="output text_html"><html><body><pre>w = 3</pre></body></html></div><div class="output text_html"><html><body><pre>Hcomplex = Inf</pre></body></html></div></div>
 </div>
 <p><strong>(d)</strong> What are the magnitude (in dB) and phase (in degrees) of the transfer function for <span class="math notranslate nohighlight">\(\omega = 0.5\)</span>? Can you identify this point on the Bode plot?</p>
 <ul class="simple">

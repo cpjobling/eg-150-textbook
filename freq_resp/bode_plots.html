@@ -600,7 +600,7 @@ document.write(`
 <p><span class="caption-number">Fig. 86 </span><span class="caption-text">Plot of magnitude v phase plotted against frequency interpolated from individual measurements. Screenshot from video <a class="reference external" href="https://youtu.be/COzQwkeu8Ek?si=XC1h92VGAQWiHV7N&amp;amp;t=28">What are Bode Plots?</a> [t=1 minute 28 seconds] from <span id="id5">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span></span><a class="headerlink" href="#fig-unit6-2-3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The plot of <em>amplification</em> (<span class="math notranslate nohighlight">\(M\)</span>) and <em>phase</em> (<span class="math notranslate nohighlight">\(\phi\)</span>), usually plotted against the <em>log of frequency</em> <span class="math notranslate nohighlight">\(\omega\)</span> rad/s, is called a Bode plot.</p>
+<p>The plot of <em>amplification</em> (<span class="math notranslate nohighlight">\(M\)</span>) and <em>phase</em> (<span class="math notranslate nohighlight">\(\phi\)</span>), usually plotted against the <em>log of frequency</em> <span class="math notranslate nohighlight">\(\omega\)</span> rad/s, is called a <strong>Bode plot</strong>.</p>
 <p>If you are constructing one of these yourself, you need to be sure to use sufficient values of frequency to capture all the important features (such as <em>resonant peaks</em> and <em>corner frequencies</em>) of the response.</p>
 </section>
 <section id="calculation-of-frequency-response">
@@ -633,12 +633,26 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hsys =
+ 
+        400
+  ----------------
+  s^2 + 10 s + 400
+ 
+Continuous-time transfer function.
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">bode</span><span class="p">(</span><span class="n">Hsys</span><span class="p">),</span><span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/0506c1239b6084bf64ae7dcb31387aef1d5362b0d1b104d86606d2cbb322e6e1.png" src="../_images/0506c1239b6084bf64ae7dcb31387aef1d5362b0d1b104d86606d2cbb322e6e1.png" />
 </div>
 </div>
 </section>
@@ -658,15 +672,15 @@ document.write(`
 <section id="natural-frequency">
 <h2>Natural-frequency<a class="headerlink" href="#natural-frequency" title="Link to this heading">#</a></h2>
 <p>Any peaks in the magnitude frequency response will be associated to some natural frequency in the poles of the system.</p>
-<img src="pictures/natural_freq.png" alt="illustration of natural frequencies indicated by peaks in the magnitude response" width="75%" /></section>
+<img src="pictures/natural_freq.png" alt="illustration of natural frequencies indicated by peaks in the magnitude response" width="100%" /></section>
 <section id="cross-over-frequency">
 <h2>Cross-over frequency<a class="headerlink" href="#cross-over-frequency" title="Link to this heading">#</a></h2>
 <p>In the bode-plot, at low frequency, the gain is 0 dB (or 1). Above the cross-over frequency<a class="footnote-reference brackets" href="#u62-note-2" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> the gain is less than 1 and the system starts to <em>attenuate</em> the input signal.</p>
-<img src="pictures/cross_over_freq.png" alt="illustration of the cross-over frequency in a Bode plot" width="75%" /></section>
+<img src="pictures/cross_over_freq.png" alt="illustration of the cross-over frequency in a Bode plot" width="100%" /></section>
 <section id="bandwidth-frequency">
 <h2>Bandwidth frequency<a class="headerlink" href="#bandwidth-frequency" title="Link to this heading">#</a></h2>
 <p>Above the <em>bandwidth frequency</em> the RMS value of the system is below the RMS value of the input. This so-called <em>half-power frequency</em> occurs when <span class="math notranslate nohighlight">\(M = \sqrt{2}/2 = 1/\sqrt{2} \approx 0.707\)</span> or <span class="math notranslate nohighlight">\(20\log_{10}\left(0.707\right) \approx -3\)</span> dB<a class="footnote-reference brackets" href="#u62-note-3" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
-<img src="pictures/bandwidth_freq.png" alt="illustration of the bandwidth frequency in a Bode plot" width="75%" /></section>
+<img src="pictures/bandwidth_freq.png" alt="illustration of the bandwidth frequency in a Bode plot" width="100%" /></section>
 <section id="aysymptotic-bode-plots-for-first-order-systems">
 <span id="unit6-2-6"></span><h2>Aysymptotic Bode plots for first-order systems<a class="headerlink" href="#aysymptotic-bode-plots-for-first-order-systems" title="Link to this heading">#</a></h2>
 <p>In the remainder of this unit, we will rely on the explanations given by Carlos Osorio in Parts 3 and 4 of <span id="id9">[<a class="reference internal" href="../zbib.html#id19" title="Carlos Osoria. Understanding bode plots. 2013. Retrieved April 9, 2024. URL: https://uk.mathworks.com/videos/series/understanding-bode-plots-95146.html.">Osoria, 2013</a>]</span>. This material is also covered in Worked Problem 5.47 from <span id="id10">[<a class="reference internal" href="../zbib.html#id11" title="Hwei P. Hsu. Schaums outlines signals and systems. McGraw-Hill, New York, NY, 2020. ISBN 9780071634724. Available as an eBook. URL: https://www.accessengineeringlibrary.com/content/book/9781260454246.">Hsu, 2020</a>]</span>.</p>
@@ -692,6 +706,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/36c049e26becbedd0e81fb40bebb74b31f274be5fc77c8606f78d440ca919a07.png" src="../_images/36c049e26becbedd0e81fb40bebb74b31f274be5fc77c8606f78d440ca919a07.png" />
+</div>
 </div>
 <p>Increasing the gain causes a shift in the magnitude plot <em>up</em> by <span class="math notranslate nohighlight">\(20\log_{10} K\)</span> dB for <span class="math notranslate nohighlight">\(K &gt; 1\)</span> or <em>down</em> for <span class="math notranslate nohighlight">\(K &lt; 1\)</span>.</p>
 </section>
@@ -702,7 +719,7 @@ document.write(`
 \[H(s) = \frac{1}{s} \]</div>
 <p>The frequency response is</p>
 <div class="math notranslate nohighlight">
-\[H(j\omega) = \frac{1}{j\omega} = -\frac{1}{\omega} j\]</div>
+\[H(j\omega) = \frac{1}{j\omega} = -j\frac{1}{\omega}\]</div>
 <div class="math notranslate nohighlight">
 \[M = \left|H(j\omega)\right| = \frac{1}{\omega},\,\phi = -90^\circ\]</div>
 <p>Converting the magnitude into dB:</p>
@@ -714,6 +731,9 @@ document.write(`
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">H2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">1</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]);</span><span class="w"> </span><span class="n">bode</span><span class="p">(</span><span class="n">H2</span><span class="p">),</span><span class="w"> </span><span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/59df874fc7ee33c899020eeccde2d16c57485d89e7a2df875628e30c5364f224.png" src="../_images/59df874fc7ee33c899020eeccde2d16c57485d89e7a2df875628e30c5364f224.png" />
 </div>
 </div>
 <p>The roll-off rate is <span class="math notranslate nohighlight">\(-20\)</span> dB/decade.</p>
@@ -738,6 +758,9 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/8ef8ee01f720f07ecf8eada8551acf899020e5e369c8b90e0fb479ce6e93e1a5.png" src="../_images/8ef8ee01f720f07ecf8eada8551acf899020e5e369c8b90e0fb479ce6e93e1a5.png" />
+</div>
 </div>
 <p>The magnification increases by 20 dB per decade and there is no limit! This is a bad thing as it will amplify high-frequencies.</p>
 </section>
@@ -760,6 +783,9 @@ document.write(`
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">tau</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">H4</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="mi">1</span><span class="p">,[</span><span class="n">tau</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]);</span><span class="w"> </span><span class="n">bode</span><span class="p">(</span><span class="n">H4</span><span class="p">),</span><span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/2c543170b64fe86e3f4b5f1312fa46c46df611d2f1e568f1e4d41b18b99c4272.png" src="../_images/2c543170b64fe86e3f4b5f1312fa46c46df611d2f1e568f1e4d41b18b99c4272.png" />
 </div>
 </div>
 <p>Adding the assymptotes gives</p>
@@ -784,6 +810,9 @@ document.write(`
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">tau</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">H5</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">([</span><span class="n">tau</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">bode</span><span class="p">(</span><span class="n">H5</span><span class="p">),</span><span class="nb">grid</span><span class="w"> </span><span class="n">on</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/0008ebbb97a221f3817a4d1e1338d513981f5ce3fa34290c951b505fa78137cf.png" src="../_images/0008ebbb97a221f3817a4d1e1338d513981f5ce3fa34290c951b505fa78137cf.png" />
 </div>
 </div>
 <p>Adding the assymptotes gives</p>
@@ -890,6 +919,9 @@ document.write(`
 <span class="nb">legend</span><span class="p">(</span><span class="s">&#39;zeta = 0.05&#39;</span><span class="p">,</span><span class="s">&#39;zeta = 0.16&#39;</span><span class="p">,</span><span class="s">&#39;zeta = 0.5&#39;</span><span class="p">,</span><span class="s">&#39;zeta = 0.75&#39;</span><span class="p">,</span><span class="s">&#39;zeta = 1&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/2dbc9e0d94fd4a8bb2b1f28b22bdeed0f0863f80d7b5ba04f09b4fe5bc586daa.png" src="../_images/2dbc9e0d94fd4a8bb2b1f28b22bdeed0f0863f80d7b5ba04f09b4fe5bc586daa.png" />
 </div>
 </div>
 </section>

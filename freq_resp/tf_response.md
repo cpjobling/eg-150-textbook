@@ -377,8 +377,9 @@ bode(Hs)
 **(c)** Write the expression for the complex transfer function by making the substitution $s=j\omega$. What is the value of the complex transfer function for $\omega = 0.5$?
 
 ```{code-cell}
+w = omegan(1)
 % Record your answer in Hcomplex
-Hcomplex = 1./(-omegan(1)^2 + 9)
+Hcomplex = 1./(-w^2 + 9)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}
