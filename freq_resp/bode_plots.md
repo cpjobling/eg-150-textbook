@@ -241,7 +241,7 @@ Any peaks in the magnitude frequency response will be associated to some natural
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-In the bode-plot, at low frequency, the gain is 0 dB (or 1). Above the cross-over frequency[^u62:note:2] the gain is less than 1 and the system starts to *attenuate* the input signal. 
+In the bode-plot, at low frequency, the gain is 0 dB (or 1). Above the cross-over frequency[^u62:note:2] the gain is less than 1 and the system starts to *attenuate* the input signal.
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -257,7 +257,7 @@ In the bode-plot, at low frequency, the gain is 0 dB (or 1). Above the cross-ove
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
-Above the *bandwidth frequency* the RMS value of the system is below the RMS value of the input. This so-called *half-power frequency* occurs when $M = \sqrt{2}/2 = 1/\sqrt{2} \approx 0.707$ or $20\log_{10}\left(0.707\right) \approx -3$ dB[^u62:note:3]. 
+Above the *bandwidth frequency* the RMS value of the system is below the RMS value of the input. This so-called *half-power frequency* occurs when $M = \sqrt{2}/2 = 1/\sqrt{2} \approx 0.707$ or $20\log_{10}\left(0.707\right) \approx -3$ dB[^u62:note:3].
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
@@ -595,7 +595,7 @@ $$p_{1,2} = -\zeta\omega_n \pm j\omega_n \sqrt{1 - \zeta^2}$$
 
 So
 
-$$H(j\omega) = \frac{1}{-\left(\frac{\omega}{\omega_n}\right)^2 + j2\zeta\left(\frac{\omega}{\omega_n} \right)s + 1}$$
+$$H(j\omega) = \frac{1}{-\left(\frac{\omega}{\omega_n}\right)^2 + j2\zeta\left(\frac{\omega}{\omega_n} \right) + 1}$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
