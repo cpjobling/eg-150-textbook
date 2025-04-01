@@ -39,11 +39,21 @@ The other examples in the project provide useful reinforcement of the concepts c
 
 # Agenda
 
+* {ref}`unit6.1.0`
 * {ref}`unit6.1.1`
 * {ref}`unit6.1.2`
 * {ref}`unit6.1.3`
 * {ref}`unit6.1.4`
 * {ref}`unit6.1.5`
+
++++
+
+(unit6.1.0)=
+## Introduction
+
+We introduce this section with a YouTube video [Why Use Bode Plots for Designing Control Systems?](https://uk.mathworks.com/videos/understanding-bode-plots-why-use-them-1-of-4-76194.html) from Carlos Osorio of the MathWorks (publisher of MATLAB) {cite}`osorio93`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F6-EaZobHNk?si=fGUlHt3glFCIfOq6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -367,8 +377,9 @@ bode(Hs)
 **(c)** Write the expression for the complex transfer function by making the substitution $s=j\omega$. What is the value of the complex transfer function for $\omega = 0.5$?
 
 ```{code-cell}
+w = omegan(1)
 % Record your answer in Hcomplex
-Hcomplex = 1./(-omegan(1)^2 + 9)
+Hcomplex = 1./(-w^2 + 9)
 ```
 
 +++ {"slideshow": {"slide_type": "subslide"}}

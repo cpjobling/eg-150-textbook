@@ -53,7 +53,7 @@ We introduce this section with a YouTube video [What are Bode plots?](https://uk
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/COzQwkeu8Ek?si=wz1Mxz_ISu6RuTfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-The remaining videos, the first of which introduced the previous unit, {ref}`unit6.1`, can also be viewed on the YouTube playlist [Understanding Bode Plots](https://www.youtube.com/playlist?list=PLn8PRpmsu08poVEWzpqKXpj_c7aSwVDdm) also published on the [MATLAB channel by the MathWorks](https://www.youtube.com/@MATLAB).
+The remaining videos, the first of which introduced the previous unit, {ref}`unit6.1.0`, can also be viewed on the YouTube playlist [Understanding Bode Plots](https://www.youtube.com/playlist?list=PLn8PRpmsu08poVEWzpqKXpj_c7aSwVDdm) also published on the [MATLAB channel by the MathWorks](https://www.youtube.com/@MATLAB).
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -66,13 +66,13 @@ The remaining videos, the first of which introduced the previous unit, {ref}`uni
 Portrait of Hendrick Wade Bode (Public Domain [Details](https://en.wikipedia.org/wiki/File:Hendrik_Wade_Bode.png))
 :::
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 Quoted from [Hendrik Wade Bode](https://en.wikipedia.org/wiki/Hendrik_Wade_Bode), Wikipedia:
 
 > Hendrik Wade Bode (December 24, 1905 – June 21, 1982) was an American engineer, researcher, inventor, author and scientist, of Dutch ancestry.
 
-+++ {"slideshow": {"slide_type": "subslide"}}
++++ {"slideshow": {"slide_type": "fragment"}}
 
 > He made important contributions to control systems theory and mathematical tools for the analysis of stability of linear systems.
 
@@ -84,6 +84,8 @@ Quoted from [Hendrik Wade Bode](https://en.wikipedia.org/wiki/Hendrik_Wade_Bode)
 
 (unit6.2.3)=
 ## Frequency Response
+
++++ {"slideshow": {"slide_type": "subslide"}}
 
 ::: {figure-md} fig:unit6.2:2
 <img src="pictures/ss-freq-response.png" alt="Screenshot from the video What are Bode Plots? (see caption) showing the steady state response of a linear LTI system to a simusoidal input" width="100%" />
@@ -117,7 +119,7 @@ Plot of magnitude v phase plotted against frequency interpolated from individual
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
-The plot of *amplification* ($M$) and *phase* ($\phi$), usually plotted against the *log of frequency* $\omega$ rad/s, is called a Bode plot.
+The plot of *amplification* ($M$) and *phase* ($\phi$), usually plotted against the *log of frequency* $\omega$ rad/s, is called a **Bode plot**.
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -197,7 +199,11 @@ You should should make a note of these for future reference.
 
 ### DC-gain
 
++++ {"slideshow": {"slide_type": "notes"}}
+
 Magnitude $M$ at $\omega = 0$ or DC.
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 <img src="pictures/dc_gain.png" alt="illustration of DC gain" width="75%" />
 
@@ -205,7 +211,11 @@ Magnitude $M$ at $\omega = 0$ or DC.
 
 ### Roll-off rate
 
++++ {"slideshow": {"slide_type": "notes"}}
+
 The *roll-off rate* refers to the slope of the magnitude plot as the magnitude drops off at high-frequency. It is usually quoted in *dB per decade*[^u62:note:1], where a *decade* is a ten-fold increase in frequency.
+
++++ {"slideshow": {"slide_type": "fragment"}}
 
 <img src="pictures/roll-off.png" alt="illustration of roll-off rate" width="75%" />
 
@@ -217,17 +227,25 @@ The *roll-off rate* refers to the slope of the magnitude plot as the magnitude d
 
 ## Natural-frequency
 
++++ {"slideshow": {"slide_type": "notes"}}
+
 Any peaks in the magnitude frequency response will be associated to some natural frequency in the poles of the system.
 
-<img src="pictures/natural_freq.png" alt="illustration of natural frequencies indicated by peaks in the magnitude response" width="75%" />
++++ {"slideshow": {"slide_type": "fragment"}}
+
+<img src="pictures/natural_freq.png" alt="illustration of natural frequencies indicated by peaks in the magnitude response" width="100%" />
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ## Cross-over frequency
 
-In the bode-plot, at low frequency, the gain is 0 dB (or 1). Above the cross-over frequency[^u62:note:2] the gain is less than 1 and the system starts to *attenuate* the input signal. 
++++ {"slideshow": {"slide_type": "notes"}}
 
-<img src="pictures/cross_over_freq.png" alt="illustration of the cross-over frequency in a Bode plot" width="75%" />
+In the bode-plot, at low frequency, the gain is 0 dB (or 1). Above the cross-over frequency[^u62:note:2] the gain is less than 1 and the system starts to *attenuate* the input signal.
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+<img src="pictures/cross_over_freq.png" alt="illustration of the cross-over frequency in a Bode plot" width="100%" />
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -237,9 +255,13 @@ In the bode-plot, at low frequency, the gain is 0 dB (or 1). Above the cross-ove
 
 ## Bandwidth frequency
 
-Above the *bandwidth frequency* the RMS value of the system is below the RMS value of the input. This so-called *half-power frequency* occurs when $M = \sqrt{2}/2 = 1/\sqrt{2} \approx 0.707$ or $20\log_{10}\left(0.707\right) \approx -3$ dB[^u62:note:3]. 
++++ {"slideshow": {"slide_type": "notes"}}
 
-<img src="pictures/bandwidth_freq.png" alt="illustration of the bandwidth frequency in a Bode plot" width="75%" />
+Above the *bandwidth frequency* the RMS value of the system is below the RMS value of the input. This so-called *half-power frequency* occurs when $M = \sqrt{2}/2 = 1/\sqrt{2} \approx 0.707$ or $20\log_{10}\left(0.707\right) \approx -3$ dB[^u62:note:3].
+
++++ {"slideshow": {"slide_type": "fragment"}}
+
+<img src="pictures/bandwidth_freq.png" alt="illustration of the bandwidth frequency in a Bode plot" width="100%" />
 
 +++ {"slideshow": {"slide_type": "notes"}}
 
@@ -310,7 +332,7 @@ $$H(s) = \frac{1}{s} $$
 
 The frequency response is
 
-$$H(j\omega) = \frac{1}{j\omega} = -\frac{1}{\omega} j$$
+$$H(j\omega) = \frac{1}{j\omega} = -j\frac{1}{\omega}$$
 
 $$M = \left|H(j\omega)\right| = \frac{1}{\omega},\,\phi = -90^\circ$$
 
@@ -320,7 +342,7 @@ Converting the magnitude into dB:
 
 $$M_\mathrm{dB} = 20\log_{10}(1) - 20\log_{10}({\omega})$$
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 At $\omega = 1$, $M = 1$, $M_\mathrm{dB} = 0$ dB. At $\omega = 10$, $M=1/10 = -20$ dB. The phase shift is $-90^\circ$ for all $\omega$. The bode plot is therefore:
 
@@ -357,7 +379,7 @@ Converting the magnitude into dB:
 
 $$M_\mathrm{dB} = + 20\log_{10}({\omega})$$
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 At $\omega = 1$, $M = 1$, $M_\mathrm{dB} = 0$ dB. At $\omega = 10$, $M=10 = 20$ dB. The phase shift is $90^\circ$ for all $\omega$. The bode plot is therefore:
 
@@ -369,7 +391,7 @@ slideshow:
 H3 = tf([1 0],1); bode(H3), grid on
 ```
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "notes"}}
 
 The magnification increases by 20 dB per decade and there is no limit! This is a bad thing as it will amplify high-frequencies.
 
@@ -398,7 +420,7 @@ For $\omega \ll 1/\tau$, $\tau^2\omega^2 \ll 1$, $M \approx 1 = 0$ dB, $\phi \ap
 
 For $\omega \gg 1/\tau$, $\tau^2\omega^2 \gg 1$, $M_\mathrm{dB} = 20\log_{10} 1 - 20\log_{10} \sqrt{\tau^2\omega^2} = - 20\log_{10} \left(\tau\omega\right)$ dB, $\phi \approx -90^\circ$.
 
-+++ {"slideshow": {"slide_type": "fragment"}}
++++ {"slideshow": {"slide_type": "subslide"}}
 
 We can plot this as shown below:
 
@@ -573,7 +595,7 @@ $$p_{1,2} = -\zeta\omega_n \pm j\omega_n \sqrt{1 - \zeta^2}$$
 
 So
 
-$$H(j\omega) = \frac{1}{-\left(\frac{\omega}{\omega_n}\right)^2 + j2\zeta\left(\frac{\omega}{\omega_n} \right)s + 1}$$
+$$H(j\omega) = \frac{1}{-\left(\frac{\omega}{\omega_n}\right)^2 + j2\zeta\left(\frac{\omega}{\omega_n} \right) + 1}$$
 
 +++ {"slideshow": {"slide_type": "fragment"}}
 
